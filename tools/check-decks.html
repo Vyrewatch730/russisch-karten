@@ -1,0 +1,57 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Deck-Prüfung</title>
+<!-- Prüft die Verb-Decks: Betonung, Pflichtfelder, spanische Konjugation.
+     Aufruf über den lokalen Server: http://localhost:8080/tools/check-decks.html?deck=verben-01 (ohne deck = alle) -->
+<pre id="out">läuft …</pre>
+<iframe id="app" src="../index.html" hidden></iframe>
+<script>
+const out = [];
+document.getElementById('app').onload = async e => {
+  const w = e.target.contentWindow;
+  const only = new URLSearchParams(location.search).get('deck');
+  const verbose = new URLSearchParams(location.search).has('verbose');
+  const index = await (await fetch('../decks/index.json', { cache: 'no-cache' })).json();
+  const RU_FIELDS = ['ipf', 'ipf_1', 'ipf_2', 'pf', 'pf_1', 'pf_2', 'example'];
+  const REQUIRED = ['de', 'en', 'es', 'example', 'example_de', 'example_en', 'example_es', 'example_cases'];
+  let cards = 0, problems = 0;
+  const problem = (c, msg) => { problems++; out.push(`✗ ${c.id} ${c.ru}: ${msg}`); };
+  for (const entry of index.filter(d => d.id.startsWith('verben-') && (!only || d.id === only))) {
+    const deck = await (await fetch('../decks/' + entry.file, { cache: 'no-cache' })).json();
+    out.push(`== ${deck.name} (${deck.cards.length} Karten)`);
+    for (const c of deck.cards) {
+      cards++;
+      for (const k of REQUIRED) if (!c[k]) problem(c, `Feld ${k} fehlt`);
+      // Jedes in den Fällen genannte Wort muss genau so im Beispielsatz vorkommen
+      if (c.example_cases && c.example) {
+        const sentence = c.example.toLowerCase();
+        for (const part of c.example_cases.split(' · ').filter(p => !p.startsWith('nur Nominativ'))) {
+          const words = (part.split(' – ')[0].match(/[а-яё́-]+/gi) || []);
+          for (const word of words) if (!sentence.includes(word.toLowerCase())) problem(c, `Fälle: „${word}“ steht nicht im Satz`);
+        }
+      }
+      if (c.ipf && !c.ipf_1 && !c.ipf_2) problem(c, 'ipf ohne я/ты-Formen');
+      if (c.pf && c.pf !== c.ipf && !c.pf_1 && !c.pf_2) problem(c, 'pf ohne я/ты-Formen');
+      for (const k of RU_FIELDS) {
+        for (const word of (c[k] || '').match(/[а-яёА-ЯЁ́]+/g) || []) {
+          const vowels = (word.match(/[аеёиоуыэюяАЕЁИОУЫЭЮЯ]/g) || []).length;
+          const marks = (word.match(/́/g) || []).length + (word.match(/[ёЁ]/g) || []).length;
+          if (/[a-z]/i.test(word)) problem(c, `${k}: lateinischer Buchstabe in „${word}“`);
+          if (vowels > 1 && marks !== 1) problem(c, `${k}: „${word}“ hat ${marks} Betonungen`);
+          if (vowels === 1 && /́/.test(word)) problem(c, `${k}: einsilbiges „${word}“ mit Akzent`);
+          if (/ё́/.test(word)) problem(c, `${k}: ё mit Akzent`);
+        }
+      }
+      const verbs = [c.es_verb || w.esMainVerb(c.es), c.es2_verb].filter(Boolean);
+      for (const v of verbs) {
+        const r = w.esConjugate(v);
+        if (!r) problem(c, `Spanisch „${v}“ nicht konjugierbar`);
+        else if (verbose) out.push(`   ${v}: ${r.pres.join(', ')} | ${r.past.join(', ')}`);
+      }
+      if (verbose) out.push(`   ${c.ipf || ''} [${w.ruPron(c.ipf)}] ${c.ipf_1 || ''} [${w.ruPron(c.ipf_1)}] · ${c.pf || ''} [${w.ruPron(c.pf)}] ${c.pf_1 || ''} [${w.ruPron(c.pf_1)}] · ${w.ruPron(c.example)}`);
+    }
+  }
+  out.unshift(`${cards} Karten geprüft, ${problems} Probleme`);
+  document.getElementById('out').textContent = out.join('\n');
+};
+</script>

@@ -1,0 +1,52 @@
+# Verben 01 – die häufigsten Verben (Nr. 1–50)
+# ipf | я | ты | pf | я | ты | de | en | es | es_verb | Beispiel | de | en | es | Notiz
+быть|бу́ду|бу́дешь||||sein|to be|ser, estar|ser; estar|Я бу́ду до́ма ве́чером.|Ich werde abends zu Hause sein.|I will be at home in the evening.|Yo voy a estar en la casa en la noche.|Im Präsens meist weggelassen (Я до́ма = Ich bin zu Hause). бу́ду/бу́дешь sind Zukunftsformen.
+мочь|могу́|мо́жешь|смочь|смогу́|смо́жешь|können|can, to be able|poder||Ты мо́жешь мне помо́чь?|Kannst du mir helfen?|Can you help me?|¿Tú me puedes ayudar?
+говори́ть|говорю́|говори́шь|сказа́ть|скажу́|ска́жешь|sprechen; sagen|to speak; to say|hablar; decir|hablar; decir|Что ты сказа́л?|Was hast du gesagt?|What did you say?|¿Qué tú dijiste?|сказа́ть ist der vollendete Partner nur für „sagen“.
+знать|зна́ю|зна́ешь||||wissen, kennen|to know|saber, conocer|saber; conocer|Я не зна́ю, где он.|Ich weiß nicht, wo er ist.|I don't know where he is.|Yo no sé dónde está él.
+станови́ться|становлю́сь|стано́вишься|стать|ста́ну|ста́нешь|werden|to become|hacerse, volverse, ponerse|hacerse|Он стал врачо́м.|Er ist Arzt geworden.|He became a doctor.|Él se hizo médico.|Nach стать steht der Instrumental: стать врачо́м.
+хоте́ть|хочу́|хо́чешь|захоте́ть|захочу́|захо́чешь|wollen|to want|querer||Я хочу́ пить.|Ich habe Durst.|I'm thirsty.|Yo quiero tomar algo.
+ви́деть|ви́жу|ви́дишь|уви́деть|уви́жу|уви́дишь|sehen|to see|ver||Я ви́жу мо́ре.|Ich sehe das Meer.|I see the sea.|Yo veo el mar.
+идти́|иду́|идёшь|пойти́|пойду́|пойдёшь|gehen (zu Fuß, eine Richtung)|to go (on foot)|ir, caminar|ir|Я иду́ домо́й.|Ich gehe nach Hause.|I'm going home.|Yo voy para la casa.|Verb der Bewegung: eine Richtung. Mehrere Richtungen oder regelmäßig: ходи́ть.
+стоя́ть|стою́|стои́шь|постоя́ть|постою́|постои́шь|stehen|to stand|estar parado, estar de pie|estar parado|Он стои́т у окна́.|Er steht am Fenster.|He is standing by the window.|Él está parado en la ventana.
+ду́мать|ду́маю|ду́маешь|поду́мать|поду́маю|поду́маешь|denken|to think|pensar||Я ду́маю о тебе́.|Ich denke an dich.|I'm thinking about you.|Yo pienso en ti.
+спра́шивать|спра́шиваю|спра́шиваешь|спроси́ть|спрошу́|спро́сишь|fragen|to ask|preguntar||Спроси́ его́, где он живёт.|Frag ihn, wo er wohnt.|Ask him where he lives.|Pregúntale dónde él vive.
+жить|живу́|живёшь|прожи́ть|проживу́|проживёшь|leben, wohnen|to live|vivir||Где ты живёшь?|Wo wohnst du?|Where do you live?|¿Dónde tú vives?
+смотре́ть|смотрю́|смо́тришь|посмотре́ть|посмотрю́|посмо́тришь|schauen, ansehen|to watch, to look|mirar, ver|mirar|Мы смо́трим фильм.|Wir schauen einen Film.|We are watching a film.|Nosotros vemos una película.
+сиде́ть|сижу́|сиди́шь|посиде́ть|посижу́|посиди́шь|sitzen|to sit, to be sitting|estar sentado||Ко́шка сиди́т на сту́ле.|Die Katze sitzt auf dem Stuhl.|The cat is sitting on the chair.|El gato está sentado en la silla.
+понима́ть|понима́ю|понима́ешь|поня́ть|пойму́|поймёшь|verstehen|to understand|entender, comprender|entender|Я не понима́ю.|Ich verstehe nicht.|I don't understand.|Yo no entiendo.
+име́ть|име́ю|име́ешь||||haben, besitzen|to have, to own|tener||Я име́ю пра́во знать.|Ich habe das Recht, es zu wissen.|I have the right to know.|Yo tengo derecho a saber.|Für „ich habe“ sagt man meist у меня́ есть.
+де́лать|де́лаю|де́лаешь|сде́лать|сде́лаю|сде́лаешь|machen, tun|to do, to make|hacer||Что ты де́лаешь?|Was machst du?|What are you doing?|¿Qué tú haces?
+брать|беру́|берёшь|взять|возьму́|возьмёшь|nehmen|to take|coger, tomar|coger|Я возьму́ такси́.|Ich nehme ein Taxi.|I'll take a taxi.|Yo voy a coger un taxi.
+каза́ться|кажу́сь|ка́жешься|показа́ться|покажу́сь|пока́жешься|scheinen, wirken|to seem|parecer||Он ка́жется уста́лым.|Er wirkt müde.|He seems tired.|Él parece cansado.
+дава́ть|даю́|даёшь|дать|дам|дашь|geben|to give|dar||Дай мне, пожа́луйста, ру́чку.|Gib mir bitte einen Stift.|Give me a pen, please.|Dame un lápiz, por favor.
+остава́ться|остаю́сь|остаёшься|оста́ться|оста́нусь|оста́нешься|bleiben|to stay, to remain|quedarse||Я оста́нусь до́ма.|Ich bleibe zu Hause.|I'll stay at home.|Yo me voy a quedar en la casa.
+выходи́ть|выхожу́|выхо́дишь|вы́йти|вы́йду|вы́йдешь|hinausgehen; aussteigen|to go out; to get off|salir, desmontarse|salir|Я выхожу́ на сле́дующей остано́вке.|Ich steige an der nächsten Haltestelle aus.|I'm getting off at the next stop.|Yo me desmonto en la próxima parada.
+рабо́тать|рабо́таю|рабо́таешь|порабо́тать|порабо́таю|порабо́таешь|arbeiten|to work|trabajar||Я рабо́таю в больни́це.|Ich arbeite im Krankenhaus.|I work at a hospital.|Yo trabajo en un hospital.
+люби́ть|люблю́|лю́бишь|полюби́ть|полюблю́|полю́бишь|lieben, mögen|to love, to like|querer, amar|querer|Я люблю́ тебя́.|Ich liebe dich.|I love you.|Yo te quiero.
+ока́зываться|ока́зываюсь|ока́зываешься|оказа́ться|окажу́сь|ока́жешься|sich herausstellen; geraten|to turn out; to end up|resultar||Он оказа́лся хоро́шим челове́ком.|Er hat sich als guter Mensch herausgestellt.|He turned out to be a good person.|Él resultó ser una buena persona.
+отвеча́ть|отвеча́ю|отвеча́ешь|отве́тить|отве́чу|отве́тишь|antworten|to answer|contestar, responder|contestar|Он не отвеча́ет.|Er antwortet nicht.|He doesn't answer.|Él no contesta.
+зна́чить|зна́чу|зна́чишь||||bedeuten|to mean|significar||Что зна́чит э́то сло́во?|Was bedeutet dieses Wort?|What does this word mean?|¿Qué significa esta palabra?
+ждать|жду|ждёшь|подожда́ть|подожду́|подождёшь|warten|to wait|esperar||Подожди́ мину́ту!|Warte eine Minute!|Wait a minute!|¡Espérate un minuto!
+лежа́ть|лежу́|лежи́шь|полежа́ть|полежу́|полежи́шь|liegen|to lie, to be lying|estar acostado, estar|estar acostado|Кни́га лежи́т на столе́.|Das Buch liegt auf dem Tisch.|The book is lying on the table.|El libro está en la mesa.
+находи́ть|нахожу́|нахо́дишь|найти́|найду́|найдёшь|finden|to find|encontrar||Я не могу́ найти́ ключи́.|Ich kann die Schlüssel nicht finden.|I can't find the keys.|Yo no puedo encontrar las llaves.
+писа́ть|пишу́|пи́шешь|написа́ть|напишу́|напи́шешь|schreiben|to write|escribir||Он пи́шет письмо́.|Er schreibt einen Brief.|He is writing a letter.|Él escribe una carta.
+реша́ть|реша́ю|реша́ешь|реши́ть|решу́|реши́шь|entscheiden; lösen|to decide; to solve|decidir; resolver|decidir; resolver|Я реши́л учи́ть ру́сский.|Ich habe beschlossen, Russisch zu lernen.|I decided to learn Russian.|Yo decidí aprender ruso.
+возвраща́ться|возвраща́юсь|возвраща́ешься|верну́ться|верну́сь|вернёшься|zurückkehren, zurückkommen|to return, to come back|volver, regresar|volver|Я верну́сь в пять.|Ich komme um fünf zurück.|I'll be back at five.|Yo vuelvo a las cinco.
+счита́ть|счита́ю|счита́ешь|посчита́ть|посчита́ю|посчита́ешь|zählen; meinen, halten für|to count; to consider|contar; considerar|contar; considerar|Я счита́ю, что он прав.|Ich finde, dass er recht hat.|I think he is right.|Yo creo que él tiene razón.
+по́мнить|по́мню|по́мнишь||||sich erinnern, noch wissen|to remember|acordarse, recordar|acordarse|Ты по́мнишь его́ и́мя?|Erinnerst du dich an seinen Namen?|Do you remember his name?|¿Tú te acuerdas de su nombre?
+получа́ть|получа́ю|получа́ешь|получи́ть|получу́|полу́чишь|bekommen, erhalten|to receive, to get|recibir||Я получи́л письмо́.|Ich habe einen Brief bekommen.|I got a letter.|Yo recibí una carta.
+ходи́ть|хожу́|хо́дишь||||gehen (regelmäßig, hin und her)|to go, to walk (regularly)|ir, caminar|ir|Я хожу́ в спортза́л.|Ich gehe ins Fitnessstudio.|I go to the gym.|Yo voy al gimnasio.|Verb der Bewegung: mehrere Richtungen oder regelmäßig. Eine Richtung: идти́.
+быва́ть|быва́ю|быва́ешь||||öfter sein; vorkommen|to be (often); to happen|estar a menudo, pasar|estar|Я ча́сто быва́ю в Москве́.|Ich bin oft in Moskau.|I'm often in Moscow.|Yo estoy en Moscú a menudo.
+приходи́ть|прихожу́|прихо́дишь|прийти́|приду́|придёшь|kommen (zu Fuß), ankommen|to come, to arrive|venir, llegar|venir|Приходи́ ко мне за́втра!|Komm morgen zu mir!|Come to my place tomorrow!|¡Ven a mi casa mañana!
+слы́шать|слы́шу|слы́шишь|услы́шать|услы́шу|услы́шишь|hören|to hear|oír||Ты меня́ слы́шишь?|Hörst du mich?|Can you hear me?|¿Tú me oyes?
+начина́ть|начина́ю|начина́ешь|нача́ть|начну́|начнёшь|anfangen, beginnen|to begin, to start|empezar, comenzar|empezar|Я начина́ю рабо́тать в де́вять.|Ich fange um neun an zu arbeiten.|I start working at nine.|Yo empiezo a trabajar a las nueve.
+узнава́ть|узнаю́|узнаёшь|узна́ть|узна́ю|узна́ешь|erfahren; wiedererkennen|to find out; to recognize|enterarse; reconocer|enterarse; reconocer|Я узна́л но́вость.|Ich habe die Neuigkeit erfahren.|I found out the news.|Yo me enteré de la noticia.
+чу́вствовать|чу́вствую|чу́вствуешь|почу́вствовать|почу́вствую|почу́вствуешь|fühlen|to feel|sentir||Как ты себя́ чу́вствуешь?|Wie fühlst du dich?|How do you feel?|¿Cómo tú te sientes?|Erstes в wird nicht gesprochen.
+есть|ем|ешь|съесть|съем|съешь|essen|to eat|comer||Я ем суп.|Ich esse Suppe.|I'm eating soup.|Yo como sopa.
+пить|пью|пьёшь|вы́пить|вы́пью|вы́пьешь|trinken|to drink|tomar, beber|tomar|Я пью чай.|Ich trinke Tee.|I am drinking tea.|Yo tomo té.
+сади́ться|сажу́сь|сади́шься|сесть|ся́ду|ся́дешь|sich setzen; einsteigen|to sit down; to get on|sentarse; montarse|sentarse; montarse|Сади́тесь, пожа́луйста!|Setzen Sie sich bitte!|Please sit down!|¡Siéntese, por favor!
+проходи́ть|прохожу́|прохо́дишь|пройти́|пройду́|пройдёшь|vorbeigehen, durchgehen; vergehen|to pass, to go through|pasar||Проходи́те, пожа́луйста!|Kommen Sie bitte herein!|Come in, please!|¡Pase, por favor!
+по́льзоваться|по́льзуюсь|по́льзуешься|воспо́льзоваться|воспо́льзуюсь|воспо́льзуешься|benutzen|to use|usar||Я ча́сто по́льзуюсь метро́.|Ich benutze oft die Metro.|I often use the metro.|Yo uso mucho el metro.|Mit Instrumental: по́льзоваться телефо́ном.
+продолжа́ть|продолжа́ю|продолжа́ешь|продо́лжить|продо́лжу|продо́лжишь|fortsetzen, weitermachen|to continue|seguir, continuar|seguir|Продолжа́й, я слу́шаю.|Mach weiter, ich höre zu.|Go on, I'm listening.|Sigue, que yo te estoy escuchando.
+смея́ться|смею́сь|смеёшься|засмея́ться|засмею́сь|засмеёшься|lachen|to laugh|reírse||Почему́ ты смеёшься?|Warum lachst du?|Why are you laughing?|¿Por qué tú te ríes?
