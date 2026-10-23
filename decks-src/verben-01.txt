@@ -8,12 +8,12 @@
 хоте́ть|хочу́|хо́чешь|захоте́ть|захочу́|захо́чешь|wollen|to want|querer||Я хочу́ пить.|Ich habe Durst.|I'm thirsty.|Yo quiero tomar algo.
 ви́деть|ви́жу|ви́дишь|уви́деть|уви́жу|уви́дишь|sehen|to see|ver||Я ви́жу мо́ре.|Ich sehe das Meer.|I see the sea.|Yo veo el mar.
 идти́|иду́|идёшь|пойти́|пойду́|пойдёшь|gehen (zu Fuß, eine Richtung)|to go (on foot)|ir, caminar|ir|Я иду́ домо́й.|Ich gehe nach Hause.|I'm going home.|Yo voy para la casa.|Verb der Bewegung: eine Richtung. Mehrere Richtungen oder regelmäßig: ходи́ть.
-стоя́ть|стою́|стои́шь|постоя́ть|постою́|постои́шь|stehen|to stand|estar parado, estar de pie|estar parado|Он стои́т у окна́.|Er steht am Fenster.|He is standing by the window.|Él está parado en la ventana.
+стоя́ть|стою́|стои́шь|постоя́ть|постою́|постои́шь|stehen|to stand|estar parado, estar de pie|estar parado|Он стои́т у окна́.|Er steht am Fenster.|He is standing by the window.|Él está parado en la ventana.|по- bedeutet hier „ein Weilchen“: постоя́ть = eine Weile stehen.
 ду́мать|ду́маю|ду́маешь|поду́мать|поду́маю|поду́маешь|denken|to think|pensar||Я ду́маю о тебе́.|Ich denke an dich.|I'm thinking about you.|Yo pienso en ti.
 спра́шивать|спра́шиваю|спра́шиваешь|спроси́ть|спрошу́|спро́сишь|fragen|to ask|preguntar||Спроси́ его́, где он живёт.|Frag ihn, wo er wohnt.|Ask him where he lives.|Pregúntale dónde él vive.
-жить|живу́|живёшь|прожи́ть|проживу́|проживёшь|leben, wohnen|to live|vivir||Где ты живёшь?|Wo wohnst du?|Where do you live?|¿Dónde tú vives?
+жить|живу́|живёшь|прожи́ть|проживу́|проживёшь|leben, wohnen|to live|vivir||Где ты живёшь?|Wo wohnst du?|Where do you live?|¿Dónde tú vives?|прожи́ть = eine Zeit lang leben, verbringen (прожи́ть год в Москве́).
 смотре́ть|смотрю́|смо́тришь|посмотре́ть|посмотрю́|посмо́тришь|schauen, ansehen|to watch, to look|mirar, ver|mirar|Мы смо́трим фильм.|Wir schauen einen Film.|We are watching a film.|Nosotros vemos una película.
-сиде́ть|сижу́|сиди́шь|посиде́ть|посижу́|посиди́шь|sitzen|to sit, to be sitting|estar sentado||Ко́шка сиди́т на сту́ле.|Die Katze sitzt auf dem Stuhl.|The cat is sitting on the chair.|El gato está sentado en la silla.
+сиде́ть|сижу́|сиди́шь|посиде́ть|посижу́|посиди́шь|sitzen|to sit, to be sitting|estar sentado||Ко́шка сиди́т на сту́ле.|Die Katze sitzt auf dem Stuhl.|The cat is sitting on the chair.|El gato está sentado en la silla.|по- bedeutet hier „ein Weilchen“: посиде́ть = eine Weile sitzen.
 понима́ть|понима́ю|понима́ешь|поня́ть|пойму́|поймёшь|verstehen|to understand|entender, comprender|entender|Я не понима́ю.|Ich verstehe nicht.|I don't understand.|Yo no entiendo.
 име́ть|име́ю|име́ешь||||haben, besitzen|to have, to own|tener||Я име́ю пра́во знать.|Ich habe das Recht, es zu wissen.|I have the right to know.|Yo tengo derecho a saber.|Für „ich habe“ sagt man meist у меня́ есть.
 де́лать|де́лаю|де́лаешь|сде́лать|сде́лаю|сде́лаешь|machen, tun|to do, to make|hacer||Что ты де́лаешь?|Was machst du?|What are you doing?|¿Qué tú haces?
@@ -28,7 +28,7 @@
 отвеча́ть|отвеча́ю|отвеча́ешь|отве́тить|отве́чу|отве́тишь|antworten|to answer|contestar, responder|contestar|Он не отвеча́ет.|Er antwortet nicht.|He doesn't answer.|Él no contesta.
 зна́чить|зна́чу|зна́чишь||||bedeuten|to mean|significar||Что зна́чит э́то сло́во?|Was bedeutet dieses Wort?|What does this word mean?|¿Qué significa esta palabra?
 ждать|жду|ждёшь|подожда́ть|подожду́|подождёшь|warten|to wait|esperar||Подожди́ мину́ту!|Warte eine Minute!|Wait a minute!|¡Espérate un minuto!
-лежа́ть|лежу́|лежи́шь|полежа́ть|полежу́|полежи́шь|liegen|to lie, to be lying|estar acostado, estar|estar acostado|Кни́га лежи́т на столе́.|Das Buch liegt auf dem Tisch.|The book is lying on the table.|El libro está en la mesa.
+лежа́ть|лежу́|лежи́шь|полежа́ть|полежу́|полежи́шь|liegen|to lie, to be lying|estar acostado, estar|estar acostado|Кни́га лежи́т на столе́.|Das Buch liegt auf dem Tisch.|The book is lying on the table.|El libro está en la mesa.|по- bedeutet hier „ein Weilchen“: полежа́ть = eine Weile liegen.
 находи́ть|нахожу́|нахо́дишь|найти́|найду́|найдёшь|finden|to find|encontrar||Я не могу́ найти́ ключи́.|Ich kann die Schlüssel nicht finden.|I can't find the keys.|Yo no puedo encontrar las llaves.
 писа́ть|пишу́|пи́шешь|написа́ть|напишу́|напи́шешь|schreiben|to write|escribir||Он пи́шет письмо́.|Er schreibt einen Brief.|He is writing a letter.|Él escribe una carta.
 реша́ть|реша́ю|реша́ешь|реши́ть|решу́|реши́шь|entscheiden; lösen|to decide; to solve|decidir; resolver|decidir; resolver|Я реши́л учи́ть ру́сский.|Ich habe beschlossen, Russisch zu lernen.|I decided to learn Russian.|Yo decidí aprender ruso.

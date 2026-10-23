@@ -56,6 +56,21 @@ if (Test-Path $impFile) {
 }
 $usedImps = @{}
 
+# Rektion (decks-src\rektion.tsv) und Verben der Bewegung (decks-src\bewegung.tsv)
+function Read-Tsv($name) {
+  $map = @{}
+  $file = Join-Path $src $name
+  if (-not (Test-Path $file)) { return $map }
+  foreach ($line in [IO.File]::ReadAllLines($file, $utf8)) {
+    if ($line.Trim() -eq '' -or $line.StartsWith('#')) { continue }
+    $p = $line.Split("`t")
+    $map[(& $plain $p[0].Trim())] = @($p | Select-Object -Skip 1 | ForEach-Object { $_.Trim() })
+  }
+  return $map
+}
+$govs = Read-Tsv 'rektion.tsv'
+$motions = Read-Tsv 'bewegung.tsv'
+
 $cards = New-Object System.Collections.ArrayList
 $seen = @{}
 $missing = @()
@@ -84,6 +99,11 @@ foreach ($file in Get-ChildItem $src -Filter '*.txt' | Sort-Object Name) {
     $c.ru = if ($c.ipf -and $c.pf -and $c.ipf -ne $c.pf) { "$($c.ipf) / $($c.pf)" } else { $head }
     if ($cases.ContainsKey($key)) { $c.example_cases = $cases[$key]; $usedCases[$key] = 1 }
     else { Write-Host "Keine Fälle für: $key" }
+    if ($govs.ContainsKey($key)) { $c.government = $govs[$key][0] } else { Write-Host "Keine Rektion für: $key" }
+    if ($motions.ContainsKey($key)) {
+      $c.motion = $motions[$key][0]
+      if ($motions[$key].Count -gt 1) { $c.motion_pair = $motions[$key][1] }
+    }
     foreach ($asp in 'ipf', 'pf') {
       if (-not $c[$asp]) { continue }
       $k = & $plain $c[$asp]

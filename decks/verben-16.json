@@ -9,6 +9,84 @@
                   ],
     "cards":  [
                   {
+                      "id":  "vb-ужинать",
+                      "type":  "verbpair",
+                      "ru":  "у́жинать / поу́жинать",
+                      "ipf":  "у́жинать",
+                      "ipf_1":  "у́жинаю",
+                      "ipf_2":  "у́жинаешь",
+                      "pf":  "поу́жинать",
+                      "pf_1":  "поу́жинаю",
+                      "pf_2":  "поу́жинаешь",
+                      "de":  "zu Abend essen",
+                      "en":  "to have dinner",
+                      "es":  "cenar",
+                      "example":  "Мы у́жинаем вме́сте.",
+                      "example_de":  "Wir essen zusammen zu Abend.",
+                      "example_en":  "We have dinner together.",
+                      "example_es":  "Nosotros cenamos juntos.",
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt · где? – в/на + Präpositiv"
+                  },
+                  {
+                      "id":  "vb-критиковать",
+                      "type":  "verbpair",
+                      "ru":  "критикова́ть",
+                      "ipf":  "критикова́ть",
+                      "ipf_1":  "критику́ю",
+                      "ipf_2":  "критику́ешь",
+                      "de":  "kritisieren",
+                      "en":  "to criticize",
+                      "es":  "criticar",
+                      "example":  "Не критику́й его́.",
+                      "example_de":  "Kritisiere ihn nicht.",
+                      "example_en":  "Don\u0027t criticize him.",
+                      "example_es":  "No lo critiques.",
+                      "example_cases":  "его́ – Akkusativ",
+                      "government":  "кого́? что? – Akkusativ · за что? – за + Akkusativ"
+                  },
+                  {
+                      "id":  "vb-чинить",
+                      "type":  "verbpair",
+                      "ru":  "чини́ть / почини́ть",
+                      "ipf":  "чини́ть",
+                      "ipf_1":  "чиню́",
+                      "ipf_2":  "чи́нишь",
+                      "pf":  "почини́ть",
+                      "pf_1":  "починю́",
+                      "pf_2":  "почи́нишь",
+                      "de":  "reparieren",
+                      "en":  "to repair, to fix",
+                      "es":  "arreglar",
+                      "example":  "Па́па чи́нит маши́ну.",
+                      "example_de":  "Papa repariert das Auto.",
+                      "example_en":  "Dad is fixing the car.",
+                      "example_es":  "Papi está arreglando el carro.",
+                      "example_cases":  "маши́ну – Akkusativ",
+                      "government":  "что? – Akkusativ"
+                  },
+                  {
+                      "id":  "vb-гонять",
+                      "type":  "verbpair",
+                      "ru":  "гоня́ть",
+                      "ipf":  "гоня́ть",
+                      "ipf_1":  "гоня́ю",
+                      "ipf_2":  "гоня́ешь",
+                      "de":  "jagen, treiben (hin und her); rasen",
+                      "en":  "to chase (around); to drive fast",
+                      "es":  "perseguir; correr",
+                      "es_verb":  "perseguir",
+                      "example":  "Ко́шка гоня́ет мышь по ко́мнате.",
+                      "example_de":  "Die Katze jagt die Maus durchs Zimmer.",
+                      "example_en":  "The cat chases the mouse around the room.",
+                      "example_es":  "El gato persigue al ratón por el cuarto.",
+                      "note":  "Mehrere Richtungen oder regelmäßig. Eine Richtung: гнать.",
+                      "example_cases":  "мышь – Akkusativ · по ко́мнате – Dativ (nach по)",
+                      "government":  "кого́? – Akkusativ · по чему́? – по + Dativ",
+                      "motion":  "multi",
+                      "motion_pair":  "гнать"
+                  },
+                  {
                       "id":  "vb-ремонтировать",
                       "type":  "verbpair",
                       "ru":  "ремонти́ровать / отремонти́ровать",
@@ -26,7 +104,8 @@
                       "example_de":  "Wir renovieren die Wohnung.",
                       "example_en":  "We\u0027re renovating the apartment.",
                       "example_es":  "Nosotros estamos remodelando el apartamento.",
-                      "example_cases":  "кварти́ру – Akkusativ"
+                      "example_cases":  "кварти́ру – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-лечиться",
@@ -46,7 +125,8 @@
                       "example_de":  "Er wird im Krankenhaus behandelt.",
                       "example_en":  "He is being treated in hospital.",
                       "example_es":  "Él se está tratando en el hospital.",
-                      "example_cases":  "в больни́це – Präpositiv (wo?)"
+                      "example_cases":  "в больни́це – Präpositiv (wo?)",
+                      "government":  "от чего́? – от + Genitiv · где? – в + Präpositiv"
                   },
                   {
                       "id":  "vb-взвешивать",
@@ -65,7 +145,8 @@
                       "example_de":  "Wiegen Sie bitte die Äpfel ab.",
                       "example_en":  "Please weigh the apples.",
                       "example_es":  "Péseme las manzanas, por favor.",
-                      "example_cases":  "я́блоки – Akkusativ"
+                      "example_cases":  "я́блоки – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-свистеть",
@@ -85,7 +166,8 @@
                       "example_de":  "Er pfeift eine Melodie.",
                       "example_en":  "He\u0027s whistling a tune.",
                       "example_es":  "Él está chiflando una canción.",
-                      "example_cases":  "мело́дию – Akkusativ"
+                      "example_cases":  "мело́дию – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ"
                   },
                   {
                       "id":  "vb-путешествовать",
@@ -101,7 +183,8 @@
                       "example_de":  "Ich reise gern.",
                       "example_en":  "I love to travel.",
                       "example_es":  "A mí me encanta viajar.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "по чему́? – по + Dativ (по Росси́и)"
                   },
                   {
                       "id":  "vb-завтракать",
@@ -120,7 +203,32 @@
                       "example_de":  "Ich frühstücke um sieben.",
                       "example_en":  "I have breakfast at seven.",
                       "example_es":  "Yo desayuno a las siete.",
-                      "example_cases":  "в семь – Akkusativ (Uhrzeit)"
+                      "example_cases":  "в семь – Akkusativ (Uhrzeit)",
+                      "government":  "чем? – Instrumental (за́втракать ка́шей)"
+                  },
+                  {
+                      "id":  "vb-катить",
+                      "type":  "verbpair",
+                      "ru":  "кати́ть / покати́ть",
+                      "ipf":  "кати́ть",
+                      "ipf_1":  "качу́",
+                      "ipf_2":  "ка́тишь",
+                      "pf":  "покати́ть",
+                      "pf_1":  "покачу́",
+                      "pf_2":  "пока́тишь",
+                      "de":  "rollen, schieben (eine Richtung)",
+                      "en":  "to roll, to wheel",
+                      "es":  "rodar, empujar",
+                      "es_verb":  "empujar",
+                      "example":  "Я качу́ чемода́н к вы́ходу.",
+                      "example_de":  "Ich rolle den Koffer zum Ausgang.",
+                      "example_en":  "I\u0027m wheeling the suitcase to the exit.",
+                      "example_es":  "Yo llevo la maleta rodando hacia la salida.",
+                      "note":  "Verb der Bewegung: eine Richtung. Mehrere Richtungen: ката́ть.",
+                      "example_cases":  "чемода́н – Akkusativ · к вы́ходу – Dativ (nach к)",
+                      "government":  "что? – Akkusativ · куда́? – к + Dativ, в/на + Akkusativ",
+                      "motion":  "uni",
+                      "motion_pair":  "ката́ть"
                   },
                   {
                       "id":  "vb-умываться",
@@ -140,7 +248,8 @@
                       "example_de":  "Ich wasche mich mit kaltem Wasser.",
                       "example_en":  "I wash my face with cold water.",
                       "example_es":  "Yo me lavo la cara con agua fría.",
-                      "example_cases":  "холо́дной водо́й – Instrumental (womit?)"
+                      "example_cases":  "холо́дной водо́й – Instrumental (womit?)",
+                      "government":  "чем? – Instrumental"
                   },
                   {
                       "id":  "vb-стыдиться",
@@ -160,7 +269,8 @@
                       "example_de":  "Schäm dich nicht für deine Fehler.",
                       "example_en":  "Don\u0027t be ashamed of your mistakes.",
                       "example_es":  "No tengas vergüenza de tus errores.",
-                      "example_cases":  "свои́х оши́бок – Genitiv (nach стыди́ться)"
+                      "example_cases":  "свои́х оши́бок – Genitiv (nach стыди́ться)",
+                      "government":  "кого́? чего́? – Genitiv"
                   },
                   {
                       "id":  "vb-мириться",
@@ -180,7 +290,8 @@
                       "example_de":  "Sie haben sich versöhnt.",
                       "example_en":  "They made up.",
                       "example_es":  "Ellos se contentaron.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "с кем? – с + Instrumental"
                   },
                   {
                       "id":  "vb-худеть",
@@ -200,7 +311,8 @@
                       "example_de":  "Ich will abnehmen.",
                       "example_en":  "I want to lose weight.",
                       "example_es":  "Yo quiero rebajar.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "на ско́лько? – на + Akkusativ"
                   },
                   {
                       "id":  "vb-кашлять",
@@ -220,6 +332,7 @@
                       "example_en":  "The child is coughing badly.",
                       "example_es":  "El niño está tosiendo mucho.",
                       "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt",
                       "pf_imp":  "ка́шляни"
                   },
                   {
@@ -239,7 +352,29 @@
                       "example_de":  "Ich dusche jeden Abend.",
                       "example_en":  "I wash every evening.",
                       "example_es":  "Yo me baño todas las noches.",
-                      "example_cases":  "ка́ждый ве́чер – Akkusativ (wann?)"
+                      "example_cases":  "ка́ждый ве́чер – Akkusativ (wann?)",
+                      "government":  "чем? – Instrumental"
+                  },
+                  {
+                      "id":  "vb-ползать",
+                      "type":  "verbpair",
+                      "ru":  "по́лзать",
+                      "ipf":  "по́лзать",
+                      "ipf_1":  "по́лзаю",
+                      "ipf_2":  "по́лзаешь",
+                      "de":  "kriechen (hin und her); krabbeln",
+                      "en":  "to crawl (around)",
+                      "es":  "gatear, arrastrarse",
+                      "es_verb":  "gatear",
+                      "example":  "Ребёнок уже́ по́лзает.",
+                      "example_de":  "Das Baby krabbelt schon.",
+                      "example_en":  "The baby is already crawling.",
+                      "example_es":  "El bebé ya gatea.",
+                      "note":  "Mehrere Richtungen oder allgemein. Eine Richtung: ползти́.",
+                      "example_cases":  "nur Nominativ",
+                      "government":  "где? – по + Dativ",
+                      "motion":  "multi",
+                      "motion_pair":  "ползти́"
                   },
                   {
                       "id":  "vb-поправляться",
@@ -260,7 +395,8 @@
                       "example_en":  "I gained three kilos.",
                       "example_es":  "Yo engordé tres kilos.",
                       "es2_verb":  "engordar",
-                      "example_cases":  "на три кило́ – Akkusativ (um wie viel?)"
+                      "example_cases":  "на три кило́ – Akkusativ (um wie viel?)",
+                      "government":  "на ско́лько? – на + Akkusativ"
                   },
                   {
                       "id":  "vb-тренироваться",
@@ -280,7 +416,8 @@
                       "example_de":  "Ich trainiere dreimal pro Woche.",
                       "example_en":  "I train three times a week.",
                       "example_es":  "Yo entreno tres veces a la semana.",
-                      "example_cases":  "три ра́за – Genitiv (nach три) · в неде́лю – Akkusativ (pro Woche)"
+                      "example_cases":  "три ра́за – Genitiv (nach три) · в неде́лю – Akkusativ (pro Woche)",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-сушить",
@@ -299,7 +436,8 @@
                       "example_de":  "Ich föhne mir die Haare.",
                       "example_en":  "I\u0027m drying my hair.",
                       "example_es":  "Yo me estoy secando el pelo.",
-                      "example_cases":  "во́лосы – Akkusativ"
+                      "example_cases":  "во́лосы – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-жарить",
@@ -318,7 +456,8 @@
                       "example_de":  "Ich brate Fisch.",
                       "example_en":  "I\u0027m frying fish.",
                       "example_es":  "Yo frío el pescado.",
-                      "example_cases":  "ры́бу – Akkusativ"
+                      "example_cases":  "ры́бу – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-загружать",
@@ -338,7 +477,8 @@
                       "example_de":  "Lade das Foto in den Chat hoch.",
                       "example_en":  "Upload the photo to the chat.",
                       "example_es":  "Sube la foto al chat.",
-                      "example_cases":  "фо́то – Akkusativ · в чат – Akkusativ (wohin?)"
+                      "example_cases":  "фо́то – Akkusativ · в чат – Akkusativ (wohin?)",
+                      "government":  "что? – Akkusativ · куда́? – в/на + Akkusativ"
                   },
                   {
                       "id":  "vb-бриться",
@@ -357,7 +497,8 @@
                       "example_de":  "Er rasiert sich jeden Morgen.",
                       "example_en":  "He shaves every morning.",
                       "example_es":  "Él se afeita todas las mañanas.",
-                      "example_cases":  "ка́ждое у́тро – Akkusativ (wann?)"
+                      "example_cases":  "ка́ждое у́тро – Akkusativ (wann?)",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-выздоравливать",
@@ -377,7 +518,8 @@
                       "example_de":  "Werd schnell wieder gesund!",
                       "example_en":  "Get well soon!",
                       "example_es":  "¡Que te mejores pronto!",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-вредить",
@@ -397,7 +539,8 @@
                       "example_de":  "Rauchen schadet der Gesundheit.",
                       "example_en":  "Smoking harms your health.",
                       "example_es":  "Fumar perjudica la salud.",
-                      "example_cases":  "здоро́вью – Dativ (nach вреди́ть)"
+                      "example_cases":  "здоро́вью – Dativ (nach вреди́ть)",
+                      "government":  "кому́? чему́? – Dativ"
                   },
                   {
                       "id":  "vb-загорать",
@@ -417,7 +560,8 @@
                       "example_de":  "Wir sonnen uns am Strand.",
                       "example_en":  "We\u0027re sunbathing on the beach.",
                       "example_es":  "Nosotros estamos cogiendo sol en la playa.",
-                      "example_cases":  "на пля́же – Präpositiv (wo?)"
+                      "example_cases":  "на пля́же – Präpositiv (wo?)",
+                      "government":  "где? – на + Präpositiv"
                   },
                   {
                       "id":  "vb-арендовать",
@@ -438,7 +582,32 @@
                       "example_en":  "We rented a car.",
                       "example_es":  "Nosotros rentamos un carro.",
                       "note":  "Zweiaspektig.",
-                      "example_cases":  "маши́ну – Akkusativ"
+                      "example_cases":  "маши́ну – Akkusativ",
+                      "government":  "что? – Akkusativ"
+                  },
+                  {
+                      "id":  "vb-катать",
+                      "type":  "verbpair",
+                      "ru":  "ката́ть / поката́ть",
+                      "ipf":  "ката́ть",
+                      "ipf_1":  "ката́ю",
+                      "ipf_2":  "ката́ешь",
+                      "pf":  "поката́ть",
+                      "pf_1":  "поката́ю",
+                      "pf_2":  "поката́ешь",
+                      "de":  "rollen (hin und her); herumfahren (jmdn.)",
+                      "en":  "to roll (around); to take for a ride",
+                      "es":  "pasear (a alguien), rodar",
+                      "es_verb":  "pasear",
+                      "example":  "Па́па ката́ет сы́на на велосипе́де.",
+                      "example_de":  "Papa fährt den Sohn auf dem Fahrrad herum.",
+                      "example_en":  "Dad is giving his son a ride on the bike.",
+                      "example_es":  "Papi pasea a su hijo en la bicicleta.",
+                      "note":  "Mehrere Richtungen. Eine Richtung: кати́ть. Sich vergnügen: ката́ться.",
+                      "example_cases":  "сы́на – Akkusativ (belebt = wie Genitiv) · на велосипе́де – Präpositiv (nach на)",
+                      "government":  "кого́? – Akkusativ · на чём? – на + Präpositiv",
+                      "motion":  "multi",
+                      "motion_pair":  "кати́ть"
                   },
                   {
                       "id":  "vb-весить",
@@ -454,7 +623,8 @@
                       "example_de":  "Wie viel wiegst du?",
                       "example_en":  "How much do you weigh?",
                       "example_es":  "¿Cuánto tú pesas?",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ско́лько? – Akkusativ (70 кило́)"
                   },
                   {
                       "id":  "vb-согреваться",
@@ -473,7 +643,8 @@
                       "example_de":  "Geh zum Kamin, wärm dich auf.",
                       "example_en":  "Go to the fireplace and warm up.",
                       "example_es":  "Ve a la chimenea y caliéntate.",
-                      "example_cases":  "к ками́ну – Dativ (nach к)"
+                      "example_cases":  "к ками́ну – Dativ (nach к)",
+                      "government":  "ohne Objekt · у чего́? – у + Genitiv"
                   },
                   {
                       "id":  "vb-одалживать",
@@ -492,7 +663,8 @@
                       "example_de":  "Leih mir einen Stift.",
                       "example_en":  "Lend me a pen.",
                       "example_es":  "Préstame un lápiz.",
-                      "example_cases":  "мне – Dativ · ру́чку – Akkusativ"
+                      "example_cases":  "мне – Dativ · ру́чку – Akkusativ",
+                      "government":  "кому́? – Dativ · что? – Akkusativ"
                   },
                   {
                       "id":  "vb-обменивать",
@@ -511,7 +683,8 @@
                       "example_de":  "Wo kann man Dollar umtauschen?",
                       "example_en":  "Where can I exchange dollars?",
                       "example_es":  "¿Dónde se pueden cambiar dólares?",
-                      "example_cases":  "до́ллары – Akkusativ"
+                      "example_cases":  "до́ллары – Akkusativ",
+                      "government":  "что? на что? – Akkusativ + на + Akkusativ"
                   },
                   {
                       "id":  "vb-чихать",
@@ -530,7 +703,8 @@
                       "example_de":  "Gesundheit! Du hast geniest.",
                       "example_en":  "Bless you! You sneezed.",
                       "example_es":  "¡Salud! Tú estornudaste.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-мерить",
@@ -551,7 +725,8 @@
                       "example_en":  "Can I try on these trousers?",
                       "example_es":  "¿Me puedo probar estos pantalones?",
                       "es2_verb":  "probarse",
-                      "example_cases":  "э́ти брю́ки – Akkusativ"
+                      "example_cases":  "э́ти брю́ки – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-клеить",
@@ -570,7 +745,8 @@
                       "example_de":  "Kleb die Briefmarke auf den Umschlag.",
                       "example_en":  "Stick the stamp on the envelope.",
                       "example_es":  "Pégale el sello al sobre.",
-                      "example_cases":  "ма́рку – Akkusativ · на конве́рт – Akkusativ (wohin?)"
+                      "example_cases":  "ма́рку – Akkusativ · на конве́рт – Akkusativ (wohin?)",
+                      "government":  "что? – Akkusativ · куда́? – на + Akkusativ"
                   },
                   {
                       "id":  "vb-регистрироваться",
@@ -589,7 +765,8 @@
                       "example_de":  "Registrieren Sie sich auf der Website.",
                       "example_en":  "Register on the website.",
                       "example_es":  "Regístrese en la página web.",
-                      "example_cases":  "на са́йте – Präpositiv (wo?)"
+                      "example_cases":  "на са́йте – Präpositiv (wo?)",
+                      "government":  "где? – в/на + Präpositiv"
                   },
                   {
                       "id":  "vb-остывать",
@@ -608,7 +785,29 @@
                       "example_de":  "Iss, sonst wird die Suppe kalt.",
                       "example_en":  "Eat, or the soup will get cold.",
                       "example_es":  "Come, que se te va a enfriar la sopa.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt"
+                  },
+                  {
+                      "id":  "vb-лазить",
+                      "type":  "verbpair",
+                      "ru":  "ла́зить",
+                      "ipf":  "ла́зить",
+                      "ipf_1":  "ла́жу",
+                      "ipf_2":  "ла́зишь",
+                      "de":  "klettern (hin und her, regelmäßig)",
+                      "en":  "to climb (around, regularly)",
+                      "es":  "trepar, subirse",
+                      "es_verb":  "trepar",
+                      "example":  "Де́ти лю́бят ла́зить по дере́вьям.",
+                      "example_de":  "Kinder klettern gern auf Bäume.",
+                      "example_en":  "Kids love climbing trees.",
+                      "example_es":  "A los niños les encanta trepar a los árboles.",
+                      "note":  "Mehrere Richtungen oder regelmäßig. Eine Richtung: лезть.",
+                      "example_cases":  "по дере́вьям – Dativ (nach по)",
+                      "government":  "где? по чему́? – по + Dativ (по дере́вьям) · куда́? – в/на + Akkusativ",
+                      "motion":  "multi",
+                      "motion_pair":  "лезть"
                   },
                   {
                       "id":  "vb-причесываться",
@@ -627,7 +826,8 @@
                       "example_de":  "Sie kämmt sich vor dem Spiegel.",
                       "example_en":  "She is combing her hair in front of the mirror.",
                       "example_es":  "Ella se está peinando frente al espejo.",
-                      "example_cases":  "пе́ред зе́ркалом – Instrumental (nach пе́ред)"
+                      "example_cases":  "пе́ред зе́ркалом – Instrumental (nach пе́ред)",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-бронировать",
@@ -646,7 +846,8 @@
                       "example_de":  "Ich habe einen Tisch reserviert.",
                       "example_en":  "I booked a table.",
                       "example_es":  "Yo reservé una mesa.",
-                      "example_cases":  "сто́лик – Akkusativ"
+                      "example_cases":  "сто́лик – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-толстеть",
@@ -665,7 +866,8 @@
                       "example_de":  "Ich habe im Urlaub zugenommen.",
                       "example_en":  "I put on weight during vacation.",
                       "example_es":  "Yo engordé en las vacaciones.",
-                      "example_cases":  "за о́тпуск – Akkusativ (nach за = während)"
+                      "example_cases":  "за о́тпуск – Akkusativ (nach за = während)",
+                      "government":  "на ско́лько? – на + Akkusativ"
                   },
                   {
                       "id":  "vb-скачивать",
@@ -685,7 +887,8 @@
                       "example_de":  "Ich habe ein neues Spiel heruntergeladen.",
                       "example_en":  "I downloaded a new game.",
                       "example_es":  "Yo descargué un juego nuevo.",
-                      "example_cases":  "но́вую игру́ – Akkusativ"
+                      "example_cases":  "но́вую игру́ – Akkusativ",
+                      "government":  "что? – Akkusativ · откуда? – из/с + Genitiv"
                   }
               ]
 }

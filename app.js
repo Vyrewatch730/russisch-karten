@@ -695,6 +695,15 @@ const CASE_INFO = {
   Instrumental: 'Womit? Mit wem? Als was? – Werkzeug (писа́ть ру́чкой), с = zusammen mit, nach стать / быть / рабо́тать (als …), занима́ться, интересова́ться; Ort nach за, под, над, пе́ред, ме́жду.',
   'Präpositiv': 'Wo? Worüber? – steht nur mit Präposition: в / на (wo?), о / об (über etwas sprechen, denken).',
 };
+// Erklärung der Verben der Bewegung (hinter ⓘ bei Bewegungsverben)
+const MOTION_INFO = `
+  <div>Bewegungsverben gibt es paarweise, <b>beide unvollendet</b>:</div>
+  <div>• <b>Eine Richtung</b>, gerade unterwegs (идти́, е́хать): Я иду́ домо́й. – Ich bin auf dem Weg nach Hause.</div>
+  <div>• <b>Mehrere Richtungen</b>, hin und zurück, regelmäßig oder allgemein (ходи́ть, е́здить): Я хожу́ в шко́лу. – Ich gehe (regelmäßig) zur Schule. Вчера́ я ходи́л в кино́. – Ich war gestern im Kino (hin und zurück).</div>
+  <div>• <b>по-</b> + Richtungsverb = vollendet, „losgehen, losfahren“: пойти́, пое́хать.</div>
+  <div>• <b>Andere Vorsilben</b> (при-, у-, вы-, в-, пере-, до- …) machen daraus normale Aspektpaare: приходи́ть / прийти́ = ankommen, уходи́ть / уйти́ = weggehen.</div>
+  <div>• Zu Fuß: идти́ / ходи́ть · mit Fahrzeug: е́хать / е́здить · tragen: нести́ / носи́ть, mit Fahrzeug bringen: везти́ / вози́ть · führen: вести́ / води́ть.</div>`;
+
 function caseInfoHtml(cases) {
   const found = Object.keys(CASE_INFO).filter(name => cases.includes(name));
   return found.map(name => `<div><b>${name}:</b> ${esc(CASE_INFO[name])}</div>`).join('');
@@ -745,10 +754,25 @@ function verbPairHtml(card) {
     </div>` : '';
   const exPron = x.example_pron || ruPron(x.example);
   const biaspectual = x.pf && x.pf === x.ipf;
+  // Verben der Bewegung: Kennzeichnung mit Gegenstück und ausklappbarer Erklärung
+  const MOTION_LABEL = {
+    uni: '🚶 Bewegungsverb · eine Richtung',
+    multi: '🔁 Bewegungsverb · mehrere Richtungen / regelmäßig',
+    prefix: '🚶 Bewegungsverb mit Vorsilbe · normales Aspektpaar',
+  };
+  const motion = MOTION_LABEL[x.motion] ? `
+    <div class="vp-motion">${MOTION_LABEL[x.motion]}${x.motion_pair ? ` · Gegenstück: <b>${esc(x.motion_pair)}</b>` : ''}${info}</div>
+    <div class="vp-rule">${MOTION_INFO}</div>` : '';
+  // Rektion: welche Präposition und welchen Fall das Verb verlangt; ⓘ erklärt die genannten Fälle
+  const gov = x.government ? `
+    <div class="vp-gov"><b>verlangt:</b> ${esc(x.government)}${info}</div>
+    <div class="vp-rule vp-case-info">${caseInfoHtml(x.government) || 'Hier wird kein Fall verlangt.'}</div>` : '';
   return `<div class="vp">
+    ${motion}
     ${biaspectual
       ? block('ipf', 'unvollendet + vollendet', 'gleiche Form für beide Aspekte', 'Bedeutung ergibt sich aus dem Zusammenhang')
       : block('ipf', 'unvollendet', x.pf ? '' : 'ohne vollendeten Partner') + block('pf', 'vollendet', x.ipf ? '' : 'ohne unvollendeten Partner')}
+    ${gov}
     ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
   </div>`;
 }

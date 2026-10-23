@@ -26,6 +26,7 @@
                       "example_en":  "I go to bed at eleven.",
                       "example_es":  "Yo me acuesto a las once.",
                       "example_cases":  "в оди́ннадцать – Akkusativ (Uhrzeit)",
+                      "government":  "куда́? – на/в + Akkusativ · + Infinitiv (ложи́ться спать)",
                       "pf_imp":  "ляг"
                   },
                   {
@@ -38,9 +39,9 @@
                       "pf":  "заболе́ть",
                       "pf_1":  "заболе́ю",
                       "pf_2":  "заболе́ешь",
-                      "de":  "krank sein; krank werden",
-                      "en":  "to be ill; to get sick",
-                      "es":  "estar enfermo; enfermarse",
+                      "de":  "krank sein; krank werden; Fan sein (боле́ть за)",
+                      "en":  "to be ill; to get sick; to be a fan of",
+                      "es":  "estar enfermo; enfermarse; ser fanático de",
                       "es_verb":  "estar enfermo",
                       "example":  "Я заболе́л.",
                       "example_de":  "Ich bin krank geworden.",
@@ -48,7 +49,8 @@
                       "example_es":  "Yo me enfermé.",
                       "note":  "Wenn etwas wehtut: у меня́ боли́т голова́.",
                       "es2_verb":  "enfermarse",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "чем? – Instrumental (боле́ть гри́ппом) · за кого́? – за + Akkusativ (Fan sein)"
                   },
                   {
                       "id":  "vb-изменять",
@@ -69,7 +71,8 @@
                       "example_en":  "I want to change my life.",
                       "example_es":  "Yo quiero cambiar mi vida.",
                       "es2_verb":  "engañar",
-                      "example_cases":  "свою́ жизнь – Akkusativ"
+                      "example_cases":  "свою́ жизнь – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ (betrügen)"
                   },
                   {
                       "id":  "vb-браться",
@@ -89,7 +92,8 @@
                       "example_de":  "Ich übernehme diese Arbeit.",
                       "example_en":  "I\u0027ll take on this job.",
                       "example_es":  "Yo me encargo de ese trabajo.",
-                      "example_cases":  "за э́ту рабо́ту – Akkusativ (nach за)"
+                      "example_cases":  "за э́ту рабо́ту – Akkusativ (nach за)",
+                      "government":  "за что? – за + Akkusativ"
                   },
                   {
                       "id":  "vb-привыкать",
@@ -108,7 +112,8 @@
                       "example_de":  "Ich habe mich an die Hitze gewöhnt.",
                       "example_en":  "I got used to the heat.",
                       "example_es":  "Yo me acostumbré al calor.",
-                      "example_cases":  "к жа́ре – Dativ (nach к)"
+                      "example_cases":  "к жа́ре – Dativ (nach к)",
+                      "government":  "к кому́? к чему́? – к + Dativ"
                   },
                   {
                       "id":  "vb-изменяться",
@@ -127,7 +132,8 @@
                       "example_de":  "Du hast dich gar nicht verändert!",
                       "example_en":  "You haven\u0027t changed at all!",
                       "example_es":  "¡Tú no has cambiado nada!",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-переживать",
@@ -147,7 +153,8 @@
                       "example_de":  "Mach dir nicht so viele Sorgen!",
                       "example_en":  "Don\u0027t worry so much!",
                       "example_es":  "¡No te preocupes tanto!",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "за кого́? – за + Akkusativ · что? (erleben) – Akkusativ"
                   },
                   {
                       "id":  "vb-оценивать",
@@ -167,7 +174,8 @@
                       "example_de":  "Der Lehrer bewertet die Arbeiten.",
                       "example_en":  "The teacher grades the papers.",
                       "example_es":  "El profesor evalúa los trabajos.",
-                      "example_cases":  "рабо́ты – Akkusativ"
+                      "example_cases":  "рабо́ты – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-привозить",
@@ -186,7 +194,9 @@
                       "example_de":  "Ich bringe dir ein Geschenk mit.",
                       "example_en":  "I\u0027ll bring you a present.",
                       "example_es":  "Yo te voy a traer un regalo.",
-                      "example_cases":  "тебе́ – Dativ · пода́рок – Akkusativ"
+                      "example_cases":  "тебе́ – Dativ · пода́рок – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ · откуда? – из + Genitiv",
+                      "motion":  "prefix"
                   },
                   {
                       "id":  "vb-радоваться",
@@ -205,7 +215,8 @@
                       "example_de":  "Ich freue mich für dich.",
                       "example_en":  "I\u0027m happy for you.",
                       "example_es":  "Yo me alegro por ti.",
-                      "example_cases":  "за тебя́ – Akkusativ (nach за)"
+                      "example_cases":  "за тебя́ – Akkusativ (nach за)",
+                      "government":  "чему́? – Dativ · за кого́? – за + Akkusativ"
                   },
                   {
                       "id":  "vb-добиваться",
@@ -226,7 +237,8 @@
                       "example_en":  "You will achieve success.",
                       "example_es":  "Tú vas a lograr el éxito.",
                       "note":  "Mit Genitiv: доби́ться успе́ха.",
-                      "example_cases":  "успе́ха – Genitiv (nach доби́ться)"
+                      "example_cases":  "успе́ха – Genitiv (nach доби́ться)",
+                      "government":  "чего́? – Genitiv"
                   },
                   {
                       "id":  "vb-отличаться",
@@ -243,6 +255,7 @@
                       "example_en":  "How do these words differ?",
                       "example_es":  "¿En qué se diferencian estas palabras?",
                       "example_cases":  "чем – Instrumental",
+                      "government":  "от кого́? от чего́? – от + Genitiv · чем? – Instrumental",
                       "ipf_imp":  "—"
                   },
                   {
@@ -263,7 +276,8 @@
                       "example_de":  "Er machte sich an die Arbeit.",
                       "example_en":  "He set to work.",
                       "example_es":  "Él se puso a trabajar.",
-                      "example_cases":  "за рабо́ту – Akkusativ (nach за)"
+                      "example_cases":  "за рабо́ту – Akkusativ (nach за)",
+                      "government":  "за что? – за + Akkusativ"
                   },
                   {
                       "id":  "vb-переводить",
@@ -282,7 +296,8 @@
                       "example_de":  "Ich übersetze den Text ins Spanische.",
                       "example_en":  "I\u0027m translating the text into Spanish.",
                       "example_es":  "Yo estoy traduciendo el texto al español.",
-                      "example_cases":  "текст – Akkusativ · на испа́нский – Akkusativ (in welche Sprache?)"
+                      "example_cases":  "текст – Akkusativ · на испа́нский – Akkusativ (in welche Sprache?)",
+                      "government":  "что? – Akkusativ · с како́го на како́й? – с + Genitiv, на + Akkusativ (с ру́сского на неме́цкий)"
                   },
                   {
                       "id":  "vb-соответствовать",
@@ -299,6 +314,7 @@
                       "example_en":  "That doesn\u0027t correspond to the truth.",
                       "example_es":  "Eso no corresponde a la verdad.",
                       "example_cases":  "пра́вде – Dativ (nach соотве́тствовать)",
+                      "government":  "чему́? – Dativ",
                       "ipf_imp":  "—"
                   },
                   {
@@ -319,7 +335,8 @@
                       "example_de":  "Beweis es!",
                       "example_en":  "Prove it!",
                       "example_es":  "¡Demuéstralo!",
-                      "example_cases":  "э́то – Akkusativ"
+                      "example_cases":  "э́то – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ"
                   },
                   {
                       "id":  "vb-протягивать",
@@ -338,7 +355,8 @@
                       "example_de":  "Er hat mir die Hand gereicht.",
                       "example_en":  "He held out his hand to me.",
                       "example_es":  "Él me extendió la mano.",
-                      "example_cases":  "мне – Dativ · ру́ку – Akkusativ"
+                      "example_cases":  "мне – Dativ · ру́ку – Akkusativ",
+                      "government":  "кому́? – Dativ · что? – Akkusativ"
                   },
                   {
                       "id":  "vb-выражать",
@@ -357,7 +375,8 @@
                       "example_de":  "Er drückt seine Gedanken gut aus.",
                       "example_en":  "He expresses his thoughts well.",
                       "example_es":  "Él expresa bien sus ideas.",
-                      "example_cases":  "свои́ мы́сли – Akkusativ"
+                      "example_cases":  "свои́ мы́сли – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-гореть",
@@ -377,7 +396,8 @@
                       "example_de":  "Das Haus brennt!",
                       "example_en":  "The house is on fire!",
                       "example_es":  "¡La casa se está quemando!",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-утверждать",
@@ -394,7 +414,8 @@
                       "example_en":  "He claims he\u0027s not guilty.",
                       "example_es":  "Él afirma que no tiene la culpa.",
                       "note":  "Vollendet утверди́ть bedeutet „genehmigen“.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "что … (Nebensatz)"
                   },
                   {
                       "id":  "vb-означать",
@@ -411,6 +432,7 @@
                       "example_en":  "What does this sign mean?",
                       "example_es":  "¿Qué significa esta señal?",
                       "example_cases":  "что – Akkusativ",
+                      "government":  "что? – Akkusativ",
                       "ipf_imp":  "—"
                   },
                   {
@@ -432,7 +454,8 @@
                       "example_en":  "I\u0027m counting on you.",
                       "example_es":  "Yo cuento contigo.",
                       "es2_verb":  "calcular",
-                      "example_cases":  "на тебя́ – Akkusativ (nach на)"
+                      "example_cases":  "на тебя́ – Akkusativ (nach на)",
+                      "government":  "на кого́? на что? – на + Akkusativ"
                   },
                   {
                       "id":  "vb-решаться",
@@ -452,7 +475,8 @@
                       "example_de":  "Ich habe mich endlich entschlossen.",
                       "example_en":  "I finally made up my mind.",
                       "example_es":  "Por fin me decidí.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "на что? – на + Akkusativ · + Infinitiv"
                   },
                   {
                       "id":  "vb-ценить",
@@ -472,7 +496,8 @@
                       "example_de":  "Ich schätze deine Hilfe.",
                       "example_en":  "I appreciate your help.",
                       "example_es":  "Yo valoro tu ayuda.",
-                      "example_cases":  "твою́ по́мощь – Akkusativ"
+                      "example_cases":  "твою́ по́мощь – Akkusativ",
+                      "government":  "кого́? что? – Akkusativ"
                   },
                   {
                       "id":  "vb-вводить",
@@ -492,7 +517,8 @@
                       "example_de":  "Geben Sie das Passwort ein.",
                       "example_en":  "Enter the password.",
                       "example_es":  "Ponga la contraseña.",
-                      "example_cases":  "паро́ль – Akkusativ"
+                      "example_cases":  "паро́ль – Akkusativ",
+                      "government":  "что? – Akkusativ · куда́? – в + Akkusativ"
                   },
                   {
                       "id":  "vb-тянуть",
@@ -512,7 +538,8 @@
                       "example_de":  "Zieh an der Tür, nicht drücken!",
                       "example_en":  "Pull the door, don\u0027t push!",
                       "example_es":  "¡Hala la puerta, no la empujes!",
-                      "example_cases":  "дверь – Akkusativ"
+                      "example_cases":  "дверь – Akkusativ",
+                      "government":  "что? – Akkusativ · за что? – за + Akkusativ"
                   },
                   {
                       "id":  "vb-наблюдать",
@@ -528,7 +555,8 @@
                       "example_de":  "Ich beobachte Vögel.",
                       "example_en":  "I\u0027m watching birds.",
                       "example_es":  "Yo observo los pájaros.",
-                      "example_cases":  "за пти́цами – Instrumental (nach за)"
+                      "example_cases":  "за пти́цами – Instrumental (nach за)",
+                      "government":  "за кем? за чем? – за + Instrumental"
                   },
                   {
                       "id":  "vb-признаваться",
@@ -547,7 +575,8 @@
                       "example_de":  "Er hat ihr seine Liebe gestanden.",
                       "example_en":  "He confessed his love to her.",
                       "example_es":  "Él le confesó su amor.",
-                      "example_cases":  "ей – Dativ · в любви́ – Präpositiv (nach в)"
+                      "example_cases":  "ей – Dativ · в любви́ – Präpositiv (nach в)",
+                      "government":  "кому́? – Dativ · в чём? – в + Präpositiv"
                   },
                   {
                       "id":  "vb-вступать",
@@ -567,7 +596,8 @@
                       "example_de":  "Ich bin dem Klub beigetreten.",
                       "example_en":  "I joined the club.",
                       "example_es":  "Yo me uní al club.",
-                      "example_cases":  "в клуб – Akkusativ (nach в)"
+                      "example_cases":  "в клуб – Akkusativ (nach в)",
+                      "government":  "во что? – в + Akkusativ"
                   },
                   {
                       "id":  "vb-ездить",
@@ -585,7 +615,10 @@
                       "example_en":  "I go to work by bus.",
                       "example_es":  "Yo voy al trabajo en guagua.",
                       "note":  "Verb der Bewegung: mehrere Richtungen oder regelmäßig. Eine Richtung: е́хать.",
-                      "example_cases":  "на рабо́ту – Akkusativ (wohin?) · на авто́бусе – Präpositiv (womit?)"
+                      "example_cases":  "на рабо́ту – Akkusativ (wohin?) · на авто́бусе – Präpositiv (womit?)",
+                      "government":  "куда́? – в/на + Akkusativ · на чём? – на + Präpositiv (Verkehrsmittel)",
+                      "motion":  "multi",
+                      "motion_pair":  "е́хать"
                   },
                   {
                       "id":  "vb-назначать",
@@ -606,7 +639,8 @@
                       "example_en":  "The doctor prescribed me medicine.",
                       "example_es":  "El médico me recetó un medicamento.",
                       "es2_verb":  "recetar",
-                      "example_cases":  "мне – Dativ · лека́рство – Akkusativ"
+                      "example_cases":  "мне – Dativ · лека́рство – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ · кого́? кем? – Akkusativ + Instrumental"
                   },
                   {
                       "id":  "vb-менять",
@@ -625,7 +659,8 @@
                       "example_de":  "Wo kann man Geld wechseln?",
                       "example_en":  "Where can I exchange money?",
                       "example_es":  "¿Dónde se puede cambiar dinero?",
-                      "example_cases":  "де́ньги – Akkusativ"
+                      "example_cases":  "де́ньги – Akkusativ",
+                      "government":  "что? – Akkusativ · на что? – на + Akkusativ"
                   },
                   {
                       "id":  "vb-посвящать",
@@ -644,7 +679,8 @@
                       "example_de":  "Ich widme dieses Lied dir.",
                       "example_en":  "I dedicate this song to you.",
                       "example_es":  "Yo te dedico esta canción.",
-                      "example_cases":  "э́ту пе́сню – Akkusativ · тебе́ – Dativ"
+                      "example_cases":  "э́ту пе́сню – Akkusativ · тебе́ – Dativ",
+                      "government":  "что? кому́? – Akkusativ + Dativ"
                   },
                   {
                       "id":  "vb-разбираться",
@@ -664,7 +700,8 @@
                       "example_de":  "Kennst du dich mit Autos aus?",
                       "example_en":  "Do you know about cars?",
                       "example_es":  "¿Tú sabes de carros?",
-                      "example_cases":  "в маши́нах – Präpositiv (nach в)"
+                      "example_cases":  "в маши́нах – Präpositiv (nach в)",
+                      "government":  "в чём? – в + Präpositiv"
                   },
                   {
                       "id":  "vb-изучать",
@@ -683,7 +720,8 @@
                       "example_de":  "Ich lerne Russisch.",
                       "example_en":  "I\u0027m studying Russian.",
                       "example_es":  "Yo estudio ruso.",
-                      "example_cases":  "ру́сский язы́к – Akkusativ"
+                      "example_cases":  "ру́сский язы́к – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-отправлять",
@@ -703,7 +741,8 @@
                       "example_de":  "Ich habe dir eine Nachricht geschickt.",
                       "example_en":  "I sent you a message.",
                       "example_es":  "Yo te mandé un mensaje.",
-                      "example_cases":  "тебе́ – Dativ · сообще́ние – Akkusativ"
+                      "example_cases":  "тебе́ – Dativ · сообще́ние – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ · куда́? – в/на + Akkusativ"
                   },
                   {
                       "id":  "vb-ощущать",
@@ -723,7 +762,8 @@
                       "example_de":  "Ich spüre die Kälte.",
                       "example_en":  "I feel the cold.",
                       "example_es":  "Yo siento el frío.",
-                      "example_cases":  "хо́лод – Akkusativ"
+                      "example_cases":  "хо́лод – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-догадываться",
@@ -742,7 +782,8 @@
                       "example_de":  "Rate mal, wer gekommen ist!",
                       "example_en":  "Guess who\u0027s here!",
                       "example_es":  "¡Adivina quién llegó!",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "о чём? – о + Präpositiv"
                   },
                   {
                       "id":  "vb-учить",
@@ -763,7 +804,8 @@
                       "example_en":  "I\u0027m learning new words.",
                       "example_es":  "Yo estoy aprendiendo palabras nuevas.",
                       "es2_verb":  "enseñar",
-                      "example_cases":  "но́вые слова́ – Akkusativ"
+                      "example_cases":  "но́вые слова́ – Akkusativ",
+                      "government":  "что? – Akkusativ · кого́? чему́? – Akkusativ + Dativ (lehren)"
                   },
                   {
                       "id":  "vb-защищать",
@@ -783,7 +825,8 @@
                       "example_de":  "Mama beschützt die Kinder.",
                       "example_en":  "Mom protects the children.",
                       "example_es":  "Mami protege a los niños.",
-                      "example_cases":  "дете́й – Akkusativ (belebt = wie Genitiv)"
+                      "example_cases":  "дете́й – Akkusativ (belebt = wie Genitiv)",
+                      "government":  "кого́? – Akkusativ · от кого́? – от + Genitiv"
                   },
                   {
                       "id":  "vb-записывать",
@@ -803,7 +846,8 @@
                       "example_de":  "Schreib meine Nummer auf.",
                       "example_en":  "Write down my number.",
                       "example_es":  "Anota mi número.",
-                      "example_cases":  "мой но́мер – Akkusativ"
+                      "example_cases":  "мой но́мер – Akkusativ",
+                      "government":  "что? – Akkusativ · кого́? куда́? (anmelden) – Akkusativ + на/в + Akkusativ"
                   },
                   {
                       "id":  "vb-пускать",
@@ -823,7 +867,8 @@
                       "example_de":  "Lass mich rein!",
                       "example_en":  "Let me in!",
                       "example_es":  "¡Déjame entrar!",
-                      "example_cases":  "меня́ – Akkusativ"
+                      "example_cases":  "меня́ – Akkusativ",
+                      "government":  "кого́? – Akkusativ · куда́? – в/на + Akkusativ"
                   },
                   {
                       "id":  "vb-следить",
@@ -843,7 +888,8 @@
                       "example_de":  "Pass auf die Kinder auf!",
                       "example_en":  "Keep an eye on the kids!",
                       "example_es":  "¡Vigila a los niños!",
-                      "example_cases":  "за детьми́ – Instrumental (nach за)"
+                      "example_cases":  "за детьми́ – Instrumental (nach за)",
+                      "government":  "за кем? за чем? – за + Instrumental"
                   },
                   {
                       "id":  "vb-возвращать",
@@ -862,7 +908,8 @@
                       "example_de":  "Gib mir bitte das Buch zurück.",
                       "example_en":  "Give me back the book, please.",
                       "example_es":  "Devuélveme el libro, por favor.",
-                      "example_cases":  "мне – Dativ · кни́гу – Akkusativ"
+                      "example_cases":  "мне – Dativ · кни́гу – Akkusativ",
+                      "government":  "кому́? – Dativ · что? – Akkusativ"
                   },
                   {
                       "id":  "vb-задавать",
@@ -883,7 +930,8 @@
                       "example_en":  "May I ask a question?",
                       "example_es":  "¿Puedo hacer una pregunta?",
                       "es2_verb":  "poner",
-                      "example_cases":  "вопро́с – Akkusativ"
+                      "example_cases":  "вопро́с – Akkusativ",
+                      "government":  "кому́? – Dativ · что? – Akkusativ (вопро́с)"
                   },
                   {
                       "id":  "vb-просыпаться",
@@ -902,7 +950,8 @@
                       "example_de":  "Ich wache um sieben auf.",
                       "example_en":  "I wake up at seven.",
                       "example_es":  "Yo me despierto a las siete.",
-                      "example_cases":  "в семь – Akkusativ (Uhrzeit)"
+                      "example_cases":  "в семь – Akkusativ (Uhrzeit)",
+                      "government":  "ohne Objekt"
                   },
                   {
                       "id":  "vb-интересовать",
@@ -922,7 +971,8 @@
                       "example_en":  "History interests me.",
                       "example_es":  "Me interesa la historia.",
                       "note":  "Wer sich interessiert, steht im Akkusativ: меня́ интересу́ет.",
-                      "example_cases":  "меня́ – Akkusativ (исто́рия ist das Subjekt)"
+                      "example_cases":  "меня́ – Akkusativ (исто́рия ist das Subjekt)",
+                      "government":  "кого́? – Akkusativ · was interessiert = Subjekt"
                   },
                   {
                       "id":  "vb-разрешать",
@@ -943,7 +993,8 @@
                       "example_en":  "Mom allowed me to go.",
                       "example_es":  "Mami me dejó ir.",
                       "es2_verb":  "dejar",
-                      "example_cases":  "мне – Dativ (wem?)"
+                      "example_cases":  "мне – Dativ (wem?)",
+                      "government":  "кому́? – Dativ · + Infinitiv"
                   },
                   {
                       "id":  "vb-представляться",
@@ -962,7 +1013,8 @@
                       "example_de":  "Darf ich mich vorstellen.",
                       "example_en":  "Allow me to introduce myself.",
                       "example_es":  "Permítame presentarme.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "кому́? – Dativ"
                   },
                   {
                       "id":  "vb-поворачиваться",
@@ -982,7 +1034,8 @@
                       "example_de":  "Dreh dich zu mir um!",
                       "example_en":  "Turn around to me!",
                       "example_es":  "¡Voltéate para acá!",
-                      "example_cases":  "ко мне – Dativ (nach к)"
+                      "example_cases":  "ко мне – Dativ (nach к)",
+                      "government":  "к кому́? – к + Dativ"
                   }
               ]
 }

@@ -251,3 +251,10 @@ body.studying .card3d.tall { height: calc(100vh - 230px - env(safe-area-inset-to
 .info.open { color: var(--accent); }
 .vp-case-info { background: var(--surface); }
 .vp-case-info div + div { margin-top: 4px; }
+
+/* Bewegungsverben und Rektion */
+.vp-motion { font-size: 13px; font-weight: 600; color: var(--accent); background: var(--bg); border-radius: 8px; padding: 5px 8px; }
+.vp-motion b { font-weight: 700; }
+.vp-gov { font-size: 14px; line-height: 1.4; }
+.vp-gov b { color: var(--muted); font-weight: 600; }
+.vp-rule div + div { margin-top: 3px; }

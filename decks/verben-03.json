@@ -25,7 +25,8 @@
                       "example_de":  "Ruf mich am Abend an!",
                       "example_en":  "Call me in the evening!",
                       "example_es":  "¡Llámame en la noche!",
-                      "example_cases":  "мне – Dativ (nach звони́ть) · ве́чером – Instrumental (Zeitangabe)"
+                      "example_cases":  "мне – Dativ (nach звони́ть) · ве́чером – Instrumental (Zeitangabe)",
+                      "government":  "кому́? – Dativ · куда́? – в/на + Akkusativ"
                   },
                   {
                       "id":  "vb-удаваться",
@@ -46,7 +47,8 @@
                       "example_en":  "I managed to buy tickets.",
                       "example_es":  "Yo logré comprar los boletos.",
                       "note":  "Unpersönlich mit Dativ: мне удало́сь = es ist mir gelungen.",
-                      "example_cases":  "мне – Dativ · биле́ты – Akkusativ"
+                      "example_cases":  "мне – Dativ · биле́ты – Akkusativ",
+                      "government":  "кому́? – Dativ + Infinitiv"
                   },
                   {
                       "id":  "vb-требовать",
@@ -65,7 +67,8 @@
                       "example_de":  "Er verlangt eine Antwort.",
                       "example_en":  "He demands an answer.",
                       "example_es":  "Él exige una respuesta.",
-                      "example_cases":  "отве́та – Genitiv (nach тре́бовать)"
+                      "example_cases":  "отве́та – Genitiv (nach тре́бовать)",
+                      "government":  "чего́? – Genitiv · от кого́? – от + Genitiv"
                   },
                   {
                       "id":  "vb-умирать",
@@ -85,7 +88,8 @@
                       "example_de":  "Blumen sterben ohne Wasser.",
                       "example_en":  "Flowers die without water.",
                       "example_es":  "Las flores se mueren sin agua.",
-                      "example_cases":  "без воды́ – Genitiv (nach без)"
+                      "example_cases":  "без воды́ – Genitiv (nach без)",
+                      "government":  "от чего́? – от + Genitiv"
                   },
                   {
                       "id":  "vb-вставать",
@@ -105,7 +109,8 @@
                       "example_de":  "Ich stehe früh auf.",
                       "example_en":  "I get up early.",
                       "example_es":  "Yo me levanto temprano.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "ohne Objekt · с чего́? – с + Genitiv (встать с дива́на)"
                   },
                   {
                       "id":  "vb-хватать",
@@ -127,7 +132,8 @@
                       "example_es":  "¡Ya basta!",
                       "note":  "Unpersönlich: мне не хвата́ет де́нег = mir fehlt Geld.",
                       "es2_verb":  "alcanzar",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "кого́? что? (packen) – Akkusativ · кому́? чего́? (reichen) – Dativ + Genitiv"
                   },
                   {
                       "id":  "vb-успевать",
@@ -147,7 +153,8 @@
                       "example_de":  "Ich schaffe den Zug nicht.",
                       "example_en":  "I won\u0027t make the train.",
                       "example_es":  "Yo no voy a alcanzar el tren.",
-                      "example_cases":  "на по́езд – Akkusativ (nach на)"
+                      "example_cases":  "на по́езд – Akkusativ (nach на)",
+                      "government":  "куда́? на что? – на + Akkusativ · + Infinitiv"
                   },
                   {
                       "id":  "vb-спать",
@@ -166,7 +173,8 @@
                       "example_de":  "Das Kind schläft.",
                       "example_en":  "The child is sleeping.",
                       "example_es":  "El niño está durmiendo.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "где? – в/на + Präpositiv"
                   },
                   {
                       "id":  "vb-случаться",
@@ -187,7 +195,8 @@
                       "example_en":  "What happened?",
                       "example_es":  "¿Qué pasó?",
                       "note":  "Meist in der 3. Person: случи́лось.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "с кем? – с + Instrumental"
                   },
                   {
                       "id":  "vb-поднимать",
@@ -207,7 +216,8 @@
                       "example_de":  "Heb die Hand!",
                       "example_en":  "Raise your hand!",
                       "example_es":  "¡Levanta la mano!",
-                      "example_cases":  "ру́ку – Akkusativ"
+                      "example_cases":  "ру́ку – Akkusativ",
+                      "government":  "кого́? что? – Akkusativ"
                   },
                   {
                       "id":  "vb-улыбаться",
@@ -226,7 +236,8 @@
                       "example_de":  "Lächle!",
                       "example_en":  "Smile!",
                       "example_es":  "¡Sonríe!",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "кому́? – Dativ"
                   },
                   {
                       "id":  "vb-занимать",
@@ -247,7 +258,8 @@
                       "example_en":  "Can I borrow a hundred rubles from you?",
                       "example_es":  "¿Me puedes prestar cien rublos?",
                       "es2_verb":  "pedir prestado",
-                      "example_cases":  "у тебя́ – Genitiv (nach у) · сто рубле́й – Akkusativ · рубле́й – Genitiv (nach сто)"
+                      "example_cases":  "у тебя́ – Genitiv (nach у) · сто рубле́й – Akkusativ · рубле́й – Genitiv (nach сто)",
+                      "government":  "что? – Akkusativ · у кого́? – у + Genitiv (sich leihen)"
                   },
                   {
                       "id":  "vb-кричать",
@@ -267,7 +279,8 @@
                       "example_en":  "Don\u0027t shout!",
                       "example_es":  "¡No grites!",
                       "note":  "кри́кнуть = einmal aufschreien.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "на кого́? – на + Akkusativ · кому́? – Dativ"
                   },
                   {
                       "id":  "vb-бросать",
@@ -288,7 +301,8 @@
                       "example_en":  "He quit smoking.",
                       "example_es":  "Él dejó de fumar.",
                       "es2_verb":  "dejar",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "что? – Akkusativ · куда́? – в/на + Akkusativ · + Infinitiv (aufhören mit)"
                   },
                   {
                       "id":  "vb-искать",
@@ -308,7 +322,8 @@
                       "example_en":  "I\u0027m looking for a job.",
                       "example_es":  "Yo estoy buscando trabajo.",
                       "note":  "Der vollendete Partner zum Finden ist найти́.",
-                      "example_cases":  "рабо́ту – Akkusativ"
+                      "example_cases":  "рабо́ту – Akkusativ",
+                      "government":  "кого́? что? – Akkusativ"
                   },
                   {
                       "id":  "vb-стараться",
@@ -328,7 +343,8 @@
                       "example_de":  "Ich versuche zu kommen.",
                       "example_en":  "I\u0027ll try to come.",
                       "example_es":  "Yo voy a tratar de venir.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "+ Infinitiv"
                   },
                   {
                       "id":  "vb-определять",
@@ -348,7 +364,8 @@
                       "example_de":  "Es ist schwer, die Ursache festzustellen.",
                       "example_en":  "It\u0027s hard to determine the cause.",
                       "example_es":  "Es difícil determinar la causa.",
-                      "example_cases":  "причи́ну – Akkusativ"
+                      "example_cases":  "причи́ну – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-относиться",
@@ -367,7 +384,8 @@
                       "example_de":  "Er behandelt mich gut.",
                       "example_en":  "He treats me well.",
                       "example_es":  "Él me trata bien.",
-                      "example_cases":  "ко мне – Dativ (nach к)"
+                      "example_cases":  "ко мне – Dativ (nach к)",
+                      "government":  "к кому́? к чему́? – к + Dativ"
                   },
                   {
                       "id":  "vb-подниматься",
@@ -386,7 +404,8 @@
                       "example_de":  "Wir gehen in den fünften Stock hinauf.",
                       "example_en":  "We\u0027re going up to the fifth floor.",
                       "example_es":  "Nosotros subimos al quinto piso.",
-                      "example_cases":  "на пя́тый эта́ж – Akkusativ (wohin?)"
+                      "example_cases":  "на пя́тый эта́ж – Akkusativ (wohin?)",
+                      "government":  "куда́? – на + Akkusativ · по чему́? – по + Dativ (по ле́стнице)"
                   },
                   {
                       "id":  "vb-расти",
@@ -407,7 +426,8 @@
                       "example_en":  "Where did you grow up?",
                       "example_es":  "¿Dónde tú te criaste?",
                       "note":  "Vergangenheit: рос, росла́.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "где? – в/на + Präpositiv"
                   },
                   {
                       "id":  "vb-отмечать",
@@ -428,7 +448,8 @@
                       "example_en":  "Where are you celebrating New Year?",
                       "example_es":  "¿Dónde ustedes celebran el Año Nuevo?",
                       "es2_verb":  "marcar",
-                      "example_cases":  "Но́вый год – Akkusativ"
+                      "example_cases":  "Но́вый год – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-отдавать",
@@ -449,7 +470,8 @@
                       "example_en":  "Give me back my phone!",
                       "example_es":  "¡Devuélveme mi celular!",
                       "es2_verb":  "entregar",
-                      "example_cases":  "мне – Dativ · мой телефо́н – Akkusativ"
+                      "example_cases":  "мне – Dativ · мой телефо́н – Akkusativ",
+                      "government":  "кому́? – Dativ · что? – Akkusativ"
                   },
                   {
                       "id":  "vb-устанавливать",
@@ -470,7 +492,8 @@
                       "example_en":  "I installed a new program.",
                       "example_es":  "Yo instalé un programa nuevo.",
                       "es2_verb":  "establecer",
-                      "example_cases":  "но́вую програ́мму – Akkusativ"
+                      "example_cases":  "но́вую програ́мму – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-обращаться",
@@ -490,7 +513,8 @@
                       "example_de":  "Wenden Sie sich an den Administrator.",
                       "example_en":  "Please contact the administrator.",
                       "example_es":  "Diríjase al administrador.",
-                      "example_cases":  "к администра́тору – Dativ (nach к)"
+                      "example_cases":  "к администра́тору – Dativ (nach к)",
+                      "government":  "к кому́? – к + Dativ · с чем? – с + Instrumental (с про́сьбой)"
                   },
                   {
                       "id":  "vb-приносить",
@@ -509,7 +533,9 @@
                       "example_de":  "Bring bitte Wasser.",
                       "example_en":  "Bring some water, please.",
                       "example_es":  "Trae agua, por favor.",
-                      "example_cases":  "во́ду – Akkusativ"
+                      "example_cases":  "во́ду – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ",
+                      "motion":  "prefix"
                   },
                   {
                       "id":  "vb-выступать",
@@ -529,7 +555,8 @@
                       "example_de":  "Morgen spreche ich auf der Konferenz.",
                       "example_en":  "Tomorrow I\u0027m speaking at the conference.",
                       "example_es":  "Mañana yo hablo en la conferencia.",
-                      "example_cases":  "на конфере́нции – Präpositiv (wo?)"
+                      "example_cases":  "на конфере́нции – Präpositiv (wo?)",
+                      "government":  "где? – на + Präpositiv · перед кем? – пе́ред + Instrumental"
                   },
                   {
                       "id":  "vb-держать",
@@ -549,7 +576,8 @@
                       "example_de":  "Halt die Tasche!",
                       "example_en":  "Hold the bag!",
                       "example_es":  "¡Aguanta la cartera!",
-                      "example_cases":  "су́мку – Akkusativ"
+                      "example_cases":  "су́мку – Akkusativ",
+                      "government":  "кого́? что? – Akkusativ · в чём? – в + Präpositiv"
                   },
                   {
                       "id":  "vb-бежать",
@@ -569,7 +597,10 @@
                       "example_en":  "I\u0027m running for the bus.",
                       "example_es":  "Yo corro para coger la guagua.",
                       "note":  "Verb der Bewegung: eine Richtung. Mehrere Richtungen: бе́гать.",
-                      "example_cases":  "на авто́бус – Akkusativ (wohin?)"
+                      "example_cases":  "на авто́бус – Akkusativ (wohin?)",
+                      "government":  "куда́? – в/на + Akkusativ · к кому́? – к + Dativ",
+                      "motion":  "uni",
+                      "motion_pair":  "бе́гать"
                   },
                   {
                       "id":  "vb-терять",
@@ -588,7 +619,8 @@
                       "example_de":  "Ich habe mein Handy verloren.",
                       "example_en":  "I lost my phone.",
                       "example_es":  "Yo perdí el celular.",
-                      "example_cases":  "телефо́н – Akkusativ"
+                      "example_cases":  "телефо́н – Akkusativ",
+                      "government":  "кого́? что? – Akkusativ"
                   },
                   {
                       "id":  "vb-провожать",
@@ -608,7 +640,8 @@
                       "example_de":  "Ich bringe dich nach Hause.",
                       "example_en":  "I\u0027ll walk you home.",
                       "example_es":  "Yo te acompaño hasta la casa.",
-                      "example_cases":  "тебя́ – Akkusativ · до до́ма – Genitiv (nach до)"
+                      "example_cases":  "тебя́ – Akkusativ · до до́ма – Genitiv (nach до)",
+                      "government":  "кого́? – Akkusativ · до чего́? – до + Genitiv · куда́? – в/на + Akkusativ"
                   },
                   {
                       "id":  "vb-строить",
@@ -627,7 +660,8 @@
                       "example_de":  "Sie bauen ein Haus.",
                       "example_en":  "They are building a house.",
                       "example_es":  "Ellos están construyendo una casa.",
-                      "example_cases":  "дом – Akkusativ"
+                      "example_cases":  "дом – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-встречаться",
@@ -647,7 +681,8 @@
                       "example_de":  "Lass uns uns um sechs treffen.",
                       "example_en":  "Let\u0027s meet at six.",
                       "example_es":  "Vamos a juntarnos a las seis.",
-                      "example_cases":  "в шесть – Akkusativ (Uhrzeit)"
+                      "example_cases":  "в шесть – Akkusativ (Uhrzeit)",
+                      "government":  "с кем? – с + Instrumental"
                   },
                   {
                       "id":  "vb-убивать",
@@ -666,7 +701,8 @@
                       "example_de":  "Rauchen tötet.",
                       "example_en":  "Smoking kills.",
                       "example_es":  "Fumar mata.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "кого́? – Akkusativ"
                   },
                   {
                       "id":  "vb-сообщать",
@@ -686,7 +722,8 @@
                       "example_de":  "Gib mir Bescheid, wenn du ankommst.",
                       "example_en":  "Let me know when you arrive.",
                       "example_es":  "Avísame cuando llegues.",
-                      "example_cases":  "мне – Dativ"
+                      "example_cases":  "мне – Dativ",
+                      "government":  "кому́? – Dativ · о чём? – о + Präpositiv · что? – Akkusativ"
                   },
                   {
                       "id":  "vb-связывать",
@@ -707,7 +744,8 @@
                       "example_en":  "Grandma knitted me a scarf.",
                       "example_es":  "Abuela me tejió una bufanda.",
                       "es2_verb":  "tejer",
-                      "example_cases":  "мне – Dativ · шарф – Akkusativ"
+                      "example_cases":  "мне – Dativ · шарф – Akkusativ",
+                      "government":  "что? – Akkusativ · кому́? – Dativ"
                   },
                   {
                       "id":  "vb-класть",
@@ -727,7 +765,8 @@
                       "example_en":  "Put the book on the table.",
                       "example_es":  "Pon el libro en la mesa.",
                       "note":  "Etwas hinlegen. Etwas hinstellen: ста́вить.",
-                      "example_cases":  "кни́гу – Akkusativ · на стол – Akkusativ (wohin?)"
+                      "example_cases":  "кни́гу – Akkusativ · на стол – Akkusativ (wohin?)",
+                      "government":  "что? – Akkusativ · куда́? – в/на + Akkusativ"
                   },
                   {
                       "id":  "vb-останавливаться",
@@ -747,7 +786,8 @@
                       "example_de":  "Der Bus hält hier.",
                       "example_en":  "The bus stops here.",
                       "example_es":  "La guagua se para aquí.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "где? – в/на + Präpositiv · у чего́? – у + Genitiv"
                   },
                   {
                       "id":  "vb-встречать",
@@ -768,7 +808,8 @@
                       "example_en":  "I\u0027ll pick you up at the airport.",
                       "example_es":  "Yo te voy a buscar al aeropuerto.",
                       "es2_verb":  "buscar",
-                      "example_cases":  "тебя́ – Akkusativ · в аэропорту́ – Präpositiv (wo?, Endung -у́)"
+                      "example_cases":  "тебя́ – Akkusativ · в аэропорту́ – Präpositiv (wo?, Endung -у́)",
+                      "government":  "кого́? – Akkusativ · где? – в/на + Präpositiv"
                   },
                   {
                       "id":  "vb-падать",
@@ -787,7 +828,8 @@
                       "example_de":  "Vorsicht, fall nicht hin!",
                       "example_en":  "Careful, don\u0027t fall!",
                       "example_es":  "¡Cuidado, no te vayas a caer!",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "куда́? – на + Akkusativ · откуда? – с + Genitiv"
                   },
                   {
                       "id":  "vb-учиться",
@@ -809,7 +851,8 @@
                       "example_es":  "Yo estudio en la universidad.",
                       "note":  "научи́ться + Infinitiv = etwas können lernen (научи́ться пла́вать).",
                       "es2_verb":  "aprender",
-                      "example_cases":  "в университе́те – Präpositiv (wo?)"
+                      "example_cases":  "в университе́те – Präpositiv (wo?)",
+                      "government":  "где? – в/на + Präpositiv · чему́? – Dativ (учи́ться му́зыке) · + Infinitiv"
                   },
                   {
                       "id":  "vb-заявлять",
@@ -828,7 +871,8 @@
                       "example_de":  "Er erklärte, dass er gehen wird.",
                       "example_en":  "He declared that he would leave.",
                       "example_es":  "Él declaró que se iba a ir.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "о чём? – о + Präpositiv · что … (Nebensatz)"
                   },
                   {
                       "id":  "vb-выполнять",
@@ -848,7 +892,8 @@
                       "example_de":  "Ich halte immer meine Versprechen.",
                       "example_en":  "I always keep my promises.",
                       "example_es":  "Yo siempre cumplo mis promesas.",
-                      "example_cases":  "обеща́ния – Akkusativ"
+                      "example_cases":  "обеща́ния – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-касаться",
@@ -868,7 +913,8 @@
                       "example_de":  "Das geht dich nichts an.",
                       "example_en":  "That\u0027s none of your business.",
                       "example_es":  "Eso no es asunto tuyo.",
-                      "example_cases":  "тебя́ – Genitiv (nach каса́ться)"
+                      "example_cases":  "тебя́ – Genitiv (nach каса́ться)",
+                      "government":  "кого́? чего́? – Genitiv"
                   },
                   {
                       "id":  "vb-звать",
@@ -888,7 +934,8 @@
                       "example_en":  "What\u0027s your name?",
                       "example_es":  "¿Cómo tú te llamas?",
                       "note":  "Меня́ зову́т … = Ich heiße …",
-                      "example_cases":  "тебя́ – Akkusativ"
+                      "example_cases":  "тебя́ – Akkusativ",
+                      "government":  "кого́? – Akkusativ · куда́? – в/на + Akkusativ"
                   },
                   {
                       "id":  "vb-разговаривать",
@@ -909,7 +956,8 @@
                       "example_en":  "We talked for a long time.",
                       "example_es":  "Nosotros hablamos por mucho tiempo.",
                       "note":  "поговори́ть = ein bisschen reden (vollendet zu говори́ть).",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "с кем? – с + Instrumental · о чём? – о + Präpositiv"
                   },
                   {
                       "id":  "vb-смеяться",
@@ -928,7 +976,8 @@
                       "example_de":  "Warum lachst du?",
                       "example_en":  "Why are you laughing?",
                       "example_es":  "¿Por qué tú te ríes?",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "над кем? над чем? – над + Instrumental"
                   },
                   {
                       "id":  "vb-молчать",
@@ -949,7 +998,8 @@
                       "example_en":  "Why are you silent?",
                       "example_es":  "¿Por qué tú estás callado?",
                       "note":  "замолча́ть = verstummen.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "о чём? – о + Präpositiv"
                   },
                   {
                       "id":  "vb-собирать",
@@ -970,7 +1020,8 @@
                       "example_en":  "I collect stamps.",
                       "example_es":  "Yo colecciono sellos.",
                       "es2_verb":  "recoger",
-                      "example_cases":  "ма́рки – Akkusativ"
+                      "example_cases":  "ма́рки – Akkusativ",
+                      "government":  "что? – Akkusativ"
                   },
                   {
                       "id":  "vb-соглашаться",
@@ -990,7 +1041,8 @@
                       "example_de":  "Er hat zugestimmt zu helfen.",
                       "example_en":  "He agreed to help.",
                       "example_es":  "Él aceptó ayudar.",
-                      "example_cases":  "nur Nominativ"
+                      "example_cases":  "nur Nominativ",
+                      "government":  "с кем? – с + Instrumental · на что? – на + Akkusativ · + Infinitiv"
                   },
                   {
                       "id":  "vb-обеспечивать",
@@ -1010,7 +1062,8 @@
                       "example_de":  "Er versorgt die Familie.",
                       "example_en":  "He provides for the family.",
                       "example_es":  "Él mantiene a la familia.",
-                      "example_cases":  "семью́ – Akkusativ"
+                      "example_cases":  "семью́ – Akkusativ",
+                      "government":  "кого́? – Akkusativ · чем? – Instrumental"
                   }
               ]
 }

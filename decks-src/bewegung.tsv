@@ -1,0 +1,61 @@
+# Verben der Bewegung: Infinitiv TAB Art TAB Gegenstück
+# uni = eine Richtung (gerade unterwegs), multi = mehrere Richtungen / hin und zurück / regelmäßig,
+# prefix = mit Vorsilbe (normales Aspektpaar, kein Gegenstück)
+идти	uni	ходи́ть
+ходить	multi	идти́
+ехать	uni	е́здить
+ездить	multi	е́хать
+бежать	uni	бе́гать
+бегать	multi	бежа́ть
+лететь	uni	лета́ть
+летать	multi	лете́ть
+плыть	uni	пла́вать
+плавать	multi	плыть
+нести	uni	носи́ть
+носить	multi	нести́
+вести	uni	води́ть
+водить	multi	вести́
+везти	uni	вози́ть
+возить	multi	везти́
+лезть	uni	ла́зить
+лазить	multi	лезть
+тащить	uni	таска́ть
+таскать	multi	тащи́ть
+гнать	uni	гоня́ть
+гонять	multi	гнать
+брести	uni	броди́ть
+бродить	multi	брести́
+ползти	uni	по́лзать
+ползать	multi	ползти́
+катить	uni	ката́ть
+катать	multi	кати́ть
+выходить	prefix
+приходить	prefix
+проходить	prefix
+входить	prefix
+уходить	prefix
+доходить	prefix
+подходить	prefix
+переходить	prefix
+заходить	prefix
+отходить	prefix
+обходить	prefix
+сходить	prefix
+приезжать	prefix
+уезжать	prefix
+переезжать	prefix
+доезжать	prefix
+подъезжать	prefix
+выезжать	prefix
+приводить	prefix
+отводить	prefix
+выводить	prefix
+приносить	prefix
+уносить	prefix
+относить	prefix
+выносить	prefix
+привозить	prefix
+отвозить	prefix
+улетать	prefix
+прилетать	prefix
+убегать	prefix

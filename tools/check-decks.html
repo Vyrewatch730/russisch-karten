@@ -13,7 +13,7 @@ document.getElementById('app').onload = async e => {
   const verbose = new URLSearchParams(location.search).has('verbose');
   const index = await (await fetch('../decks/index.json', { cache: 'no-cache' })).json();
   const RU_FIELDS = ['ipf', 'ipf_1', 'ipf_2', 'pf', 'pf_1', 'pf_2', 'example'];
-  const REQUIRED = ['de', 'en', 'es', 'example', 'example_de', 'example_en', 'example_es', 'example_cases'];
+  const REQUIRED = ['de', 'en', 'es', 'example', 'example_de', 'example_en', 'example_es', 'example_cases', 'government'];
   let cards = 0, problems = 0;
   const problem = (c, msg) => { problems++; out.push(`✗ ${c.id} ${c.ru}: ${msg}`); };
   for (const entry of index.filter(d => d.id.startsWith('verben-') && (!only || d.id === only))) {
