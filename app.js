@@ -576,6 +576,7 @@ function setHeader(title, onBack) {
 function go(newTab) {
   tab = newTab;
   $$('.tabbar button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.body.classList.remove('studying');   // untere Leiste wieder zeigen
   stopStudyKeys();
   if (tab === 'learn') renderLearn();
   if (tab === 'cards') renderCards();
@@ -656,6 +657,7 @@ let study = null;
 
 function startStudy(deckIds, title) {
   study = { deckIds, title, queue: buildQueue(deckIds), current: null, flipped: false, done: 0 };
+  document.body.classList.add('studying');   // beim Lernen keine untere Leiste – mehr Platz für die Karte
   setHeader(title, () => { study = null; go('learn'); });
   startStudyKeys();
   nextCard();

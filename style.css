@@ -229,3 +229,17 @@ main > * { max-width: 560px; margin-left: auto; margin-right: auto; }
 .vp-case b { font-weight: 600; color: var(--text); }
 .vp-imp { font-size: 18px; margin-top: 4px; }
 .vp-imp i { color: var(--muted); font-style: normal; font-size: 13px; margin-right: 4px; }
+
+/* Kompaktere untere Leiste; beim Lernen ganz ausgeblendet */
+.tabbar button { padding: 4px 0 5px; font-size: 11px; gap: 0; }
+.tabbar .ico { font-size: 18px; }
+main { padding-bottom: calc(env(safe-area-inset-bottom) + 72px); }
+.fab { bottom: calc(env(safe-area-inset-bottom) + 64px); }
+#toast { bottom: calc(env(safe-area-inset-bottom) + 64px); }
+body.studying .tabbar { display: none; }
+body.studying main { padding-bottom: calc(env(safe-area-inset-bottom) + 12px); }
+body.studying #toast { bottom: calc(env(safe-area-inset-bottom) + 16px); }
+.grades button { padding: 7px 4px; font-size: 15px; }
+.grades small { font-size: 11px; }
+.study { gap: 10px; }
+body.studying .card3d.tall { height: calc(100vh - 230px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); min-height: 380px; max-height: 760px; }
