@@ -249,3 +249,5 @@ body.studying .card3d.tall { height: calc(100vh - 230px - env(safe-area-inset-to
 .vp-rule.open { display: block; }
 .info { background: none; border: 0; color: var(--muted); font-size: 15px; line-height: 1; padding: 2px 4px; vertical-align: middle; }
 .info.open { color: var(--accent); }
+.vp-case-info { background: var(--surface); }
+.vp-case-info div + div { margin-top: 4px; }

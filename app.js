@@ -114,6 +114,22 @@ function load() {
 }
 
 let db = load();
+migrateDirections();
+
+// Früher gab es eine Richtung pro Sprache (de → ru, en → ru …). Jetzt sind alle Übersetzungen eine Seite ('tr').
+function migrateDirections() {
+  if (!['ru', 'tr', 'mix'].includes(db.settings.qLang)) db.settings.qLang = 'tr';
+  let changed = false;
+  for (const key of Object.keys(db.progress)) {
+    const [id, q] = key.split('|');
+    if (q === 'ru' || q === 'tr') continue;
+    const target = id + '|tr';
+    if (!db.progress[target] || (db.progress[key].reps || 0) > (db.progress[target].reps || 0)) db.progress[target] = db.progress[key];
+    delete db.progress[key];
+    changed = true;
+  }
+  if (changed) save();
+}
 
 function save() {
   try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); }
@@ -502,16 +518,19 @@ function schedule(p, grade, now = Date.now()) {
 /* ============================================================
    Abfragerichtungen und Warteschlange
    ============================================================ */
+// Eine Karte hat zwei feste Seiten: Russisch und die Übersetzungen (alle anderen aktiven Sprachen).
+// Abfragerichtung: 'ru' = Russisch zuerst, 'tr' = Übersetzungen zuerst, 'mix' = beides.
+const RU = 'ru';
+const trLangs = () => activeLangs().filter(l => l.code !== RU);
+
 function questionLangs() {
-  const act = activeLangs().map(l => l.code);
-  if (db.settings.qLang === 'mix') return act;
-  return act.includes(db.settings.qLang) ? [db.settings.qLang] : act.slice(0, 1);
+  const q = db.settings.qLang;
+  return q === 'mix' ? [RU, 'tr'] : [q === 'tr' ? 'tr' : RU];
 }
 
-// Eine Karte ist in Richtung q abfragbar, wenn sie Text in q und in mindestens einer anderen aktiven Sprache hat.
-function canAsk(card, q) {
-  if (!card.f[q]) return false;
-  return activeLangs().some(l => l.code !== q && card.f[l.code]);
+// Abfragbar, wenn es Russisch und mindestens eine aktive Übersetzung gibt
+function canAsk(card) {
+  return !!card.f[RU] && trLangs().some(l => card.f[l.code]);
 }
 
 function deckCards(deckIds) {
@@ -587,18 +606,15 @@ function go(newTab) {
 /* ============================================================
    Ansicht: Lernen (Deckübersicht)
    ============================================================ */
-function dirLabel() {
-  const q = db.settings.qLang;
-  const act = activeLangs();
-  if (q === 'mix') return 'Gemischt';
-  const others = act.filter(l => l.code !== q).map(l => l.code.toUpperCase()).join('/');
-  return `${q.toUpperCase()} → ${others || '?'}`;
+const DIRECTIONS = ['ru', 'tr', 'mix'];
+function dirText(q) {
+  const tr = trLangs().map(l => l.code.toUpperCase()).join('/') || '?';
+  return q === 'mix' ? 'Gemischt' : q === 'tr' ? `${tr} → RU` : `RU → ${tr}`;
 }
+function dirLabel() { return dirText(db.settings.qLang); }
 
 function dirChips() {
-  const act = activeLangs();
-  const opts = act.map(l => ({ v: l.code, t: `${l.code.toUpperCase()} → ${act.filter(o => o.code !== l.code).map(o => o.code.toUpperCase()).join('/')}` }));
-  if (act.length > 1) opts.push({ v: 'mix', t: 'Gemischt' });
+  const opts = DIRECTIONS.map(v => ({ v, t: dirText(v) }));
   return `<div class="chips">${opts.map(o =>
     `<button class="chip ${db.settings.qLang === o.v ? 'active' : ''}" data-dir="${o.v}">${esc(o.t)}</button>`).join('')}</div>`;
 }
@@ -670,6 +686,20 @@ function nextCard() {
   renderStudy();
 }
 
+// Kurzerklärungen der Fälle (erscheinen hinter ⓘ bei „Fälle:“, nur für die Fälle im Satz)
+const CASE_INFO = {
+  Nominativ: 'Wer? Was? – Subjekt des Satzes, Grundform aus dem Wörterbuch.',
+  Genitiv: 'Wessen? Wovon? – Besitz (дом отца́), nach Mengen und Zahlen (мно́го, два, пять), nach Verneinung (нет вре́мени) und nach у, без, до, из, от, по́сле, для, с (= von … weg).',
+  Dativ: 'Wem? – Empfänger (дать кому́), Gefühle und Alter (мне хо́лодно, мне нра́вится), nach к (zu jemandem) und по (entlang, per).',
+  Akkusativ: 'Wen? Was? – direktes Objekt; Richtung „wohin?“ nach в / на; Zeitangaben (в пя́тницу, всю ночь); nach за, че́рез. Belebte männliche Wörter sehen aus wie der Genitiv (ви́жу бра́та).',
+  Instrumental: 'Womit? Mit wem? Als was? – Werkzeug (писа́ть ру́чкой), с = zusammen mit, nach стать / быть / рабо́тать (als …), занима́ться, интересова́ться; Ort nach за, под, над, пе́ред, ме́жду.',
+  'Präpositiv': 'Wo? Worüber? – steht nur mit Präposition: в / на (wo?), о / об (über etwas sprechen, denken).',
+};
+function caseInfoHtml(cases) {
+  const found = Object.keys(CASE_INFO).filter(name => cases.includes(name));
+  return found.map(name => `<div><b>${name}:</b> ${esc(CASE_INFO[name])}</div>`).join('');
+}
+
 // Russische Seite eines Verbpaars: beide Aspekte mit я/ты-Formen, Aussprache und Beispielsatz
 function verbPairHtml(card) {
   const x = card.x;
@@ -719,7 +749,7 @@ function verbPairHtml(card) {
     ${biaspectual
       ? block('ipf', 'unvollendet + vollendet', 'gleiche Form für beide Aspekte', 'Bedeutung ergibt sich aus dem Zusammenhang')
       : block('ipf', 'unvollendet', x.pf ? '' : 'ohne vollendeten Partner') + block('pf', 'vollendet', x.ipf ? '' : 'ohne unvollendeten Partner')}
-    ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}</div>` : ''}</div>` : ''}
+    ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
   </div>`;
 }
 
@@ -789,21 +819,24 @@ function renderStudy() {
   const card = db.cards[cur.id];
   if (!card) { nextCard(); return; }
   const p = db.progress[cur.key] || newProgress();
-  const answers = activeLangs().filter(l => l.code !== cur.q && card.f[l.code]);
   const typeName = (CARD_TYPES[card.type] || CARD_TYPES.word).name;
   const remaining = study.queue.length + 1;
   const prev = g => fmtInterval(schedule(p, g).due - Date.now());
   const isVp = card.type === 'verbpair';
   const sayRu = (code, text) => code === 'ru' ? `<button class="say" data-say="${esc(text)}">🔊</button>` : '';
-  const frontWord = (isVp && cur.q === 'ru')
+  // Seite „Russisch“: Verbblock bzw. das russische Wort
+  const ruSide = () => `<div class="lang-tag">${esc(langName(RU))}</div>` + (isVp
     ? verbPairHtml(card)
-    : `<div class="q-word">${esc(card.f[cur.q])}</div>
-       ${sayRu(cur.q, card.f[cur.q])}`;
-  const answerWord = l => (isVp && l.code === 'ru')
-    ? verbPairHtml(card)
-    : `<div class="a-word">${esc(card.f[l.code])} ${sayRu(l.code, card.f[l.code])}</div>
-       ${card.x['example_' + l.code] ? `<div class="a-ex">${esc(card.x['example_' + l.code])}</div>` : ''}
-       ${isVp && l.code === 'es' ? esConjHtml(card) : ''}`;
+    : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(RU, card.f[RU])}`);
+  // Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
+  const trSide = () => trLangs().filter(l => card.f[l.code]).map(l => `
+    <div class="answer">
+      <div class="lang-tag">${esc(l.name)}</div>
+      <div class="a-word">${esc(card.f[l.code])}</div>
+      ${card.x['example_' + l.code] ? `<div class="a-ex">${esc(card.x['example_' + l.code])}</div>` : ''}
+      ${isVp && l.code === 'es' ? esConjHtml(card) : ''}
+    </div>`).join('');
+  const ruFirst = cur.q !== 'tr';
 
   view.innerHTML = `
     <div class="study">
@@ -815,18 +848,12 @@ function renderStudy() {
         <div class="card-inner">
           <div class="face front">
             <span class="badge type">${esc(typeName)}${cur.isNew ? ' · neu' : ''}</span>
-            <div class="lang-tag">${esc(langName(cur.q))}</div>
-            ${frontWord}
+            ${ruFirst ? ruSide() : trSide()}
             <div class="hint">Tippen zum Umdrehen</div>
           </div>
           <div class="face back">
             <span class="badge type">${esc(typeName)}</span>
-            <div class="q-small">${esc(card.f[cur.q])}</div>
-            ${answers.map(l => `
-              <div class="answer">
-                <div class="lang-tag">${esc(l.name)}</div>
-                ${answerWord(l)}
-              </div>`).join('')}
+            ${ruFirst ? trSide() : ruSide()}
             ${extrasHtml(card)}
           </div>
         </div>
@@ -894,10 +921,8 @@ function grade(g) {
 }
 
 function swapDirection() {
-  const act = activeLangs().map(l => l.code);
-  const opts = act.length > 1 ? act.concat('mix') : act;
-  const i = opts.indexOf(db.settings.qLang);
-  db.settings.qLang = opts[(i + 1) % opts.length];
+  const i = DIRECTIONS.indexOf(db.settings.qLang);
+  db.settings.qLang = DIRECTIONS[(i + 1) % DIRECTIONS.length];
   save();
   study.queue = buildQueue(study.deckIds);
   toast('Richtung: ' + dirLabel());
