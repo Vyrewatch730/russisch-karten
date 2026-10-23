@@ -243,3 +243,9 @@ body.studying #toast { bottom: calc(env(safe-area-inset-bottom) + 16px); }
 .grades small { font-size: 11px; }
 .study { gap: 10px; }
 body.studying .card3d.tall { height: calc(100vh - 230px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); min-height: 380px; max-height: 760px; }
+
+/* Erklärungen nur auf Antippen von ⓘ */
+.vp-rule { display: none; background: var(--bg); border-radius: 8px; padding: 6px 8px; margin: 4px 0 6px; }
+.vp-rule.open { display: block; }
+.info { background: none; border: 0; color: var(--muted); font-size: 15px; line-height: 1; padding: 2px 4px; vertical-align: middle; }
+.info.open { color: var(--accent); }

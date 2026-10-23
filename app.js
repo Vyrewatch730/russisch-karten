@@ -696,13 +696,15 @@ function verbPairHtml(card) {
     const imp = impOf(p);
     if (!imp) return '';
     if (imp === '—') return `<div class="vp-imp"><i>Imp.</i> <span class="pron">nicht üblich</span></div>`;
-    return `<div class="vp-imp"><i>Imp.</i> ${esc(imp)}! / ${esc(ruImperativePlural(imp))}!${pron2(imp)} ${say(impSpeech(p))}</div>
+    return `<div class="vp-imp"><i>Imp.</i> ${esc(imp)}! / ${esc(ruImperativePlural(imp))}!${pron2(imp)} ${say(impSpeech(p))}${info}</div>
       <div class="vp-rule">${IMP_RULE[p]}</div>`;
   };
   const pron2 = text => { const p = ruPron(text); return p ? ` <span class="pron">[${esc(p)}]</span>` : ''; };
+  // ⓘ blendet die Erklärung darunter (nächstes Element .vp-rule) ein und aus
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
   const block = (p, label, hint, rule = RULE[p]) => x[p] ? `
     <div class="vp-block ${p}">
-      <div class="vp-asp">${label}${hint ? ` <small>${hint}</small>` : ''}</div>
+      <div class="vp-asp">${label}${hint ? ` <small>${hint}</small>` : ''}${rule ? info : ''}</div>
       ${rule ? `<div class="vp-rule">${rule}</div>` : ''}
       <div class="vp-inf">${esc(x[p])}${pron(p)} ${say([x[p], x[p + '_1'], x[p + '_2']].filter(f => f && f !== '—').join(', ') + (impSpeech(p) ? '. ' + impSpeech(p) : ''))}</div>
       <div class="vp-forms">
@@ -841,10 +843,15 @@ function renderStudy() {
       </div>
     </div>`;
 
-  $('#card').onclick = (e) => { if (!e.target.closest('.say')) flip(); };
+  $('#card').onclick = (e) => { if (!e.target.closest('.say, .info')) flip(); };
   $('#flip')?.addEventListener('click', flip);
   $$('[data-grade]', view).forEach(b => b.onclick = () => grade(+b.dataset.grade));
   $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say); });
+  $$('.info', view).forEach(b => b.onclick = (e) => {
+    e.stopPropagation();
+    const rule = b.parentElement.nextElementSibling;
+    if (rule && rule.classList.contains('vp-rule')) b.classList.toggle('open', rule.classList.toggle('open'));
+  });
   $('#swap').onclick = swapDirection;
   $('#edit-cur').onclick = () => editCard(card.id, () => {
     setHeader(study.title, () => { study = null; go('learn'); });
