@@ -258,3 +258,13 @@ body.studying .card3d.tall { height: calc(100vh - 230px - env(safe-area-inset-to
 .vp-gov { font-size: 14px; line-height: 1.4; }
 .vp-gov b { color: var(--muted); font-weight: 600; }
 .vp-rule div + div { margin-top: 3px; }
+
+/* Konjugation bei -ти/-чь/-сть/-зть (Rückseite) */
+.conj-ru { width: 100%; text-align: left; background: var(--bg); border-radius: 10px; padding: 8px 10px; margin-top: 8px; font-size: 14px; }
+.conj-ru-head { font-weight: 700; font-size: 13px; }
+.conj-ru-head small { font-weight: 400; color: var(--muted); }
+.conj-ru .vp-rule { background: var(--surface); }
+.conj-ru-item { margin-top: 6px; }
+.conj-ru-item > b { font-size: 15px; }
+.conj-ru-forms { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 2px 12px; margin-top: 3px; font-size: 15px; }
+.conj-ru-forms i { color: var(--muted); font-style: normal; font-size: 12px; display: inline-block; min-width: 44px; }

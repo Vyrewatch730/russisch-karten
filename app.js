@@ -709,6 +709,83 @@ function caseInfoHtml(cases) {
   return found.map(name => `<div><b>${name}:</b> ${esc(CASE_INFO[name])}</div>`).join('');
 }
 
+/* ============================================================
+   Konjugation für Verben, deren Infinitiv sie nicht verrät (-ти, -чь, -сть, -зть).
+   Alle sechs Formen werden aus я- und ты-Form abgeleitet (inkl. Betonungs- und Stammwechsel).
+   ============================================================ */
+const CONJ_HIDDEN = /(ти|тись|чь|чься|сть|сться|зть)$/;
+const CONJ_IRREGULAR = {
+  'есть': ['ем', 'ешь', 'ест', 'еди́м', 'еди́те', 'едя́т'],
+  'съесть': ['съем', 'съешь', 'съест', 'съеди́м', 'съеди́те', 'съедя́т'],
+  'надоесть': ['надое́м', 'надое́шь', 'надое́ст', 'надоеди́м', 'надоеди́те', 'надоедя́т'],
+};
+const CONJ_INFO = `
+  <div>Bei Infinitiven auf <b>-ти, -чь, -сть, -зть</b> sieht man nicht, wie das Verb konjugiert wird.</div>
+  <div>Sie gehören zur <b>1. Konjugation (е-Konjugation)</b>: -у/-ю, -ешь/-ёшь, -ет, -ем, -ете, -ут/-ют. Ist die Endung betont, steht ё: идёшь, идёт.</div>
+  <div>Den <b>Stamm</b> nimmt man aus der я-Form: идти́ → иду́ → ид-, класть → кладу́ → клад-.</div>
+  <div>Bei <b>-чь</b> wechselt der Stamm: г/к in der я- und они-Form, ж/ч in den anderen (могу́ – мо́жешь – мо́гут).</div>
+  <div>Bei vollendeten Verben sind diese Formen <b>Zukunft</b>.</div>`;
+
+function ruVowelCount(s) { return (s.replace(STRESS, '').match(/[аеёиоуыэюя]/g) || []).length; }
+
+// Betonung auf den n-ten Vokal (0-basiert) setzen
+function stressVowel(stem, n) {
+  let i = -1;
+  return stem.replace(STRESS, '').replace(/[аеиоуыэюя]/g, v => (++i === n ? v + '́' : v));
+}
+
+// [я, ты, он, мы, вы, они] aus я- und ты-Form der 1. Konjugation
+function ruPresentForms(ya, ty) {
+  const refl = /(сь|ся)$/.test(ya);
+  const cut = s => s.replace(/(сь|ся)$/, '');
+  const y = cut(ya), t = cut(ty);
+  const m = t.match(/^(.*?)([её])(́?)шь$/);
+  if (!m || !/[ую]́?$/.test(y)) return null;
+  const tStem = m[1];
+  const endStressedTy = m[2] === 'ё' || m[3] === '́';
+  const yStem = y.replace(/[ую]́?$/, '');
+  const u = /ю́?$/.test(y) ? 'ю' : 'у';
+  const endStressedYa = /[ую]́$/.test(y) || ruVowelCount(y) === 1;
+  const plainT = tStem.replace(STRESS, '');
+  const mid = endStressedTy
+    ? [plainT + 'ёт', plainT + 'ём', plainT + 'ёте']
+    : [tStem + 'ет', tStem + 'ем', tStem + 'ете'];
+  let they;
+  if (endStressedYa && endStressedTy) they = yStem.replace(STRESS, '') + u + '́т';
+  else if (endStressedYa) {
+    // Betonung springt wie in der ты-Form auf den Stamm: могу́ – мо́жешь – мо́гут
+    const pos = tStem.indexOf('́');
+    they = pos < 0 ? yStem + u + 'т' : stressVowel(yStem, ruVowelCount(tStem.slice(0, pos)) - 1) + u + 'т';
+  } else they = yStem + u + 'т';
+  const fix = s => (ruVowelCount(s) === 1 ? s.replace(STRESS, '') : s);
+  const forms = [y, t, ...mid, fix(they)];
+  return refl ? forms.map((f, i) => (i < 2 ? [ya, ty][i] : f + (/[аеёиоуыэюя]$/.test(f) ? 'сь' : 'ся'))) : forms;
+}
+
+function conjugationHtml(card) {
+  const x = card.x;
+  if (card.type !== 'verbpair') return '';
+  const items = [];
+  for (const p of ['ipf', 'pf']) {
+    if (!x[p] || (p === 'pf' && x.pf === x.ipf)) continue;
+    const plain = x[p].replace(STRESS, '');
+    if (!CONJ_HIDDEN.test(plain)) continue;
+    const irregular = CONJ_IRREGULAR[plain];
+    const forms = irregular || ruPresentForms(x[p + '_1'] || '', x[p + '_2'] || '');
+    if (!forms) continue;
+    const kind = irregular ? 'unregelmäßig' : '1. Konjugation (е-Konjugation)';
+    const tense = p === 'pf' ? 'Zukunft' : 'Gegenwart';
+    const rows = ['я', 'ты', 'он/она́', 'мы', 'вы', 'они́'].map((pr, i) => `<span><i>${pr}</i> ${esc(forms[i])}</span>`).join('');
+    items.push(`<div class="conj-ru-item"><b>${esc(x[p])}</b> – ${kind} · ${tense}<div class="conj-ru-forms">${rows}</div></div>`);
+  }
+  if (!items.length) return '';
+  return `<div class="conj-ru">
+    <div class="conj-ru-head">Konjugation <small>(am Infinitiv nicht erkennbar)</small> <button class="info" aria-label="Erklärung anzeigen">ⓘ</button></div>
+    <div class="vp-rule">${CONJ_INFO}</div>
+    ${items.join('')}
+  </div>`;
+}
+
 // Russische Seite eines Verbpaars: beide Aspekte mit я/ты-Formen, Aussprache und Beispielsatz
 function verbPairHtml(card) {
   const x = card.x;
@@ -878,6 +955,7 @@ function renderStudy() {
           <div class="face back">
             <span class="badge type">${esc(typeName)}</span>
             ${ruFirst ? trSide() : ruSide()}
+            ${conjugationHtml(card)}
             ${extrasHtml(card)}
           </div>
         </div>
