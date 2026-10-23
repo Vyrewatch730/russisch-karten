@@ -268,3 +268,26 @@ body.studying .card3d.tall { height: calc(100vh - 230px - env(safe-area-inset-to
 .conj-ru-item > b { font-size: 15px; }
 .conj-ru-forms { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, auto); grid-auto-flow: column; gap: 2px 12px; margin-top: 3px; font-size: 15px; }
 .conj-ru-forms i { color: var(--muted); font-style: normal; font-size: 12px; display: inline-block; min-width: 44px; }
+
+/* Kopfzeile: Titel kürzen, rechts Zusatzinfos (beim Lernen: übrig + Richtung) */
+.topbar h1 { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#header-extra { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+#header-extra:empty { display: none; }
+.hbadge { background: rgba(255, 255, 255, .18); color: #fff; border-radius: 999px; padding: 2px 9px; font-size: 13px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.hdir { background: rgba(255, 255, 255, .12); color: #fff; border: 1px solid rgba(255, 255, 255, .45); border-radius: 999px; padding: 4px 10px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+
+/* Regeln */
+.tabbar button { font-size: 10px; }
+.rule-icon { font-size: 24px; }
+.chev { color: var(--muted); font-size: 22px; }
+.rule { background: var(--surface); border-radius: 14px; box-shadow: var(--shadow); padding: 14px 16px 18px; line-height: 1.5; font-size: 15px; }
+.rule h3 { font-size: 16px; margin: 18px 0 6px; color: var(--accent); }
+.rule h3:first-child { margin-top: 0; }
+.rule p { margin: 6px 0; }
+.rule ul, .rule ol { padding-left: 20px; margin: 6px 0; }
+.rule li { margin: 3px 0; }
+.rule .tip { background: var(--bg); border-left: 3px solid var(--accent); border-radius: 6px; padding: 6px 10px; font-size: 14px; }
+.rtable { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 14px; }
+.rtable th, .rtable td { border: 1px solid var(--surface-2); padding: 5px 6px; text-align: left; vertical-align: top; }
+.rtable th { background: var(--bg); font-size: 12px; color: var(--muted); }
+.rtable.small { font-size: 13px; }

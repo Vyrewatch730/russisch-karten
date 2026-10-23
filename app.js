@@ -590,6 +590,7 @@ function setHeader(title, onBack) {
   $('#title').textContent = title;
   backHandler = onBack || null;
   $('#back').hidden = !onBack;
+  $('#header-extra').innerHTML = '';   // Zusatzinfos (z. B. beim Lernen) setzt die jeweilige Ansicht neu
 }
 
 function go(newTab) {
@@ -599,7 +600,33 @@ function go(newTab) {
   stopStudyKeys();
   if (tab === 'learn') renderLearn();
   if (tab === 'cards') renderCards();
+  if (tab === 'rules') renderRules();
   if (tab === 'settings') renderSettings();
+  $('#view').scrollTop = 0;
+}
+
+/* ============================================================
+   Ansicht: Regeln (Inhalte aus rules.js)
+   ============================================================ */
+function renderRules() {
+  setHeader('Regeln');
+  $('#view').innerHTML = `
+    <div class="panel">
+      ${RULES.map(r => `
+        <div class="row clickable" data-rule="${r.id}">
+          <span class="rule-icon">${r.icon}</span>
+          <div class="grow"><b>${esc(r.title)}</b><div class="sub">${esc(r.teaser)}</div></div>
+          <span class="chev">›</span>
+        </div>`).join('')}
+    </div>`;
+  $$('[data-rule]').forEach(r => r.onclick = () => renderRule(r.dataset.rule));
+}
+
+function renderRule(id) {
+  const rule = RULES.find(r => r.id === id);
+  if (!rule) return renderRules();
+  setHeader(rule.title, () => go('rules'));
+  $('#view').innerHTML = `<article class="rule">${rule.html}</article>`;
   $('#view').scrollTop = 0;
 }
 
@@ -905,6 +932,7 @@ function renderStudy() {
   const view = $('#view');
   const cur = study.current;
   if (!cur) {
+    $('#header-extra').innerHTML = '';
     stopStudyKeys();
     const s = deckStats(study.deckIds);
     view.innerHTML = `
@@ -941,10 +969,6 @@ function renderStudy() {
 
   view.innerHTML = `
     <div class="study">
-      <div class="study-head">
-        <span class="badge">${remaining} übrig</span>
-        <button class="dir-btn" id="swap" title="Richtung wechseln">${esc(dirLabel())} ⇄</button>
-      </div>
       <div class="card3d ${study.flipped ? 'flipped' : ''} ${isVp ? 'tall' : ''}" id="card">
         <div class="card-inner">
           <div class="face front">
@@ -981,6 +1005,10 @@ function renderStudy() {
     const rule = b.parentElement.nextElementSibling;
     if (rule && rule.classList.contains('vp-rule')) b.classList.toggle('open', rule.classList.toggle('open'));
   });
+  // „übrig“ und Abfragerichtung stehen im blauen Kopfbereich
+  $('#header-extra').innerHTML = `
+    <span class="hbadge" title="noch übrig">${remaining}</span>
+    <button class="hdir" id="swap" title="Richtung wechseln">${esc(dirLabel())} ⇄</button>`;
   $('#swap').onclick = swapDirection;
   $('#edit-cur').onclick = () => editCard(card.id, () => {
     setHeader(study.title, () => { study = null; go('learn'); });
