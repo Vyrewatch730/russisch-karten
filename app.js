@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 38;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 39;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1097,11 +1097,22 @@ function adjHtml(card) {
     <div class="aj-four">${four.map(([g, w]) => `<span class="aj-${g}">${esc(w)}</span>`).join('')} ${say(four.map(a => a[1]).join(', '))}</div>
     ${adjDeclHtml(card)}
     ${row('Kurzform', x.short, `${info}</div><div class="vp-rule">Die Kurzform steht nach dem Subjekt als Aussage: Дом нов = Das Haus ist neu. Formen: männlich, weiblich, sächlich, Plural.`)}
-    ${row('Komparativ', x.comp, x.comp_irr ? ' <span class="aj-irr">unregelmäßig</span>' : '')}
+    ${row('Komparativ', x.comp, (x.comp_irr ? ' <span class="aj-irr">unregelmäßig</span>' : '') + `${info}</div><div class="vp-rule">${compInfoHtml(x.comp, d)}`)}
     ${row('Gegenteil', x.anto)}
     ${x.hint ? `<div class="nn-hint">⚠️ Achtung${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
     ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
   </div>`;
+}
+
+// Erklärung zum Komparativ (ⓘ) mit den Formen des jeweiligen Adjektivs
+function compInfoHtml(comp, d) {
+  const c = esc(comp);
+  return `<div><b>Komparativ</b> (schöner, größer): Die Form bleibt <b>immer gleich</b> – egal ob männlich, weiblich oder Plural:</div>
+    <div>Он ${c}. · Она́ ${c}. · Они́ ${c}.</div>
+    <div>Vergleich mit <b>чем</b> (als) oder mit dem Genitiv: … ${c}, чем я · … ${c} меня́</div>
+    <div><b>Superlativ</b> (der schönste): <b>са́мый</b> + Adjektiv. Beide passen sich an das Nomen an:</div>
+    <div><span class="aj-m">са́мый ${esc(d.m[0])}</span> · <span class="aj-f">са́мая ${esc(d.f[0])}</span> · <span class="aj-n">са́мое ${esc(d.n[0])}</span> · <span class="aj-pl">са́мые ${esc(d.pl[0])}</span></div>
+    <div>Auch die Grundform richtet sich immer nach dem Nomen: Im Wörterbuch steht die männliche Form, im Satz nimmt man die passende (weiblich bei einem weiblichen Nomen usw.).</div>`;
 }
 
 // Zwei Tabellen mit je 6 Fällen (männlich + sächlich, weiblich + Plural), damit es aufs Handy passt; hinter ⓘ
