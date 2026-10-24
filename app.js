@@ -886,16 +886,33 @@ function nounHtml(card) {
   </div>`;
 }
 
-// Rückseite: alle 12 Formen, hinter ⓘ eingeklappt
+// Beispielsätze je Fall: x.ex_sg / x.ex_pl = „Satz = Übersetzung || …“ (6 Einträge, Reihenfolge wie NOUN_CASES)
+const nounExamples = s => (s || '').split('||').map(e => { const [ru, de] = e.split(' = ').map(t => (t || '').trim()); return { ru, de }; });
+
+// Satz mit fett markierter Form (Groß-/Kleinschreibung am Satzanfang egal)
+function markForm(sentence, form) {
+  const html = esc(sentence);
+  if (!form) return html;
+  const re = new RegExp(`(^|[^а-яё́])(${form.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(?=[^а-яё́]|$)`, 'i');
+  return html.replace(re, '$1<b>$2</b>');
+}
+
+// Alle 12 Formen, hinter ⓘ eingeklappt; jede Zeile hat ein eigenes ⓘ mit Beispielsätzen
 function declensionHtml(card) {
   if (card.type !== 'nounfull') return '';
   if (card.x.indecl) return `<div class="conj-ru nn-decl"><div class="conj-ru-head">Deklination <small>unveränderlich – in allen Fällen ${esc(card.f.ru)}</small></div></div>`;
   const x = card.x;
   const sg = x.gender === 'pl' ? [] : nounForms(x.indecl ? Array(6).fill(card.f.ru).join('|') : x.sg);
   const pl = x.indecl ? [] : nounForms(x.pl);
+  const exSg = nounExamples(x.ex_sg), exPl = nounExamples(x.ex_pl);
   const say = forms => forms.filter(Boolean).length ? `<button class="say" data-say="${esc(forms.filter(Boolean).join(', '))}">🔊</button>` : '';
   const cols = [sg.filter(Boolean).length && 'Singular', pl.filter(Boolean).length && 'Plural'].filter(Boolean);
-  const rows = NOUN_CASES.map(([c, q], i) => `<tr><th>${c}<small>${q}</small></th>${cols.includes('Singular') ? `<td>${esc(sg[i] || '')}</td>` : ''}${cols.includes('Plural') ? `<td>${esc(pl[i] || '')}</td>` : ''}</tr>`).join('');
+  const exLine = (ex, form, label) => ex && ex.ru ? `<div class="nn-ex"><i>${label}</i> ${markForm(ex.ru, form)} ${say([ex.ru])}${ex.de ? `<div class="nn-ex-de">${esc(ex.de)}</div>` : ''}</div>` : '';
+  const rows = NOUN_CASES.map(([c, q], i) => {
+    const exs = (cols.includes('Singular') ? exLine(exSg[i], sg[i], cols.length > 1 ? 'Sg.' : '') : '') + (cols.includes('Plural') ? exLine(exPl[i], pl[i], cols.length > 1 ? 'Pl.' : '') : '');
+    return `<tr><th>${c}${exs ? ' <button class="info" aria-label="Beispiel anzeigen">ⓘ</button>' : ''}<small>${q}</small></th>${cols.includes('Singular') ? `<td>${esc(sg[i] || '')}</td>` : ''}${cols.includes('Plural') ? `<td>${esc(pl[i] || '')}</td>` : ''}</tr>`
+      + (exs ? `<tr class="vp-rule nn-ex-row"><td colspan="${cols.length + 1}">${exs}</td></tr>` : '');
+  }).join('');
   return `<div class="conj-ru nn-decl">
     <div class="conj-ru-head">Deklination <small>${esc(nounPattern(x, card.f.ru))}</small> <button class="info" aria-label="Tabelle anzeigen">ⓘ</button></div>
     <div class="vp-rule">
@@ -1098,7 +1115,8 @@ function renderStudy() {
   $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say); });
   $$('.info', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
-    const rule = b.parentElement.nextElementSibling;
+    // In Tabellen gehört die Erklärung zur nächsten Zeile
+    const rule = (b.closest('tr') || b.parentElement).nextElementSibling;
     if (rule && rule.classList.contains('vp-rule')) b.classList.toggle('open', rule.classList.toggle('open'));
   });
   // „übrig“ und Abfragerichtung stehen im blauen Kopfbereich

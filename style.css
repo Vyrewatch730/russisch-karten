@@ -314,3 +314,11 @@ body.studying .card3d.tall { height: calc(100vh - 230px - env(safe-area-inset-to
 .nn-table tbody th { font-size: 13px; white-space: nowrap; }
 .nn-table tbody th small { display: block; font-weight: 400; font-size: 10px; color: var(--muted); }
 .nn .conj-ru { margin-top: 0; }
+tr.vp-rule.open { display: table-row; }
+.nn-ex-row td { background: var(--bg); border-radius: 8px; padding: 6px 8px; }
+.nn-table th .info { font-size: 11px; }
+.nn-ex { font-size: 14px; color: var(--text); }
+.nn-ex + .nn-ex { margin-top: 5px; }
+.nn-ex i { font-style: normal; font-size: 11px; color: var(--muted); margin-right: 3px; }
+.nn-ex b { color: var(--g); }
+.nn-ex-de { font-size: 12px; color: var(--muted); font-style: italic; }
