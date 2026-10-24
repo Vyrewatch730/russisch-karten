@@ -8,6 +8,14 @@
         "version":  1
     },
     {
+        "id":  "adjektive-01",
+        "name":  "Adjektive 01",
+        "description":  "Probedeck · 12 Adjektive mit allen Formen, Kurzform, Komparativ und Gegenteil",
+        "file":  "adjektive-01.json",
+        "count":  12,
+        "version":  1
+    },
+    {
         "id":  "nomen-01",
         "name":  "Nomen 01",
         "description":  "Nr. 1–50 nach Häufigkeit · Geschlecht, Deklination und Beispiel",

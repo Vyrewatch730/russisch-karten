@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 33;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 34;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -75,6 +75,22 @@ const CARD_TYPES = {
       { key: 'es2_verb', label: 'Spanisch – 2. Verb (optional)' },
       { key: 'es2_pres', label: 'Spanisch – 2. Verb Presente' },
       { key: 'es2_past', label: 'Spanisch – 2. Verb Pasado' },
+    ],
+  },
+  // Adjektiv: Formen berechnet aus der männlichen Grundform (adjHtml / adjDecl)
+  adjfull: {
+    name: 'Adjektiv',
+    ownLayout: true,
+    extras: [
+      { key: 'short', label: 'Kurzform (m, f, n, Pl.)' },
+      { key: 'comp', label: 'Komparativ' },
+      { key: 'comp_irr', label: 'Komparativ unregelmäßig (1 = ja)' },
+      { key: 'anto', label: 'Gegenteil' },
+      { key: 'hint', label: 'Hinweis' },
+      { key: 'example_cases', label: 'Beispielsatz – Fälle' },
+      { key: 'example_de', label: 'Beispielsatz – Deutsch' },
+      { key: 'example_en', label: 'Beispielsatz – Englisch' },
+      { key: 'example_es', label: 'Beispielsatz – Spanisch' },
     ],
   },
   // Nomen mit Geschlecht, Grundformen und vollständiger Deklination (nounHtml / declensionHtml)
@@ -674,6 +690,7 @@ const DECK_KINDS = [
   { v: 'all', t: 'Alle', test: () => true },
   { v: 'verben', t: 'Verben', test: id => id.startsWith('verben-') },
   { v: 'nomen', t: 'Nomen', test: id => id.startsWith('nomen-') },
+  { v: 'adjektive', t: 'Adjektive', test: id => id.startsWith('adjektive-') },
 ];
 function kindChips() {
   const cur = db.settings.deckKind || 'all';
@@ -715,7 +732,7 @@ function renderLearn() {
           <div class="row clickable" data-study="*">
             <div class="grow"><b>${allTitle}</b></div>${statRow(deckStats(allIds))}
           </div>` : ''}
-        ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen – unter Einstellungen → Deck-Bibliothek</div></div>` : ''}
+        ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen</div>${kind.v !== 'all' ? `<button class="btn small" id="load-kind">Laden</button>` : ''}</div>` : ''}
         ${decks.map(d => `
           <div class="row clickable" data-study="${esc(d.id)}">
             <div class="grow ellipsis">${esc(d.name)}<div class="sub">${deckCards([d.id]).length} ${deckCards([d.id]).length === 1 ? "Karte" : "Karten"}</div></div>
@@ -728,6 +745,17 @@ function renderLearn() {
     </p>`;
   $$('[data-dir]', view).forEach(b => b.onclick = () => { db.settings.qLang = b.dataset.dir; save(); renderLearn(); });
   $$('[data-kind]', view).forEach(b => b.onclick = () => { db.settings.deckKind = b.dataset.kind; save(); renderLearn(); });
+  // Noch nichts von dieser Art geladen: alle passenden Decks aus der Bibliothek holen
+  const loadBtn = $('#load-kind');
+  if (loadBtn) loadBtn.onclick = async () => {
+    loadBtn.disabled = true;
+    try {
+      const list = await (await fetch('decks/index.json', { cache: 'no-cache' })).json();
+      for (const entry of list.filter(d => d.id.startsWith(kind.v + '-'))) await importLibraryDeck(entry);
+      toast(kind.t + ' geladen');
+    } catch (err) { toast('Laden nicht möglich (offline?)'); }
+    renderLearn();
+  };
   $$('[data-study]', view).forEach(r => r.onclick = () => {
     const id = r.dataset.study;
     startStudy(id === '*' ? allIds : [id], id === '*' ? allTitle : db.decks[id].name);
@@ -1005,6 +1033,91 @@ function declensionHtml(card) {
   </div>`;
 }
 
+/* ============================================================
+   Adjektive: alle 24 Formen werden aus der männlichen Grundform berechnet.
+   Typen: hart (но́вый), betonte Endung (большо́й), weich auf -ний (си́ний),
+   Rechtschreibregeln nach г/к/х (ы → и) und ж/ш/ч/щ (ы → и, unbetontes о → е).
+   ============================================================ */
+const ADJ_ROWS = [['Nom.', 'wer? was?'], ['Gen.', 'wessen?'], ['Dat.', 'wem?'], ['Akk.', 'wen? was?'], ['Ins.', 'mit wem?'], ['Präp.', 'über wen?']];
+
+function adjType(m) {
+  const p = m.replace(STRESS, '');
+  if (/о́й$/.test(m)) return 'end';
+  if (/ний$/.test(p)) return 'soft';
+  return 'hard';
+}
+
+function adjDecl(m) {
+  const type = adjType(m);
+  const stem = type === 'end' ? m.slice(0, -3) : m.slice(0, -2);
+  const plain = stem.replace(STRESS, '');
+  const velar = /[гкх]$/.test(plain), sib = /[жшчщ]$/.test(plain);
+  const E = ending => {
+    let e = ending;
+    if (type === 'soft') e = e.replace(/^ы/, 'и').replace(/^о/, 'е').replace(/^а/, 'я').replace(/^у/, 'ю').replace(/^ая/, 'яя');
+    else {
+      if (velar || sib) e = e.replace(/^ы/, 'и');
+      if (sib && type !== 'end') e = e.replace(/^о/, 'е');
+    }
+    if (type === 'soft') e = e.replace(/^яя$/, 'яя').replace(/^ую$/, 'юю');
+    if (type === 'end') e = e.replace(/[аеиоуыэюя]/, v => v + '́');
+    return stem + e;
+  };
+  const f = {
+    m: [type === 'end' ? m : E('ый'), E('ого'), E('ому'), null, E('ым'), E('ом')],
+    n: [E('ое'), E('ого'), E('ому'), E('ое'), E('ым'), E('ом')],
+    f: [E('ая'), E('ой'), E('ой'), E('ую'), E('ой'), E('ой')],
+    pl: [E('ые'), E('ых'), E('ым'), null, E('ыми'), E('ых')],
+  };
+  if (type === 'soft') { f.f[0] = stem + 'яя'; f.f[3] = stem + 'юю'; }
+  f.m[3] = `${f.m[0]} / ${f.m[1]}`;
+  f.pl[3] = `${f.pl[0]} / ${f.pl[1]}`;
+  return f;
+}
+
+function adjPattern(m) {
+  const type = adjType(m), plain = m.replace(STRESS, '');
+  if (type === 'soft') return 'weich (wie си́ний)';
+  const extra = /[гкх](ий|о́?й)$/.test(plain) ? ', nach г/к/х: и statt ы' : /[жшчщ](ий|о́?й)$/.test(plain) ? ', nach ж/ш/ч/щ: и statt ы' + (type === 'end' ? '' : ', е statt о') : '';
+  return (type === 'end' ? 'betonte Endung (wie большо́й)' : 'hart (wie но́вый)') + extra;
+}
+
+function adjHtml(card) {
+  const x = card.x, word = card.f.ru || '';
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const say = t => t ? `<button class="say" data-say="${esc(t)}">🔊</button>` : '';
+  const pron = t => { const p = ruPron(t); return p ? ` <span class="pron">[${esc(p)}]</span>` : ''; };
+  const d = adjDecl(word);
+  const four = [['m', d.m[0]], ['n', d.n[0]], ['f', d.f[0]], ['pl', d.pl[0]]];
+  const exPron = x.example_pron || ruPron(x.example);
+  const row = (label, val, extra = '') => val ? `<div class="aj-row"><i>${label}</i> ${esc(val)} ${say(val.replace(/[,/]/g, ' '))}${extra}</div>` : '';
+  return `<div class="nn aj">
+    <div class="nn-tags"><span class="nn-g aj-tag">Adjektiv</span></div>
+    <div class="nn-word">${esc(word)}${pron(word)} ${say(word)}</div>
+    <div class="aj-four">${four.map(([g, w]) => `<span class="aj-${g}">${esc(w)}</span>`).join('')} ${say(four.map(a => a[1]).join(', '))}</div>
+    ${adjDeclHtml(card)}
+    ${row('Kurzform', x.short, `${info}</div><div class="vp-rule">Die Kurzform steht nach dem Subjekt als Aussage: Дом нов = Das Haus ist neu. Formen: männlich, weiblich, sächlich, Plural.`)}
+    ${row('Komparativ', x.comp, x.comp_irr ? ' <span class="aj-irr">unregelmäßig</span>' : '')}
+    ${row('Gegenteil', x.anto)}
+    ${x.hint ? `<div class="nn-hint">⚠️ Achtung${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
+    ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
+  </div>`;
+}
+
+// Tabelle mit 6 Fällen × männlich / sächlich / weiblich / Plural, hinter ⓘ
+function adjDeclHtml(card) {
+  const d = adjDecl(card.f.ru);
+  const cols = [['m', 'männl.'], ['n', 'sächl.'], ['f', 'weibl.'], ['pl', 'Plural']];
+  const rows = ADJ_ROWS.map(([c, q], i) => `<tr><th>${c}<small>${q}</small></th>${cols.map(([g]) => `<td class="aj-${g}">${esc(d[g][i]).replace(' / ', '<br>')}</td>`).join('')}</tr>`).join('');
+  return `<div class="conj-ru nn-decl">
+    <div class="conj-ru-head">Deklination <small>${esc(adjPattern(card.f.ru))}</small> <button class="info" aria-label="Tabelle anzeigen">ⓘ</button></div>
+    <div class="vp-rule">
+      <table class="nn-table aj-table"><thead><tr><th></th>${cols.map(([g, t]) => `<th class="aj-${g}">${t} ${`<button class="say" data-say="${esc(d[g].map(f => f.split(' / ')[0]).join(', '))}">🔊</button>`}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table>
+      <p class="aj-note">Akk. männlich und Plural: unbelebt wie Nominativ, bei Menschen und Tieren wie Genitiv.</p>
+    </div>
+  </div>`;
+}
+
 // Russische Seite eines Verbpaars: beide Aspekte mit я/ты-Formen, Aussprache und Beispielsatz
 function verbPairHtml(card) {
   const x = card.x;
@@ -1147,11 +1260,12 @@ function renderStudy() {
   const remaining = study.queue.length + 1;
   const prev = g => fmtInterval(schedule(p, g).due - Date.now());
   const isVp = card.type === 'verbpair';
-  const isNoun = card.type === 'nounfull';
+  const isNoun = card.type === 'nounfull' || card.type === 'adjfull';
   const sayRu = (code, text) => code === 'ru' ? `<button class="say" data-say="${esc(text)}">🔊</button>` : '';
   // Seite „Russisch“: Verbblock bzw. das russische Wort
   const ruSide = () => `<div class="lang-tag">${esc(langName(RU))}</div>` + (isVp
     ? verbPairHtml(card)
+    : card.type === 'adjfull' ? adjHtml(card)
     : isNoun ? nounHtml(card)
     : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(RU, card.f[RU])}`);
   // Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
@@ -1721,7 +1835,7 @@ async function autoUpdateLibrary() {
     // Deshalb eine Familie immer komplett aktualisieren (auch neu hinzugekommene Decks laden)
     // und alte Decks ohne Gegenstück (z. B. das frühere Probedeck „verben-1“) auflösen.
     const prune = [];
-    for (const prefix of ['verben-', 'nomen-']) {
+    for (const prefix of ['verben-', 'nomen-', 'adjektive-']) {
       const inFamily = id => id.startsWith(prefix);
       const stale = Object.keys(db.decks).filter(id => inFamily(id) && !list.some(d => d.id === id));
       const missing = list.filter(d => inFamily(d.id) && !db.decks[d.id]);
