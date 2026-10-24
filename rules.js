@@ -3,7 +3,128 @@
    Grammatik-Regeln (Bereich „Regeln“ in der unteren Leiste)
    Jede Regel: id, Symbol, Titel, Kurzbeschreibung, HTML-Inhalt
    ============================================================ */
+// Russisches Wort mit Aussprache (füllt renderRule über ruPron) und 🔊
+const RW = w => `<span class="rw">${w}</span> <span class="pron" data-pr="${w}"></span> <button class="say" data-say="${w}">🔊</button>`;
+// Zeile der Alphabet-Tabelle: Buchstabe, Laut, Beispiel(e)
+const ABC = (big, small, sound, ...words) =>
+  `<tr><td class="abc"><b>${big} ${small}</b> <button class="say" data-say="${small}">🔊</button></td><td>${sound}</td><td>${words.map(RW).join('<br>')}</td></tr>`;
+
 const RULES = [
+  {
+    id: 'aussprache',
+    icon: '🗣️',
+    title: 'Aussprache und Alphabet',
+    teaser: 'Alle Buchstaben mit Audio, unbetontes о/е, harte und weiche Laute',
+    html: `
+<p>Die Aussprache in eckigen Klammern ist eine Lautschrift für Deutschsprachige. Der Akzent (á) zeigt die <b>betonte Silbe</b>. Tippe auf 🔊, um den Buchstaben oder das Wort zu hören.</p>
+<p class="tip"><b>So liest du die Lautschrift:</b> sh = stimmhaftes sch wie das g in „Garage“ · s = weiches s wie in „Sonne“ · ss = scharfes s wie in „Bus“ · ch = wie in „Bach“ · y = dumpfes i (ы) · ' = weicher Laut</p>
+
+<h3>Das Alphabet</h3>
+<table class="rtable abc-table">
+  <tr><th>Buchstabe</th><th>Laut</th><th>Beispiel</th></tr>
+  ${ABC('А', 'а', 'a wie in „Vater“', 'ма́ма')}
+  ${ABC('Б', 'б', 'b', 'брат')}
+  ${ABC('В', 'в', 'w wie in „Wasser“', 'вода́')}
+  ${ABC('Г', 'г', 'g wie in „gut“ (nie wie „ch“)', 'год')}
+  ${ABC('Д', 'д', 'd', 'дом')}
+  ${ABC('Е', 'е', 'je wie in „jemand“ · nach Konsonant: e, der Konsonant wird weich', 'е́сли', 'нет')}
+  ${ABC('Ё', 'ё', 'jo wie in „Joghurt“ · <b>immer betont</b> (oft ohne Punkte als е geschrieben)', 'ёлка', 'всё')}
+  ${ABC('Ж', 'ж', 'stimmhaftes sch wie das g in „Gara<b>g</b>e“ oder das J in „Journal“ · immer hart', 'жена́')}
+  ${ABC('З', 'з', 'weiches s wie in „Sonne“', 'зима́')}
+  ${ABC('И', 'и', 'i wie in „Igel“ · macht den Konsonanten davor weich', 'и́мя')}
+  ${ABC('Й', 'й', 'kurzes j wie in „ja“ (steht nach Vokalen)', 'мой')}
+  ${ABC('К', 'к', 'k (ohne Hauch)', 'кот')}
+  ${ABC('Л', 'л', 'l · hart: dunkles l wie englisch „ball“ · weich: wie deutsches l', 'ла́мпа', 'люблю́')}
+  ${ABC('М', 'м', 'm', 'мир')}
+  ${ABC('Н', 'н', 'n', 'нос')}
+  ${ABC('О', 'о', 'o wie in „Sonne“ · <b>nur wenn betont</b>, sonst wie a (siehe unten)', 'дом', 'окно́')}
+  ${ABC('П', 'п', 'p', 'па́па')}
+  ${ABC('Р', 'р', 'gerolltes Zungen-r', 'рука́')}
+  ${ABC('С', 'с', 'scharfes s wie in „Bus“ oder „ß“', 'сок')}
+  ${ABC('Т', 'т', 't', 'там')}
+  ${ABC('У', 'у', 'u wie in „Hut“', 'у́тро')}
+  ${ABC('Ф', 'ф', 'f', 'фо́то')}
+  ${ABC('Х', 'х', 'ch wie in „Ba<b>ch</b>“ (nie wie in „ich“)', 'хлеб')}
+  ${ABC('Ц', 'ц', 'z wie in „Zeit“ · immer hart', 'у́лица')}
+  ${ABC('Ч', 'ч', 'tsch wie in „Matsch“ · immer weich', 'чай')}
+  ${ABC('Ш', 'ш', 'sch wie in „Schule“ · immer hart', 'шко́ла')}
+  ${ABC('Щ', 'щ', 'langes, weiches sch (wie „sch-tsch“ ganz weich gesprochen) · immer weich', 'борщ', 'ещё')}
+  ${ABC('Ъ', 'ъ', 'Härtezeichen, stumm · trennt: der Vokal danach wird mit j gesprochen', 'подъе́зд')}
+  ${ABC('Ы', 'ы', 'dumpfes i: „i“ sagen und die Zunge nach hinten ziehen (kein deutscher Laut)', 'ты', 'сыр')}
+  ${ABC('Ь', 'ь', 'Weichheitszeichen, stumm · macht den Konsonanten davor weich', 'день', 'мать')}
+  ${ABC('Э', 'э', 'e wie in „Ende“ (ohne j)', 'э́то')}
+  ${ABC('Ю', 'ю', 'ju wie in „Jubel“ · nach Konsonant: u, der Konsonant wird weich', 'юг', 'люблю́')}
+  ${ABC('Я', 'я', 'ja wie in „ja“ · nach Konsonant: a, der Konsonant wird weich', 'я', 'мя́со')}
+</table>
+<p class="tip">Verwechslungsgefahr: <b>Ж ж</b> (mit Strich in der Mitte, wie ein Käfer) = stimmhaftes sch wie in „Garage“. <b>Х х</b> (wie unser x) = ch wie in „Bach“. Und <b>Р р</b> ist ein r, <b>Н н</b> ein n, <b>В в</b> ein w, <b>С с</b> ein s.</p>
+
+<h3>Betonung</h3>
+<ul>
+  <li>Jedes Wort hat <b>genau eine betonte Silbe</b>. Sie kann überall stehen und beim Deklinieren wandern: ${RW('рука́')} – ${RW('ру́ку')}.</li>
+  <li>In normalen Texten steht <b>kein Akzent</b>. Deshalb die Betonung immer mit dem Wort mitlernen.</li>
+  <li>Die Betonung entscheidet, wie die Vokale klingen (nächster Abschnitt).</li>
+</ul>
+
+<h3>Unbetontes о und а → klingt wie a</h3>
+<p>Nur ein <b>betontes о</b> klingt wie o. Ohne Betonung wird es zu einem <b>a</b> (weit weg von der Betonung oft noch kürzer, fast wie das e in „bitt<b>e</b>“).</p>
+<table class="rtable">
+  <tr><th>Wort</th><th>Was passiert</th></tr>
+  <tr><td>${RW('молоко́')}</td><td>nur das letzte о ist betont → ma-la-kó</td></tr>
+  <tr><td>${RW('хорошо́')}</td><td>cha-ra-schó</td></tr>
+  <tr><td>${RW('окно́')}</td><td>a-knó</td></tr>
+  <tr><td>${RW('Москва́')}</td><td>Mas-kwá</td></tr>
+  <tr><td>${RW('дом')} – ${RW('дома́')}</td><td>betont o, unbetont a</td></tr>
+</table>
+
+<h3>Unbetontes е und я → klingt wie i</h3>
+<p>Ein <b>betontes е</b> klingt wie (j)e, ein <b>betontes я</b> wie (j)a. Ohne Betonung werden beide zu einem kurzen <b>i</b> (am Wortanfang <b>ji</b>).</p>
+<table class="rtable">
+  <tr><th>Wort</th><th>Was passiert</th></tr>
+  <tr><td>${RW('сестра́')}</td><td>е unbetont → sis-trá</td></tr>
+  <tr><td>${RW('телефо́н')}</td><td>ti-li-fón</td></tr>
+  <tr><td>${RW('язы́к')}</td><td>я unbetont am Anfang → ji-sýk</td></tr>
+  <tr><td>${RW('часы́')}</td><td>я unbetont nach ч → tschi-sý</td></tr>
+  <tr><td>${RW('ле́то')} – ${RW('лета́ть')}</td><td>betont e, unbetont i</td></tr>
+</table>
+<p class="tip">Nach <b>ж, ш, ц</b> klingt unbetontes е und auch и wie ы: ${RW('жена́')}, ${RW('жить')}. Am Wortende bleibt unbetontes я ein kurzes a: ${RW('и́мя')}.</p>
+
+<h3>Harte und weiche Konsonanten</h3>
+<ul>
+  <li>Fast jeder Konsonant hat eine <b>harte</b> und eine <b>weiche</b> Form. Weich heißt: Die Zunge drückt dabei an den Gaumen, als würde ein leichtes j mitklingen.</li>
+  <li>Weich wird ein Konsonant vor <b>е, ё, и, ю, я</b> und vor <b>ь</b>. Hart bleibt er vor <b>а, о, у, ы, э</b>.</li>
+  <li>Der Unterschied kann die Bedeutung ändern: ${RW('брат')} (Bruder) – ${RW('брать')} (nehmen), ${RW('лук')} (Zwiebel) – ${RW('люк')} (Luke).</li>
+  <li><b>Immer hart:</b> ж, ш, ц · <b>immer weich:</b> ч, щ, й</li>
+</ul>
+
+<h3>Am Wortende: stimmhaft wird stimmlos</h3>
+<p>Wie im Deutschen („Hund“ spricht man mit t): б→p, в→f, г→k, д→t, ж→sch, з→s.</p>
+<table class="rtable">
+  <tr><td>${RW('хлеб')}</td><td>${RW('год')}</td></tr>
+  <tr><td>${RW('гара́ж')}</td><td>${RW('раз')}</td></tr>
+</table>
+
+<h3>Zwei Konsonanten nebeneinander</h3>
+<p>Der erste passt sich dem zweiten an: vor einem stimmlosen Laut wird er stimmlos, vor einem stimmhaften stimmhaft.</p>
+<table class="rtable">
+  <tr><td>${RW('за́втра')}</td><td>в vor т → f</td></tr>
+  <tr><td>${RW('всё')}</td><td>в vor с → f</td></tr>
+  <tr><td>${RW('ло́жка')}</td><td>ж vor к → sch</td></tr>
+  <tr><td>${RW('вокза́л')}</td><td>к vor з → g</td></tr>
+  <tr><td>${RW('сде́лать')}</td><td>с vor д → s (weich)</td></tr>
+</table>
+<p class="tip">Vor <b>в</b> passiert das nicht: ${RW('свет')} bleibt mit scharfem s.</p>
+
+<h3>Besondere Buchstabengruppen</h3>
+<table class="rtable">
+  <tr><th>Geschrieben</th><th>Gesprochen</th><th>Beispiel</th></tr>
+  <tr><td>-ого / -его</td><td>г wie w</td><td>${RW('его́')}<br>${RW('сего́дня')}<br>${RW('хоро́шего')}</td></tr>
+  <tr><td>что, коне́чно</td><td>ч wie sch</td><td>${RW('что')}<br>${RW('коне́чно')}</td></tr>
+  <tr><td>-тся / -ться</td><td>wie „za“</td><td>${RW('учи́ться')}<br>${RW('нра́вится')}</td></tr>
+  <tr><td>сч, зч</td><td>wie щ</td><td>${RW('сча́стье')}<br>${RW('мужчи́на')}</td></tr>
+  <tr><td>вств, лнц, здн, стн, рдц</td><td>ein Buchstabe bleibt stumm</td><td>${RW('здра́вствуйте')}<br>${RW('со́лнце')}<br>${RW('пра́здник')}<br>${RW('изве́стный')}<br>${RW('се́рдце')}</td></tr>
+</table>
+`,
+  },
   {
     id: 'aspekt',
     icon: '⏳',

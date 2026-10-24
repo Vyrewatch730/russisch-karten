@@ -274,7 +274,7 @@ function ruWordPron(word) {
         case 'ы': v = 'y'; break;
         case 'э': v = 'e'; break;
         case 'и': v = hard ? 'y' : 'i'; break;
-        case 'е': v = afterCons ? (full ? 'e' : hard ? 'y' : 'i') : (full ? 'je' : 'ji'); break;
+        case 'е': v = afterCons ? (full || (hard && last) ? 'e' : hard ? 'y' : 'i') : (full ? 'je' : 'ji'); break;
         case 'ё': v = hard || chsch ? 'o' : 'jo'; break;
         case 'ю': v = chsch ? 'u' : 'ju'; break;
         case 'я': v = full || last ? 'ja' : afterCons ? 'i' : 'ji'; break;
@@ -646,6 +646,9 @@ function renderRule(id) {
   if (!rule) return renderRules();
   setHeader(rule.title, () => go('rules'));
   $('#view').innerHTML = `<article class="rule">${rule.html}</article>`;
+  // Aussprache der Beispielwörter berechnen und 🔊 aktivieren
+  $$('[data-pr]', $('#view')).forEach(el => { const p = ruPron(el.dataset.pr); el.textContent = p ? `[${p}]` : ''; });
+  $$('.say', $('#view')).forEach(b => b.onclick = () => speak(b.dataset.say));
   $('#view').scrollTop = 0;
 }
 
