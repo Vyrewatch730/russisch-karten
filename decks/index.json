@@ -8,6 +8,14 @@
         "version":  1
     },
     {
+        "id":  "nomen-01",
+        "name":  "Nomen 01",
+        "description":  "Probedeck · 12 Nomen mit Geschlecht, Deklination und Beispiel",
+        "file":  "nomen-01.json",
+        "count":  12,
+        "version":  1
+    },
+    {
         "id":  "verben-01",
         "name":  "Verben 01",
         "description":  "Nr. 1–50 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",

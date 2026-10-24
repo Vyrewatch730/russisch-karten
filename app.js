@@ -76,6 +76,23 @@ const CARD_TYPES = {
       { key: 'es2_past', label: 'Spanisch – 2. Verb Pasado' },
     ],
   },
+  // Nomen mit Geschlecht, Grundformen und vollständiger Deklination (nounHtml / declensionHtml)
+  nounfull: {
+    name: 'Nomen',
+    ownLayout: true,
+    extras: [
+      { key: 'gender', label: 'Geschlecht (m, f, n oder pl = nur Plural)' },
+      { key: 'anim', label: 'Belebt (1 = Mensch/Tier)' },
+      { key: 'indecl', label: 'Unveränderlich (1 = ja)' },
+      { key: 'sg', label: 'Singular: Nom|Gen|Dat|Akk|Ins|Präp' },
+      { key: 'pl', label: 'Plural: Nom|Gen|Dat|Akk|Ins|Präp' },
+      { key: 'hint', label: 'Hinweis (Geschlechtsfalle, Besonderheit)' },
+      { key: 'example_cases', label: 'Beispielsatz – Fälle' },
+      { key: 'example_de', label: 'Beispielsatz – Deutsch' },
+      { key: 'example_en', label: 'Beispielsatz – Englisch' },
+      { key: 'example_es', label: 'Beispielsatz – Spanisch' },
+    ],
+  },
 };
 // Spanisch wie in der Dominikanischen Republik: ustedes statt vosotros, Futur mit "ir a + Infinitiv"
 const ES_PERSONS = ['yo', 'tú', 'él/ella/ud.', 'nosotros', 'ellos/uds.'];
@@ -815,6 +832,77 @@ function conjugationHtml(card) {
   </div>`;
 }
 
+/* ============================================================
+   Nomen: Geschlecht (Farbe), Grundformen, Beispielsatz und Deklinationstabelle.
+   Die Formen stehen in x.sg / x.pl als „Nom|Gen|Dat|Akk|Ins|Präp“.
+   ============================================================ */
+const NOUN_GENDER = {
+  m: { label: '♂ männlich', cls: 'm' },
+  f: { label: '♀ weiblich', cls: 'f' },
+  n: { label: '⚲ sächlich', cls: 'n' },
+  pl: { label: 'nur Plural', cls: 'pl' },
+};
+const NOUN_CASES = [
+  ['Nom.', 'wer? was?'], ['Gen.', 'wessen? von wem?'], ['Dat.', 'wem?'],
+  ['Akk.', 'wen? was?'], ['Ins.', 'mit wem? womit?'], ['Präp.', 'über wen? wo?'],
+];
+const ANIM_INFO = 'Belebt = Menschen und Tiere. Dann sieht der Akkusativ aus wie der Genitiv – bei männlichen Wörtern im Singular und bei allen Wörtern im Plural: Я ви́жу бра́та. Я ви́жу друзе́й. (Aber unbelebt: Я ви́жу стол.)';
+const nounForms = s => (s || '').split('|').map(f => f.trim());
+
+// Deklinationsmuster aus Geschlecht und Endung
+function nounPattern(x, word) {
+  const w = (word || '').replace(STRESS, '');
+  if (x.indecl) return 'unveränderlich – alle Fälle gleich';
+  if (x.gender === 'pl') return 'nur Plural';
+  if (/мя$/.test(w)) return 'sächlich auf -мя (Sonderform wie и́мя)';
+  if (/[ая]$/.test(w)) return x.gender === 'm' ? 'auf -а/-я, aber männlich (Endungen wie кни́га)' : 'weiblich auf -а/-я (wie кни́га)';
+  if (x.gender === 'f') return 'weiblich auf -ь (wie ночь)';
+  if (x.gender === 'n') return 'sächlich auf -о/-е (wie сло́во)';
+  return 'männlich auf Konsonant/-й/-ь (wie стол)';
+}
+
+function nounHtml(card) {
+  const x = card.x, word = card.f.ru || '';
+  const g = NOUN_GENDER[x.gender] || NOUN_GENDER.m;
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const say = t => t ? `<button class="say" data-say="${esc(t)}">🔊</button>` : '';
+  const pron = t => { const p = ruPron(t); return p ? ` <span class="pron">[${esc(p)}]</span>` : ''; };
+  const sg = nounForms(x.sg), pl = nounForms(x.pl);
+  const key = [];
+  if (x.indecl) key.push('<span>unveränderlich</span>');
+  else {
+    if (x.gender !== 'pl' && sg[1]) key.push(`<span><i>Gen. Sg.</i> ${esc(sg[1])}</span>`);
+    if (x.gender !== 'pl' && pl[0]) key.push(`<span><i>Pl.</i> ${esc(pl[0])}</span>`);
+    if (x.gender === 'pl' && pl[1]) key.push(`<span><i>Gen.</i> ${esc(pl[1])}</span>`);
+  }
+  const exPron = x.example_pron || ruPron(x.example);
+  return `<div class="nn nn-${g.cls}">
+    <div class="nn-tags"><span class="nn-g">${g.label}</span>${x.anim ? `<span class="nn-anim">👤 belebt${info}</span><div class="vp-rule">${ANIM_INFO}</div>` : ''}</div>
+    <div class="nn-word">${esc(word)}${pron(word)} ${say(word)}</div>
+    ${key.length ? `<div class="nn-key">${key.join('')}</div>` : ''}
+    ${x.hint ? `<div class="nn-hint">⚠️ Achtung${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
+    ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
+  </div>`;
+}
+
+// Rückseite: alle 12 Formen, hinter ⓘ eingeklappt
+function declensionHtml(card) {
+  if (card.type !== 'nounfull') return '';
+  if (card.x.indecl) return `<div class="conj-ru nn-decl"><div class="conj-ru-head">Deklination <small>unveränderlich – in allen Fällen ${esc(card.f.ru)}</small></div></div>`;
+  const x = card.x;
+  const sg = x.gender === 'pl' ? [] : nounForms(x.indecl ? Array(6).fill(card.f.ru).join('|') : x.sg);
+  const pl = x.indecl ? [] : nounForms(x.pl);
+  const say = forms => forms.filter(Boolean).length ? `<button class="say" data-say="${esc(forms.filter(Boolean).join(', '))}">🔊</button>` : '';
+  const cols = [sg.filter(Boolean).length && 'Singular', pl.filter(Boolean).length && 'Plural'].filter(Boolean);
+  const rows = NOUN_CASES.map(([c, q], i) => `<tr><th>${c}<small>${q}</small></th>${cols.includes('Singular') ? `<td>${esc(sg[i] || '')}</td>` : ''}${cols.includes('Plural') ? `<td>${esc(pl[i] || '')}</td>` : ''}</tr>`).join('');
+  return `<div class="conj-ru nn-decl">
+    <div class="conj-ru-head">Deklination <small>${esc(nounPattern(x, card.f.ru))}</small> <button class="info" aria-label="Tabelle anzeigen">ⓘ</button></div>
+    <div class="vp-rule">
+      <table class="nn-table"><thead><tr><th></th>${cols.includes('Singular') ? `<th>Singular ${say(sg)}</th>` : ''}${cols.includes('Plural') ? `<th>Plural ${say(pl)}</th>` : ''}</tr></thead><tbody>${rows}</tbody></table>
+    </div>
+  </div>`;
+}
+
 // Russische Seite eines Verbpaars: beide Aspekte mit я/ты-Formen, Aussprache und Beispielsatz
 function verbPairHtml(card) {
   const x = card.x;
@@ -957,10 +1045,12 @@ function renderStudy() {
   const remaining = study.queue.length + 1;
   const prev = g => fmtInterval(schedule(p, g).due - Date.now());
   const isVp = card.type === 'verbpair';
+  const isNoun = card.type === 'nounfull';
   const sayRu = (code, text) => code === 'ru' ? `<button class="say" data-say="${esc(text)}">🔊</button>` : '';
   // Seite „Russisch“: Verbblock bzw. das russische Wort
   const ruSide = () => `<div class="lang-tag">${esc(langName(RU))}</div>` + (isVp
     ? verbPairHtml(card)
+    : isNoun ? nounHtml(card)
     : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(RU, card.f[RU])}`);
   // Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
   const trSide = () => trLangs().filter(l => card.f[l.code]).map(l => `
@@ -974,7 +1064,7 @@ function renderStudy() {
 
   view.innerHTML = `
     <div class="study">
-      <div class="card3d ${study.flipped ? 'flipped' : ''} ${isVp ? 'tall' : ''}" id="card">
+      <div class="card3d ${study.flipped ? 'flipped' : ''} ${isVp || isNoun ? 'tall' : ''}" id="card">
         <div class="card-inner">
           <div class="face front">
             <span class="badge type">${esc(typeName)}${cur.isNew ? ' · neu' : ''}</span>
@@ -985,6 +1075,7 @@ function renderStudy() {
             <span class="badge type">${esc(typeName)}</span>
             ${ruFirst ? trSide() : ruSide()}
             ${conjugationHtml(card)}
+            ${declensionHtml(card)}
             ${extrasHtml(card)}
           </div>
         </div>
