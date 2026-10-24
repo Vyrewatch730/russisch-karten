@@ -126,6 +126,127 @@ const RULES = [
 `,
   },
   {
+    id: 'zahlen',
+    icon: '🔢',
+    title: 'Zahlen',
+    teaser: 'Zahlen von 0 bis 1 000 000, Aufbau, Fall des Nomens danach, Alter, Uhrzeit, Preise',
+    html: `
+<h3>0 bis 10 – die Bausteine</h3>
+<table class="rtable">
+  <tr><td>0</td><td>${RW('ноль')}</td></tr>
+  <tr><td>1</td><td>${RW('оди́н')}<br><small>weiblich ${RW('одна́')}, sächlich ${RW('одно́')}</small></td></tr>
+  <tr><td>2</td><td>${RW('два')}<br><small>weiblich ${RW('две')}</small></td></tr>
+  <tr><td>3</td><td>${RW('три')}</td></tr>
+  <tr><td>4</td><td>${RW('четы́ре')}</td></tr>
+  <tr><td>5</td><td>${RW('пять')}</td></tr>
+  <tr><td>6</td><td>${RW('шесть')}</td></tr>
+  <tr><td>7</td><td>${RW('семь')}</td></tr>
+  <tr><td>8</td><td>${RW('во́семь')}</td></tr>
+  <tr><td>9</td><td>${RW('де́вять')}</td></tr>
+  <tr><td>10</td><td>${RW('де́сять')}</td></tr>
+</table>
+<p class="tip"><b>1 und 2 richten sich nach dem Geschlecht:</b> оди́н брат, одна́ сестра́, одно́ окно́ · два бра́та, два окна́, aber <b>две</b> сестры́.</p>
+
+<h3>11 bis 19: Zahl + на + дцать</h3>
+<p><b>-надцать</b> kommt von „на де́сять“ = „auf zehn“. 13 heißt also wörtlich „drei auf zehn“. Die Betonung liegt immer auf <b>-на́-</b> (außer bei 11 und 14).</p>
+<table class="rtable">
+  <tr><td>11</td><td>${RW('оди́ннадцать')}</td></tr>
+  <tr><td>12</td><td>${RW('двена́дцать')}</td></tr>
+  <tr><td>13</td><td>${RW('трина́дцать')}</td></tr>
+  <tr><td>14</td><td>${RW('четы́рнадцать')}</td></tr>
+  <tr><td>15</td><td>${RW('пятна́дцать')}</td></tr>
+  <tr><td>16</td><td>${RW('шестна́дцать')}</td></tr>
+  <tr><td>17</td><td>${RW('семна́дцать')}</td></tr>
+  <tr><td>18</td><td>${RW('восемна́дцать')}</td></tr>
+  <tr><td>19</td><td>${RW('девятна́дцать')}</td></tr>
+</table>
+<p class="tip">Bei 5–9 fällt das ь weg: пять → пя<b>т</b>на́дцать. Bei 12 heißt es две- (nicht два-).</p>
+
+<h3>Zehner: 20 bis 90</h3>
+<table class="rtable">
+  <tr><td>20</td><td>${RW('два́дцать')}</td><td rowspan="2">2/3 + дцать („zwei zehn“)</td></tr>
+  <tr><td>30</td><td>${RW('три́дцать')}</td></tr>
+  <tr><td>40</td><td>${RW('со́рок')}</td><td><b>Ausnahme</b></td></tr>
+  <tr><td>50</td><td>${RW('пятьдеся́т')}</td><td rowspan="4">5–8 + десят<br>(50, 60: betont hinten · 70, 80: betont vorne)</td></tr>
+  <tr><td>60</td><td>${RW('шестьдеся́т')}</td></tr>
+  <tr><td>70</td><td>${RW('се́мьдесят')}</td></tr>
+  <tr><td>80</td><td>${RW('во́семьдесят')}</td></tr>
+  <tr><td>90</td><td>${RW('девяно́сто')}</td><td><b>Ausnahme</b></td></tr>
+</table>
+
+<h3>Hunderter und größere Zahlen</h3>
+<table class="rtable">
+  <tr><td>100</td><td>${RW('сто')}</td><td><b>Ausnahme</b></td></tr>
+  <tr><td>200</td><td>${RW('две́сти')}</td><td rowspan="3">2–4 + сти / ста</td></tr>
+  <tr><td>300</td><td>${RW('три́ста')}</td></tr>
+  <tr><td>400</td><td>${RW('четы́реста')}</td></tr>
+  <tr><td>500</td><td>${RW('пятьсо́т')}</td><td rowspan="5">5–9 + сот, betont hinten</td></tr>
+  <tr><td>600</td><td>${RW('шестьсо́т')}</td></tr>
+  <tr><td>700</td><td>${RW('семьсо́т')}</td></tr>
+  <tr><td>800</td><td>${RW('восемьсо́т')}</td></tr>
+  <tr><td>900</td><td>${RW('девятьсо́т')}</td></tr>
+  <tr><td>1000</td><td>${RW('ты́сяча')}</td><td>2000 = ${RW('две ты́сячи')}<br>5000 = ${RW('пять ты́сяч')}</td></tr>
+  <tr><td>1 000 000</td><td>${RW('миллио́н')}</td><td></td></tr>
+</table>
+<p class="tip">ты́сяча ist ein weibliches Nomen, deshalb <b>две</b> ты́сячи. Danach gilt dieselbe Regel wie unten (1 / 2–4 / 5+).</p>
+
+<h3>Zusammengesetzte Zahlen</h3>
+<p>Einfach von groß nach klein hintereinander – <b>nicht</b> umgedreht wie im Deutschen („einundzwanzig“):</p>
+<ul>
+  <li>21 = ${RW('два́дцать оди́н')} (wörtlich „zwanzig eins“)</li>
+  <li>45 = ${RW('со́рок пять')}</li>
+  <li>99 = ${RW('девяно́сто де́вять')}</li>
+  <li>365 = ${RW('три́ста шестьдеся́т пять')}</li>
+  <li>2026 = ${RW('две ты́сячи два́дцать шесть')}</li>
+</ul>
+
+<h3>Das Wichtigste: Welche Form hat das Nomen nach der Zahl?</h3>
+<p>Entscheidend ist die <b>letzte Ziffer</b> (beziehungsweise die letzte Zahl, die man spricht):</p>
+<table class="rtable">
+  <tr><th>Zahl endet auf</th><th>Nomen steht im</th><th>Beispiel</th></tr>
+  <tr><td><b>1</b><br><small>1, 21, 31, 101 …</small></td><td>Nominativ Singular</td><td>${RW('оди́н брат')}<br>${RW('два́дцать одна́ кни́га')}</td></tr>
+  <tr><td><b>2, 3, 4</b><br><small>2, 23, 104 …</small></td><td>Genitiv Singular</td><td>${RW('два бра́та')}<br>${RW('три кни́ги')}</td></tr>
+  <tr><td><b>5–9, 0</b><br><small>und 11–14!</small></td><td>Genitiv Plural</td><td>${RW('пять бра́тьев')}<br>${RW('двена́дцать книг')}</td></tr>
+</table>
+<p class="tip"><b>Achtung 11–14:</b> Das sind eigene Wörter (оди́ннадцать …), sie enden nicht auf „1“ oder „2“. Deshalb immer Genitiv Plural: оди́ннадцать <b>книг</b>, aber два́дцать одна́ <b>кни́га</b>.</p>
+
+<h3>Die drei häufigsten Wörter nach Zahlen</h3>
+<table class="rtable">
+  <tr><th></th><th>1 (21 …)</th><th>2–4</th><th>5+ und 11–14</th></tr>
+  <tr><td>Jahr</td><td>год</td><td>го́да</td><td><b>лет</b></td></tr>
+  <tr><td>Stunde</td><td>час</td><td>часа́</td><td>часо́в</td></tr>
+  <tr><td>Rubel</td><td>рубль</td><td>рубля́</td><td>рубле́й</td></tr>
+  <tr><td>Mensch</td><td>челове́к</td><td>челове́ка</td><td>челове́к</td></tr>
+</table>
+<p class="tip">год → <b>лет</b> ist ein ganz anderes Wort (von ле́то = Sommer). челове́к bleibt nach 5+ unverändert.</p>
+
+<h3>Im Alltag</h3>
+<table class="rtable">
+  <tr><th>Thema</th><th>Beispiel</th></tr>
+  <tr><td>Alter<br><small>wer im Dativ + Zahl + год/го́да/лет</small></td><td>${RW('Ско́лько тебе́ лет?')}<br>${RW('Мне два́дцать оди́н год.')}<br>${RW('Ему́ три́дцать три го́да.')}<br>${RW('Ей пятьдеся́т лет.')}</td></tr>
+  <tr><td>Uhrzeit</td><td>${RW('Кото́рый час?')}<br>${RW('Сейча́с час.')} (1 Uhr – ohne оди́н)<br>${RW('Сейча́с два часа́.')}<br>${RW('Сейча́с пять часо́в.')}</td></tr>
+  <tr><td>Preis</td><td>${RW('Ско́лько сто́ит?')}<br>${RW('Сто рубле́й.')}<br>${RW('Три рубля́.')}</td></tr>
+  <tr><td>Telefonnummer<br><small>in Gruppen gesprochen</small></td><td>123-45-67 =<br>${RW('сто два́дцать три, со́рок пять, шестьдеся́т семь')}</td></tr>
+</table>
+
+<h3>Ordnungszahlen (der erste, der zweite …)</h3>
+<p>Sie verhalten sich wie <b>Adjektive</b> und passen sich an: пе́рвый день, пе́рвая неде́ля, пе́рвое ме́сто.</p>
+<table class="rtable">
+  <tr><td>1.</td><td>${RW('пе́рвый')}</td><td>6.</td><td>${RW('шесто́й')}</td></tr>
+  <tr><td>2.</td><td>${RW('второ́й')}</td><td>7.</td><td>${RW('седьмо́й')}</td></tr>
+  <tr><td>3.</td><td>${RW('тре́тий')}</td><td>8.</td><td>${RW('восьмо́й')}</td></tr>
+  <tr><td>4.</td><td>${RW('четвёртый')}</td><td>9.</td><td>${RW('девя́тый')}</td></tr>
+  <tr><td>5.</td><td>${RW('пя́тый')}</td><td>10.</td><td>${RW('деся́тый')}</td></tr>
+</table>
+<ul>
+  <li>Datum (sächlich, Monat im Genitiv): ${RW('пе́рвое ма́я')} = der 1. Mai</li>
+  <li>Stockwerk: ${RW('Я живу́ на второ́м этаже́.')} = Ich wohne im 2. Stock.</li>
+  <li>Bei großen Zahlen wird nur die <b>letzte</b> zur Ordnungszahl: 2026 год = ${RW('две ты́сячи два́дцать шесто́й год')}</li>
+</ul>
+<p class="tip">Für Fortgeschrittene: Auch die Zahlen selbst werden dekliniert (с двумя́ друзья́ми = mit zwei Freunden). Für den Anfang reicht die Grundform.</p>
+`,
+  },
+  {
     id: 'aspekt',
     icon: '⏳',
     title: 'Vollendet und unvollendet',
