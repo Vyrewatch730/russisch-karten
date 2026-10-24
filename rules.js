@@ -563,8 +563,12 @@ Die Endung <b>-ого / -его</b> spricht man mit <b>w</b>: но́вого [n�
   <tr><th></th><th>männlich</th><th>sächlich</th><th>weiblich</th><th>Plural</th></tr>
   <tr><td>Nom.</td><td>большо́й</td><td>большо́е</td><td>больша́я</td><td>больши́е</td></tr>
   <tr><td>Gen.</td><td>большо́го</td><td>большо́го</td><td>большо́й</td><td>больши́х</td></tr>
+  <tr><td>Dat.</td><td>большо́му</td><td>большо́му</td><td>большо́й</td><td>больши́м</td></tr>
+  <tr><td>Akk.</td><td>большо́й / большо́го*</td><td>большо́е</td><td>большу́ю</td><td>больши́е / больши́х*</td></tr>
   <tr><td>Ins.</td><td>больши́м</td><td>больши́м</td><td>большо́й</td><td>больши́ми</td></tr>
+  <tr><td>Präp.</td><td>большо́м</td><td>большо́м</td><td>большо́й</td><td>больши́х</td></tr>
 </table>
+<p class="tip">Nach ш steht и statt ы: больши́е, больши́м. Weil die Endung betont ist, bleibt das о (большо́го, nicht „большего“). * belebt wie Genitiv.</p>
 <p>Weitere: ${RW('молодо́й')} (jung), ${RW('плохо́й')} (schlecht), ${RW('дорого́й')} (teuer, lieb), ${RW('друго́й')} (anderer), ${RW('родно́й')} (heimatlich)</p>
 
 <h3>Weiche Adjektive: си́ний (dunkelblau)</h3>
@@ -573,8 +577,12 @@ Die Endung <b>-ого / -его</b> spricht man mit <b>w</b>: но́вого [n�
   <tr><th></th><th>männlich</th><th>sächlich</th><th>weiblich</th><th>Plural</th></tr>
   <tr><td>Nom.</td><td>си́ний</td><td>си́нее</td><td>си́няя</td><td>си́ние</td></tr>
   <tr><td>Gen.</td><td>си́него</td><td>си́него</td><td>си́ней</td><td>си́них</td></tr>
-  <tr><td>Akk. f</td><td colspan="4">си́нюю</td></tr>
+  <tr><td>Dat.</td><td>си́нему</td><td>си́нему</td><td>си́ней</td><td>си́ним</td></tr>
+  <tr><td>Akk.</td><td>си́ний / си́него*</td><td>си́нее</td><td>си́нюю</td><td>си́ние / си́них*</td></tr>
+  <tr><td>Ins.</td><td>си́ним</td><td>си́ним</td><td>си́ней</td><td>си́ними</td></tr>
+  <tr><td>Präp.</td><td>си́нем</td><td>си́нем</td><td>си́ней</td><td>си́них</td></tr>
 </table>
+<p class="tip">* belebt wie Genitiv.</p>
 <p>Weitere: ${RW('после́дний')} (letzter), ${RW('ле́тний')} (Sommer-), ${RW('зи́мний')} (Winter-), ${RW('у́тренний')} (Morgen-), ${RW('сего́дняшний')} (heutig)</p>
 
 <h3>Rechtschreibregeln (erklären „komische“ Endungen)</h3>
@@ -586,7 +594,10 @@ Die Endung <b>-ого / -его</b> spricht man mit <b>w</b>: но́вого [n�
   <tr><th></th><th>männlich</th><th>sächlich</th><th>weiblich</th><th>Plural</th></tr>
   <tr><td>Nom.</td><td>хоро́ший</td><td>хоро́шее</td><td>хоро́шая</td><td>хоро́шие</td></tr>
   <tr><td>Gen.</td><td>хоро́шего</td><td>хоро́шего</td><td>хоро́шей</td><td>хоро́ших</td></tr>
+  <tr><td>Dat.</td><td>хоро́шему</td><td>хоро́шему</td><td>хоро́шей</td><td>хоро́шим</td></tr>
+  <tr><td>Akk.</td><td>хоро́ший / хоро́шего*</td><td>хоро́шее</td><td>хоро́шую</td><td>хоро́шие / хоро́ших*</td></tr>
   <tr><td>Ins.</td><td>хоро́шим</td><td>хоро́шим</td><td>хоро́шей</td><td>хоро́шими</td></tr>
+  <tr><td>Präp.</td><td>хоро́шем</td><td>хоро́шем</td><td>хоро́шей</td><td>хоро́ших</td></tr>
 </table>
 
 <h3>Kurzformen (nach dem Nomen, als Aussage)</h3>
