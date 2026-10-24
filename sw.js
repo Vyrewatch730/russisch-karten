@@ -1,6 +1,6 @@
 // Service Worker: macht die App offline nutzbar.
 // Strategie: zuerst Netzwerk ohne HTTP-Cache (damit Updates sofort ankommen), bei Offline aus dem Cache.
-const CACHE = 'rk-v36';
+const CACHE = 'rk-v37';
 const SHELL = [
   './',
   'index.html',

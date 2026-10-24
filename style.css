@@ -352,3 +352,8 @@ tr.vp-rule.open { display: table-row; }
 .aj-table td { font-size: 14px; }
 .aj-table th:first-child { width: 28%; }
 .aj-anim { font-size: 10px; color: var(--muted); font-weight: 400; }
+.aj-table .aj-top td { border-bottom: 0; padding-bottom: 0; }
+.aj-table .aj-bottom td { padding-top: 2px; }
+.aj-table th[rowspan] { vertical-align: middle; }
+.aj-g { display: block; font-size: 9px; color: var(--muted); font-weight: 400; line-height: 1.1; }
+.aj-legend { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: 13px; font-weight: 600; margin-bottom: 6px; }

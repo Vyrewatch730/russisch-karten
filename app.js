@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 36;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 37;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1112,15 +1112,18 @@ function adjDeclHtml(card) {
     const [inanim, anim] = d[g][i].split(' / ');
     return anim ? `${esc(inanim)} <small class="aj-anim">unbelebt</small><br>${esc(anim)} <small class="aj-anim">belebt</small>` : esc(inanim);
   };
-  const table = cols => {
-    const rows = ADJ_ROWS.map(([c, q], i) => `<tr><th>${c}<small>${q}</small></th>${cols.map(([g]) => `<td class="aj-${g}">${cell(g, i)}</td>`).join('')}</tr>`).join('');
-    return `<table class="nn-table aj-table"><thead><tr><th></th>${cols.map(([g, t]) => `<th class="aj-${g}">${t} <button class="say" data-say="${esc(d[g].map(f => f.split(' / ')[0]).join(', '))}">🔊</button></th>`).join('')}</tr></thead><tbody>${rows}</tbody></table>`;
-  };
+  // Je Fall zwei Zeilen: männlich | weiblich, darunter Plural | sächlich
+  const LABEL = { m: 'männl.', f: 'weibl.', pl: 'Plural', n: 'sächl.' };
+  const td = (g, i) => `<td class="aj-${g}"><small class="aj-g">${LABEL[g]}</small>${cell(g, i)}</td>`;
+  const rows = ADJ_ROWS.map(([c, q], i) => `
+    <tr class="aj-top"><th rowspan="2">${c}<small>${q}</small></th>${td('m', i)}${td('f', i)}</tr>
+    <tr class="aj-bottom">${td('pl', i)}${td('n', i)}</tr>`).join('');
+  const sayAll = g => `<button class="say" data-say="${esc(d[g].map(f => f.split(' / ')[0]).join(', '))}">🔊</button>`;
   return `<div class="conj-ru nn-decl">
     <div class="conj-ru-head">Deklination <small>${esc(adjPattern(card.f.ru))}</small> <button class="info" aria-label="Tabelle anzeigen">ⓘ</button></div>
     <div class="vp-rule">
-      ${table([['m', 'männlich'], ['n', 'sächlich']])}
-      ${table([['f', 'weiblich'], ['pl', 'Plural']])}
+      <div class="aj-legend"><span class="aj-m">männlich ${sayAll('m')}</span><span class="aj-f">weiblich ${sayAll('f')}</span><span class="aj-pl">Plural ${sayAll('pl')}</span><span class="aj-n">sächlich ${sayAll('n')}</span></div>
+      <table class="nn-table aj-table"><tbody>${rows}</tbody></table>
       <p class="aj-note">Akkusativ männlich und Plural: unbelebt (Dinge) wie Nominativ – я ви́жу но́вый дом; belebt (Menschen, Tiere) wie Genitiv – я ви́жу но́вого дру́га.</p>
     </div>
   </div>`;
