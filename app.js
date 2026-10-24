@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 37;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 38;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1118,11 +1118,9 @@ function adjDeclHtml(card) {
   const rows = ADJ_ROWS.map(([c, q], i) => `
     <tr class="aj-top"><th rowspan="2">${c}<small>${q}</small></th>${td('m', i)}${td('f', i)}</tr>
     <tr class="aj-bottom">${td('pl', i)}${td('n', i)}</tr>`).join('');
-  const sayAll = g => `<button class="say" data-say="${esc(d[g].map(f => f.split(' / ')[0]).join(', '))}">🔊</button>`;
   return `<div class="conj-ru nn-decl">
     <div class="conj-ru-head">Deklination <small>${esc(adjPattern(card.f.ru))}</small> <button class="info" aria-label="Tabelle anzeigen">ⓘ</button></div>
     <div class="vp-rule">
-      <div class="aj-legend"><span class="aj-m">männlich ${sayAll('m')}</span><span class="aj-f">weiblich ${sayAll('f')}</span><span class="aj-pl">Plural ${sayAll('pl')}</span><span class="aj-n">sächlich ${sayAll('n')}</span></div>
       <table class="nn-table aj-table"><tbody>${rows}</tbody></table>
       <p class="aj-note">Akkusativ männlich und Plural: unbelebt (Dinge) wie Nominativ – я ви́жу но́вый дом; belebt (Menschen, Tiere) wie Genitiv – я ви́жу но́вого дру́га.</p>
     </div>

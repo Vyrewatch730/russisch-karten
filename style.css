@@ -356,4 +356,3 @@ tr.vp-rule.open { display: table-row; }
 .aj-table .aj-bottom td { padding-top: 2px; }
 .aj-table th[rowspan] { vertical-align: middle; }
 .aj-g { display: block; font-size: 9px; color: var(--muted); font-weight: 400; line-height: 1.1; }
-.aj-legend { display: flex; flex-wrap: wrap; gap: 2px 12px; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
