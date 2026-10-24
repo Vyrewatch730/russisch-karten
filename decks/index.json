@@ -13,7 +13,7 @@
         "description":  "Nr. 1–50 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-01.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-02",
@@ -21,7 +21,7 @@
         "description":  "Nr. 51–100 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-02.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-03",
@@ -29,7 +29,7 @@
         "description":  "Nr. 101–150 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-03.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-04",
@@ -37,7 +37,7 @@
         "description":  "Nr. 151–200 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-04.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-05",
@@ -45,7 +45,7 @@
         "description":  "Nr. 201–250 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-05.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-06",
@@ -53,7 +53,7 @@
         "description":  "Nr. 251–300 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-06.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-07",
@@ -61,7 +61,7 @@
         "description":  "Nr. 301–350 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-07.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-08",
@@ -69,7 +69,7 @@
         "description":  "Nr. 351–400 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-08.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-09",
@@ -77,7 +77,7 @@
         "description":  "Nr. 401–450 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-09.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-10",
@@ -85,7 +85,7 @@
         "description":  "Nr. 451–500 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-10.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-11",
@@ -93,7 +93,7 @@
         "description":  "Nr. 501–550 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-11.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-12",
@@ -101,7 +101,7 @@
         "description":  "Nr. 551–600 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-12.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-13",
@@ -109,7 +109,7 @@
         "description":  "Nr. 601–650 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-13.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-14",
@@ -117,7 +117,7 @@
         "description":  "Nr. 651–700 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-14.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-15",
@@ -125,7 +125,7 @@
         "description":  "Nr. 701–750 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-15.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-16",
@@ -133,15 +133,39 @@
         "description":  "Nr. 751–800 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-16.json",
         "count":  50,
-        "version":  202610240728
+        "version":  202610240732
     },
     {
         "id":  "adjektive-17",
         "name":  "Adjektive 17",
-        "description":  "Nr. 801–843 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "description":  "Nr. 801–850 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-17.json",
-        "count":  43,
-        "version":  202610240728
+        "count":  50,
+        "version":  202610240732
+    },
+    {
+        "id":  "adjektive-18",
+        "name":  "Adjektive 18",
+        "description":  "Nr. 851–900 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "file":  "adjektive-18.json",
+        "count":  50,
+        "version":  202610240732
+    },
+    {
+        "id":  "adjektive-19",
+        "name":  "Adjektive 19",
+        "description":  "Nr. 901–950 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "file":  "adjektive-19.json",
+        "count":  50,
+        "version":  202610240732
+    },
+    {
+        "id":  "adjektive-20",
+        "name":  "Adjektive 20",
+        "description":  "Nr. 951–1000 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "file":  "adjektive-20.json",
+        "count":  50,
+        "version":  202610240732
     },
     {
         "id":  "nomen-01",
