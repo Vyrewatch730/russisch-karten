@@ -1,6 +1,6 @@
 // Service Worker: macht die App offline nutzbar.
-// Strategie: zuerst Netzwerk (damit Updates sofort ankommen), bei Offline aus dem Cache.
-const CACHE = 'rk-v30';
+// Strategie: zuerst Netzwerk ohne HTTP-Cache (damit Updates sofort ankommen), bei Offline aus dem Cache.
+const CACHE = 'rk-v31';
 const SHELL = [
   './',
   'index.html',
@@ -29,7 +29,8 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
   e.respondWith(
-    fetch(req)
+    // no-cache: am Server nachfragen statt den 10-Minuten-HTTP-Cache von GitHub Pages zu nutzen
+    fetch(req.mode === 'navigate' ? req.url : req, { cache: 'no-cache' })
       .then(res => {
         if (res.ok) {
           const copy = res.clone();

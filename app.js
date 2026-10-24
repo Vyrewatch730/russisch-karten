@@ -3,6 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
+const APP_VERSION = 31;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1491,7 +1492,17 @@ function renderSettings() {
         </div>
       </div>
     </div>
+    <div class="section">
+      <h2>App</h2>
+      <div class="panel">
+        <div class="row">
+          <div class="grow">Version ${APP_VERSION}<div class="sub">Lädt die neueste Version. Karten und Lernfortschritt bleiben erhalten.</div></div>
+          <button class="btn small" id="app-update">App aktualisieren</button>
+        </div>
+      </div>
+    </div>
     <p style="color:var(--muted);font-size:12px;text-align:center">${Object.keys(db.cards).length} Karten gespeichert</p>`;
+  $('#app-update').onclick = forceUpdate;
   $('#voice-test').onclick = () => speak('Приве́т! Как дела́?');
 
   $$('[data-lang-toggle]', view).forEach(cb => cb.onchange = () => {
@@ -1607,6 +1618,17 @@ function pruneReplacedCards(deckIds, decks) {
   }
   for (const id of deckIds) if (!deckCards([id]).length) delete db.decks[id];
   save();
+}
+
+// „App aktualisieren“: Service Worker und Datei-Cache löschen, dann neu laden.
+// Die Karten liegen im localStorage und bleiben dabei erhalten.
+async function forceUpdate() {
+  toast('Aktualisiere …');
+  try {
+    if ('serviceWorker' in navigator) for (const r of await navigator.serviceWorker.getRegistrations()) await r.unregister();
+    if ('caches' in window) for (const k of await caches.keys()) await caches.delete(k);
+  } catch (err) { console.warn('Update:', err); }
+  location.replace(location.pathname + '?u=' + Date.now());
 }
 
 // Bereits geladene Bibliotheks-Decks automatisch aktualisieren, wenn es eine neuere Version gibt.
