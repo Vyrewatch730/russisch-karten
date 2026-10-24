@@ -10,10 +10,42 @@
     {
         "id":  "adjektive-01",
         "name":  "Adjektive 01",
-        "description":  "Probedeck · 12 Adjektive mit allen Formen, Kurzform, Komparativ und Gegenteil",
+        "description":  "Nr. 1–50 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
         "file":  "adjektive-01.json",
-        "count":  12,
-        "version":  1
+        "count":  50,
+        "version":  202610240710
+    },
+    {
+        "id":  "adjektive-02",
+        "name":  "Adjektive 02",
+        "description":  "Nr. 51–100 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "file":  "adjektive-02.json",
+        "count":  50,
+        "version":  202610240710
+    },
+    {
+        "id":  "adjektive-03",
+        "name":  "Adjektive 03",
+        "description":  "Nr. 101–150 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "file":  "adjektive-03.json",
+        "count":  50,
+        "version":  202610240710
+    },
+    {
+        "id":  "adjektive-04",
+        "name":  "Adjektive 04",
+        "description":  "Nr. 151–200 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "file":  "adjektive-04.json",
+        "count":  50,
+        "version":  202610240710
+    },
+    {
+        "id":  "adjektive-05",
+        "name":  "Adjektive 05",
+        "description":  "Nr. 201–250 nach Häufigkeit · alle Formen, Komparativ und Beispiel",
+        "file":  "adjektive-05.json",
+        "count":  50,
+        "version":  202610240710
     },
     {
         "id":  "nomen-01",

@@ -99,6 +99,26 @@ document.getElementById('app').onload = async e => {
       if (verbose) out.push(`   ${c.ru} (${c.gender}${c.anim ? ', belebt' : ''}): ${sg.join(' ')} | ${pl.join(' ')}`);
     }
   }
+  // Adjektive: Pflichtfelder, Betonung, Fälle im Satz, alle 24 berechneten Formen
+  const ADJ_REQUIRED = ['de', 'en', 'es', 'example', 'example_de', 'example_en', 'example_es', 'example_cases'];
+  for (const entry of index.filter(d => d.id.startsWith('adjektive-') && (!only || d.id === only))) {
+    const deck = await (await fetch('../decks/' + entry.file, { cache: 'no-cache' })).json();
+    out.push(`== ${deck.name} (${deck.cards.length} Karten)`);
+    for (const c of deck.cards) {
+      cards++;
+      for (const k of ADJ_REQUIRED) if (!c[k]) problem(c, `Feld ${k} fehlt`);
+      if (!/(ый|ий|о́й)$/.test(c.ru)) problem(c, 'Grundform endet nicht auf -ый/-ий/-о́й');
+      const sentence = (c.example || '').toLowerCase();
+      for (const part of (c.example_cases || '').split(' · ')) {
+        for (const word of part.split(' – ')[0].match(/[а-яё́-]+/gi) || []) if (!sentence.includes(word.toLowerCase())) problem(c, `Fälle: „${word}“ steht nicht im Satz`);
+      }
+      for (const k of ['ru', 'example', 'short', 'comp', 'anto']) for (const p of stressProblems(c[k])) problem(c, `${k}: ${p}`);
+      const d = w.adjDecl(c.ru);
+      const forms = ['m', 'n', 'f', 'pl'].flatMap(g => d[g].flatMap(f => f.split(' / ')));
+      for (const f of forms) for (const p of stressProblems(f)) problem(c, `Form: ${p}`);
+      if (verbose) out.push(`   ${c.ru}: ${d.m.join(' ')} | ${d.f.join(' ')} | ${d.pl[0]}`);
+    }
+  }
   out.unshift(`${cards} Karten geprüft, ${problems} Probleme`);
   document.getElementById('out').textContent = out.join('\n');
 };
