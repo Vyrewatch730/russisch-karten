@@ -26,7 +26,11 @@
                       "example_en":  "I spend a lot of money.",
                       "example_es":  "Yo gasto mucho dinero.",
                       "example_cases":  "мно́го де́нег – Genitiv (nach мно́го)",
-                      "government":  "was? – Akkusativ · worauf? – на + Akkusativ"
+                      "government":  "was? – Akkusativ · worauf? – на + Akkusativ",
+                      "ipf_imp_ex":  "Не трать де́ньги зря!",
+                      "ipf_imp_ex_de":  "Gib das Geld nicht umsonst aus!",
+                      "pf_imp_ex":  "Потра́ть пре́мию на о́тпуск!",
+                      "pf_imp_ex_de":  "Gib die Prämie für den Urlaub aus!"
                   },
                   {
                       "id":  "vb-образовывать",
@@ -46,7 +50,11 @@
                       "example_en":  "Form pairs.",
                       "example_es":  "Formen parejas.",
                       "example_cases":  "па́ры – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Образо́вывай фо́рмы пра́вильно!",
+                      "ipf_imp_ex_de":  "Bilde die Formen richtig!",
+                      "pf_imp_ex":  "Образу́й мно́жественное число́!",
+                      "pf_imp_ex_de":  "Bilde den Plural!"
                   },
                   {
                       "id":  "vb-направляться",
@@ -67,7 +75,11 @@
                       "example_en":  "Where are you heading?",
                       "example_es":  "¿Hacia dónde usted va?",
                       "example_cases":  "nur Nominativ",
-                      "government":  "wohin? – в/на + Akkusativ · zu wem? – к + Dativ"
+                      "government":  "wohin? – в/на + Akkusativ · zu wem? – к + Dativ",
+                      "ipf_imp_ex":  "Направля́йся к вы́ходу!",
+                      "ipf_imp_ex_de":  "Geh zum Ausgang!",
+                      "pf_imp_ex":  "Напра́вься пря́мо к ка́ссе!",
+                      "pf_imp_ex_de":  "Geh direkt zur Kasse!"
                   },
                   {
                       "id":  "vb-шептать",
@@ -88,7 +100,11 @@
                       "example_en":  "She\u0027s whispering in my ear.",
                       "example_es":  "Ella me está susurrando al oído.",
                       "example_cases":  "мне – Dativ · на у́хо – Akkusativ (wohin?)",
-                      "government":  "wem? – Dativ · was? – Akkusativ"
+                      "government":  "wem? – Dativ · was? – Akkusativ",
+                      "ipf_imp_ex":  "Не шепчи́, говори́ гро́мко!",
+                      "ipf_imp_ex_de":  "Flüstere nicht, sprich laut!",
+                      "pf_imp_ex":  "Прошепчи́ мне на у́хо!",
+                      "pf_imp_ex_de":  "Flüstere es mir ins Ohr!"
                   },
                   {
                       "id":  "vb-отводить",
@@ -109,7 +125,11 @@
                       "example_es":  "Yo llevo a mi hija al kínder.",
                       "example_cases":  "дочь – Akkusativ · в де́тский сад – Akkusativ (wohin?)",
                       "government":  "wen? – Akkusativ · wohin? – в/на + Akkusativ",
-                      "motion":  "prefix"
+                      "motion":  "prefix",
+                      "ipf_imp_ex":  "Не отводи́ глаза́!",
+                      "ipf_imp_ex_de":  "Schau nicht weg!",
+                      "pf_imp_ex":  "Отведи́ ребёнка в шко́лу!",
+                      "pf_imp_ex_de":  "Bring das Kind zur Schule!"
                   },
                   {
                       "id":  "vb-обижаться",
@@ -129,7 +149,11 @@
                       "example_en":  "Are you offended with me?",
                       "example_es":  "¿Tú te ofendiste conmigo?",
                       "example_cases":  "на меня́ – Akkusativ (nach на)",
-                      "government":  "auf wen? – на + Akkusativ · wofür? – за + Akkusativ"
+                      "government":  "auf wen? – на + Akkusativ · wofür? – за + Akkusativ",
+                      "ipf_imp_ex":  "Не обижа́йся!",
+                      "ipf_imp_ex_de":  "Sei nicht beleidigt!",
+                      "pf_imp_ex":  "Не оби́дься на меня́!",
+                      "pf_imp_ex_de":  "Nimm es mir bloß nicht übel!"
                   },
                   {
                       "id":  "vb-убеждаться",
@@ -151,7 +175,11 @@
                       "note":  "Die я-Form von убеди́ться wird nicht verwendet.",
                       "example_cases":  "nur Nominativ",
                       "government":  "worin? – в + Präpositiv",
-                      "pf_imp":  "убеди́сь"
+                      "ipf_imp_ex":  "Убежда́йся во всём сам!",
+                      "ipf_imp_ex_de":  "Überzeug dich von allem selbst!",
+                      "pf_imp":  "убеди́сь",
+                      "pf_imp_ex":  "Убеди́сь, что дверь закры́та!",
+                      "pf_imp_ex_de":  "Vergewissere dich, dass die Tür zu ist!"
                   },
                   {
                       "id":  "vb-сомневаться",
@@ -168,7 +196,9 @@
                       "example_en":  "I doubt he\u0027ll come.",
                       "example_es":  "Yo dudo que él venga.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "worin? – в + Präpositiv"
+                      "government":  "worin? – в + Präpositiv",
+                      "ipf_imp_ex":  "Не сомнева́йся!",
+                      "ipf_imp_ex_de":  "Zweifle nicht!"
                   },
                   {
                       "id":  "vb-сталкиваться",
@@ -189,7 +219,11 @@
                       "example_en":  "Two cars collided.",
                       "example_es":  "Dos carros chocaron.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "mit wem? womit? – с + Instrumental"
+                      "government":  "mit wem? womit? – с + Instrumental",
+                      "ipf_imp_ex":  "Не ста́лкивайся с ним в коридо́ре!",
+                      "ipf_imp_ex_de":  "Lauf ihm im Flur nicht in die Arme!",
+                      "pf_imp_ex":  "Смотри́, не столкни́сь с маши́ной!",
+                      "pf_imp_ex_de":  "Pass auf, stoß nicht mit dem Auto zusammen!"
                   },
                   {
                       "id":  "vb-совать",
@@ -209,7 +243,11 @@
                       "example_en":  "Don\u0027t stick your nose into other people\u0027s business!",
                       "example_es":  "¡No te metas en lo que no te importa!",
                       "example_cases":  "нос – Akkusativ · в чужи́е дела́ – Akkusativ (wohin?)",
-                      "government":  "was? – Akkusativ · wohin? – в + Akkusativ"
+                      "government":  "was? – Akkusativ · wohin? – в + Akkusativ",
+                      "ipf_imp_ex":  "Не суй нос в чужи́е дела́!",
+                      "ipf_imp_ex_de":  "Steck deine Nase nicht in fremde Angelegenheiten!",
+                      "pf_imp_ex":  "Сунь ключ в карма́н!",
+                      "pf_imp_ex_de":  "Steck den Schlüssel in die Tasche!"
                   },
                   {
                       "id":  "vb-успокаиваться",
@@ -230,7 +268,11 @@
                       "example_en":  "Calm down, everything\u0027s fine.",
                       "example_es":  "Cálmate, que todo está bien.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Успока́ивайся, всё хорошо́!",
+                      "ipf_imp_ex_de":  "Beruhige dich, alles ist gut!",
+                      "pf_imp_ex":  "Успоко́йся!",
+                      "pf_imp_ex_de":  "Beruhige dich!"
                   },
                   {
                       "id":  "vb-отрезать",
@@ -250,7 +292,11 @@
                       "example_en":  "Cut me a piece of bread.",
                       "example_es":  "Córtame un pedazo de pan.",
                       "example_cases":  "мне – Dativ · кусо́к – Akkusativ · хле́ба – Genitiv (wovon?)",
-                      "government":  "was? – Akkusativ / Genitiv (etwas davon) · wem? – Dativ"
+                      "government":  "was? – Akkusativ / Genitiv (etwas davon) · wem? – Dativ",
+                      "ipf_imp_ex":  "Отреза́й по кусо́чку!",
+                      "ipf_imp_ex_de":  "Schneid immer ein Stückchen ab!",
+                      "pf_imp_ex":  "Отре́жь мне кусо́к хле́ба!",
+                      "pf_imp_ex_de":  "Schneid mir ein Stück Brot ab!"
                   },
                   {
                       "id":  "vb-стучать",
@@ -271,7 +317,11 @@
                       "example_en":  "Someone is knocking at the door.",
                       "example_es":  "Alguien está tocando la puerta.",
                       "example_cases":  "в дверь – Akkusativ (nach в)",
-                      "government":  "in was? – в + Akkusativ"
+                      "government":  "in was? – в + Akkusativ",
+                      "ipf_imp_ex":  "Стучи́ гро́мче!",
+                      "ipf_imp_ex_de":  "Klopf lauter!",
+                      "pf_imp_ex":  "Постучи́ в дверь!",
+                      "pf_imp_ex_de":  "Klopf an die Tür!"
                   },
                   {
                       "id":  "vb-избегать",
@@ -292,7 +342,11 @@
                       "example_es":  "Él me está evitando.",
                       "note":  "Mit Genitiv: избега́ть пробле́м.",
                       "example_cases":  "меня́ – Genitiv (nach избега́ть)",
-                      "government":  "wen? was? – Genitiv"
+                      "government":  "wen? was? – Genitiv",
+                      "ipf_imp_ex":  "Избега́й стре́сса!",
+                      "ipf_imp_ex_de":  "Vermeide Stress!",
+                      "pf_imp_ex":  "Избеги́ э́той оши́бки!",
+                      "pf_imp_ex_de":  "Vermeide diesen Fehler!"
                   },
                   {
                       "id":  "vb-повышать",
@@ -313,7 +367,11 @@
                       "example_en":  "I got a raise.",
                       "example_es":  "Me subieron el sueldo.",
                       "example_cases":  "мне – Dativ · зарпла́ту – Akkusativ",
-                      "government":  "was? – Akkusativ · wem? – Dativ"
+                      "government":  "was? – Akkusativ · wem? – Dativ",
+                      "ipf_imp_ex":  "Не повыша́й го́лос!",
+                      "ipf_imp_ex_de":  "Werd nicht laut!",
+                      "pf_imp_ex":  "Повы́сь гро́мкость!",
+                      "pf_imp_ex_de":  "Mach lauter!"
                   },
                   {
                       "id":  "vb-высказывать",
@@ -334,7 +392,11 @@
                       "example_en":  "Express your opinion.",
                       "example_es":  "Da tu opinión.",
                       "example_cases":  "своё мне́ние – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Выска́зывай своё мне́ние!",
+                      "ipf_imp_ex_de":  "Sag deine Meinung!",
+                      "pf_imp_ex":  "Вы́скажи всё, что ду́маешь!",
+                      "pf_imp_ex_de":  "Sag alles, was du denkst!"
                   },
                   {
                       "id":  "vb-соображать",
@@ -355,7 +417,11 @@
                       "example_en":  "He catches on quickly.",
                       "example_es":  "Él capta rápido.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt · worin? – в + Präpositiv (sich auskennen)"
+                      "government":  "ohne Objekt · worin? – в + Präpositiv (sich auskennen)",
+                      "ipf_imp_ex":  "Сообража́й быстре́е!",
+                      "ipf_imp_ex_de":  "Denk schneller!",
+                      "pf_imp_ex":  "Сообрази́ у́жин на скору́ю ру́ку!",
+                      "pf_imp_ex_de":  "Mach schnell etwas zum Abendessen!"
                   },
                   {
                       "id":  "vb-захватывать",
@@ -376,7 +442,11 @@
                       "example_en":  "Take an umbrella!",
                       "example_es":  "¡Llévate una sombrilla!",
                       "example_cases":  "зо́нтик – Akkusativ",
-                      "government":  "was? – Akkusativ · с собо́й (mitnehmen)"
+                      "government":  "was? – Akkusativ · с собо́й (mitnehmen)",
+                      "ipf_imp_ex":  "Не захва́тывай чужо́е ме́сто!",
+                      "ipf_imp_ex_de":  "Nimm keinen fremden Platz ein!",
+                      "pf_imp_ex":  "Захвати́ зо́нтик!",
+                      "pf_imp_ex_de":  "Nimm den Regenschirm mit!"
                   },
                   {
                       "id":  "vb-интересоваться",
@@ -397,7 +467,11 @@
                       "example_es":  "Yo me intereso por la historia.",
                       "note":  "Mit Instrumental: интересова́ться исто́рией.",
                       "example_cases":  "исто́рией – Instrumental (nach интересова́ться)",
-                      "government":  "wofür? – Instrumental"
+                      "government":  "wofür? – Instrumental",
+                      "ipf_imp_ex":  "Интересу́йся исто́рией!",
+                      "ipf_imp_ex_de":  "Interessiere dich für Geschichte!",
+                      "pf_imp_ex":  "Заинтересу́йся э́той те́мой!",
+                      "pf_imp_ex_de":  "Interessiere dich mal für dieses Thema!"
                   },
                   {
                       "id":  "vb-прикрывать",
@@ -418,7 +492,11 @@
                       "example_en":  "Close the door a bit.",
                       "example_es":  "Junta la puerta.",
                       "example_cases":  "дверь – Akkusativ",
-                      "government":  "was? – Akkusativ · wen? – Akkusativ"
+                      "government":  "was? – Akkusativ · wen? – Akkusativ",
+                      "ipf_imp_ex":  "Прикрыва́й рот, когда́ ка́шляешь!",
+                      "ipf_imp_ex_de":  "Halt dir die Hand vor den Mund, wenn du hustest!",
+                      "pf_imp_ex":  "Прикро́й дверь!",
+                      "pf_imp_ex_de":  "Lehn die Tür an!"
                   },
                   {
                       "id":  "vb-складывать",
@@ -440,7 +518,11 @@
                       "example_es":  "Suma dos más tres.",
                       "es2_verb":  "sumar",
                       "example_cases":  "два и три – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Скла́дывай ве́щи аккура́тно!",
+                      "ipf_imp_ex_de":  "Leg die Sachen ordentlich zusammen!",
+                      "pf_imp_ex":  "Сложи́ два и три!",
+                      "pf_imp_ex_de":  "Addiere zwei und drei!"
                   },
                   {
                       "id":  "vb-докладывать",
@@ -461,7 +543,11 @@
                       "example_en":  "Report on the results.",
                       "example_es":  "Informe los resultados.",
                       "example_cases":  "о результа́тах – Präpositiv (nach о)",
-                      "government":  "wem? – Dativ · worüber? – о + Präpositiv"
+                      "government":  "wem? – Dativ · worüber? – о + Präpositiv",
+                      "ipf_imp_ex":  "Докла́дывай ка́ждый час!",
+                      "ipf_imp_ex_de":  "Melde dich jede Stunde!",
+                      "pf_imp_ex":  "Доложи́ нача́льнику!",
+                      "pf_imp_ex_de":  "Melde es dem Chef!"
                   },
                   {
                       "id":  "vb-сводить",
@@ -482,7 +568,11 @@
                       "example_en":  "You\u0027ll drive me crazy!",
                       "example_es":  "¡Tú me vas a volver loco!",
                       "example_cases":  "меня́ – Akkusativ · с ума́ – Genitiv (feste Wendung „verrückt machen“)",
-                      "government":  "wen? wohin? – Akkusativ + в/на + Akkusativ"
+                      "government":  "wen? wohin? – Akkusativ + в/на + Akkusativ",
+                      "ipf_imp_ex":  "Не своди́ меня́ с ума́!",
+                      "ipf_imp_ex_de":  "Mach mich nicht verrückt!",
+                      "pf_imp_ex":  "Сведи́ их вме́сте!",
+                      "pf_imp_ex_de":  "Bring sie zusammen!"
                   },
                   {
                       "id":  "vb-заслуживать",
@@ -502,7 +592,11 @@
                       "example_en":  "You deserve better.",
                       "example_es":  "Tú mereces algo mejor.",
                       "example_cases":  "лу́чшего – Genitiv (nach заслу́живать)",
-                      "government":  "was? – Genitiv"
+                      "government":  "was? – Genitiv",
+                      "ipf_imp_ex":  "Заслу́живай дове́рие дела́ми!",
+                      "ipf_imp_ex_de":  "Verdien dir Vertrauen durch Taten!",
+                      "pf_imp_ex":  "Заслужи́ его́ уваже́ние!",
+                      "pf_imp_ex_de":  "Verdien dir seinen Respekt!"
                   },
                   {
                       "id":  "vb-шутить",
@@ -523,7 +617,11 @@
                       "example_en":  "I\u0027m joking!",
                       "example_es":  "¡Yo estoy relajando!",
                       "example_cases":  "nur Nominativ",
-                      "government":  "über wen? – над + Instrumental"
+                      "government":  "über wen? – над + Instrumental",
+                      "ipf_imp_ex":  "Не шути́ так!",
+                      "ipf_imp_ex_de":  "Mach nicht solche Witze!",
+                      "pf_imp_ex":  "Пошути́, мне гру́стно!",
+                      "pf_imp_ex_de":  "Mach einen Witz, ich bin traurig!"
                   },
                   {
                       "id":  "vb-выявлять",
@@ -544,7 +642,11 @@
                       "example_en":  "The doctors identified the problem.",
                       "example_es":  "Los médicos detectaron el problema.",
                       "example_cases":  "пробле́му – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Выявля́й оши́бки сра́зу!",
+                      "ipf_imp_ex_de":  "Finde Fehler sofort!",
+                      "pf_imp_ex":  "Вы́яви причи́ну пробле́мы!",
+                      "pf_imp_ex_de":  "Finde die Ursache des Problems!"
                   },
                   {
                       "id":  "vb-расходиться",
@@ -565,7 +667,11 @@
                       "example_en":  "After the concert everyone went home.",
                       "example_es":  "Después del concierto todo el mundo se fue.",
                       "example_cases":  "по́сле конце́рта – Genitiv (nach по́сле)",
-                      "government":  "ohne Objekt · mit wem? – с + Instrumental"
+                      "government":  "ohne Objekt · mit wem? – с + Instrumental",
+                      "ipf_imp_ex":  "Расходи́тесь по дома́м!",
+                      "ipf_imp_ex_de":  "Geht nach Hause!",
+                      "pf_imp_ex":  "Разойди́сь с ним по-хоро́шему!",
+                      "pf_imp_ex_de":  "Trenn dich im Guten von ihm!"
                   },
                   {
                       "id":  "vb-возглавлять",
@@ -586,7 +692,11 @@
                       "example_en":  "She heads the company.",
                       "example_es":  "Ella dirige la compañía.",
                       "example_cases":  "компа́нию – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Возглавля́й кома́нду!",
+                      "ipf_imp_ex_de":  "Führe das Team!",
+                      "pf_imp_ex":  "Возгла́вь э́тот прое́кт!",
+                      "pf_imp_ex_de":  "Übernimm die Leitung dieses Projekts!"
                   },
                   {
                       "id":  "vb-доводить",
@@ -607,7 +717,11 @@
                       "example_en":  "See it through to the end.",
                       "example_es":  "Termina lo que empezaste.",
                       "example_cases":  "де́ло – Akkusativ · до конца́ – Genitiv (nach до)",
-                      "government":  "wen? was? bis wohin? – Akkusativ + до + Genitiv"
+                      "government":  "wen? was? bis wohin? – Akkusativ + до + Genitiv",
+                      "ipf_imp_ex":  "Доводи́ де́ло до конца́!",
+                      "ipf_imp_ex_de":  "Bring die Sache zu Ende!",
+                      "pf_imp_ex":  "Доведи́ меня́ до до́ма!",
+                      "pf_imp_ex_de":  "Bring mich bis nach Hause!"
                   },
                   {
                       "id":  "vb-врать",
@@ -628,7 +742,11 @@
                       "example_en":  "Don\u0027t lie to me!",
                       "example_es":  "¡No me mientas!",
                       "example_cases":  "мне – Dativ",
-                      "government":  "wem? – Dativ"
+                      "government":  "wem? – Dativ",
+                      "ipf_imp_ex":  "Не ври!",
+                      "ipf_imp_ex_de":  "Lüg nicht!",
+                      "pf_imp_ex":  "Не соври́ ей!",
+                      "pf_imp_ex_de":  "Lüg sie bloß nicht an!"
                   },
                   {
                       "id":  "vb-подбирать",
@@ -650,7 +768,11 @@
                       "example_es":  "Recoge los juguetes del piso.",
                       "es2_verb":  "escoger",
                       "example_cases":  "игру́шки – Akkusativ · с по́ла – Genitiv (nach с = von … herunter)",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Не подбира́й му́сор рука́ми!",
+                      "ipf_imp_ex_de":  "Heb den Müll nicht mit den Händen auf!",
+                      "pf_imp_ex":  "Подбери́ мне пла́тье!",
+                      "pf_imp_ex_de":  "Such mir ein Kleid aus!"
                   },
                   {
                       "id":  "vb-кончать",
@@ -671,7 +793,11 @@
                       "example_en":  "Stop playing, it\u0027s bedtime!",
                       "example_es":  "¡Deja de jugar, que ya es hora de dormir!",
                       "example_cases":  "nur Nominativ",
-                      "government":  "was? – Akkusativ · + Infinitiv (unvollendet)"
+                      "government":  "was? – Akkusativ · + Infinitiv (unvollendet)",
+                      "ipf_imp_ex":  "Конча́й болта́ть!",
+                      "ipf_imp_ex_de":  "Hör auf zu quatschen!",
+                      "pf_imp_ex":  "Ко́нчи рабо́ту и приходи́!",
+                      "pf_imp_ex_de":  "Mach die Arbeit fertig und komm!"
                   },
                   {
                       "id":  "vb-основывать",
@@ -691,7 +817,11 @@
                       "example_en":  "Who founded this city?",
                       "example_es":  "¿Quién fundó esta ciudad?",
                       "example_cases":  "э́тот го́род – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Осно́вывай мне́ние на фа́ктах!",
+                      "ipf_imp_ex_de":  "Stütze deine Meinung auf Fakten!",
+                      "pf_imp_ex":  "Осну́й свою́ фи́рму!",
+                      "pf_imp_ex_de":  "Gründe deine eigene Firma!"
                   },
                   {
                       "id":  "vb-охватывать",
@@ -713,7 +843,11 @@
                       "example_es":  "Me invadió el miedo.",
                       "es2_verb":  "invadir",
                       "example_cases":  "меня́ – Akkusativ (страх ist das Subjekt)",
-                      "government":  "wen? was? – Akkusativ"
+                      "government":  "wen? was? – Akkusativ",
+                      "ipf_imp_ex":  "Охва́тывай всю те́му!",
+                      "ipf_imp_ex_de":  "Erfasse das ganze Thema!",
+                      "pf_imp_ex":  "Охвати́ взгля́дом всю карти́ну!",
+                      "pf_imp_ex_de":  "Erfasse das ganze Bild mit einem Blick!"
                   },
                   {
                       "id":  "vb-скрываться",
@@ -735,7 +869,11 @@
                       "example_es":  "El ladrón se escapó.",
                       "es2_verb":  "escaparse",
                       "example_cases":  "nur Nominativ",
-                      "government":  "von wem? – от + Genitiv"
+                      "government":  "von wem? – от + Genitiv",
+                      "ipf_imp_ex":  "Не скрыва́йся от меня́!",
+                      "ipf_imp_ex_de":  "Versteck dich nicht vor mir!",
+                      "pf_imp_ex":  "Скро́йся с глаз!",
+                      "pf_imp_ex_de":  "Geh mir aus den Augen!"
                   },
                   {
                       "id":  "vb-прекращать",
@@ -756,7 +894,11 @@
                       "example_en":  "Stop making noise!",
                       "example_es":  "¡Deja de hacer ruido!",
                       "example_cases":  "nur Nominativ",
-                      "government":  "was? – Akkusativ · + Infinitiv (unvollendet)"
+                      "government":  "was? – Akkusativ · + Infinitiv (unvollendet)",
+                      "ipf_imp_ex":  "Не прекраща́й занима́ться!",
+                      "ipf_imp_ex_de":  "Hör nicht auf zu üben!",
+                      "pf_imp_ex":  "Прекрати́ неме́дленно!",
+                      "pf_imp_ex_de":  "Hör sofort auf!"
                   },
                   {
                       "id":  "vb-общаться",
@@ -777,7 +919,11 @@
                       "example_en":  "We often talk on the phone.",
                       "example_es":  "Nosotros hablamos mucho por teléfono.",
                       "example_cases":  "по телефо́ну – Dativ (nach по)",
-                      "government":  "mit wem? – с + Instrumental"
+                      "government":  "mit wem? – с + Instrumental",
+                      "ipf_imp_ex":  "Обща́йся бо́льше с людьми́!",
+                      "ipf_imp_ex_de":  "Unterhalte dich mehr mit Leuten!",
+                      "pf_imp_ex":  "Пообща́йся с ним!",
+                      "pf_imp_ex_de":  "Unterhalte dich mal mit ihm!"
                   },
                   {
                       "id":  "vb-подводить",
@@ -798,7 +944,11 @@
                       "example_en":  "Don\u0027t let me down!",
                       "example_es":  "¡No me falles!",
                       "example_cases":  "меня́ – Akkusativ",
-                      "government":  "wen? – Akkusativ"
+                      "government":  "wen? – Akkusativ",
+                      "ipf_imp_ex":  "Не подводи́ меня́!",
+                      "ipf_imp_ex_de":  "Lass mich nicht im Stich!",
+                      "pf_imp_ex":  "Не подведи́ кома́нду!",
+                      "pf_imp_ex_de":  "Lass das Team bloß nicht im Stich!"
                   },
                   {
                       "id":  "vb-волноваться",
@@ -819,7 +969,11 @@
                       "example_en":  "Don\u0027t worry, everything will be fine.",
                       "example_es":  "No te preocupes, todo va a salir bien.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "für wen? – за + Akkusativ · über wen? – о + Präpositiv"
+                      "government":  "für wen? – за + Akkusativ · über wen? – о + Präpositiv",
+                      "ipf_imp_ex":  "Не волну́йся!",
+                      "ipf_imp_ex_de":  "Mach dir keine Sorgen!",
+                      "pf_imp_ex":  "Не взволну́йся пе́ред экза́меном!",
+                      "pf_imp_ex_de":  "Werd vor der Prüfung bloß nicht nervös!"
                   },
                   {
                       "id":  "vb-закладывать",
@@ -840,7 +994,11 @@
                       "example_en":  "He pawned his watch.",
                       "example_es":  "Él empeñó el reloj.",
                       "example_cases":  "часы́ – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Не закла́дывай кольцо́!",
+                      "ipf_imp_ex_de":  "Verpfände den Ring nicht!",
+                      "pf_imp_ex":  "Заложи́ закла́дку в кни́гу!",
+                      "pf_imp_ex_de":  "Leg ein Lesezeichen ins Buch!"
                   },
                   {
                       "id":  "vb-планировать",
@@ -860,7 +1018,11 @@
                       "example_en":  "What are you planning for the weekend?",
                       "example_es":  "¿Qué tú tienes planeado para el fin de semana?",
                       "example_cases":  "что – Akkusativ · на выходны́е – Akkusativ (für wann?)",
-                      "government":  "was? – Akkusativ · + Infinitiv"
+                      "government":  "was? – Akkusativ · + Infinitiv",
+                      "ipf_imp_ex":  "Плани́руй свой день!",
+                      "ipf_imp_ex_de":  "Plane deinen Tag!",
+                      "pf_imp_ex":  "Заплани́руй о́тпуск!",
+                      "pf_imp_ex_de":  "Plane den Urlaub ein!"
                   },
                   {
                       "id":  "vb-выскакивать",
@@ -881,7 +1043,11 @@
                       "example_en":  "The cat jumped out the window.",
                       "example_es":  "El gato se tiró por la ventana.",
                       "example_cases":  "в окно́ – Akkusativ (wohin?)",
-                      "government":  "woher? – из + Genitiv · wohin? – в/на + Akkusativ"
+                      "government":  "woher? – из + Genitiv · wohin? – в/на + Akkusativ",
+                      "ipf_imp_ex":  "Не выска́кивай на доро́гу!",
+                      "ipf_imp_ex_de":  "Spring nicht auf die Straße!",
+                      "pf_imp_ex":  "Вы́скочи из маши́ны!",
+                      "pf_imp_ex_de":  "Spring aus dem Auto!"
                   },
                   {
                       "id":  "vb-превращать",
@@ -901,7 +1067,11 @@
                       "example_en":  "He turned the garage into a studio.",
                       "example_es":  "Él convirtió el garaje en un estudio.",
                       "example_cases":  "гара́ж – Akkusativ · в сту́дию – Akkusativ (nach в)",
-                      "government":  "was? in was? – Akkusativ + в + Akkusativ"
+                      "government":  "was? in was? – Akkusativ + в + Akkusativ",
+                      "ipf_imp_ex":  "Не превраща́й всё в шу́тку!",
+                      "ipf_imp_ex_de":  "Mach nicht alles zum Witz!",
+                      "pf_imp_ex":  "Преврати́ мечту́ в реа́льность!",
+                      "pf_imp_ex_de":  "Mach den Traum wahr!"
                   },
                   {
                       "id":  "vb-качать",
@@ -922,7 +1092,11 @@
                       "example_en":  "He shook his head.",
                       "example_es":  "Él negó con la cabeza.",
                       "example_cases":  "голово́й – Instrumental (womit?)",
-                      "government":  "wen? was? – Akkusativ · womit? – Instrumental (голово́й)"
+                      "government":  "wen? was? – Akkusativ · womit? – Instrumental (голово́й)",
+                      "ipf_imp_ex":  "Кача́й ребёнка!",
+                      "ipf_imp_ex_de":  "Schaukle das Baby!",
+                      "pf_imp_ex":  "Покача́й меня́ на каче́лях!",
+                      "pf_imp_ex_de":  "Schaukle mich auf der Schaukel!"
                   },
                   {
                       "id":  "vb-обнимать",
@@ -942,7 +1116,11 @@
                       "example_en":  "I\u0027m hugging you.",
                       "example_es":  "Yo te abrazo.",
                       "example_cases":  "тебя́ – Akkusativ",
-                      "government":  "wen? – Akkusativ"
+                      "government":  "wen? – Akkusativ",
+                      "ipf_imp_ex":  "Обнима́й дете́й ча́ще!",
+                      "ipf_imp_ex_de":  "Umarme die Kinder öfter!",
+                      "pf_imp_ex":  "Обними́ меня́!",
+                      "pf_imp_ex_de":  "Umarme mich!"
                   },
                   {
                       "id":  "vb-отзываться",
@@ -963,7 +1141,11 @@
                       "example_en":  "He speaks well of you.",
                       "example_es":  "Él habla bien de ti.",
                       "example_cases":  "о тебе́ – Präpositiv (nach о)",
-                      "government":  "über wen? worüber? – о + Präpositiv · worauf? – на + Akkusativ"
+                      "government":  "über wen? worüber? – о + Präpositiv · worauf? – на + Akkusativ",
+                      "ipf_imp_ex":  "Отзыва́йся, когда́ тебя́ зову́т!",
+                      "ipf_imp_ex_de":  "Antworte, wenn man dich ruft!",
+                      "pf_imp_ex":  "Отзови́сь, где ты?",
+                      "pf_imp_ex_de":  "Antworte, wo bist du?"
                   },
                   {
                       "id":  "vb-возрастать",
@@ -1006,7 +1188,11 @@
                       "example_en":  "Freeze!",
                       "example_es":  "¡Quieto!",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Не замира́й, дви́гайся!",
+                      "ipf_imp_ex_de":  "Erstarr nicht, beweg dich!",
+                      "pf_imp_ex":  "Замри́!",
+                      "pf_imp_ex_de":  "Halt still!"
                   },
                   {
                       "id":  "vb-доставаться",
@@ -1027,7 +1213,11 @@
                       "example_en":  "I got the best piece.",
                       "example_es":  "A mí me tocó el mejor pedazo.",
                       "example_cases":  "мне – Dativ (лу́чший кусо́к ist das Subjekt)",
-                      "government":  "wem? – Dativ"
+                      "government":  "wem? – Dativ",
+                      "ipf_imp_ex":  "Не достава́йся никому́!",
+                      "ipf_imp_ex_de":  "Gehör niemandem!",
+                      "pf_imp_ex":  "Доста́нься мне!",
+                      "pf_imp_ex_de":  "Werd mein!"
                   },
                   {
                       "id":  "vb-восстанавливать",
@@ -1048,7 +1238,11 @@
                       "example_en":  "I need to reset my password.",
                       "example_es":  "Yo necesito recuperar mi contraseña.",
                       "example_cases":  "мне – Dativ · паро́ль – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Восстана́вливай си́лы!",
+                      "ipf_imp_ex_de":  "Sammle neue Kräfte!",
+                      "pf_imp_ex":  "Восстанови́ паро́ль!",
+                      "pf_imp_ex_de":  "Stell das Passwort wieder her!"
                   }
               ]
 }

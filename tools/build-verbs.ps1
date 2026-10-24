@@ -71,6 +71,18 @@ function Read-Tsv($name) {
 $govs = Read-Tsv 'rektion.tsv'
 $motions = Read-Tsv 'bewegung.tsv'
 
+# Beispielsätze zum Imperativ (decks-src\imperativ-beispiele.tsv: Infinitiv TAB Aspekt TAB Satz TAB Deutsch)
+$impEx = @{}
+$impExFile = Join-Path $src 'imperativ-beispiele.tsv'
+if (Test-Path $impExFile) {
+  foreach ($line in [IO.File]::ReadAllLines($impExFile, $utf8)) {
+    if ($line.Trim() -eq '' -or $line.StartsWith('#')) { continue }
+    $p = $line.Split("`t") | ForEach-Object { $_.Trim() }
+    $impEx["$(& $plain $p[0])|$($p[1])"] = @($p[2], $p[3])
+  }
+}
+$usedImpEx = @{}
+
 $cards = New-Object System.Collections.ArrayList
 $seen = @{}
 $missing = @()
@@ -108,6 +120,14 @@ foreach ($file in Get-ChildItem $src -Filter '*.txt' | Sort-Object Name) {
       if (-not $c[$asp]) { continue }
       $k = & $plain $c[$asp]
       if ($imps.ContainsKey($k)) { $c["${asp}_imp"] = $imps[$k]; $usedImps[$k] = 1 }
+      # Bei zweiaspektigen Verben (ipf = pf) gilt der Satz für beide Aspekte
+      $exKey = "$k|$asp"
+      if ($asp -eq 'ipf' -and -not $impEx.ContainsKey($exKey)) { $exKey = "$k|pf" }
+      if ($impEx.ContainsKey($exKey)) {
+        $c["${asp}_imp_ex"] = $impEx[$exKey][0]
+        $c["${asp}_imp_ex_de"] = $impEx[$exKey][1]
+        $usedImpEx[$exKey] = 1
+      }
     }
     $score = (& $ipm $c.ipf) + $(if ($c.pf -ne $c.ipf) { & $ipm $c.pf } else { 0 })
     if ($score -eq 0) { $missing += $key }
@@ -116,6 +136,8 @@ foreach ($file in Get-ChildItem $src -Filter '*.txt' | Sort-Object Name) {
 }
 $unusedImps = @($imps.Keys | Where-Object { -not $usedImps[$_] })
 if ($unusedImps) { Write-Host "Imperativ-Ausnahmen ohne Karte: $($unusedImps -join ', ')" }
+$unusedImpEx = @($impEx.Keys | Where-Object { -not $usedImpEx[$_] })
+if ($unusedImpEx) { Write-Host "Imperativ-Beispiele ohne Karte: $($unusedImpEx -join ', ')" }
 $unused = @($cases.Keys | Where-Object { -not $usedCases[$_] })
 if ($unused) { Write-Host "Fälle ohne Karte: $($unused -join ', ')" }
 if ($missing) { Write-Host "Ohne Korpus-Häufigkeit (kommen ans Ende): $($missing -join ', ')" }

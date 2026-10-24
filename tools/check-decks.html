@@ -12,7 +12,7 @@ document.getElementById('app').onload = async e => {
   const only = new URLSearchParams(location.search).get('deck');
   const verbose = new URLSearchParams(location.search).has('verbose');
   const index = await (await fetch('../decks/index.json', { cache: 'no-cache' })).json();
-  const RU_FIELDS = ['ipf', 'ipf_1', 'ipf_2', 'pf', 'pf_1', 'pf_2', 'example'];
+  const RU_FIELDS = ['ipf', 'ipf_1', 'ipf_2', 'pf', 'pf_1', 'pf_2', 'example', 'ipf_imp_ex', 'pf_imp_ex'];
   const REQUIRED = ['de', 'en', 'es', 'example', 'example_de', 'example_en', 'example_es', 'example_cases', 'government'];
   let cards = 0, problems = 0;
   const problem = (c, msg) => { problems++; out.push(`✗ ${c.id} ${c.ru}: ${msg}`); };
@@ -29,6 +29,18 @@ document.getElementById('app').onload = async e => {
           const words = (part.split(' – ')[0].match(/[а-яё́-]+/gi) || []);
           for (const word of words) if (!sentence.includes(word.toLowerCase())) problem(c, `Fälle: „${word}“ steht nicht im Satz`);
         }
+      }
+      // Imperativ-Beispiel: Pflicht, sobald es einen Imperativ gibt; ты- oder вы-Form muss im Satz stehen
+      for (const p of c.pf === c.ipf ? ['ipf'] : ['ipf', 'pf']) {
+        if (!c[p]) continue;
+        const imp = c[p + '_imp'] !== undefined ? c[p + '_imp'] : w.ruImperative(c[p], c[p + '_1'], c[p + '_2']);
+        if (!imp || imp === '—') { if (c[p + '_imp_ex']) problem(c, `${p}: Beispiel ohne Imperativ`); continue; }
+        const ex = (c[p + '_imp_ex'] || '').toLowerCase();
+        if (!ex) { problem(c, `${p}: kein Imperativ-Beispiel (${imp})`); continue; }
+        if (!c[p + '_imp_ex_de']) problem(c, `${p}: Imperativ-Beispiel ohne Übersetzung`);
+        const forms = [imp, w.ruImperativePlural(imp)].map(f => f.toLowerCase());
+        if (!forms.some(f => new RegExp(`(^|[^а-яё́])${f}([^а-яё́]|$)`).test(ex))) problem(c, `${p}: „${imp}“ steht nicht im Beispiel: ${c[p + '_imp_ex']}`);
+        if (verbose) out.push(`   ${p} ${imp}: ${c[p + '_imp_ex']} — ${c[p + '_imp_ex_de']}`);
       }
       if (c.ipf && !c.ipf_1 && !c.ipf_2) problem(c, 'ipf ohne я/ты-Formen');
       if (c.pf && c.pf !== c.ipf && !c.pf_1 && !c.pf_2) problem(c, 'pf ohne я/ты-Formen');

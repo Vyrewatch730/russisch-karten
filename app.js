@@ -322,6 +322,8 @@ function ruImperative(inf, ya, ty) {
   if (vowels(imp) === 1) imp = imp.replace(STRESS, '');           // einsilbig: kein Akzent
   else if (!/[́ё]/.test(imp)) imp = imp.replace(/([аеиоуыэюя])([^аеиоуыэюя]*)$/, '$1́$2');   // посто́й, осну́й
   if (reflexive) imp += /[и́]$/.test(imp) ? 'сь' : 'ся';
+  // Mit -ся wird eine einsilbige Form zweisilbig: Betonung auf den Stammvokal (бой → бо́йся)
+  if (vowels(imp) > 1 && !/[́ё]/.test(imp)) imp = imp.replace(/[аеиоуыэюя]/, v => v + '́');
   return imp;
 }
 
@@ -839,8 +841,11 @@ function verbPairHtml(card) {
     const imp = impOf(p);
     if (!imp) return '';
     if (imp === '—') return `<div class="vp-imp"><i>Imp.</i> <span class="pron">nicht üblich</span></div>`;
+    // Beispielsatz zum Imperativ steht in der ⓘ-Box über der Regel
+    const ex = x[p + '_imp_ex'];
+    const exHtml = ex ? `<div class="vp-impex">${esc(ex)} ${say(ex)}${pron2(ex)}${x[p + '_imp_ex_de'] ? `<div class="vp-impex-de">${esc(x[p + '_imp_ex_de'])}</div>` : ''}</div>` : '';
     return `<div class="vp-imp"><i>Imp.</i> ${esc(imp)}! / ${esc(ruImperativePlural(imp))}!${pron2(imp)} ${say(impSpeech(p))}${info}</div>
-      <div class="vp-rule">${IMP_RULE[p]}</div>`;
+      <div class="vp-rule">${exHtml}${IMP_RULE[p]}</div>`;
   };
   const pron2 = text => { const p = ruPron(text); return p ? ` <span class="pron">[${esc(p)}]</span>` : ''; };
   // ⓘ blendet die Erklärung darunter (nächstes Element .vp-rule) ein und aus

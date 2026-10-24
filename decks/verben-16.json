@@ -26,7 +26,11 @@
                       "example_en":  "We have dinner together.",
                       "example_es":  "Nosotros cenamos juntos.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt · wo? – в/на + Präpositiv"
+                      "government":  "ohne Objekt · wo? – в/на + Präpositiv",
+                      "ipf_imp_ex":  "Не у́жинай по́здно!",
+                      "ipf_imp_ex_de":  "Iss nicht so spät zu Abend!",
+                      "pf_imp_ex":  "Поу́жинай с на́ми!",
+                      "pf_imp_ex_de":  "Iss mit uns zu Abend!"
                   },
                   {
                       "id":  "vb-критиковать",
@@ -43,7 +47,9 @@
                       "example_en":  "Don\u0027t criticize him.",
                       "example_es":  "No lo critiques.",
                       "example_cases":  "его́ – Akkusativ",
-                      "government":  "wen? was? – Akkusativ · wofür? – за + Akkusativ"
+                      "government":  "wen? was? – Akkusativ · wofür? – за + Akkusativ",
+                      "ipf_imp_ex":  "Не критику́й меня́!",
+                      "ipf_imp_ex_de":  "Kritisier mich nicht!"
                   },
                   {
                       "id":  "vb-чинить",
@@ -63,7 +69,11 @@
                       "example_en":  "Dad is fixing the car.",
                       "example_es":  "Papi está arreglando el carro.",
                       "example_cases":  "маши́ну – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Не чини́ сам электри́чество!",
+                      "ipf_imp_ex_de":  "Reparier die Elektrik nicht selbst!",
+                      "pf_imp_ex":  "Почини́ велосипе́д!",
+                      "pf_imp_ex_de":  "Reparier das Fahrrad!"
                   },
                   {
                       "id":  "vb-гонять",
@@ -84,7 +94,9 @@
                       "example_cases":  "мышь – Akkusativ · по ко́мнате – Dativ (nach по)",
                       "government":  "wen? – Akkusativ · wo entlang? – по + Dativ",
                       "motion":  "multi",
-                      "motion_pair":  "гнать"
+                      "motion_pair":  "гнать",
+                      "ipf_imp_ex":  "Не гоня́й на маши́не!",
+                      "ipf_imp_ex_de":  "Rase nicht mit dem Auto!"
                   },
                   {
                       "id":  "vb-ремонтировать",
@@ -105,7 +117,11 @@
                       "example_en":  "We\u0027re renovating the apartment.",
                       "example_es":  "Nosotros estamos remodelando el apartamento.",
                       "example_cases":  "кварти́ру – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Не ремонти́руй ста́рую маши́ну!",
+                      "ipf_imp_ex_de":  "Reparier das alte Auto nicht!",
+                      "pf_imp_ex":  "Отремонти́руй ку́хню!",
+                      "pf_imp_ex_de":  "Renoviere die Küche!"
                   },
                   {
                       "id":  "vb-лечиться",
@@ -126,7 +142,11 @@
                       "example_en":  "He is being treated in hospital.",
                       "example_es":  "Él se está tratando en el hospital.",
                       "example_cases":  "в больни́це – Präpositiv (wo?)",
-                      "government":  "wovon? – от + Genitiv · wo? – в + Präpositiv"
+                      "government":  "wovon? – от + Genitiv · wo? – в + Präpositiv",
+                      "ipf_imp_ex":  "Лечи́сь до́ма!",
+                      "ipf_imp_ex_de":  "Kurier dich zu Hause aus!",
+                      "pf_imp_ex":  "Вы́лечись поскоре́е!",
+                      "pf_imp_ex_de":  "Werd schnell gesund!"
                   },
                   {
                       "id":  "vb-взвешивать",
@@ -146,7 +166,11 @@
                       "example_en":  "Please weigh the apples.",
                       "example_es":  "Péseme las manzanas, por favor.",
                       "example_cases":  "я́блоки – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Взве́шивай ка́ждое сло́во!",
+                      "ipf_imp_ex_de":  "Wäge jedes Wort ab!",
+                      "pf_imp_ex":  "Взвесь я́блоки!",
+                      "pf_imp_ex_de":  "Wieg die Äpfel ab!"
                   },
                   {
                       "id":  "vb-свистеть",
@@ -167,7 +191,11 @@
                       "example_en":  "He\u0027s whistling a tune.",
                       "example_es":  "Él está chiflando una canción.",
                       "example_cases":  "мело́дию – Akkusativ",
-                      "government":  "was? – Akkusativ · wem? – Dativ"
+                      "government":  "was? – Akkusativ · wem? – Dativ",
+                      "ipf_imp_ex":  "Не свисти́ до́ма!",
+                      "ipf_imp_ex_de":  "Pfeif nicht in der Wohnung!",
+                      "pf_imp_ex":  "Сви́стни, когда́ придёшь!",
+                      "pf_imp_ex_de":  "Pfeif, wenn du kommst!"
                   },
                   {
                       "id":  "vb-путешествовать",
@@ -184,7 +212,9 @@
                       "example_en":  "I love to travel.",
                       "example_es":  "A mí me encanta viajar.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "wo entlang? – по + Dativ (по Росси́и)"
+                      "government":  "wo entlang? – по + Dativ (по Росси́и)",
+                      "ipf_imp_ex":  "Путеше́ствуй, пока́ молодо́й!",
+                      "ipf_imp_ex_de":  "Reise, solange du jung bist!"
                   },
                   {
                       "id":  "vb-завтракать",
@@ -204,7 +234,11 @@
                       "example_en":  "I have breakfast at seven.",
                       "example_es":  "Yo desayuno a las siete.",
                       "example_cases":  "в семь – Akkusativ (Uhrzeit)",
-                      "government":  "womit? – Instrumental (за́втракать ка́шей)"
+                      "government":  "womit? – Instrumental (за́втракать ка́шей)",
+                      "ipf_imp_ex":  "За́втракай ка́ждое у́тро!",
+                      "ipf_imp_ex_de":  "Frühstücke jeden Morgen!",
+                      "pf_imp_ex":  "Поза́втракай пе́ред доро́гой!",
+                      "pf_imp_ex_de":  "Frühstücke vor der Reise!"
                   },
                   {
                       "id":  "vb-катить",
@@ -228,7 +262,11 @@
                       "example_cases":  "чемода́н – Akkusativ · к вы́ходу – Dativ (nach к)",
                       "government":  "was? – Akkusativ · wohin? – к + Dativ, в/на + Akkusativ",
                       "motion":  "uni",
-                      "motion_pair":  "ката́ть"
+                      "motion_pair":  "ката́ть",
+                      "ipf_imp_ex":  "Кати́ мяч ко мне!",
+                      "ipf_imp_ex_de":  "Roll den Ball zu mir!",
+                      "pf_imp_ex":  "Покати́ коля́ску в парк!",
+                      "pf_imp_ex_de":  "Schieb den Kinderwagen in den Park!"
                   },
                   {
                       "id":  "vb-умываться",
@@ -249,7 +287,11 @@
                       "example_en":  "I wash my face with cold water.",
                       "example_es":  "Yo me lavo la cara con agua fría.",
                       "example_cases":  "холо́дной водо́й – Instrumental (womit?)",
-                      "government":  "womit? – Instrumental"
+                      "government":  "womit? – Instrumental",
+                      "ipf_imp_ex":  "Умыва́йся холо́дной водо́й!",
+                      "ipf_imp_ex_de":  "Wasch dir das Gesicht mit kaltem Wasser!",
+                      "pf_imp_ex":  "Умо́йся и иди́ за́втракать!",
+                      "pf_imp_ex_de":  "Wasch dich und komm frühstücken!"
                   },
                   {
                       "id":  "vb-стыдиться",
@@ -270,7 +312,11 @@
                       "example_en":  "Don\u0027t be ashamed of your mistakes.",
                       "example_es":  "No tengas vergüenza de tus errores.",
                       "example_cases":  "свои́х оши́бок – Genitiv (nach стыди́ться)",
-                      "government":  "vor wem? wofür? – Genitiv"
+                      "government":  "vor wem? wofür? – Genitiv",
+                      "ipf_imp_ex":  "Не стыди́сь свои́х оши́бок!",
+                      "ipf_imp_ex_de":  "Schäm dich nicht für deine Fehler!",
+                      "pf_imp_ex":  "Постыди́сь!",
+                      "pf_imp_ex_de":  "Schäm dich!"
                   },
                   {
                       "id":  "vb-мириться",
@@ -291,7 +337,11 @@
                       "example_en":  "They made up.",
                       "example_es":  "Ellos se contentaron.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "mit wem? – с + Instrumental"
+                      "government":  "mit wem? – с + Instrumental",
+                      "ipf_imp_ex":  "Не мири́сь с несправедли́востью!",
+                      "ipf_imp_ex_de":  "Find dich nicht mit Ungerechtigkeit ab!",
+                      "pf_imp_ex":  "Помири́сь с бра́том!",
+                      "pf_imp_ex_de":  "Versöhne dich mit deinem Bruder!"
                   },
                   {
                       "id":  "vb-худеть",
@@ -312,7 +362,11 @@
                       "example_en":  "I want to lose weight.",
                       "example_es":  "Yo quiero rebajar.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "um wie viel? – на + Akkusativ"
+                      "government":  "um wie viel? – на + Akkusativ",
+                      "ipf_imp_ex":  "Не худе́й сли́шком!",
+                      "ipf_imp_ex_de":  "Nimm nicht zu viel ab!",
+                      "pf_imp_ex":  "Похуде́й к ле́ту!",
+                      "pf_imp_ex_de":  "Nimm bis zum Sommer ab!"
                   },
                   {
                       "id":  "vb-кашлять",
@@ -333,7 +387,11 @@
                       "example_es":  "El niño está tosiendo mucho.",
                       "example_cases":  "nur Nominativ",
                       "government":  "ohne Objekt",
-                      "pf_imp":  "ка́шляни"
+                      "ipf_imp_ex":  "Не ка́шляй на люде́й!",
+                      "ipf_imp_ex_de":  "Huste die Leute nicht an!",
+                      "pf_imp":  "ка́шляни",
+                      "pf_imp_ex":  "Ка́шляни, пожа́луйста!",
+                      "pf_imp_ex_de":  "Huste bitte einmal!"
                   },
                   {
                       "id":  "vb-мыться",
@@ -353,7 +411,11 @@
                       "example_en":  "I wash every evening.",
                       "example_es":  "Yo me baño todas las noches.",
                       "example_cases":  "ка́ждый ве́чер – Akkusativ (wann?)",
-                      "government":  "womit? – Instrumental"
+                      "government":  "womit? – Instrumental",
+                      "ipf_imp_ex":  "Мо́йся ка́ждый день!",
+                      "ipf_imp_ex_de":  "Wasch dich jeden Tag!",
+                      "pf_imp_ex":  "Помо́йся пе́ред сном!",
+                      "pf_imp_ex_de":  "Wasch dich vor dem Schlafen!"
                   },
                   {
                       "id":  "vb-ползать",
@@ -374,7 +436,9 @@
                       "example_cases":  "nur Nominativ",
                       "government":  "wo? – по + Dativ",
                       "motion":  "multi",
-                      "motion_pair":  "ползти́"
+                      "motion_pair":  "ползти́",
+                      "ipf_imp_ex":  "Не по́лзай по полу́!",
+                      "ipf_imp_ex_de":  "Krabbel nicht auf dem Boden herum!"
                   },
                   {
                       "id":  "vb-поправляться",
@@ -396,7 +460,11 @@
                       "example_es":  "Yo engordé tres kilos.",
                       "es2_verb":  "engordar",
                       "example_cases":  "на три кило́ – Akkusativ (um wie viel?)",
-                      "government":  "um wie viel? – на + Akkusativ"
+                      "government":  "um wie viel? – на + Akkusativ",
+                      "ipf_imp_ex":  "Поправля́йся!",
+                      "ipf_imp_ex_de":  "Gute Besserung!",
+                      "pf_imp_ex":  "Попра́вься скоре́е!",
+                      "pf_imp_ex_de":  "Werd schnell wieder gesund!"
                   },
                   {
                       "id":  "vb-тренироваться",
@@ -417,7 +485,11 @@
                       "example_en":  "I train three times a week.",
                       "example_es":  "Yo entreno tres veces a la semana.",
                       "example_cases":  "три ра́за – Genitiv (nach три) · в неде́лю – Akkusativ (pro Woche)",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Трениру́йся ка́ждый день!",
+                      "ipf_imp_ex_de":  "Trainiere jeden Tag!",
+                      "pf_imp_ex":  "Потрениру́йся пе́ред игро́й!",
+                      "pf_imp_ex_de":  "Trainiere vor dem Spiel!"
                   },
                   {
                       "id":  "vb-сушить",
@@ -437,7 +509,11 @@
                       "example_en":  "I\u0027m drying my hair.",
                       "example_es":  "Yo me estoy secando el pelo.",
                       "example_cases":  "во́лосы – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Не суши́ бельё на батаре́е!",
+                      "ipf_imp_ex_de":  "Trockne die Wäsche nicht auf der Heizung!",
+                      "pf_imp_ex":  "Вы́суши во́лосы!",
+                      "pf_imp_ex_de":  "Föhn dir die Haare!"
                   },
                   {
                       "id":  "vb-жарить",
@@ -457,7 +533,11 @@
                       "example_en":  "I\u0027m frying fish.",
                       "example_es":  "Yo frío el pescado.",
                       "example_cases":  "ры́бу – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Не жарь на сли́вочном ма́сле!",
+                      "ipf_imp_ex_de":  "Brate nicht in Butter!",
+                      "pf_imp_ex":  "Пожа́рь карто́шку!",
+                      "pf_imp_ex_de":  "Brat Kartoffeln!"
                   },
                   {
                       "id":  "vb-загружать",
@@ -478,7 +558,11 @@
                       "example_en":  "Upload the photo to the chat.",
                       "example_es":  "Sube la foto al chat.",
                       "example_cases":  "фо́то – Akkusativ · в чат – Akkusativ (wohin?)",
-                      "government":  "was? – Akkusativ · wohin? – в/на + Akkusativ"
+                      "government":  "was? – Akkusativ · wohin? – в/на + Akkusativ",
+                      "ipf_imp_ex":  "Не загружа́й ли́шние фа́йлы!",
+                      "ipf_imp_ex_de":  "Lade keine unnötigen Dateien hoch!",
+                      "pf_imp_ex":  "Загрузи́ фо́то на сайт!",
+                      "pf_imp_ex_de":  "Lade das Foto auf die Webseite hoch!"
                   },
                   {
                       "id":  "vb-бриться",
@@ -498,7 +582,11 @@
                       "example_en":  "He shaves every morning.",
                       "example_es":  "Él se afeita todas las mañanas.",
                       "example_cases":  "ка́ждое у́тро – Akkusativ (wann?)",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Бре́йся ка́ждое у́тро!",
+                      "ipf_imp_ex_de":  "Rasier dich jeden Morgen!",
+                      "pf_imp_ex":  "Побре́йся пе́ред встре́чей!",
+                      "pf_imp_ex_de":  "Rasier dich vor dem Treffen!"
                   },
                   {
                       "id":  "vb-выздоравливать",
@@ -519,7 +607,11 @@
                       "example_en":  "Get well soon!",
                       "example_es":  "¡Que te mejores pronto!",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Выздора́вливай!",
+                      "ipf_imp_ex_de":  "Gute Besserung!",
+                      "pf_imp_ex":  "Вы́здоровей поскоре́е!",
+                      "pf_imp_ex_de":  "Werd schnell gesund!"
                   },
                   {
                       "id":  "vb-вредить",
@@ -540,7 +632,11 @@
                       "example_en":  "Smoking harms your health.",
                       "example_es":  "Fumar perjudica la salud.",
                       "example_cases":  "здоро́вью – Dativ (nach вреди́ть)",
-                      "government":  "wem? – Dativ"
+                      "government":  "wem? – Dativ",
+                      "ipf_imp_ex":  "Не вреди́ себе́!",
+                      "ipf_imp_ex_de":  "Schade dir nicht selbst!",
+                      "pf_imp_ex":  "Не навреди́ ему́!",
+                      "pf_imp_ex_de":  "Schade ihm bloß nicht!"
                   },
                   {
                       "id":  "vb-загорать",
@@ -561,7 +657,11 @@
                       "example_en":  "We\u0027re sunbathing on the beach.",
                       "example_es":  "Nosotros estamos cogiendo sol en la playa.",
                       "example_cases":  "на пля́же – Präpositiv (wo?)",
-                      "government":  "wo? – на + Präpositiv"
+                      "government":  "wo? – на + Präpositiv",
+                      "ipf_imp_ex":  "Не загора́й в по́лдень!",
+                      "ipf_imp_ex_de":  "Sonn dich nicht zur Mittagszeit!",
+                      "pf_imp_ex":  "Загори́ на мо́ре!",
+                      "pf_imp_ex_de":  "Werd am Meer schön braun!"
                   },
                   {
                       "id":  "vb-арендовать",
@@ -583,7 +683,9 @@
                       "example_es":  "Nosotros rentamos un carro.",
                       "note":  "Zweiaspektig.",
                       "example_cases":  "маши́ну – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Аренду́й маши́ну в аэропорту́!",
+                      "ipf_imp_ex_de":  "Miete ein Auto am Flughafen!"
                   },
                   {
                       "id":  "vb-катать",
@@ -607,7 +709,11 @@
                       "example_cases":  "сы́на – Akkusativ (belebt = wie Genitiv) · на велосипе́де – Präpositiv (nach на)",
                       "government":  "wen? – Akkusativ · womit? worauf? – на + Präpositiv",
                       "motion":  "multi",
-                      "motion_pair":  "кати́ть"
+                      "motion_pair":  "кати́ть",
+                      "ipf_imp_ex":  "Ката́й дете́й на са́нках!",
+                      "ipf_imp_ex_de":  "Zieh die Kinder auf dem Schlitten!",
+                      "pf_imp_ex":  "Поката́й меня́ на маши́не!",
+                      "pf_imp_ex_de":  "Fahr mich ein bisschen im Auto herum!"
                   },
                   {
                       "id":  "vb-весить",
@@ -624,7 +730,8 @@
                       "example_en":  "How much do you weigh?",
                       "example_es":  "¿Cuánto tú pesas?",
                       "example_cases":  "nur Nominativ",
-                      "government":  "wie viel? – Akkusativ (70 кило́)"
+                      "government":  "wie viel? – Akkusativ (70 кило́)",
+                      "ipf_imp":  "—"
                   },
                   {
                       "id":  "vb-согреваться",
@@ -644,7 +751,11 @@
                       "example_en":  "Go to the fireplace and warm up.",
                       "example_es":  "Ve a la chimenea y caliéntate.",
                       "example_cases":  "к ками́ну – Dativ (nach к)",
-                      "government":  "ohne Objekt · bei was? – у + Genitiv"
+                      "government":  "ohne Objekt · bei was? – у + Genitiv",
+                      "ipf_imp_ex":  "Согрева́йся ча́ем!",
+                      "ipf_imp_ex_de":  "Wärm dich mit Tee auf!",
+                      "pf_imp_ex":  "Согре́йся у ками́на!",
+                      "pf_imp_ex_de":  "Wärm dich am Kamin auf!"
                   },
                   {
                       "id":  "vb-одалживать",
@@ -664,7 +775,11 @@
                       "example_en":  "Lend me a pen.",
                       "example_es":  "Préstame un lápiz.",
                       "example_cases":  "мне – Dativ · ру́чку – Akkusativ",
-                      "government":  "wem? – Dativ · was? – Akkusativ"
+                      "government":  "wem? – Dativ · was? – Akkusativ",
+                      "ipf_imp_ex":  "Не ода́лживай ему́ де́ньги!",
+                      "ipf_imp_ex_de":  "Leih ihm kein Geld!",
+                      "pf_imp_ex":  "Одолжи́ мне ру́чку!",
+                      "pf_imp_ex_de":  "Leih mir einen Kuli!"
                   },
                   {
                       "id":  "vb-обменивать",
@@ -684,7 +799,11 @@
                       "example_en":  "Where can I exchange dollars?",
                       "example_es":  "¿Dónde se pueden cambiar dólares?",
                       "example_cases":  "до́ллары – Akkusativ",
-                      "government":  "was? worauf? – Akkusativ + на + Akkusativ"
+                      "government":  "was? worauf? – Akkusativ + на + Akkusativ",
+                      "ipf_imp_ex":  "Обме́нивай валю́ту в ба́нке!",
+                      "ipf_imp_ex_de":  "Tausch Geld bei der Bank um!",
+                      "pf_imp_ex":  "Обменя́й е́вро на рубли́!",
+                      "pf_imp_ex_de":  "Tausch Euro in Rubel um!"
                   },
                   {
                       "id":  "vb-чихать",
@@ -704,7 +823,11 @@
                       "example_en":  "Bless you! You sneezed.",
                       "example_es":  "¡Salud! Tú estornudaste.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Не чиха́й на меня́!",
+                      "ipf_imp_ex_de":  "Nies mich nicht an!",
+                      "pf_imp_ex":  "Чихни́ в плато́к!",
+                      "pf_imp_ex_de":  "Nies in ein Taschentuch!"
                   },
                   {
                       "id":  "vb-мерить",
@@ -726,7 +849,11 @@
                       "example_es":  "¿Me puedo probar estos pantalones?",
                       "es2_verb":  "probarse",
                       "example_cases":  "э́ти брю́ки – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Ме́рьте температу́ру ка́ждое у́тро!",
+                      "ipf_imp_ex_de":  "Messen Sie jeden Morgen Fieber!",
+                      "pf_imp_ex":  "Поме́рь э́ти джи́нсы!",
+                      "pf_imp_ex_de":  "Probier diese Jeans an!"
                   },
                   {
                       "id":  "vb-клеить",
@@ -746,7 +873,11 @@
                       "example_en":  "Stick the stamp on the envelope.",
                       "example_es":  "Pégale el sello al sobre.",
                       "example_cases":  "ма́рку – Akkusativ · на конве́рт – Akkusativ (wohin?)",
-                      "government":  "was? – Akkusativ · wohin? – на + Akkusativ"
+                      "government":  "was? – Akkusativ · wohin? – на + Akkusativ",
+                      "ipf_imp_ex":  "Не клей обо́и одни́!",
+                      "ipf_imp_ex_de":  "Tapeziere nicht allein!",
+                      "pf_imp_ex":  "Накле́й ма́рку на конве́рт!",
+                      "pf_imp_ex_de":  "Klebe die Briefmarke auf den Umschlag!"
                   },
                   {
                       "id":  "vb-регистрироваться",
@@ -766,7 +897,11 @@
                       "example_en":  "Register on the website.",
                       "example_es":  "Regístrese en la página web.",
                       "example_cases":  "на са́йте – Präpositiv (wo?)",
-                      "government":  "wo? – в/на + Präpositiv"
+                      "government":  "wo? – в/на + Präpositiv",
+                      "ipf_imp_ex":  "Регистри́руйся на са́йте!",
+                      "ipf_imp_ex_de":  "Registriere dich auf der Webseite!",
+                      "pf_imp_ex":  "Зарегистри́руйся на рейс!",
+                      "pf_imp_ex_de":  "Check für den Flug ein!"
                   },
                   {
                       "id":  "vb-остывать",
@@ -786,7 +921,11 @@
                       "example_en":  "Eat, or the soup will get cold.",
                       "example_es":  "Come, que se te va a enfriar la sopa.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Не остыва́й ко мне!",
+                      "ipf_imp_ex_de":  "Werd mir gegenüber nicht kühl!",
+                      "pf_imp_ex":  "Осты́нь немно́го, пото́м поговори́м!",
+                      "pf_imp_ex_de":  "Komm erst mal runter, dann reden wir!"
                   },
                   {
                       "id":  "vb-лазить",
@@ -807,7 +946,9 @@
                       "example_cases":  "по дере́вьям – Dativ (nach по)",
                       "government":  "wo? wo entlang? – по + Dativ (по дере́вьям) · wohin? – в/на + Akkusativ",
                       "motion":  "multi",
-                      "motion_pair":  "лезть"
+                      "motion_pair":  "лезть",
+                      "ipf_imp_ex":  "Не лазь по дере́вьям!",
+                      "ipf_imp_ex_de":  "Kletter nicht auf Bäume!"
                   },
                   {
                       "id":  "vb-причесываться",
@@ -827,7 +968,11 @@
                       "example_en":  "She is combing her hair in front of the mirror.",
                       "example_es":  "Ella se está peinando frente al espejo.",
                       "example_cases":  "пе́ред зе́ркалом – Instrumental (nach пе́ред)",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "ipf_imp_ex":  "Причёсывайся ка́ждое у́тро!",
+                      "ipf_imp_ex_de":  "Kämm dich jeden Morgen!",
+                      "pf_imp_ex":  "Причеши́сь!",
+                      "pf_imp_ex_de":  "Kämm dich!"
                   },
                   {
                       "id":  "vb-бронировать",
@@ -847,7 +992,11 @@
                       "example_en":  "I booked a table.",
                       "example_es":  "Yo reservé una mesa.",
                       "example_cases":  "сто́лик – Akkusativ",
-                      "government":  "was? – Akkusativ"
+                      "government":  "was? – Akkusativ",
+                      "ipf_imp_ex":  "Брони́руй биле́ты зара́нее!",
+                      "ipf_imp_ex_de":  "Buche die Tickets im Voraus!",
+                      "pf_imp_ex":  "Заброни́руй сто́лик в рестора́не!",
+                      "pf_imp_ex_de":  "Reserviere einen Tisch im Restaurant!"
                   },
                   {
                       "id":  "vb-толстеть",
@@ -867,7 +1016,11 @@
                       "example_en":  "I put on weight during vacation.",
                       "example_es":  "Yo engordé en las vacaciones.",
                       "example_cases":  "за о́тпуск – Akkusativ (nach за = während)",
-                      "government":  "um wie viel? – на + Akkusativ"
+                      "government":  "um wie viel? – на + Akkusativ",
+                      "ipf_imp_ex":  "Не толсте́й!",
+                      "ipf_imp_ex_de":  "Werd nicht dick!",
+                      "pf_imp_ex":  "Не потолсте́й за пра́здники!",
+                      "pf_imp_ex_de":  "Nimm bloß über die Feiertage nicht zu!"
                   },
                   {
                       "id":  "vb-скачивать",
@@ -888,7 +1041,11 @@
                       "example_en":  "I downloaded a new game.",
                       "example_es":  "Yo descargué un juego nuevo.",
                       "example_cases":  "но́вую игру́ – Akkusativ",
-                      "government":  "was? – Akkusativ · woher? – из/с + Genitiv"
+                      "government":  "was? – Akkusativ · woher? – из/с + Genitiv",
+                      "ipf_imp_ex":  "Не ска́чивай незнако́мые програ́ммы!",
+                      "ipf_imp_ex_de":  "Lade keine unbekannten Programme herunter!",
+                      "pf_imp_ex":  "Скача́й э́то приложе́ние!",
+                      "pf_imp_ex_de":  "Lade diese App herunter!"
                   }
               ]
 }
