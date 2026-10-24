@@ -86,7 +86,7 @@ $usedImpEx = @{}
 $cards = New-Object System.Collections.ArrayList
 $seen = @{}
 $missing = @()
-foreach ($file in Get-ChildItem $src -Filter '*.txt' | Sort-Object Name) {
+foreach ($file in Get-ChildItem $src -Filter 'verben-*.txt' | Sort-Object Name) {
   $lineNo = 0
   foreach ($line in [IO.File]::ReadAllLines($file.FullName, $utf8)) {
     $lineNo++
