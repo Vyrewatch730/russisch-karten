@@ -625,18 +625,69 @@
                       "example_es":  "Aquí hay un tren de mercancías."
                   },
                   {
-                      "id":  "aj-занятой",
+                      "id":  "aj-специализированный",
                       "type":  "adjfull",
-                      "ru":  "занято́й",
-                      "de":  "beschäftigt (Person)",
-                      "en":  "busy",
-                      "es":  "ocupado, atareado",
-                      "hint":  "Kurzform: Я за́нят. = Ich bin beschäftigt. За́нято! = Besetzt!",
-                      "example":  "Он о́чень занято́й челове́к.",
-                      "example_cases":  "занято́й челове́к – Nominativ",
-                      "example_de":  "Er ist ein sehr beschäftigter Mensch.",
-                      "example_en":  "He\u0027s a very busy person.",
-                      "example_es":  "Es una persona muy ocupada."
+                      "ru":  "специализи́рованный",
+                      "de":  "spezialisiert, Fach-",
+                      "en":  "specialized",
+                      "es":  "especializado",
+                      "example":  "Э́то специализи́рованный магази́н.",
+                      "example_cases":  "специализи́рованный магази́н – Nominativ",
+                      "example_de":  "Das ist ein Fachgeschäft.",
+                      "example_en":  "It\u0027s a specialty store.",
+                      "example_es":  "Es una tienda especializada."
+                  },
+                  {
+                      "id":  "aj-непростой",
+                      "type":  "adjfull",
+                      "ru":  "непросто́й",
+                      "de":  "nicht einfach, schwierig",
+                      "en":  "not easy, complicated",
+                      "es":  "complicado, difícil",
+                      "example":  "Э́то непросто́й вопро́с.",
+                      "example_cases":  "непросто́й вопро́с – Nominativ",
+                      "example_de":  "Das ist keine einfache Frage.",
+                      "example_en":  "That\u0027s not an easy question.",
+                      "example_es":  "No es una pregunta fácil."
+                  },
+                  {
+                      "id":  "aj-мучительный",
+                      "type":  "adjfull",
+                      "ru":  "мучи́тельный",
+                      "de":  "quälend, qualvoll",
+                      "en":  "agonizing, painful",
+                      "es":  "angustioso, doloroso",
+                      "example":  "Э́то бы́ло мучи́тельное ожида́ние.",
+                      "example_cases":  "мучи́тельное ожида́ние – Nominativ",
+                      "example_de":  "Das war ein quälendes Warten.",
+                      "example_en":  "It was an agonizing wait.",
+                      "example_es":  "Fue una espera angustiosa."
+                  },
+                  {
+                      "id":  "aj-любовный",
+                      "type":  "adjfull",
+                      "ru":  "любо́вный",
+                      "de":  "Liebes-",
+                      "en":  "love",
+                      "es":  "amoroso, de amor",
+                      "example":  "Я чита́ю любо́вный рома́н.",
+                      "example_cases":  "любо́вный рома́н – Akkusativ",
+                      "example_de":  "Ich lese einen Liebesroman.",
+                      "example_en":  "I\u0027m reading a romance novel.",
+                      "example_es":  "Leo una novela romántica."
+                  },
+                  {
+                      "id":  "aj-драматический",
+                      "type":  "adjfull",
+                      "ru":  "драмати́ческий",
+                      "de":  "dramatisch, Schauspiel-",
+                      "en":  "dramatic",
+                      "es":  "dramático",
+                      "example":  "Мы ходи́ли в драмати́ческий теа́тр.",
+                      "example_cases":  "в драмати́ческий теа́тр – Akkusativ (wohin?)",
+                      "example_de":  "Wir waren im Schauspielhaus.",
+                      "example_en":  "We went to the drama theater.",
+                      "example_es":  "Fuimos al teatro dramático."
                   }
               ]
 }
