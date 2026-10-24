@@ -880,6 +880,7 @@ function nounHtml(card) {
     <div class="nn-tags"><span class="nn-g">${g.label}</span>${x.anim ? `<span class="nn-anim">👤 belebt${info}</span><div class="vp-rule">${ANIM_INFO}</div>` : ''}</div>
     <div class="nn-word">${esc(word)}${pron(word)} ${say(word)}</div>
     ${key.length ? `<div class="nn-key">${key.join('')}</div>` : ''}
+    ${declensionHtml(card)}
     ${x.hint ? `<div class="nn-hint">⚠️ Achtung${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
     ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
   </div>`;
@@ -1075,7 +1076,6 @@ function renderStudy() {
             <span class="badge type">${esc(typeName)}</span>
             ${ruFirst ? trSide() : ruSide()}
             ${conjugationHtml(card)}
-            ${declensionHtml(card)}
             ${extrasHtml(card)}
           </div>
         </div>
