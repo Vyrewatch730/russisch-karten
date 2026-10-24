@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 32;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 33;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -291,7 +291,7 @@ function ruWordPron(word) {
       out += RU_CONS[lc] || c;
     }
   }
-  return out;
+  return out.replace(/tschsch/g, 'tsch');   // лу́чший: ч vor ш klingt wie ein Laut
 }
 
 function ruPron(text) {

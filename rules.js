@@ -529,6 +529,124 @@ Wörter auf <b>-ия / -ие</b>: Dativ und Präpositiv auf <b>-ии</b>: в Р�
 </ul>`,
   },
   {
+    id: 'adjektive',
+    icon: '🎨',
+    title: 'Adjektive',
+    teaser: 'Endungen in allen Fällen, Kurzformen, Steigerung, Adverbien',
+    html: `
+<p>Ein Adjektiv passt sich immer dem Nomen an: <b>Geschlecht, Zahl und Fall</b> sind gleich. Die Frage dazu: <b>како́й?</b> (m) · <b>како́е?</b> (n) · <b>кака́я?</b> (f) · <b>каки́е?</b> (Pl.)</p>
+<ul>
+  <li>${RW('но́вый дом')} – männlich</li>
+  <li>${RW('но́вое окно́')} – sächlich</li>
+  <li>${RW('но́вая кни́га')} – weiblich</li>
+  <li>${RW('но́вые дома́')} – Plural (für alle Geschlechter gleich)</li>
+</ul>
+<p class="tip">Das Adjektiv steht wie im Deutschen <b>vor</b> dem Nomen. Im Wörterbuch steht immer die männliche Form: но́вый, хоро́ший, большо́й.</p>
+
+<h3>Grundmuster: но́вый (neu)</h3>
+<table class="rtable small">
+  <tr><th></th><th>männlich</th><th>sächlich</th><th>weiblich</th><th>Plural</th></tr>
+  <tr><td>Nom.</td><td>но́вый</td><td>но́вое</td><td>но́вая</td><td>но́вые</td></tr>
+  <tr><td>Gen.</td><td>но́вого</td><td>но́вого</td><td>но́вой</td><td>но́вых</td></tr>
+  <tr><td>Dat.</td><td>но́вому</td><td>но́вому</td><td>но́вой</td><td>но́вым</td></tr>
+  <tr><td>Akk.</td><td>wie Nom. / Gen.*</td><td>но́вое</td><td>но́вую</td><td>wie Nom. / Gen.*</td></tr>
+  <tr><td>Ins.</td><td>но́вым</td><td>но́вым</td><td>но́вой</td><td>но́выми</td></tr>
+  <tr><td>Präp.</td><td>но́вом</td><td>но́вом</td><td>но́вой</td><td>но́вых</td></tr>
+</table>
+<p class="tip">* Akkusativ männlich und Plural: bei unbelebten Nomen wie der Nominativ (ви́жу но́вый дом), bei Menschen und Tieren wie der Genitiv (ви́жу но́вого дру́га).<br>
+Die Endung <b>-ого / -его</b> spricht man mit <b>w</b>: но́вого [nówawa]. ${RW('но́вого')}</p>
+<p><b>Merkhilfe:</b> Die Endungen ähneln den Fragewörtern – <b>как</b>о́го? → но́в<b>ого</b>, <b>как</b>о́му? → но́в<b>ому</b>, <b>как</b>и́м? → но́в<b>ым</b>. Weiblich ist fast alles <b>-ой</b>, nur Akkusativ <b>-ую</b>.</p>
+
+<h3>Betonte Endung: большо́й (groß)</h3>
+<p>Ist die Endung betont, heißt es im Nominativ männlich <b>-о́й</b> statt -ый. Die anderen Formen bleiben gleich, nur mit Betonung auf der Endung.</p>
+<table class="rtable small">
+  <tr><th></th><th>männlich</th><th>sächlich</th><th>weiblich</th><th>Plural</th></tr>
+  <tr><td>Nom.</td><td>большо́й</td><td>большо́е</td><td>больша́я</td><td>больши́е</td></tr>
+  <tr><td>Gen.</td><td>большо́го</td><td>большо́го</td><td>большо́й</td><td>больши́х</td></tr>
+  <tr><td>Ins.</td><td>больши́м</td><td>больши́м</td><td>большо́й</td><td>больши́ми</td></tr>
+</table>
+<p>Weitere: ${RW('молодо́й')} (jung), ${RW('плохо́й')} (schlecht), ${RW('дорого́й')} (teuer, lieb), ${RW('друго́й')} (anderer), ${RW('родно́й')} (heimatlich)</p>
+
+<h3>Weiche Adjektive: си́ний (dunkelblau)</h3>
+<p>Endet das Adjektiv auf <b>-ний</b>, wird überall die weiche Variante benutzt: ы → и, о → е, а → я, у → ю.</p>
+<table class="rtable small">
+  <tr><th></th><th>männlich</th><th>sächlich</th><th>weiblich</th><th>Plural</th></tr>
+  <tr><td>Nom.</td><td>си́ний</td><td>си́нее</td><td>си́няя</td><td>си́ние</td></tr>
+  <tr><td>Gen.</td><td>си́него</td><td>си́него</td><td>си́ней</td><td>си́них</td></tr>
+  <tr><td>Akk. f</td><td colspan="4">си́нюю</td></tr>
+</table>
+<p>Weitere: ${RW('после́дний')} (letzter), ${RW('ле́тний')} (Sommer-), ${RW('зи́мний')} (Winter-), ${RW('у́тренний')} (Morgen-), ${RW('сего́дняшний')} (heutig)</p>
+
+<h3>Rechtschreibregeln (erklären „komische“ Endungen)</h3>
+<ol>
+  <li>Nach <b>г, к, х, ж, ш, ч, щ</b> steht nie ы, sondern <b>и</b>: ${RW('ру́сский')}, ${RW('хоро́ший')}, ${RW('ти́хий')} – Plural ру́сские, хоро́шие.</li>
+  <li>Nach <b>ж, ш, ч, щ, ц</b> steht ohne Betonung <b>е</b> statt о: ${RW('хоро́шее')}, хоро́шего, хоро́шей (aber betont: большо́й, большо́го).</li>
+</ol>
+<table class="rtable small">
+  <tr><th></th><th>männlich</th><th>sächlich</th><th>weiblich</th><th>Plural</th></tr>
+  <tr><td>Nom.</td><td>хоро́ший</td><td>хоро́шее</td><td>хоро́шая</td><td>хоро́шие</td></tr>
+  <tr><td>Gen.</td><td>хоро́шего</td><td>хоро́шего</td><td>хоро́шей</td><td>хоро́ших</td></tr>
+  <tr><td>Ins.</td><td>хоро́шим</td><td>хоро́шим</td><td>хоро́шей</td><td>хоро́шими</td></tr>
+</table>
+
+<h3>Kurzformen (nach dem Nomen, als Aussage)</h3>
+<p>Viele Adjektive haben eine Kurzform. Sie steht nach dem Subjekt, wie „ist …“ im Deutschen: ${RW('Он гото́в.')} (Er ist bereit.)</p>
+<table class="rtable small">
+  <tr><th>Bedeutung</th><th>männlich</th><th>weiblich</th><th>sächlich</th><th>Plural</th></tr>
+  <tr><td>froh</td><td>рад</td><td>ра́да</td><td>–</td><td>ра́ды</td></tr>
+  <tr><td>bereit</td><td>гото́в</td><td>гото́ва</td><td>гото́во</td><td>гото́вы</td></tr>
+  <tr><td>muss</td><td>до́лжен</td><td>должна́</td><td>должно́</td><td>должны́</td></tr>
+  <tr><td>braucht (nötig)</td><td>ну́жен</td><td>нужна́</td><td>ну́жно</td><td>нужны́</td></tr>
+  <tr><td>hat recht</td><td>прав</td><td>права́</td><td>–</td><td>пра́вы</td></tr>
+  <tr><td>beschäftigt</td><td>за́нят</td><td>занята́</td><td>за́нято</td><td>за́няты</td></tr>
+</table>
+<ul>
+  <li>${RW('Я рад тебя́ ви́деть.')} – Ich freue mich, dich zu sehen. (eine Frau: Я ра́да)</li>
+  <li>${RW('Она́ должна́ рабо́тать.')} – Sie muss arbeiten.</li>
+  <li>${RW('Мне нужна́ по́мощь.')} – Ich brauche Hilfe. (richtet sich nach по́мощь, weiblich)</li>
+</ul>
+<p class="tip">рад, до́лжен und прав gibt es <b>nur</b> als Kurzform.</p>
+
+<h3>Steigerung: Komparativ (größer, schneller)</h3>
+<p>Regel: Stamm + <b>-ее</b>. Die Form ändert sich nicht (kein Geschlecht, kein Fall).</p>
+<ul>
+  <li>${RW('бы́стрый')} → ${RW('быстре́е')} (schneller)</li>
+  <li>${RW('интере́сный')} → ${RW('интере́снее')} (interessanter)</li>
+  <li>${RW('тёплый')} → ${RW('тепле́е')} (wärmer)</li>
+</ul>
+<p><b>Unregelmäßig</b> (sehr häufig, auswendig lernen):</p>
+<table class="rtable small">
+  <tr><td>хоро́ший → <b>лу́чше</b></td><td>плохо́й → <b>ху́же</b></td></tr>
+  <tr><td>большо́й → <b>бо́льше</b></td><td>ма́ленький → <b>ме́ньше</b></td></tr>
+  <tr><td>ста́рый → <b>ста́рше</b></td><td>молодо́й → <b>моло́же</b></td></tr>
+  <tr><td>дорого́й → <b>доро́же</b></td><td>дешёвый → <b>деше́вле</b></td></tr>
+  <tr><td>высо́кий → <b>вы́ше</b></td><td>лёгкий → <b>ле́гче</b></td></tr>
+</table>
+<p>Vergleichen geht auf zwei Arten:</p>
+<ul>
+  <li>mit <b>чем</b> (wie im Deutschen „als“): ${RW('Брат ста́рше, чем я.')}</li>
+  <li>ohne чем, dann steht der Vergleich im <b>Genitiv</b>: ${RW('Брат ста́рше меня́.')}</li>
+</ul>
+
+<h3>Superlativ (der größte, der schönste)</h3>
+<p>Am einfachsten: <b>са́мый</b> + Adjektiv. са́мый wird wie ein Adjektiv mitdekliniert.</p>
+<ul>
+  <li>${RW('Москва́ – са́мый большо́й го́род Росси́и.')}</li>
+  <li>${RW('Э́то са́мая краси́вая у́лица.')}</li>
+  <li>Kurz und häufig: ${RW('лу́чший')} (der beste), ${RW('ху́дший')} (der schlechteste)</li>
+</ul>
+
+<h3>Vom Adjektiv zum Adverb</h3>
+<p>Endung <b>-ый / -ий / -ой</b> → <b>-о</b> (manchmal -е). So sagt man auch, wie etwas ist oder wie es einem geht:</p>
+<ul>
+  <li>${RW('хоро́ший')} → ${RW('хорошо́')}: ${RW('Он хорошо́ говори́т.')}</li>
+  <li>${RW('бы́стрый')} → ${RW('бы́стро')}: ${RW('Она́ бы́стро бе́гает.')}</li>
+  <li>${RW('холо́дный')} → ${RW('хо́лодно')}: ${RW('Мне хо́лодно.')} – Mir ist kalt. (Person im Dativ)</li>
+  <li>Sprachen: ${RW('ру́сский')} → ${RW('по-ру́сски')} (auf Russisch)</li>
+</ul>
+`,
+  },
+  {
     id: 'praepositionen',
     icon: '📍',
     title: 'Präpositionen',
