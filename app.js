@@ -910,7 +910,7 @@ function declensionHtml(card) {
   const exSg = nounExamples(x.ex_sg), exPl = nounExamples(x.ex_pl);
   const say = forms => forms.filter(Boolean).length ? `<button class="say" data-say="${esc(forms.filter(Boolean).join(', '))}">🔊</button>` : '';
   const cols = [sg.filter(Boolean).length && 'Singular', pl.filter(Boolean).length && 'Plural'].filter(Boolean);
-  const exLine = (ex, form, label) => ex && ex.ru ? `<div class="nn-ex"><i>${label}</i> ${markForm(ex.ru, form)} ${say([ex.ru])}${ex.de ? `<div class="nn-ex-de">${esc(ex.de)}</div>` : ''}</div>` : '';
+  const exLine = (ex, form, label) => ex && ex.ru ? `<div class="nn-ex"><i>${label}</i> ${markForm(ex.ru, form)} ${say([ex.ru])}<div class="pron nn-ex-pron">[${esc(ruPron(ex.ru))}]</div>${ex.de ? `<div class="nn-ex-de">${esc(ex.de)}</div>` : ''}</div>` : '';
   const rows = NOUN_CASES.map(([c, q], i) => {
     const exs = (cols.includes('Singular') ? exLine(exSg[i], sg[i], cols.length > 1 ? 'Sg.' : '') : '') + (cols.includes('Plural') ? exLine(exPl[i], pl[i], cols.length > 1 ? 'Pl.' : '') : '');
     return `<tr><th>${c}${exs ? ' <button class="info" aria-label="Beispiel anzeigen">ⓘ</button>' : ''}<small>${q}</small></th>${cols.includes('Singular') ? `<td>${esc(sg[i] || '')}</td>` : ''}${cols.includes('Plural') ? `<td>${esc(pl[i] || '')}</td>` : ''}</tr>`
