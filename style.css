@@ -348,3 +348,7 @@ tr.vp-rule.open { display: table-row; }
 .aj-row { font-size: 15px; }
 .aj-row i { font-style: normal; font-size: 12px; color: var(--muted); margin-right: 4px; }
 .aj-irr { font-size: 11px; color: #b45309; font-weight: 600; }
+.aj-table + .aj-table { margin-top: 10px; }
+.aj-table td { font-size: 14px; }
+.aj-table th:first-child { width: 28%; }
+.aj-anim { font-size: 10px; color: var(--muted); font-weight: 400; }
