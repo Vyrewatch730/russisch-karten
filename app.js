@@ -1042,14 +1042,14 @@ const ADJ_ROWS = [['Nom.', 'wer? was?'], ['Gen.', 'wessen?'], ['Dat.', 'wem?'], 
 
 function adjType(m) {
   const p = m.replace(STRESS, '');
-  if (/о́й$/.test(m)) return 'end';
+  if (/ой$/.test(p)) return 'end';                           // -ой ist immer betont (злой, большо́й)
   if (/ний$/.test(p)) return 'soft';
   return 'hard';
 }
 
 function adjDecl(m) {
   const type = adjType(m);
-  const stem = type === 'end' ? m.slice(0, -3) : m.slice(0, -2);
+  const stem = m.replace(/(о́й|ой|ый|ий)$/, '');
   const plain = stem.replace(STRESS, '');
   const velar = /[гкх]$/.test(plain), sib = /[жшчщ]$/.test(plain);
   const E = ending => {
@@ -1061,7 +1061,8 @@ function adjDecl(m) {
     }
     if (type === 'soft') e = e.replace(/^яя$/, 'яя').replace(/^ую$/, 'юю');
     if (type === 'end') e = e.replace(/[аеиоуыэюя]/, v => v + '́');
-    return stem + e;
+    const w = stem + e;
+    return (w.replace(STRESS, '').match(/[аеёиоуыэюя]/g) || []).length <= 1 ? w.replace(STRESS, '') : w;   // злым: einsilbig, kein Akzent
   };
   const f = {
     m: [type === 'end' ? m : E('ый'), E('ого'), E('ому'), null, E('ым'), E('ом')],

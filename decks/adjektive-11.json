@@ -1,0 +1,25 @@
+{
+    "id":  "adjektive-11",
+    "name":  "Adjektive 11",
+    "languages":  [
+                      "ru",
+                      "de",
+                      "en",
+                      "es"
+                  ],
+    "cards":  [
+                  {
+                      "id":  "aj-трагический",
+                      "type":  "adjfull",
+                      "ru":  "траги́ческий",
+                      "de":  "tragisch",
+                      "en":  "tragic",
+                      "es":  "trágico",
+                      "example":  "Э́то траги́ческая исто́рия.",
+                      "example_cases":  "траги́ческая исто́рия – Nominativ",
+                      "example_de":  "Das ist eine tragische Geschichte.",
+                      "example_en":  "It\u0027s a tragic story.",
+                      "example_es":  "Es una historia trágica."
+                  }
+              ]
+}

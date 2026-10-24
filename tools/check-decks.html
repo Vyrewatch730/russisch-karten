@@ -107,7 +107,7 @@ document.getElementById('app').onload = async e => {
     for (const c of deck.cards) {
       cards++;
       for (const k of ADJ_REQUIRED) if (!c[k]) problem(c, `Feld ${k} fehlt`);
-      if (!/(ый|ий|о́й)$/.test(c.ru)) problem(c, 'Grundform endet nicht auf -ый/-ий/-о́й');
+      if (!/(ый|ий|ой|о́й)$/.test(c.ru)) problem(c, 'Grundform endet nicht auf -ый/-ий/-ой');
       const sentence = (c.example || '').toLowerCase();
       for (const part of (c.example_cases || '').split(' · ')) {
         for (const word of part.split(' – ')[0].match(/[а-яё́-]+/gi) || []) if (!sentence.includes(word.toLowerCase())) problem(c, `Fälle: „${word}“ steht nicht im Satz`);
