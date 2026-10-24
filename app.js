@@ -669,11 +669,26 @@ function dirChips() {
     `<button class="chip ${db.settings.qLang === o.v ? 'active' : ''}" data-dir="${o.v}">${esc(o.t)}</button>`).join('')}</div>`;
 }
 
+// Deck-Auswahl in der Übersicht: alle, nur Verben oder nur Nomen
+const DECK_KINDS = [
+  { v: 'all', t: 'Alle', test: () => true },
+  { v: 'verben', t: 'Verben', test: id => id.startsWith('verben-') },
+  { v: 'nomen', t: 'Nomen', test: id => id.startsWith('nomen-') },
+];
+function kindChips() {
+  const cur = db.settings.deckKind || 'all';
+  return `<div class="chips kind-chips">${DECK_KINDS.map(k =>
+    `<button class="chip ${cur === k.v ? 'active' : ''}" data-kind="${k.v}">${k.t}</button>`).join('')}</div>`;
+}
+
 function renderLearn() {
   setHeader('Карточки');
-  const decks = Object.values(db.decks);
+  const kind = DECK_KINDS.find(k => k.v === (db.settings.deckKind || 'all')) || DECK_KINDS[0];
+  const allDecks = Object.values(db.decks);
+  const decks = allDecks.filter(d => kind.test(d.id));
+  const allTitle = kind.v === 'all' ? 'Alle Decks' : 'Alle ' + kind.t;
   const view = $('#view');
-  if (!decks.length) {
+  if (!allDecks.length) {
     view.innerHTML = `
       <div class="empty">
         <div style="font-size:48px">🇷🇺</div>
@@ -694,11 +709,13 @@ function renderLearn() {
     </div>
     <div class="section">
       <h2>Decks</h2>
+      ${kindChips()}
       <div class="panel">
         ${decks.length > 1 ? `
           <div class="row clickable" data-study="*">
-            <div class="grow"><b>Alle Decks</b></div>${statRow(deckStats(allIds))}
+            <div class="grow"><b>${allTitle}</b></div>${statRow(deckStats(allIds))}
           </div>` : ''}
+        ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen – unter Einstellungen → Deck-Bibliothek</div></div>` : ''}
         ${decks.map(d => `
           <div class="row clickable" data-study="${esc(d.id)}">
             <div class="grow ellipsis">${esc(d.name)}<div class="sub">${deckCards([d.id]).length} ${deckCards([d.id]).length === 1 ? "Karte" : "Karten"}</div></div>
@@ -710,9 +727,10 @@ function renderLearn() {
       <span class="c-new">Blau</span> = neu (heute noch), <span class="c-learn">Rot</span> = in Lernphase, <span class="c-due">Grün</span> = fällig
     </p>`;
   $$('[data-dir]', view).forEach(b => b.onclick = () => { db.settings.qLang = b.dataset.dir; save(); renderLearn(); });
+  $$('[data-kind]', view).forEach(b => b.onclick = () => { db.settings.deckKind = b.dataset.kind; save(); renderLearn(); });
   $$('[data-study]', view).forEach(r => r.onclick = () => {
     const id = r.dataset.study;
-    startStudy(id === '*' ? allIds : [id], id === '*' ? 'Alle Decks' : db.decks[id].name);
+    startStudy(id === '*' ? allIds : [id], id === '*' ? allTitle : db.decks[id].name);
   });
 }
 
@@ -853,6 +871,68 @@ const NOUN_CASES = [
 const ANIM_INFO = 'Belebt = Menschen und Tiere. Dann sieht der Akkusativ aus wie der Genitiv – bei männlichen Wörtern im Singular und bei allen Wörtern im Plural: Я ви́жу бра́та. Я ви́жу друзе́й. (Aber unbelebt: Я ви́жу стол.)';
 const nounForms = s => (s || '').split('|').map(f => f.trim());
 
+/* Alle 12 Formen eines Nomens: entweder vollständig aus x.sg / x.pl („Nom|Gen|Dat|Akk|Ins|Präp“)
+   oder berechnet aus Nom. Sg. + x.gen (Gen. Sg.) + x.npl / x.gpl / x.dpl (Nom./Gen./Dat. Pl.).
+   Einzelne Ausnahmen: x.dat, x.akk, x.ins, x.prp (Singular), x.ipl (Ins. Pl.). */
+function nounDecl(x, nom) {
+  if (x.indecl) return { sg: Array(6).fill(nom), pl: [] };
+  let sg = x.sg ? nounForms(x.sg) : null, pl = x.pl ? nounForms(x.pl) : null;
+  if (!sg && x.gender !== 'pl' && x.gen) sg = nounSingular(x, nom);
+  if (!pl && x.npl && x.gpl && x.dpl) {
+    // дням → дня́ми: aus einer einsilbigen Form wird eine zweisilbige, Betonung auf den Stamm
+    const stressStem = w => /[́ё]/.test(w) || (w.match(/[аеиоуыэюя]/g) || []).length < 2 ? w : w.replace(/[аеиоуыэюя]/, v => v + '́');
+    pl = [x.npl, x.gpl, x.dpl, x.anim ? x.gpl : x.npl, x.ipl || stressStem(x.dpl.replace(/м$/, 'ми')), x.dpl.replace(/м$/, 'х')];
+  }
+  return { sg: sg || [], pl: pl || [] };
+}
+
+// Endung anhängen; bei Endbetonung bekommt der erste Vokal der Endung den Akzent, einsilbige Wörter keinen
+function nounEnd(stem, ending, stressed) {
+  const e = stressed && !/ё/.test(ending) ? ending.replace(/[аеиоуыэюя]/, v => v + '́') : ending;
+  const w = stem + e;
+  return (w.replace(STRESS, '').match(/[аеёиоуыэюя]/g) || []).length <= 1 ? w.replace(STRESS, '') : w;
+}
+
+function nounSingular(x, nom) {
+  const m = x.gen.match(/^(.*?)([аяыи])(́?)$/);
+  if (!m) return null;
+  const [, stem, gEnd, acc] = m;
+  const plainNom = nom.replace(STRESS, '');
+  const endStressed = !!acc || !/[́ё]/.test(stem);           // дня, стола́, руки́ → Endung betont
+  const E = ending => nounEnd(stem, ending, endStressed);
+  const sib = /[жшчщц]$/.test(stem);
+  let dat, akk, ins, prep;
+  if (/мя$/.test(plainNom)) {                                  // вре́мя – вре́мени – вре́менем
+    dat = prep = x.gen; akk = nom; ins = E('ем');
+  } else if (/[ая]$/.test(plainNom)) {                         // кни́га, неде́ля, исто́рия, па́па
+    const soft = /я$/.test(plainNom);
+    dat = prep = E(/ия$/.test(plainNom) ? 'и' : 'е');
+    akk = E(soft ? 'ю' : 'у');
+    ins = soft ? E(endStressed ? 'ёй' : 'ей') : sib && !endStressed ? E('ей') : E('ой');
+  } else if (x.gender === 'f') {                               // ночь – но́чи – но́чью
+    dat = prep = x.gen; akk = nom;
+    ins = (/[́ё]/.test(nom) ? nom : nom.replace(/[аеиоуыэюя]/, v => v + '́')) + 'ю';
+  } else {                                                     // стол, слу́чай, гость, сло́во, мо́ре, зда́ние
+    const soft = gEnd === 'я';
+    dat = E(soft ? 'ю' : 'у');
+    ins = soft ? E(endStressed ? 'ём' : 'ем') : sib && !endStressed ? E('ем') : E('ом');
+    prep = E(/и[йе]$/.test(plainNom) ? 'и' : 'е');
+    akk = x.gender === 'm' && x.anim ? x.gen : nom;
+  }
+  return [nom, x.gen, x.dat || dat, x.akk || akk, x.ins || ins, x.prp || prep];
+}
+
+// Typische Verbindung je Fall, wenn es keine eigenen Beispielsätze gibt (immer grammatisch passend)
+const NOUN_FRAMES = [
+  [f => `Э́то ${f}.`, 'Э́то = Das ist …'],
+  [f => `без ${f}`, 'без + Genitiv = ohne'],
+  [f => `${/^(вс|вт|мн|дн|сн|льд|рт)/.test(f) ? 'ко' : 'к'} ${f}`, 'к + Dativ = zu'],
+  [f => `про ${f}`, 'про + Akkusativ = über'],
+  [f => `${/^([сзшжщ][бвгджзклмнпрстфхцчшщ]|мн|вс|вт|льд)/.test(f) ? 'со' : 'с'} ${f}`, 'с + Instrumental = mit'],
+  [f => `${/^[аоуэи]/.test(f.replace(STRESS, '')) ? 'об' : 'о'} ${f}`, 'о + Präpositiv = über'],
+];
+const nounFrames = forms => forms.length ? NOUN_FRAMES.map(([ru, de], i) => forms[i] ? { ru: ru(forms[i]), de } : null) : [];
+
 // Deklinationsmuster aus Geschlecht und Endung
 function nounPattern(x, word) {
   const w = (word || '').replace(STRESS, '');
@@ -871,13 +951,14 @@ function nounHtml(card) {
   const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
   const say = t => t ? `<button class="say" data-say="${esc(t)}">🔊</button>` : '';
   const pron = t => { const p = ruPron(t); return p ? ` <span class="pron">[${esc(p)}]</span>` : ''; };
-  const sg = nounForms(x.sg), pl = nounForms(x.pl);
+  const { sg, pl } = nounDecl(x, word);
   const key = [];
   if (x.indecl) key.push('<span>unveränderlich</span>');
   else {
     if (x.gender !== 'pl' && sg[1]) key.push(`<span><i>Gen. Sg.</i> ${esc(sg[1])}</span>`);
     if (x.gender !== 'pl' && pl[0]) key.push(`<span><i>Pl.</i> ${esc(pl[0])}</span>`);
     if (x.gender === 'pl' && pl[1]) key.push(`<span><i>Gen.</i> ${esc(pl[1])}</span>`);
+    if (x.loc) key.push(`<span><i>Ort</i> ${esc(x.loc)}</span>`);
   }
   const exPron = x.example_pron || ruPron(x.example);
   return `<div class="nn nn-${g.cls}">
@@ -906,9 +987,8 @@ function declensionHtml(card) {
   if (card.type !== 'nounfull') return '';
   if (card.x.indecl) return `<div class="conj-ru nn-decl"><div class="conj-ru-head">Deklination <small>unveränderlich – in allen Fällen ${esc(card.f.ru)}</small></div></div>`;
   const x = card.x;
-  const sg = x.gender === 'pl' ? [] : nounForms(x.indecl ? Array(6).fill(card.f.ru).join('|') : x.sg);
-  const pl = x.indecl ? [] : nounForms(x.pl);
-  const exSg = nounExamples(x.ex_sg), exPl = nounExamples(x.ex_pl);
+  const { sg, pl } = nounDecl(x, card.f.ru);
+  const exSg = x.ex_sg ? nounExamples(x.ex_sg) : nounFrames(sg), exPl = x.ex_pl ? nounExamples(x.ex_pl) : nounFrames(pl);
   const say = forms => forms.filter(Boolean).length ? `<button class="say" data-say="${esc(forms.filter(Boolean).join(', '))}">🔊</button>` : '';
   const cols = [sg.filter(Boolean).length && 'Singular', pl.filter(Boolean).length && 'Plural'].filter(Boolean);
   const exLine = (ex, form, label) => ex && ex.ru ? `<div class="nn-ex"><i>${label}</i> ${markForm(ex.ru, form)} ${say([ex.ru])}<div class="pron nn-ex-pron">[${esc(ruPron(ex.ru))}]</div>${ex.de ? `<details class="nn-ex-de"><summary>Übersetzung anzeigen</summary>${esc(ex.de)}</details>` : ''}</div>` : '';
@@ -1636,19 +1716,23 @@ async function forceUpdate() {
 async function autoUpdateLibrary() {
   try {
     const list = await (await fetch('decks/index.json', { cache: 'no-cache' })).json();
-    const isVerbDeck = id => id.startsWith('verben-');
     let outdated = list.filter(d => db.decks[d.id] && (db.decks[d.id].version || 0) < (d.version || 1));
-    // Die Verb-Decks werden nach Häufigkeit aufgeteilt; Karten können zwischen ihnen wandern.
-    // Deshalb immer alle zusammen aktualisieren und alte Verb-Decks ohne Gegenstück auflösen.
-    // Auch alte Verb-Decks ohne Gegenstück (z. B. das frühere Probedeck „verben-1“) lösen das aus.
-    const stale = Object.keys(db.decks).filter(id => isVerbDeck(id) && !list.some(d => d.id === id));
-    const verbAffected = stale.length > 0 || outdated.some(d => isVerbDeck(d.id));
-    if (verbAffected) outdated = list.filter(d => isVerbDeck(d.id) || outdated.includes(d));
+    // Verb- und Nomen-Decks werden nach Häufigkeit aufgeteilt; Karten können zwischen ihnen wandern.
+    // Deshalb eine Familie immer komplett aktualisieren (auch neu hinzugekommene Decks laden)
+    // und alte Decks ohne Gegenstück (z. B. das frühere Probedeck „verben-1“) auflösen.
+    const prune = [];
+    for (const prefix of ['verben-', 'nomen-']) {
+      const inFamily = id => id.startsWith(prefix);
+      const stale = Object.keys(db.decks).filter(id => inFamily(id) && !list.some(d => d.id === id));
+      const missing = list.filter(d => inFamily(d.id) && !db.decks[d.id]);
+      const has = Object.keys(db.decks).some(inFamily);
+      if (!has || (!stale.length && !missing.length && !outdated.some(d => inFamily(d.id)))) continue;
+      outdated = outdated.filter(d => !inFamily(d.id)).concat(list.filter(d => inFamily(d.id)));
+      prune.push({ ids: list.filter(d => inFamily(d.id)).map(d => d.id).concat(stale), inFamily });
+    }
     const decks = [];
     for (const entry of outdated) decks.push((await importLibraryDeck(entry)).deck);
-    if (verbAffected) {
-      pruneReplacedCards(outdated.filter(d => isVerbDeck(d.id)).map(d => d.id).concat(stale), decks);
-    }
+    for (const p of prune) pruneReplacedCards(p.ids, decks.filter(d => p.inFamily(d.id)));
     if (outdated.length) {
       toast(outdated.length > 3 ? `${outdated.length} Decks aktualisiert` : 'Aktualisiert: ' + outdated.map(d => d.name).join(', '));
       if (!study && tab === 'learn') renderLearn();

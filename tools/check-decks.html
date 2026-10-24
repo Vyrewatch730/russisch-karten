@@ -63,6 +63,42 @@ document.getElementById('app').onload = async e => {
       if (verbose) out.push(`   ${c.ipf || ''} [${w.ruPron(c.ipf)}] ${c.ipf_1 || ''} [${w.ruPron(c.ipf_1)}] · ${c.pf || ''} [${w.ruPron(c.pf)}] ${c.pf_1 || ''} [${w.ruPron(c.pf_1)}] · ${w.ruPron(c.example)}`);
     }
   }
+
+  // Nomen: Pflichtfelder, Betonung, Fälle im Satz und alle 12 berechneten Formen
+  const stressProblems = (text) => {
+    const res = [];
+    for (const word of (text || '').match(/[а-яёА-ЯЁ́]+/g) || []) {
+      const vowels = (word.match(/[аеёиоуыэюяАЕЁИОУЫЭЮЯ]/g) || []).length;
+      const marks = (word.match(/́/g) || []).length + (word.match(/[ёЁ]/g) || []).length;
+      if (vowels > 1 && marks !== 1) res.push(`„${word}“ hat ${marks} Betonungen`);
+      if (vowels === 1 && /́/.test(word)) res.push(`einsilbiges „${word}“ mit Akzent`);
+    }
+    return res;
+  };
+  const NOUN_REQUIRED = ['de', 'en', 'es', 'example', 'example_de', 'example_en', 'example_es', 'example_cases'];
+  for (const entry of index.filter(d => d.id.startsWith('nomen-') && (!only || d.id === only))) {
+    const deck = await (await fetch('../decks/' + entry.file, { cache: 'no-cache' })).json();
+    out.push(`== ${deck.name} (${deck.cards.length} Karten)`);
+    for (const c of deck.cards) {
+      cards++;
+      for (const k of NOUN_REQUIRED) if (!c[k]) problem(c, `Feld ${k} fehlt`);
+      if (!['m', 'f', 'n', 'pl'].includes(c.gender)) problem(c, `Geschlecht „${c.gender}“ unbekannt`);
+      const sentence = (c.example || '').toLowerCase();
+      for (const part of (c.example_cases || '').split(' · ')) {
+        for (const word of part.split(' – ')[0].match(/[а-яё́-]+/gi) || []) if (!sentence.includes(word.toLowerCase())) problem(c, `Fälle: „${word}“ steht nicht im Satz`);
+      }
+      for (const k of ['ru', 'example', 'gen', 'npl', 'gpl', 'dpl', 'akk', 'ins', 'ipl', 'loc']) for (const p of stressProblems(c[k])) problem(c, `${k}: ${p}`);
+      const x = Object.assign({}, c);
+      const { sg, pl } = w.nounDecl(x, c.ru);
+      if (!c.indecl) {
+        if (c.gender !== 'pl' && (sg.length !== 6 || sg.some(f => !f))) problem(c, `Singular unvollständig: ${sg.join(', ')}`);
+        if (pl.length && pl.some(f => !f)) problem(c, `Plural unvollständig: ${pl.join(', ')}`);
+        if (c.gender === 'pl' && pl.length !== 6) problem(c, 'nur Plural, aber keine Pluralformen');
+      }
+      for (const f of sg.concat(pl)) for (const p of stressProblems(f)) problem(c, `Form: ${p}`);
+      if (verbose) out.push(`   ${c.ru} (${c.gender}${c.anim ? ', belebt' : ''}): ${sg.join(' ')} | ${pl.join(' ')}`);
+    }
+  }
   out.unshift(`${cards} Karten geprüft, ${problems} Probleme`);
   document.getElementById('out').textContent = out.join('\n');
 };

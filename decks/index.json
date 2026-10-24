@@ -10,10 +10,58 @@
     {
         "id":  "nomen-01",
         "name":  "Nomen 01",
-        "description":  "Probedeck · 12 Nomen mit Geschlecht, Deklination und Beispiel",
+        "description":  "Nr. 1–50 nach Häufigkeit · Geschlecht, Deklination und Beispiel",
         "file":  "nomen-01.json",
-        "count":  12,
-        "version":  2
+        "count":  50,
+        "version":  202610240442
+    },
+    {
+        "id":  "nomen-02",
+        "name":  "Nomen 02",
+        "description":  "Nr. 51–100 nach Häufigkeit · Geschlecht, Deklination und Beispiel",
+        "file":  "nomen-02.json",
+        "count":  50,
+        "version":  202610240442
+    },
+    {
+        "id":  "nomen-03",
+        "name":  "Nomen 03",
+        "description":  "Nr. 101–150 nach Häufigkeit · Geschlecht, Deklination und Beispiel",
+        "file":  "nomen-03.json",
+        "count":  50,
+        "version":  202610240442
+    },
+    {
+        "id":  "nomen-04",
+        "name":  "Nomen 04",
+        "description":  "Nr. 151–200 nach Häufigkeit · Geschlecht, Deklination und Beispiel",
+        "file":  "nomen-04.json",
+        "count":  50,
+        "version":  202610240442
+    },
+    {
+        "id":  "nomen-05",
+        "name":  "Nomen 05",
+        "description":  "Nr. 201–250 nach Häufigkeit · Geschlecht, Deklination und Beispiel",
+        "file":  "nomen-05.json",
+        "count":  50,
+        "version":  202610240442
+    },
+    {
+        "id":  "nomen-06",
+        "name":  "Nomen 06",
+        "description":  "Nr. 251–300 nach Häufigkeit · Geschlecht, Deklination und Beispiel",
+        "file":  "nomen-06.json",
+        "count":  50,
+        "version":  202610240442
+    },
+    {
+        "id":  "nomen-07",
+        "name":  "Nomen 07",
+        "description":  "Nr. 301–346 nach Häufigkeit · Geschlecht, Deklination und Beispiel",
+        "file":  "nomen-07.json",
+        "count":  46,
+        "version":  202610240442
     },
     {
         "id":  "verben-01",

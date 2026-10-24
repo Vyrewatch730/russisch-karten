@@ -335,3 +335,4 @@ tr.vp-rule.open { display: table-row; }
 .rule .say { padding: 0 2px; font-size: 14px; }
 .rule .rtable { max-width: 100%; }
 .nn-ex-pron { font-size: 12px; margin-top: 1px; }
+.kind-chips { margin-bottom: 8px; }
