@@ -247,6 +247,127 @@ const RULES = [
 `,
   },
   {
+    id: 'zeit',
+    icon: '🕒',
+    title: 'Tage, Monate, Jahreszeiten, Uhrzeit',
+    teaser: 'Wochentage, Monate, Datum, Jahres- und Tageszeiten, Uhrzeit – mit dem richtigen Fall',
+    html: `
+<p class="tip"><b>Kurzüberblick „wann?“</b><br>
+Wochentag: <b>в + Akkusativ</b> (в сре́ду) · Monat: <b>в + Präpositiv</b> (в ма́е) · Jahreszeit und Tageszeit: <b>Instrumental ohne Präposition</b> (ле́том, ве́чером) · Datum: <b>Genitiv</b> (пе́рвого ма́я) · Uhrzeit: <b>в + Akkusativ</b> (в три часа́)</p>
+
+<h3>Wochentage</h3>
+<p>Alle klein geschrieben. Die Woche beginnt mit Montag.</p>
+<table class="rtable">
+  <tr><th></th><th>Wochentag</th><th>am … (в + Akk.)</th></tr>
+  <tr><td>Mo</td><td>${RW('понеде́льник')}</td><td>${RW('в понеде́льник')}</td></tr>
+  <tr><td>Di</td><td>${RW('вто́рник')}</td><td>${RW('во вто́рник')}</td></tr>
+  <tr><td>Mi</td><td>${RW('среда́')}</td><td>${RW('в сре́ду')}</td></tr>
+  <tr><td>Do</td><td>${RW('четве́рг')}</td><td>${RW('в четве́рг')}</td></tr>
+  <tr><td>Fr</td><td>${RW('пя́тница')}</td><td>${RW('в пя́тницу')}</td></tr>
+  <tr><td>Sa</td><td>${RW('суббо́та')}</td><td>${RW('в суббо́ту')}</td></tr>
+  <tr><td>So</td><td>${RW('воскресе́нье')}</td><td>${RW('в воскресе́нье')}</td></tr>
+</table>
+<ul>
+  <li>„Dienstag“ hat <b>во</b> statt в (leichter auszusprechen): во вто́рник.</li>
+  <li><b>Regelmäßig</b> (montags, freitags …): по + Dativ Plural: ${RW('по понеде́льникам')}, ${RW('по пя́тницам')}</li>
+  <li>Wochenende: ${RW('выходны́е')} – am Wochenende: ${RW('на выходны́х')}</li>
+</ul>
+<p class="tip">Herkunft: вто́рник von „второ́й“ (zweiter), четве́рг von „четы́ре“, пя́тница von „пять“, среда́ = „Mitte“ der Woche.</p>
+
+<h3>Monate</h3>
+<p>Alle männlich und klein geschrieben. „Im Mai“ heißt <b>в + Präpositiv</b>; im Datum steht der Monat im <b>Genitiv</b>.</p>
+<table class="rtable">
+  <tr><th>Monat</th><th>im … (в + Präp.)</th><th>Datum (Gen.)</th></tr>
+  <tr><td>${RW('янва́рь')}</td><td>в январе́</td><td>января́</td></tr>
+  <tr><td>${RW('февра́ль')}</td><td>в феврале́</td><td>февраля́</td></tr>
+  <tr><td>${RW('март')}</td><td>в ма́рте</td><td>ма́рта</td></tr>
+  <tr><td>${RW('апре́ль')}</td><td>в апре́ле</td><td>апре́ля</td></tr>
+  <tr><td>${RW('май')}</td><td>в ма́е</td><td>ма́я</td></tr>
+  <tr><td>${RW('ию́нь')}</td><td>в ию́не</td><td>ию́ня</td></tr>
+  <tr><td>${RW('ию́ль')}</td><td>в ию́ле</td><td>ию́ля</td></tr>
+  <tr><td>${RW('а́вгуст')}</td><td>в а́вгусте</td><td>а́вгуста</td></tr>
+  <tr><td>${RW('сентя́брь')}</td><td>в сентябре́</td><td>сентября́</td></tr>
+  <tr><td>${RW('октя́брь')}</td><td>в октябре́</td><td>октября́</td></tr>
+  <tr><td>${RW('ноя́брь')}</td><td>в ноябре́</td><td>ноября́</td></tr>
+  <tr><td>${RW('дека́брь')}</td><td>в декабре́</td><td>декабря́</td></tr>
+</table>
+<p class="tip">Die Monate von September bis Februar haben die Betonung auf der Endung: сентябрь → в сентябре́, сентября́.</p>
+
+<h3>Datum</h3>
+<p>Ordnungszahl (sächlich, weil man an „число́“ denkt) + Monat im Genitiv:</p>
+<ul>
+  <li>${RW('Како́е сего́дня число́?')} – Der Wievielte ist heute?</li>
+  <li>${RW('Сего́дня пе́рвое ма́я.')} – Heute ist der 1. Mai. (Nominativ)</li>
+  <li>${RW('Я роди́лся второ́го ию́ня.')} – Ich bin am 2. Juni geboren. („am …“ = Genitiv)</li>
+  <li>Jahr: ${RW('в две ты́сячи два́дцать шесто́м году́')} – im Jahr 2026 (nur die letzte Zahl als Ordnungszahl, im Präpositiv)</li>
+</ul>
+
+<h3>Jahreszeiten</h3>
+<table class="rtable">
+  <tr><th>Jahreszeit</th><th>im … (Instrumental)</th></tr>
+  <tr><td>${RW('зима́')} – Winter</td><td>${RW('зимо́й')}</td></tr>
+  <tr><td>${RW('весна́')} – Frühling</td><td>${RW('весно́й')}</td></tr>
+  <tr><td>${RW('ле́то')} – Sommer</td><td>${RW('ле́том')}</td></tr>
+  <tr><td>${RW('о́сень')} – Herbst</td><td>${RW('о́сенью')}</td></tr>
+</table>
+<p class="tip">Keine Präposition! ${RW('Ле́том мы е́дем на мо́ре.')} = Im Sommer fahren wir ans Meer.</p>
+
+<h3>Tageszeiten</h3>
+<table class="rtable">
+  <tr><th>Tageszeit</th><th>am … (Instrumental)</th></tr>
+  <tr><td>${RW('у́тро')} – Morgen</td><td>${RW('у́тром')}</td></tr>
+  <tr><td>${RW('день')} – Tag</td><td>${RW('днём')}</td></tr>
+  <tr><td>${RW('ве́чер')} – Abend</td><td>${RW('ве́чером')}</td></tr>
+  <tr><td>${RW('ночь')} – Nacht</td><td>${RW('но́чью')}</td></tr>
+</table>
+<p>Grüße: ${RW('До́брое у́тро!')} · ${RW('До́брый день!')} · ${RW('До́брый ве́чер!')} · ${RW('Споко́йной но́чи!')}</p>
+
+<h3>Gestern, heute, morgen</h3>
+<table class="rtable">
+  <tr><td>vorgestern</td><td>${RW('позавчера́')}</td></tr>
+  <tr><td>gestern</td><td>${RW('вчера́')}</td></tr>
+  <tr><td>heute</td><td>${RW('сего́дня')}</td></tr>
+  <tr><td>morgen</td><td>${RW('за́втра')}</td></tr>
+  <tr><td>übermorgen</td><td>${RW('послеза́втра')}</td></tr>
+</table>
+<ul>
+  <li>Woche (на + Präp.): ${RW('на э́той неде́ле')} · ${RW('на про́шлой неде́ле')} · ${RW('на сле́дующей неде́ле')}</li>
+  <li>Monat, Jahr (в + Präp.): ${RW('в э́том ме́сяце')} · ${RW('в про́шлом году́')} · ${RW('в сле́дующем году́')}</li>
+  <li>in … / vor …: ${RW('че́рез два дня')} (in zwei Tagen) · ${RW('два дня наза́д')} (vor zwei Tagen)</li>
+  <li>jeden Tag: ${RW('ка́ждый день')} (Akkusativ ohne Präposition)</li>
+</ul>
+<p class="tip">Achtung: за́втра = morgen, aber у́тро = der Morgen; „morgen früh“ = ${RW('за́втра у́тром')}.</p>
+
+<h3>Uhrzeit</h3>
+<ul>
+  <li>${RW('Кото́рый час?')} oder ${RW('Ско́лько сейча́с вре́мени?')} – Wie spät ist es?</li>
+  <li>${RW('Сейча́с час.')} – Es ist ein Uhr (ohne оди́н).</li>
+  <li>${RW('Сейча́с два часа́.')} · ${RW('Сейча́с пять часо́в.')} – Zahlenregel: 1 час, 2–4 часа́, 5+ часо́в</li>
+  <li>Mit Minuten: ${RW('три часа́ два́дцать мину́т')} – 3:20 (1 мину́та, 2–4 мину́ты, 5+ мину́т)</li>
+  <li>${RW('В кото́ром часу́?')} – Um wie viel Uhr? → ${RW('В семь часо́в.')} (в + Akkusativ)</li>
+</ul>
+<table class="rtable">
+  <tr><th>Tageszeit dazu (Genitiv)</th><th>Beispiel</th></tr>
+  <tr><td>morgens (4–11 Uhr)</td><td>${RW('в семь часо́в утра́')}</td></tr>
+  <tr><td>tagsüber (12–16 Uhr)</td><td>${RW('в три часа́ дня')}</td></tr>
+  <tr><td>abends (17–23 Uhr)</td><td>${RW('в во́семь часо́в ве́чера')}</td></tr>
+  <tr><td>nachts (0–3 Uhr)</td><td>${RW('в два часа́ но́чи')}</td></tr>
+</table>
+
+<h3>Uhrzeit im Alltag (wie im Deutschen „Viertel“, „halb“)</h3>
+<p>Russisch zählt die <b>laufende</b> Stunde: 3:15 liegt in der „vierten Stunde“. Deshalb steht die Ordnungszahl der <b>nächsten</b> Stunde im Genitiv:</p>
+<table class="rtable">
+  <tr><th>Uhrzeit</th><th>Russisch</th><th>wörtlich</th></tr>
+  <tr><td>3:10</td><td>${RW('де́сять мину́т четвёртого')}</td><td>zehn Minuten der vierten</td></tr>
+  <tr><td>3:15</td><td>${RW('че́тверть четвёртого')}</td><td>Viertel der vierten</td></tr>
+  <tr><td>3:30</td><td>${RW('полови́на четвёртого')}</td><td>Hälfte der vierten (= halb vier)</td></tr>
+  <tr><td>3:45</td><td>${RW('без че́тверти четы́ре')}</td><td>ohne Viertel vier</td></tr>
+  <tr><td>3:55</td><td>${RW('без пяти́ четы́ре')}</td><td>ohne fünf vier</td></tr>
+</table>
+<p class="tip">Einfacher und immer richtig: Stunden und Minuten nacheinander sagen – ${RW('три со́рок пять')} = 3:45. Fahrpläne benutzen die 24-Stunden-Zählung: ${RW('в девятна́дцать три́дцать')} = um 19:30.</p>
+`,
+  },
+  {
     id: 'aspekt',
     icon: '⏳',
     title: 'Vollendet und unvollendet',
