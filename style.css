@@ -356,3 +356,31 @@ tr.vp-rule.open { display: table-row; }
 .aj-table .aj-bottom td { padding-top: 2px; }
 .aj-table th[rowspan] { vertical-align: middle; }
 .aj-g { display: block; font-size: 9px; color: var(--muted); font-weight: 400; line-height: 1.1; }
+
+/* Alle Verbformen (ausklappbar) */
+.vf-all { margin-top: 4px; font-size: 13px; }
+.vf-all summary { cursor: pointer; color: var(--accent); font-weight: 600; list-style: none; width: fit-content; }
+.vf-all summary::before { content: "▸ "; }
+.vf-all[open] summary::before { content: "▾ "; }
+.vf-all summary::-webkit-details-marker { display: none; }
+.vf-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+.vf-table th { text-align: left; font-size: 12px; color: var(--muted); padding: 6px 4px 2px; }
+.vf-table td { padding: 2px 4px; border-bottom: 1px solid var(--border); font-size: 14px; }
+.vf-table td:first-child { color: var(--muted); width: 32%; font-size: 13px; }
+.vf-note { color: var(--muted); font-size: 12px !important; font-style: italic; }
+.es-why { font-size: 12px; color: var(--muted); text-align: right; margin-top: 2px; }
+.es-rule { text-align: left; font-size: 12px; }
+
+/* Schreibmodus */
+.quiz-btn { background: none; border: 1px solid var(--border); border-radius: 10px; font-size: 18px; padding: 4px 8px; margin-left: 8px; cursor: pointer; }
+.quiz { display: flex; flex-direction: column; gap: 12px; }
+.quiz-prompt { background: var(--surface); border-radius: 14px; box-shadow: var(--shadow); padding: 24px 16px; text-align: center; }
+.quiz-ask { font-size: 14px; color: var(--muted); text-align: center; }
+#quiz-in { font-size: 20px; padding: 12px; border-radius: 10px; border: 2px solid var(--border); background: var(--surface); color: var(--text); text-align: center; }
+#quiz-in:focus { outline: none; border-color: var(--accent); }
+.quiz .btn-row { justify-content: center; }
+.quiz-result { border-radius: 12px; padding: 12px 14px; font-size: 15px; line-height: 1.5; }
+.quiz-result.ok { background: #dcfce7; color: #166534; }
+.quiz-result.bad { background: #fee2e2; color: #991b1b; }
+.quiz-card { background: var(--surface); border-radius: 14px; box-shadow: var(--shadow); padding: 14px 16px; }
+.quiz-card .answer { text-align: left; }

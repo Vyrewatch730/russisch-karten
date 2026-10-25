@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 40;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 41;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -460,6 +460,68 @@ function esRegular(inf, cls) {
   return [pres, past];
 }
 
+// Erklärung, warum ein spanisches Verb so konjugiert wird (für die ⓘ-Box unter der Tabelle)
+const ES_ENDINGS = {
+  ar: ['-o, -as, -a, -amos, -an', '-é, -aste, -ó, -amos, -aron'],
+  er: ['-o, -es, -e, -emos, -en', '-í, -iste, -ió, -imos, -ieron'],
+  ir: ['-o, -es, -e, -imos, -en', '-í, -iste, -ió, -imos, -ieron'],
+};
+const ES_IRREG_NOTE = {
+  ser: 'ser ist ganz unregelmäßig. Pasado: dieselben Formen wie ir (fui, fuiste …) – der Zusammenhang zeigt die Bedeutung.',
+  ir: 'ir ist ganz unregelmäßig (voy, vas …). Pasado: dieselben Formen wie ser (fui, fuiste …).',
+  estar: 'estar: yo-Form estoy, Betonung auf der Endung (estás, está). Pasado mit Stamm estuv- ohne Akzent.',
+  dar: 'dar: yo-Form doy. Pasado mit Endungen wie bei -er/-ir: di, diste, dio.',
+  ver: 'ver: yo-Form veo. Pasado ohne Akzent: vi, vio.',
+  haber: 'haber ist Hilfsverb (he, has, ha …). hay = es gibt.',
+};
+const ES_STEM_NOTE = {
+  ie: 'Stammwechsel e → ie in allen betonten Formen (yo, tú, él, ellos), nicht bei nosotros.',
+  ue: 'Stammwechsel o → ue in allen betonten Formen (yo, tú, él, ellos), nicht bei nosotros.',
+  i: 'Stammwechsel e → i im Presente (außer nosotros) und im Pasado bei él und ellos.',
+  'ie-i': 'Stammwechsel e → ie im Presente (außer nosotros); im Pasado bei él und ellos e → i.',
+  'ue-u': 'Stammwechsel o → ue im Presente (außer nosotros); im Pasado bei él und ellos o → u.',
+  acc: 'i bzw. u bekommt im Presente einen Akzent (außer nosotros): envío, continúas.',
+};
+function esExplain(raw) {
+  const [spec, forced] = raw.trim().split(':');
+  const words = spec.trim().split(/\s+/);
+  let inf = words[0];
+  const refl = /(ar|er|ir|ír)se$/.test(inf);
+  if (refl) inf = inf.slice(0, -2);
+  const end = inf.slice(-2).replace('í', 'i');
+  const lines = [];
+  const key = ES_IRREG[inf] ? inf : ES_PREFIXABLE.find(k => inf.endsWith(k) && inf.length > k.length);
+  const cls = forced || ES_STEM[inf] || '';
+  if (ES_IRREG_NOTE[inf]) lines.push(ES_IRREG_NOTE[inf]);
+  else if (key) {
+    const pre = inf.slice(0, inf.length - key.length);
+    const yo = pre + ES_IRREG[key][0].split(', ')[0], pret = pre + ES_IRREG[key][1].split(', ')[0];
+    lines.push(`<b>Unregelmäßig</b>${key !== inf ? ` (wie <b>${key}</b>, mit Vorsilbe ${inf.slice(0, inf.length - key.length)}-)` : ''}: yo-Form <b>${yo}</b>.`);
+    if (key === 'seguir') lines.push('Stammwechsel e → i wie bei pedir, dazu gu → g in der yo-Form; Pasado: siguió, siguieron.');
+    else if (key === 'ducir') lines.push('Alle Verben auf -ducir: yo-Form -duzco, Pasado mit -duj- (traduje, produjo).');
+    else if (/go$/.test(yo)) lines.push('Typisch: In der yo-Form kommt ein -g- dazu (tengo, pongo, salgo, hago, digo …).');
+    if (!/[éí]$/.test(pret) && key !== 'ducir') lines.push(`Pasado mit eigenem Stamm und ohne Akzent: ${pret} (wie tuve, puse, hice, dije).`);
+  } else if (ES_ENDINGS[end]) {
+    lines.push(`<b>Verb auf -${end}</b>: Stamm ${inf.slice(0, -2)}- + regelmäßige Endungen.`);
+    lines.push(`Presente: ${ES_ENDINGS[end][0]} · Pasado: ${ES_ENDINGS[end][1]}`);
+    if (cls && cls !== 'dat' && ES_STEM_NOTE[cls]) lines.push(ES_STEM_NOTE[cls]);
+    if (/g(er|ir)$/.test(inf)) lines.push('yo-Form: g → j vor o (escojo), damit der Laut gleich bleibt.');
+    else if (/guir$/.test(inf)) lines.push('yo-Form: gu → g vor o (sigo).');
+    else if (/[aeiouáéó]c(er|ir)$/.test(inf)) lines.push('yo-Form: Vokal + -cer/-cir → -zco (conozco, parezco).');
+    else if (/c(er|ir)$/.test(inf)) lines.push('yo-Form: Konsonant + -cer → -zo (venzo).');
+    if (end === 'ar' && /c$/.test(inf.slice(0, -2))) lines.push('Pasado yo: c → qu vor é (busqué), damit es wie k klingt.');
+    if (end === 'ar' && /g$/.test(inf.slice(0, -2))) lines.push('Pasado yo: g → gu vor é (llegué), damit es wie g klingt.');
+    if (end === 'ar' && /z$/.test(inf.slice(0, -2))) lines.push('Pasado yo: z → c vor é (empecé).');
+    if (end === 'ir' && /[^g]u$/.test(inf.slice(0, -2))) lines.push('Verben auf -uir schieben ein y ein: construyo, construyó.');
+    if (end !== 'ar' && /[aeo]$/.test(inf.slice(0, -2))) lines.push('Stamm endet auf Vokal: im Pasado y statt i (leyó, leyeron).');
+  }
+  if (cls === 'dat' || ES_DAT.has(inf)) lines.push('<b>Wie gustar:</b> Das Verb richtet sich nach der Sache (gusta / gustan); die Person steht davor: me, te, le, nos, les.');
+  else if (refl) lines.push('<b>Reflexiv</b> (-se): Pronomen vor dem Verb: me, te, se, nos, se (me levanto).');
+  const futEx = cls === 'dat' || ES_DAT.has(inf) ? 'me va a ' + inf : refl ? 'voy a ' + inf + 'me' : 'voy a ' + inf;
+  lines.push('Futuro wie in der DR: <b>ir a</b> + Infinitiv (' + futEx + ').');
+  return lines.map(l => `<div>${l}</div>`).join('');
+}
+
 // "sentarse", "tener que", "darse cuenta", "pensar:ie" → { label, pres[5], past[5], fut[5] }
 function esConjugate(raw) {
   const [spec, forced] = raw.trim().split(':');
@@ -633,6 +695,7 @@ function go(newTab) {
   tab = newTab;
   $$('.tabbar button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   document.body.classList.remove('studying');   // untere Leiste wieder zeigen
+  quiz = null;
   stopStudyKeys();
   if (tab === 'learn') renderLearn();
   if (tab === 'cards') renderCards();
@@ -731,18 +794,26 @@ function renderLearn() {
         ${decks.length > 1 ? `
           <div class="row clickable" data-study="*">
             <div class="grow"><b>${allTitle}</b></div>${statRow(deckStats(allIds))}
+            <button class="quiz-btn" data-quiz="*" aria-label="Schreiben üben">✍️</button>
           </div>` : ''}
         ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen</div>${kind.v !== 'all' ? `<button class="btn small" id="load-kind">Laden</button>` : ''}</div>` : ''}
         ${decks.map(d => `
           <div class="row clickable" data-study="${esc(d.id)}">
             <div class="grow ellipsis">${esc(d.name)}<div class="sub">${deckCards([d.id]).length} ${deckCards([d.id]).length === 1 ? "Karte" : "Karten"}</div></div>
             ${statRow(deckStats([d.id]))}
+            <button class="quiz-btn" data-quiz="${esc(d.id)}" aria-label="Schreiben üben">✍️</button>
           </div>`).join('')}
       </div>
     </div>
     <p class="sub" style="color:var(--muted);font-size:13px">
-      <span class="c-new">Blau</span> = neu (heute noch), <span class="c-learn">Rot</span> = in Lernphase, <span class="c-due">Grün</span> = fällig
+      <span class="c-new">Blau</span> = neu (heute noch), <span class="c-learn">Rot</span> = in Lernphase, <span class="c-due">Grün</span> = fällig<br>
+      ✍️ = Schreiben üben: ${QUIZ_SIZE} zufällige Wörter, Bedeutung eintippen (Richtung wie oben gewählt)
     </p>`;
+  $$('[data-quiz]', view).forEach(b => b.onclick = (e) => {
+    e.stopPropagation();
+    const id = b.dataset.quiz;
+    startQuiz(id === '*' ? allIds : [id], '✍️ ' + (id === '*' ? allTitle : db.decks[id].name));
+  });
   $$('[data-dir]', view).forEach(b => b.onclick = () => { db.settings.qLang = b.dataset.dir; save(); renderLearn(); });
   $$('[data-kind]', view).forEach(b => b.onclick = () => { db.settings.deckKind = b.dataset.kind; save(); renderLearn(); });
   // Noch nichts von dieser Art geladen: alle passenden Decks aus der Bibliothek holen
@@ -856,6 +927,114 @@ function ruPresentForms(ya, ty) {
   const fix = s => (ruVowelCount(s) === 1 ? s.replace(STRESS, '') : s);
   const forms = [y, t, ...mid, fix(they)];
   return refl ? forms.map((f, i) => (i < 2 ? [ya, ty][i] : f + (/[аеёиоуыэюя]$/.test(f) ? 'сь' : 'ся'))) : forms;
+}
+
+// 2. Konjugation (и-Konjugation): говорю́, говори́шь → говори́т, говори́м, говори́те, говоря́т
+function ruPresentForms2(ya, ty) {
+  const refl = /(сь|ся)$/.test(ya);
+  const cut = s => s.replace(/(сь|ся)$/, '');
+  const y = cut(ya), t = cut(ty);
+  const m = t.match(/^(.*?)и(́?)шь$/);
+  if (!m) return null;
+  const tStem = m[1], plainT = tStem.replace(STRESS, '');
+  const endStressed = !!m[2] || ruVowelCount(t) === 1;      // спишь: einsilbig, Endung betont
+  const theyEnd = /[жшчщ]$/.test(plainT) ? 'ат' : 'ят';
+  const fix = s => (ruVowelCount(s) === 1 ? s.replace(STRESS, '') : s);
+  const forms = endStressed
+    ? [y, t, plainT + 'и́т', plainT + 'и́м', plainT + 'и́те', plainT + theyEnd[0] + '́' + theyEnd[1]].map(fix)
+    : [y, t, tStem + 'ит', tStem + 'им', tStem + 'ите', tStem + theyEnd];
+  return refl ? forms.map((f, i) => (i < 2 ? [ya, ty][i] : f + (/[аеёиоуыэюя]$/.test(f) ? 'сь' : 'ся'))) : forms;
+}
+
+// Alle sechs Präsens- bzw. Futurformen (я, ты, он, мы, вы, они) oder null
+function ruAllPresent(inf, ya, ty) {
+  if (!inf || !ya || !ty || ya === '—' || ty === '—') return null;
+  const plain = inf.replace(STRESS, '');
+  if (CONJ_IRREGULAR[plain]) return CONJ_IRREGULAR[plain];
+  const prefix = (word, end) => word.slice(0, word.length - end.length);
+  const withPrefix = (p, forms) => (/́/.test(p) ? forms.map(f => p + f.replace(STRESS, '')) : forms.map(f => p + f))
+    .map(f => (ruVowelCount(f) === 1 ? f.replace(STRESS, '') : f));
+  let m;
+  if ((m = ya.match(/^(.*)да́?м$/)) && /дать$/.test(plain)) return withPrefix(m[1], ['да́м', 'да́шь', 'да́ст', 'дади́м', 'дади́те', 'даду́т']);
+  if ((m = ya.match(/^(.*)бегу́$/))) return withPrefix(m[1], ['бегу́', 'бежи́шь', 'бежи́т', 'бежи́м', 'бежи́те', 'бегу́т']);
+  if ((m = ya.match(/^(.*)хочу́$/))) return withPrefix(m[1], ['хочу́', 'хо́чешь', 'хо́чет', 'хоти́м', 'хоти́те', 'хотя́т']);
+  const forms = /и́?шь(ся)?$/.test(ty) ? ruPresentForms2(ya, ty) : ruPresentForms(ya, ty);
+  // сни́тся, бью́тся: durch -ся zweisilbig gewordene Formen bekommen den Akzent auf den Stamm
+  return forms && forms.map(f => (ruVowelCount(f) > 1 && !/[́ё]/.test(f) ? f.replace(/[аеиоуыэюя]/, v => v + "́") : f));
+}
+
+// Vergangenheit (m, f, n, Pl.): regelmäßig Stamm + л, -ла, -ло, -ли; Ausnahmen in RU_PAST_IRREG
+const RU_PAST_IRREG = Object.fromEntries(`
+быть:был,была́,бы́ло,бы́ли|жить:жил,жила́,жи́ло,жи́ли|пить:пил,пила́,пи́ло,пи́ли|дать:дал,дала́,да́ло,да́ли|брать:брал,брала́,бра́ло,бра́ли
+браться:бра́лся,брала́сь,бра́лось,бра́лись|взять:взял,взяла́,взя́ло,взя́ли|взяться:взя́лся,взяла́сь,взяло́сь,взяли́сь|ждать:ждал,ждала́,жда́ло,жда́ли
+спать:спал,спала́,спа́ло,спа́ли|звать:звал,звала́,зва́ло,зва́ли|лить:лил,лила́,ли́ло,ли́ли|рвать:рвал,рвала́,рва́ло,рва́ли|врать:врал,врала́,вра́ло,вра́ли
+гнать:гнал,гнала́,гна́ло,гна́ли|плыть:плыл,плыла́,плы́ло,плы́ли|воспринять:воспри́нял,восприняла́,воспри́няло,воспри́няли
+добраться:добра́лся,добрала́сь,добрало́сь,добрали́сь|догнать:догна́л,догнала́,догна́ло,догна́ли|дождаться:дожда́лся,дождала́сь,дождало́сь,дождали́сь
+забрать:забра́л,забрала́,забра́ло,забра́ли|задать:за́дал,задала́,за́дало,за́дали|занять:за́нял,заняла́,за́няло,за́няли|заняться:заня́лся,заняла́сь,заняло́сь,заняли́сь
+избрать:избра́л,избрала́,избра́ло,избра́ли|издать:изда́л,издала́,изда́ло,изда́ли|набрать:набра́л,набрала́,набра́ло,набра́ли|назвать:назва́л,назвала́,назва́ло,назва́ли
+налить:на́лил,налила́,на́лило,на́лили|нанять:на́нял,наняла́,на́няло,на́няли|начать:на́чал,начала́,на́чало,на́чали|начаться:начался́,начала́сь,начало́сь,начали́сь
+обнять:о́бнял,обняла́,о́бняло,о́бняли|отдать:о́тдал,отдала́,о́тдало,о́тдали|отобрать:отобра́л,отобрала́,отобра́ло,отобра́ли|отозваться:отозва́лся,отозвала́сь,отозвало́сь,отозвали́сь
+оторвать:оторва́л,оторвала́,оторва́ло,оторва́ли|передать:пе́редал,передала́,пе́редало,пе́редали|пережить:пережи́л,пережила́,пережи́ло,пережи́ли|погнать:погна́л,погнала́,погна́ло,погна́ли
+подать:по́дал,подала́,по́дало,по́дали|поднять:по́днял,подняла́,по́дняло,по́дняли|подняться:подня́лся,подняла́сь,подняло́сь,подняли́сь|подобрать:подобра́л,подобрала́,подобра́ло,подобра́ли
+подождать:подожда́л,подождала́,подожда́ло,подожда́ли|позвать:позва́л,позвала́,позва́ло,позва́ли|полить:по́лил,полила́,по́лило,по́лили|понять:по́нял,поняла́,по́няло,по́няли
+поплыть:поплы́л,поплыла́,поплы́ло,поплы́ли|порвать:порва́л,порвала́,порва́ло,порва́ли|поспать:поспа́л,поспала́,поспа́ло,поспа́ли|прервать:прерва́л,прервала́,прерва́ло,прерва́ли
+прибыть:при́был,прибыла́,при́было,при́были|придать:при́дал,придала́,при́дало,при́дали|призвать:призва́л,призвала́,призва́ло,призва́ли|принять:при́нял,приняла́,при́няло,при́няли
+приняться:приня́лся,приняла́сь,приняло́сь,приняли́сь|продать:про́дал,продала́,про́дало,про́дали|прожить:про́жил,прожила́,про́жило,про́жили|пролить:про́лил,пролила́,про́лило,про́лили
+раздать:разда́л,раздала́,разда́ло,разда́ли|разобрать:разобра́л,разобрала́,разобра́ло,разобра́ли|разобраться:разобра́лся,разобрала́сь,разобрало́сь,разобрали́сь
+сдать:сдал,сдала́,сда́ло,сда́ли|снять:снял,сняла́,сня́ло,сня́ли|собрать:собра́л,собрала́,собра́ло,собра́ли|собраться:собра́лся,собрала́сь,собрало́сь,собрали́сь
+соврать:совра́л,соврала́,совра́ло,совра́ли|создать:со́здал,создала́,со́здало,со́здали|убрать:убра́л,убрала́,убра́ло,убра́ли|удаться:уда́лся,удала́сь,удало́сь,удали́сь
+раздаться:разда́лся,раздала́сь,раздало́сь,раздали́сь|ошибиться:оши́бся,оши́блась,оши́блось,оши́блись
+идти:шёл,шла,шло,шли|пойти:пошёл,пошла́,пошло́,пошли́|прийти:пришёл,пришла́,пришло́,пришли́|прийтись:пришёлся,пришла́сь,пришло́сь,пришли́сь|выйти:вы́шел,вы́шла,вы́шло,вы́шли
+уйти:ушёл,ушла́,ушло́,ушли́|войти:вошёл,вошла́,вошло́,вошли́|найти:нашёл,нашла́,нашло́,нашли́|найтись:нашёлся,нашла́сь,нашло́сь,нашли́сь|пройти:прошёл,прошла́,прошло́,прошли́
+зайти:зашёл,зашла́,зашло́,зашли́|подойти:подошёл,подошла́,подошло́,подошли́|отойти:отошёл,отошла́,отошло́,отошли́|перейти:перешёл,перешла́,перешло́,перешли́|дойти:дошёл,дошла́,дошло́,дошли́
+сойти:сошёл,сошла́,сошло́,сошли́|обойти:обошёл,обошла́,обошло́,обошли́|обойтись:обошёлся,обошла́сь,обошло́сь,обошли́сь|разойтись:разошёлся,разошла́сь,разошло́сь,разошли́сь|произойти:произошёл,произошла́,произошло́,произошли́
+нести:нёс,несла́,несло́,несли́|принести:принёс,принесла́,принесло́,принесли́|внести:внёс,внесла́,внесло́,внесли́|вынести:вы́нес,вы́несла,вы́несло,вы́несли|отнести:отнёс,отнесла́,отнесло́,отнесли́
+отнестись:отнёсся,отнесла́сь,отнесло́сь,отнесли́сь|перенести:перенёс,перенесла́,перенесло́,перенесли́|нанести:нанёс,нанесла́,нанесло́,нанесли́|унести:унёс,унесла́,унесло́,унесли́|понести:понёс,понесла́,понесло́,понесли́
+произнести:произнёс,произнесла́,произнесло́,произнесли́|вести:вёл,вела́,вело́,вели́|ввести:ввёл,ввела́,ввело́,ввели́|вывести:вы́вел,вы́вела,вы́вело,вы́вели|довести:довёл,довела́,довело́,довели́
+завести:завёл,завела́,завело́,завели́|отвести:отвёл,отвела́,отвело́,отвели́|перевести:перевёл,перевела́,перевело́,перевели́|повести:повёл,повела́,повело́,повели́|подвести:подвёл,подвела́,подвело́,подвели́
+привести:привёл,привела́,привело́,привели́|провести:провёл,провела́,провело́,провели́|произвести:произвёл,произвела́,произвело́,произвели́|развести:развёл,развела́,развело́,развели́|развестись:развёлся,развела́сь,развело́сь,развели́сь
+свести:свёл,свела́,свело́,свели́|везти:вёз,везла́,везло́,везли́|отвезти:отвёз,отвезла́,отвезло́,отвезли́|повезти:повёз,повезла́,повезло́,повезли́|привезти:привёз,привезла́,привезло́,привезли́
+брести:брёл,брела́,брело́,брели́|побрести:побрёл,побрела́,побрело́,побрели́|ползти:полз,ползла́,ползло́,ползли́|поползти:попо́лз,поползла́,поползло́,поползли́|лезть:лез,ле́зла,ле́зло,ле́зли|полезть:поле́з,поле́зла,поле́зло,поле́зли
+расти:рос,росла́,росло́,росли́|вырасти:вы́рос,вы́росла,вы́росло,вы́росли|возрасти:возро́с,возросла́,возросло́,возросли́|спасти:спас,спасла́,спасло́,спасли́|потрясти:потря́с,потрясла́,потрясло́,потрясли́
+цвести:цвёл,цвела́,цвело́,цвели́|расцвести:расцвёл,расцвела́,расцвело́,расцвели́|изобрести:изобрёл,изобрела́,изобрело́,изобрели́|приобрести:приобрёл,приобрела́,приобрело́,приобрели́
+учесть:учёл,учла́,учло́,учли́|предпочесть:предпочёл,предпочла́,предпочло́,предпочли́|мочь:мог,могла́,могло́,могли́|смочь:смог,смогла́,смогло́,смогли́|помочь:помо́г,помогла́,помогло́,помогли́
+лечь:лёг,легла́,легло́,легли́|течь:тёк,текла́,текло́,текли́|достичь:дости́г,дости́гла,дости́гло,дости́гли|привлечь:привлёк,привлекла́,привлекло́,привлекли́|отвлечь:отвлёк,отвлекла́,отвлекло́,отвлекли́
+увлечься:увлёкся,увлекла́сь,увлекло́сь,увлекли́сь|зажечь:зажёг,зажгла́,зажгло́,зажгли́|есть:ел,е́ла,е́ло,е́ли|съесть:съел,съе́ла,съе́ло,съе́ли|надоесть:надое́л,надое́ла,надое́ло,надое́ли
+сесть:сел,се́ла,се́ло,се́ли|присесть:присе́л,присе́ла,присе́ло,присе́ли|класть:клал,кла́ла,кла́ло,кла́ли|красть:крал,кра́ла,кра́ло,кра́ли|украсть:укра́л,укра́ла,укра́ло,укра́ли
+упасть:упа́л,упа́ла,упа́ло,упа́ли|попасть:попа́л,попа́ла,попа́ло,попа́ли|пропасть:пропа́л,пропа́ла,пропа́ло,пропа́ли|напасть:напа́л,напа́ла,напа́ло,напа́ли|совпасть:совпа́л,совпа́ла,совпа́ло,совпа́ли
+выпасть:вы́пал,вы́пала,вы́пало,вы́пали|умереть:у́мер,умерла́,у́мерло,у́мерли|замереть:за́мер,замерла́,за́мерло,за́мерли|запереть:за́пер,заперла́,за́перло,за́перли|вытереть:вы́тер,вы́терла,вы́терло,вы́терли
+опереться:опёрся,оперла́сь,оперло́сь,оперли́сь|исчезнуть:исче́з,исче́зла,исче́зло,исче́зли|возникнуть:возни́к,возни́кла,возни́кло,возни́кли|привыкнуть:привы́к,привы́кла,привы́кло,привы́кли
+погибнуть:поги́б,поги́бла,поги́бло,поги́бли|мёрзнуть:мёрз,мёрзла,мёрзло,мёрзли|замёрзнуть:замёрз,замёрзла,замёрзло,замёрзли|пахнуть:пах,па́хла,па́хло,па́хли`
+  .trim().split(/[|\n]/).map(s => s.split(':')).map(([k, v]) => [k.trim(), v.split(',')]));
+
+function ruPastForms(inf) {
+  if (!inf) return null;
+  const plain = inf.replace(STRESS, '').replace(/ё/g, 'е');
+  if (RU_PAST_IRREG[plain] || RU_PAST_IRREG[inf.replace(STRESS, '')]) return RU_PAST_IRREG[plain] || RU_PAST_IRREG[inf.replace(STRESS, '')];
+  const refl = /(ся|сь)$/.test(inf);
+  const base = inf.replace(/(ся|сь)$/, '');
+  if (!/ть$/.test(base)) return null;                           // -ти, -чь, -сть ohne Eintrag: lieber nichts zeigen
+  const stem = base.slice(0, -2);
+  const stressed = s => (ruVowelCount(s) > 1 && !/[́ё]/.test(s) ? s.replace(/[аеиоуыэюя]/, v => v + '́') : s);
+  const forms = ['л', 'ла', 'ло', 'ли'].map(e => stressed(stem + e));
+  return refl ? forms.map((f, i) => f + (i === 0 ? 'ся' : 'сь')) : forms;
+}
+
+// Ausklappbare Tabelle mit allen Formen eines Aspekts (Präsens/Futur, Vergangenheit, Imperativ)
+function allFormsHtml(x, p, imp) {
+  const pres = ruAllPresent(x[p], x[p + '_1'], x[p + '_2']);
+  const past = ruPastForms(x[p]);
+  if (!pres && !past) return '';
+  const say = list => `<button class="say" data-say="${esc(list.filter(Boolean).join(', '))}">🔊</button>`;
+  const PERS = ['я', 'ты', 'он/она́', 'мы', 'вы', 'они́'];
+  const isByt = x[p].replace(STRESS, '') === 'быть';            // бу́ду, бу́дешь … sind Zukunft
+  const tense = p === 'pf' || isByt ? 'Zukunft' : 'Gegenwart';
+  const rows = [];
+  if (pres) rows.push(`<tr><th colspan="2">${tense} ${say(pres)}</th></tr>` + PERS.map((pr, i) => `<tr><td>${pr}</td><td>${esc(pres[i])}</td></tr>`).join(''));
+  if (p === 'ipf' && pres && !isByt) rows.push(`<tr><td colspan="2" class="vf-note">Zukunft: бу́ду / бу́дешь … + ${esc(x[p])}</td></tr>`);
+  if (past) rows.push(`<tr><th colspan="2">Vergangenheit ${say(past)}</th></tr>` + ['он', 'она́', 'оно́', 'они́'].map((pr, i) => `<tr><td>${pr}</td><td>${esc(past[i])}</td></tr>`).join(''));
+  if (imp && imp !== '—') rows.push(`<tr><th colspan="2">Imperativ</th></tr><tr><td>ты</td><td>${esc(imp)}!</td></tr><tr><td>вы</td><td>${esc(ruImperativePlural(imp))}!</td></tr>`);
+  return `<details class="vf-all"><summary>Alle Formen anzeigen</summary><table class="vf-table">${rows.join('')}</table></details>`;
 }
 
 function conjugationHtml(card) {
@@ -1184,6 +1363,7 @@ function verbPairHtml(card) {
         ${x[p + '_2'] ? `<div><i>ты</i> ${esc(x[p + '_2'])}${pron(p + '_2')}</div>` : ''}
       </div>
       ${impRow(p)}
+      ${allFormsHtml(x, p, impOf(p))}
     </div>` : '';
   const exPron = x.example_pron || ruPron(x.example);
   const biaspectual = x.pf && x.pf === x.ipf;
@@ -1232,7 +1412,9 @@ function esConjHtml(card) {
       <tbody>${ES_PERSONS.map((pr, i) => `
         <tr><th>${pr}</th><td>${esc(pres[i] || '')}</td><td>${esc(past[i] || '')}</td><td>${esc(c.fut[i])}</td></tr>`).join('')}
       </tbody>
-    </table>`;
+    </table>
+    <div class="es-why">Warum so? <button class="info" aria-label="Regeln anzeigen">ⓘ</button></div>
+    <div class="vp-rule es-rule">${esExplain(v)}</div>`;
   }).filter(Boolean);
   return tables.length ? `<div class="conj-wrap">${tables.join('')}</div>` : '';
 }
@@ -1255,6 +1437,27 @@ function extrasHtml(card) {
     if (!known.has(k) && !k.startsWith('example_') && v) items.push(`<div><b>${esc(k)}</b>${esc(v)}</div>`);
   }
   return items.length ? `<div class="extras">${items.join('')}</div>` : '';
+}
+
+// Seite „Russisch“ einer Karte: Verbblock, Nomen, Adjektiv bzw. das russische Wort
+function cardRuSide(card) {
+  const sayRu = text => `<button class="say" data-say="${esc(text)}">🔊</button>`;
+  return `<div class="lang-tag">${esc(langName(RU))}</div>` + (card.type === 'verbpair'
+    ? verbPairHtml(card)
+    : card.type === 'adjfull' ? adjHtml(card)
+    : card.type === 'nounfull' ? nounHtml(card)
+    : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(card.f[RU])}`);
+}
+
+// Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
+function cardTrSide(card) {
+  return trLangs().filter(l => card.f[l.code]).map(l => `
+    <div class="answer">
+      <div class="lang-tag">${esc(l.name)}</div>
+      <div class="a-word">${esc(card.f[l.code])}</div>
+      ${card.x['example_' + l.code] ? `<div class="a-ex">${esc(card.x['example_' + l.code])}</div>` : ''}
+      ${card.type === 'verbpair' && l.code === 'es' ? esConjHtml(card) : ''}
+    </div>`).join('');
 }
 
 function renderStudy() {
@@ -1282,21 +1485,8 @@ function renderStudy() {
   const prev = g => fmtInterval(schedule(p, g).due - Date.now());
   const isVp = card.type === 'verbpair';
   const isNoun = card.type === 'nounfull' || card.type === 'adjfull';
-  const sayRu = (code, text) => code === 'ru' ? `<button class="say" data-say="${esc(text)}">🔊</button>` : '';
-  // Seite „Russisch“: Verbblock bzw. das russische Wort
-  const ruSide = () => `<div class="lang-tag">${esc(langName(RU))}</div>` + (isVp
-    ? verbPairHtml(card)
-    : card.type === 'adjfull' ? adjHtml(card)
-    : isNoun ? nounHtml(card)
-    : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(RU, card.f[RU])}`);
-  // Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
-  const trSide = () => trLangs().filter(l => card.f[l.code]).map(l => `
-    <div class="answer">
-      <div class="lang-tag">${esc(l.name)}</div>
-      <div class="a-word">${esc(card.f[l.code])}</div>
-      ${card.x['example_' + l.code] ? `<div class="a-ex">${esc(card.x['example_' + l.code])}</div>` : ''}
-      ${isVp && l.code === 'es' ? esConjHtml(card) : ''}
-    </div>`).join('');
+  const ruSide = () => cardRuSide(card);
+  const trSide = () => cardTrSide(card);
   const ruFirst = cur.q !== 'tr';
 
   view.innerHTML = `
@@ -1398,7 +1588,162 @@ function studyKeys(e) {
   if (['1', '2', '3', '4'].includes(e.key)) grade(+e.key);
 }
 function startStudyKeys() { document.addEventListener('keydown', studyKeys); }
-function stopStudyKeys() { document.removeEventListener('keydown', studyKeys); }
+function stopStudyKeys() { document.removeEventListener('keydown', studyKeys); document.removeEventListener('keydown', quizKeys); }
+
+/* ============================================================
+   Schreibmodus: 20 zufällige Wörter aus den gewählten Decks, Bedeutung eintippen.
+   Richtung wie in der Übersicht gewählt (RU → DE, DE → RU oder gemischt).
+   Falsche Wörter kommen nach ein paar anderen Karten noch einmal, bis alle richtig sind.
+   ============================================================ */
+let quiz = null;
+const QUIZ_SIZE = 20;
+const QUIZ_GAP = 3;          // falsch beantwortete Karte kommt nach so vielen anderen wieder
+
+function startQuiz(deckIds, title) {
+  const pool = deckCards(deckIds).filter(c => c.f[RU] && c.f.de);
+  for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+  const cards = pool.slice(0, QUIZ_SIZE);
+  if (!cards.length) { toast('Keine Karten in diesem Deck'); return; }
+  const dir = () => (db.settings.qLang === 'mix' ? (Math.random() < 0.5 ? 'ru' : 'tr') : db.settings.qLang);
+  quiz = { title, deckIds, queue: cards.map(c => ({ id: c.id, q: dir(), tries: 0 })), total: cards.length, firstTry: 0, cur: null, answer: null };
+  document.body.classList.add('studying');
+  setHeader(title, () => { quiz = null; go('learn'); });
+  stopStudyKeys();
+  document.addEventListener('keydown', quizKeys);
+  nextQuiz();
+}
+
+function nextQuiz() {
+  quiz.cur = quiz.queue.shift() || null;
+  quiz.answer = null;
+  renderQuiz();
+}
+
+// Vergleichsform: klein, ohne Betonung, ohne Artikel und Klammerzusätze
+function quizNorm(s) {
+  return (s || '').toLowerCase().replace(STRESS, '').replace(/ё/g, 'е').replace(/\(.*?\)/g, ' ')
+    .replace(/(^|\s)(der|die|das|den|dem|ein|eine|einen|sich|etw\.?|etwas|jmdn\.?|jmdm\.?)(?=\s|$)/g, ' ')
+    .replace(/[.,!?;:"„“«»]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+// Alle akzeptierten Antworten einer Karte
+function quizVariants(card, askRu) {
+  if (askRu) return (card.f.de || '').split(/[,;/]/).map(quizNorm).filter(Boolean);
+  const list = [card.f[RU]].concat(card.f[RU].split('/'), card.x.ipf || [], card.x.pf || []);
+  return [...new Set(list.map(quizNorm).filter(Boolean))];
+}
+
+function levenshtein(a, b) {
+  const d = Array.from({ length: a.length + 1 }, (_, i) => [i]);
+  for (let j = 1; j <= b.length; j++) d[0][j] = j;
+  for (let i = 1; i <= a.length; i++) for (let j = 1; j <= b.length; j++) {
+    d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  }
+  return d[a.length][b.length];
+}
+
+function quizCheck(text) {
+  const cur = quiz.cur, card = db.cards[cur.id];
+  const askRu = cur.q === 'ru';
+  const a = quizNorm(text);
+  let ok = false, typo = false;
+  for (const v of quizVariants(card, askRu)) {
+    if (!a) break;
+    if (v === a) { ok = true; typo = false; break; }
+    const allowed = v.length >= 9 ? 2 : v.length >= 5 ? 1 : 0;
+    if (levenshtein(a, v) <= allowed) { ok = true; typo = true; }
+  }
+  cur.tries++;
+  if (ok && cur.tries === 1) quiz.firstTry++;
+  if (!ok) quiz.queue.splice(Math.min(QUIZ_GAP, quiz.queue.length), 0, cur);   // später noch einmal
+  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[RU] };
+  renderQuiz();
+}
+
+// „Ich lag doch richtig“: Wiederholung wieder herausnehmen
+function quizOverride() {
+  const cur = quiz.cur;
+  const i = quiz.queue.indexOf(cur);
+  if (i >= 0) quiz.queue.splice(i, 1);
+  if (cur.tries === 1) quiz.firstTry++;
+  quiz.answer.ok = true;
+  quiz.answer.override = true;
+  renderQuiz();
+}
+
+function quizKeys(e) {
+  if (!quiz || e.key !== 'Enter') return;
+  if (quiz.answer) { e.preventDefault(); nextQuiz(); }
+}
+
+function renderQuiz() {
+  const view = $('#view');
+  const cur = quiz.cur;
+  const left = quiz.queue.length + (cur ? 1 : 0);
+  $('#header-extra').innerHTML = cur ? `<span class="hbadge" title="noch übrig">${left}</span>` : '';
+  if (!cur) {
+    view.innerHTML = `
+      <div class="done">
+        <div class="big">🎉</div>
+        <h2>Geschafft!</h2>
+        <p>${quiz.firstTry} von ${quiz.total} Wörtern beim ersten Versuch richtig.</p>
+        <button class="btn" id="quiz-again">Neue Runde</button><br>
+        <button class="btn secondary" id="quiz-end">Zur Übersicht</button>
+      </div>`;
+    $('#quiz-again').onclick = () => startQuiz(quiz.deckIds, quiz.title);
+    $('#quiz-end').onclick = () => { quiz = null; go('learn'); };
+    return;
+  }
+  const card = db.cards[cur.id];
+  const askRu = cur.q === 'ru';
+  const prompt = askRu ? card.f[RU] : card.f.de;
+  const say = t => `<button class="say" data-say="${esc(t)}">🔊</button>`;
+  if (!quiz.answer) {
+    view.innerHTML = `
+      <div class="quiz">
+        <div class="quiz-prompt">
+          <div class="lang-tag">${askRu ? 'Russisch' : 'Deutsch'}</div>
+          <div class="q-word">${esc(prompt)}</div>${askRu ? say(prompt) : ''}
+        </div>
+        <label class="quiz-ask" for="quiz-in">${askRu ? 'Was heißt das auf Deutsch?' : 'Wie heißt das auf Russisch?'}</label>
+        <input id="quiz-in" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${askRu ? 'de' : 'ru'}" enterkeyhint="done">
+        <div class="btn-row">
+          <button class="btn" id="quiz-check">Prüfen</button>
+          <button class="btn secondary" id="quiz-skip">Weiß ich nicht</button>
+        </div>
+      </div>`;
+    const input = $('#quiz-in');
+    setTimeout(() => input.focus(), 50);
+    input.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); quizCheck(input.value); } };
+    $('#quiz-check').onclick = () => quizCheck(input.value);
+    $('#quiz-skip').onclick = () => quizCheck('');
+  } else {
+    const r = quiz.answer;
+    // Nach der Antwort: Ergebnis und die ganze Karte – zuerst die Antwortseite, dann die Frageseite
+    view.innerHTML = `
+      <div class="quiz">
+        <div class="quiz-result ${r.ok ? 'ok' : 'bad'}">
+          <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : r.typo ? '✓ Richtig (kleiner Tippfehler)' : '✓ Richtig!') : '✗ Leider falsch – kommt gleich noch einmal'}</b>
+          <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
+          <div>Richtig: <b>${esc(r.expected)}</b></div>
+        </div>
+        <div class="btn-row">
+          <button class="btn" id="quiz-next">Weiter</button>
+          ${!r.ok ? '<button class="btn secondary" id="quiz-ok">Ich lag doch richtig</button>' : ''}
+        </div>
+        <div class="quiz-card">${askRu ? cardTrSide(card) : cardRuSide(card)}</div>
+        <div class="quiz-card">${askRu ? cardRuSide(card) : cardTrSide(card)}</div>
+      </div>`;
+    $('#quiz-next').onclick = nextQuiz;
+    $('#quiz-ok')?.addEventListener('click', quizOverride);
+  }
+  $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say); });
+  $$('.info', view).forEach(b => b.onclick = (e) => {
+    e.stopPropagation();
+    const rule = (b.closest('tr') || b.parentElement).nextElementSibling;
+    if (rule && rule.classList.contains('vp-rule')) b.classList.toggle('open', rule.classList.toggle('open'));
+  });
+}
 
 /* ============================================================
    Ansicht: Kartenliste
