@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 41;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 42;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1020,6 +1020,15 @@ function ruPastForms(inf) {
   return refl ? forms.map((f, i) => f + (i === 0 ? 'ся' : 'сь')) : forms;
 }
 
+// Welche Konjugation? 1. (е-Konjugation), 2. (и-Konjugation) oder unregelmäßig
+function ruConjType(inf, ya, ty) {
+  const plain = (inf || '').replace(STRESS, '');
+  if (CONJ_IRREGULAR[plain] || /дать$/.test(plain) && /да́?м$/.test(ya)) return 'unregelmäßig';
+  if (/бегу́$|хочу́$/.test(ya)) return 'gemischt (1. und 2. Konjugation)';
+  if (/и́?шь(ся)?$/.test(ty)) return '2. Konjugation (и: -ишь, -ит, -им, -ите, -ат/-ят)';
+  return '1. Konjugation (е: -ешь, -ет, -ем, -ете, -ут/-ют)';
+}
+
 // Ausklappbare Tabelle mit allen Formen eines Aspekts (Präsens/Futur, Vergangenheit, Imperativ)
 function allFormsHtml(x, p, imp) {
   const pres = ruAllPresent(x[p], x[p + '_1'], x[p + '_2']);
@@ -1030,6 +1039,7 @@ function allFormsHtml(x, p, imp) {
   const isByt = x[p].replace(STRESS, '') === 'быть';            // бу́ду, бу́дешь … sind Zukunft
   const tense = p === 'pf' || isByt ? 'Zukunft' : 'Gegenwart';
   const rows = [];
+  if (pres) rows.push(`<tr><td colspan="2" class="vf-conj">${esc(ruConjType(x[p], x[p + '_1'], x[p + '_2']))}</td></tr>`);
   if (pres) rows.push(`<tr><th colspan="2">${tense} ${say(pres)}</th></tr>` + PERS.map((pr, i) => `<tr><td>${pr}</td><td>${esc(pres[i])}</td></tr>`).join(''));
   if (p === 'ipf' && pres && !isByt) rows.push(`<tr><td colspan="2" class="vf-note">Zukunft: бу́ду / бу́дешь … + ${esc(x[p])}</td></tr>`);
   if (past) rows.push(`<tr><th colspan="2">Vergangenheit ${say(past)}</th></tr>` + ['он', 'она́', 'оно́', 'они́'].map((pr, i) => `<tr><td>${pr}</td><td>${esc(past[i])}</td></tr>`).join(''));
