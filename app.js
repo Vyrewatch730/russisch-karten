@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 45;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 46;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -251,11 +251,23 @@ function russianVoice() {
   return ru.find(v => /natural|online|google/i.test(v.name)) || ru[0] || null;
 }
 
-function speak(text) {
+// Spanische Stimme: lateinamerikanisch (Dom. Rep., USA, Mexiko …) vor Spanien, natürliche Stimmen zuerst
+function spanishVoice() {
+  if (!voices.length) loadVoices();
+  const es = voices.filter(v => v.lang.replace('_', '-').toLowerCase().startsWith('es'));
+  const rank = v => {
+    const l = v.lang.replace('_', '-').toLowerCase();
+    return (/natural|online|google/i.test(v.name) ? 0 : 10) + (l === 'es-do' ? 0 : l === 'es-us' ? 1 : l === 'es-mx' ? 2 : l === 'es-es' ? 4 : 3);
+  };
+  return es.sort((a, b) => rank(a) - rank(b))[0] || null;
+}
+
+// lang: 'ru' (Standard) oder 'es' – steht an den 🔊-Knöpfen als data-lang
+function speak(text, lang) {
   if (!('speechSynthesis' in window) || !text) return;
-  const voice = russianVoice();
-  // Ohne russische Stimme würde der Browser die Standardstimme (meist Englisch) nehmen – dann lieber gar nicht
-  if (!voice) { toast('Keine russische Stimme gefunden – Hinweis unter Einstellungen → Vorlesen'); return; }
+  const voice = lang === 'es' ? spanishVoice() : russianVoice();
+  // Ohne passende Stimme würde der Browser die Standardstimme (meist Englisch) nehmen – dann lieber gar nicht
+  if (!voice) { toast(`Keine ${lang === 'es' ? 'spanische' : 'russische'} Stimme gefunden – Hinweis unter Einstellungen → Vorlesen`); return; }
   const u = new SpeechSynthesisUtterance(text.replace(STRESS, ''));
   u.voice = voice;
   u.lang = voice.lang;
@@ -645,25 +657,52 @@ function schedule(p, grade, now = Date.now()) {
 /* ============================================================
    Abfragerichtungen und Warteschlange
    ============================================================ */
-// Eine Karte hat zwei feste Seiten: Russisch und die Übersetzungen (alle anderen aktiven Sprachen).
-// Abfragerichtung: 'ru' = Russisch zuerst, 'tr' = Übersetzungen zuerst, 'mix' = beides.
+// Eine Karte hat zwei feste Seiten: die Lernsprache und die Übersetzungen (alle anderen aktiven Sprachen).
+// Abfragerichtung: 'ru' = Lernsprache zuerst, 'tr' = Übersetzungen zuerst, 'mix' = beides.
+// (Der Wert heißt aus historischen Gründen 'ru', auch wenn Spanisch die Lernsprache ist.)
 const RU = 'ru';
-const trLangs = () => activeLangs().filter(l => l.code !== RU);
+
+// Lernsprache: Russisch oder Spanisch. Dieselben Karten, beim Spanischlernen ist Spanisch die Vorderseite
+// und Russisch steht bei den Übersetzungen. Der Lernfortschritt wird je Lernsprache getrennt gespeichert.
+const LEARN_LANGS = {
+  ru: { name: 'Russisch', flag: '🇷🇺', title: 'Карточки' },
+  es: { name: 'Spanisch', flag: '🇩🇴', title: 'Tarjetas' },
+};
+const learnLang = () => (db.settings.learn === 'es' ? 'es' : 'ru');
+const trLangs = () => activeLangs().filter(l => l.code !== learnLang());
+// Schlüssel im Lernfortschritt: Russisch wie bisher „id|ru“, Spanisch „id|es-ru“ / „id|es-tr“
+const progKey = (id, q) => (learnLang() === 'es' ? `${id}|es-${q}` : `${id}|${q}`);
 
 function questionLangs() {
   const q = db.settings.qLang;
   return q === 'mix' ? [RU, 'tr'] : [q === 'tr' ? 'tr' : RU];
 }
 
-// Abfragbar, wenn es Russisch und mindestens eine aktive Übersetzung gibt
+// Abfragbar, wenn es die Lernsprache und mindestens eine aktive Übersetzung gibt.
+// Spanisch: Mehrere russische Wörter haben oft dieselbe Übersetzung (z. B. Aspektpaare) – nur die erste Karte zählt.
 function canAsk(card) {
-  return !!card.f[RU] && trLangs().some(l => card.f[l.code]);
+  const L = learnLang();
+  return !!card.f[L] && trLangs().some(l => card.f[l.code]) && (L === 'ru' || !esDuplicate(card));
+}
+
+const esKey = c => (c.f.es || '').toLowerCase().trim();
+let esFirst = null, esFirstCount = -1;
+function esDuplicate(card) {
+  const n = Object.keys(db.cards).length;
+  if (n !== esFirstCount) {
+    esFirst = new Map();
+    for (const c of Object.values(db.cards).sort((a, b) => a.created - b.created)) if (esKey(c) && !esFirst.has(esKey(c))) esFirst.set(esKey(c), c.id);
+    esFirstCount = n;
+  }
+  return esFirst.get(esKey(card)) !== card.id;
 }
 
 function deckCards(deckIds) {
   const set = new Set(deckIds);
   return Object.values(db.cards).filter(c => set.has(c.deck)).sort((a, b) => a.created - b.created);
 }
+// Karten, die in der aktuellen Lernsprache abgefragt werden (für Anzeige und Schreibmodus)
+const learnCards = deckIds => deckCards(deckIds).filter(c => canAsk(c));
 
 function deckStats(deckIds) {
   const now = Date.now();
@@ -671,7 +710,7 @@ function deckStats(deckIds) {
   for (const c of deckCards(deckIds)) {
     for (const q of questionLangs()) {
       if (!canAsk(c, q)) continue;
-      const p = db.progress[c.id + '|' + q];
+      const p = db.progress[progKey(c.id, q)];
       if (!p) fresh++;
       else if (p.due <= now + 20 * MIN) (p.step >= 0 ? learn++ : due++);
     }
@@ -686,7 +725,7 @@ function buildQueue(deckIds) {
   for (const c of deckCards(deckIds)) {
     for (const q of langs) {
       if (!canAsk(c, q)) continue;
-      const key = c.id + '|' + q;
+      const key = progKey(c.id, q);
       const p = db.progress[key];
       if (!p) freshItems.push({ id: c.id, q, key, isNew: true });
       else if (p.due <= now + 20 * MIN) dueItems.push({ id: c.id, q, key, isNew: false, due: p.due });
@@ -736,11 +775,14 @@ function go(newTab) {
 /* ============================================================
    Ansicht: Regeln (Inhalte aus rules.js)
    ============================================================ */
+// Regeln der aktuellen Lernsprache (Russisch: rules.js, Spanisch: rules-es.js)
+const ruleList = () => (learnLang() === 'es' ? RULES_ES : RULES);
+
 function renderRules() {
-  setHeader('Regeln');
+  setHeader(learnLang() === 'es' ? 'Reglas' : 'Regeln');
   $('#view').innerHTML = `
     <div class="panel">
-      ${RULES.map(r => `
+      ${ruleList().map(r => `
         <div class="row clickable" data-rule="${r.id}">
           <span class="rule-icon">${r.icon}</span>
           <div class="grow"><b>${esc(r.title)}</b><div class="sub">${esc(r.teaser)}</div></div>
@@ -751,13 +793,13 @@ function renderRules() {
 }
 
 function renderRule(id) {
-  const rule = RULES.find(r => r.id === id);
+  const rule = ruleList().find(r => r.id === id);
   if (!rule) return renderRules();
   setHeader(rule.title, () => go('rules'));
   $('#view').innerHTML = `<article class="rule">${rule.html}</article>`;
   // Aussprache der Beispielwörter berechnen und 🔊 aktivieren
   $$('[data-pr]', $('#view')).forEach(el => { const p = ruPron(el.dataset.pr); el.textContent = p ? `[${p}]` : ''; });
-  $$('.say', $('#view')).forEach(b => b.onclick = () => speak(b.dataset.say));
+  $$('.say', $('#view')).forEach(b => b.onclick = () => speak(b.dataset.say, b.dataset.lang));
   $('#view').scrollTop = 0;
 }
 
@@ -767,7 +809,8 @@ function renderRule(id) {
 const DIRECTIONS = ['ru', 'tr', 'mix'];
 function dirText(q) {
   const tr = trLangs().map(l => l.code.toUpperCase()).join('/') || '?';
-  return q === 'mix' ? 'Gemischt' : q === 'tr' ? `${tr} → RU` : `RU → ${tr}`;
+  const L = learnLang().toUpperCase();
+  return q === 'mix' ? 'Gemischt' : q === 'tr' ? `${tr} → ${L}` : `${L} → ${tr}`;
 }
 function dirLabel() { return dirText(db.settings.qLang); }
 
@@ -792,8 +835,19 @@ function kindChips() {
     `<button class="chip ${cur === k.v ? 'active' : ''}" data-kind="${k.v}">${k.t}</button>`).join('')}</div>`;
 }
 
+// Umschalter der Lernsprache (oben in der Übersicht)
+function learnChips() {
+  return `<div class="chips learn-chips">${Object.entries(LEARN_LANGS).map(([code, l]) =>
+    `<button class="chip ${learnLang() === code ? 'active' : ''}" data-learn="${code}">${l.flag} ${l.name}</button>`).join('')}</div>`;
+}
+function setLearnLang(code) {
+  db.settings.learn = code;
+  ensureLanguage(code);
+  save();
+}
+
 function renderLearn() {
-  setHeader('Карточки');
+  setHeader(LEARN_LANGS[learnLang()].title);
   const kind = DECK_KINDS.find(k => k.v === (db.settings.deckKind || 'all')) || DECK_KINDS[0];
   const allDecks = Object.values(db.decks);
   const decks = allDecks.filter(d => kind.test(d.id));
@@ -802,7 +856,7 @@ function renderLearn() {
   if (!allDecks.length) {
     view.innerHTML = `
       <div class="empty">
-        <div style="font-size:48px">🇷🇺</div>
+        <div style="font-size:48px">${LEARN_LANGS[learnLang()].flag}</div>
         <p>Noch keine Karten vorhanden.</p>
         <button class="btn" id="go-lib">Startdeck aus der Bibliothek laden</button><br>
         <button class="btn secondary" id="go-new">Eigene Karte anlegen</button>
@@ -814,6 +868,10 @@ function renderLearn() {
   const allIds = decks.map(d => d.id);
   const statRow = (s) => `<div class="counts"><span class="c-new">${Math.min(s.fresh, Math.max(0, db.settings.newPerDay - newSeenToday()))}</span><span class="c-learn">${s.learn}</span><span class="c-due">${s.due}</span></div>`;
   view.innerHTML = `
+    <div class="section">
+      <h2>Ich lerne</h2>
+      ${learnChips()}
+    </div>
     <div class="section">
       <h2>Abfragerichtung</h2>
       ${dirChips()}
@@ -830,7 +888,7 @@ function renderLearn() {
         ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen</div>${kind.v !== 'all' ? `<button class="btn small" id="load-kind">Laden</button>` : ''}</div>` : ''}
         ${decks.map(d => `
           <div class="row clickable" data-study="${esc(d.id)}">
-            <div class="grow ellipsis">${esc(d.name)}<div class="sub">${deckCards([d.id]).length} ${deckCards([d.id]).length === 1 ? "Karte" : "Karten"}</div></div>
+            <div class="grow ellipsis">${esc(d.name)}<div class="sub">${learnCards([d.id]).length} ${learnCards([d.id]).length === 1 ? "Karte" : "Karten"}</div></div>
             ${statRow(deckStats([d.id]))}
             <button class="quiz-btn" data-quiz="${esc(d.id)}" aria-label="Schreiben üben">✍️</button>
           </div>`).join('')}
@@ -847,6 +905,7 @@ function renderLearn() {
   });
   $$('[data-dir]', view).forEach(b => b.onclick = () => { db.settings.qLang = b.dataset.dir; save(); renderLearn(); });
   $$('[data-kind]', view).forEach(b => b.onclick = () => { db.settings.deckKind = b.dataset.kind; save(); renderLearn(); });
+  $$('[data-learn]', view).forEach(b => b.onclick = () => { setLearnLang(b.dataset.learn); renderLearn(); });
   // Noch nichts von dieser Art geladen: alle passenden Decks aus der Bibliothek holen
   const loadBtn = $('#load-kind');
   if (loadBtn) loadBtn.onclick = async () => {
@@ -1578,13 +1637,136 @@ function cardRuSide(card) {
 
 // Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
 function cardTrSide(card) {
-  return trLangs().filter(l => card.f[l.code]).map(l => `
+  const sayRu = t => `<button class="say" data-say="${esc(t)}">🔊</button>`;
+  return trLangs().filter(l => card.f[l.code]).map(l => l.code === RU ? `
+    <div class="answer">
+      <div class="lang-tag">${esc(l.name)}</div>
+      <div class="a-word">${esc(card.f.ru)} ${sayRu(card.f.ru)}</div>
+      ${card.x.example ? `<div class="a-ex">${esc(card.x.example)} ${sayRu(card.x.example)}</div>` : ''}
+    </div>` : `
     <div class="answer">
       <div class="lang-tag">${esc(l.name)}</div>
       <div class="a-word">${esc(card.f[l.code])}</div>
       ${card.x['example_' + l.code] ? `<div class="a-ex">${esc(card.x['example_' + l.code])}</div>` : ''}
       ${card.type === 'verbpair' && l.code === 'es' ? esConjHtml(card) : ''}
     </div>`).join('');
+}
+
+// Vorderseite in der Lernsprache
+const cardLearnSide = card => (learnLang() === 'es' ? cardEsSide(card) : cardRuSide(card));
+
+/* ============================================================
+   Spanisch als Lernsprache: Wort mit Artikel/Plural, Adjektivformen, Konjugation, Beispielsatz
+   ============================================================ */
+// Weibliche Nomen mit betontem a-/ha- am Anfang haben im Singular „el“: el agua, aber las aguas
+const ES_EL_FEM = new Set(['agua', 'alma', 'arma', 'área', 'aula', 'ave', 'hambre', 'hacha', 'águila', 'hada', 'ancla', 'asma', 'haba', 'alba', 'ala', 'arca', 'arpa', 'aya']);
+// Nomen, die man (fast) nur im Singular benutzt
+const ES_NO_PLURAL = new Set(['dinero', 'gente', 'sangre', 'hambre', 'sed', 'salud', 'leche', 'arroz', 'azúcar', 'música', 'calor', 'frío', 'tráfico', 'oro', 'petróleo']);
+const ES_DEACCENT = { á: 'a', é: 'e', í: 'i', ó: 'o', ú: 'u' };
+const ES_ACCENT = { a: 'á', e: 'é', i: 'í', o: 'ó', u: 'ú' };
+
+// Silbenkerne: Vokalgruppen, zwei starke Vokale (a, e, o) nebeneinander sind zwei Silben
+function esNuclei(w) {
+  const res = [];
+  const re = /[aeiouáéíóúü]+/gi;
+  let m;
+  while ((m = re.exec(w))) {
+    let start = m.index;
+    const g = m[0];
+    for (let i = 1; i <= g.length; i++) {
+      if (i === g.length || (/[aeoáéó]/i.test(g[i - 1]) && /[aeoáéó]/i.test(g[i])) || /[íú]/i.test(g[i]) || /[íú]/i.test(g[i - 1])) {
+        res.push({ start, end: m.index + i });
+        start = m.index + i;
+      }
+    }
+  }
+  return res;
+}
+
+// Plural eines spanischen Wortes (Nomen oder Adjektiv)
+function esPluralWord(w) {
+  if (/[aeiouáéó]$/i.test(w) || /[íú]$/i.test(w)) return w + 's';
+  if (/z$/i.test(w)) return w.slice(0, -1) + 'ces';
+  const nuc = esNuclei(w);
+  if (/[sx]$/i.test(w) && nuc.length > 1 && !/[áéíóú]/i.test(w)) return w;   // el lunes → los lunes
+  let base = w;
+  // Betonte Endsilbe verliert den Akzent: canción → canciones, inglés → ingleses (aber país → países)
+  base = base.replace(/([áéó])([ns])$/i, (m, v, c) => ES_DEACCENT[v] + c)
+    .replace(/([^aeiou])([íú])([ns])$/i, (m, p, v, c) => p + ES_DEACCENT[v] + c);
+  // Unbetonte Endung -en/-on: Akzent kommt dazu, weil die Betonung bleibt: examen → exámenes, joven → jóvenes
+  if (/n$/i.test(w) && !/[áéíóú]/i.test(w) && nuc.length >= 2) {
+    const n = nuc[nuc.length - 2];
+    const g = w.slice(n.start, n.end);
+    const i = /[aeo]/i.test(g) ? g.search(/[aeo]/i) : g.length - 1;
+    base = w.slice(0, n.start + i) + ES_ACCENT[w[n.start + i]] + w.slice(n.start + i + 1);
+  }
+  return base + 'es';
+}
+// Nur das erste Wort bekommt den Plural: el fin de semana → los fines de semana
+const esPluralPhrase = s => { const [first, ...rest] = s.split(' '); return [esPluralWord(first), ...rest].join(' '); };
+
+function esNounParts(es) {
+  return es.split(/[;,]/).map(s => s.trim()).filter(Boolean).map(s => {
+    const m = s.match(/^(el|la|los|las)\s+([^(]+?)\s*(\(.*\))?$/i);   // Klammerzusatz gehört nicht zum Plural
+    if (!m) return { text: s };
+    const art = m[1].toLowerCase(), noun = m[2];
+    if (art === 'los' || art === 'las') return { text: s, g: 'pl', plOnly: true };
+    const fem = art === 'la' || ES_EL_FEM.has(noun.split(' ')[0]);
+    if (ES_NO_PLURAL.has(noun)) return { text: s, g: fem ? 'f' : 'm' };
+    return { text: s, g: fem ? 'f' : 'm', pl: `${fem ? 'las' : 'los'} ${esPluralPhrase(noun)}` };
+  });
+}
+
+// Adjektiv: „oscuro, oscura“ = männlich, weiblich; sonst ist die zweite Angabe ein Synonym
+function esAdjForms(es) {
+  const parts = es.split(/[,;]/).map(s => s.trim()).filter(Boolean);
+  const m = parts[0] || '';
+  if (!m || / /.test(m)) return null;
+  const plainM = m.replace(/[áéíóú](?=[^aeiouáéíóú]*$)/i, v => ES_DEACCENT[v]);
+  const isFem = f => f && (f === m.replace(/o$/, 'a') || f === plainM + 'a');
+  const f = isFem(parts[1]) ? parts[1] : /o$/.test(m) ? m.slice(0, -1) + 'a' : m;
+  return { m, f, mpl: esPluralWord(m), fpl: f === m ? esPluralWord(m) : f + 's' };
+}
+
+const ES_NOUN_INFO = `<div><b>Artikel:</b> el (männlich), la (weiblich); Plural los, las. Unbestimmt: un, una, unos, unas.</div>
+  <div>Meist männlich: -o, -or, -aje, -ma (el problema, el tema). Meist weiblich: -a, -ción, -sión, -dad, -tad, -tud. Ausnahmen: el día, el mapa, la mano, la foto, la moto, la radio.</div>
+  <div>Weibliche Wörter mit betontem a- am Anfang nehmen im Singular <b>el</b>: el agua fría, aber las aguas.</div>
+  <div><b>Plural:</b> nach Vokal <b>-s</b> (casa → casas), nach Konsonant <b>-es</b> (ciudad → ciudades), -z → <b>-ces</b> (vez → veces). Unbetontes -s bleibt (el lunes → los lunes). Der Akzent kann wegfallen oder dazukommen: canción → canciones, examen → exámenes.</div>`;
+const ES_ADJ_INFO = `<div>Adjektive passen sich in <b>Geschlecht und Zahl</b> an das Nomen an und stehen meist <b>dahinter</b>: la casa blanca, los coches nuevos.</div>
+  <div>Auf -o: vier Formen (-o, -a, -os, -as). Auf -e oder Konsonant: nur Singular/Plural (verde → verdes, fácil → fáciles). Herkunft auf Konsonant hat eine weibliche Form: español → española.</div>
+  <div><b>Vergleich:</b> más … que (mehr … als), menos … que, tan … como (so … wie). Superlativ: el/la más … Unregelmäßig: bueno → mejor, malo → peor, grande → mayor, pequeño → menor. Sehr: -ísimo (rapidísimo).</div>`;
+
+function cardEsSide(card) {
+  const x = card.x, es = card.f.es || '';
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const say = t => t ? `<button class="say" data-lang="es" data-say="${esc(t)}">🔊</button>` : '';
+  const KIND = { verbpair: ['Verbo', 'es-v'], nounfull: ['Sustantivo', 'es-n'], adjfull: ['Adjetivo', 'es-a'], advfull: ['Adverbio', 'es-d'], prepfull: ['Preposición', 'es-p'] }[card.type] || ['Palabra', 'es-w'];
+  let word = esc(es), body = '';
+  if (card.type === 'nounfull') {
+    const parts = esNounParts(es);
+    word = parts.map(p => `<span class="${p.g ? 'es-g-' + p.g : ''}">${esc(p.text)}</span>`).join(', ');
+    const rows = parts.filter(p => p.pl || p.plOnly);
+    if (rows.length) body = `<div class="es-forms">${rows.map(p => p.plOnly
+      ? `<div><i>nur Plural</i> <span class="es-g-pl">${esc(p.text)}</span></div>`
+      : `<div><i>Plural</i> <span class="es-g-pl">${esc(p.pl)}</span> ${say(p.pl)}</div>`).join('')}
+      <div class="nn-hint">Artikel und Plural${info}</div><div class="vp-rule">${ES_NOUN_INFO}</div></div>`;
+  } else if (card.type === 'adjfull') {
+    const a = esAdjForms(es);
+    if (a) body = `<table class="es-adj"><tr><th></th><th>männl.</th><th>weibl.</th></tr>
+      <tr><th>Sing.</th><td class="es-g-m">${esc(a.m)}</td><td class="es-g-f">${esc(a.f)}</td></tr>
+      <tr><th>Plural</th><td class="es-g-m">${esc(a.mpl)}</td><td class="es-g-f">${esc(a.fpl)}</td></tr></table>
+      <div class="nn-hint">Anpassung und Vergleich${info}</div><div class="vp-rule">${ES_ADJ_INFO}</div>`;
+  } else if (card.type === 'verbpair') {
+    body = esConjHtml(card);
+  }
+  const mainSay = es.split(/[;,]/)[0].replace(/\(.*?\)/g, '').trim();
+  return `<div class="lang-tag">${esc(langName('es'))}</div>
+    <div class="nn es-card">
+      <div class="nn-tags"><span class="nn-g ${KIND[1]}">${KIND[0]}</span></div>
+      <div class="nn-word">${word} ${say(mainSay)}</div>
+      ${body}
+      ${x.example_es ? `<div class="vp-ex">${esc(x.example_es)} ${say(x.example_es)}</div>` : ''}
+    </div>`;
 }
 
 function renderStudy() {
@@ -1607,12 +1789,12 @@ function renderStudy() {
   const card = db.cards[cur.id];
   if (!card) { nextCard(); return; }
   const p = db.progress[cur.key] || newProgress();
-  const typeName = (CARD_TYPES[card.type] || CARD_TYPES.word).name;
+  const typeName = learnLang() === 'es' && card.type === 'verbpair' ? 'Verb' : (CARD_TYPES[card.type] || CARD_TYPES.word).name;
   const remaining = study.queue.length + 1;
   const prev = g => fmtInterval(schedule(p, g).due - Date.now());
   const isVp = card.type === 'verbpair';
   const isNoun = card.type === 'nounfull' || card.type === 'adjfull' || card.type === 'advfull' || card.type === 'prepfull';
-  const ruSide = () => cardRuSide(card);
+  const ruSide = () => cardLearnSide(card);
   const trSide = () => cardTrSide(card);
   const ruFirst = cur.q !== 'tr';
 
@@ -1648,7 +1830,7 @@ function renderStudy() {
   $('#card').onclick = (e) => { if (!e.target.closest('.say, .info, details')) flip(); };
   $('#flip')?.addEventListener('click', flip);
   $$('[data-grade]', view).forEach(b => b.onclick = () => grade(+b.dataset.grade));
-  $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say); });
+  $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say, b.dataset.lang); });
   $$('.info', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
     // In Tabellen gehört die Erklärung zur nächsten Zeile
@@ -1727,7 +1909,7 @@ const QUIZ_SIZE = 20;
 const QUIZ_GAP = 3;          // falsch beantwortete Karte kommt nach so vielen anderen wieder
 
 function startQuiz(deckIds, title) {
-  const pool = deckCards(deckIds).filter(c => c.f[RU] && c.f.de);
+  const pool = learnCards(deckIds).filter(c => c.f.de);
   for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
   const cards = pool.slice(0, QUIZ_SIZE);
   if (!cards.length) { toast('Keine Karten in diesem Deck'); return; }
@@ -1750,12 +1932,15 @@ function nextQuiz() {
 function quizNorm(s) {
   return (s || '').toLowerCase().replace(STRESS, '').replace(/ё/g, 'е').replace(/\(.*?\)/g, ' ')
     .replace(/(^|\s)(der|die|das|den|dem|ein|eine|einen|sich|etw\.?|etwas|jmdn\.?|jmdm\.?)(?=\s|$)/g, ' ')
-    .replace(/[.,!?;:"„“«»]/g, ' ').replace(/\s+/g, ' ').trim();
+    .replace(/(^|\s)(el|la|los|las|un|una|unos|unas)(?=\s|$)/g, ' ')    // spanische Artikel
+    .replace(/[áéíóú]/g, v => ES_DEACCENT[v])                        // spanische Akzente zählen nicht
+    .replace(/[.,!?;:"„“«»¿¡]/g, ' ').replace(/\s+/g, ' ').trim();
 }
 
 // Alle akzeptierten Antworten einer Karte
 function quizVariants(card, askRu) {
   if (askRu) return (card.f.de || '').split(/[,;/]/).map(quizNorm).filter(Boolean);
+  if (learnLang() === 'es') return [...new Set((card.f.es || '').split(/[,;/]/).map(quizNorm).filter(Boolean))];
   const list = [card.f[RU]].concat(card.f[RU].split('/'), card.x.ipf || [], card.x.pf || []);
   return [...new Set(list.map(quizNorm).filter(Boolean))];
 }
@@ -1783,7 +1968,7 @@ function quizCheck(text) {
   cur.tries++;
   if (ok && cur.tries === 1) quiz.firstTry++;
   if (!ok) quiz.queue.splice(Math.min(QUIZ_GAP, quiz.queue.length), 0, cur);   // später noch einmal
-  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[RU] };
+  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[learnLang()] };
   renderQuiz();
 }
 
@@ -1823,17 +2008,18 @@ function renderQuiz() {
   }
   const card = db.cards[cur.id];
   const askRu = cur.q === 'ru';
-  const prompt = askRu ? card.f[RU] : card.f.de;
-  const say = t => `<button class="say" data-say="${esc(t)}">🔊</button>`;
+  const L = learnLang();
+  const prompt = askRu ? card.f[L] : card.f.de;
+  const say = t => `<button class="say" data-lang="${L}" data-say="${esc(t)}">🔊</button>`;
   if (!quiz.answer) {
     view.innerHTML = `
       <div class="quiz">
         <div class="quiz-prompt">
-          <div class="lang-tag">${askRu ? 'Russisch' : 'Deutsch'}</div>
+          <div class="lang-tag">${askRu ? LEARN_LANGS[L].name : 'Deutsch'}</div>
           <div class="q-word">${esc(prompt)}</div>${askRu ? say(prompt) : ''}
         </div>
-        <label class="quiz-ask" for="quiz-in">${askRu ? 'Was heißt das auf Deutsch?' : 'Wie heißt das auf Russisch?'}</label>
-        <input id="quiz-in" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${askRu ? 'de' : 'ru'}" enterkeyhint="done">
+        <label class="quiz-ask" for="quiz-in">${askRu ? 'Was heißt das auf Deutsch?' : `Wie heißt das auf ${LEARN_LANGS[L].name}?`}</label>
+        <input id="quiz-in" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${askRu ? 'de' : L}" enterkeyhint="done">
         <div class="btn-row">
           <button class="btn" id="quiz-check">Prüfen</button>
           <button class="btn secondary" id="quiz-skip">Weiß ich nicht</button>
@@ -1858,13 +2044,13 @@ function renderQuiz() {
           <button class="btn" id="quiz-next">Weiter</button>
           ${!r.ok ? '<button class="btn secondary" id="quiz-ok">Ich lag doch richtig</button>' : ''}
         </div>
-        <div class="quiz-card">${askRu ? cardTrSide(card) : cardRuSide(card)}</div>
-        <div class="quiz-card">${askRu ? cardRuSide(card) : cardTrSide(card)}</div>
+        <div class="quiz-card">${askRu ? cardTrSide(card) : cardLearnSide(card)}</div>
+        <div class="quiz-card">${askRu ? cardLearnSide(card) : cardTrSide(card)}</div>
       </div>`;
     $('#quiz-next').onclick = nextQuiz;
     $('#quiz-ok')?.addEventListener('click', quizOverride);
   }
-  $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say); });
+  $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say, b.dataset.lang); });
   $$('.info', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
     const rule = (b.closest('tr') || b.parentElement).nextElementSibling;
@@ -2190,7 +2376,7 @@ function renderSettings() {
     </div>
     <p style="color:var(--muted);font-size:12px;text-align:center">${Object.keys(db.cards).length} Karten gespeichert</p>`;
   $('#app-update').onclick = forceUpdate;
-  $('#voice-test').onclick = () => speak('Приве́т! Как дела́?');
+  $('#voice-test').onclick = () => (learnLang() === 'es' ? speak('¡Hola! ¿Cómo estás?', 'es') : speak('Приве́т! Как дела́?'));
 
   $$('[data-lang-toggle]', view).forEach(cb => cb.onchange = () => {
     const l = db.languages[+cb.dataset.langToggle];
@@ -2247,11 +2433,12 @@ function renderSettings() {
 
 function voiceStatusHtml() {
   if (!('speechSynthesis' in window)) return 'Dieser Browser kann nicht vorlesen.';
-  const v = russianVoice();
+  const es = learnLang() === 'es';
+  const v = es ? spanishVoice() : russianVoice();
   if (v) return `Stimme: ${esc(v.name)}`;
-  return `<b>Keine russische Stimme gefunden.</b>
-    <div class="sub">Android: Einstellungen → System → Sprachen → Sprachausgabe → Google-Sprachausgabe → Sprachdaten installieren → Russisch.<br>
-    Windows: Einstellungen → Zeit und Sprache → Sprache → Russisch hinzufügen (mit Sprachausgabe), oder die App in Microsoft Edge öffnen.</div>`;
+  return `<b>Keine ${es ? 'spanische' : 'russische'} Stimme gefunden.</b>
+    <div class="sub">Android: Einstellungen → System → Sprachen → Sprachausgabe → Google-Sprachausgabe → Sprachdaten installieren → ${es ? 'Spanisch' : 'Russisch'}.<br>
+    Windows: Einstellungen → Zeit und Sprache → Sprache → ${es ? 'Spanisch' : 'Russisch'} hinzufügen (mit Sprachausgabe), oder die App in Microsoft Edge öffnen.</div>`;
 }
 
 async function loadLibrary() {
