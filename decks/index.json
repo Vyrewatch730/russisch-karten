@@ -502,5 +502,13 @@
         "file":  "verben-16.json",
         "count":  43,
         "version":  202610261729
+    },
+    {
+        "id":  "preposiciones-01",
+        "name":  "Preposiciones",
+        "description":  "39 spanische Präpositionen mit Beispiel (Spanisch-Modus)",
+        "file":  "preposiciones-01.json",
+        "count":  39,
+        "version":  202610261735
     }
 ]

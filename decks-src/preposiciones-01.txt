@@ -1,0 +1,41 @@
+# Spanische Präpositionen (nur im Spanisch-Modus)
+# es | de | en | Beispiel | Deutsch | Englisch | Tipp
+a | nach, zu (wohin?); um (Uhrzeit) | to; at (time) | Voy a la playa. | Ich gehe an den Strand. | I'm going to the beach. | a + el = al: Voy al colmado. Vor Personen als Objekt steht das persönliche a: Veo a mi madre.
+de | von, aus; (Besitz) | of, from | Soy de Alemania. | Ich komme aus Deutschland. | I'm from Germany. | de + el = del: la casa del vecino. Besitz: el carro de Juan = Juans Auto.
+en | in, an, auf (wo?); mit (Verkehrsmittel) | in, on, at | Estoy en casa. | Ich bin zu Hause. | I'm at home. | Wo? → en. Wohin? → a. Verkehrsmittel: en guagua, en carro.
+con | mit | with | Café con leche, por favor. | Kaffee mit Milch, bitte. | Coffee with milk, please. | Mit mir / dir: conmigo, contigo.
+sin | ohne | without | Un jugo sin azúcar. | Ein Saft ohne Zucker. | A juice without sugar. |
+para | für; um … zu; nach (Ziel) | for; in order to | Este regalo es para ti. | Dieses Geschenk ist für dich. | This present is for you. | para = Ziel, Zweck, Empfänger, Frist. Gesprochen in der DR oft „pa'“: Voy pa' la casa.
+por | wegen; durch; für (Preis); pro | because of; through; for | Gracias por todo. | Danke für alles. | Thanks for everything. | por = Grund, Weg, Tausch, Tageszeit: por la mañana. Siehe Regel „por oder para?“.
+desde | seit; von … aus | since; from | Vivo aquí desde 2020. | Ich wohne seit 2020 hier. | I've lived here since 2020. | desde … hasta = von … bis: desde las ocho hasta las cinco.
+hasta | bis | until; up to | ¡Hasta mañana! | Bis morgen! | See you tomorrow! | Auch „sogar“: Hasta él lo sabe.
+entre | zwischen; unter | between; among | La farmacia está entre el banco y el colmado. | Die Apotheke ist zwischen der Bank und dem Laden. | The pharmacy is between the bank and the shop. | entre tú y yo = unter uns (nicht ti/mí!).
+sobre | auf, über; über (Thema); gegen (ungefähr) | on; about | El libro está sobre la mesa. | Das Buch liegt auf dem Tisch. | The book is on the table. | Thema: un libro sobre la historia. Ungefähr: sobre las tres = gegen drei.
+durante | während | during | Durante la película no hablo. | Während des Films rede ich nicht. | During the movie I don't talk. |
+hacia | in Richtung, nach; gegen (Zeit) | towards | Caminamos hacia el mar. | Wir gehen in Richtung Meer. | We walk towards the sea. | Zeit: hacia las cinco = gegen fünf.
+contra | gegen | against | Estoy contra la violencia. | Ich bin gegen Gewalt. | I'm against violence. | Auch im Sport: Licey contra Escogido.
+según | laut, gemäß; je nachdem | according to | Según el médico, estoy bien. | Laut dem Arzt geht es mir gut. | According to the doctor, I'm fine. | Danach stehen Subjektpronomen: según tú, según yo.
+bajo | unter (eher übertragen) | under | Estamos bajo la lluvia. | Wir stehen im Regen. | We're in the rain. | Räumlich im Alltag meist debajo de: debajo de la mesa.
+ante | vor (Person, Situation) | before, in front of | Habló ante el público. | Er sprach vor dem Publikum. | He spoke before the audience. | Für Orte im Alltag: delante de.
+tras | nach, hinter | after, behind | Día tras día. | Tag für Tag. | Day after day. | Im Alltag meist después de (zeitlich) und detrás de (räumlich).
+mediante | mittels, durch | by means of | Pagamos mediante transferencia. | Wir bezahlen per Überweisung. | We pay by transfer. | Eher formell; im Alltag con oder por.
+al lado de | neben | next to | El colmado está al lado de mi casa. | Der Laden ist neben meinem Haus. | The shop is next to my house. | de + el = del: al lado del banco.
+cerca de | in der Nähe von | near | Vivo cerca de la playa. | Ich wohne in der Nähe des Strandes. | I live near the beach. | Ohne Objekt: Está cerca. = Es ist in der Nähe.
+lejos de | weit weg von | far from | La ciudad está lejos de aquí. | Die Stadt ist weit weg von hier. | The city is far from here. | Ohne Objekt: Está lejos.
+delante de | vor (Ort) | in front of | El carro está delante de la casa. | Das Auto steht vor dem Haus. | The car is in front of the house. | Zeitlich „vor“: antes de.
+detrás de | hinter | behind | El gato está detrás de la puerta. | Die Katze ist hinter der Tür. | The cat is behind the door. |
+encima de | auf, oben auf | on top of | Las llaves están encima de la mesa. | Die Schlüssel liegen auf dem Tisch. | The keys are on the table. |
+debajo de | unter | under | El perro duerme debajo de la cama. | Der Hund schläft unter dem Bett. | The dog sleeps under the bed. |
+dentro de | in, innerhalb; in (Zeit) | inside; within | El dinero está dentro de la caja. | Das Geld ist in der Kiste. | The money is inside the box. | Zeit: dentro de una hora = in einer Stunde.
+fuera de | außerhalb | outside of | Trabajo fuera de la ciudad. | Ich arbeite außerhalb der Stadt. | I work outside the city. |
+enfrente de | gegenüber | opposite | La farmacia está enfrente del banco. | Die Apotheke ist gegenüber der Bank. | The pharmacy is opposite the bank. |
+alrededor de | um … herum; ungefähr | around | Hay árboles alrededor de la casa. | Um das Haus herum stehen Bäume. | There are trees around the house. | Ungefähr: alrededor de cien personas.
+antes de | vor (zeitlich) | before | Lávate las manos antes de comer. | Wasch dir vor dem Essen die Hände. | Wash your hands before eating. | Danach Infinitiv: antes de salir = bevor ich gehe.
+después de | nach (zeitlich) | after | Después del trabajo voy a la playa. | Nach der Arbeit gehe ich an den Strand. | After work I go to the beach. | Danach Infinitiv: después de comer.
+a través de | durch, über | through | Lo supe a través de un amigo. | Ich habe es über einen Freund erfahren. | I found out through a friend. |
+en vez de | statt | instead of | Tomo té en vez de café. | Ich trinke Tee statt Kaffee. | I drink tea instead of coffee. | Auch: en lugar de.
+a pesar de | trotz | despite | A pesar de la lluvia, salimos. | Trotz des Regens gehen wir raus. | Despite the rain, we go out. |
+gracias a | dank | thanks to | Gracias a ti, aprobé el examen. | Dank dir habe ich die Prüfung bestanden. | Thanks to you, I passed the exam. | Für etwas Schlechtes: por culpa de (wegen).
+por culpa de | wegen (Schuld) | because of (fault) | Llegué tarde por culpa del tráfico. | Ich kam wegen des Verkehrs zu spät. | I was late because of the traffic. | Neutral: a causa de, por.
+junto a | neben, zusammen mit | next to, together with | Me senté junto a la ventana. | Ich habe mich ans Fenster gesetzt. | I sat by the window. |
+acerca de | über (Thema) | about | Hablamos acerca del viaje. | Wir sprechen über die Reise. | We talk about the trip. | Im Alltag häufiger: de oder sobre.

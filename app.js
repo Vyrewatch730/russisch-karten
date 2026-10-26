@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 48;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 49;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -169,10 +169,24 @@ function defaultDb() {
   };
 }
 
+// Die Karten (groß, ändern sich selten) liegen unter einem eigenen Schlüssel. So muss nach jeder Bewertung
+// nur der kleine Teil mit Lernfortschritt und Einstellungen geschrieben werden.
+const CARDS_KEY = STORE_KEY + '-cards';
+let cardsDirty = false;   // Karten seit dem letzten Speichern geändert?
+let cardsRev = 0;         // zählt Kartenänderungen (für Zwischenspeicher wie deckCards)
+// Nach jeder Änderung an db.cards oder db.decks aufrufen
+function markCards() { cardsDirty = true; cardsRev++; }
+
 function load() {
   try {
     const raw = localStorage.getItem(STORE_KEY);
-    if (raw) return Object.assign(defaultDb(), JSON.parse(raw));
+    if (raw) {
+      const data = Object.assign(defaultDb(), JSON.parse(raw));
+      const rawCards = localStorage.getItem(CARDS_KEY);
+      if (rawCards) data.cards = JSON.parse(rawCards);
+      else if (Object.keys(data.cards).length) cardsDirty = true;   // altes Format: Karten beim nächsten Speichern umziehen
+      return data;
+    }
   } catch (e) { console.error(e); }
   return defaultDb();
 }
@@ -186,7 +200,7 @@ function migrateDirections() {
   let changed = false;
   for (const key of Object.keys(db.progress)) {
     const [id, q] = key.split('|');
-    if (q === 'ru' || q === 'tr') continue;
+    if (q === 'ru' || q === 'tr' || q.startsWith('es-')) continue;   // es-…: Fortschritt im Spanisch-Modus
     const target = id + '|tr';
     if (!db.progress[target] || (db.progress[key].reps || 0) > (db.progress[target].reps || 0)) db.progress[target] = db.progress[key];
     delete db.progress[key];
@@ -196,8 +210,12 @@ function migrateDirections() {
 }
 
 function save() {
-  try { localStorage.setItem(STORE_KEY, JSON.stringify(db)); }
-  catch (e) { toast('Speichern fehlgeschlagen: ' + e.message); }
+  try {
+    // Karten zuerst: Steht der kleine Teil schon im neuen Format, müssen die Karten unter CARDS_KEY liegen
+    if (cardsDirty) { localStorage.setItem(CARDS_KEY, JSON.stringify(db.cards)); cardsDirty = false; }
+    const { cards, ...rest } = db;
+    localStorage.setItem(STORE_KEY, JSON.stringify(rest));
+  } catch (e) { toast('Speichern fehlgeschlagen: ' + e.message); }
 }
 
 function today() {
@@ -687,20 +705,34 @@ function canAsk(card) {
 }
 
 const esKey = c => (c.f.es || '').toLowerCase().trim();
-let esFirst = null, esFirstCount = -1;
+let esFirst = null, esFirstRev = -1;
 function esDuplicate(card) {
-  const n = Object.keys(db.cards).length;
-  if (n !== esFirstCount) {
+  if (esFirstRev !== cardsRev) {
     esFirst = new Map();
-    for (const c of Object.values(db.cards).sort((a, b) => a.created - b.created)) if (esKey(c) && !esFirst.has(esKey(c))) esFirst.set(esKey(c), c.id);
-    esFirstCount = n;
+    for (const c of allCardsSorted()) if (esKey(c) && !esFirst.has(esKey(c))) esFirst.set(esKey(c), c.id);
+    esFirstRev = cardsRev;
   }
   return esFirst.get(esKey(card)) !== card.id;
 }
 
+// Zwischenspeicher: alle Karten nach Alter sortiert und je Deck gruppiert (neu berechnet nach markCards)
+let cardIndex = null, cardIndexRev = -1;
+function buildCardIndex() {
+  if (cardIndexRev === cardsRev) return cardIndex;
+  const all = Object.values(db.cards).sort((a, b) => a.created - b.created);
+  const byDeck = new Map();
+  for (const c of all) { if (!byDeck.has(c.deck)) byDeck.set(c.deck, []); byDeck.get(c.deck).push(c); }
+  cardIndex = { all, byDeck };
+  cardIndexRev = cardsRev;
+  return cardIndex;
+}
+const allCardsSorted = () => buildCardIndex().all;
+
 function deckCards(deckIds) {
+  const { all, byDeck } = buildCardIndex();
+  if (deckIds.length === 1) return (byDeck.get(deckIds[0]) || []).slice();
   const set = new Set(deckIds);
-  return Object.values(db.cards).filter(c => set.has(c.deck)).sort((a, b) => a.created - b.created);
+  return all.filter(c => set.has(c.deck));
 }
 // Karten, die in der aktuellen Lernsprache abgefragt werden (für Anzeige und Schreibmodus)
 const learnCards = deckIds => deckCards(deckIds).filter(c => canAsk(c));
@@ -828,7 +860,7 @@ const DECK_KINDS = [
   { v: 'nomen', t: 'Nomen', test: id => id.startsWith('nomen-') },
   { v: 'adjektive', t: 'Adjektive', test: id => id.startsWith('adjektive-') },
   { v: 'adverbien', t: 'Adverbien', test: id => id.startsWith('adverbien-') },
-  { v: 'praepositionen', t: 'Präpositionen', test: id => id.startsWith('praepositionen-') },
+  { v: 'praepositionen', t: 'Präpositionen', test: id => id.startsWith('praepositionen-') || id.startsWith('preposiciones-') },
 ];
 function kindChips() {
   const cur = db.settings.deckKind || 'all';
@@ -847,10 +879,17 @@ function setLearnLang(code) {
   save();
 }
 
+// Decks nur für eine Lernsprache: russische Präpositionen (Fälle) bzw. spanische Präpositionen
+function deckFitsLearn(id) {
+  if (id.startsWith('praepositionen-')) return learnLang() === 'ru';
+  if (id.startsWith('preposiciones-')) return learnLang() === 'es';
+  return true;
+}
+
 function renderLearn() {
   setHeader(LEARN_LANGS[learnLang()].title);
   const kind = DECK_KINDS.find(k => k.v === (db.settings.deckKind || 'all')) || DECK_KINDS[0];
-  const allDecks = Object.values(db.decks);
+  const allDecks = Object.values(db.decks).filter(d => deckFitsLearn(d.id));
   const decks = allDecks.filter(d => kind.test(d.id));
   const allTitle = kind.v === 'all' ? 'Alle Decks' : 'Alle ' + kind.t;
   const view = $('#view');
@@ -887,9 +926,9 @@ function renderLearn() {
             <button class="quiz-btn" data-quiz="*" aria-label="Schreiben üben">✍️</button>
           </div>` : ''}
         ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen</div>${kind.v !== 'all' ? `<button class="btn small" id="load-kind">Laden</button>` : ''}</div>` : ''}
-        ${decks.map(d => `
+        ${decks.map(d => ({ d, n: learnCards([d.id]).length })).map(({ d, n }) => `
           <div class="row clickable" data-study="${esc(d.id)}">
-            <div class="grow ellipsis">${esc(d.name)}<div class="sub">${learnCards([d.id]).length} ${learnCards([d.id]).length === 1 ? "Karte" : "Karten"}</div></div>
+            <div class="grow ellipsis">${esc(d.name)}<div class="sub">${n} ${n === 1 ? "Karte" : "Karten"}</div></div>
             ${statRow(deckStats([d.id]))}
             <button class="quiz-btn" data-quiz="${esc(d.id)}" aria-label="Schreiben üben">✍️</button>
           </div>`).join('')}
@@ -913,7 +952,7 @@ function renderLearn() {
     loadBtn.disabled = true;
     try {
       const list = await (await fetch('decks/index.json', { cache: 'no-cache' })).json();
-      for (const entry of list.filter(d => d.id.startsWith(kind.v + '-'))) await importLibraryDeck(entry);
+      for (const entry of list.filter(d => kind.test(d.id) && deckFitsLearn(d.id))) await importLibraryDeck(entry);
       toast(kind.t + ' geladen');
     } catch (err) { toast('Laden nicht möglich (offline?)'); }
     renderLearn();
@@ -1769,6 +1808,7 @@ function cardEsSide(card) {
       <div class="nn-tags"><span class="nn-g ${KIND[1]}">${KIND[0]}</span></div>
       <div class="nn-word">${word} ${say(mainSay)}</div>
       ${body}
+      ${x.hint_es ? `<div class="nn-hint">💡 Tipp${info}</div><div class="vp-rule">${esc(x.hint_es)}</div>` : ''}
       ${x.example_es ? `<div class="vp-ex">${esc(x.example_es)} ${say(x.example_es)}</div>` : ''}
     </div>`;
 }
@@ -2178,7 +2218,7 @@ function editCard(id, onDone) {
         const d = { id: uid(), name: 'Meine Karten', active: true };
         db.decks[d.id] = d; card.deck = d.id;
       }
-      db.cards[card.id] = card;
+      db.cards[card.id] = card; markCards();
       lastDeck = card.deck;
       save();
       toast('Gespeichert');
@@ -2187,7 +2227,7 @@ function editCard(id, onDone) {
     };
     $('#del')?.addEventListener('click', () => {
       if (!confirm('Karte wirklich löschen?')) return;
-      delete db.cards[card.id];
+      delete db.cards[card.id]; markCards();
       for (const k of Object.keys(db.progress)) if (k.startsWith(card.id + '|')) delete db.progress[k];
       if (study) study.queue = study.queue.filter(i => i.id !== card.id);
       save(); toast('Gelöscht');
@@ -2232,6 +2272,7 @@ function importDeck(deck, fallbackName) {
     }
     const old = db.cards[id];
     db.cards[id] = { id, deck: deckId, type: CARD_TYPES[src.type] ? src.type : 'word', f, x, created: old ? old.created : Date.now() + i };
+    markCards();
     old ? updated++ : added++;
   });
   save();
@@ -2274,7 +2315,7 @@ async function importFile(file) {
   const data = JSON.parse(text);
   if (data && data.v && data.cards && !Array.isArray(data.cards)) {
     if (!confirm('Das ist eine vollständige Sicherung. Alle aktuellen Daten werden ersetzt. Fortfahren?')) return 'Abgebrochen';
-    db = Object.assign(defaultDb(), data);
+    db = Object.assign(defaultDb(), data); markCards();
     save();
     return 'Sicherung wiederhergestellt';
   }
@@ -2419,7 +2460,7 @@ function renderSettings() {
     const n = deckCards([d.id]).length;
     if (!confirm(`Deck „${d.name}“ mit ${n} Karten und Lernfortschritt löschen?`)) return;
     for (const c of deckCards([d.id])) {
-      delete db.cards[c.id];
+      delete db.cards[c.id]; markCards();
       for (const k of Object.keys(db.progress)) if (k.startsWith(c.id + '|')) delete db.progress[k];
     }
     delete db.decks[d.id];
@@ -2492,7 +2533,7 @@ function pruneReplacedCards(deckIds, decks) {
       if (nk && !db.progress[nk]) db.progress[nk] = db.progress[k];
       delete db.progress[k];
     }
-    delete db.cards[c.id];
+    delete db.cards[c.id]; markCards();
   }
   for (const id of deckIds) if (!deckCards([id]).length) delete db.decks[id];
   save();
@@ -2519,7 +2560,7 @@ async function autoUpdateLibrary() {
     // Deshalb eine Familie immer komplett aktualisieren (auch neu hinzugekommene Decks laden)
     // und alte Decks ohne Gegenstück (z. B. das frühere Probedeck „verben-1“) auflösen.
     const prune = [];
-    for (const prefix of ['verben-', 'nomen-', 'adjektive-', 'adverbien-', 'praepositionen-']) {
+    for (const prefix of ['verben-', 'nomen-', 'adjektive-', 'adverbien-', 'praepositionen-', 'preposiciones-']) {
       const inFamily = id => id.startsWith(prefix);
       const stale = Object.keys(db.decks).filter(id => inFamily(id) && !list.some(d => d.id === id));
       const missing = list.filter(d => inFamily(d.id) && !db.decks[d.id]);
