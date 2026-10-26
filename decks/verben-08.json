@@ -511,6 +511,7 @@
                       "example_en":  "The strongest wins.",
                       "example_es":  "Gana el más fuerte.",
                       "note":  "Die я-Form von победи́ть wird nicht verwendet.",
+                      "note_es":  "ganar = gewinnen (Spiel, Geld): Ganamos el partido. vencer = besiegen.",
                       "example_cases":  "nur Nominativ",
                       "government":  "wen? – Akkusativ · wo? – в/на + Präpositiv",
                       "ipf_imp_ex":  "Побежда́й че́стно!",
@@ -576,6 +577,7 @@
                       "example_en":  "The bell rang.",
                       "example_es":  "Sonó el timbre.",
                       "note":  "Nur 3. Person.",
+                      "note_es":  "sonar = ertönen, klingeln (o → ue): Suena el teléfono. oírse = zu hören sein.",
                       "example_cases":  "nur Nominativ",
                       "government":  "ohne Objekt"
                   },
@@ -672,6 +674,7 @@
                       "example_en":  "You convinced me.",
                       "example_es":  "Tú me convenciste.",
                       "note":  "Die я-Form von убеди́ть wird nicht verwendet.",
+                      "note_es":  "convencer = überzeugen: yo convenzo (c → z).",
                       "example_cases":  "меня́ – Akkusativ",
                       "government":  "wen? – Akkusativ · worin? – в + Präpositiv",
                       "ipf_imp_ex":  "Не убежда́й меня́!",
@@ -739,6 +742,7 @@
                       "example_en":  "A long journey lies ahead of us.",
                       "example_es":  "Nosotros tenemos un largo camino por delante.",
                       "note":  "Unpersönlich mit Dativ.",
+                      "note_es":  "tener por delante = vor sich haben: Tengo mucho trabajo por delante.",
                       "example_cases":  "нам – Dativ",
                       "government":  "wem? – Dativ"
                   },
@@ -977,6 +981,7 @@
                       "example_en":  "What is the problem?",
                       "example_es":  "¿En qué consiste el problema?",
                       "note":  "Nur 3. Person.",
+                      "note_es":  "consistir en = bestehen in: El problema consiste en eso.",
                       "example_cases":  "в чём – Präpositiv (nach в)",
                       "government":  "worin? – в + Präpositiv"
                   },
@@ -1047,6 +1052,7 @@
                       "example_en":  "We\u0027re organizing a celebration.",
                       "example_es":  "Nosotros estamos organizando una fiesta.",
                       "note":  "Zweiaspektig.",
+                      "note_es":  "organizar = organisieren. Pasado yo: organicé (z → c vor e).",
                       "example_cases":  "пра́здник – Akkusativ",
                       "government":  "was? – Akkusativ",
                       "ipf_imp_ex":  "Организу́й встре́чу!",

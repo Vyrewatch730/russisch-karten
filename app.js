@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 47;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 48;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -75,6 +75,7 @@ const CARD_TYPES = {
       { key: 'es2_verb', label: 'Spanisch – 2. Verb (optional)' },
       { key: 'es2_pres', label: 'Spanisch – 2. Verb Presente' },
       { key: 'es2_past', label: 'Spanisch – 2. Verb Pasado' },
+      { key: 'note_es', label: 'Notiz zum spanischen Wort (Spanisch-Modus)' },
     ],
   },
   // Adjektiv: Formen berechnet aus der männlichen Grundform (adjHtml / adjDecl)
@@ -1606,8 +1607,9 @@ function esConjHtml(card) {
 function extrasHtml(card) {
   const type = CARD_TYPES[card.type] || CARD_TYPES.word;
   if (type.ownLayout) {
-    // Nur eine evtl. Notiz zeigen, alles andere steckt im Verbblock
-    return card.x.note ? `<div class="extras"><div><b>Notiz</b>${esc(card.x.note)}</div></div>` : '';
+    // Nur eine evtl. Notiz zeigen, alles andere steckt im Verbblock. Beim Spanischlernen die Notiz zum spanischen Wort.
+    const note = learnLang() === 'es' ? card.x.note_es : card.x.note;
+    return note ? `<div class="extras"><div><b>Notiz</b>${esc(note)}</div></div>` : '';
   }
   const defs = type.extras.concat(COMMON_EXTRAS);
   const known = new Set(defs.map(d => d.key));

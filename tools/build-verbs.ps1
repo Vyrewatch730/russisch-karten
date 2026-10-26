@@ -83,6 +83,15 @@ if (Test-Path $impExFile) {
 }
 $usedImpEx = @{}
 
+# Notiz zum spanischen Wort für den Spanisch-Modus (decks-src\notizen-es.tsv: Karten-ID TAB Notiz)
+$notesEs = @{}
+foreach ($line in [IO.File]::ReadAllLines((Join-Path $src 'notizen-es.tsv'), $utf8)) {
+  if ($line.Trim() -eq '' -or $line.StartsWith('#')) { continue }
+  $p = $line.Split("`t")
+  $notesEs[$p[0].Trim()] = $p[1].Trim()
+}
+$usedNotesEs = @{}
+
 $cards = New-Object System.Collections.ArrayList
 $seen = @{}
 $missing = @()
@@ -109,6 +118,8 @@ foreach ($file in Get-ChildItem $src -Filter 'verben-*.txt' | Sort-Object Name) 
     # Feste ID unabhängig von Gruppe und Datei, damit der Lernfortschritt beim Umsortieren bleibt
     $c.id = 'vb-' + $key
     $c.ru = if ($c.ipf -and $c.pf -and $c.ipf -ne $c.pf) { "$($c.ipf) / $($c.pf)" } else { $head }
+    if ($notesEs.ContainsKey($c.id)) { $c.note_es = $notesEs[$c.id]; $usedNotesEs[$c.id] = 1 }
+    elseif ($c.note) { Write-Host "Keine spanische Notiz für: $($c.id)" }
     if ($cases.ContainsKey($key)) { $c.example_cases = $cases[$key]; $usedCases[$key] = 1 }
     else { Write-Host "Keine Fälle für: $key" }
     if ($govs.ContainsKey($key)) { $c.government = $govs[$key][0] } else { Write-Host "Keine Rektion für: $key" }
@@ -136,6 +147,8 @@ foreach ($file in Get-ChildItem $src -Filter 'verben-*.txt' | Sort-Object Name) 
 }
 $unusedImps = @($imps.Keys | Where-Object { -not $usedImps[$_] })
 if ($unusedImps) { Write-Host "Imperativ-Ausnahmen ohne Karte: $($unusedImps -join ', ')" }
+$unusedNotesEs = @($notesEs.Keys | Where-Object { -not $usedNotesEs[$_] })
+if ($unusedNotesEs) { Write-Host "Spanische Notizen ohne Karte: $($unusedNotesEs -join ', ')" }
 $unusedImpEx = @($impEx.Keys | Where-Object { -not $usedImpEx[$_] })
 if ($unusedImpEx) { Write-Host "Imperativ-Beispiele ohne Karte: $($unusedImpEx -join ', ')" }
 $unused = @($cases.Keys | Where-Object { -not $usedCases[$_] })

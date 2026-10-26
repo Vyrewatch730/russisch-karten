@@ -121,6 +121,7 @@
                       "example_en":  "Everything turned out well.",
                       "example_es":  "Todo salió bien.",
                       "note":  "Meist in der 3. Person.",
+                      "note_es":  "salir = sich ergeben, ausgehen: Las cosas salieron bien. darse = sich ergeben: Se dio la oportunidad.",
                       "example_cases":  "nur Nominativ",
                       "government":  "ohne Objekt"
                   },
@@ -405,6 +406,7 @@
                       "example_es":  "Ella usa lentes.",
                       "note":  "Mehrere Richtungen oder regelmäßig. Eine Richtung: нести́.",
                       "es2_verb":  "usar",
+                      "note_es":  "llevar = (Kleidung) tragen, anhaben: Lleva una camisa azul. usar = regelmäßig tragen: Uso lentes.",
                       "example_cases":  "очки́ – Akkusativ",
                       "government":  "was? – Akkusativ (auch: anhaben)",
                       "motion":  "multi",
@@ -587,6 +589,7 @@
                       "example_en":  "We\u0027re flying to Santo Domingo.",
                       "example_es":  "Nosotros volamos a Santo Domingo.",
                       "note":  "Eine Richtung. Mehrere Richtungen oder regelmäßig: лета́ть.",
+                      "note_es":  "volar ist o → ue: vuelo, vuelas, vuela. ir en avión = mit dem Flugzeug fliegen.",
                       "example_cases":  "в Са́нто-Доми́нго – Akkusativ (wohin?, unveränderlich)",
                       "government":  "wohin? – в/на + Akkusativ · womit? worauf? – на + Präpositiv",
                       "motion":  "uni",
@@ -640,6 +643,7 @@
                       "example_en":  "I ran out of money.",
                       "example_es":  "Se me acabó el dinero.",
                       "note":  "Meist in der 3. Person.",
+                      "note_es":  "acabarse = zu Ende gehen, ausgehen: Se acabó la leche. terminar = beenden, enden.",
                       "example_cases":  "у меня́ – Genitiv (nach у)",
                       "government":  "bei wem? – у + Genitiv (ausgehen)"
                   },
@@ -736,6 +740,7 @@
                       "example_en":  "I\u0027ll get off at the next stop.",
                       "example_es":  "Yo me desmonto en la próxima parada.",
                       "note":  "сходи́ть (vollendet) heißt auch „kurz hingehen“: сходи́ть в магази́н.",
+                      "note_es":  "bajarse = aussteigen: Me bajo en la próxima parada. bajar = hinuntergehen.",
                       "example_cases":  "на сле́дующей остано́вке – Präpositiv (wo?)",
                       "government":  "woher? – с + Genitiv · wo? (aussteigen) – на + Präpositiv",
                       "motion":  "prefix",
@@ -1060,6 +1065,7 @@
                       "example_en":  "I\u0027m driving the kids to school.",
                       "example_es":  "Yo llevo a los niños a la escuela.",
                       "note":  "Eine Richtung. Mehrere Richtungen oder regelmäßig: вози́ть.",
+                      "note_es":  "llevar = (mit dem Auto) bringen: Te llevo al aeropuerto.",
                       "example_cases":  "дете́й – Akkusativ (belebt = wie Genitiv) · в шко́лу – Akkusativ (wohin?)",
                       "government":  "wen? was? – Akkusativ · wohin? – в/на + Akkusativ",
                       "motion":  "uni",
@@ -1085,6 +1091,7 @@
                       "example_en":  "He has great talent.",
                       "example_es":  "Él tiene mucho talento.",
                       "note":  "Mit Instrumental.",
+                      "note_es":  "poseer und tener = besitzen. Im Alltag sagt man fast immer tener.",
                       "example_cases":  "больши́м тала́нтом – Instrumental (nach облада́ть)",
                       "government":  "womit? – Instrumental",
                       "ipf_imp":  "—"
@@ -1158,6 +1165,7 @@
                       "example_en":  "Do you need help?",
                       "example_es":  "¿Necesita ayuda?",
                       "note":  "Meist in der 3. Person: тре́буется = wird gebraucht.",
+                      "note_es":  "hacer falta = nötig sein: Hace falta tiempo. Wie gustar: Me hace falta dinero = Ich brauche Geld.",
                       "example_cases":  "nur Nominativ",
                       "government":  "wem? – Dativ"
                   },
@@ -1202,6 +1210,7 @@
                       "example_en":  "The concert will take place on Saturday.",
                       "example_es":  "El concierto va a ser el sábado.",
                       "note":  "Nur vollendet und nur 3. Person: состои́тся, состоя́лся.",
+                      "note_es":  "tener lugar = stattfinden: La reunión tiene lugar el lunes. Alltag: ser – La fiesta es el sábado.",
                       "example_cases":  "в суббо́ту – Akkusativ (Wochentag: wann?)",
                       "government":  "wann? wo? – в + Akkusativ / в + Präpositiv"
                   }
