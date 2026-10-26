@@ -24,7 +24,8 @@
                       "adv":  "оконча́тельно",
                       "adv_de":  "endgültig",
                       "adv_ex":  "Я оконча́тельно реши́л.",
-                      "adv_ex_de":  "Ich habe mich endgültig entschieden."
+                      "adv_ex_de":  "Ich habe mich endgültig entschieden.",
+                      "es_freq":  4779
                   },
                   {
                       "id":  "aj-коммунистический",
@@ -37,7 +38,8 @@
                       "example_cases":  "коммунисти́ческая па́ртия – Nominativ",
                       "example_de":  "Das ist die kommunistische Partei.",
                       "example_en":  "This is the Communist Party.",
-                      "example_es":  "Es el partido comunista."
+                      "example_es":  "Es el partido comunista.",
+                      "es_freq":  7638
                   },
                   {
                       "id":  "aj-вчерашний",
@@ -52,7 +54,8 @@
                       "example_cases":  "вчера́шний суп – Akkusativ",
                       "example_de":  "Ich esse die Suppe von gestern.",
                       "example_en":  "I\u0027m eating yesterday\u0027s soup.",
-                      "example_es":  "Como la sopa de ayer."
+                      "example_es":  "Como la sopa de ayer.",
+                      "es_freq":  2951
                   },
                   {
                       "id":  "aj-развитой",
@@ -65,7 +68,8 @@
                       "example_cases":  "Герма́ния – Nominativ · развита́я страна́ – Nominativ",
                       "example_de":  "Deutschland ist ein entwickeltes Land.",
                       "example_en":  "Germany is a developed country.",
-                      "example_es":  "Alemania es un país desarrollado."
+                      "example_es":  "Alemania es un país desarrollado.",
+                      "es_freq":  3577
                   },
                   {
                       "id":  "aj-взаимный",
@@ -82,7 +86,8 @@
                       "adv":  "взаи́мно",
                       "adv_de":  "gegenseitig; ebenfalls",
                       "adv_ex":  "— Прия́тно познако́миться! — Взаи́мно!",
-                      "adv_ex_de":  "„Freut mich!“ – „Mich ebenfalls!“"
+                      "adv_ex_de":  "„Freut mich!“ – „Mich ebenfalls!“",
+                      "es_freq":  3243
                   },
                   {
                       "id":  "aj-качественный",
@@ -99,7 +104,8 @@
                       "adv":  "ка́чественно",
                       "adv_de":  "hochwertig, gut",
                       "adv_ex":  "Он рабо́тает ка́чественно.",
-                      "adv_ex_de":  "Er arbeitet gründlich und gut."
+                      "adv_ex_de":  "Er arbeitet gründlich und gut.",
+                      "es_freq":  452
                   },
                   {
                       "id":  "aj-приличный",
@@ -117,7 +123,8 @@
                       "adv":  "прили́чно",
                       "adv_de":  "anständig, ordentlich",
                       "adv_ex":  "Он прили́чно зараба́тывает.",
-                      "adv_ex_de":  "Er verdient ordentlich."
+                      "adv_ex_de":  "Er verdient ordentlich.",
+                      "es_freq":  10161
                   },
                   {
                       "id":  "aj-царский",
@@ -130,7 +137,8 @@
                       "example_cases":  "ца́рский дворе́ц – Akkusativ",
                       "example_de":  "Wir haben den Zarenpalast besucht.",
                       "example_en":  "We visited the tsar\u0027s palace.",
-                      "example_es":  "Visitamos el palacio del zar."
+                      "example_es":  "Visitamos el palacio del zar.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-железнодорожный",
@@ -143,7 +151,8 @@
                       "example_cases":  "на железнодоро́жном вокза́ле – Präpositiv",
                       "example_de":  "Wir sind am Bahnhof.",
                       "example_en":  "We\u0027re at the railway station.",
-                      "example_es":  "Estamos en la estación de tren."
+                      "example_es":  "Estamos en la estación de tren.",
+                      "es_freq":  618
                   },
                   {
                       "id":  "aj-серебряный",
@@ -156,7 +165,8 @@
                       "example_cases":  "у неё – Genitiv · сере́бряное кольцо́ – Nominativ",
                       "example_de":  "Sie hat einen Silberring.",
                       "example_en":  "She has a silver ring.",
-                      "example_es":  "Ella tiene un anillo de plata."
+                      "example_es":  "Ella tiene un anillo de plata.",
+                      "es_freq":  634
                   },
                   {
                       "id":  "aj-сплошной",
@@ -170,7 +180,8 @@
                       "example_cases":  "сплошны́е пробле́мы – Nominativ Plural",
                       "example_de":  "Hier gibt es nur Probleme.",
                       "example_en":  "There\u0027s nothing but problems here.",
-                      "example_es":  "Aquí todo son problemas."
+                      "example_es":  "Aquí todo son problemas.",
+                      "es_freq":  7638
                   },
                   {
                       "id":  "aj-актуальный",
@@ -183,7 +194,8 @@
                       "example_cases":  "актуа́льная те́ма – Nominativ",
                       "example_de":  "Das ist ein aktuelles Thema.",
                       "example_en":  "It\u0027s a topical issue.",
-                      "example_es":  "Es un tema de actualidad."
+                      "example_es":  "Es un tema de actualidad.",
+                      "es_freq":  542
                   },
                   {
                       "id":  "aj-худой",
@@ -199,7 +211,8 @@
                       "example_cases":  "он – Nominativ · худо́й – Nominativ",
                       "example_de":  "Er ist sehr dünn.",
                       "example_en":  "He\u0027s very thin.",
-                      "example_es":  "Él es muy flaco."
+                      "example_es":  "Él es muy flaco.",
+                      "es_freq":  3546
                   },
                   {
                       "id":  "aj-украинский",
@@ -212,7 +225,8 @@
                       "example_cases":  "украи́нский борщ – Akkusativ",
                       "example_de":  "Ich mag ukrainischen Borschtsch.",
                       "example_en":  "I love Ukrainian borscht.",
-                      "example_es":  "Me encanta el borsch ucraniano."
+                      "example_es":  "Me encanta el borsch ucraniano.",
+                      "es_freq":  568
                   },
                   {
                       "id":  "aj-разумный",
@@ -230,7 +244,8 @@
                       "adv":  "разу́мно",
                       "adv_de":  "vernünftig",
                       "adv_ex":  "Э́то разу́мно.",
-                      "adv_ex_de":  "Das ist vernünftig."
+                      "adv_ex_de":  "Das ist vernünftig.",
+                      "es_freq":  9233
                   },
                   {
                       "id":  "aj-газовый",
@@ -243,7 +258,8 @@
                       "example_cases":  "у нас – Genitiv · га́зовая плита́ – Nominativ",
                       "example_de":  "Wir haben einen Gasherd.",
                       "example_en":  "We have a gas stove.",
-                      "example_es":  "Tenemos una estufa de gas."
+                      "example_es":  "Tenemos una estufa de gas.",
+                      "es_freq":  812
                   },
                   {
                       "id":  "aj-должностной",
@@ -256,7 +272,8 @@
                       "example_cases":  "его́ должностны́е обя́занности – Nominativ Plural",
                       "example_de":  "Das sind seine Dienstpflichten.",
                       "example_en":  "These are his official duties.",
-                      "example_es":  "Son las obligaciones de su cargo."
+                      "example_es":  "Son las obligaciones de su cargo.",
+                      "es_freq":  1753
                   },
                   {
                       "id":  "aj-великолепный",
@@ -275,7 +292,8 @@
                       "adv":  "великоле́пно",
                       "adv_de":  "großartig",
                       "adv_ex":  "Она́ великоле́пно поёт.",
-                      "adv_ex_de":  "Sie singt großartig."
+                      "adv_ex_de":  "Sie singt großartig.",
+                      "es_freq":  13698
                   },
                   {
                       "id":  "aj-седой",
@@ -290,7 +308,8 @@
                       "example_cases":  "у де́душки – Genitiv · седы́е во́лосы – Nominativ Plural",
                       "example_de":  "Opa hat graue Haare.",
                       "example_en":  "Grandpa has gray hair.",
-                      "example_es":  "El abuelo tiene canas."
+                      "example_es":  "El abuelo tiene canas.",
+                      "es_freq":  378
                   },
                   {
                       "id":  "aj-нормативный",
@@ -303,7 +322,8 @@
                       "example_cases":  "нормати́вный докуме́нт – Nominativ",
                       "example_de":  "Das ist ein Normdokument.",
                       "example_en":  "It\u0027s a regulatory document.",
-                      "example_es":  "Es un documento normativo."
+                      "example_es":  "Es un documento normativo.",
+                      "es_freq":  196
                   },
                   {
                       "id":  "aj-невидимый",
@@ -316,7 +336,8 @@
                       "example_cases":  "себя́ – Akkusativ · неви́димым – Instrumental",
                       "example_de":  "Ich fühle mich unsichtbar.",
                       "example_en":  "I feel invisible.",
-                      "example_es":  "Me siento invisible."
+                      "example_es":  "Me siento invisible.",
+                      "es_freq":  7134
                   },
                   {
                       "id":  "aj-автомобильный",
@@ -329,7 +350,8 @@
                       "example_cases":  "больша́я автомоби́льная доро́га – Nominativ",
                       "example_de":  "Hier ist eine große Autostraße.",
                       "example_en":  "There\u0027s a big highway here.",
-                      "example_es":  "Aquí hay una gran carretera."
+                      "example_es":  "Aquí hay una gran carretera.",
+                      "es_freq":  707
                   },
                   {
                       "id":  "aj-справедливый",
@@ -349,7 +371,8 @@
                       "adv":  "справедли́во",
                       "adv_de":  "gerecht",
                       "adv_ex":  "Э́то справедли́во.",
-                      "adv_ex_de":  "Das ist gerecht."
+                      "adv_ex_de":  "Das ist gerecht.",
+                      "es_freq":  125008
                   },
                   {
                       "id":  "aj-повышенный",
@@ -362,7 +385,8 @@
                       "example_cases":  "у него́ – Genitiv · повы́шенная температу́ра – Nominativ",
                       "example_de":  "Er hat erhöhte Temperatur.",
                       "example_en":  "He has a raised temperature.",
-                      "example_es":  "Tiene la temperatura alta."
+                      "example_es":  "Tiene la temperatura alta.",
+                      "es_freq":  4056
                   },
                   {
                       "id":  "aj-подземный",
@@ -375,7 +399,8 @@
                       "example_cases":  "че́рез подзе́мный перехо́д – Akkusativ",
                       "example_de":  "Gehen Sie durch die Unterführung.",
                       "example_en":  "Use the underpass.",
-                      "example_es":  "Pase por el paso subterráneo."
+                      "example_es":  "Pase por el paso subterráneo.",
+                      "es_freq":  4086
                   },
                   {
                       "id":  "aj-конституционный",
@@ -388,7 +413,8 @@
                       "example_cases":  "конституцио́нное пра́во – Nominativ",
                       "example_de":  "Das ist ein Verfassungsrecht.",
                       "example_en":  "It\u0027s a constitutional right.",
-                      "example_es":  "Es un derecho constitucional."
+                      "example_es":  "Es un derecho constitucional.",
+                      "es_freq":  926
                   },
                   {
                       "id":  "aj-гигантский",
@@ -401,7 +427,8 @@
                       "example_cases":  "гига́нтский магази́н – Nominativ",
                       "example_de":  "Das ist ein riesiger Laden.",
                       "example_en":  "It\u0027s a gigantic store.",
-                      "example_es":  "Es una tienda gigantesca."
+                      "example_es":  "Es una tienda gigantesca.",
+                      "es_freq":  2467
                   },
                   {
                       "id":  "aj-небесный",
@@ -414,7 +441,8 @@
                       "example_cases":  "у неё – Genitiv · глаза́ – Nominativ Plural · небе́сного цве́та – Genitiv",
                       "example_de":  "Sie hat himmelblaue Augen.",
                       "example_en":  "She has sky-blue eyes.",
-                      "example_es":  "Tiene los ojos color cielo."
+                      "example_es":  "Tiene los ojos color cielo.",
+                      "es_freq":  95
                   },
                   {
                       "id":  "aj-давний",
@@ -432,7 +460,8 @@
                       "adv":  "давно́",
                       "adv_de":  "seit langem, vor langer Zeit",
                       "adv_ex":  "Мы давно́ знако́мы.",
-                      "adv_ex_de":  "Wir kennen uns seit langem."
+                      "adv_ex_de":  "Wir kennen uns seit langem.",
+                      "es_freq":  2237
                   },
                   {
                       "id":  "aj-нефтяной",
@@ -445,7 +474,8 @@
                       "example_cases":  "в нефтяно́й компа́нии – Präpositiv",
                       "example_de":  "Er arbeitet bei einer Ölfirma.",
                       "example_en":  "He works for an oil company.",
-                      "example_es":  "Trabaja en una empresa petrolera."
+                      "example_es":  "Trabaja en una empresa petrolera.",
+                      "es_freq":  1833
                   },
                   {
                       "id":  "aj-философский",
@@ -462,7 +492,8 @@
                       "adv":  "филосо́фски",
                       "adv_de":  "philosophisch",
                       "adv_ex":  "Он филосо́фски отно́сится к жи́зни.",
-                      "adv_ex_de":  "Er nimmt das Leben philosophisch."
+                      "adv_ex_de":  "Er nimmt das Leben philosophisch.",
+                      "es_freq":  617
                   },
                   {
                       "id":  "aj-компьютерный",
@@ -475,7 +506,8 @@
                       "example_cases":  "сын – Nominativ · в компью́терные и́гры – Akkusativ Plural",
                       "example_de":  "Der Sohn spielt Computerspiele.",
                       "example_en":  "My son plays computer games.",
-                      "example_es":  "Mi hijo juega videojuegos."
+                      "example_es":  "Mi hijo juega videojuegos.",
+                      "es_freq":  734
                   },
                   {
                       "id":  "aj-избирательный",
@@ -488,7 +520,8 @@
                       "example_cases":  "избира́тельный уча́сток – Nominativ",
                       "example_de":  "Wo ist das Wahllokal?",
                       "example_en":  "Where\u0027s the polling station?",
-                      "example_es":  "¿Dónde está el centro de votación?"
+                      "example_es":  "¿Dónde está el centro de votación?",
+                      "es_freq":  1771
                   },
                   {
                       "id":  "aj-голодный",
@@ -504,7 +537,8 @@
                       "example_cases":  "я – Nominativ · голо́дный – Nominativ",
                       "example_de":  "Ich bin sehr hungrig.",
                       "example_en":  "I\u0027m very hungry.",
-                      "example_es":  "Tengo mucha hambre."
+                      "example_es":  "Tengo mucha hambre.",
+                      "es_freq":  9369
                   },
                   {
                       "id":  "aj-двойной",
@@ -517,7 +551,8 @@
                       "example_cases":  "мне – Dativ · двойно́й эспре́ссо – Nominativ",
                       "example_de":  "Für mich einen doppelten Espresso, bitte.",
                       "example_en":  "A double espresso for me, please.",
-                      "example_es":  "Para mí un espresso doble, por favor."
+                      "example_es":  "Para mí un espresso doble, por favor.",
+                      "es_freq":  29138
                   },
                   {
                       "id":  "aj-психический",
@@ -534,7 +569,8 @@
                       "adv":  "психи́чески",
                       "adv_de":  "psychisch",
                       "adv_ex":  "Он психи́чески здоро́в.",
-                      "adv_ex_de":  "Er ist psychisch gesund."
+                      "adv_ex_de":  "Er ist psychisch gesund.",
+                      "es_freq":  3909
                   },
                   {
                       "id":  "aj-потенциальный",
@@ -551,7 +587,8 @@
                       "adv":  "потенциа́льно",
                       "adv_de":  "potenziell",
                       "adv_ex":  "Э́то потенциа́льно опа́сно.",
-                      "adv_ex_de":  "Das ist potenziell gefährlich."
+                      "adv_ex_de":  "Das ist potenziell gefährlich.",
+                      "es_freq":  8523
                   },
                   {
                       "id":  "aj-польский",
@@ -564,7 +601,8 @@
                       "example_cases":  "по́льский язы́к – Akkusativ",
                       "example_de":  "Sie lernt Polnisch.",
                       "example_en":  "She\u0027s learning Polish.",
-                      "example_es":  "Ella aprende polaco."
+                      "example_es":  "Ella aprende polaco.",
+                      "es_freq":  4218
                   },
                   {
                       "id":  "aj-глобальный",
@@ -577,7 +615,8 @@
                       "example_cases":  "глоба́льная пробле́ма – Nominativ",
                       "example_de":  "Das ist ein globales Problem.",
                       "example_en":  "It\u0027s a global problem.",
-                      "example_es":  "Es un problema global."
+                      "example_es":  "Es un problema global.",
+                      "es_freq":  5675
                   },
                   {
                       "id":  "aj-коллективный",
@@ -590,7 +629,8 @@
                       "example_cases":  "коллекти́вная рабо́та – Nominativ",
                       "example_de":  "Das ist eine Gemeinschaftsarbeit.",
                       "example_en":  "It\u0027s a collective effort.",
-                      "example_es":  "Es un trabajo colectivo."
+                      "example_es":  "Es un trabajo colectivo.",
+                      "es_freq":  2585
                   },
                   {
                       "id":  "aj-стеклянный",
@@ -603,7 +643,8 @@
                       "example_cases":  "у нас – Genitiv · стекля́нный стол – Nominativ",
                       "example_de":  "Wir haben einen Glastisch.",
                       "example_en":  "We have a glass table.",
-                      "example_es":  "Tenemos una mesa de vidrio."
+                      "example_es":  "Tenemos una mesa de vidrio.",
+                      "es_freq":  255
                   },
                   {
                       "id":  "aj-наибольший",
@@ -618,7 +659,8 @@
                       "example_cases":  "наибо́льшая пробле́ма – Nominativ · вре́мя – Nominativ",
                       "example_de":  "Das größte Problem ist die Zeit.",
                       "example_en":  "The biggest problem is time.",
-                      "example_es":  "El mayor problema es el tiempo."
+                      "example_es":  "El mayor problema es el tiempo.",
+                      "es_freq":  5023
                   },
                   {
                       "id":  "aj-мрачный",
@@ -636,7 +678,8 @@
                       "adv":  "мра́чно",
                       "adv_de":  "düster",
                       "adv_ex":  "Он мра́чно молча́л.",
-                      "adv_ex_de":  "Er schwieg düster."
+                      "adv_ex_de":  "Er schwieg düster.",
+                      "es_freq":  1882
                   },
                   {
                       "id":  "aj-атомный",
@@ -649,7 +692,8 @@
                       "example_cases":  "а́томная электроста́нция – Nominativ",
                       "example_de":  "Hier ist ein Atomkraftwerk.",
                       "example_en":  "There\u0027s a nuclear power plant here.",
-                      "example_es":  "Aquí hay una central nuclear."
+                      "example_es":  "Aquí hay una central nuclear.",
+                      "es_freq":  3313
                   },
                   {
                       "id":  "aj-отрицательный",
@@ -667,7 +711,8 @@
                       "adv":  "отрица́тельно",
                       "adv_de":  "negativ",
                       "adv_ex":  "Он отрица́тельно покача́л голово́й.",
-                      "adv_ex_de":  "Er schüttelte verneinend den Kopf."
+                      "adv_ex_de":  "Er schüttelte verneinend den Kopf.",
+                      "es_freq":  14099
                   },
                   {
                       "id":  "aj-достаточный",
@@ -686,7 +731,8 @@
                       "adv":  "доста́точно",
                       "adv_de":  "genug",
                       "adv_ex":  "Спаси́бо, доста́точно.",
-                      "adv_ex_de":  "Danke, das reicht."
+                      "adv_ex_de":  "Danke, das reicht.",
+                      "es_freq":  118336
                   },
                   {
                       "id":  "aj-радостный",
@@ -706,7 +752,8 @@
                       "adv":  "ра́достно",
                       "adv_de":  "freudig",
                       "adv_ex":  "Де́ти ра́достно засмея́лись.",
-                      "adv_ex_de":  "Die Kinder lachten freudig."
+                      "adv_ex_de":  "Die Kinder lachten freudig.",
+                      "es_freq":  483
                   },
                   {
                       "id":  "aj-горький",
@@ -728,7 +775,8 @@
                       "adv":  "го́рько",
                       "adv_de":  "bitter",
                       "adv_ex":  "Мне го́рько э́то слы́шать.",
-                      "adv_ex_de":  "Es tut mir weh, das zu hören."
+                      "adv_ex_de":  "Es tut mir weh, das zu hören.",
+                      "es_freq":  3870
                   },
                   {
                       "id":  "aj-бытовой",
@@ -742,7 +790,8 @@
                       "example_cases":  "у нас – Genitiv · бытовы́е пробле́мы – Nominativ Plural",
                       "example_de":  "Wir haben Alltagsprobleme.",
                       "example_en":  "We have everyday problems.",
-                      "example_es":  "Tenemos problemas domésticos."
+                      "example_es":  "Tenemos problemas domésticos.",
+                      "es_freq":  3987
                   },
                   {
                       "id":  "aj-утренний",
@@ -757,7 +806,8 @@
                       "example_cases":  "у́тренний ко́фе – Akkusativ",
                       "example_de":  "Ich trinke meinen Morgenkaffee.",
                       "example_en":  "I\u0027m having my morning coffee.",
-                      "example_es":  "Tomo mi café de la mañana."
+                      "example_es":  "Tomo mi café de la mañana.",
+                      "es_freq":  1365
                   }
               ]
 }

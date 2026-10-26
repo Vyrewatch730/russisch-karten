@@ -19,7 +19,8 @@
                       "example":  "Нева́жно!",
                       "example_de":  "Egal!",
                       "example_en":  "Never mind!",
-                      "example_es":  "¡No importa!"
+                      "example_es":  "¡No importa!",
+                      "es_freq":  203118
                   },
                   {
                       "id":  "av-наполовину",
@@ -32,7 +33,8 @@
                       "example":  "Стака́н наполови́ну по́лон.",
                       "example_de":  "Das Glas ist halb voll.",
                       "example_en":  "The glass is half full.",
-                      "example_es":  "El vaso está medio lleno."
+                      "example_es":  "El vaso está medio lleno.",
+                      "es_freq":  6986
                   },
                   {
                       "id":  "av-втроем",
@@ -45,7 +47,8 @@
                       "example":  "Мы пое́дем втроём.",
                       "example_de":  "Wir fahren zu dritt.",
                       "example_en":  "The three of us will go.",
-                      "example_es":  "Vamos los tres."
+                      "example_es":  "Vamos los tres.",
+                      "es_freq":  129353
                   },
                   {
                       "id":  "av-понемногу",
@@ -58,7 +61,8 @@
                       "example":  "Я понемно́гу учу́ ру́сский.",
                       "example_de":  "Ich lerne nach und nach Russisch.",
                       "example_en":  "I\u0027m learning Russian little by little.",
-                      "example_es":  "Aprendo ruso poco a poco."
+                      "example_es":  "Aprendo ruso poco a poco.",
+                      "es_freq":  19887
                   },
                   {
                       "id":  "av-даром",
@@ -71,7 +75,8 @@
                       "example":  "Э́то мне доста́лось даро́м.",
                       "example_de":  "Das habe ich umsonst bekommen.",
                       "example_en":  "I got it for free.",
-                      "example_es":  "Eso me lo dieron gratis."
+                      "example_es":  "Eso me lo dieron gratis.",
+                      "es_freq":  928
                   },
                   {
                       "id":  "av-наизусть",
@@ -84,7 +89,8 @@
                       "example":  "Я зна́ю стихи́ наизу́сть.",
                       "example_de":  "Ich kann das Gedicht auswendig.",
                       "example_en":  "I know the poem by heart.",
-                      "example_es":  "Me sé el poema de memoria."
+                      "example_es":  "Me sé el poema de memoria.",
+                      "es_freq":  23432
                   },
                   {
                       "id":  "av-по-хорошему",
@@ -97,7 +103,8 @@
                       "example":  "Дава́й по-хоро́шему.",
                       "example_de":  "Lass uns das im Guten regeln.",
                       "example_en":  "Let\u0027s settle this nicely.",
-                      "example_es":  "Vamos a hacerlo por las buenas."
+                      "example_es":  "Vamos a hacerlo por las buenas.",
+                      "es_freq":  151571
                   },
                   {
                       "id":  "av-по-моему",
@@ -110,7 +117,8 @@
                       "example":  "По-мо́ему, э́то хорошо́.",
                       "example_de":  "Meiner Meinung nach ist das gut.",
                       "example_en":  "In my opinion it\u0027s good.",
-                      "example_es":  "En mi opinión, está bien."
+                      "example_es":  "En mi opinión, está bien.",
+                      "es_freq":  34009
                   }
               ]
 }

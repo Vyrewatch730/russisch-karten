@@ -88,3 +88,6 @@ $verbs = @($index | Where-Object { $_.id -like 'verben-*' })
 $all = @($others) + $adjs + $entries + $preps + $nouns + $verbs
 [IO.File]::WriteAllText($indexPath, (ConvertTo-Json @($all) -Depth 3), $utf8)
 Write-Host "Gesamt: $($sorted.Count) Adverbien in $deckCount Decks"
+
+# Spanische Häufigkeit (es_freq) wieder eintragen
+& (Join-Path $PSScriptRoot 'apply-es-rank.ps1')

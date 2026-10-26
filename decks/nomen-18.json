@@ -26,7 +26,8 @@
                       "example_cases":  "сле́дователь – Nominativ · вопро́сы – Akkusativ Plural",
                       "example_de":  "Der Ermittler stellt Fragen.",
                       "example_en":  "The investigator asks questions.",
-                      "example_es":  "El investigador hace preguntas."
+                      "example_es":  "El investigador hace preguntas.",
+                      "es_freq":  6690
                   },
                   {
                       "id":  "nm-мешок",
@@ -45,7 +46,8 @@
                       "example_cases":  "мешо́к – Nominativ · карто́шки – Genitiv",
                       "example_de":  "Ein Sack Kartoffeln ist nicht teuer.",
                       "example_en":  "A sack of potatoes isn\u0027t expensive.",
-                      "example_es":  "Un saco de papas no es caro."
+                      "example_es":  "Un saco de papas no es caro.",
+                      "es_freq":  4911
                   },
                   {
                       "id":  "nm-жилье",
@@ -60,7 +62,8 @@
                       "example_cases":  "жильё – Nominativ · в Москве́ – Präpositiv",
                       "example_de":  "Wohnraum in Moskau ist sehr teuer.",
                       "example_en":  "Housing in Moscow is very expensive.",
-                      "example_es":  "La vivienda en Moscú es muy cara."
+                      "example_es":  "La vivienda en Moscú es muy cara.",
+                      "es_freq":  3009
                   },
                   {
                       "id":  "nm-описание",
@@ -78,7 +81,8 @@
                       "example_cases":  "описа́ние – Akkusativ · това́ра – Genitiv",
                       "example_de":  "Lies die Produktbeschreibung.",
                       "example_en":  "Read the product description.",
-                      "example_es":  "Lee la descripción del producto."
+                      "example_es":  "Lee la descripción del producto.",
+                      "es_freq":  6534
                   },
                   {
                       "id":  "nm-отказ",
@@ -97,7 +101,8 @@
                       "example_cases":  "отка́з – Akkusativ",
                       "example_de":  "Ich habe eine Absage bekommen.",
                       "example_en":  "I got a refusal.",
-                      "example_es":  "Recibí un rechazo."
+                      "example_es":  "Recibí un rechazo.",
+                      "es_freq":  2928
                   },
                   {
                       "id":  "nm-куст",
@@ -116,7 +121,8 @@
                       "example_cases":  "за кусто́м – Instrumental · за́яц – Nominativ",
                       "example_de":  "Hinter dem Busch sitzt ein Hase.",
                       "example_en":  "A hare is sitting behind the bush.",
-                      "example_es":  "Detrás del arbusto hay una liebre."
+                      "example_es":  "Detrás del arbusto hay una liebre.",
+                      "es_freq":  3536
                   },
                   {
                       "id":  "nm-замок",
@@ -135,7 +141,8 @@
                       "example_cases":  "ключ – Nominativ · к замку́ – Dativ",
                       "example_de":  "Der Schlüssel passt nicht ins Schloss.",
                       "example_en":  "The key doesn\u0027t fit the lock.",
-                      "example_es":  "La llave no sirve para la cerradura."
+                      "example_es":  "La llave no sirve para la cerradura.",
+                      "es_freq":  5387
                   },
                   {
                       "id":  "nm-редактор",
@@ -154,7 +161,8 @@
                       "example_cases":  "гла́вный реда́ктор – Nominativ · статью́ – Akkusativ",
                       "example_de":  "Der Chefredakteur hat den Artikel gelesen.",
                       "example_en":  "The editor-in-chief read the article.",
-                      "example_es":  "El editor jefe leyó el artículo."
+                      "example_es":  "El editor jefe leyó el artículo.",
+                      "es_freq":  5686
                   },
                   {
                       "id":  "nm-забота",
@@ -172,7 +180,8 @@
                       "example_cases":  "за забо́ту – Akkusativ",
                       "example_de":  "Danke für die Fürsorge!",
                       "example_en":  "Thanks for caring!",
-                      "example_es":  "¡Gracias por preocuparte!"
+                      "example_es":  "¡Gracias por preocuparte!",
+                      "es_freq":  9201
                   },
                   {
                       "id":  "nm-дворец",
@@ -191,7 +200,8 @@
                       "example_cases":  "в Зи́мнем дворце́ – Präpositiv",
                       "example_de":  "Wir waren im Winterpalast.",
                       "example_en":  "We were at the Winter Palace.",
-                      "example_es":  "Estuvimos en el Palacio de Invierno."
+                      "example_es":  "Estuvimos en el Palacio de Invierno.",
+                      "es_freq":  13649
                   },
                   {
                       "id":  "nm-пиво",
@@ -207,7 +217,8 @@
                       "example_cases":  "пи́ва – Genitiv (etwas davon)",
                       "example_de":  "Willst du ein Bier?",
                       "example_en":  "Do you want a beer?",
-                      "example_es":  "¿Quieres una cerveza?"
+                      "example_es":  "¿Quieres una cerveza?",
+                      "es_freq":  39545
                   },
                   {
                       "id":  "nm-диван",
@@ -226,7 +237,8 @@
                       "example_cases":  "кот – Nominativ · на дива́не – Präpositiv",
                       "example_de":  "Der Kater schläft auf dem Sofa.",
                       "example_en":  "The cat is sleeping on the sofa.",
-                      "example_es":  "El gato duerme en el sofá."
+                      "example_es":  "El gato duerme en el sofá.",
+                      "es_freq":  11664
                   },
                   {
                       "id":  "nm-столик",
@@ -245,7 +257,8 @@
                       "example_cases":  "сто́лик – Akkusativ · на двои́х – Akkusativ",
                       "example_de":  "Ich habe einen Tisch für zwei reserviert.",
                       "example_en":  "I reserved a table for two.",
-                      "example_es":  "Reservé una mesa para dos."
+                      "example_es":  "Reservé una mesa para dos.",
+                      "es_freq":  713
                   },
                   {
                       "id":  "nm-эксперимент",
@@ -264,7 +277,8 @@
                       "example_cases":  "учёные – Nominativ Plural · экспериме́нт – Akkusativ",
                       "example_de":  "Die Wissenschaftler führen ein Experiment durch.",
                       "example_en":  "Scientists are conducting an experiment.",
-                      "example_es":  "Los científicos realizan un experimento."
+                      "example_es":  "Los científicos realizan un experimento.",
+                      "es_freq":  11556
                   },
                   {
                       "id":  "nm-печать",
@@ -283,7 +297,8 @@
                       "example_cases":  "печа́ть – Akkusativ · на докуме́нт – Akkusativ",
                       "example_de":  "Setzen Sie einen Stempel auf das Dokument.",
                       "example_en":  "Put a stamp on the document.",
-                      "example_es":  "Ponga el sello en el documento."
+                      "example_es":  "Ponga el sello en el documento.",
+                      "es_freq":  6966
                   },
                   {
                       "id":  "nm-кольцо",
@@ -302,7 +317,8 @@
                       "example_cases":  "ей – Dativ · кольцо́ – Akkusativ",
                       "example_de":  "Er hat ihr einen Ring geschenkt.",
                       "example_en":  "He gave her a ring.",
-                      "example_es":  "Le regaló un anillo."
+                      "example_es":  "Le regaló un anillo.",
+                      "es_freq":  27562
                   },
                   {
                       "id":  "nm-пистолет",
@@ -321,7 +337,8 @@
                       "example_cases":  "у полице́йского – Genitiv · пистоле́т – Nominativ",
                       "example_de":  "Der Polizist hat eine Pistole.",
                       "example_en":  "The police officer has a pistol.",
-                      "example_es":  "El policía tiene una pistola."
+                      "example_es":  "El policía tiene una pistola.",
+                      "es_freq":  31218
                   },
                   {
                       "id":  "nm-профессия",
@@ -340,7 +357,8 @@
                       "example_cases":  "кто – Nominativ · вы – Nominativ · по профе́ссии – Dativ",
                       "example_de":  "Was sind Sie von Beruf?",
                       "example_en":  "What\u0027s your profession?",
-                      "example_es":  "¿Cuál es su profesión?"
+                      "example_es":  "¿Cuál es su profesión?",
+                      "es_freq":  6311
                   },
                   {
                       "id":  "nm-начальство",
@@ -356,7 +374,8 @@
                       "example_cases":  "нача́льство – Nominativ",
                       "example_de":  "Die Chefs sind unzufrieden.",
                       "example_en":  "The bosses are unhappy.",
-                      "example_es":  "Los jefes están descontentos."
+                      "example_es":  "Los jefes están descontentos.",
+                      "es_freq":  5805
                   },
                   {
                       "id":  "nm-воспитание",
@@ -371,7 +390,8 @@
                       "example_cases":  "у него́ – Genitiv · хоро́шее воспита́ние – Nominativ",
                       "example_de":  "Er ist gut erzogen.",
                       "example_en":  "He has a good upbringing.",
-                      "example_es":  "Tiene buena educación."
+                      "example_es":  "Tiene buena educación.",
+                      "es_freq":  639
                   },
                   {
                       "id":  "nm-ворота",
@@ -389,7 +409,8 @@
                       "example_cases":  "воро́та – Akkusativ Plural",
                       "example_de":  "Mach das Tor auf!",
                       "example_en":  "Open the gate!",
-                      "example_es":  "¡Abre el portón!"
+                      "example_es":  "¡Abre el portón!",
+                      "es_freq":  1041
                   },
                   {
                       "id":  "nm-риск",
@@ -408,7 +429,8 @@
                       "example_cases":  "большо́й риск – Nominativ",
                       "example_de":  "Das ist ein großes Risiko.",
                       "example_en":  "It\u0027s a big risk.",
-                      "example_es":  "Es un gran riesgo."
+                      "example_es":  "Es un gran riesgo.",
+                      "es_freq":  28638
                   },
                   {
                       "id":  "nm-покой",
@@ -424,7 +446,8 @@
                       "example_cases":  "меня́ – Akkusativ · в поко́е – Präpositiv",
                       "example_de":  "Lass mich in Ruhe!",
                       "example_en":  "Leave me alone!",
-                      "example_es":  "¡Déjame en paz!"
+                      "example_es":  "¡Déjame en paz!",
+                      "es_freq":  4128
                   },
                   {
                       "id":  "nm-дружба",
@@ -439,7 +462,8 @@
                       "example_cases":  "на́ша дру́жба – Nominativ",
                       "example_de":  "Unsere Freundschaft ist das Wichtigste.",
                       "example_en":  "Our friendship is the most important thing.",
-                      "example_es":  "Nuestra amistad es lo más importante."
+                      "example_es":  "Nuestra amistad es lo más importante.",
+                      "es_freq":  15422
                   },
                   {
                       "id":  "nm-добро",
@@ -455,7 +479,8 @@
                       "example_cases":  "добро́ – Akkusativ",
                       "example_de":  "Tu Gutes!",
                       "example_en":  "Do good!",
-                      "example_es":  "¡Haz el bien!"
+                      "example_es":  "¡Haz el bien!",
+                      "es_freq":  18462
                   },
                   {
                       "id":  "nm-окончание",
@@ -474,7 +499,8 @@
                       "example_cases":  "по́сле оконча́ния – Genitiv · шко́лы – Genitiv · в Москву́ – Akkusativ",
                       "example_de":  "Nach dem Schulabschluss ging er nach Moskau.",
                       "example_en":  "After finishing school he went to Moscow.",
-                      "example_es":  "Después de terminar la escuela, se fue a Moscú."
+                      "example_es":  "Después de terminar la escuela, se fue a Moscú.",
+                      "es_freq":  5095
                   },
                   {
                       "id":  "nm-дым",
@@ -491,7 +517,8 @@
                       "example_de":  "Kein Rauch ohne Feuer.",
                       "example_en":  "There\u0027s no smoke without fire.",
                       "example_es":  "No hay humo sin fuego.",
-                      "loc":  "в дыму́"
+                      "loc":  "в дыму́",
+                      "es_freq":  11530
                   },
                   {
                       "id":  "nm-совесть",
@@ -507,7 +534,8 @@
                       "example_cases":  "у него́ – Genitiv · со́вести – Genitiv (nach нет)",
                       "example_de":  "Er hat kein Gewissen.",
                       "example_en":  "He has no conscience.",
-                      "example_es":  "No tiene conciencia."
+                      "example_es":  "No tiene conciencia.",
+                      "es_freq":  622
                   },
                   {
                       "id":  "nm-инициатива",
@@ -522,7 +550,8 @@
                       "example_cases":  "инициати́ву – Akkusativ",
                       "example_de":  "Er hat Initiative gezeigt.",
                       "example_en":  "He showed initiative.",
-                      "example_es":  "Él mostró iniciativa."
+                      "example_es":  "Él mostró iniciativa.",
+                      "es_freq":  3573
                   },
                   {
                       "id":  "nm-записка",
@@ -541,7 +570,8 @@
                       "example_cases":  "тебе́ – Dativ · запи́ску – Akkusativ · на столе́ – Präpositiv",
                       "example_de":  "Ich habe dir einen Zettel auf dem Tisch gelassen.",
                       "example_en":  "I left you a note on the table.",
-                      "example_es":  "Te dejé una nota en la mesa."
+                      "example_es":  "Te dejé una nota en la mesa.",
+                      "es_freq":  2192
                   },
                   {
                       "id":  "nm-величина",
@@ -556,7 +586,8 @@
                       "example_cases":  "звезда́ – Nominativ · пе́рвой величины́ – Genitiv",
                       "example_de":  "Das ist ein Star ersten Ranges.",
                       "example_en":  "This is a star of the first magnitude.",
-                      "example_es":  "Es una estrella de primera magnitud."
+                      "example_es":  "Es una estrella de primera magnitud.",
+                      "es_freq":  16994
                   },
                   {
                       "id":  "nm-брак",
@@ -575,7 +606,8 @@
                       "example_cases":  "в бра́ке – Präpositiv · лет – Genitiv Plural",
                       "example_de":  "Sie sind seit zehn Jahren verheiratet.",
                       "example_en":  "They\u0027ve been married for ten years.",
-                      "example_es":  "Llevan diez años casados."
+                      "example_es":  "Llevan diez años casados.",
+                      "es_freq":  39771
                   },
                   {
                       "id":  "nm-спорт",
@@ -590,7 +622,8 @@
                       "example_cases":  "спо́ртом – Instrumental (nach занима́ться)",
                       "example_de":  "Ich treibe Sport.",
                       "example_en":  "I do sports.",
-                      "example_es":  "Hago deporte."
+                      "example_es":  "Hago deporte.",
+                      "es_freq":  12486
                   },
                   {
                       "id":  "nm-кость",
@@ -609,7 +642,8 @@
                       "example_cases":  "соба́ка – Nominativ · кость – Akkusativ",
                       "example_de":  "Der Hund nagt an einem Knochen.",
                       "example_en":  "The dog is chewing a bone.",
-                      "example_es":  "El perro roe un hueso."
+                      "example_es":  "El perro roe un hueso.",
+                      "es_freq":  22411
                   },
                   {
                       "id":  "nm-активность",
@@ -625,7 +659,8 @@
                       "example_cases":  "врач – Nominativ · физи́ческой акти́вности – Genitiv",
                       "example_de":  "Der Arzt empfiehlt mehr Bewegung.",
                       "example_en":  "The doctor recommends more physical activity.",
-                      "example_es":  "El médico recomienda más actividad física."
+                      "example_es":  "El médico recomienda más actividad física.",
+                      "es_freq":  684
                   },
                   {
                       "id":  "nm-кредит",
@@ -643,7 +678,8 @@
                       "example_cases":  "креди́т – Akkusativ · на кварти́ру – Akkusativ",
                       "example_de":  "Wir haben einen Kredit für die Wohnung aufgenommen.",
                       "example_en":  "We took out a loan for the apartment.",
-                      "example_es":  "Pedimos un préstamo para el apartamento."
+                      "example_es":  "Pedimos un préstamo para el apartamento.",
+                      "es_freq":  8038
                   },
                   {
                       "id":  "nm-майор",
@@ -662,7 +698,8 @@
                       "example_cases":  "майо́ром – Instrumental · в а́рмии – Präpositiv",
                       "example_de":  "Er diente als Major in der Armee.",
                       "example_en":  "He served as a major in the army.",
-                      "example_es":  "Sirvió como mayor en el ejército."
+                      "example_es":  "Sirvió como mayor en el ejército.",
+                      "es_freq":  5023
                   },
                   {
                       "id":  "nm-потолок",
@@ -681,7 +718,8 @@
                       "example_cases":  "в ко́мнате – Präpositiv · высо́кий потоло́к – Nominativ",
                       "example_de":  "Das Zimmer hat eine hohe Decke.",
                       "example_en":  "The room has a high ceiling.",
-                      "example_es":  "La habitación tiene el techo alto."
+                      "example_es":  "La habitación tiene el techo alto.",
+                      "es_freq":  845
                   },
                   {
                       "id":  "nm-конференция",
@@ -700,7 +738,8 @@
                       "example_cases":  "на конфере́нцию – Akkusativ (wohin?)",
                       "example_de":  "Ich fahre zu einer Konferenz.",
                       "example_en":  "I\u0027m going to a conference.",
-                      "example_es":  "Voy a una conferencia."
+                      "example_es":  "Voy a una conferencia.",
+                      "es_freq":  12527
                   },
                   {
                       "id":  "nm-помощник",
@@ -720,7 +759,8 @@
                       "example_cases":  "сын – Nominativ · мой помо́щник – Nominativ",
                       "example_de":  "Mein Sohn ist mein Helfer.",
                       "example_en":  "My son is my helper.",
-                      "example_es":  "Mi hijo es mi ayudante."
+                      "example_es":  "Mi hijo es mi ayudante.",
+                      "es_freq":  10838
                   },
                   {
                       "id":  "nm-библиотека",
@@ -738,7 +778,8 @@
                       "example_cases":  "кни́ги – Akkusativ Plural · в библиоте́ке – Präpositiv",
                       "example_de":  "Ich leihe mir Bücher in der Bibliothek.",
                       "example_en":  "I borrow books from the library.",
-                      "example_es":  "Saco libros de la biblioteca."
+                      "example_es":  "Saco libros de la biblioteca.",
+                      "es_freq":  11211
                   },
                   {
                       "id":  "nm-ручка",
@@ -757,7 +798,8 @@
                       "example_cases":  "мне – Dativ · ру́чку – Akkusativ",
                       "example_de":  "Gib mir bitte einen Kuli.",
                       "example_en":  "Give me a pen, please.",
-                      "example_es":  "Dame un bolígrafo, por favor."
+                      "example_es":  "Dame un bolígrafo, por favor.",
+                      "es_freq":  2797
                   },
                   {
                       "id":  "nm-отдых",
@@ -773,7 +815,8 @@
                       "example_cases":  "хоро́шего о́тдыха – Genitiv (Wunsch)",
                       "example_de":  "Schönen Urlaub!",
                       "example_en":  "Have a nice vacation!",
-                      "example_es":  "¡Buen descanso!"
+                      "example_es":  "¡Buen descanso!",
+                      "es_freq":  1536
                   },
                   {
                       "id":  "nm-конструкция",
@@ -791,7 +834,8 @@
                       "example_cases":  "э́та констру́кция – Nominativ",
                       "example_de":  "Diese Konstruktion ist sehr stabil.",
                       "example_en":  "This structure is very solid.",
-                      "example_es":  "Esta estructura es muy sólida."
+                      "example_es":  "Esta estructura es muy sólida.",
+                      "es_freq":  457
                   },
                   {
                       "id":  "nm-металл",
@@ -810,7 +854,8 @@
                       "example_cases":  "э́тот стол – Nominativ · из мета́лла – Genitiv",
                       "example_de":  "Dieser Tisch ist aus Metall.",
                       "example_en":  "This table is made of metal.",
-                      "example_es":  "Esta mesa es de metal."
+                      "example_es":  "Esta mesa es de metal.",
+                      "es_freq":  10907
                   },
                   {
                       "id":  "nm-транспорт",
@@ -825,7 +870,8 @@
                       "example_cases":  "в го́роде – Präpositiv · обще́ственный тра́нспорт – Nominativ",
                       "example_de":  "Die Stadt hat gute öffentliche Verkehrsmittel.",
                       "example_en":  "The city has good public transport.",
-                      "example_es":  "La ciudad tiene buen transporte público."
+                      "example_es":  "La ciudad tiene buen transporte público.",
+                      "es_freq":  11166
                   },
                   {
                       "id":  "nm-прокурор",
@@ -844,7 +890,8 @@
                       "example_cases":  "прокуро́р – Nominativ · в суде́ – Präpositiv",
                       "example_de":  "Der Staatsanwalt spricht vor Gericht.",
                       "example_en":  "The prosecutor speaks in court.",
-                      "example_es":  "El fiscal habla en el tribunal."
+                      "example_es":  "El fiscal habla en el tribunal.",
+                      "es_freq":  995
                   },
                   {
                       "id":  "nm-молоко",
@@ -860,7 +907,8 @@
                       "example_cases":  "ко́фе – Akkusativ · с молоко́м – Instrumental",
                       "example_de":  "Ich trinke Kaffee mit Milch.",
                       "example_en":  "I drink coffee with milk.",
-                      "example_es":  "Tomo café con leche."
+                      "example_es":  "Tomo café con leche.",
+                      "es_freq":  23267
                   },
                   {
                       "id":  "nm-соединение",
@@ -878,7 +926,8 @@
                       "example_cases":  "соедине́ние – Nominativ · с Интерне́том – Instrumental",
                       "example_de":  "Die Internetverbindung ist schlecht.",
                       "example_en":  "The internet connection is bad.",
-                      "example_es":  "La conexión a Internet es mala."
+                      "example_es":  "La conexión a Internet es mala.",
+                      "es_freq":  942
                   },
                   {
                       "id":  "nm-поэзия",
@@ -893,7 +942,8 @@
                       "example_cases":  "ру́сскую поэ́зию – Akkusativ",
                       "example_de":  "Ich liebe russische Dichtung.",
                       "example_en":  "I love Russian poetry.",
-                      "example_es":  "Me encanta la poesía rusa."
+                      "example_es":  "Me encanta la poesía rusa.",
+                      "es_freq":  5835
                   }
               ]
 }

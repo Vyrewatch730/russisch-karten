@@ -19,7 +19,8 @@
                       "example":  "Не говори́ так.",
                       "example_de":  "Sprich nicht so.",
                       "example_en":  "Don\u0027t talk like that.",
-                      "example_es":  "No hables así."
+                      "example_es":  "No hables así.",
+                      "es_freq":  1050332
                   },
                   {
                       "id":  "av-еще",
@@ -33,7 +34,8 @@
                       "example":  "Он ещё спит.",
                       "example_de":  "Er schläft noch.",
                       "example_en":  "He is still sleeping.",
-                      "example_es":  "Él todavía está durmiendo."
+                      "example_es":  "Él todavía está durmiendo.",
+                      "es_freq":  166624
                   },
                   {
                       "id":  "av-как",
@@ -46,7 +48,8 @@
                       "example":  "Как дела́?",
                       "example_de":  "Wie geht\u0027s?",
                       "example_en":  "How are you?",
-                      "example_es":  "¿Cómo estás?"
+                      "example_es":  "¿Cómo estás?",
+                      "es_freq":  862349
                   },
                   {
                       "id":  "av-уже",
@@ -60,7 +63,8 @@
                       "example":  "Я уже́ до́ма.",
                       "example_de":  "Ich bin schon zu Hause.",
                       "example_en":  "I\u0027m already home.",
-                      "example_es":  "Ya estoy en casa."
+                      "example_es":  "Ya estoy en casa.",
+                      "es_freq":  1115265
                   },
                   {
                       "id":  "av-очень",
@@ -73,7 +77,8 @@
                       "example":  "Я о́чень рад.",
                       "example_de":  "Ich freue mich sehr.",
                       "example_en":  "I\u0027m very glad.",
-                      "example_es":  "Estoy muy contento."
+                      "example_es":  "Estoy muy contento.",
+                      "es_freq":  1086248
                   },
                   {
                       "id":  "av-где",
@@ -87,7 +92,8 @@
                       "example":  "Где ты?",
                       "example_de":  "Wo bist du?",
                       "example_en":  "Where are you?",
-                      "example_es":  "¿Dónde estás?"
+                      "example_es":  "¿Dónde estás?",
+                      "es_freq":  539643
                   },
                   {
                       "id":  "av-там",
@@ -100,7 +106,8 @@
                       "example":  "Там мой дом.",
                       "example_de":  "Dort ist mein Haus.",
                       "example_en":  "My house is there.",
-                      "example_es":  "Allá está mi casa."
+                      "example_es":  "Allá está mi casa.",
+                      "es_freq":  267215
                   },
                   {
                       "id":  "av-можно",
@@ -114,7 +121,8 @@
                       "example":  "Мо́жно войти́?",
                       "example_de":  "Darf ich reinkommen?",
                       "example_en":  "May I come in?",
-                      "example_es":  "¿Se puede entrar?"
+                      "example_es":  "¿Se puede entrar?",
+                      "es_freq":  631326
                   },
                   {
                       "id":  "av-потом",
@@ -127,7 +135,8 @@
                       "example":  "Снача́ла рабо́та, пото́м о́тдых.",
                       "example_de":  "Erst die Arbeit, dann die Erholung.",
                       "example_en":  "First work, then rest.",
-                      "example_es":  "Primero el trabajo, después el descanso."
+                      "example_es":  "Primero el trabajo, después el descanso.",
+                      "es_freq":  311500
                   },
                   {
                       "id":  "av-надо",
@@ -141,7 +150,8 @@
                       "example":  "Мне на́до идти́.",
                       "example_de":  "Ich muss gehen.",
                       "example_en":  "I have to go.",
-                      "example_es":  "Tengo que irme."
+                      "example_es":  "Tengo que irme.",
+                      "es_freq":  1014288
                   },
                   {
                       "id":  "av-сейчас",
@@ -154,7 +164,8 @@
                       "example":  "Я сейча́с приду́.",
                       "example_de":  "Ich komme gleich.",
                       "example_en":  "I\u0027ll be right there.",
-                      "example_es":  "Ahorita vengo."
+                      "example_es":  "Ahorita vengo.",
+                      "es_freq":  1088174
                   },
                   {
                       "id":  "av-тут",
@@ -168,7 +179,8 @@
                       "example":  "Я тут.",
                       "example_de":  "Ich bin hier.",
                       "example_en":  "I\u0027m here.",
-                      "example_es":  "Estoy aquí."
+                      "example_es":  "Estoy aquí.",
+                      "es_freq":  1625090
                   },
                   {
                       "id":  "av-теперь",
@@ -181,7 +193,8 @@
                       "example":  "Тепе́рь я понима́ю.",
                       "example_de":  "Jetzt verstehe ich.",
                       "example_en":  "Now I understand.",
-                      "example_es":  "Ahora entiendo."
+                      "example_es":  "Ahora entiendo.",
+                      "es_freq":  54409
                   },
                   {
                       "id":  "av-тоже",
@@ -195,7 +208,8 @@
                       "example":  "Я то́же хочу́.",
                       "example_de":  "Ich will auch.",
                       "example_en":  "I want it too.",
-                      "example_es":  "Yo también quiero."
+                      "example_es":  "Yo también quiero.",
+                      "es_freq":  488057
                   },
                   {
                       "id":  "av-тогда",
@@ -208,7 +222,8 @@
                       "example":  "Тогда́ я был молоды́м.",
                       "example_de":  "Damals war ich jung.",
                       "example_en":  "Back then I was young.",
-                      "example_es":  "Entonces yo era joven."
+                      "example_es":  "Entonces yo era joven.",
+                      "es_freq":  609938
                   },
                   {
                       "id":  "av-здесь",
@@ -221,7 +236,8 @@
                       "example":  "Здесь хорошо́.",
                       "example_de":  "Hier ist es schön.",
                       "example_en":  "It\u0027s nice here.",
-                      "example_es":  "Aquí se está bien."
+                      "example_es":  "Aquí se está bien.",
+                      "es_freq":  81255
                   },
                   {
                       "id":  "av-потому",
@@ -234,7 +250,8 @@
                       "example":  "Я не пришёл, потому́ что боле́л.",
                       "example_de":  "Ich bin nicht gekommen, weil ich krank war.",
                       "example_en":  "I didn\u0027t come because I was sick.",
-                      "example_es":  "No vine porque estaba enfermo."
+                      "example_es":  "No vine porque estaba enfermo.",
+                      "es_freq":  685059
                   },
                   {
                       "id":  "av-более",
@@ -248,7 +265,8 @@
                       "example":  "Э́то бо́лее интере́сно.",
                       "example_de":  "Das ist interessanter.",
                       "example_en":  "That\u0027s more interesting.",
-                      "example_es":  "Eso es más interesante."
+                      "example_es":  "Eso es más interesante.",
+                      "es_freq":  1503527
                   },
                   {
                       "id":  "av-конечно",
@@ -262,7 +280,8 @@
                       "example":  "Коне́чно, я по́мню!",
                       "example_de":  "Natürlich erinnere ich mich!",
                       "example_en":  "Of course I remember!",
-                      "example_es":  "¡Claro que me acuerdo!"
+                      "example_es":  "¡Claro que me acuerdo!",
+                      "es_freq":  14829
                   },
                   {
                       "id":  "av-всегда",
@@ -275,7 +294,8 @@
                       "example":  "Он всегда́ опа́здывает.",
                       "example_de":  "Er kommt immer zu spät.",
                       "example_en":  "He\u0027s always late.",
-                      "example_es":  "Él siempre llega tarde."
+                      "example_es":  "Él siempre llega tarde.",
+                      "es_freq":  424363
                   },
                   {
                       "id":  "av-также",
@@ -288,7 +308,8 @@
                       "example":  "Я та́кже говорю́ по-испа́нски.",
                       "example_de":  "Ich spreche außerdem Spanisch.",
                       "example_en":  "I also speak Spanish.",
-                      "example_es":  "Además hablo español."
+                      "example_es":  "Además hablo español.",
+                      "es_freq":  24403
                   },
                   {
                       "id":  "av-почему",
@@ -301,7 +322,8 @@
                       "example":  "Почему́ ты не спишь?",
                       "example_de":  "Warum schläfst du nicht?",
                       "example_en":  "Why aren\u0027t you asleep?",
-                      "example_es":  "¿Por qué no duermes?"
+                      "example_es":  "¿Por qué no duermes?",
+                      "es_freq":  4166708
                   },
                   {
                       "id":  "av-вдруг",
@@ -314,7 +336,8 @@
                       "example":  "Вдруг пошёл дождь.",
                       "example_de":  "Plötzlich fing es an zu regnen.",
                       "example_en":  "Suddenly it started to rain.",
-                      "example_es":  "De repente empezó a llover."
+                      "example_es":  "De repente empezó a llover.",
+                      "es_freq":  26871
                   },
                   {
                       "id":  "av-почти",
@@ -327,7 +350,8 @@
                       "example":  "Я почти́ гото́в.",
                       "example_de":  "Ich bin fast fertig.",
                       "example_en":  "I\u0027m almost ready.",
-                      "example_es":  "Ya casi estoy listo."
+                      "example_es":  "Ya casi estoy listo.",
+                      "es_freq":  133614
                   },
                   {
                       "id":  "av-сразу",
@@ -340,7 +364,8 @@
                       "example":  "Позвони́ мне сра́зу.",
                       "example_de":  "Ruf mich sofort an.",
                       "example_en":  "Call me right away.",
-                      "example_es":  "Llámame enseguida."
+                      "example_es":  "Llámame enseguida.",
+                      "es_freq":  35331
                   },
                   {
                       "id":  "av-сегодня",
@@ -354,7 +379,8 @@
                       "example":  "Сего́дня хо́лодно.",
                       "example_de":  "Heute ist es kalt.",
                       "example_en":  "It\u0027s cold today.",
-                      "example_es":  "Hoy hace frío."
+                      "example_es":  "Hoy hace frío.",
+                      "es_freq":  240395
                   },
                   {
                       "id":  "av-совсем",
@@ -368,7 +394,8 @@
                       "example":  "Я совсе́м забы́л.",
                       "example_de":  "Ich habe es ganz vergessen.",
                       "example_en":  "I completely forgot.",
-                      "example_es":  "Se me olvidó por completo."
+                      "example_es":  "Se me olvidó por completo.",
+                      "es_freq":  45342
                   },
                   {
                       "id":  "av-вообще",
@@ -381,7 +408,8 @@
                       "example":  "Я вообще́ не пью.",
                       "example_de":  "Ich trinke überhaupt nicht.",
                       "example_en":  "I don\u0027t drink at all.",
-                      "example_es":  "Yo no bebo para nada."
+                      "example_es":  "Yo no bebo para nada.",
+                      "es_freq":  59593
                   },
                   {
                       "id":  "av-вместе",
@@ -394,7 +422,8 @@
                       "example":  "Пойдём вме́сте!",
                       "example_de":  "Lass uns zusammen gehen!",
                       "example_en":  "Let\u0027s go together!",
-                      "example_es":  "¡Vamos juntos!"
+                      "example_es":  "¡Vamos juntos!",
+                      "es_freq":  129353
                   },
                   {
                       "id":  "av-никогда",
@@ -408,7 +437,8 @@
                       "example":  "Я никогда́ не был в Москве́.",
                       "example_de":  "Ich war nie in Moskau.",
                       "example_en":  "I\u0027ve never been to Moscow.",
-                      "example_es":  "Nunca he estado en Moscú."
+                      "example_es":  "Nunca he estado en Moscú.",
+                      "es_freq":  549997
                   },
                   {
                       "id":  "av-например",
@@ -421,7 +451,8 @@
                       "example":  "Я люблю́ фру́кты, наприме́р, я́блоки.",
                       "example_de":  "Ich mag Obst, zum Beispiel Äpfel.",
                       "example_en":  "I like fruit, for example apples.",
-                      "example_es":  "Me gustan las frutas, por ejemplo las manzanas."
+                      "example_es":  "Me gustan las frutas, por ejemplo las manzanas.",
+                      "es_freq":  31354
                   },
                   {
                       "id":  "av-куда",
@@ -434,7 +465,8 @@
                       "example":  "Куда́ ты идёшь?",
                       "example_de":  "Wohin gehst du?",
                       "example_en":  "Where are you going?",
-                      "example_es":  "¿Adónde vas?"
+                      "example_es":  "¿Adónde vas?",
+                      "es_freq":  50674
                   },
                   {
                       "id":  "av-нужно",
@@ -448,7 +480,8 @@
                       "example":  "Мне ну́жно рабо́тать.",
                       "example_de":  "Ich muss arbeiten.",
                       "example_en":  "I need to work.",
-                      "example_es":  "Tengo que trabajar."
+                      "example_es":  "Tengo que trabajar.",
+                      "es_freq":  67152
                   },
                   {
                       "id":  "av-опять",
@@ -462,7 +495,8 @@
                       "example":  "Опя́ть дождь!",
                       "example_de":  "Schon wieder Regen!",
                       "example_en":  "Rain again!",
-                      "example_es":  "¡Otra vez lluvia!"
+                      "example_es":  "¡Otra vez lluvia!",
+                      "es_freq":  368984
                   },
                   {
                       "id":  "av-снова",
@@ -475,7 +509,8 @@
                       "example":  "Я сно́ва до́ма.",
                       "example_de":  "Ich bin wieder zu Hause.",
                       "example_en":  "I\u0027m home again.",
-                      "example_es":  "Estoy de nuevo en casa."
+                      "example_es":  "Estoy de nuevo en casa.",
+                      "es_freq":  269895
                   },
                   {
                       "id":  "av-нельзя",
@@ -488,7 +523,8 @@
                       "example":  "Здесь нельзя́ кури́ть.",
                       "example_de":  "Hier darf man nicht rauchen.",
                       "example_en":  "You can\u0027t smoke here.",
-                      "example_es":  "Aquí no se puede fumar."
+                      "example_es":  "Aquí no se puede fumar.",
+                      "es_freq":  631326
                   },
                   {
                       "id":  "av-рядом",
@@ -502,7 +538,8 @@
                       "example":  "Магази́н ря́дом.",
                       "example_de":  "Der Laden ist gleich nebenan.",
                       "example_en":  "The shop is right next door.",
-                      "example_es":  "La tienda está al lado."
+                      "example_es":  "La tienda está al lado.",
+                      "es_freq":  149162
                   },
                   {
                       "id":  "av-назад",
@@ -515,7 +552,8 @@
                       "example":  "Два го́да наза́д.",
                       "example_de":  "Vor zwei Jahren.",
                       "example_en":  "Two years ago.",
-                      "example_es":  "Hace dos años."
+                      "example_es":  "Hace dos años.",
+                      "es_freq":  88877
                   },
                   {
                       "id":  "av-значит",
@@ -528,7 +566,8 @@
                       "example":  "Зна́чит, ты не придёшь?",
                       "example_de":  "Du kommst also nicht?",
                       "example_en":  "So you\u0027re not coming?",
-                      "example_es":  "¿O sea que no vienes?"
+                      "example_es":  "¿O sea que no vienes?",
+                      "es_freq":  352790
                   },
                   {
                       "id":  "av-наконец",
@@ -541,7 +580,8 @@
                       "example":  "Наконе́ц-то ты пришёл!",
                       "example_de":  "Endlich bist du da!",
                       "example_en":  "Finally you\u0027re here!",
-                      "example_es":  "¡Por fin llegaste!"
+                      "example_es":  "¡Por fin llegaste!",
+                      "es_freq":  109402
                   },
                   {
                       "id":  "av-иногда",
@@ -554,7 +594,8 @@
                       "example":  "Иногда́ я гото́влю.",
                       "example_de":  "Manchmal koche ich.",
                       "example_en":  "Sometimes I cook.",
-                      "example_es":  "A veces cocino."
+                      "example_es":  "A veces cocino.",
+                      "es_freq":  195756
                   },
                   {
                       "id":  "av-чуть",
@@ -568,7 +609,8 @@
                       "example":  "Я чуть не упа́л.",
                       "example_de":  "Ich wäre beinahe hingefallen.",
                       "example_en":  "I almost fell.",
-                      "example_es":  "Casi me caigo."
+                      "example_es":  "Casi me caigo.",
+                      "es_freq":  13774
                   },
                   {
                       "id":  "av-зачем",
@@ -581,7 +623,8 @@
                       "example":  "Заче́м тебе́ э́то?",
                       "example_de":  "Wozu brauchst du das?",
                       "example_en":  "What do you need that for?",
-                      "example_es":  "¿Para qué quieres eso?"
+                      "example_es":  "¿Para qué quieres eso?",
+                      "es_freq":  2832100
                   },
                   {
                       "id":  "av-затем",
@@ -594,7 +637,8 @@
                       "example":  "Снача́ла суп, зате́м чай.",
                       "example_de":  "Erst Suppe, danach Tee.",
                       "example_en":  "First soup, then tea.",
-                      "example_es":  "Primero sopa, luego té."
+                      "example_es":  "Primero sopa, luego té.",
+                      "es_freq":  245811
                   },
                   {
                       "id":  "av-слишком",
@@ -607,7 +651,8 @@
                       "example":  "Э́то сли́шком до́рого.",
                       "example_de":  "Das ist zu teuer.",
                       "example_en":  "That\u0027s too expensive.",
-                      "example_es":  "Eso es demasiado caro."
+                      "example_es":  "Eso es demasiado caro.",
+                      "es_freq":  182668
                   },
                   {
                       "id":  "av-вполне",
@@ -620,7 +665,8 @@
                       "example":  "Я вполне́ дово́лен.",
                       "example_de":  "Ich bin ganz zufrieden.",
                       "example_en":  "I\u0027m quite satisfied.",
-                      "example_es":  "Estoy bastante contento."
+                      "example_es":  "Estoy bastante contento.",
+                      "es_freq":  109431
                   },
                   {
                       "id":  "av-впрочем",
@@ -633,7 +679,8 @@
                       "example":  "Впро́чем, э́то не ва́жно.",
                       "example_de":  "Allerdings ist das nicht wichtig.",
                       "example_en":  "Anyway, it\u0027s not important.",
-                      "example_es":  "Sin embargo, eso no importa."
+                      "example_es":  "Sin embargo, eso no importa.",
+                      "es_freq":  41642
                   },
                   {
                       "id":  "av-наверное",
@@ -646,7 +693,8 @@
                       "example":  "Наве́рное, он спит.",
                       "example_de":  "Wahrscheinlich schläft er.",
                       "example_en":  "He\u0027s probably asleep.",
-                      "example_es":  "Probablemente está durmiendo."
+                      "example_es":  "Probablemente está durmiendo.",
+                      "es_freq":  84911
                   },
                   {
                       "id":  "av-пока",
@@ -660,7 +708,8 @@
                       "example":  "Пока́ всё хорошо́.",
                       "example_de":  "Vorerst ist alles gut.",
                       "example_en":  "So far so good.",
-                      "example_es":  "Por ahora todo bien."
+                      "example_es":  "Por ahora todo bien.",
+                      "es_freq":  1088174
                   },
                   {
                       "id":  "av-менее",
@@ -673,7 +722,8 @@
                       "example":  "Э́то ме́нее ва́жно.",
                       "example_de":  "Das ist weniger wichtig.",
                       "example_en":  "That\u0027s less important.",
-                      "example_es":  "Eso es menos importante."
+                      "example_es":  "Eso es menos importante.",
+                      "es_freq":  263837
                   }
               ]
 }

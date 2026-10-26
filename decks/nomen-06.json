@@ -26,7 +26,8 @@
                       "example_cases":  "Толсто́й – Nominativ · писа́тель – Nominativ",
                       "example_de":  "Tolstoi ist ein bekannter russischer Schriftsteller.",
                       "example_en":  "Tolstoy is a famous Russian writer.",
-                      "example_es":  "Tolstói es un famoso escritor ruso."
+                      "example_es":  "Tolstói es un famoso escritor ruso.",
+                      "es_freq":  10924
                   },
                   {
                       "id":  "nm-самолет",
@@ -45,7 +46,8 @@
                       "example_cases":  "на самолёте – Präpositiv",
                       "example_de":  "Wir fliegen mit dem Flugzeug.",
                       "example_en":  "We\u0027re flying by plane.",
-                      "example_es":  "Vamos en avión."
+                      "example_es":  "Vamos en avión.",
+                      "es_freq":  48530
                   },
                   {
                       "id":  "nm-объем",
@@ -64,7 +66,8 @@
                       "example_cases":  "объём – Nominativ · рабо́ты – Genitiv",
                       "example_de":  "Der Arbeitsumfang ist sehr groß.",
                       "example_en":  "The amount of work is very large.",
-                      "example_es":  "El volumen de trabajo es muy grande."
+                      "example_es":  "El volumen de trabajo es muy grande.",
+                      "es_freq":  5088
                   },
                   {
                       "id":  "nm-род",
@@ -84,7 +87,8 @@
                       "example_de":  "Welches Geschlecht hat das Wort „кни́га“?",
                       "example_en":  "What gender is the word \"кни́га\"?",
                       "example_es":  "¿Qué género tiene la palabra \"кни́га\"?",
-                      "loc":  "в роду́"
+                      "loc":  "в роду́",
+                      "es_freq":  14952
                   },
                   {
                       "id":  "nm-солнце",
@@ -100,7 +104,8 @@
                       "example_cases":  "со́лнце – Nominativ",
                       "example_de":  "Heute scheint die Sonne.",
                       "example_en":  "The sun is shining today.",
-                      "example_es":  "Hoy hace sol."
+                      "example_es":  "Hoy hace sol.",
+                      "es_freq":  46225
                   },
                   {
                       "id":  "nm-вера",
@@ -116,7 +121,8 @@
                       "example_cases":  "ве́ра – Nominativ · ему́ – Dativ",
                       "example_de":  "Der Glaube hilft ihm zu leben.",
                       "example_en":  "Faith helps him live.",
-                      "example_es":  "La fe le ayuda a vivir."
+                      "example_es":  "La fe le ayuda a vivir.",
+                      "es_freq":  23518
                   },
                   {
                       "id":  "nm-спектакль",
@@ -135,7 +141,8 @@
                       "example_cases":  "спекта́кль – Nominativ",
                       "example_de":  "Die Aufführung beginnt um sieben.",
                       "example_en":  "The performance starts at seven.",
-                      "example_es":  "La obra empieza a las siete."
+                      "example_es":  "La obra empieza a las siete.",
+                      "es_freq":  25673
                   },
                   {
                       "id":  "nm-берег",
@@ -155,7 +162,8 @@
                       "example_de":  "Wir sitzen am Meeresufer.",
                       "example_en":  "We\u0027re sitting on the seashore.",
                       "example_es":  "Estamos sentados a la orilla del mar.",
-                      "loc":  "на берегу́"
+                      "loc":  "на берегу́",
+                      "es_freq":  5202
                   },
                   {
                       "id":  "nm-фирма",
@@ -173,7 +181,8 @@
                       "example_cases":  "свою́ фи́рму – Akkusativ",
                       "example_de":  "Er hat seine eigene Firma gegründet.",
                       "example_en":  "He started his own company.",
-                      "example_es":  "Él abrió su propia empresa."
+                      "example_es":  "Él abrió su propia empresa.",
+                      "es_freq":  1483
                   },
                   {
                       "id":  "nm-способ",
@@ -191,7 +200,8 @@
                       "example_cases":  "лу́чший спо́соб – Nominativ · слова́ – Akkusativ Plural",
                       "example_de":  "Das ist die beste Art, Wörter zu lernen.",
                       "example_en":  "This is the best way to learn words.",
-                      "example_es":  "Es la mejor manera de aprender palabras."
+                      "example_es":  "Es la mejor manera de aprender palabras.",
+                      "es_freq":  150499
                   },
                   {
                       "id":  "nm-завод",
@@ -210,7 +220,8 @@
                       "example_cases":  "оте́ц – Nominativ · на заво́де – Präpositiv",
                       "example_de":  "Der Vater arbeitet in der Fabrik.",
                       "example_en":  "Father works at a factory.",
-                      "example_es":  "Papá trabaja en una fábrica."
+                      "example_es":  "Papá trabaja en una fábrica.",
+                      "es_freq":  14911
                   },
                   {
                       "id":  "nm-цвет",
@@ -229,7 +240,8 @@
                       "example_cases":  "како́й цвет – Nominativ",
                       "example_de":  "Was ist deine Lieblingsfarbe?",
                       "example_en":  "What\u0027s your favorite color?",
-                      "example_es":  "¿Cuál es tu color favorito?"
+                      "example_es":  "¿Cuál es tu color favorito?",
+                      "es_freq":  38684
                   },
                   {
                       "id":  "nm-руководитель",
@@ -249,7 +261,8 @@
                       "example_cases":  "руководи́тель – Nominativ · о́тдела – Genitiv",
                       "example_de":  "Er ist Abteilungsleiter.",
                       "example_en":  "He\u0027s the head of the department.",
-                      "example_es":  "Él es el jefe del departamento."
+                      "example_es":  "Él es el jefe del departamento.",
+                      "es_freq":  1224
                   },
                   {
                       "id":  "nm-журнал",
@@ -268,7 +281,8 @@
                       "example_cases":  "журна́л – Akkusativ · о мо́де – Präpositiv",
                       "example_de":  "Sie liest eine Modezeitschrift.",
                       "example_en":  "She\u0027s reading a fashion magazine.",
-                      "example_es":  "Ella lee una revista de moda."
+                      "example_es":  "Ella lee una revista de moda.",
+                      "es_freq":  17190
                   },
                   {
                       "id":  "nm-специалист",
@@ -288,7 +302,8 @@
                       "example_cases":  "хоро́ший специали́ст – Nominativ",
                       "example_de":  "Er ist ein guter Fachmann.",
                       "example_en":  "He\u0027s a good specialist.",
-                      "example_es":  "Él es un buen especialista."
+                      "example_es":  "Él es un buen especialista.",
+                      "es_freq":  5677
                   },
                   {
                       "id":  "nm-оценка",
@@ -307,7 +322,8 @@
                       "example_cases":  "хоро́шую оце́нку – Akkusativ",
                       "example_de":  "Ich habe eine gute Note bekommen.",
                       "example_en":  "I got a good grade.",
-                      "example_es":  "Saqué una buena nota."
+                      "example_es":  "Saqué una buena nota.",
+                      "es_freq":  43833
                   },
                   {
                       "id":  "nm-регион",
@@ -326,7 +342,8 @@
                       "example_cases":  "холо́дный регио́н – Nominativ",
                       "example_de":  "Das ist eine kalte Region.",
                       "example_en":  "This is a cold region.",
-                      "example_es":  "Es una región fría."
+                      "example_es":  "Es una región fría.",
+                      "es_freq":  345
                   },
                   {
                       "id":  "nm-процент",
@@ -345,7 +362,8 @@
                       "example_cases":  "це́ны – Nominativ Plural · на де́сять проце́нтов – Akkusativ, проце́нтов Genitiv Plural",
                       "example_de":  "Die Preise sind um zehn Prozent gestiegen.",
                       "example_en":  "Prices rose by ten percent.",
-                      "example_es":  "Los precios subieron un diez por ciento."
+                      "example_es":  "Los precios subieron un diez por ciento.",
+                      "es_freq":  12426
                   },
                   {
                       "id":  "nm-песня",
@@ -364,7 +382,8 @@
                       "example_cases":  "нам – Dativ · пе́сню – Akkusativ",
                       "example_de":  "Sing uns ein Lied!",
                       "example_en":  "Sing us a song!",
-                      "example_es":  "¡Cántanos una canción!"
+                      "example_es":  "¡Cántanos una canción!",
+                      "es_freq":  56121
                   },
                   {
                       "id":  "nm-родитель",
@@ -384,7 +403,8 @@
                       "example_cases":  "мои́ роди́тели – Nominativ Plural · в дере́вне – Präpositiv",
                       "example_de":  "Meine Eltern wohnen auf dem Land.",
                       "example_en":  "My parents live in the countryside.",
-                      "example_es":  "Mis padres viven en el campo."
+                      "example_es":  "Mis padres viven en el campo.",
+                      "es_freq":  21795
                   },
                   {
                       "id":  "nm-море",
@@ -403,7 +423,8 @@
                       "example_cases":  "на мо́ре – Akkusativ (wohin?)",
                       "example_de":  "Im Sommer fahren wir ans Meer.",
                       "example_en":  "In summer we\u0027re going to the sea.",
-                      "example_es":  "En verano vamos al mar."
+                      "example_es":  "En verano vamos al mar.",
+                      "es_freq":  37351
                   },
                   {
                       "id":  "nm-требование",
@@ -421,7 +442,8 @@
                       "example_cases":  "каки́е тре́бования – Nominativ Plural · к кандида́там – Dativ Plural",
                       "example_de":  "Welche Anforderungen gibt es an die Bewerber?",
                       "example_en":  "What are the requirements for candidates?",
-                      "example_es":  "¿Qué requisitos hay para los candidatos?"
+                      "example_es":  "¿Qué requisitos hay para los candidatos?",
+                      "es_freq":  1582
                   },
                   {
                       "id":  "nm-половина",
@@ -440,7 +462,8 @@
                       "example_cases":  "мне – Dativ · полови́ну – Akkusativ · я́блока – Genitiv",
                       "example_de":  "Gib mir die Hälfte vom Apfel.",
                       "example_en":  "Give me half of the apple.",
-                      "example_es":  "Dame la mitad de la manzana."
+                      "example_es":  "Dame la mitad de la manzana.",
+                      "es_freq":  48709
                   },
                   {
                       "id":  "nm-основание",
@@ -458,7 +481,8 @@
                       "example_cases":  "у него́ – Genitiv · основа́ния – Nominativ Plural",
                       "example_de":  "Er hat Gründe, so zu denken.",
                       "example_en":  "He has grounds to think so.",
-                      "example_es":  "Él tiene motivos para pensar así."
+                      "example_es":  "Él tiene motivos para pensar así.",
+                      "es_freq":  4165
                   },
                   {
                       "id":  "nm-роман",
@@ -477,7 +501,8 @@
                       "example_cases":  "рома́н – Akkusativ · Достое́вского – Genitiv",
                       "example_de":  "Ich lese einen Roman von Dostojewski.",
                       "example_en":  "I\u0027m reading a novel by Dostoevsky.",
-                      "example_es":  "Estoy leyendo una novela de Dostoyevski."
+                      "example_es":  "Estoy leyendo una novela de Dostoyevski.",
+                      "es_freq":  9404
                   },
                   {
                       "id":  "nm-круг",
@@ -497,7 +522,8 @@
                       "example_de":  "Wir sitzen im Freundeskreis.",
                       "example_en":  "We\u0027re sitting among friends.",
                       "example_es":  "Estamos con un grupo de amigos.",
-                      "loc":  "в кругу́"
+                      "loc":  "в кругу́",
+                      "es_freq":  12003
                   },
                   {
                       "id":  "nm-стихи",
@@ -515,7 +541,8 @@
                       "example_cases":  "Пу́шкин – Nominativ · краси́вые стихи́ – Akkusativ Plural",
                       "example_de":  "Puschkin schrieb schöne Gedichte.",
                       "example_en":  "Pushkin wrote beautiful poems.",
-                      "example_es":  "Pushkin escribió poemas hermosos."
+                      "example_es":  "Pushkin escribió poemas hermosos.",
+                      "es_freq":  2543
                   },
                   {
                       "id":  "nm-анализ",
@@ -534,7 +561,8 @@
                       "example_cases":  "мне – Dativ · ана́лиз – Akkusativ · кро́ви – Genitiv",
                       "example_de":  "Ich muss einen Bluttest machen.",
                       "example_en":  "I need to take a blood test.",
-                      "example_es":  "Tengo que hacerme un análisis de sangre."
+                      "example_es":  "Tengo que hacerme un análisis de sangre.",
+                      "es_freq":  12318
                   },
                   {
                       "id":  "nm-автомобиль",
@@ -553,7 +581,8 @@
                       "example_cases":  "у него́ – Genitiv · но́вый автомоби́ль – Nominativ",
                       "example_de":  "Er hat ein neues Auto.",
                       "example_en":  "He has a new car.",
-                      "example_es":  "Él tiene un carro nuevo."
+                      "example_es":  "Él tiene un carro nuevo.",
+                      "es_freq":  799
                   },
                   {
                       "id":  "nm-экономика",
@@ -568,7 +597,8 @@
                       "example_cases":  "эконо́мика – Nominativ · страны́ – Genitiv",
                       "example_de":  "Die Wirtschaft des Landes wächst.",
                       "example_en":  "The country\u0027s economy is growing.",
-                      "example_es":  "La economía del país está creciendo."
+                      "example_es":  "La economía del país está creciendo.",
+                      "es_freq":  5947
                   },
                   {
                       "id":  "nm-литература",
@@ -583,7 +613,8 @@
                       "example_cases":  "ру́сскую литерату́ру – Akkusativ",
                       "example_de":  "Ich liebe die russische Literatur.",
                       "example_en":  "I love Russian literature.",
-                      "example_es":  "Me encanta la literatura rusa."
+                      "example_es":  "Me encanta la literatura rusa.",
+                      "es_freq":  3749
                   },
                   {
                       "id":  "nm-бумага",
@@ -602,7 +633,8 @@
                       "example_cases":  "мне – Dativ · лист – Akkusativ · бума́ги – Genitiv",
                       "example_de":  "Gib mir ein Blatt Papier.",
                       "example_en":  "Give me a sheet of paper.",
-                      "example_es":  "Dame una hoja de papel."
+                      "example_es":  "Dame una hoja de papel.",
+                      "es_freq":  2790
                   },
                   {
                       "id":  "nm-поэт",
@@ -621,7 +653,8 @@
                       "example_cases":  "Пу́шкин – Nominativ · вели́кий поэ́т – Nominativ",
                       "example_de":  "Puschkin ist ein großer Dichter.",
                       "example_en":  "Pushkin is a great poet.",
-                      "example_es":  "Pushkin es un gran poeta."
+                      "example_es":  "Pushkin es un gran poeta.",
+                      "es_freq":  6000
                   },
                   {
                       "id":  "nm-степень",
@@ -640,7 +673,8 @@
                       "example_cases":  "в како́й сте́пени – Präpositiv",
                       "example_de":  "Inwieweit bist du bereit?",
                       "example_en":  "To what extent are you ready?",
-                      "example_es":  "¿En qué medida estás listo?"
+                      "example_es":  "¿En qué medida estás listo?",
+                      "es_freq":  22182
                   },
                   {
                       "id":  "nm-господин",
@@ -660,7 +694,8 @@
                       "example_cases":  "господи́н Ивано́в – Nominativ · вас – Akkusativ",
                       "example_de":  "Herr Iwanow erwartet Sie.",
                       "example_en":  "Mr. Ivanov is waiting for you.",
-                      "example_es":  "El señor Ivanov lo espera."
+                      "example_es":  "El señor Ivanov lo espera.",
+                      "es_freq":  532915
                   },
                   {
                       "id":  "nm-надежда",
@@ -679,7 +714,8 @@
                       "example_cases":  "наде́жда – Nominativ · после́дней – Instrumental",
                       "example_de":  "Die Hoffnung stirbt zuletzt.",
                       "example_en":  "Hope dies last.",
-                      "example_es":  "La esperanza es lo último que se pierde."
+                      "example_es":  "La esperanza es lo último que se pierde.",
+                      "es_freq":  35687
                   },
                   {
                       "id":  "nm-предмет",
@@ -697,7 +733,8 @@
                       "example_cases":  "како́й предме́т – Nominativ · в шко́ле – Präpositiv",
                       "example_de":  "Was ist dein Lieblingsfach in der Schule?",
                       "example_en":  "What\u0027s your favorite subject at school?",
-                      "example_es":  "¿Cuál es tu asignatura favorita en la escuela?"
+                      "example_es":  "¿Cuál es tu asignatura favorita en la escuela?",
+                      "es_freq":  1104
                   },
                   {
                       "id":  "nm-министр",
@@ -717,7 +754,8 @@
                       "example_cases":  "мини́стр – Nominativ · интервью́ – Akkusativ",
                       "example_de":  "Der Minister gab ein Interview.",
                       "example_en":  "The minister gave an interview.",
-                      "example_es":  "El ministro dio una entrevista."
+                      "example_es":  "El ministro dio una entrevista.",
+                      "es_freq":  21528
                   },
                   {
                       "id":  "nm-вариант",
@@ -736,7 +774,8 @@
                       "example_cases":  "хоро́ший вариа́нт – Nominativ",
                       "example_de":  "Das ist eine gute Option.",
                       "example_en":  "That\u0027s a good option.",
-                      "example_es":  "Es una buena opción."
+                      "example_es":  "Es una buena opción.",
+                      "es_freq":  37803
                   },
                   {
                       "id":  "nm-граница",
@@ -755,7 +794,8 @@
                       "example_cases":  "за грани́цу – Akkusativ (wohin?)",
                       "example_de":  "Wir fahren ins Ausland.",
                       "example_en":  "We\u0027re going abroad.",
-                      "example_es":  "Vamos al extranjero."
+                      "example_es":  "Vamos al extranjero.",
+                      "es_freq":  14910
                   },
                   {
                       "id":  "nm-модель",
@@ -774,7 +814,8 @@
                       "example_cases":  "но́вая моде́ль – Nominativ · телефо́на – Genitiv",
                       "example_de":  "Das ist ein neues Handymodell.",
                       "example_en":  "This is a new phone model.",
-                      "example_es":  "Es un nuevo modelo de teléfono."
+                      "example_es":  "Es un nuevo modelo de teléfono.",
+                      "es_freq":  21433
                   },
                   {
                       "id":  "nm-дух",
@@ -793,7 +834,8 @@
                       "example_cases":  "ду́хом – Instrumental",
                       "example_de":  "Lass den Kopf nicht hängen!",
                       "example_en":  "Don\u0027t lose heart!",
-                      "example_es":  "¡No te desanimes!"
+                      "example_es":  "¡No te desanimes!",
+                      "es_freq":  29697
                   },
                   {
                       "id":  "nm-операция",
@@ -811,7 +853,8 @@
                       "example_cases":  "ему́ – Dativ · опера́цию – Akkusativ",
                       "example_de":  "Er wurde operiert.",
                       "example_en":  "He had an operation.",
-                      "example_es":  "Lo operaron."
+                      "example_es":  "Lo operaron.",
+                      "es_freq":  33797
                   },
                   {
                       "id":  "nm-сон",
@@ -830,7 +873,8 @@
                       "example_cases":  "мне – Dativ · стра́нный сон – Nominativ",
                       "example_de":  "Ich hatte einen seltsamen Traum.",
                       "example_en":  "I had a strange dream.",
-                      "example_es":  "Tuve un sueño extraño."
+                      "example_es":  "Tuve un sueño extraño.",
+                      "es_freq":  89421
                   },
                   {
                       "id":  "nm-пара",
@@ -849,7 +893,8 @@
                       "example_cases":  "они́ – Nominativ · краси́вая па́ра – Nominativ",
                       "example_de":  "Sie sind ein schönes Paar.",
                       "example_en":  "They\u0027re a beautiful couple.",
-                      "example_es":  "Son una pareja bonita."
+                      "example_es":  "Son una pareja bonita.",
+                      "es_freq":  87841
                   },
                   {
                       "id":  "nm-название",
@@ -868,7 +913,8 @@
                       "example_cases":  "како́е назва́ние – Nominativ · у фи́льма – Genitiv",
                       "example_de":  "Wie heißt der Film?",
                       "example_en":  "What\u0027s the title of the film?",
-                      "example_es":  "¿Cómo se llama la película?"
+                      "example_es":  "¿Cómo se llama la película?",
+                      "es_freq":  12356
                   },
                   {
                       "id":  "nm-ум",
@@ -887,7 +933,8 @@
                       "example_cases":  "с ума́ – Genitiv",
                       "example_de":  "Bist du verrückt geworden?",
                       "example_en":  "Have you lost your mind?",
-                      "example_es":  "¿Te volviste loco?"
+                      "example_es":  "¿Te volviste loco?",
+                      "es_freq":  55613
                   },
                   {
                       "id":  "nm-повод",
@@ -906,7 +953,8 @@
                       "example_cases":  "по́вод – Nominativ · для пра́здника – Genitiv",
                       "example_de":  "Es gibt einen Anlass zum Feiern!",
                       "example_en":  "There\u0027s a reason to celebrate!",
-                      "example_es":  "¡Hay motivo para celebrar!"
+                      "example_es":  "¡Hay motivo para celebrar!",
+                      "es_freq":  33822
                   },
                   {
                       "id":  "nm-старик",
@@ -926,7 +974,8 @@
                       "example_cases":  "на скаме́йке – Präpositiv · стари́к – Nominativ",
                       "example_de":  "Auf der Bank sitzt ein alter Mann.",
                       "example_en":  "An old man is sitting on the bench.",
-                      "example_es":  "Un anciano está sentado en el banco."
+                      "example_es":  "Un anciano está sentado en el banco.",
+                      "es_freq":  11536
                   },
                   {
                       "id":  "nm-миллион",
@@ -945,7 +994,8 @@
                       "example_cases":  "в Москве́ – Präpositiv · миллио́нов – Genitiv Plural (nach Zahl) · челове́к – Genitiv Plural",
                       "example_de":  "In Moskau leben zwölf Millionen Menschen.",
                       "example_en":  "Twelve million people live in Moscow.",
-                      "example_es":  "En Moscú viven doce millones de personas."
+                      "example_es":  "En Moscú viven doce millones de personas.",
+                      "es_freq":  84179
                   }
               ]
 }

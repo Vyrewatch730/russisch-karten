@@ -27,7 +27,8 @@
                       "adv":  "темно́",
                       "adv_de":  "dunkel",
                       "adv_ex":  "На у́лице темно́.",
-                      "adv_ex_de":  "Draußen ist es dunkel."
+                      "adv_ex_de":  "Draußen ist es dunkel.",
+                      "es_freq":  33697
                   },
                   {
                       "id":  "aj-гражданский",
@@ -41,7 +42,8 @@
                       "example_cases":  "в Росси́и – Präpositiv · гражда́нская война́ – Nominativ",
                       "example_de":  "In Russland gab es einen Bürgerkrieg.",
                       "example_en":  "There was a civil war in Russia.",
-                      "example_es":  "En Rusia hubo una guerra civil."
+                      "example_es":  "En Rusia hubo una guerra civil.",
+                      "es_freq":  16474
                   },
                   {
                       "id":  "aj-внешний",
@@ -60,7 +62,8 @@
                       "adv":  "вне́шне",
                       "adv_de":  "äußerlich",
                       "adv_ex":  "Вне́шне он споко́ен.",
-                      "adv_ex_de":  "Äußerlich ist er ruhig."
+                      "adv_ex_de":  "Äußerlich ist er ruhig.",
+                      "es_freq":  13176
                   },
                   {
                       "id":  "aj-боевой",
@@ -73,7 +76,8 @@
                       "example_cases":  "боево́й самолёт – Nominativ",
                       "example_de":  "Das ist ein Kampfflugzeug.",
                       "example_en":  "This is a fighter plane.",
-                      "example_es":  "Es un avión de combate."
+                      "example_es":  "Es un avión de combate.",
+                      "es_freq":  684
                   },
                   {
                       "id":  "aj-рабочий",
@@ -88,7 +92,8 @@
                       "example_cases":  "рабо́чий день – Nominativ",
                       "example_de":  "Heute ist ein Arbeitstag.",
                       "example_en":  "Today is a working day.",
-                      "example_es":  "Hoy es día laborable."
+                      "example_es":  "Hoy es día laborable.",
+                      "es_freq":  2960
                   },
                   {
                       "id":  "aj-глубокий",
@@ -109,7 +114,8 @@
                       "adv":  "глубоко́",
                       "adv_de":  "tief",
                       "adv_ex":  "Здесь глубоко́.",
-                      "adv_ex_de":  "Hier ist es tief."
+                      "adv_ex_de":  "Hier ist es tief.",
+                      "es_freq":  27052
                   },
                   {
                       "id":  "aj-долгий",
@@ -131,7 +137,8 @@
                       "adv":  "до́лго",
                       "adv_de":  "lange",
                       "adv_ex":  "Я до́лго ждал.",
-                      "adv_ex_de":  "Ich habe lange gewartet."
+                      "adv_ex_de":  "Ich habe lange gewartet.",
+                      "es_freq":  4546
                   },
                   {
                       "id":  "aj-прямой",
@@ -150,7 +157,8 @@
                       "adv":  "пря́мо",
                       "adv_de":  "geradeaus, direkt",
                       "adv_ex":  "Иди́те пря́мо.",
-                      "adv_ex_de":  "Gehen Sie geradeaus."
+                      "adv_ex_de":  "Gehen Sie geradeaus.",
+                      "es_freq":  7655
                   },
                   {
                       "id":  "aj-финансовый",
@@ -163,7 +171,8 @@
                       "example_cases":  "у компа́нии – Genitiv · фина́нсовые пробле́мы – Nominativ Plural",
                       "example_de":  "Die Firma hat finanzielle Probleme.",
                       "example_en":  "The company has financial problems.",
-                      "example_es":  "La empresa tiene problemas financieros."
+                      "example_es":  "La empresa tiene problemas financieros.",
+                      "es_freq":  8550
                   },
                   {
                       "id":  "aj-открытый",
@@ -183,7 +192,8 @@
                       "adv":  "откры́то",
                       "adv_de":  "offen",
                       "adv_ex":  "Он говори́т откры́то.",
-                      "adv_ex_de":  "Er spricht offen."
+                      "adv_ex_de":  "Er spricht offen.",
+                      "es_freq":  49479
                   },
                   {
                       "id":  "aj-знакомый",
@@ -199,7 +209,8 @@
                       "example_cases":  "знако́мое лицо́ – Nominativ",
                       "example_de":  "Das ist ein bekanntes Gesicht.",
                       "example_en":  "That\u0027s a familiar face.",
-                      "example_es":  "Es una cara conocida."
+                      "example_es":  "Es una cara conocida.",
+                      "es_freq":  48370
                   },
                   {
                       "id":  "aj-нынешний",
@@ -213,7 +224,8 @@
                       "example_cases":  "ны́нешний дире́ктор – Nominativ · шко́лы – Genitiv",
                       "example_de":  "Das ist der jetzige Schulleiter.",
                       "example_en":  "This is the current school principal.",
-                      "example_es":  "Es el director actual de la escuela."
+                      "example_es":  "Es el director actual de la escuela.",
+                      "es_freq":  10830
                   },
                   {
                       "id":  "aj-исторический",
@@ -230,7 +242,8 @@
                       "adv":  "истори́чески",
                       "adv_de":  "historisch",
                       "adv_ex":  "Так сложи́лось истори́чески.",
-                      "adv_ex_de":  "Das hat sich historisch so ergeben."
+                      "adv_ex_de":  "Das hat sich historisch so ergeben.",
+                      "es_freq":  5298
                   },
                   {
                       "id":  "aj-народный",
@@ -243,7 +256,8 @@
                       "example_cases":  "ба́бушка – Nominativ · наро́дные пе́сни – Akkusativ Plural",
                       "example_de":  "Oma singt Volkslieder.",
                       "example_en":  "Grandma sings folk songs.",
-                      "example_es":  "La abuela canta canciones populares."
+                      "example_es":  "La abuela canta canciones populares.",
+                      "es_freq":  13147
                   },
                   {
                       "id":  "aj-знаменитый",
@@ -257,7 +271,8 @@
                       "example_cases":  "знамени́тый музе́й – Nominativ",
                       "example_de":  "Das ist ein berühmtes Museum.",
                       "example_en":  "This is a famous museum.",
-                      "example_es":  "Es un museo famoso."
+                      "example_es":  "Es un museo famoso.",
+                      "es_freq":  1382
                   },
                   {
                       "id":  "aj-больший",
@@ -272,7 +287,8 @@
                       "example_cases":  "бо́льшая часть – Nominativ · студе́нтов – Genitiv Plural · экза́мен – Akkusativ",
                       "example_de":  "Der größte Teil der Studenten hat die Prüfung bestanden.",
                       "example_en":  "Most of the students passed the exam.",
-                      "example_es":  "La mayor parte de los estudiantes aprobó el examen."
+                      "example_es":  "La mayor parte de los estudiantes aprobó el examen.",
+                      "es_freq":  5023
                   },
                   {
                       "id":  "aj-пустой",
@@ -291,7 +307,8 @@
                       "adv":  "пу́сто",
                       "adv_de":  "leer",
                       "adv_ex":  "В кварти́ре пу́сто.",
-                      "adv_ex_de":  "In der Wohnung ist es leer."
+                      "adv_ex_de":  "In der Wohnung ist es leer.",
+                      "es_freq":  29427
                   },
                   {
                       "id":  "aj-очередной",
@@ -304,7 +321,8 @@
                       "example_cases":  "очередна́я пробле́ма – Nominativ",
                       "example_de":  "Das ist schon wieder ein Problem.",
                       "example_en":  "This is yet another problem.",
-                      "example_es":  "Es otro problema más."
+                      "example_es":  "Es otro problema más.",
+                      "es_freq":  837642
                   },
                   {
                       "id":  "aj-судебный",
@@ -317,7 +335,8 @@
                       "example_cases":  "суде́бный проце́сс – Nominativ",
                       "example_de":  "Der Gerichtsprozess beginnt.",
                       "example_en":  "The trial is starting.",
-                      "example_es":  "Comienza el juicio."
+                      "example_es":  "Comienza el juicio.",
+                      "es_freq":  5074
                   },
                   {
                       "id":  "aj-зеленый",
@@ -332,7 +351,8 @@
                       "example_cases":  "у́лицу – Akkusativ · на зелёный свет – Akkusativ",
                       "example_de":  "Geh bei Grün über die Straße.",
                       "example_en":  "Cross the street on green.",
-                      "example_es":  "Cruza la calle con el semáforo en verde."
+                      "example_es":  "Cruza la calle con el semáforo en verde.",
+                      "es_freq":  27194
                   },
                   {
                       "id":  "aj-немецкий",
@@ -350,7 +370,8 @@
                       "adv":  "по-неме́цки",
                       "adv_de":  "auf Deutsch",
                       "adv_ex":  "Я говорю́ по-неме́цки.",
-                      "adv_ex_de":  "Ich spreche Deutsch."
+                      "adv_ex_de":  "Ich spreche Deutsch.",
+                      "es_freq":  30329
                   },
                   {
                       "id":  "aj-золотой",
@@ -364,7 +385,8 @@
                       "example_cases":  "у неё – Genitiv · золото́е кольцо́ – Nominativ",
                       "example_de":  "Sie hat einen goldenen Ring.",
                       "example_en":  "She has a gold ring.",
-                      "example_es":  "Ella tiene un anillo de oro."
+                      "example_es":  "Ella tiene un anillo de oro.",
+                      "es_freq":  1875
                   },
                   {
                       "id":  "aj-технический",
@@ -381,7 +403,8 @@
                       "adv":  "техни́чески",
                       "adv_de":  "technisch",
                       "adv_ex":  "Э́то техни́чески возмо́жно.",
-                      "adv_ex_de":  "Das ist technisch möglich."
+                      "adv_ex_de":  "Das ist technisch möglich.",
+                      "es_freq":  17944
                   },
                   {
                       "id":  "aj-нормальный",
@@ -400,7 +423,8 @@
                       "adv":  "норма́льно",
                       "adv_de":  "normal, okay",
                       "adv_ex":  "Всё норма́льно.",
-                      "adv_ex_de":  "Alles okay."
+                      "adv_ex_de":  "Alles okay.",
+                      "es_freq":  51631
                   },
                   {
                       "id":  "aj-городской",
@@ -414,7 +438,8 @@
                       "example_cases":  "городску́ю жизнь – Akkusativ",
                       "example_de":  "Ich mag das Stadtleben.",
                       "example_en":  "I like city life.",
-                      "example_es":  "Me gusta la vida urbana."
+                      "example_es":  "Me gusta la vida urbana.",
+                      "es_freq":  2557
                   },
                   {
                       "id":  "aj-соответствующий",
@@ -428,7 +453,8 @@
                       "example_cases":  "соотве́тствующий бланк – Akkusativ",
                       "example_de":  "Füllen Sie das entsprechende Formular aus.",
                       "example_en":  "Fill out the corresponding form.",
-                      "example_es":  "Llene el formulario correspondiente."
+                      "example_es":  "Llene el formulario correspondiente.",
+                      "es_freq":  652
                   },
                   {
                       "id":  "aj-любимый",
@@ -442,7 +468,8 @@
                       "example_cases":  "твой люби́мый фильм – Nominativ",
                       "example_de":  "Was ist dein Lieblingsfilm?",
                       "example_en":  "What\u0027s your favorite film?",
-                      "example_es":  "¿Cuál es tu película favorita?"
+                      "example_es":  "¿Cuál es tu película favorita?",
+                      "es_freq":  32748
                   },
                   {
                       "id":  "aj-родной",
@@ -456,7 +483,8 @@
                       "example_cases":  "мой родно́й язы́к – Nominativ · неме́цкий – Nominativ",
                       "example_de":  "Meine Muttersprache ist Deutsch.",
                       "example_en":  "My native language is German.",
-                      "example_es":  "Mi lengua materna es el alemán."
+                      "example_es":  "Mi lengua materna es el alemán.",
+                      "es_freq":  2597
                   },
                   {
                       "id":  "aj-западный",
@@ -470,7 +498,8 @@
                       "example_cases":  "в за́падной ча́сти – Präpositiv · го́рода – Genitiv",
                       "example_de":  "Wir wohnen im Westteil der Stadt.",
                       "example_en":  "We live in the western part of the city.",
-                      "example_es":  "Vivimos en la parte oeste de la ciudad."
+                      "example_es":  "Vivimos en la parte oeste de la ciudad.",
+                      "es_freq":  5282
                   },
                   {
                       "id":  "aj-быстрый",
@@ -491,7 +520,8 @@
                       "adv":  "бы́стро",
                       "adv_de":  "schnell",
                       "adv_ex":  "Он бы́стро бе́гает.",
-                      "adv_ex_de":  "Er läuft schnell."
+                      "adv_ex_de":  "Er läuft schnell.",
+                      "es_freq":  7688
                   },
                   {
                       "id":  "aj-холодный",
@@ -512,7 +542,8 @@
                       "adv":  "хо́лодно",
                       "adv_de":  "kalt",
                       "adv_ex":  "Сего́дня хо́лодно.",
-                      "adv_ex_de":  "Heute ist es kalt."
+                      "adv_ex_de":  "Heute ist es kalt.",
+                      "es_freq":  53348
                   },
                   {
                       "id":  "aj-конкретный",
@@ -529,7 +560,8 @@
                       "adv":  "конкре́тно",
                       "adv_de":  "konkret",
                       "adv_ex":  "Скажи́ конкре́тно.",
-                      "adv_ex_de":  "Sag es konkret."
+                      "adv_ex_de":  "Sag es konkret.",
+                      "es_freq":  5212
                   },
                   {
                       "id":  "aj-иностранный",
@@ -543,7 +575,8 @@
                       "example_cases":  "иностра́нный язы́к – Akkusativ",
                       "example_de":  "Ich lerne eine Fremdsprache.",
                       "example_en":  "I\u0027m learning a foreign language.",
-                      "example_es":  "Estoy aprendiendo un idioma extranjero."
+                      "example_es":  "Estoy aprendiendo un idioma extranjero.",
+                      "es_freq":  18471
                   },
                   {
                       "id":  "aj-счастливый",
@@ -564,7 +597,8 @@
                       "adv":  "счастли́во",
                       "adv_de":  "glücklich; Mach\u0027s gut!",
                       "adv_ex":  "Счастли́во!",
-                      "adv_ex_de":  "Mach\u0027s gut!"
+                      "adv_ex_de":  "Mach\u0027s gut!",
+                      "es_freq":  147481
                   },
                   {
                       "id":  "aj-левый",
@@ -579,7 +613,8 @@
                       "example_cases":  "ле́вой руко́й – Instrumental",
                       "example_de":  "Er schreibt mit der linken Hand.",
                       "example_en":  "He writes with his left hand.",
-                      "example_es":  "Escribe con la mano izquierda."
+                      "example_es":  "Escribe con la mano izquierda.",
+                      "es_freq":  43449
                   },
                   {
                       "id":  "aj-святой",
@@ -594,7 +629,8 @@
                       "example_cases":  "свято́е ме́сто – Nominativ",
                       "example_de":  "Das ist ein heiliger Ort.",
                       "example_en":  "This is a holy place.",
-                      "example_es":  "Es un lugar santo."
+                      "example_es":  "Es un lugar santo.",
+                      "es_freq":  59305
                   },
                   {
                       "id":  "aj-точный",
@@ -614,7 +650,8 @@
                       "adv":  "то́чно",
                       "adv_de":  "genau",
                       "adv_ex":  "Ты то́чно придёшь?",
-                      "adv_ex_de":  "Kommst du ganz sicher?"
+                      "adv_ex_de":  "Kommst du ganz sicher?",
+                      "es_freq":  32731
                   },
                   {
                       "id":  "aj-частый",
@@ -636,7 +673,8 @@
                       "adv":  "ча́сто",
                       "adv_de":  "oft",
                       "adv_ex":  "Я ча́сто чита́ю.",
-                      "adv_ex_de":  "Ich lese oft."
+                      "adv_ex_de":  "Ich lese oft.",
+                      "es_freq":  2112
                   },
                   {
                       "id":  "aj-значительный",
@@ -653,7 +691,8 @@
                       "adv":  "значи́тельно",
                       "adv_de":  "deutlich, bedeutend",
                       "adv_ex":  "Цены́ значи́тельно вы́росли.",
-                      "adv_ex_de":  "Die Preise sind deutlich gestiegen."
+                      "adv_ex_de":  "Die Preise sind deutlich gestiegen.",
+                      "es_freq":  2191
                   },
                   {
                       "id":  "aj-связанный",
@@ -668,7 +707,8 @@
                       "example_cases":  "свя́занные вопро́сы – Nominativ Plural",
                       "example_de":  "Das sind zusammenhängende Fragen.",
                       "example_en":  "These are related questions.",
-                      "example_es":  "Son preguntas relacionadas."
+                      "example_es":  "Son preguntas relacionadas.",
+                      "es_freq":  11211
                   },
                   {
                       "id":  "aj-уверенный",
@@ -688,7 +728,8 @@
                       "adv":  "уве́ренно",
                       "adv_de":  "sicher, selbstbewusst",
                       "adv_ex":  "Он говори́т уве́ренно.",
-                      "adv_ex_de":  "Er spricht selbstbewusst."
+                      "adv_ex_de":  "Er spricht selbstbewusst.",
+                      "es_freq":  377742
                   },
                   {
                       "id":  "aj-центральный",
@@ -701,7 +742,8 @@
                       "example_cases":  "в центра́льном райо́не – Präpositiv",
                       "example_de":  "Wir wohnen in einem zentralen Viertel.",
                       "example_en":  "We live in a central district.",
-                      "example_es":  "Vivimos en un barrio céntrico."
+                      "example_es":  "Vivimos en un barrio céntrico.",
+                      "es_freq":  19818
                   },
                   {
                       "id":  "aj-тонкий",
@@ -722,7 +764,8 @@
                       "adv":  "то́нко",
                       "adv_de":  "fein, dünn",
                       "adv_ex":  "Наре́жь хлеб то́нко.",
-                      "adv_ex_de":  "Schneide das Brot dünn."
+                      "adv_ex_de":  "Schneide das Brot dünn.",
+                      "es_freq":  8233
                   },
                   {
                       "id":  "aj-будущий",
@@ -737,7 +780,8 @@
                       "example_cases":  "в бу́дущем году́ – Präpositiv · в Росси́ю – Akkusativ",
                       "example_de":  "Nächstes Jahr fahre ich nach Russland.",
                       "example_en":  "Next year I\u0027ll go to Russia.",
-                      "example_es":  "El próximo año iré a Rusia."
+                      "example_es":  "El próximo año iré a Rusia.",
+                      "es_freq":  60234
                   },
                   {
                       "id":  "aj-физический",
@@ -754,7 +798,8 @@
                       "adv":  "физи́чески",
                       "adv_de":  "körperlich",
                       "adv_ex":  "Я физи́чески уста́л.",
-                      "adv_ex_de":  "Ich bin körperlich müde."
+                      "adv_ex_de":  "Ich bin körperlich müde.",
+                      "es_freq":  20321
                   },
                   {
                       "id":  "aj-частный",
@@ -769,7 +814,8 @@
                       "example_cases":  "в ча́стной фи́рме – Präpositiv",
                       "example_de":  "Er arbeitet in einer Privatfirma.",
                       "example_en":  "He works at a private company.",
-                      "example_es":  "Trabaja en una empresa privada."
+                      "example_es":  "Trabaja en una empresa privada.",
+                      "es_freq":  35164
                   },
                   {
                       "id":  "aj-мелкий",
@@ -791,7 +837,8 @@
                       "adv":  "ме́лко",
                       "adv_de":  "fein, klein",
                       "adv_ex":  "Наре́жь лук ме́лко.",
-                      "adv_ex_de":  "Schneide die Zwiebel fein."
+                      "adv_ex_de":  "Schneide die Zwiebel fein.",
+                      "es_freq":  10994
                   },
                   {
                       "id":  "aj-постоянный",
@@ -809,7 +856,8 @@
                       "adv":  "постоя́нно",
                       "adv_de":  "ständig",
                       "adv_ex":  "Он постоя́нно опа́здывает.",
-                      "adv_ex_de":  "Er kommt ständig zu spät."
+                      "adv_ex_de":  "Er kommt ständig zu spät.",
+                      "es_freq":  6086
                   },
                   {
                       "id":  "aj-английский",
@@ -827,7 +875,8 @@
                       "adv":  "по-англи́йски",
                       "adv_de":  "auf Englisch",
                       "adv_ex":  "Он хорошо́ говори́т по-англи́йски.",
-                      "adv_ex_de":  "Er spricht gut Englisch."
+                      "adv_ex_de":  "Er spricht gut Englisch.",
+                      "es_freq":  34468
                   },
                   {
                       "id":  "aj-тихий",
@@ -849,7 +898,8 @@
                       "adv":  "ти́хо",
                       "adv_de":  "leise, still",
                       "adv_ex":  "Говори́ ти́хо.",
-                      "adv_ex_de":  "Sprich leise."
+                      "adv_ex_de":  "Sprich leise.",
+                      "es_freq":  79377
                   }
               ]
 }

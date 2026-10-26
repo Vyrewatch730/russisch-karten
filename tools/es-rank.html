@@ -1,0 +1,121 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Spanisch-Häufigkeit</title>
+<!--
+  Berechnet für jede Karte mit Spanisch die Häufigkeit im Untertitel-Korpus (tools/es-frequency.txt,
+  FrequencyWords von Hermit Dave, CC BY-SA 4.0) – summiert über alle Formen (Verb: alle Zeitformen,
+  Nomen: Singular + Plural, Adjektiv: 4 Formen).
+  Ausgabe 1 (#rank): Karten-ID TAB Häufigkeit → decks-src/es-rang.tsv, danach tools/apply-es-rank.ps1
+  Ausgabe 2 (#missing): häufige spanische Wörter, die auf keiner Karte vorkommen
+  Aufruf: lokaler Server, dann tools/es-rank.html im (Headless-)Browser öffnen
+-->
+<pre id="rank"></pre>
+<pre id="missing"></pre>
+<iframe id="app" src="../index.html" hidden></iframe>
+<script>
+document.getElementById('app').onload = async e => {
+  const w = e.target.contentWindow;
+  const freq = new Map();
+  for (const line of (await (await fetch('es-frequency.txt', { cache: 'no-cache' })).text()).split('\n')) {
+    const [word, n] = line.trim().split(' ');
+    if (word) freq.set(word, +n);
+  }
+  const f = s => freq.get(s) || 0;
+  const SKIP = new Set(['me', 'te', 'se', 'nos', 'le', 'les', 'lo', 'la', 'los', 'las', 'el', 'un', 'una', 'de', 'del', 'a', 'al', 'en', 'y', 'o', 'no']);
+  const clean = s => s.toLowerCase().replace(/\(.*?\)/g, '').replace(/[¿?¡!.,;:]/g, ' ').trim();
+  const words = s => clean(s).split(/\s+/).filter(Boolean);
+  // Häufigkeit eines Ausdrucks: ein Wort direkt, mehrere Wörter → seltenstes Inhaltswort
+  const phraseFreq = s => {
+    const ws = words(s).filter(x => !SKIP.has(x));
+    return ws.length ? Math.min(...ws.map(f)) : f(words(s)[0] || '');
+  };
+  const verbForms = v => {
+    const out = new Set([words(v)[0]]);
+    const c = w.esConjugate(v), m = w.esMoreTenses(v);
+    const add = list => (list || []).forEach(x => { const t = words(x).filter(y => !SKIP.has(y))[0]; if (t) out.add(t); });
+    if (c) { add(c.pres); add(c.past); }
+    if (m) { add(m.imperf); add(m.futs); add(m.cond); add(m.subj); add([m.ger]); add([m.part]); add(m.imp); }
+    return out;
+  };
+  const index = await (await fetch('../decks/index.json', { cache: 'no-cache' })).json();
+  const decks = [];
+  for (const entry of index) {
+    if (entry.id.startsWith('praepositionen-') || entry.id.startsWith('grundwortschatz-')) continue;
+    decks.push(await (await fetch('../decks/' + entry.file, { cache: 'no-cache' })).json());
+  }
+  // Wörter, die gleichzeitig häufige Funktionswörter sind (para = Präposition und Form von parar …)
+  const FUNC = new Set('para como sobre entre bajo nada casa cara bien mal este esta esto ese esa eso uno una todo algo más menos solo sólo sí si que qué mi tu su vino tal unos unas estos estas esos esas todos todas'.split(' '));
+  // Verbform gehört dem Verb mit dem häufigsten Infinitiv (creo: creer statt crear, fue: ser und ir)
+  const verbList = new Set();
+  for (const d of decks) for (const c of d.cards) if (c.es && c.type === 'verbpair') [c.es_verb || w.esMainVerb(c.es), c.es2_verb].filter(Boolean).forEach(v => verbList.add(v));
+  const formsOf = new Map(), owner = new Map();
+  for (const v of verbList) {
+    const forms = verbForms(v);
+    formsOf.set(v, forms);
+    const inf = words(v)[0];
+    for (const x of forms) if (!owner.has(x) || f(inf) > f(words(owner.get(x))[0])) owner.set(x, v);
+  }
+  const allVerbForms = new Set([...owner.keys()]);
+  // Verbformen, die auch ein Nomen sind (cosa = Subjuntivo von coser), zählen nicht fürs Verb
+  const nounForms = new Set();
+  for (const d of decks) for (const c of d.cards) if (c.es && c.type === 'nounfull') w.esNounParts(c.es).forEach(p => [p.text, p.pl || ''].forEach(t => words(t).filter(x => !SKIP.has(x)).forEach(x => nounForms.add(x))));
+  const covered = new Set();
+  const rank = [];
+  for (const deck of decks) {
+    for (const c of deck.cards) {
+      if (!c.es) continue;
+      words(c.es).forEach(x => covered.add(x));
+      let score = 0;
+      const parts = c.es.split(/[;,]/).map(s => s.trim()).filter(Boolean);
+      if (c.type === 'verbpair') {
+        const verbs = [c.es_verb || w.esMainVerb(c.es), c.es2_verb].filter(Boolean);
+        verbs.forEach(v => {
+          const forms = formsOf.get(v) || verbForms(v);
+          forms.forEach(x => covered.add(x));
+          let s = [...forms].filter(x => !FUNC.has(x) && owner.get(x) === v && (x === words(v)[0] || !nounForms.has(x))).reduce((sum, x) => sum + f(x), 0);
+          if (/se$/.test(words(v)[0])) s = Math.round(s / 5);   // irse, verse …: Formen ohne Pronomen zählen sonst ganz ir, ver …
+          // „estar sentado“, „tener miedo“: das seltenere Wort bestimmt die Häufigkeit (sonst zählt ganz estar/tener)
+          const rest = words(v.split(':')[0]).slice(1).filter(x => !SKIP.has(x) && x !== 'que');
+          if (rest.length) s = Math.min(s, ...rest.map(f));
+          score += s;
+        });
+        parts.forEach(p => verbForms(w.esMainVerb(p)).forEach(x => covered.add(x)));
+      } else if (c.type === 'nounfull') {
+        w.esNounParts(c.es).forEach((p, i) => {
+          const noun = clean(p.text).replace(/^(el|la|los|las)\s+/, '');
+          const pl = p.pl ? clean(p.pl).replace(/^(los|las)\s+/, '') : '';
+          [noun, pl].filter(Boolean).forEach(x => words(x).forEach(y => covered.add(y)));
+          if (i > 0) return;
+          // el bien, el este, el ser, el estado: Singular ist auch Funktionswort oder Verbform → Plural zählt
+          const ambiguous = !/ /.test(noun) && (FUNC.has(noun) || allVerbForms.has(noun));
+          score = ambiguous ? (pl && !FUNC.has(pl) ? phraseFreq(pl) * 3 : Math.round(phraseFreq(noun) / 20)) : phraseFreq(noun) + (pl ? phraseFreq(pl) : 0);
+        });
+      } else if (c.type === 'adjfull') {
+        const a = w.esAdjForms(c.es);
+        if (a) { [a.m, a.f, a.mpl, a.fpl].forEach(x => covered.add(x)); score = [...new Set([a.m, a.f, a.mpl, a.fpl])].reduce((s, x) => s + f(x), 0); }
+        else score = Math.round(phraseFreq(parts[0] || '') / 20);   // „de aquí“, „de noche“: Ausdrücke statt echter Adjektive
+        if (a && c.adv) covered.add(a.f + 'mente');
+      } else {
+        score = phraseFreq(parts[0] || '');
+      }
+      const main = c.type === 'verbpair' ? words(c.es_verb || w.esMainVerb(c.es))[0] : clean(parts[0] || '').replace(/^(el|la|los|las)\s+/, '');
+      rank.push([c.id, score, main]);
+    }
+  }
+  // Mehrere Karten mit demselben spanischen Hauptwort (z. B. идти́, ходи́ть, е́хать = ir):
+  // nur die erste behält die volle Häufigkeit, die anderen rücken nach hinten
+  const seenMain = new Set();
+  const out = rank.map(([id, score, main]) => {
+    const dup = main && seenMain.has(main);
+    if (main) seenMain.add(main);
+    return `${id}\t${dup ? Math.round(score / 20) : score}`;
+  });
+  document.getElementById('rank').textContent = out.join('\n');
+  const missing = [];
+  for (const [word, n] of freq) {
+    if (missing.length >= 2500) break;
+    if (!covered.has(word) && /^[a-záéíóúüñ]+$/.test(word)) missing.push(`${word}\t${n}`);
+  }
+  document.getElementById('missing').textContent = missing.join('\n');
+};
+</script>

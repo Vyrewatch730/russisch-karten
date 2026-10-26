@@ -23,7 +23,8 @@
                       "adv":  "траги́чески",
                       "adv_de":  "tragisch",
                       "adv_ex":  "Он траги́чески поги́б.",
-                      "adv_ex_de":  "Er kam tragisch ums Leben."
+                      "adv_ex_de":  "Er kam tragisch ums Leben.",
+                      "es_freq":  5561
                   },
                   {
                       "id":  "aj-типичный",
@@ -41,7 +42,8 @@
                       "adv":  "типи́чно",
                       "adv_de":  "typisch",
                       "adv_ex":  "Э́то типи́чно для него́.",
-                      "adv_ex_de":  "Das ist typisch für ihn."
+                      "adv_ex_de":  "Das ist typisch für ihn.",
+                      "es_freq":  9741
                   },
                   {
                       "id":  "aj-революционный",
@@ -54,7 +56,8 @@
                       "example_cases":  "революцио́нная иде́я – Nominativ",
                       "example_de":  "Das ist eine revolutionäre Idee.",
                       "example_en":  "It\u0027s a revolutionary idea.",
-                      "example_es":  "Es una idea revolucionaria."
+                      "example_es":  "Es una idea revolucionaria.",
+                      "es_freq":  3892
                   },
                   {
                       "id":  "aj-оригинальный",
@@ -71,7 +74,8 @@
                       "adv":  "оригина́льно",
                       "adv_de":  "originell",
                       "adv_ex":  "Э́то оригина́льно.",
-                      "adv_ex_de":  "Das ist originell."
+                      "adv_ex_de":  "Das ist originell.",
+                      "es_freq":  18586
                   },
                   {
                       "id":  "aj-сексуальный",
@@ -84,7 +88,8 @@
                       "example_cases":  "у неё – Genitiv · сексуа́льный го́лос – Nominativ",
                       "example_de":  "Sie hat eine sexy Stimme.",
                       "example_en":  "She has a sexy voice.",
-                      "example_es":  "Tiene una voz sexy."
+                      "example_es":  "Tiene una voz sexy.",
+                      "es_freq":  16674
                   },
                   {
                       "id":  "aj-таможенный",
@@ -97,7 +102,8 @@
                       "example_cases":  "тамо́женный контро́ль – Akkusativ",
                       "example_de":  "Wir gehen durch die Zollkontrolle.",
                       "example_en":  "We\u0027re going through customs.",
-                      "example_es":  "Pasamos el control aduanero."
+                      "example_es":  "Pasamos el control aduanero.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-таинственный",
@@ -114,7 +120,8 @@
                       "adv":  "таи́нственно",
                       "adv_de":  "geheimnisvoll",
                       "adv_ex":  "Она́ таи́нственно улыбну́лась.",
-                      "adv_ex_de":  "Sie lächelte geheimnisvoll."
+                      "adv_ex_de":  "Sie lächelte geheimnisvoll.",
+                      "es_freq":  11084
                   },
                   {
                       "id":  "aj-принципиальный",
@@ -132,7 +139,8 @@
                       "adv":  "принципиа́льно",
                       "adv_de":  "grundsätzlich",
                       "adv_ex":  "Я принципиа́льно не курю́.",
-                      "adv_ex_de":  "Ich rauche grundsätzlich nicht."
+                      "adv_ex_de":  "Ich rauche grundsätzlich nicht.",
+                      "es_freq":  395
                   },
                   {
                       "id":  "aj-чудесный",
@@ -150,7 +158,8 @@
                       "adv":  "чуде́сно",
                       "adv_de":  "wunderbar",
                       "adv_ex":  "Чуде́сно!",
-                      "adv_ex_de":  "Wunderbar!"
+                      "adv_ex_de":  "Wunderbar!",
+                      "es_freq":  2963
                   },
                   {
                       "id":  "aj-удачный",
@@ -170,7 +179,8 @@
                       "adv":  "уда́чно",
                       "adv_de":  "gelungen, erfolgreich",
                       "adv_ex":  "Всё прошло́ уда́чно.",
-                      "adv_ex_de":  "Alles ist gut gelaufen."
+                      "adv_ex_de":  "Alles ist gut gelaufen.",
+                      "es_freq":  303
                   },
                   {
                       "id":  "aj-противный",
@@ -188,7 +198,8 @@
                       "adv":  "проти́вно",
                       "adv_de":  "eklig",
                       "adv_ex":  "Мне проти́вно.",
-                      "adv_ex_de":  "Mir ekelt davor."
+                      "adv_ex_de":  "Mir ekelt davor.",
+                      "es_freq":  17986
                   },
                   {
                       "id":  "aj-правительственный",
@@ -201,7 +212,8 @@
                       "example_cases":  "прави́тельственное реше́ние – Nominativ",
                       "example_de":  "Das ist eine Regierungsentscheidung.",
                       "example_en":  "It\u0027s a government decision.",
-                      "example_es":  "Es una decisión gubernamental."
+                      "example_es":  "Es una decisión gubernamental.",
+                      "es_freq":  1638
                   },
                   {
                       "id":  "aj-почетный",
@@ -214,7 +226,8 @@
                       "example_cases":  "наш почётный гость – Nominativ",
                       "example_de":  "Er ist unser Ehrengast.",
                       "example_en":  "He\u0027s our guest of honor.",
-                      "example_es":  "Es nuestro invitado de honor."
+                      "example_es":  "Es nuestro invitado de honor.",
+                      "es_freq":  1800
                   },
                   {
                       "id":  "aj-начальный",
@@ -228,7 +241,8 @@
                       "example_cases":  "мой сын – Nominativ · в нача́льную шко́лу – Akkusativ",
                       "example_de":  "Mein Sohn geht in die Grundschule.",
                       "example_en":  "My son goes to primary school.",
-                      "example_es":  "Mi hijo va a la escuela primaria."
+                      "example_es":  "Mi hijo va a la escuela primaria.",
+                      "es_freq":  333
                   },
                   {
                       "id":  "aj-книжный",
@@ -241,7 +255,8 @@
                       "example_cases":  "в кни́жный магази́н – Akkusativ (wohin?)",
                       "example_de":  "Ich gehe in eine Buchhandlung.",
                       "example_en":  "I\u0027m going to a bookstore.",
-                      "example_es":  "Voy a una librería."
+                      "example_es":  "Voy a una librería.",
+                      "es_freq":  1430
                   },
                   {
                       "id":  "aj-вредный",
@@ -262,7 +277,8 @@
                       "adv":  "вре́дно",
                       "adv_de":  "schädlich",
                       "adv_ex":  "Кури́ть вре́дно.",
-                      "adv_ex_de":  "Rauchen ist schädlich."
+                      "adv_ex_de":  "Rauchen ist schädlich.",
+                      "es_freq":  653
                   },
                   {
                       "id":  "aj-перспективный",
@@ -275,7 +291,8 @@
                       "example_cases":  "перспекти́вный прое́кт – Nominativ",
                       "example_de":  "Das ist ein vielversprechendes Projekt.",
                       "example_en":  "It\u0027s a promising project.",
-                      "example_es":  "Es un proyecto prometedor."
+                      "example_es":  "Es un proyecto prometedor.",
+                      "es_freq":  1851
                   },
                   {
                       "id":  "aj-кожаный",
@@ -289,7 +306,8 @@
                       "example_cases":  "у него́ – Genitiv · ко́жаная ку́ртка – Nominativ",
                       "example_de":  "Er hat eine Lederjacke.",
                       "example_en":  "He has a leather jacket.",
-                      "example_es":  "Tiene una chaqueta de cuero."
+                      "example_es":  "Tiene una chaqueta de cuero.",
+                      "es_freq":  267
                   },
                   {
                       "id":  "aj-дурной",
@@ -307,7 +325,8 @@
                       "adv":  "ду́рно",
                       "adv_de":  "schlecht, übel",
                       "adv_ex":  "Мне ду́рно.",
-                      "adv_ex_de":  "Mir ist übel."
+                      "adv_ex_de":  "Mir ist übel.",
+                      "es_freq":  9465
                   },
                   {
                       "id":  "aj-воинский",
@@ -320,7 +339,8 @@
                       "example_cases":  "в во́инской ча́сти – Präpositiv",
                       "example_de":  "Er dient in einer Militäreinheit.",
                       "example_en":  "He serves in a military unit.",
-                      "example_es":  "Sirve en una unidad militar."
+                      "example_es":  "Sirve en una unidad militar.",
+                      "es_freq":  1284
                   },
                   {
                       "id":  "aj-экспериментальный",
@@ -337,7 +357,8 @@
                       "adv":  "эксперимента́льно",
                       "adv_de":  "experimentell",
                       "adv_ex":  "Э́то эксперимента́льно прове́рено.",
-                      "adv_ex_de":  "Das ist experimentell geprüft."
+                      "adv_ex_de":  "Das ist experimentell geprüft.",
+                      "es_freq":  1949
                   },
                   {
                       "id":  "aj-критический",
@@ -354,7 +375,8 @@
                       "adv":  "крити́чески",
                       "adv_de":  "kritisch",
                       "adv_ex":  "Он крити́чески смо́трит на мир.",
-                      "adv_ex_de":  "Er sieht die Welt kritisch."
+                      "adv_ex_de":  "Er sieht die Welt kritisch.",
+                      "es_freq":  12809
                   },
                   {
                       "id":  "aj-выгодный",
@@ -373,7 +395,8 @@
                       "adv":  "вы́годно",
                       "adv_de":  "günstig, lohnend",
                       "adv_ex":  "Э́то вы́годно.",
-                      "adv_ex_de":  "Das lohnt sich."
+                      "adv_ex_de":  "Das lohnt sich.",
+                      "es_freq":  251
                   },
                   {
                       "id":  "aj-ближний",
@@ -388,7 +411,8 @@
                       "example_cases":  "в бли́жней дере́вне – Präpositiv",
                       "example_de":  "Er wohnt im Nachbardorf.",
                       "example_en":  "He lives in the nearby village.",
-                      "example_es":  "Vive en el pueblo cercano."
+                      "example_es":  "Vive en el pueblo cercano.",
+                      "es_freq":  976
                   },
                   {
                       "id":  "aj-торжественный",
@@ -405,7 +429,8 @@
                       "adv":  "торже́ственно",
                       "adv_de":  "feierlich",
                       "adv_ex":  "Мы торже́ственно отме́тили юбиле́й.",
-                      "adv_ex_de":  "Wir haben das Jubiläum feierlich begangen."
+                      "adv_ex_de":  "Wir haben das Jubiläum feierlich begangen.",
+                      "es_freq":  1019
                   },
                   {
                       "id":  "aj-неплохой",
@@ -423,7 +448,8 @@
                       "adv":  "непло́хо",
                       "adv_de":  "nicht schlecht, ganz gut",
                       "adv_ex":  "Непло́хо!",
-                      "adv_ex_de":  "Nicht schlecht!"
+                      "adv_ex_de":  "Nicht schlecht!",
+                      "es_freq":  11001
                   },
                   {
                       "id":  "aj-комплексный",
@@ -437,7 +463,8 @@
                       "example_cases":  "компле́ксный обе́д – Akkusativ",
                       "example_de":  "Wir haben das Mittagsmenü bestellt.",
                       "example_en":  "We ordered the set lunch.",
-                      "example_es":  "Pedimos el menú del día."
+                      "example_es":  "Pedimos el menú del día.",
+                      "es_freq":  925
                   },
                   {
                       "id":  "aj-грустный",
@@ -458,7 +485,8 @@
                       "adv":  "гру́стно",
                       "adv_de":  "traurig",
                       "adv_ex":  "Мне гру́стно.",
-                      "adv_ex_de":  "Ich bin traurig."
+                      "adv_ex_de":  "Ich bin traurig.",
+                      "es_freq":  2049
                   },
                   {
                       "id":  "aj-тогдашний",
@@ -472,7 +500,8 @@
                       "example_cases":  "тогда́шний дире́ктор – Nominativ · стро́гим – Instrumental",
                       "example_de":  "Der damalige Direktor war sehr streng.",
                       "example_en":  "The director at that time was very strict.",
-                      "example_es":  "El director de entonces era muy estricto."
+                      "example_es":  "El director de entonces era muy estricto.",
+                      "es_freq":  30497
                   },
                   {
                       "id":  "aj-посторонний",
@@ -486,7 +515,8 @@
                       "example_cases":  "посторо́нним – Dativ Plural · вход – Nominativ",
                       "example_de":  "Zutritt für Unbefugte verboten.",
                       "example_en":  "No unauthorized entry.",
-                      "example_es":  "Prohibida la entrada a personas ajenas."
+                      "example_es":  "Prohibida la entrada a personas ajenas.",
+                      "es_freq":  128
                   },
                   {
                       "id":  "aj-жалкий",
@@ -505,7 +535,8 @@
                       "adv":  "жа́лко",
                       "adv_de":  "schade",
                       "adv_ex":  "Жа́лко, что ты не пришёл.",
-                      "adv_ex_de":  "Schade, dass du nicht gekommen bist."
+                      "adv_ex_de":  "Schade, dass du nicht gekommen bist.",
+                      "es_freq":  3412
                   },
                   {
                       "id":  "aj-ледяной",
@@ -518,7 +549,8 @@
                       "example_cases":  "вода́ – Nominativ · в о́зере – Präpositiv · ледяна́я – Nominativ",
                       "example_de":  "Das Wasser im See ist eiskalt.",
                       "example_en":  "The water in the lake is ice-cold.",
-                      "example_es":  "El agua del lago está helada."
+                      "example_es":  "El agua del lago está helada.",
+                      "es_freq":  20875
                   },
                   {
                       "id":  "aj-структурный",
@@ -531,7 +563,8 @@
                       "example_cases":  "структу́рная пробле́ма – Nominativ",
                       "example_de":  "Das ist ein strukturelles Problem.",
                       "example_en":  "It\u0027s a structural problem.",
-                      "example_es":  "Es un problema estructural."
+                      "example_es":  "Es un problema estructural.",
+                      "es_freq":  769
                   },
                   {
                       "id":  "aj-могучий",
@@ -545,7 +578,8 @@
                       "example_cases":  "могу́чий дуб – Nominativ",
                       "example_de":  "Hier wächst eine mächtige Eiche.",
                       "example_en":  "A mighty oak grows here.",
-                      "example_es":  "Aquí crece un roble poderoso."
+                      "example_es":  "Aquí crece un roble poderoso.",
+                      "es_freq":  23530
                   },
                   {
                       "id":  "aj-громадный",
@@ -558,7 +592,8 @@
                       "example_cases":  "у них – Genitiv · грома́дный дом – Nominativ",
                       "example_de":  "Sie haben ein riesiges Haus.",
                       "example_en":  "They have a huge house.",
-                      "example_es":  "Tienen una casa enorme."
+                      "example_es":  "Tienen una casa enorme.",
+                      "es_freq":  1472
                   },
                   {
                       "id":  "aj-сельскохозяйственный",
@@ -571,7 +606,8 @@
                       "example_cases":  "сельскохозя́йственная те́хника – Nominativ",
                       "example_de":  "Das sind Landmaschinen.",
                       "example_en":  "This is agricultural machinery.",
-                      "example_es":  "Es maquinaria agrícola."
+                      "example_es":  "Es maquinaria agrícola.",
+                      "es_freq":  1101
                   },
                   {
                       "id":  "aj-славный",
@@ -588,7 +624,8 @@
                       "adv":  "сла́вно",
                       "adv_de":  "schön, prima",
                       "adv_ex":  "Мы сла́вно погуля́ли.",
-                      "adv_ex_de":  "Wir sind schön spazieren gegangen."
+                      "adv_ex_de":  "Wir sind schön spazieren gegangen.",
+                      "es_freq":  7665
                   },
                   {
                       "id":  "aj-любопытный",
@@ -607,7 +644,8 @@
                       "adv":  "любопы́тно",
                       "adv_de":  "neugierig, interessant",
                       "adv_ex":  "Мне любопы́тно.",
-                      "adv_ex_de":  "Ich bin neugierig."
+                      "adv_ex_de":  "Ich bin neugierig.",
+                      "es_freq":  13804
                   },
                   {
                       "id":  "aj-кредитный",
@@ -620,7 +658,8 @@
                       "example_cases":  "у меня́ – Genitiv · креди́тная ка́рта – Nominativ",
                       "example_de":  "Ich habe eine Kreditkarte.",
                       "example_en":  "I have a credit card.",
-                      "example_es":  "Tengo una tarjeta de crédito."
+                      "example_es":  "Tengo una tarjeta de crédito.",
+                      "es_freq":  783
                   },
                   {
                       "id":  "aj-британский",
@@ -633,7 +672,8 @@
                       "example_cases":  "с брита́нским акце́нтом – Instrumental",
                       "example_de":  "Er spricht mit britischem Akzent.",
                       "example_en":  "He speaks with a British accent.",
-                      "example_es":  "Habla con acento británico."
+                      "example_es":  "Habla con acento británico.",
+                      "es_freq":  14606
                   },
                   {
                       "id":  "aj-стандартный",
@@ -646,7 +686,8 @@
                       "example_cases":  "станда́ртный разме́р – Nominativ",
                       "example_de":  "Das ist eine Standardgröße.",
                       "example_en":  "It\u0027s a standard size.",
-                      "example_es":  "Es una talla estándar."
+                      "example_es":  "Es una talla estándar.",
+                      "es_freq":  4669
                   },
                   {
                       "id":  "aj-районный",
@@ -659,7 +700,8 @@
                       "example_cases":  "в райо́нной больни́це – Präpositiv",
                       "example_de":  "Sie liegt im Bezirkskrankenhaus.",
                       "example_en":  "She\u0027s in the district hospital.",
-                      "example_es":  "Está en el hospital del distrito."
+                      "example_es":  "Está en el hospital del distrito.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-оптимальный",
@@ -672,7 +714,8 @@
                       "example_cases":  "оптима́льный вариа́нт – Nominativ",
                       "example_de":  "Das ist die optimale Variante.",
                       "example_en":  "It\u0027s the best option.",
-                      "example_es":  "Es la opción óptima."
+                      "example_es":  "Es la opción óptima.",
+                      "es_freq":  913
                   },
                   {
                       "id":  "aj-немалый",
@@ -689,7 +732,8 @@
                       "adv":  "нема́ло",
                       "adv_de":  "nicht wenig, viel",
                       "adv_ex":  "Он нема́ло сде́лал.",
-                      "adv_ex_de":  "Er hat viel getan."
+                      "adv_ex_de":  "Er hat viel getan.",
+                      "es_freq":  110
                   },
                   {
                       "id":  "aj-плоский",
@@ -704,7 +748,8 @@
                       "example_cases":  "у нас – Genitiv · пло́ский телеви́зор – Nominativ",
                       "example_de":  "Wir haben einen Flachbildfernseher.",
                       "example_en":  "We have a flat-screen TV.",
-                      "example_es":  "Tenemos un televisor plano."
+                      "example_es":  "Tenemos un televisor plano.",
+                      "es_freq":  682
                   },
                   {
                       "id":  "aj-негативный",
@@ -722,7 +767,8 @@
                       "adv":  "негати́вно",
                       "adv_de":  "negativ",
                       "adv_ex":  "Он негати́вно отно́сится к э́тому.",
-                      "adv_ex_de":  "Er sieht das negativ."
+                      "adv_ex_de":  "Er sieht das negativ.",
+                      "es_freq":  705
                   },
                   {
                       "id":  "aj-натуральный",
@@ -740,7 +786,8 @@
                       "adv":  "натура́льно",
                       "adv_de":  "natürlich, echt",
                       "adv_ex":  "Э́то вы́глядит натура́льно.",
-                      "adv_ex_de":  "Das sieht echt aus."
+                      "adv_ex_de":  "Das sieht echt aus.",
+                      "es_freq":  1112
                   },
                   {
                       "id":  "aj-бессмысленный",
@@ -757,7 +804,8 @@
                       "adv":  "бессмы́сленно",
                       "adv_de":  "sinnlos",
                       "adv_ex":  "Спо́рить бессмы́сленно.",
-                      "adv_ex_de":  "Streiten ist sinnlos."
+                      "adv_ex_de":  "Streiten ist sinnlos.",
+                      "es_freq":  3984
                   },
                   {
                       "id":  "aj-сибирский",
@@ -770,7 +818,8 @@
                       "example_cases":  "сиби́рские пельме́ни – Akkusativ Plural",
                       "example_de":  "Ich mag sibirische Pelmeni.",
                       "example_en":  "I love Siberian dumplings.",
-                      "example_es":  "Me encantan los pelmeni siberianos."
+                      "example_es":  "Me encantan los pelmeni siberianos.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-дорожный",
@@ -783,7 +832,8 @@
                       "example_cases":  "доро́жную су́мку – Akkusativ",
                       "example_de":  "Vergiss die Reisetasche nicht.",
                       "example_en":  "Don\u0027t forget the travel bag.",
-                      "example_es":  "No olvides el bolso de viaje."
+                      "example_es":  "No olvides el bolso de viaje.",
+                      "es_freq":  3133
                   }
               ]
 }

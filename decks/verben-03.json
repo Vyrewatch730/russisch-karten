@@ -30,7 +30,8 @@
                       "ipf_imp_ex":  "Звони́ мне ве́чером!",
                       "ipf_imp_ex_de":  "Ruf mich abends an!",
                       "pf_imp_ex":  "Позвони́ ма́ме!",
-                      "pf_imp_ex_de":  "Ruf Mama an!"
+                      "pf_imp_ex_de":  "Ruf Mama an!",
+                      "es_freq":  28222
                   },
                   {
                       "id":  "vb-удаваться",
@@ -53,7 +54,8 @@
                       "note":  "Unpersönlich mit Dativ: мне удало́сь = es ist mir gelungen.",
                       "note_es":  "lograr + Infinitiv = schaffen: Logré terminar. Unpersönlich: me salió bien = es ist mir gelungen.",
                       "example_cases":  "мне – Dativ · биле́ты – Akkusativ",
-                      "government":  "wem? – Dativ + Infinitiv"
+                      "government":  "wem? – Dativ + Infinitiv",
+                      "es_freq":  56512
                   },
                   {
                       "id":  "vb-требовать",
@@ -77,7 +79,8 @@
                       "ipf_imp_ex":  "Не тре́буй сли́шком мно́го!",
                       "ipf_imp_ex_de":  "Verlange nicht zu viel!",
                       "pf_imp_ex":  "Потре́буй чек!",
-                      "pf_imp_ex_de":  "Verlange den Kassenbon!"
+                      "pf_imp_ex_de":  "Verlange den Kassenbon!",
+                      "es_freq":  8674
                   },
                   {
                       "id":  "vb-умирать",
@@ -102,7 +105,8 @@
                       "ipf_imp_ex":  "Не умира́й!",
                       "ipf_imp_ex_de":  "Stirb nicht!",
                       "pf_imp_ex":  "Умри́, но сде́лай!",
-                      "pf_imp_ex_de":  "Mach es, koste es, was es wolle!"
+                      "pf_imp_ex_de":  "Mach es, koste es, was es wolle!",
+                      "es_freq":  887
                   },
                   {
                       "id":  "vb-вставать",
@@ -127,7 +131,8 @@
                       "ipf_imp_ex":  "Встава́й, уже́ семь часо́в!",
                       "ipf_imp_ex_de":  "Steh auf, es ist schon sieben Uhr!",
                       "pf_imp_ex":  "Встань, пожа́луйста!",
-                      "pf_imp_ex_de":  "Steh bitte auf!"
+                      "pf_imp_ex_de":  "Steh bitte auf!",
+                      "es_freq":  5098
                   },
                   {
                       "id":  "vb-хватать",
@@ -155,7 +160,8 @@
                       "ipf_imp_ex":  "Не хвата́й ко́шку за хвост!",
                       "ipf_imp_ex_de":  "Pack die Katze nicht am Schwanz!",
                       "pf_imp_ex":  "Хвати́ его́ за ру́ку!",
-                      "pf_imp_ex_de":  "Pack ihn an der Hand!"
+                      "pf_imp_ex_de":  "Pack ihn an der Hand!",
+                      "es_freq":  66391
                   },
                   {
                       "id":  "vb-успевать",
@@ -180,7 +186,8 @@
                       "ipf_imp_ex":  "Успева́й на после́дний авто́бус!",
                       "ipf_imp_ex_de":  "Erwisch immer den letzten Bus!",
                       "pf_imp_ex":  "Успе́й на по́езд!",
-                      "pf_imp_ex_de":  "Schaff es noch zum Zug!"
+                      "pf_imp_ex_de":  "Schaff es noch zum Zug!",
+                      "es_freq":  35349
                   },
                   {
                       "id":  "vb-спать",
@@ -204,7 +211,8 @@
                       "ipf_imp_ex":  "Спи споко́йно!",
                       "ipf_imp_ex_de":  "Schlaf gut!",
                       "pf_imp_ex":  "Поспи́ немно́го!",
-                      "pf_imp_ex_de":  "Schlaf ein bisschen!"
+                      "pf_imp_ex_de":  "Schlaf ein bisschen!",
+                      "es_freq":  165602
                   },
                   {
                       "id":  "vb-случаться",
@@ -227,7 +235,8 @@
                       "note":  "Meist in der 3. Person: случи́лось.",
                       "note_es":  "pasar und suceder = passieren. Alltag: ¿Qué pasó? suceder ist eher schriftlich.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "mit wem? – с + Instrumental"
+                      "government":  "mit wem? – с + Instrumental",
+                      "es_freq":  43684
                   },
                   {
                       "id":  "vb-поднимать",
@@ -252,7 +261,8 @@
                       "ipf_imp_ex":  "Не поднима́й тяжёлое!",
                       "ipf_imp_ex_de":  "Heb nichts Schweres!",
                       "pf_imp_ex":  "Подними́ ру́ку!",
-                      "pf_imp_ex_de":  "Heb die Hand!"
+                      "pf_imp_ex_de":  "Heb die Hand!",
+                      "es_freq":  56419
                   },
                   {
                       "id":  "vb-улыбаться",
@@ -276,7 +286,8 @@
                       "ipf_imp_ex":  "Улыба́йся ча́ще!",
                       "ipf_imp_ex_de":  "Lächle öfter!",
                       "pf_imp_ex":  "Улыбни́сь!",
-                      "pf_imp_ex_de":  "Lächle!"
+                      "pf_imp_ex_de":  "Lächle!",
+                      "es_freq":  22121
                   },
                   {
                       "id":  "vb-занимать",
@@ -302,7 +313,8 @@
                       "ipf_imp_ex":  "Не занима́й де́ньги у дру́зей!",
                       "ipf_imp_ex_de":  "Leih dir kein Geld von Freunden!",
                       "pf_imp_ex":  "Займи́ мне ме́сто!",
-                      "pf_imp_ex_de":  "Halt mir einen Platz frei!"
+                      "pf_imp_ex_de":  "Halt mir einen Platz frei!",
+                      "es_freq":  61593
                   },
                   {
                       "id":  "vb-кричать",
@@ -328,7 +340,8 @@
                       "ipf_imp_ex":  "Не кричи́!",
                       "ipf_imp_ex_de":  "Schrei nicht!",
                       "pf_imp_ex":  "Кри́кни гро́мче!",
-                      "pf_imp_ex_de":  "Ruf lauter!"
+                      "pf_imp_ex_de":  "Ruf lauter!",
+                      "es_freq":  48879
                   },
                   {
                       "id":  "vb-бросать",
@@ -354,7 +367,8 @@
                       "ipf_imp_ex":  "Не броса́й му́сор на у́лице!",
                       "ipf_imp_ex_de":  "Wirf keinen Müll auf die Straße!",
                       "pf_imp_ex":  "Брось мне мяч!",
-                      "pf_imp_ex_de":  "Wirf mir den Ball zu!"
+                      "pf_imp_ex_de":  "Wirf mir den Ball zu!",
+                      "es_freq":  746892
                   },
                   {
                       "id":  "vb-искать",
@@ -380,7 +394,8 @@
                       "ipf_imp_ex":  "Ищи́ лу́чше!",
                       "ipf_imp_ex_de":  "Such besser!",
                       "pf_imp_ex":  "Поищи́ в интерне́те!",
-                      "pf_imp_ex_de":  "Such mal im Internet!"
+                      "pf_imp_ex_de":  "Such mal im Internet!",
+                      "es_freq":  281826
                   },
                   {
                       "id":  "vb-стараться",
@@ -405,7 +420,8 @@
                       "ipf_imp_ex":  "Стара́йся говори́ть по-ру́сски!",
                       "ipf_imp_ex_de":  "Bemühe dich, Russisch zu sprechen!",
                       "pf_imp_ex":  "Постара́йся не опозда́ть!",
-                      "pf_imp_ex_de":  "Versuch, nicht zu spät zu kommen!"
+                      "pf_imp_ex_de":  "Versuch, nicht zu spät zu kommen!",
+                      "es_freq":  13541
                   },
                   {
                       "id":  "vb-определять",
@@ -430,7 +446,8 @@
                       "ipf_imp_ex":  "Определя́й цель ка́ждый день!",
                       "ipf_imp_ex_de":  "Setz dir jeden Tag ein Ziel!",
                       "pf_imp_ex":  "Определи́ вре́мя встре́чи!",
-                      "pf_imp_ex_de":  "Leg die Uhrzeit des Treffens fest!"
+                      "pf_imp_ex_de":  "Leg die Uhrzeit des Treffens fest!",
+                      "es_freq":  9111
                   },
                   {
                       "id":  "vb-относиться",
@@ -454,7 +471,8 @@
                       "ipf_imp_ex":  "Относи́сь к лю́дям с уваже́нием!",
                       "ipf_imp_ex_de":  "Behandle Menschen mit Respekt!",
                       "pf_imp_ex":  "Отнеси́сь к э́тому серьёзно!",
-                      "pf_imp_ex_de":  "Nimm das ernst!"
+                      "pf_imp_ex_de":  "Nimm das ernst!",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-подниматься",
@@ -478,7 +496,8 @@
                       "ipf_imp_ex":  "Поднима́йся по ле́стнице!",
                       "ipf_imp_ex_de":  "Geh die Treppe hinauf!",
                       "pf_imp_ex":  "Подними́сь на второ́й эта́ж!",
-                      "pf_imp_ex_de":  "Geh in den ersten Stock hinauf!"
+                      "pf_imp_ex_de":  "Geh in den ersten Stock hinauf!",
+                      "es_freq":  93112
                   },
                   {
                       "id":  "vb-расти",
@@ -505,7 +524,8 @@
                       "ipf_imp_ex":  "Расти́ большо́й!",
                       "ipf_imp_ex_de":  "Werd groß!",
                       "pf_imp_ex":  "Вы́расти хоро́шим челове́ком!",
-                      "pf_imp_ex_de":  "Wachse zu einem guten Menschen heran!"
+                      "pf_imp_ex_de":  "Wachse zu einem guten Menschen heran!",
+                      "es_freq":  50724
                   },
                   {
                       "id":  "vb-отмечать",
@@ -531,7 +551,8 @@
                       "ipf_imp_ex":  "Отмеча́й ва́жное в те́ксте!",
                       "ipf_imp_ex_de":  "Markiere das Wichtige im Text!",
                       "pf_imp_ex":  "Отме́ть э́тот день в календаре́!",
-                      "pf_imp_ex_de":  "Markiere diesen Tag im Kalender!"
+                      "pf_imp_ex_de":  "Markiere diesen Tag im Kalender!",
+                      "es_freq":  65251
                   },
                   {
                       "id":  "vb-отдавать",
@@ -557,7 +578,8 @@
                       "ipf_imp_ex":  "Не отдава́й никому́ ключи́!",
                       "ipf_imp_ex_de":  "Gib niemandem die Schlüssel!",
                       "pf_imp_ex":  "Отда́й мне мою́ кни́гу!",
-                      "pf_imp_ex_de":  "Gib mir mein Buch zurück!"
+                      "pf_imp_ex_de":  "Gib mir mein Buch zurück!",
+                      "es_freq":  71688
                   },
                   {
                       "id":  "vb-устанавливать",
@@ -583,7 +605,8 @@
                       "ipf_imp_ex":  "Не устана́вливай э́ту програ́мму!",
                       "ipf_imp_ex_de":  "Installier dieses Programm nicht!",
                       "pf_imp_ex":  "Установи́ но́вое приложе́ние!",
-                      "pf_imp_ex_de":  "Installier die neue App!"
+                      "pf_imp_ex_de":  "Installier die neue App!",
+                      "es_freq":  19432
                   },
                   {
                       "id":  "vb-обращаться",
@@ -608,7 +631,8 @@
                       "ipf_imp_ex":  "Обраща́йся, е́сли ну́жно!",
                       "ipf_imp_ex_de":  "Melde dich, wenn nötig!",
                       "pf_imp_ex":  "Обрати́сь к врачу́!",
-                      "pf_imp_ex_de":  "Wende dich an einen Arzt!"
+                      "pf_imp_ex_de":  "Wende dich an einen Arzt!",
+                      "es_freq":  866
                   },
                   {
                       "id":  "vb-приносить",
@@ -633,7 +657,8 @@
                       "ipf_imp_ex":  "Не приноси́ еду́ в ко́мнату!",
                       "ipf_imp_ex_de":  "Bring kein Essen ins Zimmer!",
                       "pf_imp_ex":  "Принеси́ мне стака́н воды́!",
-                      "pf_imp_ex_de":  "Bring mir ein Glas Wasser!"
+                      "pf_imp_ex_de":  "Bring mir ein Glas Wasser!",
+                      "es_freq":  9875
                   },
                   {
                       "id":  "vb-выступать",
@@ -658,7 +683,8 @@
                       "ipf_imp_ex":  "Выступа́й уве́ренно!",
                       "ipf_imp_ex_de":  "Tritt selbstbewusst auf!",
                       "pf_imp_ex":  "Вы́ступи на собра́нии!",
-                      "pf_imp_ex_de":  "Sprich auf der Versammlung!"
+                      "pf_imp_ex_de":  "Sprich auf der Versammlung!",
+                      "es_freq":  821
                   },
                   {
                       "id":  "vb-держать",
@@ -683,7 +709,8 @@
                       "ipf_imp_ex":  "Держи́ ру́ки в тепле́!",
                       "ipf_imp_ex_de":  "Halte die Hände warm!",
                       "pf_imp_ex":  "Подержи́ мою́ су́мку!",
-                      "pf_imp_ex_de":  "Halt mal meine Tasche!"
+                      "pf_imp_ex_de":  "Halt mal meine Tasche!",
+                      "es_freq":  32207
                   },
                   {
                       "id":  "vb-бежать",
@@ -711,7 +738,8 @@
                       "ipf_imp_ex":  "Беги́ быстре́е!",
                       "ipf_imp_ex_de":  "Lauf schneller!",
                       "pf_imp_ex":  "Побеги́ за ним!",
-                      "pf_imp_ex_de":  "Lauf ihm hinterher!"
+                      "pf_imp_ex_de":  "Lauf ihm hinterher!",
+                      "es_freq":  114763
                   },
                   {
                       "id":  "vb-терять",
@@ -735,7 +763,8 @@
                       "ipf_imp_ex":  "Не теря́й вре́мя!",
                       "ipf_imp_ex_de":  "Verlier keine Zeit!",
                       "pf_imp_ex":  "Смотри́, не потеря́й биле́т!",
-                      "pf_imp_ex_de":  "Pass auf, verlier das Ticket nicht!"
+                      "pf_imp_ex_de":  "Pass auf, verlier das Ticket nicht!",
+                      "es_freq":  291267
                   },
                   {
                       "id":  "vb-провожать",
@@ -760,7 +789,8 @@
                       "ipf_imp_ex":  "Не провожа́й меня́, я сам дойду́.",
                       "ipf_imp_ex_de":  "Bring mich nicht weg, ich komme allein hin.",
                       "pf_imp_ex":  "Проводи́ госте́й до две́ри!",
-                      "pf_imp_ex_de":  "Begleite die Gäste zur Tür!"
+                      "pf_imp_ex_de":  "Begleite die Gäste zur Tür!",
+                      "es_freq":  25029
                   },
                   {
                       "id":  "vb-строить",
@@ -784,7 +814,8 @@
                       "ipf_imp_ex":  "Не строй пла́нов на за́втра!",
                       "ipf_imp_ex_de":  "Mach keine Pläne für morgen!",
                       "pf_imp_ex":  "Постро́й дом из песка́!",
-                      "pf_imp_ex_de":  "Bau ein Haus aus Sand!"
+                      "pf_imp_ex_de":  "Bau ein Haus aus Sand!",
+                      "es_freq":  41162
                   },
                   {
                       "id":  "vb-встречаться",
@@ -809,7 +840,8 @@
                       "ipf_imp_ex":  "Не встреча́йся с ним!",
                       "ipf_imp_ex_de":  "Triff dich nicht mit ihm!",
                       "pf_imp_ex":  "Встре́ться с на́ми в кафе́!",
-                      "pf_imp_ex_de":  "Triff dich mit uns im Café!"
+                      "pf_imp_ex_de":  "Triff dich mit uns im Café!",
+                      "es_freq":  13934
                   },
                   {
                       "id":  "vb-убивать",
@@ -833,7 +865,8 @@
                       "ipf_imp_ex":  "Не убива́й пауко́в!",
                       "ipf_imp_ex_de":  "Töte keine Spinnen!",
                       "pf_imp_ex":  "Убе́й кома́ра!",
-                      "pf_imp_ex_de":  "Erschlag die Mücke!"
+                      "pf_imp_ex_de":  "Erschlag die Mücke!",
+                      "es_freq":  325748
                   },
                   {
                       "id":  "vb-сообщать",
@@ -858,7 +891,8 @@
                       "ipf_imp_ex":  "Сообща́й мне о пробле́мах!",
                       "ipf_imp_ex_de":  "Melde mir Probleme!",
                       "pf_imp_ex":  "Сообщи́ мне, когда́ прие́дешь!",
-                      "pf_imp_ex_de":  "Gib mir Bescheid, wann du ankommst!"
+                      "pf_imp_ex_de":  "Gib mir Bescheid, wann du ankommst!",
+                      "es_freq":  33481
                   },
                   {
                       "id":  "vb-связывать",
@@ -884,7 +918,8 @@
                       "ipf_imp_ex":  "Не свя́зывай э́ти ве́щи!",
                       "ipf_imp_ex_de":  "Bring diese Dinge nicht in Verbindung!",
                       "pf_imp_ex":  "Свяжи́ мне шарф!",
-                      "pf_imp_ex_de":  "Strick mir einen Schal!"
+                      "pf_imp_ex_de":  "Strick mir einen Schal!",
+                      "es_freq":  20182
                   },
                   {
                       "id":  "vb-класть",
@@ -910,7 +945,8 @@
                       "ipf_imp_ex":  "Не клади́ телефо́н на край стола́!",
                       "ipf_imp_ex_de":  "Leg das Handy nicht an die Tischkante!",
                       "pf_imp_ex":  "Положи́ кни́гу на стол!",
-                      "pf_imp_ex_de":  "Leg das Buch auf den Tisch!"
+                      "pf_imp_ex_de":  "Leg das Buch auf den Tisch!",
+                      "es_freq":  17604
                   },
                   {
                       "id":  "vb-останавливаться",
@@ -935,7 +971,8 @@
                       "ipf_imp_ex":  "Не остана́вливайся!",
                       "ipf_imp_ex_de":  "Hör nicht auf!",
                       "pf_imp_ex":  "Останови́сь здесь!",
-                      "pf_imp_ex_de":  "Halt hier an!"
+                      "pf_imp_ex_de":  "Halt hier an!",
+                      "es_freq":  939
                   },
                   {
                       "id":  "vb-встречать",
@@ -961,7 +998,8 @@
                       "ipf_imp_ex":  "Встреча́й госте́й у две́ри!",
                       "ipf_imp_ex_de":  "Empfange die Gäste an der Tür!",
                       "pf_imp_ex":  "Встреть меня́ на вокза́ле!",
-                      "pf_imp_ex_de":  "Hol mich am Bahnhof ab!"
+                      "pf_imp_ex_de":  "Hol mich am Bahnhof ab!",
+                      "es_freq":  38405
                   },
                   {
                       "id":  "vb-падать",
@@ -985,7 +1023,8 @@
                       "ipf_imp_ex":  "Не па́дай ду́хом!",
                       "ipf_imp_ex_de":  "Lass den Kopf nicht hängen!",
                       "pf_imp_ex":  "Смотри́, не упади́!",
-                      "pf_imp_ex_de":  "Pass auf, fall nicht hin!"
+                      "pf_imp_ex_de":  "Pass auf, fall nicht hin!",
+                      "es_freq":  18953
                   },
                   {
                       "id":  "vb-учиться",
@@ -1013,7 +1052,8 @@
                       "ipf_imp_ex":  "Учи́сь хорошо́!",
                       "ipf_imp_ex_de":  "Lern fleißig!",
                       "pf_imp_ex":  "Научи́сь пла́вать!",
-                      "pf_imp_ex_de":  "Lerne schwimmen!"
+                      "pf_imp_ex_de":  "Lerne schwimmen!",
+                      "es_freq":  121532
                   },
                   {
                       "id":  "vb-заявлять",
@@ -1037,7 +1077,8 @@
                       "ipf_imp_ex":  "Не заявля́й об э́том гро́мко!",
                       "ipf_imp_ex_de":  "Verkünde das nicht laut!",
                       "pf_imp_ex":  "Заяви́ о кра́же в поли́цию!",
-                      "pf_imp_ex_de":  "Melde den Diebstahl bei der Polizei!"
+                      "pf_imp_ex_de":  "Melde den Diebstahl bei der Polizei!",
+                      "es_freq":  20260
                   },
                   {
                       "id":  "vb-выполнять",
@@ -1062,7 +1103,8 @@
                       "ipf_imp_ex":  "Выполня́й свои́ обеща́ния!",
                       "ipf_imp_ex_de":  "Halte deine Versprechen!",
                       "pf_imp_ex":  "Вы́полни зада́ние до ве́чера!",
-                      "pf_imp_ex_de":  "Erledige die Aufgabe bis zum Abend!"
+                      "pf_imp_ex_de":  "Erledige die Aufgabe bis zum Abend!",
+                      "es_freq":  43526
                   },
                   {
                       "id":  "vb-касаться",
@@ -1087,7 +1129,8 @@
                       "ipf_imp_ex":  "Не каса́йся плиты́!",
                       "ipf_imp_ex_de":  "Berühr den Herd nicht!",
                       "pf_imp_ex":  "Косни́сь экра́на!",
-                      "pf_imp_ex_de":  "Berühr den Bildschirm!"
+                      "pf_imp_ex_de":  "Berühr den Bildschirm!",
+                      "es_freq":  140934
                   },
                   {
                       "id":  "vb-звать",
@@ -1113,7 +1156,8 @@
                       "ipf_imp_ex":  "Не зови́ его́!",
                       "ipf_imp_ex_de":  "Ruf ihn nicht!",
                       "pf_imp_ex":  "Позови́ ма́му!",
-                      "pf_imp_ex_de":  "Ruf Mama!"
+                      "pf_imp_ex_de":  "Ruf Mama!",
+                      "es_freq":  28222
                   },
                   {
                       "id":  "vb-разговаривать",
@@ -1140,7 +1184,8 @@
                       "ipf_imp_ex":  "Не разгова́ривай на уро́ке!",
                       "ipf_imp_ex_de":  "Rede nicht im Unterricht!",
                       "pf_imp_ex":  "Поговори́ с ним!",
-                      "pf_imp_ex_de":  "Sprich mit ihm!"
+                      "pf_imp_ex_de":  "Sprich mit ihm!",
+                      "es_freq":  37614
                   },
                   {
                       "id":  "vb-смеяться",
@@ -1164,7 +1209,8 @@
                       "ipf_imp_ex":  "Не сме́йся над на́ми!",
                       "ipf_imp_ex_de":  "Lach uns nicht aus!",
                       "pf_imp_ex":  "Засме́йся, и всё пройдёт!",
-                      "pf_imp_ex_de":  "Lach los, dann geht alles vorbei!"
+                      "pf_imp_ex_de":  "Lach los, dann geht alles vorbei!",
+                      "es_freq":  7104
                   },
                   {
                       "id":  "vb-молчать",
@@ -1191,7 +1237,8 @@
                       "ipf_imp_ex":  "Молчи́!",
                       "ipf_imp_ex_de":  "Sei still!",
                       "pf_imp_ex":  "Замолчи́ наконе́ц!",
-                      "pf_imp_ex_de":  "Sei endlich still!"
+                      "pf_imp_ex_de":  "Sei endlich still!",
+                      "es_freq":  17080
                   },
                   {
                       "id":  "vb-собирать",
@@ -1217,7 +1264,8 @@
                       "ipf_imp_ex":  "Собира́й игру́шки по́сле игры́!",
                       "ipf_imp_ex_de":  "Räum die Spielsachen nach dem Spielen ein!",
                       "pf_imp_ex":  "Собери́ ве́щи!",
-                      "pf_imp_ex_de":  "Pack deine Sachen!"
+                      "pf_imp_ex_de":  "Pack deine Sachen!",
+                      "es_freq":  44865
                   },
                   {
                       "id":  "vb-соглашаться",
@@ -1242,7 +1290,8 @@
                       "ipf_imp_ex":  "Не соглаша́йся сра́зу!",
                       "ipf_imp_ex_de":  "Stimm nicht sofort zu!",
                       "pf_imp_ex":  "Согласи́сь, э́то хоро́шая иде́я!",
-                      "pf_imp_ex_de":  "Gib zu, das ist eine gute Idee!"
+                      "pf_imp_ex_de":  "Gib zu, das ist eine gute Idee!",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-обеспечивать",
@@ -1267,7 +1316,8 @@
                       "ipf_imp_ex":  "Обеспе́чивай дете́й всем необходи́мым!",
                       "ipf_imp_ex_de":  "Versorge die Kinder mit allem Nötigen!",
                       "pf_imp_ex":  "Обеспе́чь нас водо́й!",
-                      "pf_imp_ex_de":  "Versorge uns mit Wasser!"
+                      "pf_imp_ex_de":  "Versorge uns mit Wasser!",
+                      "es_freq":  117697
                   }
               ]
 }

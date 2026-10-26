@@ -29,7 +29,8 @@
                       "example_cases":  "ве́чером – Instrumental (Zeitangabe „abends“)",
                       "government":  "wo? – в/на + Präpositiv · als wer? – Instrumental (бу́ду врачо́м)",
                       "ipf_imp_ex":  "Будь осторо́жен на у́лице!",
-                      "ipf_imp_ex_de":  "Sei vorsichtig auf der Straße!"
+                      "ipf_imp_ex_de":  "Sei vorsichtig auf der Straße!",
+                      "es_freq":  1068691
                   },
                   {
                       "id":  "vb-говорить",
@@ -57,7 +58,8 @@
                       "ipf_imp_ex":  "Говори́ ме́дленно, пожа́луйста!",
                       "ipf_imp_ex_de":  "Sprich bitte langsam!",
                       "pf_imp_ex":  "Скажи́, ско́лько сейча́с вре́мени?",
-                      "pf_imp_ex_de":  "Sag, wie spät ist es jetzt?"
+                      "pf_imp_ex_de":  "Sag, wie spät ist es jetzt?",
+                      "es_freq":  3295741
                   },
                   {
                       "id":  "vb-мочь",
@@ -79,7 +81,8 @@
                       "example_cases":  "мне – Dativ",
                       "government":  "+ Infinitiv (могу́ помо́чь)",
                       "ipf_imp":  "—",
-                      "pf_imp":  "—"
+                      "pf_imp":  "—",
+                      "es_freq":  175130
                   },
                   {
                       "id":  "vb-становиться",
@@ -106,7 +109,8 @@
                       "ipf_imp_ex":  "Станови́сь в о́чередь!",
                       "ipf_imp_ex_de":  "Stell dich in die Schlange!",
                       "pf_imp_ex":  "Стань мои́м дру́гом!",
-                      "pf_imp_ex_de":  "Werde mein Freund!"
+                      "pf_imp_ex_de":  "Werde mein Freund!",
+                      "es_freq":  4255
                   },
                   {
                       "id":  "vb-знать",
@@ -127,7 +131,8 @@
                       "example_cases":  "nur Nominativ",
                       "government":  "wen? was? – Akkusativ · über wen? worüber? – о + Präpositiv",
                       "ipf_imp_ex":  "Знай: я всегда́ ря́дом.",
-                      "ipf_imp_ex_de":  "Wisse: Ich bin immer da."
+                      "ipf_imp_ex_de":  "Wisse: Ich bin immer da.",
+                      "es_freq":  2023087
                   },
                   {
                       "id":  "vb-идти",
@@ -156,7 +161,8 @@
                       "ipf_imp_ex":  "Иди́ сюда́!",
                       "ipf_imp_ex_de":  "Komm her!",
                       "pf_imp_ex":  "Пойди́ в магази́н за хле́бом!",
-                      "pf_imp_ex_de":  "Geh in den Laden, Brot holen!"
+                      "pf_imp_ex_de":  "Geh in den Laden, Brot holen!",
+                      "es_freq":  3847146
                   },
                   {
                       "id":  "vb-делать",
@@ -180,7 +186,8 @@
                       "ipf_imp_ex":  "Де́лай уро́ки ка́ждый день!",
                       "ipf_imp_ex_de":  "Mach jeden Tag die Hausaufgaben!",
                       "pf_imp_ex":  "Сде́лай э́то сего́дня!",
-                      "pf_imp_ex_de":  "Mach das heute!"
+                      "pf_imp_ex_de":  "Mach das heute!",
+                      "es_freq":  3198262
                   },
                   {
                       "id":  "vb-видеть",
@@ -202,7 +209,8 @@
                       "example_cases":  "мо́ре – Akkusativ",
                       "government":  "wen? was? – Akkusativ",
                       "ipf_imp":  "—",
-                      "pf_imp":  "—"
+                      "pf_imp":  "—",
+                      "es_freq":  1923698
                   },
                   {
                       "id":  "vb-понимать",
@@ -227,7 +235,8 @@
                       "ipf_imp_ex":  "Не понима́й меня́ непра́вильно!",
                       "ipf_imp_ex_de":  "Versteh mich nicht falsch!",
                       "pf_imp_ex":  "Пойми́ меня́, пожа́луйста!",
-                      "pf_imp_ex_de":  "Versteh mich bitte!"
+                      "pf_imp_ex_de":  "Versteh mich bitte!",
+                      "es_freq":  361672
                   },
                   {
                       "id":  "vb-думать",
@@ -251,7 +260,8 @@
                       "ipf_imp_ex":  "Не ду́май об э́том!",
                       "ipf_imp_ex_de":  "Denk nicht darüber nach!",
                       "pf_imp_ex":  "Поду́май ещё раз!",
-                      "pf_imp_ex_de":  "Denk noch einmal nach!"
+                      "pf_imp_ex_de":  "Denk noch einmal nach!",
+                      "es_freq":  762611
                   },
                   {
                       "id":  "vb-хотеть",
@@ -273,7 +283,8 @@
                       "example_cases":  "nur Nominativ",
                       "government":  "was? – Akkusativ (Abstraktes auch Genitiv: хочу́ ми́ра) · + Infinitiv",
                       "ipf_imp":  "—",
-                      "pf_imp":  "—"
+                      "pf_imp":  "—",
+                      "es_freq":  2418278
                   },
                   {
                       "id":  "vb-смотреть",
@@ -298,7 +309,8 @@
                       "ipf_imp_ex":  "Не смотри́ так мно́го телеви́зор!",
                       "ipf_imp_ex_de":  "Schau nicht so viel fern!",
                       "pf_imp_ex":  "Посмотри́ на э́то фо́то!",
-                      "pf_imp_ex_de":  "Schau dir dieses Foto an!"
+                      "pf_imp_ex_de":  "Schau dir dieses Foto an!",
+                      "es_freq":  584392
                   },
                   {
                       "id":  "vb-давать",
@@ -322,7 +334,8 @@
                       "ipf_imp_ex":  "Дава́й пойдём в кино́!",
                       "ipf_imp_ex_de":  "Komm, lass uns ins Kino gehen!",
                       "pf_imp_ex":  "Дай мне во́ду, пожа́луйста!",
-                      "pf_imp_ex_de":  "Gib mir bitte das Wasser!"
+                      "pf_imp_ex_de":  "Gib mir bitte das Wasser!",
+                      "es_freq":  722807
                   },
                   {
                       "id":  "vb-иметь",
@@ -343,7 +356,8 @@
                       "example_cases":  "пра́во – Akkusativ",
                       "government":  "was? – Akkusativ",
                       "ipf_imp_ex":  "Име́й в виду́: за́втра нет уро́ка.",
-                      "ipf_imp_ex_de":  "Denk daran: Morgen ist kein Unterricht."
+                      "ipf_imp_ex_de":  "Denk daran: Morgen ist kein Unterricht.",
+                      "es_freq":  4555437
                   },
                   {
                       "id":  "vb-оставаться",
@@ -367,7 +381,8 @@
                       "ipf_imp_ex":  "Остава́йся всегда́ сами́м собо́й!",
                       "ipf_imp_ex_de":  "Bleib immer du selbst!",
                       "pf_imp_ex":  "Оста́нься у нас на у́жин!",
-                      "pf_imp_ex_de":  "Bleib zum Abendessen bei uns!"
+                      "pf_imp_ex_de":  "Bleib zum Abendessen bei uns!",
+                      "es_freq":  16787
                   },
                   {
                       "id":  "vb-жить",
@@ -393,7 +408,8 @@
                       "ipf_imp_ex":  "Живи́ и ра́дуйся!",
                       "ipf_imp_ex_de":  "Lebe und freu dich!",
                       "pf_imp_ex":  "Проживи́ до ста лет!",
-                      "pf_imp_ex_de":  "Werde hundert Jahre alt!"
+                      "pf_imp_ex_de":  "Werde hundert Jahre alt!",
+                      "es_freq":  358439
                   },
                   {
                       "id":  "vb-спрашивать",
@@ -417,7 +433,8 @@
                       "ipf_imp_ex":  "Спра́шивай, е́сли не понима́ешь!",
                       "ipf_imp_ex_de":  "Frag, wenn du es nicht verstehst!",
                       "pf_imp_ex":  "Спроси́ у учи́теля!",
-                      "pf_imp_ex_de":  "Frag den Lehrer!"
+                      "pf_imp_ex_de":  "Frag den Lehrer!",
+                      "es_freq":  165529
                   },
                   {
                       "id":  "vb-писать",
@@ -441,7 +458,8 @@
                       "ipf_imp_ex":  "Пиши́ мне ча́ще!",
                       "ipf_imp_ex_de":  "Schreib mir öfter!",
                       "pf_imp_ex":  "Напиши́ ма́ме письмо́!",
-                      "pf_imp_ex_de":  "Schreib Mama einen Brief!"
+                      "pf_imp_ex_de":  "Schreib Mama einen Brief!",
+                      "es_freq":  129532
                   },
                   {
                       "id":  "vb-начинать",
@@ -466,7 +484,8 @@
                       "ipf_imp_ex":  "Не начина́й снача́ла!",
                       "ipf_imp_ex_de":  "Fang nicht wieder von vorn an!",
                       "pf_imp_ex":  "Начни́ с пе́рвой страни́цы!",
-                      "pf_imp_ex_de":  "Fang mit der ersten Seite an!"
+                      "pf_imp_ex_de":  "Fang mit der ersten Seite an!",
+                      "es_freq":  243664
                   },
                   {
                       "id":  "vb-брать",
@@ -491,7 +510,8 @@
                       "ipf_imp_ex":  "Не бери́ мои́ ве́щи!",
                       "ipf_imp_ex_de":  "Nimm meine Sachen nicht!",
                       "pf_imp_ex":  "Возьми́ зо́нтик!",
-                      "pf_imp_ex_de":  "Nimm den Regenschirm mit!"
+                      "pf_imp_ex_de":  "Nimm den Regenschirm mit!",
+                      "es_freq":  92827
                   },
                   {
                       "id":  "vb-получать",
@@ -515,7 +535,8 @@
                       "ipf_imp_ex":  "Получа́й удово́льствие от жи́зни!",
                       "ipf_imp_ex_de":  "Genieße das Leben!",
                       "pf_imp_ex":  "Получи́ посы́лку на по́чте!",
-                      "pf_imp_ex_de":  "Hol das Paket bei der Post ab!"
+                      "pf_imp_ex_de":  "Hol das Paket bei der Post ab!",
+                      "es_freq":  117638
                   },
                   {
                       "id":  "vb-приходить",
@@ -541,7 +562,8 @@
                       "ipf_imp_ex":  "Приходи́ к нам в го́сти!",
                       "ipf_imp_ex_de":  "Komm uns besuchen!",
                       "pf_imp_ex":  "Приди́ за́втра в де́вять!",
-                      "pf_imp_ex_de":  "Komm morgen um neun!"
+                      "pf_imp_ex_de":  "Komm morgen um neun!",
+                      "es_freq":  714079
                   },
                   {
                       "id":  "vb-оказываться",
@@ -565,7 +587,8 @@
                       "ipf_imp_ex":  "Не ока́зывайся там без де́нег!",
                       "ipf_imp_ex_de":  "Lande dort nicht ohne Geld!",
                       "pf_imp_ex":  "Окажи́сь в нужно́м ме́сте в нужно́е вре́мя!",
-                      "pf_imp_ex_de":  "Sei zur richtigen Zeit am richtigen Ort!"
+                      "pf_imp_ex_de":  "Sei zur richtigen Zeit am richtigen Ort!",
+                      "es_freq":  44438
                   },
                   {
                       "id":  "vb-выходить",
@@ -591,7 +614,8 @@
                       "ipf_imp_ex":  "Выходи́ на сле́дующей остано́вке!",
                       "ipf_imp_ex_de":  "Steig an der nächsten Haltestelle aus!",
                       "pf_imp_ex":  "Вы́йди из ко́мнаты!",
-                      "pf_imp_ex_de":  "Geh aus dem Zimmer!"
+                      "pf_imp_ex_de":  "Geh aus dem Zimmer!",
+                      "es_freq":  504267
                   },
                   {
                       "id":  "vb-работать",
@@ -615,7 +639,8 @@
                       "ipf_imp_ex":  "Не рабо́тай так мно́го!",
                       "ipf_imp_ex_de":  "Arbeite nicht so viel!",
                       "pf_imp_ex":  "Порабо́тай ещё час!",
-                      "pf_imp_ex_de":  "Arbeite noch eine Stunde!"
+                      "pf_imp_ex_de":  "Arbeite noch eine Stunde!",
+                      "es_freq":  288926
                   },
                   {
                       "id":  "vb-отвечать",
@@ -640,7 +665,8 @@
                       "ipf_imp_ex":  "Отвеча́й по-ру́сски!",
                       "ipf_imp_ex_de":  "Antworte auf Russisch!",
                       "pf_imp_ex":  "Отве́ть на мой вопро́с!",
-                      "pf_imp_ex_de":  "Beantworte meine Frage!"
+                      "pf_imp_ex_de":  "Beantworte meine Frage!",
+                      "es_freq":  35382
                   },
                   {
                       "id":  "vb-являться",
@@ -667,7 +693,8 @@
                       "government":  "als wer? als was? – Instrumental",
                       "ipf_imp":  "—",
                       "pf_imp_ex":  "Яви́сь за́втра к нача́льнику!",
-                      "pf_imp_ex_de":  "Erscheine morgen beim Chef!"
+                      "pf_imp_ex_de":  "Erscheine morgen beim Chef!",
+                      "es_freq":  709288
                   },
                   {
                       "id":  "vb-принимать",
@@ -693,7 +720,8 @@
                       "ipf_imp_ex":  "Принима́й лека́рство ка́ждое у́тро!",
                       "ipf_imp_ex_de":  "Nimm jeden Morgen die Medizin!",
                       "pf_imp_ex":  "Прими́ мой пода́рок!",
-                      "pf_imp_ex_de":  "Nimm mein Geschenk an!"
+                      "pf_imp_ex_de":  "Nimm mein Geschenk an!",
+                      "es_freq":  529139
                   },
                   {
                       "id":  "vb-казаться",
@@ -716,7 +744,8 @@
                       "government":  "als wer? wie? – Instrumental · wem? – Dativ (мне ка́жется)",
                       "ipf_imp":  "—",
                       "pf_imp_ex":  "Покажи́сь врачу́!",
-                      "pf_imp_ex_de":  "Lass dich vom Arzt untersuchen!"
+                      "pf_imp_ex_de":  "Lass dich vom Arzt untersuchen!",
+                      "es_freq":  539768
                   },
                   {
                       "id":  "vb-проходить",
@@ -741,7 +770,8 @@
                       "ipf_imp_ex":  "Проходи́те, сади́тесь!",
                       "ipf_imp_ex_de":  "Kommen Sie herein, setzen Sie sich!",
                       "pf_imp_ex":  "Пройди́ пря́мо до перекрёстка!",
-                      "pf_imp_ex_de":  "Geh geradeaus bis zur Kreuzung!"
+                      "pf_imp_ex_de":  "Geh geradeaus bis zur Kreuzung!",
+                      "es_freq":  873687
                   },
                   {
                       "id":  "vb-сидеть",
@@ -767,7 +797,8 @@
                       "ipf_imp_ex":  "Сиди́ споко́йно!",
                       "ipf_imp_ex_de":  "Sitz still!",
                       "pf_imp_ex":  "Посиди́ со мной немно́го!",
-                      "pf_imp_ex_de":  "Setz dich ein bisschen zu mir!"
+                      "pf_imp_ex_de":  "Setz dich ein bisschen zu mir!",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-любить",
@@ -792,7 +823,8 @@
                       "ipf_imp_ex":  "Люби́ свою́ семью́!",
                       "ipf_imp_ex_de":  "Liebe deine Familie!",
                       "pf_imp_ex":  "Полюби́ э́тот го́род!",
-                      "pf_imp_ex_de":  "Gewinne diese Stadt lieb!"
+                      "pf_imp_ex_de":  "Gewinne diese Stadt lieb!",
+                      "es_freq":  120914
                   },
                   {
                       "id":  "vb-находить",
@@ -816,7 +848,8 @@
                       "ipf_imp_ex":  "Находи́ вре́мя для спо́рта!",
                       "ipf_imp_ex_de":  "Nimm dir Zeit für Sport!",
                       "pf_imp_ex":  "Найди́ мои́ ключи́, пожа́луйста!",
-                      "pf_imp_ex_de":  "Finde bitte meine Schlüssel!"
+                      "pf_imp_ex_de":  "Finde bitte meine Schlüssel!",
+                      "es_freq":  486267
                   },
                   {
                       "id":  "vb-уходить",
@@ -841,7 +874,8 @@
                       "ipf_imp_ex":  "Не уходи́!",
                       "ipf_imp_ex_de":  "Geh nicht weg!",
                       "pf_imp_ex":  "Уйди́ отсю́да!",
-                      "pf_imp_ex_de":  "Geh weg von hier!"
+                      "pf_imp_ex_de":  "Geh weg von hier!",
+                      "es_freq":  28779
                   },
                   {
                       "id":  "vb-решать",
@@ -867,7 +901,8 @@
                       "ipf_imp_ex":  "Реша́й сам!",
                       "ipf_imp_ex_de":  "Entscheide selbst!",
                       "pf_imp_ex":  "Реши́ э́ту зада́чу!",
-                      "pf_imp_ex_de":  "Löse diese Aufgabe!"
+                      "pf_imp_ex_de":  "Löse diese Aufgabe!",
+                      "es_freq":  134041
                   },
                   {
                       "id":  "vb-стоить",
@@ -888,7 +923,8 @@
                       "note_es":  "costar ist o → ue: cuesta, cuestan. ¿Cuánto cuesta? = Wie viel kostet das? valer = wert sein: Vale la pena.",
                       "example_cases":  "nur Nominativ (биле́т ist das Subjekt)",
                       "government":  "wie viel? – Akkusativ (сто рубле́й) · was kostet = Subjekt",
-                      "ipf_imp":  "—"
+                      "ipf_imp":  "—",
+                      "es_freq":  42019
                   },
                   {
                       "id":  "vb-называть",
@@ -913,7 +949,8 @@
                       "ipf_imp_ex":  "Не называ́й меня́ так!",
                       "ipf_imp_ex_de":  "Nenn mich nicht so!",
                       "pf_imp_ex":  "Назови́ своё и́мя!",
-                      "pf_imp_ex_de":  "Nenne deinen Namen!"
+                      "pf_imp_ex_de":  "Nenne deinen Namen!",
+                      "es_freq":  564439
                   },
                   {
                       "id":  "vb-представлять",
@@ -941,7 +978,8 @@
                       "ipf_imp_ex":  "Представля́й себе́ мо́ре!",
                       "ipf_imp_ex_de":  "Stell dir das Meer vor!",
                       "pf_imp_ex":  "Предста́вь себе́, я в Москве́!",
-                      "pf_imp_ex_de":  "Stell dir vor, ich bin in Moskau!"
+                      "pf_imp_ex_de":  "Stell dir vor, ich bin in Moskau!",
+                      "es_freq":  83377
                   },
                   {
                       "id":  "vb-считать",
@@ -967,7 +1005,8 @@
                       "ipf_imp_ex":  "Счита́й до десяти́!",
                       "ipf_imp_ex_de":  "Zähl bis zehn!",
                       "pf_imp_ex":  "Посчита́й де́ньги!",
-                      "pf_imp_ex_de":  "Zähl das Geld!"
+                      "pf_imp_ex_de":  "Zähl das Geld!",
+                      "es_freq":  165516
                   },
                   {
                       "id":  "vb-происходить",
@@ -990,7 +1029,8 @@
                       "note":  "Meist in der 3. Person: происхо́дит, произошло́.",
                       "note_es":  "pasar = passieren: ¿Qué pasó? = Was ist passiert? Meist in der 3. Person.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "wo? – в/на + Präpositiv · mit wem? – с + Instrumental"
+                      "government":  "wo? – в/на + Präpositiv · mit wem? – с + Instrumental",
+                      "es_freq":  43684
                   },
                   {
                       "id":  "vb-приходиться",
@@ -1013,7 +1053,8 @@
                       "note":  "Unpersönlich mit Dativ: мне прихо́дится / придётся = ich muss.",
                       "note_es":  "tener que + Infinitiv = müssen: Tengo que trabajar. Unpersönlich: hay que = man muss.",
                       "example_cases":  "мне – Dativ · час – Akkusativ (wie lange?)",
-                      "government":  "wem? – Dativ + Infinitiv (мне прихо́дится)"
+                      "government":  "wem? – Dativ + Infinitiv (мне прихо́дится)",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-рассказывать",
@@ -1037,7 +1078,8 @@
                       "ipf_imp_ex":  "Расска́зывай, как дела́!",
                       "ipf_imp_ex_de":  "Erzähl, wie geht\u0027s!",
                       "pf_imp_ex":  "Расскажи́ мне о себе́!",
-                      "pf_imp_ex_de":  "Erzähl mir von dir!"
+                      "pf_imp_ex_de":  "Erzähl mir von dir!",
+                      "es_freq":  5947
                   },
                   {
                       "id":  "vb-стоять",
@@ -1064,7 +1106,8 @@
                       "ipf_imp_ex":  "Стой здесь!",
                       "ipf_imp_ex_de":  "Bleib hier stehen!",
                       "pf_imp_ex":  "Посто́й мину́тку!",
-                      "pf_imp_ex_de":  "Warte mal eine Minute!"
+                      "pf_imp_ex_de":  "Warte mal eine Minute!",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-возвращаться",
@@ -1089,7 +1132,8 @@
                       "ipf_imp_ex":  "Возвраща́йся домо́й до десяти́!",
                       "ipf_imp_ex_de":  "Komm vor zehn nach Hause!",
                       "pf_imp_ex":  "Верни́сь скоре́е!",
-                      "pf_imp_ex_de":  "Komm schnell zurück!"
+                      "pf_imp_ex_de":  "Komm schnell zurück!",
+                      "es_freq":  554477
                   },
                   {
                       "id":  "vb-показывать",
@@ -1114,7 +1158,8 @@
                       "ipf_imp_ex":  "Не пока́зывай па́льцем!",
                       "ipf_imp_ex_de":  "Zeig nicht mit dem Finger!",
                       "pf_imp_ex":  "Покажи́ мне доро́гу!",
-                      "pf_imp_ex_de":  "Zeig mir den Weg!"
+                      "pf_imp_ex_de":  "Zeig mir den Weg!",
+                      "es_freq":  66635
                   },
                   {
                       "id":  "vb-ждать",
@@ -1138,7 +1183,8 @@
                       "ipf_imp_ex":  "Жди меня́ здесь!",
                       "ipf_imp_ex_de":  "Warte hier auf mich!",
                       "pf_imp_ex":  "Подожди́ мину́тку!",
-                      "pf_imp_ex_de":  "Warte eine Minute!"
+                      "pf_imp_ex_de":  "Warte eine Minute!",
+                      "es_freq":  476286
                   },
                   {
                       "id":  "vb-слышать",
@@ -1160,7 +1206,8 @@
                       "example_cases":  "меня́ – Akkusativ",
                       "government":  "wen? was? – Akkusativ · über wen? worüber? – о + Präpositiv",
                       "ipf_imp":  "—",
-                      "pf_imp":  "—"
+                      "pf_imp":  "—",
+                      "es_freq":  412419
                   },
                   {
                       "id":  "vb-появляться",
@@ -1184,7 +1231,8 @@
                       "ipf_imp_ex":  "Появля́йся у нас ча́ще!",
                       "ipf_imp_ex_de":  "Lass dich öfter bei uns blicken!",
                       "pf_imp_ex":  "Появи́сь хоть на час!",
-                      "pf_imp_ex_de":  "Komm wenigstens für eine Stunde vorbei!"
+                      "pf_imp_ex_de":  "Komm wenigstens für eine Stunde vorbei!",
+                      "es_freq":  61950
                   },
                   {
                       "id":  "vb-ставить",
@@ -1211,7 +1259,8 @@
                       "ipf_imp_ex":  "Не ставь су́мку на стол!",
                       "ipf_imp_ex_de":  "Stell die Tasche nicht auf den Tisch!",
                       "pf_imp_ex":  "Поста́вь ча́шку сюда́!",
-                      "pf_imp_ex_de":  "Stell die Tasse hierhin!"
+                      "pf_imp_ex_de":  "Stell die Tasse hierhin!",
+                      "es_freq":  352071
                   },
                   {
                       "id":  "vb-находиться",
@@ -1236,7 +1285,8 @@
                       "ipf_imp_ex":  "Находи́сь ря́дом с детьми́!",
                       "ipf_imp_ex_de":  "Bleib in der Nähe der Kinder!",
                       "pf_imp_ex":  "Найди́сь, наконе́ц!",
-                      "pf_imp_ex_de":  "Tauch endlich wieder auf!"
+                      "pf_imp_ex_de":  "Tauch endlich wieder auf!",
+                      "es_freq":  359445
                   }
               ]
 }

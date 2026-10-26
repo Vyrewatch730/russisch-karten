@@ -19,7 +19,8 @@
                       "example_cases":  "на боково́м ме́сте – Präpositiv",
                       "example_de":  "Er sitzt auf dem Seitenplatz.",
                       "example_en":  "He\u0027s sitting in the side seat.",
-                      "example_es":  "Está sentado en el asiento lateral."
+                      "example_es":  "Está sentado en el asiento lateral.",
+                      "es_freq":  2788
                   },
                   {
                       "id":  "aj-математический",
@@ -32,7 +33,8 @@
                       "example_cases":  "математи́ческая зада́ча – Nominativ",
                       "example_de":  "Das ist eine Matheaufgabe.",
                       "example_en":  "It\u0027s a math problem.",
-                      "example_es":  "Es un problema matemático."
+                      "example_es":  "Es un problema matemático.",
+                      "es_freq":  10257
                   },
                   {
                       "id":  "aj-незаконный",
@@ -50,7 +52,8 @@
                       "adv":  "незако́нно",
                       "adv_de":  "illegal",
                       "adv_ex":  "Э́то незако́нно.",
-                      "adv_ex_de":  "Das ist illegal."
+                      "adv_ex_de":  "Das ist illegal.",
+                      "es_freq":  15271
                   },
                   {
                       "id":  "aj-идеологический",
@@ -67,7 +70,8 @@
                       "adv":  "идеологи́чески",
                       "adv_de":  "ideologisch",
                       "adv_ex":  "Э́то идеологи́чески ва́жно.",
-                      "adv_ex_de":  "Das ist ideologisch wichtig."
+                      "adv_ex_de":  "Das ist ideologisch wichtig.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-программный",
@@ -81,7 +85,8 @@
                       "example_cases":  "програ́ммное обеспе́чение – Akkusativ",
                       "example_de":  "Wir aktualisieren die Software.",
                       "example_en":  "We\u0027re updating the software.",
-                      "example_es":  "Actualizamos el software."
+                      "example_es":  "Actualizamos el software.",
+                      "es_freq":  2138
                   },
                   {
                       "id":  "aj-авиационный",
@@ -95,7 +100,8 @@
                       "example_cases":  "авиацио́нный биле́т – Akkusativ",
                       "example_de":  "Ich habe ein Flugticket gekauft.",
                       "example_en":  "I bought a plane ticket.",
-                      "example_es":  "Compré un boleto de avión."
+                      "example_es":  "Compré un boleto de avión.",
+                      "es_freq":  73
                   },
                   {
                       "id":  "aj-загадочный",
@@ -112,7 +118,8 @@
                       "adv":  "зага́дочно",
                       "adv_de":  "rätselhaft",
                       "adv_ex":  "Она́ зага́дочно молча́ла.",
-                      "adv_ex_de":  "Sie schwieg rätselhaft."
+                      "adv_ex_de":  "Sie schwieg rätselhaft.",
+                      "es_freq":  235
                   },
                   {
                       "id":  "aj-деревенский",
@@ -126,7 +133,8 @@
                       "example_cases":  "дереве́нскую жизнь – Akkusativ",
                       "example_de":  "Ich mag das Landleben.",
                       "example_en":  "I love village life.",
-                      "example_es":  "Me encanta la vida del campo."
+                      "example_es":  "Me encanta la vida del campo.",
+                      "es_freq":  78
                   },
                   {
                       "id":  "aj-гениальный",
@@ -145,7 +153,8 @@
                       "adv":  "гениа́льно",
                       "adv_de":  "genial",
                       "adv_ex":  "Гениа́льно!",
-                      "adv_ex_de":  "Genial!"
+                      "adv_ex_de":  "Genial!",
+                      "es_freq":  150930
                   },
                   {
                       "id":  "aj-биологический",
@@ -162,7 +171,8 @@
                       "adv":  "биологи́чески",
                       "adv_de":  "biologisch",
                       "adv_ex":  "Он биологи́чески оте́ц.",
-                      "adv_ex_de":  "Er ist der biologische Vater."
+                      "adv_ex_de":  "Er ist der biologische Vater.",
+                      "es_freq":  5681
                   },
                   {
                       "id":  "aj-базовый",
@@ -175,7 +185,8 @@
                       "example_cases":  "у меня́ – Genitiv · ба́зовые зна́ния – Nominativ Plural · ру́сского – Genitiv",
                       "example_de":  "Ich habe Grundkenntnisse in Russisch.",
                       "example_en":  "I have basic knowledge of Russian.",
-                      "example_es":  "Tengo conocimientos básicos de ruso."
+                      "example_es":  "Tengo conocimientos básicos de ruso.",
+                      "es_freq":  8267
                   },
                   {
                       "id":  "aj-проклятый",
@@ -188,7 +199,8 @@
                       "example_cases":  "э́тот прокля́тый компью́тер – Nominativ",
                       "example_de":  "Dieser verdammte Computer funktioniert schon wieder nicht!",
                       "example_en":  "This damn computer isn\u0027t working again!",
-                      "example_es":  "¡Esta maldita computadora no funciona otra vez!"
+                      "example_es":  "¡Esta maldita computadora no funciona otra vez!",
+                      "es_freq":  163133
                   },
                   {
                       "id":  "aj-грозный",
@@ -206,7 +218,8 @@
                       "adv":  "гро́зно",
                       "adv_de":  "drohend",
                       "adv_ex":  "Он гро́зно посмотре́л.",
-                      "adv_ex_de":  "Er schaute drohend."
+                      "adv_ex_de":  "Er schaute drohend.",
+                      "es_freq":  1290
                   },
                   {
                       "id":  "aj-сырой",
@@ -221,7 +234,8 @@
                       "example_cases":  "сыро́е мя́со – Akkusativ",
                       "example_de":  "Iss kein rohes Fleisch!",
                       "example_en":  "Don\u0027t eat raw meat!",
-                      "example_es":  "¡No comas carne cruda!"
+                      "example_es":  "¡No comas carne cruda!",
+                      "es_freq":  4056
                   },
                   {
                       "id":  "aj-подводный",
@@ -235,7 +249,8 @@
                       "example_cases":  "подво́дная ло́дка – Nominativ",
                       "example_de":  "Das ist ein U-Boot.",
                       "example_en":  "It\u0027s a submarine.",
-                      "example_es":  "Es un submarino."
+                      "example_es":  "Es un submarino.",
+                      "es_freq":  6093
                   },
                   {
                       "id":  "aj-волшебный",
@@ -249,7 +264,8 @@
                       "example_cases":  "волше́бная ска́зка – Nominativ",
                       "example_de":  "Das ist ein Zaubermärchen.",
                       "example_en":  "It\u0027s a magical fairy tale.",
-                      "example_es":  "Es un cuento mágico."
+                      "example_es":  "Es un cuento mágico.",
+                      "es_freq":  14389
                   },
                   {
                       "id":  "aj-предстоящий",
@@ -263,7 +279,8 @@
                       "example_cases":  "к предстоя́щему экза́мену – Dativ",
                       "example_de":  "Ich bereite mich auf die bevorstehende Prüfung vor.",
                       "example_en":  "I\u0027m preparing for the upcoming exam.",
-                      "example_es":  "Me preparo para el próximo examen."
+                      "example_es":  "Me preparo para el próximo examen.",
+                      "es_freq":  88307
                   },
                   {
                       "id":  "aj-первичный",
@@ -276,7 +293,8 @@
                       "example_cases":  "перви́чный диа́гноз – Nominativ",
                       "example_de":  "Das ist die erste Diagnose.",
                       "example_en":  "It\u0027s the initial diagnosis.",
-                      "example_es":  "Es el diagnóstico inicial."
+                      "example_es":  "Es el diagnóstico inicial.",
+                      "es_freq":  5284
                   },
                   {
                       "id":  "aj-нелепый",
@@ -293,7 +311,8 @@
                       "adv":  "неле́по",
                       "adv_de":  "absurd, albern",
                       "adv_ex":  "Э́то неле́по.",
-                      "adv_ex_de":  "Das ist absurd."
+                      "adv_ex_de":  "Das ist absurd.",
+                      "es_freq":  10303
                   },
                   {
                       "id":  "aj-недовольный",
@@ -312,7 +331,8 @@
                       "adv":  "недово́льно",
                       "adv_de":  "unzufrieden",
                       "adv_ex":  "Он недово́льно посмотре́л.",
-                      "adv_ex_de":  "Er schaute unzufrieden."
+                      "adv_ex_de":  "Er schaute unzufrieden.",
+                      "es_freq":  1197
                   },
                   {
                       "id":  "aj-осенний",
@@ -327,7 +347,8 @@
                       "example_cases":  "тёплый осе́нний день – Nominativ",
                       "example_de":  "Heute ist ein warmer Herbsttag.",
                       "example_en":  "It\u0027s a warm autumn day today.",
-                      "example_es":  "Hoy es un día cálido de otoño."
+                      "example_es":  "Hoy es un día cálido de otoño.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-энергетический",
@@ -340,7 +361,8 @@
                       "example_cases":  "энергети́ческая компа́ния – Nominativ",
                       "example_de":  "Das ist ein Energieunternehmen.",
                       "example_en":  "It\u0027s an energy company.",
-                      "example_es":  "Es una compañía energética."
+                      "example_es":  "Es una compañía energética.",
+                      "es_freq":  1609
                   },
                   {
                       "id":  "aj-солидный",
@@ -357,7 +379,8 @@
                       "adv":  "соли́дно",
                       "adv_de":  "solide, seriös",
                       "adv_ex":  "Он вы́глядит соли́дно.",
-                      "adv_ex_de":  "Er sieht seriös aus."
+                      "adv_ex_de":  "Er sieht seriös aus.",
+                      "es_freq":  7192
                   },
                   {
                       "id":  "aj-греческий",
@@ -370,7 +393,8 @@
                       "example_cases":  "гре́ческий сала́т – Akkusativ",
                       "example_de":  "Ich mag griechischen Salat.",
                       "example_en":  "I love Greek salad.",
-                      "example_es":  "Me encanta la ensalada griega."
+                      "example_es":  "Me encanta la ensalada griega.",
+                      "es_freq":  8384
                   },
                   {
                       "id":  "aj-симпатичный",
@@ -385,7 +409,8 @@
                       "example_cases":  "симпати́чный па́рень – Nominativ",
                       "example_de":  "Er ist ein netter, hübscher Kerl.",
                       "example_en":  "He\u0027s a nice-looking guy.",
-                      "example_es":  "Es un chico guapo."
+                      "example_es":  "Es un chico guapo.",
+                      "es_freq":  383
                   },
                   {
                       "id":  "aj-поэтический",
@@ -398,7 +423,8 @@
                       "example_cases":  "поэти́ческий ве́чер – Nominativ",
                       "example_de":  "Heute ist ein Lyrikabend.",
                       "example_en":  "There\u0027s a poetry evening today.",
-                      "example_es":  "Hoy hay una velada de poesía."
+                      "example_es":  "Hoy hay una velada de poesía.",
+                      "es_freq":  1364
                   },
                   {
                       "id":  "aj-контрольный",
@@ -412,7 +438,8 @@
                       "example_cases":  "у нас – Genitiv · контро́льная рабо́та – Nominativ",
                       "example_de":  "Morgen haben wir eine Klassenarbeit.",
                       "example_en":  "We have a test tomorrow.",
-                      "example_es":  "Mañana tenemos examen."
+                      "example_es":  "Mañana tenemos examen.",
+                      "es_freq":  2874
                   },
                   {
                       "id":  "aj-всемирный",
@@ -429,7 +456,8 @@
                       "adv":  "всеми́рно",
                       "adv_de":  "weltweit",
                       "adv_ex":  "Он всеми́рно изве́стен.",
-                      "adv_ex_de":  "Er ist weltberühmt."
+                      "adv_ex_de":  "Er ist weltberühmt.",
+                      "es_freq":  801
                   },
                   {
                       "id":  "aj-специфический",
@@ -446,7 +474,8 @@
                       "adv":  "специфи́чески",
                       "adv_de":  "spezifisch",
                       "adv_ex":  "Здесь специфи́чески па́хнет.",
-                      "adv_ex_de":  "Hier riecht es eigenartig."
+                      "adv_ex_de":  "Hier riecht es eigenartig.",
+                      "es_freq":  7472
                   },
                   {
                       "id":  "aj-малейший",
@@ -460,7 +489,8 @@
                       "example_cases":  "у меня́ – Genitiv · ни мале́йшего поня́тия – Genitiv (Verneinung)",
                       "example_de":  "Ich habe nicht die geringste Ahnung.",
                       "example_en":  "I don\u0027t have the slightest idea.",
-                      "example_es":  "No tengo la menor idea."
+                      "example_es":  "No tengo la menor idea.",
+                      "es_freq":  636
                   },
                   {
                       "id":  "aj-бурный",
@@ -477,7 +507,8 @@
                       "adv":  "бу́рно",
                       "adv_de":  "stürmisch, heftig",
                       "adv_ex":  "Зал бу́рно аплоди́ровал.",
-                      "adv_ex_de":  "Der Saal applaudierte stürmisch."
+                      "adv_ex_de":  "Der Saal applaudierte stürmisch.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-территориальный",
@@ -490,7 +521,8 @@
                       "example_cases":  "территориа́льный спор – Nominativ",
                       "example_de":  "Das ist ein Gebietsstreit.",
                       "example_en":  "It\u0027s a territorial dispute.",
-                      "example_es":  "Es una disputa territorial."
+                      "example_es":  "Es una disputa territorial.",
+                      "es_freq":  708
                   },
                   {
                       "id":  "aj-роскошный",
@@ -507,7 +539,8 @@
                       "adv":  "роско́шно",
                       "adv_de":  "luxuriös",
                       "adv_ex":  "Они́ живу́т роско́шно.",
-                      "adv_ex_de":  "Sie leben luxuriös."
+                      "adv_ex_de":  "Sie leben luxuriös.",
+                      "es_freq":  2268
                   },
                   {
                       "id":  "aj-коммунальный",
@@ -521,7 +554,8 @@
                       "example_cases":  "за коммуна́льные услу́ги – Akkusativ Plural",
                       "example_de":  "Ich zahle die Nebenkosten.",
                       "example_en":  "I pay for utilities.",
-                      "example_es":  "Pago los servicios básicos."
+                      "example_es":  "Pago los servicios básicos.",
+                      "es_freq":  274
                   },
                   {
                       "id":  "aj-весенний",
@@ -536,7 +570,8 @@
                       "example_cases":  "тёплый весе́нний день – Nominativ",
                       "example_de":  "Heute ist ein warmer Frühlingstag.",
                       "example_en":  "It\u0027s a warm spring day.",
-                      "example_es":  "Hoy es un día cálido de primavera."
+                      "example_es":  "Hoy es un día cálido de primavera.",
+                      "es_freq":  324
                   },
                   {
                       "id":  "aj-неизбежный",
@@ -553,7 +588,8 @@
                       "adv":  "неизбе́жно",
                       "adv_de":  "unvermeidlich",
                       "adv_ex":  "Э́то неизбе́жно.",
-                      "adv_ex_de":  "Das ist unvermeidlich."
+                      "adv_ex_de":  "Das ist unvermeidlich.",
+                      "es_freq":  4359
                   },
                   {
                       "id":  "aj-совершенный",
@@ -571,7 +607,8 @@
                       "adv":  "соверше́нно",
                       "adv_de":  "völlig",
                       "adv_ex":  "Ты соверше́нно прав.",
-                      "adv_ex_de":  "Du hast völlig recht."
+                      "adv_ex_de":  "Du hast völlig recht.",
+                      "es_freq":  85502
                   },
                   {
                       "id":  "aj-авторский",
@@ -585,7 +622,8 @@
                       "example_cases":  "а́вторская пе́сня – Nominativ",
                       "example_de":  "Das ist ein Liedermacher-Lied.",
                       "example_en":  "It\u0027s a singer-songwriter song.",
-                      "example_es":  "Es una canción de autor."
+                      "example_es":  "Es una canción de autor.",
+                      "es_freq":  274
                   },
                   {
                       "id":  "aj-напряженный",
@@ -602,7 +640,8 @@
                       "adv":  "напряжённо",
                       "adv_de":  "angespannt",
                       "adv_ex":  "Он напряжённо ждал.",
-                      "adv_ex_de":  "Er wartete angespannt."
+                      "adv_ex_de":  "Er wartete angespannt.",
+                      "es_freq":  5454
                   },
                   {
                       "id":  "aj-праздничный",
@@ -621,7 +660,8 @@
                       "adv":  "пра́зднично",
                       "adv_de":  "festlich",
                       "adv_ex":  "Все оде́ты пра́зднично.",
-                      "adv_ex_de":  "Alle sind festlich gekleidet."
+                      "adv_ex_de":  "Alle sind festlich gekleidet.",
+                      "es_freq":  1533
                   },
                   {
                       "id":  "aj-краткий",
@@ -640,7 +680,8 @@
                       "adv":  "кра́тко",
                       "adv_de":  "kurz",
                       "adv_ex":  "Расскажи́ кра́тко.",
-                      "adv_ex_de":  "Erzähl es kurz."
+                      "adv_ex_de":  "Erzähl es kurz.",
+                      "es_freq":  8441
                   },
                   {
                       "id":  "aj-подходящий",
@@ -654,7 +695,8 @@
                       "example_cases":  "подходя́щий моме́нт – Nominativ",
                       "example_de":  "Jetzt ist der passende Moment.",
                       "example_en":  "Now is the right moment.",
-                      "example_es":  "Ahora es el momento adecuado."
+                      "example_es":  "Ahora es el momento adecuado.",
+                      "es_freq":  18824
                   },
                   {
                       "id":  "aj-неправильный",
@@ -674,7 +716,8 @@
                       "adv":  "непра́вильно",
                       "adv_de":  "falsch",
                       "adv_ex":  "Э́то непра́вильно.",
-                      "adv_ex_de":  "Das ist falsch."
+                      "adv_ex_de":  "Das ist falsch.",
+                      "es_freq":  4977
                   },
                   {
                       "id":  "aj-неведомый",
@@ -692,7 +735,8 @@
                       "adv":  "неве́домо",
                       "adv_de":  "unbekannt, unbegreiflich",
                       "adv_ex":  "Неве́домо, где он сейча́с.",
-                      "adv_ex_de":  "Man weiß nicht, wo er jetzt ist."
+                      "adv_ex_de":  "Man weiß nicht, wo er jetzt ist.",
+                      "es_freq":  849
                   },
                   {
                       "id":  "aj-силовой",
@@ -705,7 +749,8 @@
                       "example_cases":  "силовы́м спо́ртом – Instrumental (nach занима́ться)",
                       "example_de":  "Er macht Kraftsport.",
                       "example_en":  "He does strength sports.",
-                      "example_es":  "Practica deportes de fuerza."
+                      "example_es":  "Practica deportes de fuerza.",
+                      "es_freq":  2616
                   },
                   {
                       "id":  "aj-свойственный",
@@ -719,7 +764,8 @@
                       "example_cases":  "сво́йственная ему́ черта́ – Nominativ",
                       "example_de":  "Das ist ein für ihn typischer Zug.",
                       "example_en":  "It\u0027s a trait typical of him.",
-                      "example_es":  "Es un rasgo propio de él."
+                      "example_es":  "Es un rasgo propio de él.",
+                      "es_freq":  6481
                   },
                   {
                       "id":  "aj-мудрый",
@@ -739,7 +785,8 @@
                       "adv":  "му́дро",
                       "adv_de":  "weise",
                       "adv_ex":  "Э́то му́дро.",
-                      "adv_ex_de":  "Das ist weise."
+                      "adv_ex_de":  "Das ist weise.",
+                      "es_freq":  19891
                   },
                   {
                       "id":  "aj-бесплатный",
@@ -757,7 +804,8 @@
                       "adv":  "беспла́тно",
                       "adv_de":  "kostenlos",
                       "adv_ex":  "Вход беспла́тно.",
-                      "adv_ex_de":  "Der Eintritt ist kostenlos."
+                      "adv_ex_de":  "Der Eintritt ist kostenlos.",
+                      "es_freq":  18558
                   },
                   {
                       "id":  "aj-механический",
@@ -775,7 +823,8 @@
                       "adv":  "механи́чески",
                       "adv_de":  "mechanisch",
                       "adv_ex":  "Он механи́чески кивну́л.",
-                      "adv_ex_de":  "Er nickte mechanisch."
+                      "adv_ex_de":  "Er nickte mechanisch.",
+                      "es_freq":  7533
                   },
                   {
                       "id":  "aj-вкусный",
@@ -796,7 +845,8 @@
                       "adv":  "вку́сно",
                       "adv_de":  "lecker",
                       "adv_ex":  "О́чень вку́сно!",
-                      "adv_ex_de":  "Sehr lecker!"
+                      "adv_ex_de":  "Sehr lecker!",
+                      "es_freq":  3179
                   }
               ]
 }

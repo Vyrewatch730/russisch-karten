@@ -25,7 +25,8 @@
                       "example_cases":  "тебе́ – Dativ · успе́хов – Genitiv Plural (nach жела́ть)",
                       "example_de":  "Ich wünsche dir viel Erfolg!",
                       "example_en":  "I wish you success!",
-                      "example_es":  "¡Te deseo mucho éxito!"
+                      "example_es":  "¡Te deseo mucho éxito!",
+                      "es_freq":  33312
                   },
                   {
                       "id":  "nm-счастье",
@@ -41,7 +42,8 @@
                       "example_cases":  "тебе́ – Dativ · сча́стья – Genitiv (nach жела́ть)",
                       "example_de":  "Ich wünsche dir viel Glück!",
                       "example_en":  "I wish you happiness!",
-                      "example_es":  "¡Te deseo mucha felicidad!"
+                      "example_es":  "¡Te deseo mucha felicidad!",
+                      "es_freq":  33087
                   },
                   {
                       "id":  "nm-ребята",
@@ -60,7 +62,8 @@
                       "example_cases":  "ребя́та – Nominativ (Anrede) · в кино́ – Akkusativ",
                       "example_de":  "Leute, lasst uns ins Kino gehen!",
                       "example_en":  "Guys, let\u0027s go to the movies!",
-                      "example_es":  "¡Muchachos, vamos al cine!"
+                      "example_es":  "¡Muchachos, vamos al cine!",
+                      "es_freq":  170008
                   },
                   {
                       "id":  "nm-кабинет",
@@ -79,7 +82,8 @@
                       "example_cases":  "дире́ктор – Nominativ · в кабине́те – Präpositiv",
                       "example_de":  "Der Direktor ist in seinem Büro.",
                       "example_en":  "The director is in his office.",
-                      "example_es":  "El director está en su oficina."
+                      "example_es":  "El director está en su oficina.",
+                      "es_freq":  79971
                   },
                   {
                       "id":  "nm-пространство",
@@ -97,7 +101,8 @@
                       "example_cases":  "в кварти́ре – Präpositiv · простра́нства – Genitiv (nach мно́го)",
                       "example_de":  "Die Wohnung hat viel Platz.",
                       "example_en":  "The apartment has a lot of space.",
-                      "example_es":  "El apartamento tiene mucho espacio."
+                      "example_es":  "El apartamento tiene mucho espacio.",
+                      "es_freq":  39137
                   },
                   {
                       "id":  "nm-магазин",
@@ -116,7 +121,8 @@
                       "example_cases":  "в магази́н – Akkusativ (wohin?) · за хле́бом – Instrumental",
                       "example_de":  "Ich gehe in den Laden, Brot holen.",
                       "example_en":  "I\u0027m going to the store for bread.",
-                      "example_es":  "Voy a la tienda a buscar pan."
+                      "example_es":  "Voy a la tienda a buscar pan.",
+                      "es_freq":  52715
                   },
                   {
                       "id":  "nm-выход",
@@ -135,7 +141,8 @@
                       "example_cases":  "вы́ход – Nominativ",
                       "example_de":  "Wo ist der Ausgang?",
                       "example_en":  "Where\u0027s the exit?",
-                      "example_es":  "¿Dónde está la salida?"
+                      "example_es":  "¿Dónde está la salida?",
+                      "es_freq":  32609
                   },
                   {
                       "id":  "nm-удар",
@@ -154,7 +161,8 @@
                       "example_cases":  "уда́р – Akkusativ · по голове́ – Dativ",
                       "example_de":  "Er hat einen Schlag auf den Kopf bekommen.",
                       "example_en":  "He got a blow to the head.",
-                      "example_es":  "Recibió un golpe en la cabeza."
+                      "example_es":  "Recibió un golpe en la cabeza.",
+                      "es_freq":  37489
                   },
                   {
                       "id":  "nm-база",
@@ -173,7 +181,8 @@
                       "example_cases":  "но́вая ба́за – Nominativ · да́нных – Genitiv Plural",
                       "example_de":  "Das ist eine neue Datenbank.",
                       "example_en":  "This is a new database.",
-                      "example_es":  "Es una nueva base de datos."
+                      "example_es":  "Es una nueva base de datos.",
+                      "es_freq":  1817
                   },
                   {
                       "id":  "nm-знание",
@@ -192,7 +201,8 @@
                       "example_cases":  "у него́ – Genitiv · хоро́шие зна́ния – Nominativ Plural",
                       "example_de":  "Er hat gute Kenntnisse.",
                       "example_en":  "He has good knowledge.",
-                      "example_es":  "Él tiene buenos conocimientos."
+                      "example_es":  "Él tiene buenos conocimientos.",
+                      "es_freq":  15457
                   },
                   {
                       "id":  "nm-текст",
@@ -210,7 +220,8 @@
                       "example_cases":  "э́тот текст – Akkusativ",
                       "example_de":  "Lies diesen Text.",
                       "example_en":  "Read this text.",
-                      "example_es":  "Lee este texto."
+                      "example_es":  "Lee este texto.",
+                      "es_freq":  8854
                   },
                   {
                       "id":  "nm-защита",
@@ -225,7 +236,8 @@
                       "example_cases":  "э́тот крем – Nominativ · хоро́шая защи́та – Nominativ · от со́лнца – Genitiv",
                       "example_de":  "Diese Creme ist ein guter Sonnenschutz.",
                       "example_en":  "This cream is good sun protection.",
-                      "example_es":  "Esta crema es una buena protección contra el sol."
+                      "example_es":  "Esta crema es una buena protección contra el sol.",
+                      "es_freq":  16191
                   },
                   {
                       "id":  "nm-руководство",
@@ -240,7 +252,8 @@
                       "example_cases":  "руково́дство – Nominativ · компа́нии – Genitiv · реше́ние – Akkusativ",
                       "example_de":  "Die Firmenleitung hat eine Entscheidung getroffen.",
                       "example_en":  "The company\u0027s management made a decision.",
-                      "example_es":  "La dirección de la empresa tomó una decisión."
+                      "example_es":  "La dirección de la empresa tomó una decisión.",
+                      "es_freq":  2444
                   },
                   {
                       "id":  "nm-сознание",
@@ -255,7 +268,8 @@
                       "example_cases":  "созна́ние – Akkusativ",
                       "example_de":  "Er hat das Bewusstsein verloren.",
                       "example_en":  "He lost consciousness.",
-                      "example_es":  "Él perdió el conocimiento."
+                      "example_es":  "Él perdió el conocimiento.",
+                      "es_freq":  12441
                   },
                   {
                       "id":  "nm-площадь",
@@ -274,7 +288,8 @@
                       "example_cases":  "Кра́сная пло́щадь – Nominativ · в це́нтре – Präpositiv · Москвы́ – Genitiv",
                       "example_de":  "Der Rote Platz liegt im Zentrum von Moskau.",
                       "example_en":  "Red Square is in the center of Moscow.",
-                      "example_es":  "La Plaza Roja está en el centro de Moscú."
+                      "example_es":  "La Plaza Roja está en el centro de Moscú.",
+                      "es_freq":  9578
                   },
                   {
                       "id":  "nm-возраст",
@@ -293,7 +308,8 @@
                       "example_cases":  "в како́м во́зрасте – Präpositiv · де́ти – Nominativ Plural · в шко́лу – Akkusativ",
                       "example_de":  "In welchem Alter kommen Kinder in die Schule?",
                       "example_en":  "At what age do children start school?",
-                      "example_es":  "¿A qué edad van los niños a la escuela?"
+                      "example_es":  "¿A qué edad van los niños a la escuela?",
+                      "es_freq":  52218
                   },
                   {
                       "id":  "nm-участок",
@@ -312,7 +328,8 @@
                       "example_cases":  "у нас – Genitiv · уча́сток – Nominativ · за го́родом – Instrumental",
                       "example_de":  "Wir haben ein Grundstück außerhalb der Stadt.",
                       "example_en":  "We have a plot of land outside the city.",
-                      "example_es":  "Tenemos un terreno fuera de la ciudad."
+                      "example_es":  "Tenemos un terreno fuera de la ciudad.",
+                      "es_freq":  11725
                   },
                   {
                       "id":  "nm-участник",
@@ -332,7 +349,8 @@
                       "example_cases":  "все уча́стники – Nominativ Plural · пода́рки – Akkusativ Plural",
                       "example_de":  "Alle Teilnehmer haben Geschenke bekommen.",
                       "example_en":  "All participants received gifts.",
-                      "example_es":  "Todos los participantes recibieron regalos."
+                      "example_es":  "Todos los participantes recibieron regalos.",
+                      "es_freq":  2064
                   },
                   {
                       "id":  "nm-пункт",
@@ -351,7 +369,8 @@
                       "example_cases":  "пе́рвый пункт – Nominativ · пла́на – Genitiv",
                       "example_de":  "Der erste Punkt des Plans ist Aufräumen.",
                       "example_en":  "The first item on the plan is cleaning.",
-                      "example_es":  "El primer punto del plan es limpiar."
+                      "example_es":  "El primer punto del plan es limpiar.",
+                      "es_freq":  6342
                   },
                   {
                       "id":  "nm-линия",
@@ -370,7 +389,8 @@
                       "example_cases":  "пряму́ю ли́нию – Akkusativ",
                       "example_de":  "Zeichne eine gerade Linie.",
                       "example_en":  "Draw a straight line.",
-                      "example_es":  "Dibuja una línea recta."
+                      "example_es":  "Dibuja una línea recta.",
+                      "es_freq":  57199
                   },
                   {
                       "id":  "nm-желание",
@@ -388,7 +408,8 @@
                       "example_cases":  "у меня́ – Genitiv · жела́ния – Genitiv (nach нет)",
                       "example_de":  "Ich habe keine Lust zu gehen.",
                       "example_en":  "I don\u0027t feel like going.",
-                      "example_es":  "No tengo ganas de ir."
+                      "example_es":  "No tengo ganas de ir.",
+                      "es_freq":  33249
                   },
                   {
                       "id":  "nm-папа",
@@ -410,7 +431,8 @@
                       "example_en":  "I\u0027m going to the cinema with dad.",
                       "example_es":  "Voy al cine con papi.",
                       "ex_sg":  "Мой па́па – врач. = Mein Papa ist Arzt. || У па́пы есть маши́на. = Papa hat ein Auto. || Я звоню́ па́пе. = Ich rufe Papa an. || Я люблю́ па́пу. = Ich liebe Papa. || Я иду́ в кино́ с па́пой. = Ich gehe mit Papa ins Kino. || Я ду́маю о па́пе. = Ich denke an Papa.",
-                      "ex_pl":  "Па́пы игра́ют с детьми́. = Die Papas spielen mit den Kindern. || В па́рке мно́го пап. = Im Park sind viele Papas. || Мы да́рим па́пам пода́рки. = Wir schenken den Papas Geschenke. || Я ви́жу пап с детьми́. = Ich sehe Papas mit Kindern. || Де́ти гуля́ют с па́пами. = Die Kinder gehen mit den Papas spazieren. || Э́та кни́га о па́пах. = Dieses Buch handelt von Papas."
+                      "ex_pl":  "Па́пы игра́ют с детьми́. = Die Papas spielen mit den Kindern. || В па́рке мно́го пап. = Im Park sind viele Papas. || Мы да́рим па́пам пода́рки. = Wir schenken den Papas Geschenke. || Я ви́жу пап с детьми́. = Ich sehe Papas mit Kindern. || Де́ти гуля́ют с па́пами. = Die Kinder gehen mit den Papas spazieren. || Э́та кни́га о па́пах. = Dieses Buch handelt von Papas.",
+                      "es_freq":  245646
                   },
                   {
                       "id":  "nm-доктор",
@@ -430,7 +452,8 @@
                       "example_cases":  "до́ктор – Nominativ (Anrede) · у меня́ – Genitiv · го́рло – Nominativ",
                       "example_de":  "Herr Doktor, mir tut der Hals weh.",
                       "example_en":  "Doctor, I have a sore throat.",
-                      "example_es":  "Doctor, me duele la garganta."
+                      "example_es":  "Doctor, me duele la garganta.",
+                      "es_freq":  111694
                   },
                   {
                       "id":  "nm-губа",
@@ -449,7 +472,8 @@
                       "example_cases":  "у неё – Genitiv · кра́сные гу́бы – Nominativ Plural",
                       "example_de":  "Sie hat rote Lippen.",
                       "example_en":  "She has red lips.",
-                      "example_es":  "Ella tiene labios rojos."
+                      "example_es":  "Ella tiene labios rojos.",
+                      "es_freq":  15177
                   },
                   {
                       "id":  "nm-среда",
@@ -469,7 +493,8 @@
                       "example_de":  "Treffen wir uns am Mittwoch.",
                       "example_en":  "Let\u0027s meet on Wednesday.",
                       "example_es":  "Nos vemos el miércoles.",
-                      "akk":  "сре́ду"
+                      "akk":  "сре́ду",
+                      "es_freq":  8314
                   },
                   {
                       "id":  "nm-дочь",
@@ -491,7 +516,8 @@
                       "example_en":  "They have a little daughter.",
                       "example_es":  "Ellos tienen una hija pequeña.",
                       "ins":  "до́черью",
-                      "ipl":  "дочерьми́"
+                      "ipl":  "дочерьми́",
+                      "es_freq":  133643
                   },
                   {
                       "id":  "nm-председатель",
@@ -511,7 +537,8 @@
                       "example_cases":  "его́ – Akkusativ · председа́телем – Instrumental",
                       "example_de":  "Er wurde zum Vorsitzenden gewählt.",
                       "example_en":  "He was elected chairman.",
-                      "example_es":  "Lo eligieron presidente."
+                      "example_es":  "Lo eligieron presidente.",
+                      "es_freq":  3114
                   },
                   {
                       "id":  "nm-художник",
@@ -530,7 +557,8 @@
                       "example_cases":  "мой брат – Nominativ · худо́жник – Nominativ",
                       "example_de":  "Mein Bruder ist Maler.",
                       "example_en":  "My brother is an artist.",
-                      "example_es":  "Mi hermano es pintor."
+                      "example_es":  "Mi hermano es pintor.",
+                      "es_freq":  4358
                   },
                   {
                       "id":  "nm-солдат",
@@ -550,7 +578,8 @@
                       "example_cases":  "солда́т – Nominativ · на посту́ – Präpositiv",
                       "example_de":  "Der Soldat steht auf seinem Posten.",
                       "example_en":  "The soldier is at his post.",
-                      "example_es":  "El soldado está en su puesto."
+                      "example_es":  "El soldado está en su puesto.",
+                      "es_freq":  47793
                   },
                   {
                       "id":  "nm-представление",
@@ -569,7 +598,8 @@
                       "example_cases":  "представле́ния – Genitiv (Verneinung)",
                       "example_de":  "Ich habe keine Ahnung.",
                       "example_en":  "I have no idea.",
-                      "example_es":  "No tengo ni idea."
+                      "example_es":  "No tengo ni idea.",
+                      "es_freq":  9993
                   },
                   {
                       "id":  "nm-оружие",
@@ -585,7 +615,8 @@
                       "example_cases":  "у него́ – Genitiv · ору́жия – Genitiv (nach нет)",
                       "example_de":  "Er hat keine Waffe.",
                       "example_en":  "He has no weapon.",
-                      "example_es":  "Él no tiene armas."
+                      "example_es":  "Él no tiene armas.",
+                      "es_freq":  135759
                   },
                   {
                       "id":  "nm-волос",
@@ -604,7 +635,8 @@
                       "example_cases":  "у неё – Genitiv · дли́нные во́лосы – Nominativ Plural",
                       "example_de":  "Sie hat lange Haare.",
                       "example_en":  "She has long hair.",
-                      "example_es":  "Ella tiene el pelo largo."
+                      "example_es":  "Ella tiene el pelo largo.",
+                      "es_freq":  52394
                   },
                   {
                       "id":  "nm-соответствие",
@@ -620,7 +652,8 @@
                       "example_cases":  "в соотве́тствии – Präpositiv · с пра́вилами – Instrumental Plural",
                       "example_de":  "Alles ist gemäß den Regeln gemacht.",
                       "example_en":  "Everything is done according to the rules.",
-                      "example_es":  "Todo está hecho de acuerdo con las reglas."
+                      "example_es":  "Todo está hecho de acuerdo con las reglas.",
+                      "es_freq":  408
                   },
                   {
                       "id":  "nm-парень",
@@ -640,7 +673,8 @@
                       "example_cases":  "у неё – Genitiv · па́рень – Nominativ",
                       "example_de":  "Sie hat einen Freund.",
                       "example_en":  "She has a boyfriend.",
-                      "example_es":  "Ella tiene novio."
+                      "example_es":  "Ella tiene novio.",
+                      "es_freq":  315017
                   },
                   {
                       "id":  "nm-ветер",
@@ -660,7 +694,8 @@
                       "example_de":  "Heute ist es sehr windig.",
                       "example_en":  "It\u0027s very windy today.",
                       "example_es":  "Hoy hace mucho viento.",
-                      "loc":  "на ветру́"
+                      "loc":  "на ветру́",
+                      "es_freq":  23910
                   },
                   {
                       "id":  "nm-зрение",
@@ -676,7 +711,8 @@
                       "example_cases":  "у меня́ – Genitiv · плохо́е зре́ние – Nominativ",
                       "example_de":  "Ich sehe schlecht.",
                       "example_en":  "I have poor eyesight.",
-                      "example_es":  "Tengo mala vista."
+                      "example_es":  "Tengo mala vista.",
+                      "es_freq":  490
                   },
                   {
                       "id":  "nm-генерал",
@@ -695,7 +731,8 @@
                       "example_cases":  "генера́л – Nominativ · прика́з – Akkusativ",
                       "example_de":  "Der General gab einen Befehl.",
                       "example_en":  "The general gave an order.",
-                      "example_es":  "El general dio una orden."
+                      "example_es":  "El general dio una orden.",
+                      "es_freq":  3142
                   },
                   {
                       "id":  "nm-огонь",
@@ -714,7 +751,8 @@
                       "example_cases":  "у огня́ – Genitiv",
                       "example_de":  "Wir sitzen am Feuer.",
                       "example_en":  "We\u0027re sitting by the fire.",
-                      "example_es":  "Estamos sentados junto al fuego."
+                      "example_es":  "Estamos sentados junto al fuego.",
+                      "es_freq":  69725
                   },
                   {
                       "id":  "nm-строительство",
@@ -729,7 +767,8 @@
                       "example_cases":  "строи́тельство – Nominativ · до́ма – Genitiv · год – Akkusativ",
                       "example_de":  "Der Hausbau dauert schon ein Jahr.",
                       "example_en":  "The construction of the house has been going on for a year.",
-                      "example_es":  "La construcción de la casa lleva un año."
+                      "example_es":  "La construcción de la casa lleva un año.",
+                      "es_freq":  9148
                   },
                   {
                       "id":  "nm-понятие",
@@ -748,7 +787,8 @@
                       "example_cases":  "поня́тия – Genitiv (Verneinung)",
                       "example_de":  "Keine Ahnung!",
                       "example_en":  "No idea!",
-                      "example_es":  "¡Ni idea!"
+                      "example_es":  "¡Ni idea!",
+                      "es_freq":  6589
                   },
                   {
                       "id":  "nm-ухо",
@@ -767,7 +807,8 @@
                       "example_cases":  "у меня́ – Genitiv · у́хо – Nominativ",
                       "example_de":  "Mir tut das Ohr weh.",
                       "example_en":  "My ear hurts.",
-                      "example_es":  "Me duele el oído."
+                      "example_es":  "Me duele el oído.",
+                      "es_freq":  12469
                   },
                   {
                       "id":  "nm-нос",
@@ -787,7 +828,8 @@
                       "example_de":  "Meine Nase ist verstopft.",
                       "example_en":  "My nose is stuffy.",
                       "example_es":  "Tengo la nariz tapada.",
-                      "loc":  "на носу́"
+                      "loc":  "на носу́",
+                      "es_freq":  26050
                   },
                   {
                       "id":  "nm-грудь",
@@ -804,7 +846,8 @@
                       "example_de":  "Ich habe Brustschmerzen.",
                       "example_en":  "I have chest pain.",
                       "example_es":  "Me duele el pecho.",
-                      "loc":  "в груди́"
+                      "loc":  "в груди́",
+                      "es_freq":  22860
                   },
                   {
                       "id":  "nm-страх",
@@ -823,7 +866,8 @@
                       "example_cases":  "от стра́ха – Genitiv",
                       "example_de":  "Er zitterte vor Angst.",
                       "example_en":  "He was trembling with fear.",
-                      "example_es":  "Temblaba de miedo."
+                      "example_es":  "Temblaba de miedo.",
+                      "es_freq":  121067
                   },
                   {
                       "id":  "nm-услуга",
@@ -842,7 +886,8 @@
                       "example_cases":  "мне – Dativ · одну́ услу́гу – Akkusativ",
                       "example_de":  "Tu mir einen Gefallen.",
                       "example_en":  "Do me a favor.",
-                      "example_es":  "Hazme un favor."
+                      "example_es":  "Hazme un favor.",
+                      "es_freq":  2793
                   },
                   {
                       "id":  "nm-содержание",
@@ -858,7 +903,8 @@
                       "example_cases":  "содержа́ние – Akkusativ · кни́ги – Genitiv",
                       "example_de":  "Erzähl den Inhalt des Buches.",
                       "example_en":  "Tell the plot of the book.",
-                      "example_es":  "Cuenta el contenido del libro."
+                      "example_es":  "Cuenta el contenido del libro.",
+                      "es_freq":  1641
                   },
                   {
                       "id":  "nm-радость",
@@ -877,7 +923,8 @@
                       "example_cases":  "от ра́дости – Genitiv",
                       "example_de":  "Sie weint vor Freude.",
                       "example_en":  "She\u0027s crying with joy.",
-                      "example_es":  "Ella llora de alegría."
+                      "example_es":  "Ella llora de alegría.",
+                      "es_freq":  15045
                   },
                   {
                       "id":  "nm-безопасность",
@@ -893,7 +940,8 @@
                       "example_cases":  "безопа́сность – Nominativ · дете́й – Genitiv Plural",
                       "example_de":  "Die Sicherheit der Kinder ist das Wichtigste.",
                       "example_en":  "Children\u0027s safety is most important.",
-                      "example_es":  "La seguridad de los niños es lo más importante."
+                      "example_es":  "La seguridad de los niños es lo más importante.",
+                      "es_freq":  76807
                   },
                   {
                       "id":  "nm-продукт",
@@ -912,7 +960,8 @@
                       "example_cases":  "проду́кты – Akkusativ Plural · в магази́не – Präpositiv",
                       "example_de":  "Ich kaufe Lebensmittel im Laden.",
                       "example_en":  "I buy groceries at the store.",
-                      "example_es":  "Compro alimentos en la tienda."
+                      "example_es":  "Compro alimentos en la tienda.",
+                      "es_freq":  15319
                   },
                   {
                       "id":  "nm-комплекс",
@@ -930,7 +979,8 @@
                       "example_cases":  "большо́й спорти́вный ко́мплекс – Akkusativ",
                       "example_de":  "Hier wird ein großer Sportkomplex gebaut.",
                       "example_en":  "A big sports complex is being built here.",
-                      "example_es":  "Aquí están construyendo un gran complejo deportivo."
+                      "example_es":  "Aquí están construyendo un gran complejo deportivo.",
+                      "es_freq":  7301
                   }
               ]
 }

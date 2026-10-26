@@ -218,6 +218,115 @@ const RULES_ES = [
 <p class="tip">In der Dominikanischen Republik steht das Pronomen in Fragen oft <b>vor</b> dem Verb: ¿Qué tú quieres? statt ¿Qué quieres tú?</p>`,
   },
   {
+    id: 'es-reflexiv',
+    icon: '🪞',
+    title: 'Reflexive Verben',
+    teaser: 'me levanto, te llamas, se sienta · wohin das Pronomen kommt',
+    html: `
+<p>Reflexive Verben erkennt man am <b>-se</b> im Infinitiv: levantarse, llamarse, ducharse. Wie im Russischen (-ся) und im Deutschen (sich).</p>
+<table class="rtable">
+  <tr><th></th><th>Pronomen</th><th>levantarse (aufstehen)</th></tr>
+  <tr><td>yo</td><td>me</td><td>me levanto</td></tr>
+  <tr><td>tú</td><td>te</td><td>te levantas</td></tr>
+  <tr><td>él/ella/usted</td><td>se</td><td>se levanta</td></tr>
+  <tr><td>nosotros</td><td>nos</td><td>nos levantamos</td></tr>
+  <tr><td>ellos/ustedes</td><td>se</td><td>se levantan</td></tr>
+</table>
+<h3>Wohin mit dem Pronomen?</h3>
+<ul>
+  <li><b>Vor</b> das konjugierte Verb: ${SW('Me llamo Ana.')} · ${SW('¿A qué hora te levantas?')}</li>
+  <li>Beim Infinitiv und Gerundio darf es <b>angehängt</b> werden: ${SW('Voy a ducharme.')} = ${SW('Me voy a duchar.')}</li>
+  <li>Beim bejahten Imperativ wird es <b>immer angehängt</b>: ${SW('¡Siéntate!')} · ${SW('¡Cálmate!')} – verneint davor: ${SW('¡No te preocupes!')}</li>
+</ul>
+<h3>Typische reflexive Verben im Alltag</h3>
+<p>${SW('levantarse')} aufstehen · ${SW('acostarse')} ins Bett gehen · ${SW('ducharse')} duschen · ${SW('vestirse')} sich anziehen · ${SW('llamarse')} heißen · ${SW('sentarse')} sich setzen · ${SW('quedarse')} bleiben · ${SW('irse')} weggehen · ${SW('preocuparse')} sich Sorgen machen · ${SW('enamorarse')} sich verlieben</p>
+<p class="tip"><b>Achtung Bedeutung:</b> ir = gehen, irse = weggehen (Me voy = Ich gehe jetzt). dormir = schlafen, dormirse = einschlafen. llamar = rufen, llamarse = heißen.</p>
+<p>Gegenseitig („einander“) mit nos/se: ${SW('Nos vemos mañana.')} = Wir sehen uns morgen.</p>`,
+  },
+  {
+    id: 'es-imperativ',
+    icon: '📣',
+    title: 'Imperativ (Befehlsform)',
+    teaser: '¡Habla! ¡Ven! ¡No hables! · tú, usted, ustedes',
+    html: `
+<h3>tú – bejaht</h3>
+<p>Wie die él-Form im Präsens: ${SW('¡Habla!')} · ${SW('¡Come!')} · ${SW('¡Escribe!')} · ${SW('¡Cierra la puerta!')}</p>
+<p>Acht unregelmäßige Formen zum Auswendiglernen:</p>
+<table class="rtable">
+  <tr><td>decir → <b>di</b></td><td>hacer → <b>haz</b></td><td>ir → <b>ve</b></td><td>poner → <b>pon</b></td></tr>
+  <tr><td>salir → <b>sal</b></td><td>ser → <b>sé</b></td><td>tener → <b>ten</b></td><td>venir → <b>ven</b></td></tr>
+</table>
+<h3>usted, ustedes und alle verneinten Formen</h3>
+<p>Sie nehmen den <b>Subjuntivo</b>: -ar → -e, -er/-ir → -a (der „falsche“ Vokal).</p>
+<table class="rtable">
+  <tr><th></th><th>hablar</th><th>comer</th><th>tener</th></tr>
+  <tr><td>tú</td><td>habla</td><td>come</td><td>ten</td></tr>
+  <tr><td>no + tú</td><td>no hables</td><td>no comas</td><td>no tengas</td></tr>
+  <tr><td>usted</td><td>hable</td><td>coma</td><td>tenga</td></tr>
+  <tr><td>ustedes</td><td>hablen</td><td>coman</td><td>tengan</td></tr>
+</table>
+<h3>Pronomen</h3>
+<p>Bejaht hängen sie hinten an (oft mit Akzent, damit die Betonung bleibt): ${SW('¡Dime!')} · ${SW('¡Dámelo!')} · ${SW('¡Levántate!')}. Verneint stehen sie davor: ${SW('¡No me digas!')}</p>
+<p class="tip">Höflicher als der Imperativ ist eine Frage: ¿Me pasas la sal? (Gibst du mir das Salz?) oder ¿Podría …? In der DR hört man oft: ¡Dame un chin de agua, por favor!</p>`,
+  },
+  {
+    id: 'es-fragewoerter',
+    icon: '❓',
+    title: 'Fragewörter',
+    teaser: 'qué, quién, dónde, cuándo, cómo, cuánto, por qué …',
+    html: `
+<p>Fragewörter haben immer einen <b>Akzent</b>. Fragen haben vorne ein umgedrehtes Fragezeichen: ¿…?</p>
+<table class="rtable">
+  <tr><th>Fragewort</th><th>Bedeutung</th><th>Beispiel</th></tr>
+  <tr><td>qué</td><td>was, welcher</td><td>${SW('¿Qué quieres?')}</td></tr>
+  <tr><td>quién, quiénes</td><td>wer</td><td>${SW('¿Quién es?')}</td></tr>
+  <tr><td>dónde</td><td>wo</td><td>${SW('¿Dónde vives?')}</td></tr>
+  <tr><td>adónde</td><td>wohin</td><td>${SW('¿Adónde vas?')}</td></tr>
+  <tr><td>de dónde</td><td>woher</td><td>${SW('¿De dónde eres?')}</td></tr>
+  <tr><td>cuándo</td><td>wann</td><td>${SW('¿Cuándo llegas?')}</td></tr>
+  <tr><td>cómo</td><td>wie</td><td>${SW('¿Cómo te llamas?')}</td></tr>
+  <tr><td>cuánto, cuánta</td><td>wie viel</td><td>${SW('¿Cuánto cuesta?')}</td></tr>
+  <tr><td>cuántos, cuántas</td><td>wie viele</td><td>${SW('¿Cuántos años tienes?')}</td></tr>
+  <tr><td>cuál, cuáles</td><td>welcher (Auswahl)</td><td>${SW('¿Cuál prefieres?')}</td></tr>
+  <tr><td>por qué</td><td>warum</td><td>${SW('¿Por qué no viniste?')}</td></tr>
+  <tr><td>para qué</td><td>wozu</td><td>${SW('¿Para qué es esto?')}</td></tr>
+</table>
+<p class="tip"><b>por qué</b> (warum, zwei Wörter, Akzent) – <b>porque</b> (weil, ein Wort): ¿Por qué estás aquí? – Porque te quiero.</p>
+<p><b>qué oder cuál?</b> Vor ser meist cuál: ¿Cuál es tu número? Vor einem Nomen qué: ¿Qué color te gusta?</p>
+<p>In der DR steht das Subjekt oft vor dem Verb: ${SW('¿Dónde tú vives?')} · ${SW('¿Qué tú quieres?')}</p>`,
+  },
+  {
+    id: 'es-zeitformen',
+    icon: '🗓️',
+    title: 'Alle Zeitformen im Überblick',
+    teaser: 'Welche Zeitform wofür? Presente bis Subjuntivo',
+    html: `
+<p>Auf jeder Verbkarte findest du unter „Alle Zeitformen anzeigen“ die Formen. Hier steht, wofür man sie braucht – mit hablar als Beispiel.</p>
+<table class="rtable">
+  <tr><th>Zeitform</th><th>yo</th><th>wofür</th></tr>
+  <tr><td>Presente</td><td>hablo</td><td>jetzt, immer, gleich: Hablo español.</td></tr>
+  <tr><td>Pretérito</td><td>hablé</td><td>abgeschlossen, einmal: Ayer hablé con él.</td></tr>
+  <tr><td>Imperfecto</td><td>hablaba</td><td>früher immer, Beschreibung, Hintergrund: Antes hablaba poco.</td></tr>
+  <tr><td>Pretérito perfecto</td><td>he hablado</td><td>„habe gesprochen“ – in Spanien häufig, in der DR selten</td></tr>
+  <tr><td>Futuro (ir a)</td><td>voy a hablar</td><td>Zukunft im Alltag: Mañana voy a hablar con él.</td></tr>
+  <tr><td>Futuro simple</td><td>hablaré</td><td>Zukunft (schriftlicher), Vermutung: ¿Dónde estará?</td></tr>
+  <tr><td>Condicional</td><td>hablaría</td><td>„würde“, höflich: ¿Podría ayudarme?</td></tr>
+  <tr><td>Subjuntivo</td><td>hable</td><td>nach Wunsch, Gefühl, Zweifel: Quiero que hables.</td></tr>
+  <tr><td>Gerundio</td><td>hablando</td><td>gerade dabei: Estoy hablando.</td></tr>
+  <tr><td>Imperativo</td><td>¡habla!</td><td>Befehl, Bitte</td></tr>
+</table>
+<p class="tip"><b>Lernreihenfolge:</b> Presente → Pretérito → ir a + Infinitiv → Imperfecto → Gerundio → Imperativo. Damit kommst du im Alltag sehr weit. Condicional und Subjuntivo kommen danach (ab B1).</p>
+<h3>Subjuntivo: die wichtigsten Auslöser</h3>
+<ul>
+  <li>Wunsch: quiero que, espero que, ojalá → ${SW('Espero que estés bien.')}</li>
+  <li>Gefühl: me alegra que, me molesta que → ${SW('Me alegra que vengas.')}</li>
+  <li>Aufforderung: te pido que, es importante que</li>
+  <li>Zweifel: no creo que, dudo que → ${SW('No creo que llueva.')}</li>
+  <li>Zukunft mit cuando: ${SW('Cuando llegues, llámame.')}</li>
+</ul>
+<p class="tip">Zum Üben gibt es den Modus 🔁 „Konjugation üben“ bei den Verb-Decks – dort kannst du die Zeitformen auswählen.</p>`,
+  },
+  {
     id: 'es-adjektive',
     icon: '🎨',
     title: 'Adjektive und Vergleich',

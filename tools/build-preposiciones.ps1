@@ -51,3 +51,6 @@ $index = @(([IO.File]::ReadAllText($indexPath, $utf8) | ConvertFrom-Json) | Wher
 $all = $index + @($entry)
 [IO.File]::WriteAllText($indexPath, (ConvertTo-Json @($all) -Depth 3), $utf8)
 Write-Host "Gesamt: $($cards.Count) spanische Präpositionen"
+
+# Spanische Häufigkeit (es_freq) wieder eintragen
+& (Join-Path $PSScriptRoot 'apply-es-rank.ps1')

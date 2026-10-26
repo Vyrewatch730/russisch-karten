@@ -25,7 +25,8 @@
                       "example_cases":  "па́па – Nominativ · в кре́сле – Präpositiv",
                       "example_de":  "Papa sitzt im Sessel.",
                       "example_en":  "Dad is sitting in the armchair.",
-                      "example_es":  "Papá está sentado en el sillón."
+                      "example_es":  "Papá está sentado en el sillón.",
+                      "es_freq":  2918
                   },
                   {
                       "id":  "nm-больной",
@@ -46,7 +47,8 @@
                       "example_en":  "The doctor is examining the patient.",
                       "example_es":  "El médico examina al paciente.",
                       "sg":  "больно́й|больно́го|больно́му|больно́го|больны́м|больно́м",
-                      "ipl":  "больны́ми"
+                      "ipl":  "больны́ми",
+                      "es_freq":  860
                   },
                   {
                       "id":  "nm-университет",
@@ -65,7 +67,8 @@
                       "example_cases":  "сестра́ – Nominativ · в университе́те – Präpositiv",
                       "example_de":  "Meine Schwester studiert an der Universität.",
                       "example_en":  "My sister studies at the university.",
-                      "example_es":  "Mi hermana estudia en la universidad."
+                      "example_es":  "Mi hermana estudia en la universidad.",
+                      "es_freq":  44484
                   },
                   {
                       "id":  "nm-поезд",
@@ -84,7 +87,8 @@
                       "example_cases":  "по́езд – Nominativ",
                       "example_de":  "Der Zug hat Verspätung.",
                       "example_en":  "The train is late.",
-                      "example_es":  "El tren está retrasado."
+                      "example_es":  "El tren está retrasado.",
+                      "es_freq":  42717
                   },
                   {
                       "id":  "nm-традиция",
@@ -102,7 +106,8 @@
                       "example_cases":  "ста́рая ру́сская тради́ция – Nominativ",
                       "example_de":  "Das ist eine alte russische Tradition.",
                       "example_en":  "This is an old Russian tradition.",
-                      "example_es":  "Es una antigua tradición rusa."
+                      "example_es":  "Es una antigua tradición rusa.",
+                      "es_freq":  9439
                   },
                   {
                       "id":  "nm-ладонь",
@@ -121,7 +126,8 @@
                       "example_cases":  "у меня́ – Genitiv · в ладо́ни – Präpositiv · моне́та – Nominativ",
                       "example_de":  "Ich habe eine Münze in der Handfläche.",
                       "example_en":  "I have a coin in my palm.",
-                      "example_es":  "Tengo una moneda en la palma de la mano."
+                      "example_es":  "Tengo una moneda en la palma de la mano.",
+                      "es_freq":  3957
                   },
                   {
                       "id":  "nm-декабрь",
@@ -137,7 +143,8 @@
                       "example_cases":  "в декабре́ – Präpositiv · в го́ры – Akkusativ Plural",
                       "example_de":  "Im Dezember fahren wir in die Berge.",
                       "example_en":  "In December we\u0027re going to the mountains.",
-                      "example_es":  "En diciembre vamos a las montañas."
+                      "example_es":  "En diciembre vamos a las montañas.",
+                      "es_freq":  5408
                   },
                   {
                       "id":  "nm-адрес",
@@ -156,7 +163,8 @@
                       "example_cases":  "мне – Dativ · свой а́дрес – Akkusativ",
                       "example_de":  "Schreib mir deine Adresse.",
                       "example_en":  "Write me your address.",
-                      "example_es":  "Escríbeme tu dirección."
+                      "example_es":  "Escríbeme tu dirección.",
+                      "es_freq":  2444
                   },
                   {
                       "id":  "nm-цветок",
@@ -175,7 +183,8 @@
                       "example_cases":  "ма́ме – Dativ · цветы́ – Akkusativ Plural",
                       "example_de":  "Ich habe Mama Blumen geschenkt.",
                       "example_en":  "I gave mom flowers.",
-                      "example_es":  "Le regalé flores a mamá."
+                      "example_es":  "Le regalé flores a mamá.",
+                      "es_freq":  35995
                   },
                   {
                       "id":  "nm-октябрь",
@@ -191,7 +200,8 @@
                       "example_cases":  "её день – Nominativ · рожде́ния – Genitiv · в октябре́ – Präpositiv",
                       "example_de":  "Ihr Geburtstag ist im Oktober.",
                       "example_en":  "Her birthday is in October.",
-                      "example_es":  "Su cumpleaños es en octubre."
+                      "example_es":  "Su cumpleaños es en octubre.",
+                      "es_freq":  6307
                   },
                   {
                       "id":  "nm-лидер",
@@ -210,7 +220,8 @@
                       "example_cases":  "ли́дер – Nominativ · на́шей кома́нды – Genitiv",
                       "example_de":  "Er ist der Anführer unserer Mannschaft.",
                       "example_en":  "He\u0027s the leader of our team.",
-                      "example_es":  "Él es el líder de nuestro equipo."
+                      "example_es":  "Él es el líder de nuestro equipo.",
+                      "es_freq":  1224
                   },
                   {
                       "id":  "nm-сентябрь",
@@ -226,7 +237,8 @@
                       "example_cases":  "шко́ла – Nominativ · в сентябре́ – Präpositiv",
                       "example_de":  "Die Schule beginnt im September.",
                       "example_en":  "School starts in September.",
-                      "example_es":  "La escuela empieza en septiembre."
+                      "example_es":  "La escuela empieza en septiembre.",
+                      "es_freq":  6926
                   },
                   {
                       "id":  "nm-занятие",
@@ -244,7 +256,8 @@
                       "example_cases":  "у нас – Genitiv · заня́тий – Genitiv Plural (nach нет)",
                       "example_de":  "Heute haben wir keinen Unterricht.",
                       "example_en":  "We don\u0027t have classes today.",
-                      "example_es":  "Hoy no tenemos clases."
+                      "example_es":  "Hoy no tenemos clases.",
+                      "es_freq":  6202
                   },
                   {
                       "id":  "nm-январь",
@@ -260,7 +273,8 @@
                       "example_cases":  "в январе́ – Präpositiv",
                       "example_de":  "Im Januar ist es sehr kalt.",
                       "example_en":  "It\u0027s very cold in January.",
-                      "example_es":  "En enero hace mucho frío."
+                      "example_es":  "En enero hace mucho frío.",
+                      "es_freq":  5073
                   },
                   {
                       "id":  "nm-помещение",
@@ -278,7 +292,8 @@
                       "example_cases":  "в помеще́нии – Präpositiv",
                       "example_de":  "In den Räumen darf man nicht rauchen.",
                       "example_en":  "Smoking is not allowed indoors.",
-                      "example_es":  "No se puede fumar en el local."
+                      "example_es":  "No se puede fumar en el local.",
+                      "es_freq":  1243
                   },
                   {
                       "id":  "nm-зритель",
@@ -298,7 +313,8 @@
                       "example_cases":  "зри́тели – Nominativ Plural",
                       "example_de":  "Die Zuschauer applaudieren.",
                       "example_en":  "The audience is applauding.",
-                      "example_es":  "Los espectadores aplauden."
+                      "example_es":  "Los espectadores aplauden.",
+                      "es_freq":  2950
                   },
                   {
                       "id":  "nm-редакция",
@@ -316,7 +332,8 @@
                       "example_cases":  "в реда́кции – Präpositiv · газе́ты – Genitiv",
                       "example_de":  "Er arbeitet in der Zeitungsredaktion.",
                       "example_en":  "He works at the newspaper\u0027s editorial office.",
-                      "example_es":  "Él trabaja en la redacción del periódico."
+                      "example_es":  "Él trabaja en la redacción del periódico.",
+                      "es_freq":  1402
                   },
                   {
                       "id":  "nm-стиль",
@@ -335,7 +352,8 @@
                       "example_cases":  "мне – Dativ · твой стиль – Nominativ",
                       "example_de":  "Mir gefällt dein Stil.",
                       "example_en":  "I like your style.",
-                      "example_es":  "Me gusta tu estilo."
+                      "example_es":  "Me gusta tu estilo.",
+                      "es_freq":  28502
                   },
                   {
                       "id":  "nm-весна",
@@ -351,7 +369,8 @@
                       "example_cases":  "весно́й – Instrumental · всё – Nominativ",
                       "example_de":  "Im Frühling blüht alles.",
                       "example_en":  "In spring everything blooms.",
-                      "example_es":  "En primavera todo florece."
+                      "example_es":  "En primavera todo florece.",
+                      "es_freq":  10950
                   },
                   {
                       "id":  "nm-фактор",
@@ -369,7 +388,8 @@
                       "example_cases":  "ва́жный фа́ктор – Nominativ",
                       "example_de":  "Das ist ein wichtiger Faktor.",
                       "example_en":  "This is an important factor.",
-                      "example_es":  "Es un factor importante."
+                      "example_es":  "Es un factor importante.",
+                      "es_freq":  4421
                   },
                   {
                       "id":  "nm-известие",
@@ -388,7 +408,8 @@
                       "example_cases":  "у меня́ – Genitiv · хоро́шее изве́стие – Nominativ",
                       "example_de":  "Ich habe eine gute Nachricht.",
                       "example_en":  "I have good news.",
-                      "example_es":  "Tengo una buena noticia."
+                      "example_es":  "Tengo una buena noticia.",
+                      "es_freq":  82540
                   },
                   {
                       "id":  "nm-август",
@@ -403,7 +424,8 @@
                       "example_cases":  "в а́вгусте – Präpositiv · у нас – Genitiv · о́тпуск – Nominativ",
                       "example_de":  "Im August haben wir Urlaub.",
                       "example_en":  "We have vacation in August.",
-                      "example_es":  "En agosto tenemos vacaciones."
+                      "example_es":  "En agosto tenemos vacaciones.",
+                      "es_freq":  5916
                   },
                   {
                       "id":  "nm-охрана",
@@ -419,7 +441,8 @@
                       "example_cases":  "у вхо́да – Genitiv · охра́на – Nominativ",
                       "example_de":  "Am Eingang steht der Sicherheitsdienst.",
                       "example_en":  "Security is standing at the entrance.",
-                      "example_es":  "En la entrada está la seguridad."
+                      "example_es":  "En la entrada está la seguridad.",
+                      "es_freq":  810
                   },
                   {
                       "id":  "nm-зависимость",
@@ -435,7 +458,8 @@
                       "example_cases":  "в зави́симости – Präpositiv · от пого́ды – Genitiv",
                       "example_de":  "Alles hängt vom Wetter ab.",
                       "example_en":  "Everything depends on the weather.",
-                      "example_es":  "Todo depende del clima."
+                      "example_es":  "Todo depende del clima.",
+                      "es_freq":  940
                   },
                   {
                       "id":  "nm-оборудование",
@@ -450,7 +474,8 @@
                       "example_cases":  "в лаборато́рии – Präpositiv · но́вое обору́дование – Nominativ",
                       "example_de":  "Im Labor gibt es neue Geräte.",
                       "example_en":  "The lab has new equipment.",
-                      "example_es":  "El laboratorio tiene equipo nuevo."
+                      "example_es":  "El laboratorio tiene equipo nuevo.",
+                      "es_freq":  5948
                   },
                   {
                       "id":  "nm-расход",
@@ -468,7 +493,8 @@
                       "example_cases":  "у нас – Genitiv · больши́е расхо́ды – Nominativ Plural",
                       "example_de":  "Wir haben hohe Ausgaben.",
                       "example_en":  "We have big expenses.",
-                      "example_es":  "Tenemos muchos gastos."
+                      "example_es":  "Tenemos muchos gastos.",
+                      "es_freq":  23025
                   },
                   {
                       "id":  "nm-отделение",
@@ -486,7 +512,8 @@
                       "example_cases":  "ближа́йшее отделе́ние – Nominativ · ба́нка – Genitiv",
                       "example_de":  "Wo ist die nächste Bankfiliale?",
                       "example_en":  "Where\u0027s the nearest bank branch?",
-                      "example_es":  "¿Dónde está la sucursal bancaria más cercana?"
+                      "example_es":  "¿Dónde está la sucursal bancaria más cercana?",
+                      "es_freq":  13008
                   },
                   {
                       "id":  "nm-концерт",
@@ -505,7 +532,8 @@
                       "example_cases":  "на конце́рт – Akkusativ (wohin?)",
                       "example_de":  "Wir gehen zum Konzert.",
                       "example_en":  "We\u0027re going to a concert.",
-                      "example_es":  "Vamos a un concierto."
+                      "example_es":  "Vamos a un concierto.",
+                      "es_freq":  13802
                   },
                   {
                       "id":  "nm-милиция",
@@ -521,7 +549,8 @@
                       "example_cases":  "поли́ция – Nominativ · мили́цией – Instrumental",
                       "example_de":  "Früher hieß die Polizei Miliz.",
                       "example_en":  "The police used to be called militia.",
-                      "example_es":  "Antes la policía se llamaba milicia."
+                      "example_es":  "Antes la policía se llamaba milicia.",
+                      "es_freq":  2025
                   },
                   {
                       "id":  "nm-выставка",
@@ -540,7 +569,8 @@
                       "example_cases":  "на вы́ставку – Akkusativ (wohin?)",
                       "example_de":  "Lass uns zur Ausstellung gehen!",
                       "example_en":  "Let\u0027s go to the exhibition!",
-                      "example_es":  "¡Vamos a la exposición!"
+                      "example_es":  "¡Vamos a la exposición!",
+                      "es_freq":  6269
                   },
                   {
                       "id":  "nm-переход",
@@ -558,7 +588,8 @@
                       "example_cases":  "у́лицу – Akkusativ · по перехо́ду – Dativ",
                       "example_de":  "Überquere die Straße nur am Übergang.",
                       "example_en":  "Cross the street only at the crosswalk.",
-                      "example_es":  "Cruza la calle solo por el paso de peatones."
+                      "example_es":  "Cruza la calle solo por el paso de peatones.",
+                      "es_freq":  1886
                   },
                   {
                       "id":  "nm-эпоха",
@@ -576,7 +607,8 @@
                       "example_cases":  "интере́сная эпо́ха – Nominativ",
                       "example_de":  "Das war eine interessante Epoche.",
                       "example_en":  "It was an interesting era.",
-                      "example_es":  "Fue una época interesante."
+                      "example_es":  "Fue una época interesante.",
+                      "es_freq":  1090
                   },
                   {
                       "id":  "nm-собственность",
@@ -592,7 +624,8 @@
                       "example_cases":  "э́та кварти́ра – Nominativ · моя́ со́бственность – Nominativ",
                       "example_de":  "Diese Wohnung ist mein Eigentum.",
                       "example_en":  "This apartment is my property.",
-                      "example_es":  "Este apartamento es de mi propiedad."
+                      "example_es":  "Este apartamento es de mi propiedad.",
+                      "es_freq":  1103
                   },
                   {
                       "id":  "nm-родина",
@@ -607,7 +640,8 @@
                       "example_cases":  "по ро́дине – Dativ (nach скуча́ть по)",
                       "example_de":  "Ich vermisse meine Heimat.",
                       "example_en":  "I miss my homeland.",
-                      "example_es":  "Extraño mi patria."
+                      "example_es":  "Extraño mi patria.",
+                      "es_freq":  4738
                   },
                   {
                       "id":  "nm-произведение",
@@ -625,7 +659,8 @@
                       "example_cases":  "изве́стное произведе́ние – Nominativ · Че́хова – Genitiv",
                       "example_de":  "Das ist ein bekanntes Werk von Tschechow.",
                       "example_en":  "This is a famous work by Chekhov.",
-                      "example_es":  "Es una obra famosa de Chéjov."
+                      "example_es":  "Es una obra famosa de Chéjov.",
+                      "es_freq":  35919
                   },
                   {
                       "id":  "nm-запад",
@@ -641,7 +676,8 @@
                       "example_cases":  "со́лнце – Nominativ · на за́паде – Präpositiv",
                       "example_de":  "Die Sonne geht im Westen unter.",
                       "example_en":  "The sun sets in the west.",
-                      "example_es":  "El sol se pone por el oeste."
+                      "example_es":  "El sol se pone por el oeste.",
+                      "es_freq":  19385
                   },
                   {
                       "id":  "nm-трава",
@@ -660,7 +696,8 @@
                       "example_cases":  "по траве́ – Dativ",
                       "example_de":  "Rasen nicht betreten!",
                       "example_en":  "Keep off the grass!",
-                      "example_es":  "¡No pisen el césped!"
+                      "example_es":  "¡No pisen el césped!",
+                      "es_freq":  13204
                   },
                   {
                       "id":  "nm-лагерь",
@@ -679,7 +716,8 @@
                       "example_cases":  "ле́том – Instrumental · де́ти – Nominativ Plural · в ла́герь – Akkusativ",
                       "example_de":  "Im Sommer fahren die Kinder ins Ferienlager.",
                       "example_en":  "In summer the children go to camp.",
-                      "example_es":  "En verano los niños van al campamento."
+                      "example_es":  "En verano los niños van al campamento.",
+                      "es_freq":  18427
                   },
                   {
                       "id":  "nm-кровать",
@@ -698,7 +736,8 @@
                       "example_cases":  "кот – Nominativ · на крова́ти – Präpositiv",
                       "example_de":  "Der Kater schläft auf dem Bett.",
                       "example_en":  "The cat is sleeping on the bed.",
-                      "example_es":  "El gato duerme en la cama."
+                      "example_es":  "El gato duerme en la cama.",
+                      "es_freq":  79288
                   },
                   {
                       "id":  "nm-имущество",
@@ -713,7 +752,8 @@
                       "example_cases":  "всё своё иму́щество – Akkusativ",
                       "example_de":  "Er hat sein ganzes Hab und Gut verkauft.",
                       "example_en":  "He sold all his belongings.",
-                      "example_es":  "Él vendió todos sus bienes."
+                      "example_es":  "Él vendió todos sus bienes.",
+                      "es_freq":  6154
                   },
                   {
                       "id":  "nm-середина",
@@ -728,7 +768,8 @@
                       "example_cases":  "стол – Nominativ · в середи́не – Präpositiv · ко́мнаты – Genitiv",
                       "example_de":  "Der Tisch steht in der Zimmermitte.",
                       "example_en":  "The table is in the middle of the room.",
-                      "example_es":  "La mesa está en medio de la habitación."
+                      "example_es":  "La mesa está en medio de la habitación.",
+                      "es_freq":  4638
                   },
                   {
                       "id":  "nm-аппарат",
@@ -746,7 +787,8 @@
                       "example_cases":  "фотоаппара́т – Nominativ · аппара́т – Nominativ · для фо́то – Genitiv",
                       "example_de":  "Eine Kamera ist ein Gerät für Fotos.",
                       "example_en":  "A camera is a device for photos.",
-                      "example_es":  "Una cámara es un aparato para fotos."
+                      "example_es":  "Una cámara es un aparato para fotos.",
+                      "es_freq":  7344
                   },
                   {
                       "id":  "nm-март",
@@ -762,7 +804,8 @@
                       "example_cases":  "восьмо́го ма́рта – Genitiv · же́нский день – Nominativ",
                       "example_de":  "Am 8. März ist Frauentag.",
                       "example_en":  "March 8 is Women\u0027s Day.",
-                      "example_es":  "El 8 de marzo es el Día de la Mujer."
+                      "example_es":  "El 8 de marzo es el Día de la Mujer.",
+                      "es_freq":  5639
                   },
                   {
                       "id":  "nm-клиент",
@@ -781,7 +824,8 @@
                       "example_cases":  "клие́нт – Nominativ",
                       "example_de":  "Der Kunde hat immer recht.",
                       "example_en":  "The customer is always right.",
-                      "example_es":  "El cliente siempre tiene la razón."
+                      "example_es":  "El cliente siempre tiene la razón.",
+                      "es_freq":  56594
                   },
                   {
                       "id":  "nm-фронт",
@@ -800,7 +844,8 @@
                       "example_cases":  "дед – Nominativ · на фро́нте – Präpositiv",
                       "example_de":  "Der Großvater kämpfte an der Front.",
                       "example_en":  "Grandfather fought at the front.",
-                      "example_es":  "El abuelo luchó en el frente."
+                      "example_es":  "El abuelo luchó en el frente.",
+                      "es_freq":  58186
                   },
                   {
                       "id":  "nm-дама",
@@ -820,7 +865,8 @@
                       "example_cases":  "да́мы – Nominativ Plural · господа́ – Nominativ Plural",
                       "example_de":  "Meine Damen und Herren!",
                       "example_en":  "Ladies and gentlemen!",
-                      "example_es":  "¡Damas y caballeros!"
+                      "example_es":  "¡Damas y caballeros!",
+                      "es_freq":  46186
                   },
                   {
                       "id":  "nm-стул",
@@ -839,7 +885,8 @@
                       "example_cases":  "на стул – Akkusativ (wohin?)",
                       "example_de":  "Setz dich auf den Stuhl.",
                       "example_en":  "Sit down on the chair.",
-                      "example_es":  "Siéntate en la silla."
+                      "example_es":  "Siéntate en la silla.",
+                      "es_freq":  26109
                   },
                   {
                       "id":  "nm-отрасль",
@@ -858,7 +905,8 @@
                       "example_cases":  "ва́жная о́трасль – Nominativ · эконо́мики – Genitiv",
                       "example_de":  "Das ist ein wichtiger Wirtschaftszweig.",
                       "example_en":  "This is an important branch of the economy.",
-                      "example_es":  "Es un sector importante de la economía."
+                      "example_es":  "Es un sector importante de la economía.",
+                      "es_freq":  6908
                   },
                   {
                       "id":  "nm-беседа",
@@ -876,7 +924,8 @@
                       "example_cases":  "у нас – Genitiv · прия́тная бесе́да – Nominativ",
                       "example_de":  "Wir hatten eine angenehme Unterhaltung.",
                       "example_en":  "We had a pleasant conversation.",
-                      "example_es":  "Tuvimos una charla agradable."
+                      "example_es":  "Tuvimos una charla agradable.",
+                      "es_freq":  1420
                   },
                   {
                       "id":  "nm-продажа",
@@ -895,7 +944,8 @@
                       "example_cases":  "кварти́ра – Nominativ · в прода́же – Präpositiv",
                       "example_de":  "Die Wohnung steht zum Verkauf.",
                       "example_en":  "The apartment is for sale.",
-                      "example_es":  "El apartamento está en venta."
+                      "example_es":  "El apartamento está en venta.",
+                      "es_freq":  19352
                   }
               ]
 }

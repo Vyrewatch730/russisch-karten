@@ -26,7 +26,8 @@
                       "example_de":  "Ich bin zwanzig Jahre alt.",
                       "example_en":  "I\u0027m twenty years old.",
                       "example_es":  "Tengo veinte años.",
-                      "loc":  "в году́"
+                      "loc":  "в году́",
+                      "es_freq":  537457
                   },
                   {
                       "id":  "nm-человек",
@@ -49,7 +50,8 @@
                       "example_es":  "Conozco a esta persona.",
                       "ipl":  "людьми́",
                       "ex_sg":  "Э́то хоро́ший челове́к. = Das ist ein guter Mensch. || У э́того челове́ка есть соба́ка. = Dieser Mensch hat einen Hund. || Я помога́ю челове́ку. = Ich helfe dem Menschen. || Я ви́жу челове́ка. = Ich sehe einen Menschen. || Я говорю́ с челове́ком. = Ich spreche mit einem Menschen. || Я ду́маю о челове́ке. = Ich denke an den Menschen.",
-                      "ex_pl":  "Там стоя́т лю́ди. = Dort stehen Leute. || Здесь мно́го люде́й. = Hier sind viele Leute. || Я помога́ю лю́дям. = Ich helfe den Leuten. || Я люблю́ люде́й. = Ich mag Menschen. || Я говорю́ с людьми́. = Ich spreche mit den Leuten. || Мы говори́м о лю́дях. = Wir sprechen über die Leute."
+                      "ex_pl":  "Там стоя́т лю́ди. = Dort stehen Leute. || Здесь мно́го люде́й. = Hier sind viele Leute. || Я помога́ю лю́дям. = Ich helfe den Leuten. || Я люблю́ люде́й. = Ich mag Menschen. || Я говорю́ с людьми́. = Ich spreche mit den Leuten. || Мы говори́м о лю́дях. = Wir sprechen über die Leute.",
+                      "es_freq":  278930
                   },
                   {
                       "id":  "nm-время",
@@ -70,7 +72,8 @@
                       "example_en":  "I have no time.",
                       "example_es":  "No tengo tiempo.",
                       "ex_sg":  "Вре́мя идёт. = Die Zeit vergeht. || У меня́ нет вре́мени. = Ich habe keine Zeit. || К э́тому вре́мени я бу́ду до́ма. = Bis dahin bin ich zu Hause. || Я провожу́ вре́мя с семьёй. = Ich verbringe Zeit mit der Familie. || Со вре́менем всё бу́дет хорошо́. = Mit der Zeit wird alles gut. || Мы говори́м о вре́мени. = Wir sprechen über die Zeit.",
-                      "ex_pl":  "Времена́ меня́ются. = Die Zeiten ändern sich. || Мы друзья́ со времён шко́лы. = Wir sind seit der Schulzeit Freunde. || Я скуча́ю по ста́рым времена́м. = Ich vermisse die alten Zeiten. || Я по́мню э́ти времена́. = Ich erinnere mich an diese Zeiten. || Он интересу́ется ста́рыми времена́ми. = Er interessiert sich für alte Zeiten. || Он расска́зывает о ста́рых времена́х. = Er erzählt von alten Zeiten."
+                      "ex_pl":  "Времена́ меня́ются. = Die Zeiten ändern sich. || Мы друзья́ со времён шко́лы. = Wir sind seit der Schulzeit Freunde. || Я скуча́ю по ста́рым времена́м. = Ich vermisse die alten Zeiten. || Я по́мню э́ти времена́. = Ich erinnere mich an diese Zeiten. || Он интересу́ется ста́рыми времена́ми. = Er interessiert sich für alte Zeiten. || Он расска́зывает о ста́рых времена́х. = Er erzählt von alten Zeiten.",
+                      "es_freq":  583571
                   },
                   {
                       "id":  "nm-дело",
@@ -89,7 +92,8 @@
                       "example_cases":  "дела́ – Nominativ Plural",
                       "example_de":  "Wie geht\u0027s?",
                       "example_en":  "How are you?",
-                      "example_es":  "¿Cómo estás? (DR: ¿Qué lo que?)"
+                      "example_es":  "¿Cómo estás? (DR: ¿Qué lo que?)",
+                      "es_freq":  80143
                   },
                   {
                       "id":  "nm-жизнь",
@@ -110,7 +114,8 @@
                       "example_en":  "I often think about life.",
                       "example_es":  "Pienso mucho en la vida.",
                       "ex_sg":  "Жизнь прекра́сна! = Das Leben ist schön! || Э́то лу́чший день мое́й жи́зни. = Das ist der beste Tag meines Lebens. || Я рад жи́зни. = Ich freue mich am Leben. || Я люблю́ жизнь. = Ich liebe das Leben. || Я дово́лен свое́й жи́знью. = Ich bin mit meinem Leben zufrieden. || Я ча́сто ду́маю о жи́зни. = Ich denke oft über das Leben nach.",
-                      "ex_pl":  "На́ши жи́зни о́чень ра́зные. = Unsere Leben sind sehr verschieden. || Врачи́ спасли́ мно́го жи́зней. = Die Ärzte haben viele Leben gerettet. || Э́то угро́за на́шим жи́зням. = Das ist eine Gefahr für unser Leben. || Врачи́ спаса́ют жи́зни. = Ärzte retten Leben. || Пожа́рные риску́ют жи́знями. = Feuerwehrleute riskieren ihr Leben. || Э́тот фильм о жи́знях просты́х люде́й. = Dieser Film handelt vom Leben einfacher Leute."
+                      "ex_pl":  "На́ши жи́зни о́чень ра́зные. = Unsere Leben sind sehr verschieden. || Врачи́ спасли́ мно́го жи́зней. = Die Ärzte haben viele Leben gerettet. || Э́то угро́за на́шим жи́зням. = Das ist eine Gefahr für unser Leben. || Врачи́ спаса́ют жи́зни. = Ärzte retten Leben. || Пожа́рные риску́ют жи́знями. = Feuerwehrleute riskieren ihr Leben. || Э́тот фильм о жи́знях просты́х люде́й. = Dieser Film handelt vom Leben einfacher Leute.",
+                      "es_freq":  489126
                   },
                   {
                       "id":  "nm-день",
@@ -131,7 +136,8 @@
                       "example_en":  "I work every day.",
                       "example_es":  "Trabajo todos los días.",
                       "ex_sg":  "Сего́дня хоро́ший день. = Heute ist ein schöner Tag. || Я рабо́таю до конца́ дня. = Ich arbeite bis zum Ende des Tages. || Я гото́влюсь ко дню рожде́ния. = Ich bereite mich auf den Geburtstag vor. || Я рабо́таю ка́ждый день. = Ich arbeite jeden Tag. || С днём рожде́ния! = Alles Gute zum Geburtstag! || Я ча́сто ду́маю об э́том дне. = Ich denke oft an diesen Tag.",
-                      "ex_pl":  "Дни стано́вятся длинне́е. = Die Tage werden länger. || Я был там пять дней. = Ich war fünf Tage dort. || Я скуча́ю по тем дням. = Ich vermisse jene Tage. || Я счита́ю дни до о́тпуска. = Ich zähle die Tage bis zum Urlaub. || Мы гуля́ли це́лыми дня́ми. = Wir waren ganze Tage lang spazieren. || Я расскажу́ об э́тих днях. = Ich erzähle von diesen Tagen."
+                      "ex_pl":  "Дни стано́вятся длинне́е. = Die Tage werden länger. || Я был там пять дней. = Ich war fünf Tage dort. || Я скуча́ю по тем дням. = Ich vermisse jene Tage. || Я счита́ю дни до о́тпуска. = Ich zähle die Tage bis zum Urlaub. || Мы гуля́ли це́лыми дня́ми. = Wir waren ganze Tage lang spazieren. || Я расскажу́ об э́тих днях. = Ich erzähle von diesen Tagen.",
+                      "es_freq":  638134
                   },
                   {
                       "id":  "nm-рука",
@@ -153,7 +159,8 @@
                       "example_es":  "¡Lávate las manos antes de comer!",
                       "akk":  "ру́ку",
                       "ex_sg":  "У меня́ боли́т рука́. = Mir tut die Hand weh. || Кольцо́ упа́ло с руки́. = Der Ring ist von der Hand gefallen. || По руке́ бежи́т мураве́й. = Über die Hand läuft eine Ameise. || Дай мне ру́ку! = Gib mir die Hand! || Я пишу́ пра́вой руко́й. = Ich schreibe mit der rechten Hand. || У меня́ в руке́ телефо́н. = Ich habe das Handy in der Hand.",
-                      "ex_pl":  "У тебя́ холо́дные ру́ки. = Du hast kalte Hände. || Смотри́, без рук! = Schau, freihändig! || Я даю́ рука́м отдохну́ть. = Ich lasse meine Hände ausruhen. || Мой ру́ки! = Wasch dir die Hände! || Не ешь рука́ми! = Iss nicht mit den Händen! || Ребёнок у ма́мы на рука́х. = Das Kind ist auf Mamas Arm."
+                      "ex_pl":  "У тебя́ холо́дные ру́ки. = Du hast kalte Hände. || Смотри́, без рук! = Schau, freihändig! || Я даю́ рука́м отдохну́ть. = Ich lasse meine Hände ausruhen. || Мой ру́ки! = Wasch dir die Hände! || Не ешь рука́ми! = Iss nicht mit den Händen! || Ребёнок у ма́мы на рука́х. = Das Kind ist auf Mamas Arm.",
+                      "es_freq":  227586
                   },
                   {
                       "id":  "nm-раз",
@@ -172,7 +179,8 @@
                       "example_cases":  "ещё раз – Akkusativ",
                       "example_de":  "Wiederhole bitte noch einmal.",
                       "example_en":  "Please repeat once more.",
-                      "example_es":  "Repite otra vez, por favor."
+                      "example_es":  "Repite otra vez, por favor.",
+                      "es_freq":  962983
                   },
                   {
                       "id":  "nm-работа",
@@ -191,7 +199,8 @@
                       "example_cases":  "на рабо́ту – Akkusativ (wohin?)",
                       "example_de":  "Morgen gehe ich zur Arbeit.",
                       "example_en":  "Tomorrow I\u0027m going to work.",
-                      "example_es":  "Mañana voy al trabajo."
+                      "example_es":  "Mañana voy al trabajo.",
+                      "es_freq":  35586
                   },
                   {
                       "id":  "nm-слово",
@@ -212,7 +221,8 @@
                       "example_en":  "There are many new words in this text.",
                       "example_es":  "En este texto hay muchas palabras nuevas.",
                       "ex_sg":  "Э́то но́вое сло́во. = Das ist ein neues Wort. || Я не зна́ю э́того сло́ва. = Ich kenne dieses Wort nicht. || Я ве́рю твоему́ сло́ву. = Ich glaube deinem Wort. || Напиши́ э́то сло́во! = Schreib dieses Wort! || Скажи́ э́то одни́м сло́вом. = Sag es mit einem Wort. || В э́том сло́ве три бу́квы. = Dieses Wort hat drei Buchstaben.",
-                      "ex_pl":  "Э́ти слова́ тру́дные. = Diese Wörter sind schwer. || Я зна́ю сто слов. = Ich kenne hundert Wörter. || Я ве́рю твои́м слова́м. = Ich glaube deinen Worten. || Я учу́ но́вые слова́. = Ich lerne neue Wörter. || Скажи́ свои́ми слова́ми. = Sag es mit deinen eigenen Worten. || Я ду́маю о его́ слова́х. = Ich denke über seine Worte nach."
+                      "ex_pl":  "Э́ти слова́ тру́дные. = Diese Wörter sind schwer. || Я зна́ю сто слов. = Ich kenne hundert Wörter. || Я ве́рю твои́м слова́м. = Ich glaube deinen Worten. || Я учу́ но́вые слова́. = Ich lerne neue Wörter. || Скажи́ свои́ми слова́ми. = Sag es mit deinen eigenen Worten. || Я ду́маю о его́ слова́х. = Ich denke über seine Worte nach.",
+                      "es_freq":  136679
                   },
                   {
                       "id":  "nm-место",
@@ -231,7 +241,8 @@
                       "example_cases":  "э́то ме́сто – Nominativ",
                       "example_de":  "Ist dieser Platz frei?",
                       "example_en":  "Is this seat free?",
-                      "example_es":  "¿Está libre este asiento?"
+                      "example_es":  "¿Está libre este asiento?",
+                      "es_freq":  301320
                   },
                   {
                       "id":  "nm-лицо",
@@ -250,7 +261,8 @@
                       "example_cases":  "у неё – Genitiv · краси́вое лицо́ – Nominativ",
                       "example_de":  "Sie hat ein schönes Gesicht.",
                       "example_en":  "She has a beautiful face.",
-                      "example_es":  "Ella tiene una cara bonita."
+                      "example_es":  "Ella tiene una cara bonita.",
+                      "es_freq":  31887
                   },
                   {
                       "id":  "nm-друг",
@@ -272,7 +284,8 @@
                       "example_en":  "I\u0027m calling a friend.",
                       "example_es":  "Llamo a un amigo.",
                       "ex_sg":  "Э́то мой друг. = Das ist mein Freund. || У дру́га есть соба́ка. = Mein Freund hat einen Hund. || Я звоню́ дру́гу. = Ich rufe einen Freund an. || Я жду дру́га. = Ich warte auf einen Freund. || Я иду́ в кино́ с дру́гом. = Ich gehe mit einem Freund ins Kino. || Я ду́маю о дру́ге. = Ich denke an meinen Freund.",
-                      "ex_pl":  "Мои́ друзья́ живу́т в Москве́. = Meine Freunde wohnen in Moskau. || У меня́ мно́го друзе́й. = Ich habe viele Freunde. || Я пишу́ друзья́м. = Ich schreibe Freunden. || Я приглаша́ю друзе́й. = Ich lade Freunde ein. || Я гуля́ю с друзья́ми. = Ich gehe mit Freunden spazieren. || Я расска́зываю о друзья́х. = Ich erzähle von Freunden."
+                      "ex_pl":  "Мои́ друзья́ живу́т в Москве́. = Meine Freunde wohnen in Moskau. || У меня́ мно́го друзе́й. = Ich habe viele Freunde. || Я пишу́ друзья́м. = Ich schreibe Freunden. || Я приглаша́ю друзе́й. = Ich lade Freunde ein. || Я гуля́ю с друзья́ми. = Ich gehe mit Freunden spazieren. || Я расска́зываю о друзья́х. = Ich erzähle von Freunden.",
+                      "es_freq":  419040
                   },
                   {
                       "id":  "nm-глаз",
@@ -292,7 +305,8 @@
                       "example_de":  "Sie hat blaue Augen.",
                       "example_en":  "She has blue eyes.",
                       "example_es":  "Ella tiene ojos azules.",
-                      "loc":  "в глазу́"
+                      "loc":  "в глазу́",
+                      "es_freq":  142361
                   },
                   {
                       "id":  "nm-вопрос",
@@ -311,7 +325,8 @@
                       "example_cases":  "у меня́ – Genitiv · вопро́с – Nominativ",
                       "example_de":  "Ich habe eine Frage.",
                       "example_en":  "I have a question.",
-                      "example_es":  "Tengo una pregunta."
+                      "example_es":  "Tengo una pregunta.",
+                      "es_freq":  187515
                   },
                   {
                       "id":  "nm-дом",
@@ -332,7 +347,8 @@
                       "example_en":  "We live in a big house.",
                       "example_es":  "Vivimos en una casa grande.",
                       "ex_sg":  "Э́то мой дом. = Das ist mein Haus. || Я выхожу́ из до́ма. = Ich gehe aus dem Haus. || Я иду́ к до́му. = Ich gehe zum Haus. || Мы покупа́ем дом. = Wir kaufen ein Haus. || Пе́ред до́мом стои́т маши́на. = Vor dem Haus steht ein Auto. || Я живу́ в э́том до́ме. = Ich wohne in diesem Haus.",
-                      "ex_pl":  "Здесь высо́кие дома́. = Hier sind hohe Häuser. || На у́лице мно́го домо́в. = In der Straße gibt es viele Häuser. || Почтальо́н хо́дит по дома́м. = Der Briefträger geht von Haus zu Haus. || Я люблю́ ста́рые дома́. = Ich mag alte Häuser. || Ме́жду дома́ми есть парк. = Zwischen den Häusern ist ein Park. || В э́тих дома́х живу́т студе́нты. = In diesen Häusern wohnen Studenten."
+                      "ex_pl":  "Здесь высо́кие дома́. = Hier sind hohe Häuser. || На у́лице мно́го домо́в. = In der Straße gibt es viele Häuser. || Почтальо́н хо́дит по дома́м. = Der Briefträger geht von Haus zu Haus. || Я люблю́ ста́рые дома́. = Ich mag alte Häuser. || Ме́жду дома́ми есть парк. = Zwischen den Häusern ist ein Park. || В э́тих дома́х живу́т студе́нты. = In diesen Häusern wohnen Studenten.",
+                      "es_freq":  60579
                   },
                   {
                       "id":  "nm-сторона",
@@ -352,7 +368,8 @@
                       "example_de":  "Er wohnt auf der anderen Straßenseite.",
                       "example_en":  "He lives on the other side of the street.",
                       "example_es":  "Él vive al otro lado de la calle.",
-                      "akk":  "сто́рону"
+                      "akk":  "сто́рону",
+                      "es_freq":  165638
                   },
                   {
                       "id":  "nm-страна",
@@ -371,7 +388,8 @@
                       "example_cases":  "больша́я страна́ – Nominativ",
                       "example_de":  "Russland ist ein großes Land.",
                       "example_en":  "Russia is a big country.",
-                      "example_es":  "Rusia es un país grande."
+                      "example_es":  "Rusia es un país grande.",
+                      "es_freq":  75959
                   },
                   {
                       "id":  "nm-мир",
@@ -390,7 +408,8 @@
                       "example_cases":  "весь мир – Akkusativ",
                       "example_de":  "Er will die ganze Welt sehen.",
                       "example_en":  "He wants to see the whole world.",
-                      "example_es":  "Él quiere ver el mundo entero."
+                      "example_es":  "Él quiere ver el mundo entero.",
+                      "es_freq":  303249
                   },
                   {
                       "id":  "nm-случай",
@@ -409,7 +428,8 @@
                       "example_cases":  "на вся́кий слу́чай – Akkusativ · зо́нтик – Akkusativ",
                       "example_de":  "Nimm sicherheitshalber einen Schirm mit.",
                       "example_en":  "Take an umbrella just in case.",
-                      "example_es":  "Por si acaso, lleva un paraguas."
+                      "example_es":  "Por si acaso, lleva un paraguas.",
+                      "es_freq":  57471
                   },
                   {
                       "id":  "nm-голова",
@@ -429,7 +449,8 @@
                       "example_de":  "Ich habe Kopfschmerzen.",
                       "example_en":  "I have a headache.",
                       "example_es":  "Me duele la cabeza.",
-                      "akk":  "го́лову"
+                      "akk":  "го́лову",
+                      "es_freq":  166610
                   },
                   {
                       "id":  "nm-ребенок",
@@ -450,7 +471,8 @@
                       "example_de":  "Das Kind schläft.",
                       "example_en":  "The child is sleeping.",
                       "example_es":  "El niño está durmiendo.",
-                      "ipl":  "детьми́"
+                      "ipl":  "детьми́",
+                      "es_freq":  241368
                   },
                   {
                       "id":  "nm-сила",
@@ -468,7 +490,8 @@
                       "example_cases":  "у меня́ – Genitiv · сил – Genitiv Plural (nach нет)",
                       "example_de":  "Ich habe keine Kraft mehr.",
                       "example_en":  "I have no strength left.",
-                      "example_es":  "No tengo fuerzas."
+                      "example_es":  "No tengo fuerzas.",
+                      "es_freq":  73678
                   },
                   {
                       "id":  "nm-конец",
@@ -487,7 +510,8 @@
                       "example_cases":  "в конце́ – Präpositiv · у́лицы – Genitiv · апте́ка – Nominativ",
                       "example_de":  "Am Ende der Straße ist eine Apotheke.",
                       "example_en":  "There\u0027s a pharmacy at the end of the street.",
-                      "example_es":  "Al final de la calle hay una farmacia."
+                      "example_es":  "Al final de la calle hay una farmacia.",
+                      "es_freq":  5095
                   },
                   {
                       "id":  "nm-вид",
@@ -506,7 +530,8 @@
                       "example_cases":  "из окна́ – Genitiv · краси́вый вид – Nominativ",
                       "example_de":  "Vom Fenster aus hat man eine schöne Aussicht.",
                       "example_en":  "There\u0027s a beautiful view from the window.",
-                      "example_es":  "Desde la ventana hay una vista bonita."
+                      "example_es":  "Desde la ventana hay una vista bonita.",
+                      "es_freq":  9795
                   },
                   {
                       "id":  "nm-система",
@@ -525,7 +550,8 @@
                       "example_cases":  "э́та систе́ма – Nominativ",
                       "example_de":  "Dieses System funktioniert gut.",
                       "example_en":  "This system works well.",
-                      "example_es":  "Este sistema funciona bien."
+                      "example_es":  "Este sistema funciona bien.",
+                      "es_freq":  58369
                   },
                   {
                       "id":  "nm-часть",
@@ -544,7 +570,8 @@
                       "example_cases":  "пе́рвая часть – Nominativ · фи́льма – Genitiv · интере́сной – Instrumental",
                       "example_de":  "Der erste Teil des Films war interessant.",
                       "example_en":  "The first part of the film was interesting.",
-                      "example_es":  "La primera parte de la película fue interesante."
+                      "example_es":  "La primera parte de la película fue interesante.",
+                      "es_freq":  117765
                   },
                   {
                       "id":  "nm-город",
@@ -563,7 +590,8 @@
                       "example_cases":  "в большо́м го́роде – Präpositiv",
                       "example_de":  "Ich wohne in einer großen Stadt.",
                       "example_en":  "I live in a big city.",
-                      "example_es":  "Vivo en una ciudad grande."
+                      "example_es":  "Vivo en una ciudad grande.",
+                      "es_freq":  134170
                   },
                   {
                       "id":  "nm-отношение",
@@ -582,7 +610,8 @@
                       "example_cases":  "у нас – Genitiv · хоро́шие отноше́ния – Nominativ Plural",
                       "example_de":  "Wir haben ein gutes Verhältnis.",
                       "example_en":  "We have a good relationship.",
-                      "example_es":  "Tenemos una buena relación."
+                      "example_es":  "Tenemos una buena relación.",
+                      "es_freq":  66068
                   },
                   {
                       "id":  "nm-женщина",
@@ -602,7 +631,8 @@
                       "example_cases":  "э́та же́нщина – Nominativ · мой врач – Nominativ",
                       "example_de":  "Diese Frau ist meine Ärztin.",
                       "example_en":  "This woman is my doctor.",
-                      "example_es":  "Esta mujer es mi doctora."
+                      "example_es":  "Esta mujer es mi doctora.",
+                      "es_freq":  349163
                   },
                   {
                       "id":  "nm-деньги",
@@ -621,7 +651,8 @@
                       "example_de":  "Ich habe kein Geld.",
                       "example_en":  "I have no money.",
                       "example_es":  "No tengo dinero.",
-                      "ex_pl":  "Де́ньги лежа́т в су́мке. = Das Geld liegt in der Tasche. || У меня́ нет де́нег. = Ich habe kein Geld. || Он о́чень рад деньга́м. = Er freut sich sehr über das Geld. || Дай мне де́ньги! = Gib mir das Geld! || Я плачу́ деньга́ми, не ка́ртой. = Ich zahle bar, nicht mit Karte. || Не ду́май то́лько о деньга́х! = Denk nicht nur an Geld!"
+                      "ex_pl":  "Де́ньги лежа́т в су́мке. = Das Geld liegt in der Tasche. || У меня́ нет де́нег. = Ich habe kein Geld. || Он о́чень рад деньга́м. = Er freut sich sehr über das Geld. || Дай мне де́ньги! = Gib mir das Geld! || Я плачу́ деньга́ми, не ка́ртой. = Ich zahle bar, nicht mit Karte. || Не ду́май то́лько о деньга́х! = Denk nicht nur an Geld!",
+                      "es_freq":  300518
                   },
                   {
                       "id":  "nm-земля",
@@ -641,7 +672,8 @@
                       "example_de":  "Die Erde ist der dritte Planet von der Sonne aus.",
                       "example_en":  "Earth is the third planet from the Sun.",
                       "example_es":  "La Tierra es el tercer planeta desde el Sol.",
-                      "akk":  "зе́млю"
+                      "akk":  "зе́млю",
+                      "es_freq":  112755
                   },
                   {
                       "id":  "nm-машина",
@@ -660,7 +692,8 @@
                       "example_cases":  "у нас – Genitiv · но́вая маши́на – Nominativ",
                       "example_de":  "Wir haben ein neues Auto.",
                       "example_en":  "We have a new car.",
-                      "example_es":  "Tenemos un carro nuevo."
+                      "example_es":  "Tenemos un carro nuevo.",
+                      "es_freq":  15984
                   },
                   {
                       "id":  "nm-вода",
@@ -680,7 +713,8 @@
                       "example_de":  "Gib mir bitte etwas Wasser.",
                       "example_en":  "Give me some water, please.",
                       "example_es":  "Dame agua, por favor.",
-                      "akk":  "во́ду"
+                      "akk":  "во́ду",
+                      "es_freq":  125042
                   },
                   {
                       "id":  "nm-отец",
@@ -700,7 +734,8 @@
                       "example_cases":  "мой оте́ц – Nominativ · в больни́це – Präpositiv",
                       "example_de":  "Mein Vater arbeitet im Krankenhaus.",
                       "example_en":  "My father works at the hospital.",
-                      "example_es":  "Mi padre trabaja en el hospital."
+                      "example_es":  "Mi padre trabaja en el hospital.",
+                      "es_freq":  435906
                   },
                   {
                       "id":  "nm-проблема",
@@ -719,7 +754,8 @@
                       "example_cases":  "пробле́м – Genitiv Plural (nach нет)",
                       "example_de":  "Kein Problem!",
                       "example_en":  "No problem!",
-                      "example_es":  "¡No hay problema!"
+                      "example_es":  "¡No hay problema!",
+                      "es_freq":  310101
                   },
                   {
                       "id":  "nm-час",
@@ -739,7 +775,8 @@
                       "example_de":  "Der Film dauert zwei Stunden.",
                       "example_en":  "The film lasts two hours.",
                       "example_es":  "La película dura dos horas.",
-                      "loc":  "в часу́"
+                      "loc":  "в часу́",
+                      "es_freq":  306724
                   },
                   {
                       "id":  "nm-право",
@@ -758,7 +795,8 @@
                       "example_cases":  "у ка́ждого челове́ка – Genitiv · права́ – Nominativ Plural",
                       "example_de":  "Jeder Mensch hat Rechte.",
                       "example_en":  "Every person has rights.",
-                      "example_es":  "Toda persona tiene derechos."
+                      "example_es":  "Toda persona tiene derechos.",
+                      "es_freq":  3775
                   },
                   {
                       "id":  "nm-нога",
@@ -778,7 +816,8 @@
                       "example_de":  "Mir tun die Beine weh.",
                       "example_en":  "My legs hurt.",
                       "example_es":  "Me duelen las piernas.",
-                      "akk":  "но́гу"
+                      "akk":  "но́гу",
+                      "es_freq":  88288
                   },
                   {
                       "id":  "nm-решение",
@@ -796,7 +835,8 @@
                       "example_cases":  "пра́вильное реше́ние – Nominativ",
                       "example_de":  "Das ist die richtige Entscheidung.",
                       "example_en":  "This is the right decision.",
-                      "example_es":  "Esta es la decisión correcta."
+                      "example_es":  "Esta es la decisión correcta.",
+                      "es_freq":  54600
                   },
                   {
                       "id":  "nm-дверь",
@@ -815,7 +855,8 @@
                       "example_cases":  "дверь – Akkusativ",
                       "example_de":  "Mach bitte die Tür zu!",
                       "example_en":  "Close the door, please!",
-                      "example_es":  "¡Cierra la puerta, por favor!"
+                      "example_es":  "¡Cierra la puerta, por favor!",
+                      "es_freq":  154899
                   },
                   {
                       "id":  "nm-образ",
@@ -834,7 +875,8 @@
                       "example_cases":  "тако́й о́браз – Nominativ · жи́зни – Genitiv · мне – Dativ",
                       "example_de":  "Diese Lebensweise gefällt mir.",
                       "example_en":  "I like this way of life.",
-                      "example_es":  "Me gusta este estilo de vida."
+                      "example_es":  "Me gusta este estilo de vida.",
+                      "es_freq":  34344
                   },
                   {
                       "id":  "nm-история",
@@ -853,7 +895,8 @@
                       "example_cases":  "мне – Dativ · э́ту исто́рию – Akkusativ",
                       "example_de":  "Erzähl mir diese Geschichte!",
                       "example_en":  "Tell me this story!",
-                      "example_es":  "¡Cuéntame esta historia!"
+                      "example_es":  "¡Cuéntame esta historia!",
+                      "es_freq":  156656
                   },
                   {
                       "id":  "nm-власть",
@@ -872,7 +915,8 @@
                       "example_cases":  "вла́сти – Nominativ Plural · доро́гу – Akkusativ",
                       "example_de":  "Die Behörden haben die Straße gesperrt.",
                       "example_en":  "The authorities closed the road.",
-                      "example_es":  "Las autoridades cerraron la carretera."
+                      "example_es":  "Las autoridades cerraron la carretera.",
+                      "es_freq":  38631
                   },
                   {
                       "id":  "nm-закон",
@@ -891,7 +935,8 @@
                       "example_cases":  "про́тив зако́на – Genitiv",
                       "example_de":  "Das ist gegen das Gesetz.",
                       "example_en":  "This is against the law.",
-                      "example_es":  "Eso es contra la ley."
+                      "example_es":  "Eso es contra la ley.",
+                      "es_freq":  55667
                   },
                   {
                       "id":  "nm-война",
@@ -910,7 +955,8 @@
                       "example_cases":  "войны́ – Genitiv (nach Verneinung)",
                       "example_de":  "Wir wollen keinen Krieg.",
                       "example_en":  "We don\u0027t want war.",
-                      "example_es":  "No queremos la guerra."
+                      "example_es":  "No queremos la guerra.",
+                      "es_freq":  106482
                   },
                   {
                       "id":  "nm-бог",
@@ -930,7 +976,8 @@
                       "example_cases":  "бо́гу – Dativ",
                       "example_de":  "Gott sei Dank!",
                       "example_en":  "Thank God!",
-                      "example_es":  "¡Gracias a Dios!"
+                      "example_es":  "¡Gracias a Dios!",
+                      "es_freq":  476939
                   },
                   {
                       "id":  "nm-голос",
@@ -949,7 +996,8 @@
                       "example_cases":  "у неё – Genitiv · краси́вый го́лос – Nominativ",
                       "example_de":  "Sie hat eine schöne Stimme.",
                       "example_en":  "She has a beautiful voice.",
-                      "example_es":  "Ella tiene una voz bonita."
+                      "example_es":  "Ella tiene una voz bonita.",
+                      "es_freq":  60788
                   },
                   {
                       "id":  "nm-тысяча",
@@ -968,7 +1016,8 @@
                       "example_cases":  "ты́сячу – Akkusativ · рубле́й – Genitiv Plural",
                       "example_de":  "Das kostet tausend Rubel.",
                       "example_en":  "This costs a thousand rubles.",
-                      "example_es":  "Esto cuesta mil rublos."
+                      "example_es":  "Esto cuesta mil rublos.",
+                      "es_freq":  53364
                   },
                   {
                       "id":  "nm-книга",
@@ -989,7 +1038,8 @@
                       "example_en":  "I\u0027m reading an interesting book.",
                       "example_es":  "Estoy leyendo un libro interesante.",
                       "ex_sg":  "Э́та кни́га интере́сная. = Dieses Buch ist interessant. || У меня́ нет кни́ги. = Ich habe kein Buch. || Я ра́да но́вой кни́ге. = Ich freue mich über das neue Buch. || Я чита́ю кни́гу. = Ich lese ein Buch. || Я сижу́ с кни́гой. = Ich sitze mit einem Buch da. || В кни́ге мно́го карти́нок. = Im Buch sind viele Bilder.",
-                      "ex_pl":  "Кни́ги лежа́т на столе́. = Die Bücher liegen auf dem Tisch. || До́ма у меня́ мно́го книг. = Zu Hause habe ich viele Bücher. || Я ра́да но́вым кни́гам. = Ich freue mich über neue Bücher. || Я люблю́ кни́ги. = Ich liebe Bücher. || Э́то по́лка с кни́гами. = Das ist ein Regal mit Büchern. || Мы говори́м о кни́гах. = Wir sprechen über Bücher."
+                      "ex_pl":  "Кни́ги лежа́т на столе́. = Die Bücher liegen auf dem Tisch. || До́ма у меня́ мно́го книг. = Zu Hause habe ich viele Bücher. || Я ра́да но́вым кни́гам. = Ich freue mich über neue Bücher. || Я люблю́ кни́ги. = Ich liebe Bücher. || Э́то по́лка с кни́гами. = Das ist ein Regal mit Büchern. || Мы говори́м о кни́гах. = Wir sprechen über Bücher.",
+                      "es_freq":  93048
                   }
               ]
 }

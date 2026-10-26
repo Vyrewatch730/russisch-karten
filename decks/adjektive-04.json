@@ -19,7 +19,8 @@
                       "example_cases":  "е́вро – Nominativ · европе́йская валю́та – Nominativ",
                       "example_de":  "Der Euro ist die europäische Währung.",
                       "example_en":  "The euro is the European currency.",
-                      "example_es":  "El euro es la moneda europea."
+                      "example_es":  "El euro es la moneda europea.",
+                      "es_freq":  5422
                   },
                   {
                       "id":  "aj-отечественный",
@@ -33,7 +34,8 @@
                       "example_cases":  "оте́чественные проду́кты – Akkusativ Plural",
                       "example_de":  "Ich kaufe einheimische Produkte.",
                       "example_en":  "I buy domestic products.",
-                      "example_es":  "Compro productos nacionales."
+                      "example_es":  "Compro productos nacionales.",
+                      "es_freq":  1139
                   },
                   {
                       "id":  "aj-ближайший",
@@ -47,7 +49,8 @@
                       "example_cases":  "ближа́йшая апте́ка – Nominativ",
                       "example_de":  "Wo ist die nächste Apotheke?",
                       "example_en":  "Where\u0027s the nearest pharmacy?",
-                      "example_es":  "¿Dónde está la farmacia más cercana?"
+                      "example_es":  "¿Dónde está la farmacia más cercana?",
+                      "es_freq":  472
                   },
                   {
                       "id":  "aj-теплый",
@@ -68,7 +71,8 @@
                       "adv":  "тепло́",
                       "adv_de":  "warm",
                       "adv_ex":  "Сего́дня тепло́.",
-                      "adv_ex_de":  "Heute ist es warm."
+                      "adv_ex_de":  "Heute ist es warm.",
+                      "es_freq":  5768
                   },
                   {
                       "id":  "aj-духовный",
@@ -85,7 +89,8 @@
                       "adv":  "духо́вно",
                       "adv_de":  "geistig, seelisch",
                       "adv_ex":  "Он духо́вно бога́т.",
-                      "adv_ex_de":  "Er ist seelisch reich."
+                      "adv_ex_de":  "Er ist seelisch reich.",
+                      "es_freq":  6202
                   },
                   {
                       "id":  "aj-прежний",
@@ -103,7 +108,8 @@
                       "adv":  "по-пре́жнему",
                       "adv_de":  "nach wie vor, immer noch",
                       "adv_ex":  "Он по-пре́жнему живёт здесь.",
-                      "adv_ex_de":  "Er wohnt immer noch hier."
+                      "adv_ex_de":  "Er wohnt immer noch hier.",
+                      "es_freq":  16414
                   },
                   {
                       "id":  "aj-французский",
@@ -121,7 +127,8 @@
                       "adv":  "по-францу́зски",
                       "adv_de":  "auf Französisch",
                       "adv_ex":  "Она́ чита́ет по-францу́зски.",
-                      "adv_ex_de":  "Sie liest Französisch."
+                      "adv_ex_de":  "Sie liest Französisch.",
+                      "es_freq":  30923
                   },
                   {
                       "id":  "aj-профессиональный",
@@ -138,7 +145,8 @@
                       "adv":  "профессиона́льно",
                       "adv_de":  "professionell",
                       "adv_ex":  "Она́ рабо́тает профессиона́льно.",
-                      "adv_ex_de":  "Sie arbeitet professionell."
+                      "adv_ex_de":  "Sie arbeitet professionell.",
+                      "es_freq":  25043
                   },
                   {
                       "id":  "aj-женский",
@@ -157,7 +165,8 @@
                       "adv":  "по-же́нски",
                       "adv_de":  "wie eine Frau, weiblich",
                       "adv_ex":  "Она́ по-же́нски мудра́.",
-                      "adv_ex_de":  "Sie ist auf weibliche Art klug."
+                      "adv_ex_de":  "Sie ist auf weibliche Art klug.",
+                      "es_freq":  9762
                   },
                   {
                       "id":  "aj-крайний",
@@ -175,7 +184,8 @@
                       "adv":  "кра́йне",
                       "adv_de":  "äußerst",
                       "adv_ex":  "Э́то кра́йне ва́жно.",
-                      "adv_ex_de":  "Das ist äußerst wichtig."
+                      "adv_ex_de":  "Das ist äußerst wichtig.",
+                      "es_freq":  11863
                   },
                   {
                       "id":  "aj-дальнейший",
@@ -189,7 +199,8 @@
                       "example_cases":  "дальне́йших успе́хов – Genitiv Plural (nach жела́ть)",
                       "example_de":  "Weiterhin viel Erfolg!",
                       "example_en":  "Wishing you continued success!",
-                      "example_es":  "¡Le deseo muchos éxitos más!"
+                      "example_es":  "¡Le deseo muchos éxitos más!",
+                      "es_freq":  3556
                   },
                   {
                       "id":  "aj-естественный",
@@ -209,7 +220,8 @@
                       "adv":  "есте́ственно",
                       "adv_de":  "natürlich",
                       "adv_ex":  "Есте́ственно, я помогу́.",
-                      "adv_ex_de":  "Natürlich helfe ich."
+                      "adv_ex_de":  "Natürlich helfe ich.",
+                      "es_freq":  22237
                   },
                   {
                       "id":  "aj-информационный",
@@ -222,7 +234,8 @@
                       "example_cases":  "информацио́нную програ́мму – Akkusativ",
                       "example_de":  "Ich schaue eine Nachrichtensendung.",
                       "example_en":  "I\u0027m watching a news program.",
-                      "example_es":  "Veo un programa informativo."
+                      "example_es":  "Veo un programa informativo.",
+                      "es_freq":  1299
                   },
                   {
                       "id":  "aj-железный",
@@ -236,7 +249,8 @@
                       "example_cases":  "по желе́зной доро́ге – Dativ",
                       "example_de":  "Wir fahren mit der Bahn.",
                       "example_en":  "We\u0027re traveling by rail.",
-                      "example_es":  "Viajamos en tren."
+                      "example_es":  "Viajamos en tren.",
+                      "es_freq":  392
                   },
                   {
                       "id":  "aj-горячий",
@@ -257,7 +271,8 @@
                       "adv":  "горячо́",
                       "adv_de":  "heiß",
                       "adv_ex":  "Осторо́жно, горячо́!",
-                      "adv_ex_de":  "Vorsicht, heiß!"
+                      "adv_ex_de":  "Vorsicht, heiß!",
+                      "es_freq":  38958
                   },
                   {
                       "id":  "aj-веселый",
@@ -278,7 +293,8 @@
                       "adv":  "ве́село",
                       "adv_de":  "lustig, fröhlich",
                       "adv_ex":  "Бы́ло о́чень ве́село.",
-                      "adv_ex_de":  "Es war sehr lustig."
+                      "adv_ex_de":  "Es war sehr lustig.",
+                      "es_freq":  9655
                   },
                   {
                       "id":  "aj-официальный",
@@ -295,7 +311,8 @@
                       "adv":  "официа́льно",
                       "adv_de":  "offiziell",
                       "adv_ex":  "Он официа́льно рабо́тает здесь.",
-                      "adv_ex_de":  "Er arbeitet offiziell hier."
+                      "adv_ex_de":  "Er arbeitet offiziell hier.",
+                      "es_freq":  62285
                   },
                   {
                       "id":  "aj-серый",
@@ -309,7 +326,8 @@
                       "example_cases":  "у меня́ – Genitiv · се́рый кот – Nominativ",
                       "example_de":  "Ich habe einen grauen Kater.",
                       "example_en":  "I have a gray cat.",
-                      "example_es":  "Tengo un gato gris."
+                      "example_es":  "Tengo un gato gris.",
+                      "es_freq":  8124
                   },
                   {
                       "id":  "aj-опасный",
@@ -330,7 +348,8 @@
                       "adv":  "опа́сно",
                       "adv_de":  "gefährlich",
                       "adv_ex":  "Здесь опа́сно.",
-                      "adv_ex_de":  "Hier ist es gefährlich."
+                      "adv_ex_de":  "Hier ist es gefährlich.",
+                      "es_freq":  47496
                   },
                   {
                       "id":  "aj-слабый",
@@ -350,7 +369,8 @@
                       "adv":  "сла́бо",
                       "adv_de":  "schwach",
                       "adv_ex":  "Он сла́бо игра́ет.",
-                      "adv_ex_de":  "Er spielt schwach."
+                      "adv_ex_de":  "Er spielt schwach.",
+                      "es_freq":  22610
                   },
                   {
                       "id":  "aj-яркий",
@@ -372,7 +392,8 @@
                       "adv":  "я́рко",
                       "adv_de":  "hell, grell",
                       "adv_ex":  "Со́лнце я́рко све́тит.",
-                      "adv_ex_de":  "Die Sonne scheint hell."
+                      "adv_ex_de":  "Die Sonne scheint hell.",
+                      "es_freq":  30060
                   },
                   {
                       "id":  "aj-летний",
@@ -387,7 +408,8 @@
                       "example_cases":  "у нас – Genitiv · ле́тние кани́кулы – Nominativ Plural",
                       "example_de":  "Wir haben Sommerferien.",
                       "example_en":  "We have summer vacation.",
-                      "example_es":  "Tenemos vacaciones de verano."
+                      "example_es":  "Tenemos vacaciones de verano.",
+                      "es_freq":  1324
                   },
                   {
                       "id":  "aj-дополнительный",
@@ -404,7 +426,8 @@
                       "adv":  "дополни́тельно",
                       "adv_de":  "zusätzlich",
                       "adv_ex":  "Я рабо́таю дополни́тельно.",
-                      "adv_ex_de":  "Ich arbeite zusätzlich."
+                      "adv_ex_de":  "Ich arbeite zusätzlich.",
+                      "es_freq":  4005
                   },
                   {
                       "id":  "aj-правильный",
@@ -424,7 +447,8 @@
                       "adv":  "пра́вильно",
                       "adv_de":  "richtig",
                       "adv_ex":  "Ты пра́вильно сде́лал.",
-                      "adv_ex_de":  "Du hast es richtig gemacht."
+                      "adv_ex_de":  "Du hast es richtig gemacht.",
+                      "es_freq":  91316
                   },
                   {
                       "id":  "aj-лесной",
@@ -437,7 +461,8 @@
                       "example_cases":  "по лесно́й доро́ге – Dativ",
                       "example_de":  "Wir gehen auf einem Waldweg spazieren.",
                       "example_en":  "We\u0027re walking along a forest road.",
-                      "example_es":  "Paseamos por un camino del bosque."
+                      "example_es":  "Paseamos por un camino del bosque.",
+                      "es_freq":  1262
                   },
                   {
                       "id":  "aj-умный",
@@ -457,7 +482,8 @@
                       "adv":  "умно́",
                       "adv_de":  "klug",
                       "adv_ex":  "Э́то умно́.",
-                      "adv_ex_de":  "Das ist klug."
+                      "adv_ex_de":  "Das ist klug.",
+                      "es_freq":  41064
                   },
                   {
                       "id":  "aj-северный",
@@ -471,7 +497,8 @@
                       "example_cases":  "Мурма́нск – Nominativ · се́верный го́род – Nominativ",
                       "example_de":  "Murmansk ist eine nördliche Stadt.",
                       "example_en":  "Murmansk is a northern city.",
-                      "example_es":  "Múrmansk es una ciudad del norte."
+                      "example_es":  "Múrmansk es una ciudad del norte.",
+                      "es_freq":  1616
                   },
                   {
                       "id":  "aj-ясный",
@@ -491,7 +518,8 @@
                       "adv":  "я́сно",
                       "adv_de":  "klar",
                       "adv_ex":  "Всё я́сно.",
-                      "adv_ex_de":  "Alles klar."
+                      "adv_ex_de":  "Alles klar.",
+                      "es_freq":  317195
                   },
                   {
                       "id":  "aj-милый",
@@ -511,7 +539,8 @@
                       "adv":  "ми́ло",
                       "adv_de":  "nett, süß",
                       "adv_ex":  "Как ми́ло!",
-                      "adv_ex_de":  "Wie nett!"
+                      "adv_ex_de":  "Wie nett!",
+                      "es_freq":  76963
                   },
                   {
                       "id":  "aj-светлый",
@@ -531,7 +560,8 @@
                       "adv":  "светло́",
                       "adv_de":  "hell",
                       "adv_ex":  "В ко́мнате светло́.",
-                      "adv_ex_de":  "Im Zimmer ist es hell."
+                      "adv_ex_de":  "Im Zimmer ist es hell.",
+                      "es_freq":  15860
                   },
                   {
                       "id":  "aj-редкий",
@@ -553,7 +583,8 @@
                       "adv":  "ре́дко",
                       "adv_de":  "selten",
                       "adv_ex":  "Я ре́дко смотрю́ телеви́зор.",
-                      "adv_ex_de":  "Ich schaue selten fern."
+                      "adv_ex_de":  "Ich schaue selten fern.",
+                      "es_freq":  85244
                   },
                   {
                       "id":  "aj-верный",
@@ -573,7 +604,8 @@
                       "adv":  "ве́рно",
                       "adv_de":  "richtig, treu",
                       "adv_ex":  "Ве́рно!",
-                      "adv_ex_de":  "Richtig!"
+                      "adv_ex_de":  "Richtig!",
+                      "es_freq":  8429
                   },
                   {
                       "id":  "aj-юридический",
@@ -590,7 +622,8 @@
                       "adv":  "юриди́чески",
                       "adv_de":  "rechtlich",
                       "adv_ex":  "Э́то юриди́чески пра́вильно.",
-                      "adv_ex_de":  "Das ist rechtlich korrekt."
+                      "adv_ex_de":  "Das ist rechtlich korrekt.",
+                      "es_freq":  867
                   },
                   {
                       "id":  "aj-административный",
@@ -603,7 +636,8 @@
                       "example_cases":  "администрати́вное зда́ние – Nominativ",
                       "example_de":  "Das ist ein Verwaltungsgebäude.",
                       "example_en":  "This is an administrative building.",
-                      "example_es":  "Es un edificio administrativo."
+                      "example_es":  "Es un edificio administrativo.",
+                      "es_freq":  1757
                   },
                   {
                       "id":  "aj-узкий",
@@ -624,7 +658,8 @@
                       "adv":  "у́зко",
                       "adv_de":  "eng, schmal",
                       "adv_ex":  "Здесь о́чень у́зко.",
-                      "adv_ex_de":  "Hier ist es sehr eng."
+                      "adv_ex_de":  "Hier ist es sehr eng.",
+                      "es_freq":  4706
                   },
                   {
                       "id":  "aj-художественный",
@@ -642,7 +677,8 @@
                       "adv":  "худо́жественно",
                       "adv_de":  "künstlerisch",
                       "adv_ex":  "Он худо́жественно одарён.",
-                      "adv_ex_de":  "Er ist künstlerisch begabt."
+                      "adv_ex_de":  "Er ist künstlerisch begabt.",
+                      "es_freq":  4275
                   },
                   {
                       "id":  "aj-древний",
@@ -656,7 +692,8 @@
                       "example_cases":  "дре́вний го́род – Nominativ",
                       "example_de":  "Das ist eine uralte Stadt.",
                       "example_en":  "This is an ancient city.",
-                      "example_es":  "Es una ciudad antigua."
+                      "example_es":  "Es una ciudad antigua.",
+                      "es_freq":  44732
                   },
                   {
                       "id":  "aj-массовый",
@@ -669,7 +706,8 @@
                       "example_cases":  "ма́ссовое мероприя́тие – Nominativ",
                       "example_de":  "Das ist eine Massenveranstaltung.",
                       "example_en":  "This is a mass event.",
-                      "example_es":  "Es un evento masivo."
+                      "example_es":  "Es un evento masivo.",
+                      "es_freq":  5419
                   },
                   {
                       "id":  "aj-замечательный",
@@ -688,7 +726,8 @@
                       "adv":  "замеча́тельно",
                       "adv_de":  "großartig",
                       "adv_ex":  "Замеча́тельно!",
-                      "adv_ex_de":  "Großartig!"
+                      "adv_ex_de":  "Großartig!",
+                      "es_freq":  2963
                   },
                   {
                       "id":  "aj-генеральный",
@@ -701,7 +740,8 @@
                       "example_cases":  "генера́льный дире́ктор – Nominativ · компа́нии – Genitiv",
                       "example_de":  "Er ist der Generaldirektor der Firma.",
                       "example_en":  "He\u0027s the company\u0027s CEO.",
-                      "example_es":  "Es el director general de la empresa."
+                      "example_es":  "Es el director general de la empresa.",
+                      "es_freq":  62835
                   },
                   {
                       "id":  "aj-региональный",
@@ -714,7 +754,8 @@
                       "example_cases":  "региона́льная газе́та – Nominativ",
                       "example_de":  "Das ist eine Regionalzeitung.",
                       "example_en":  "This is a regional newspaper.",
-                      "example_es":  "Es un periódico regional."
+                      "example_es":  "Es un periódico regional.",
+                      "es_freq":  2249
                   },
                   {
                       "id":  "aj-задний",
@@ -729,7 +770,8 @@
                       "example_cases":  "на за́днее сиде́нье – Akkusativ (wohin?)",
                       "example_de":  "Setz dich auf den Rücksitz.",
                       "example_en":  "Sit in the back seat.",
-                      "example_es":  "Siéntate en el asiento trasero."
+                      "example_es":  "Siéntate en el asiento trasero.",
+                      "es_freq":  43809
                   },
                   {
                       "id":  "aj-здоровый",
@@ -750,7 +792,8 @@
                       "adv":  "здо́рово",
                       "adv_de":  "toll, super",
                       "adv_ex":  "Здо́рово!",
-                      "adv_ex_de":  "Super!"
+                      "adv_ex_de":  "Super!",
+                      "es_freq":  14256
                   },
                   {
                       "id":  "aj-литературный",
@@ -763,7 +806,8 @@
                       "example_cases":  "литерату́рный язы́к – Nominativ",
                       "example_de":  "Das ist Literatursprache.",
                       "example_en":  "This is literary language.",
-                      "example_es":  "Es lenguaje literario."
+                      "example_es":  "Es lenguaje literario.",
+                      "es_freq":  1329
                   },
                   {
                       "id":  "aj-активный",
@@ -783,7 +827,8 @@
                       "adv":  "акти́вно",
                       "adv_de":  "aktiv",
                       "adv_ex":  "Он акти́вно занима́ется спо́ртом.",
-                      "adv_ex_de":  "Er treibt aktiv Sport."
+                      "adv_ex_de":  "Er treibt aktiv Sport.",
+                      "es_freq":  11397
                   },
                   {
                       "id":  "aj-острый",
@@ -804,7 +849,8 @@
                       "adv":  "о́стро",
                       "adv_de":  "scharf",
                       "adv_ex":  "Э́то о́чень о́стро.",
-                      "adv_ex_de":  "Das ist sehr scharf."
+                      "adv_ex_de":  "Das ist sehr scharf.",
+                      "es_freq":  3131
                   },
                   {
                       "id":  "aj-творческий",
@@ -821,7 +867,8 @@
                       "adv":  "тво́рчески",
                       "adv_de":  "kreativ",
                       "adv_ex":  "Он тво́рчески подхо́дит к рабо́те.",
-                      "adv_ex_de":  "Er geht kreativ an die Arbeit."
+                      "adv_ex_de":  "Er geht kreativ an die Arbeit.",
+                      "es_freq":  5488
                   },
                   {
                       "id":  "aj-богатый",
@@ -842,7 +889,8 @@
                       "adv":  "бога́то",
                       "adv_de":  "reich",
                       "adv_ex":  "Они́ живу́т бога́то.",
-                      "adv_ex_de":  "Sie leben reich."
+                      "adv_ex_de":  "Sie leben reich.",
+                      "es_freq":  48367
                   },
                   {
                       "id":  "aj-ночной",
@@ -856,7 +904,8 @@
                       "example_cases":  "ночно́й го́род – Akkusativ",
                       "example_de":  "Ich mag die Stadt bei Nacht.",
                       "example_en":  "I love the city at night.",
-                      "example_es":  "Me encanta la ciudad de noche."
+                      "example_es":  "Me encanta la ciudad de noche.",
+                      "es_freq":  10812
                   },
                   {
                       "id":  "aj-мягкий",
@@ -878,7 +927,8 @@
                       "adv":  "мя́гко",
                       "adv_de":  "weich, sanft",
                       "adv_ex":  "Она́ мя́гко улыбну́лась.",
-                      "adv_ex_de":  "Sie lächelte sanft."
+                      "adv_ex_de":  "Sie lächelte sanft.",
+                      "es_freq":  3974
                   }
               ]
 }

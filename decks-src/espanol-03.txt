@@ -1,0 +1,199 @@
+# Spanische Nomen ohne russische Vorlage (Alltag)
+# typ | es | de | en | Beispiel | Deutsch | Englisch | Tipp
+sustantivo | la chica | das Mädchen, die junge Frau | girl | Esa chica es mi prima. | Das Mädchen ist meine Cousine. | That girl is my cousin. | Männlich: el chico. In der DR auch: la muchacha.
+sustantivo | el cariño | die Zuneigung; Schatz | affection; darling | Gracias, cariño. | Danke, Schatz. | Thanks, darling. | Kosename. In der DR oft: mi amor.
+sustantivo | el bebé | das Baby | baby | El bebé está dormido. | Das Baby schläft. | The baby is asleep. | Für Jungen und Mädchen: el bebé.
+sustantivo | el sitio | der Ort, der Platz | place, site | Este sitio es muy tranquilo. | Dieser Ort ist sehr ruhig. | This place is very quiet. | Auch: el lugar. sitio web = Webseite.
+sustantivo | la señorita | das Fräulein, die junge Dame | miss, young lady | Buenas tardes, señorita. | Guten Tag, junge Frau. | Good afternoon, miss. |
+sustantivo | el abogado | der Anwalt | lawyer | Necesito un abogado. | Ich brauche einen Anwalt. | I need a lawyer. | Weiblich: la abogada.
+sustantivo | el accidente | der Unfall | accident | Hubo un accidente en la autopista. | Auf der Autobahn gab es einen Unfall. | There was an accident on the highway. |
+sustantivo | el hambre | der Hunger | hunger | Tengo mucha hambre. | Ich habe großen Hunger. | I'm very hungry. | Weiblich, aber mit el: el hambre, mucha hambre. Hunger haben = tener hambre.
+sustantivo | la carrera | das Rennen; das Studium; die Karriere | race; degree; career | Estudio la carrera de medicina. | Ich studiere Medizin. | I'm studying medicine. |
+sustantivo | el cumpleaños | der Geburtstag | birthday | ¡Feliz cumpleaños! | Alles Gute zum Geburtstag! | Happy birthday! | Gleich im Plural: los cumpleaños.
+sustantivo | la boda | die Hochzeit | wedding | La boda es en la iglesia. | Die Hochzeit ist in der Kirche. | The wedding is in the church. |
+sustantivo | la Navidad | Weihnachten | Christmas | ¡Feliz Navidad! | Frohe Weihnachten! | Merry Christmas! | In der DR wird Weihnachten groß mit der Familie gefeiert (Nochebuena am 24.).
+sustantivo | la basura | der Müll | trash | Saca la basura, por favor. | Bring bitte den Müll raus. | Take out the trash, please. |
+sustantivo | el rato | die Weile | while | Espérame un rato. | Warte eine Weile auf mich. | Wait for me a while. | al rato = gleich, etwas später.
+sustantivo | el bar | die Bar | bar | Vamos al bar de la esquina. | Gehen wir in die Bar an der Ecke. | Let's go to the bar on the corner. |
+sustantivo | la luna | der Mond | moon | La luna está llena. | Es ist Vollmond. | The moon is full. |
+sustantivo | la reina | die Königin | queen | La reina vive en el palacio. | Die Königin wohnt im Palast. | The queen lives in the palace. |
+sustantivo | el zapato | der Schuh | shoe | Estos zapatos son nuevos. | Diese Schuhe sind neu. | These shoes are new. | In der DR auch für Turnschuhe: los tenis.
+sustantivo | la banda | die Band; die Bande | band; gang | La banda toca merengue. | Die Band spielt Merengue. | The band plays merengue. |
+sustantivo | la isla | die Insel | island | La República Dominicana está en una isla. | Die Dominikanische Republik liegt auf einer Insel. | The Dominican Republic is on an island. | Die Insel heißt La Española (Hispaniola).
+sustantivo | la justicia | die Gerechtigkeit; die Justiz | justice | Queremos justicia. | Wir wollen Gerechtigkeit. | We want justice. |
+sustantivo | el calor | die Hitze, die Wärme | heat | ¡Qué calor hace hoy! | Was für eine Hitze heute! | It's so hot today! | Es ist heiß = hace calor. Mir ist heiß = tengo calor.
+sustantivo | las vacaciones | der Urlaub, die Ferien | vacation | Estamos de vacaciones. | Wir sind im Urlaub. | We're on vacation. | Immer Plural.
+sustantivo | la confianza | das Vertrauen | trust | Te tengo confianza. | Ich vertraue dir. | I trust you. |
+sustantivo | el pantalón | die Hose | pants | Me compré un pantalón. | Ich habe mir eine Hose gekauft. | I bought some pants. | Auch Plural: los pantalones.
+sustantivo | la copa | das Glas (mit Stiel); der Pokal | glass; cup (trophy) | Una copa de vino, por favor. | Ein Glas Wein, bitte. | A glass of wine, please. | Für Wasser: el vaso.
+sustantivo | la trampa | die Falle | trap | Es una trampa. | Das ist eine Falle. | It's a trap. | hacer trampa = schummeln.
+sustantivo | el taxi | das Taxi | taxi | Vamos en taxi. | Wir fahren mit dem Taxi. | Let's go by taxi. |
+sustantivo | el camión | der Lastwagen | truck | El camión trae la mercancía. | Der Lastwagen bringt die Ware. | The truck brings the goods. | In Mexiko auch: der Bus.
+sustantivo | el colegio | die Schule | school | Los niños están en el colegio. | Die Kinder sind in der Schule. | The children are at school. | In der DR auch: la escuela.
+sustantivo | la playa | der Strand | beach | Vamos a la playa. | Wir gehen an den Strand. | We're going to the beach. | Bekannte Strände der DR: Punta Cana, Bávaro, Las Terrenas.
+sustantivo | el desastre | die Katastrophe | disaster | ¡Qué desastre! | Was für ein Chaos! | What a mess! |
+sustantivo | la tontería | der Unsinn, die Dummheit | nonsense | ¡No digas tonterías! | Red keinen Unsinn! | Don't talk nonsense! |
+sustantivo | la bala | die Kugel (Waffe) | bullet | La bala no le dio. | Die Kugel hat ihn nicht getroffen. | The bullet didn't hit him. |
+sustantivo | el espectáculo | die Vorstellung, die Show | show | El espectáculo empieza a las nueve. | Die Show fängt um neun an. | The show starts at nine. |
+sustantivo | la magia | die Magie, die Zauberei | magic | Parece magia. | Das sieht aus wie Zauberei. | It looks like magic. |
+sustantivo | el universo | das Universum | universe | El universo es enorme. | Das Universum ist riesig. | The universe is huge. |
+sustantivo | el monstruo | das Monster | monster | Los niños tienen miedo del monstruo. | Die Kinder haben Angst vor dem Monster. | The children are afraid of the monster. |
+sustantivo | la princesa | die Prinzessin | princess | Mi hija quiere ser princesa. | Meine Tochter will Prinzessin sein. | My daughter wants to be a princess. |
+sustantivo | el huevo | das Ei | egg | Quiero dos huevos fritos. | Ich möchte zwei Spiegeleier. | I want two fried eggs. | Typisches dominikanisches Frühstück: los tres golpes (Mangú, Salami, Käse, Ei).
+sustantivo | la herida | die Wunde | wound | La herida no es grave. | Die Wunde ist nicht schlimm. | The wound isn't serious. |
+sustantivo | el cerdo | das Schwein | pig | En Navidad comemos cerdo. | An Weihnachten essen wir Schwein. | At Christmas we eat pork. | In der DR auch: el puerco. Weihnachtsessen: puerco asado.
+sustantivo | la intención | die Absicht | intention | No era mi intención. | Das war nicht meine Absicht. | It wasn't my intention. |
+sustantivo | la medicina | das Medikament; die Medizin | medicine | Toma la medicina. | Nimm das Medikament. | Take the medicine. | Auch: el medicamento.
+sustantivo | el fantasma | das Gespenst | ghost | ¿Crees en fantasmas? | Glaubst du an Gespenster? | Do you believe in ghosts? | Männlich trotz -a (wie el problema).
+sustantivo | el pollo | das Hähnchen | chicken | Arroz con pollo. | Reis mit Hähnchen. | Rice with chicken. | Ein Klassiker in der DR.
+sustantivo | el sombrero | der Hut | hat | Ponte el sombrero, hace sol. | Setz den Hut auf, es ist sonnig. | Put on your hat, it's sunny. | Mütze: la gorra.
+sustantivo | el correo | die Post; die E-Mail | mail; email | Te mando un correo. | Ich schicke dir eine E-Mail. | I'll send you an email. | correo electrónico = E-Mail.
+sustantivo | el video | das Video | video | Mira este video. | Schau dir dieses Video an. | Watch this video. | In Spanien: vídeo.
+sustantivo | el pastel | der Kuchen | cake | Hice un pastel de cumpleaños. | Ich habe einen Geburtstagskuchen gebacken. | I made a birthday cake. | In der DR: el bizcocho (dominicano).
+sustantivo | la enfermera | die Krankenschwester | nurse | La enfermera es muy amable. | Die Krankenschwester ist sehr freundlich. | The nurse is very kind. | Männlich: el enfermero.
+sustantivo | el agujero | das Loch | hole | Hay un agujero en la calle. | Auf der Straße ist ein Loch. | There's a hole in the street. | In der DR auch: el hoyo.
+sustantivo | el aspecto | das Aussehen; der Aspekt | appearance; aspect | Tiene buen aspecto. | Er sieht gut aus. | He looks good. |
+sustantivo | el alcalde | der Bürgermeister | mayor | El alcalde visitó el barrio. | Der Bürgermeister hat das Viertel besucht. | The mayor visited the neighborhood. |
+sustantivo | el primo | der Cousin | cousin | Mi primo vive en Nueva York. | Mein Cousin wohnt in New York. | My cousin lives in New York. | Weiblich: la prima. Viele Dominikaner haben Familie in New York.
+sustantivo | el alcohol | der Alkohol | alcohol | No tomo alcohol. | Ich trinke keinen Alkohol. | I don't drink alcohol. | In der DR: tomar = trinken.
+sustantivo | el genio | das Genie; die Laune | genius; temper | ¡Eres un genio! | Du bist ein Genie! | You're a genius! | tener mal genio = schlecht gelaunt sein.
+sustantivo | el ladrón | der Dieb | thief | El ladrón se llevó mi celular. | Der Dieb hat mein Handy mitgenommen. | The thief took my phone. | Weiblich: la ladrona.
+sustantivo | el entrenador | der Trainer | coach | El entrenador grita mucho. | Der Trainer schreit viel. | The coach yells a lot. |
+sustantivo | el queso | der Käse | cheese | Un sándwich de jamón y queso. | Ein Sandwich mit Schinken und Käse. | A ham and cheese sandwich. | In der DR beliebt: queso frito.
+sustantivo | el aeropuerto | der Flughafen | airport | Te busco en el aeropuerto. | Ich hole dich am Flughafen ab. | I'll pick you up at the airport. | buscar a alguien = jemanden abholen (Lateinamerika).
+sustantivo | la gloria | der Ruhm, die Herrlichkeit | glory | ¡Gloria a Dios! | Ehre sei Gott! | Glory to God! |
+sustantivo | la camisa | das Hemd | shirt | Me gusta tu camisa. | Mir gefällt dein Hemd. | I like your shirt. | T-Shirt: la camiseta (DR auch: el t-shirt, el polo).
+sustantivo | el rostro | das Gesicht | face | Tiene un rostro bonito. | Sie hat ein hübsches Gesicht. | She has a pretty face. | Alltag: la cara.
+sustantivo | la tormenta | der Sturm, das Unwetter | storm | Viene una tormenta. | Ein Unwetter kommt. | A storm is coming. | Hurrikan: el huracán (Saison Juni–November).
+sustantivo | el chocolate | die Schokolade | chocolate | Un chocolate caliente, por favor. | Eine heiße Schokolade, bitte. | A hot chocolate, please. |
+sustantivo | la bebida | das Getränk | drink | ¿Qué bebidas tienen? | Welche Getränke haben Sie? | What drinks do you have? |
+sustantivo | la diversión | der Spaß | fun | ¡Qué diversión! | Was für ein Spaß! | What fun! |
+sustantivo | el efectivo | das Bargeld | cash | ¿Paga en efectivo o con tarjeta? | Zahlen Sie bar oder mit Karte? | Cash or card? |
+sustantivo | el cáncer | der Krebs (Krankheit) | cancer | Fumar causa cáncer. | Rauchen verursacht Krebs. | Smoking causes cancer. |
+sustantivo | el funeral | die Beerdigung | funeral | Fuimos al funeral de su abuelo. | Wir waren auf der Beerdigung seines Opas. | We went to his grandfather's funeral. | In der DR: los rezos (Gebete) danach, neun Tage lang.
+sustantivo | la entrevista | das Interview; das Vorstellungsgespräch | interview | Mañana tengo una entrevista de trabajo. | Morgen habe ich ein Vorstellungsgespräch. | Tomorrow I have a job interview. |
+sustantivo | la camioneta | der Kleintransporter, der Pick-up | pickup, van | Mi papá tiene una camioneta. | Mein Papa hat einen Pick-up. | My dad has a pickup truck. | In der DR auch: la yipeta (SUV).
+sustantivo | el plato | der Teller; das Gericht | plate; dish | El plato típico es la bandera dominicana. | Das typische Gericht ist die Bandera Dominicana. | The typical dish is the bandera dominicana. | lavar los platos = abwaschen.
+sustantivo | la violencia | die Gewalt | violence | No a la violencia. | Nein zur Gewalt. | No to violence. |
+sustantivo | la aventura | das Abenteuer | adventure | ¡Qué aventura! | Was für ein Abenteuer! | What an adventure! |
+sustantivo | la comunidad | die Gemeinschaft, die Gemeinde | community | La comunidad dominicana en Nueva York es grande. | Die dominikanische Gemeinde in New York ist groß. | The Dominican community in New York is big. |
+sustantivo | el tesoro | der Schatz | treasure | Eres mi tesoro. | Du bist mein Schatz. | You're my treasure. |
+sustantivo | el empleo | die Anstellung, der Job | job, employment | Estoy buscando empleo. | Ich suche Arbeit. | I'm looking for a job. | Alltag: el trabajo.
+sustantivo | la cirugía | die Operation, die Chirurgie | surgery | Mañana tiene una cirugía. | Morgen hat er eine Operation. | He has surgery tomorrow. |
+sustantivo | el piloto | der Pilot | pilot | El piloto anunció la llegada. | Der Pilot hat die Landung angekündigt. | The pilot announced the arrival. |
+sustantivo | el ritmo | der Rhythmus | rhythm | Tienes buen ritmo. | Du hast guten Rhythmus. | You've got good rhythm. |
+sustantivo | el mono | der Affe | monkey | El mono come un guineo. | Der Affe isst eine Banane. | The monkey eats a banana. | In der DR heißt die Banane el guineo.
+sustantivo | el castillo | die Burg, das Schloss | castle | Visitamos un castillo antiguo. | Wir haben eine alte Burg besucht. | We visited an old castle. |
+sustantivo | la pelota | der Ball; Baseball (DR) | ball; baseball | Los niños juegan pelota en la calle. | Die Kinder spielen auf der Straße Baseball. | The kids play baseball in the street. | In der DR heißt jugar pelota fast immer Baseball, der Nationalsport.
+sustantivo | la promesa | das Versprechen | promise | Es una promesa. | Versprochen. | It's a promise. |
+sustantivo | el bolsillo | die Tasche (Kleidung) | pocket | El dinero está en mi bolsillo. | Das Geld ist in meiner Hosentasche. | The money is in my pocket. | Handtasche: la cartera; Tüte: la funda (DR).
+sustantivo | la taza | die Tasse | cup | Una taza de café. | Eine Tasse Kaffee. | A cup of coffee. | Kaffee in der DR: el cafecito, oft sehr süß.
+sustantivo | la chaqueta | die Jacke | jacket | Lleva una chaqueta, hace frío. | Nimm eine Jacke mit, es ist kalt. | Take a jacket, it's cold. | In der DR auch: el abrigo.
+sustantivo | el abrigo | der Mantel | coat | No necesito abrigo en el Caribe. | In der Karibik brauche ich keinen Mantel. | I don't need a coat in the Caribbean. |
+sustantivo | la bruja | die Hexe | witch | La bruja del cuento es mala. | Die Hexe im Märchen ist böse. | The witch in the story is evil. |
+sustantivo | la copia | die Kopie | copy | Necesito una copia de mi pasaporte. | Ich brauche eine Kopie meines Passes. | I need a copy of my passport. |
+sustantivo | la pizza | die Pizza | pizza | Pedimos una pizza. | Wir bestellen eine Pizza. | We order a pizza. |
+sustantivo | el lío | das Durcheinander, der Ärger | mess, trouble | Estoy en un lío. | Ich stecke in der Klemme. | I'm in trouble. | In der DR auch: el problema, la vaina.
+sustantivo | la parada | die Haltestelle | stop | ¿Dónde está la parada de la guagua? | Wo ist die Bushaltestelle? | Where's the bus stop? |
+sustantivo | la ambulancia | der Krankenwagen | ambulance | ¡Llamen una ambulancia! | Ruft einen Krankenwagen! | Call an ambulance! | Notruf in der DR: 911.
+sustantivo | el mentiroso | der Lügner | liar | ¡Eres un mentiroso! | Du bist ein Lügner! | You're a liar! | Weiblich: la mentirosa.
+sustantivo | la licencia | die Lizenz; der Führerschein | license | ¿Tienes licencia de conducir? | Hast du einen Führerschein? | Do you have a driver's license? | In Spanien: el carné de conducir.
+sustantivo | la coincidencia | der Zufall | coincidence | ¡Qué coincidencia! | Was für ein Zufall! | What a coincidence! | Auch: la casualidad.
+sustantivo | el azúcar | der Zucker | sugar | Un café sin azúcar. | Einen Kaffee ohne Zucker. | A coffee without sugar. | Die DR ist ein großer Zuckerrohr-Produzent.
+sustantivo | la ocasión | die Gelegenheit, der Anlass | occasion | Es una ocasión especial. | Es ist ein besonderer Anlass. | It's a special occasion. |
+sustantivo | el cheque | der Scheck | check | ¿Aceptan cheques? | Nehmen Sie Schecks? | Do you accept checks? |
+sustantivo | la pesadilla | der Albtraum | nightmare | Anoche tuve una pesadilla. | Letzte Nacht hatte ich einen Albtraum. | Last night I had a nightmare. |
+sustantivo | la sopa | die Suppe | soup | El sancocho es una sopa dominicana. | Sancocho ist ein dominikanischer Eintopf. | Sancocho is a Dominican stew. |
+sustantivo | la miel | der Honig | honey | Té con miel. | Tee mit Honig. | Tea with honey. | Weiblich trotz -l.
+sustantivo | la ventaja | der Vorteil | advantage | Tiene muchas ventajas. | Es hat viele Vorteile. | It has many advantages. |
+sustantivo | la piscina | das Schwimmbad, der Pool | pool | El hotel tiene piscina. | Das Hotel hat einen Pool. | The hotel has a pool. | In der DR auch: la pisicina (umgangssprachlich).
+sustantivo | la paciencia | die Geduld | patience | Ten paciencia. | Hab Geduld. | Be patient. |
+sustantivo | la cuerda | das Seil; die Saite | rope; string | Necesito una cuerda. | Ich brauche ein Seil. | I need a rope. |
+sustantivo | el oso | der Bär | bear | El niño tiene un oso de peluche. | Das Kind hat einen Teddybären. | The child has a teddy bear. |
+sustantivo | la curiosidad | die Neugier | curiosity | Tengo curiosidad. | Ich bin neugierig. | I'm curious. |
+sustantivo | la torre | der Turm; das Hochhaus | tower | Vivimos en una torre de diez pisos. | Wir wohnen in einem zehnstöckigen Hochhaus. | We live in a ten-story tower. | In der DR heißen Hochhaus-Wohnanlagen oft torre.
+sustantivo | la ruta | die Route, die Strecke | route | Esta guagua hace la ruta del centro. | Dieser Bus fährt die Strecke ins Zentrum. | This bus takes the downtown route. |
+sustantivo | la alarma | der Alarm, der Wecker | alarm | Pon la alarma a las seis. | Stell den Wecker auf sechs. | Set the alarm for six. |
+sustantivo | el orgullo | der Stolz | pride | Eres mi orgullo. | Du bist mein Stolz. | You're my pride. |
+sustantivo | el incendio | der Brand | fire | Hubo un incendio en el edificio. | Im Gebäude hat es gebrannt. | There was a fire in the building. | Feuer allgemein: el fuego.
+sustantivo | la excusa | die Ausrede | excuse | No me des excusas. | Komm mir nicht mit Ausreden. | Don't give me excuses. |
+sustantivo | el escritorio | der Schreibtisch | desk | Los papeles están en el escritorio. | Die Papiere liegen auf dem Schreibtisch. | The papers are on the desk. |
+sustantivo | la muñeca | die Puppe; das Handgelenk | doll; wrist | La niña juega con su muñeca. | Das Mädchen spielt mit seiner Puppe. | The girl plays with her doll. |
+sustantivo | la ducha | die Dusche | shower | Estoy en la ducha. | Ich bin unter der Dusche. | I'm in the shower. |
+sustantivo | la salsa | die Soße; Salsa (Tanz) | sauce; salsa | ¿Bailas salsa? | Tanzt du Salsa? | Do you dance salsa? |
+sustantivo | el campeón | der Meister, der Champion | champion | ¡Somos campeones! | Wir sind Meister! | We are the champions! | Weiblich: la campeona.
+sustantivo | la medianoche | die Mitternacht | midnight | Llegamos a medianoche. | Wir kamen um Mitternacht an. | We arrived at midnight. |
+sustantivo | el jugador | der Spieler | player | Es un jugador de béisbol. | Er ist Baseballspieler. | He's a baseball player. | Viele dominikanische Spieler spielen in der MLB.
+sustantivo | el puerto | der Hafen | port | El barco llega al puerto. | Das Schiff kommt im Hafen an. | The ship arrives at the port. | Puerto Plata = Stadt im Norden der DR.
+sustantivo | el vehículo | das Fahrzeug | vehicle | Estacione su vehículo aquí. | Parken Sie Ihr Fahrzeug hier. | Park your vehicle here. |
+sustantivo | el océano | der Ozean | ocean | El océano Atlántico está al norte. | Der Atlantik liegt im Norden. | The Atlantic Ocean is to the north. | Im Süden der DR liegt das Karibische Meer (el mar Caribe).
+sustantivo | la pasta | die Nudeln; die Paste | pasta; paste | Hoy cocino pasta. | Heute koche ich Nudeln. | Today I'm cooking pasta. | In der DR: los espaguetis. pasta de dientes = Zahnpasta.
+sustantivo | la gasolina | das Benzin | gasoline | Hay que echar gasolina. | Wir müssen tanken. | We need to get gas. | Tankstelle: la bomba (DR), la gasolinera.
+sustantivo | la galleta | der Keks | cookie | Los niños quieren galletas. | Die Kinder wollen Kekse. | The children want cookies. |
+sustantivo | la pastilla | die Tablette | pill | Toma una pastilla para el dolor. | Nimm eine Schmerztablette. | Take a pill for the pain. |
+sustantivo | el cable | das Kabel | cable | No encuentro el cable del celular. | Ich finde das Handykabel nicht. | I can't find the phone cable. | In der DR: el cable = auch Kabelfernsehen.
+sustantivo | el alquiler | die Miete | rent | El alquiler es caro. | Die Miete ist teuer. | The rent is expensive. | In der DR auch: la renta.
+sustantivo | la maleta | der Koffer | suitcase | Ya hice la maleta. | Ich habe schon den Koffer gepackt. | I already packed my suitcase. |
+sustantivo | el amanecer | der Sonnenaufgang | sunrise | El amanecer en la playa es precioso. | Der Sonnenaufgang am Strand ist wunderschön. | The sunrise on the beach is beautiful. |
+sustantivo | el collar | die Halskette | necklace | Le regalé un collar. | Ich habe ihr eine Halskette geschenkt. | I gave her a necklace. |
+sustantivo | la moto | das Motorrad | motorbike | Voy en moto al trabajo. | Ich fahre mit dem Motorrad zur Arbeit. | I ride my motorbike to work. | Weiblich trotz -o (Kurzform von la motocicleta). In der DR überall: el motoconcho = Motorradtaxi.
+sustantivo | el botón | der Knopf | button | Aprieta el botón. | Drück den Knopf. | Press the button. |
+sustantivo | la crema | die Creme; die Sahne | cream | Ponte crema, hay mucho sol. | Creme dich ein, es ist sehr sonnig. | Put on cream, it's very sunny. |
+sustantivo | los saludos | die Grüße | greetings | Saludos a tu familia. | Grüße an deine Familie. | Greetings to your family. |
+sustantivo | la serpiente | die Schlange | snake | No hay serpientes peligrosas aquí. | Hier gibt es keine gefährlichen Schlangen. | There are no dangerous snakes here. | Auch: la culebra.
+sustantivo | la rata | die Ratte | rat | Vi una rata en la calle. | Ich habe eine Ratte auf der Straße gesehen. | I saw a rat in the street. |
+sustantivo | la bicicleta | das Fahrrad | bicycle | Voy al parque en bicicleta. | Ich fahre mit dem Fahrrad in den Park. | I ride my bike to the park. | Kurz: la bici.
+sustantivo | el chiste | der Witz | joke | Cuéntame un chiste. | Erzähl mir einen Witz. | Tell me a joke. |
+sustantivo | la vaca | die Kuh | cow | En el campo hay muchas vacas. | Auf dem Land gibt es viele Kühe. | There are many cows in the countryside. | el campo = das Land (im Gegensatz zur Stadt).
+sustantivo | el dormitorio | das Schlafzimmer | bedroom | La casa tiene tres dormitorios. | Das Haus hat drei Schlafzimmer. | The house has three bedrooms. | In der DR meist: la habitación, el cuarto.
+sustantivo | las joyas | der Schmuck | jewelry | Guarda las joyas. | Bewahr den Schmuck auf. | Keep the jewelry safe. | Einzeln: la joya. Der dominikanische Halbedelstein: el larimar.
+sustantivo | el arroz | der Reis | rice | Arroz con habichuelas, como siempre. | Reis mit Bohnen, wie immer. | Rice and beans, as always. | Grundnahrungsmittel der DR. Die Kruste im Topf heißt el concón.
+sustantivo | la bandera | die Flagge | flag | La bandera dominicana es azul, roja y blanca. | Die dominikanische Flagge ist blau, rot und weiß. | The Dominican flag is blue, red and white. | La bandera dominicana heißt auch das Nationalgericht (Reis, Bohnen, Fleisch).
+sustantivo | la cartera | die Handtasche; die Brieftasche | purse; wallet | Olvidé la cartera en el carro. | Ich habe die Handtasche im Auto vergessen. | I forgot my purse in the car. |
+sustantivo | el ascensor | der Aufzug | elevator | El ascensor no funciona. | Der Aufzug funktioniert nicht. | The elevator doesn't work. | In der DR auch: el elevador.
+sustantivo | la limpieza | die Reinigung, das Putzen | cleaning | Hoy toca limpieza. | Heute ist Putzen dran. | Today is cleaning day. |
+sustantivo | la invitación | die Einladung | invitation | Gracias por la invitación. | Danke für die Einladung. | Thanks for the invitation. |
+sustantivo | la costumbre | die Gewohnheit, der Brauch | custom, habit | Es una costumbre dominicana. | Das ist ein dominikanischer Brauch. | It's a Dominican custom. | de costumbre = wie gewöhnlich.
+sustantivo | el gimnasio | das Fitnessstudio | gym | Voy al gimnasio tres veces por semana. | Ich gehe dreimal pro Woche ins Fitnessstudio. | I go to the gym three times a week. | Kurz: el gym.
+sustantivo | el garaje | die Garage | garage | El carro está en el garaje. | Das Auto steht in der Garage. | The car is in the garage. | In der DR auch: la marquesina (überdachter Stellplatz).
+sustantivo | el aniversario | der Jahrestag | anniversary | Hoy es nuestro aniversario. | Heute ist unser Jahrestag. | Today is our anniversary. |
+sustantivo | la niñera | das Kindermädchen | babysitter | La niñera cuida a los niños. | Das Kindermädchen passt auf die Kinder auf. | The babysitter looks after the children. |
+sustantivo | el sobrino | der Neffe | nephew | Mi sobrino tiene cinco años. | Mein Neffe ist fünf. | My nephew is five. | Weiblich: la sobrina = die Nichte.
+sustantivo | la actriz | die Schauspielerin | actress | Es una actriz famosa. | Sie ist eine berühmte Schauspielerin. | She's a famous actress. | Männlich: el actor.
+sustantivo | la moneda | die Münze; die Währung | coin; currency | La moneda dominicana es el peso. | Die dominikanische Währung ist der Peso. | The Dominican currency is the peso. |
+sustantivo | los nervios | die Nerven, die Aufregung | nerves | Tengo nervios antes del examen. | Ich bin vor der Prüfung nervös. | I'm nervous before the exam. |
+sustantivo | la guitarra | die Gitarre | guitar | Mi hermano toca la guitarra. | Mein Bruder spielt Gitarre. | My brother plays the guitar. | Typische Instrumente der Bachata: la guitarra, el bongó, la güira.
+sustantivo | la llegada | die Ankunft | arrival | La llegada es a las tres. | Die Ankunft ist um drei. | Arrival is at three. | Gegenteil: la salida.
+sustantivo | la camiseta | das T-Shirt | T-shirt | Me compré una camiseta. | Ich habe mir ein T-Shirt gekauft. | I bought a T-shirt. | In der DR auch: el t-shirt, el polo (mit Kragen).
+sustantivo | el equipaje | das Gepäck | luggage | ¿Dónde recojo el equipaje? | Wo hole ich das Gepäck ab? | Where do I pick up the luggage? |
+sustantivo | el cantante | der Sänger | singer | Juan Luis Guerra es un cantante dominicano. | Juan Luis Guerra ist ein dominikanischer Sänger. | Juan Luis Guerra is a Dominican singer. | Weiblich: la cantante (gleiche Form).
+sustantivo | el béisbol | Baseball | baseball | El béisbol es el deporte nacional. | Baseball ist der Nationalsport. | Baseball is the national sport. | Im Alltag: la pelota. Bekannte Teams: Tigres del Licey, Leones del Escogido, Águilas Cibaeñas.
+sustantivo | el conejo | das Kaninchen | rabbit | Los niños tienen un conejo. | Die Kinder haben ein Kaninchen. | The children have a rabbit. |
+sustantivo | el billete | der Geldschein; die Fahrkarte | bill; ticket | Tengo un billete de cien pesos. | Ich habe einen Hundert-Peso-Schein. | I have a hundred-peso bill. | Fahrkarte in Lateinamerika meist: el boleto, el pasaje.
+sustantivo | las papas | die Kartoffeln | potatoes | Papas fritas, por favor. | Pommes, bitte. | French fries, please. | In Spanien: las patatas. Einzahl: la papa.
+sustantivo | la electricidad | der Strom | electricity | Se fue la luz – no hay electricidad. | Der Strom ist weg. | The power went out. | In der DR sagt man für Strom meist la luz. Stromausfall: el apagón.
+sustantivo | el reto | die Herausforderung | challenge | Aprender español es un reto. | Spanisch lernen ist eine Herausforderung. | Learning Spanish is a challenge. |
+sustantivo | la nube | die Wolke | cloud | No hay ni una nube. | Es gibt keine einzige Wolke. | There isn't a single cloud. |
+sustantivo | la uña | der Fingernagel | nail | Me voy a pintar las uñas. | Ich lackiere mir die Nägel. | I'm going to paint my nails. | Nagelstudio: el salón de uñas.
+sustantivo | la batería | die Batterie, der Akku; das Schlagzeug | battery; drums | Se me acabó la batería. | Mein Akku ist leer. | My battery died. |
+sustantivo | el callejón | die Gasse | alley | Hay un colmado en el callejón. | In der Gasse gibt es einen Laden. | There's a shop in the alley. |
+sustantivo | el maquillaje | das Make-up | makeup | No uso maquillaje. | Ich trage kein Make-up. | I don't wear makeup. |
+sustantivo | el pasaporte | der Reisepass | passport | No olvides el pasaporte. | Vergiss den Pass nicht. | Don't forget your passport. |
+sustantivo | el mediodía | der Mittag | noon | Almorzamos al mediodía. | Wir essen mittags. | We have lunch at noon. | Das Mittagessen ist in der DR die Hauptmahlzeit: el almuerzo.
+sustantivo | la barba | der Bart | beard | Te queda bien la barba. | Der Bart steht dir. | The beard suits you. |
+sustantivo | la docena | das Dutzend | dozen | Una docena de huevos. | Ein Dutzend Eier. | A dozen eggs. |
+sustantivo | la rutina | die Routine, der Alltag | routine | Es parte de mi rutina. | Das gehört zu meinem Alltag. | It's part of my routine. |
+sustantivo | la ensalada | der Salat | salad | Una ensalada verde. | Ein grüner Salat. | A green salad. |
+sustantivo | el jugo | der Saft | juice | Un jugo de chinola, por favor. | Einen Maracujasaft, bitte. | A passion fruit juice, please. | In Spanien: el zumo. In der DR heißt die Maracuja chinola.
+sustantivo | el estacionamiento | der Parkplatz | parking lot | No hay estacionamiento. | Es gibt keinen Parkplatz. | There's no parking. | In der DR auch: el parqueo.
+sustantivo | el camarero | der Kellner | waiter | El camarero trae la cuenta. | Der Kellner bringt die Rechnung. | The waiter brings the bill. | In der DR und Lateinamerika meist: el mesero.
+sustantivo | la agenda | der Terminkalender | planner, schedule | Lo apunto en mi agenda. | Ich schreibe es in meinen Kalender. | I'll write it in my planner. |
+sustantivo | el juguete | das Spielzeug | toy | Los niños recogen los juguetes. | Die Kinder räumen die Spielsachen auf. | The kids pick up their toys. | Zu den Reyes (6. Januar) bekommen Kinder in der DR Geschenke.
+sustantivo | el pasajero | der Fahrgast, der Passagier | passenger | La guagua lleva muchos pasajeros. | Der Bus ist voller Fahrgäste. | The bus carries many passengers. |
+sustantivo | la corbata | die Krawatte | tie | Para la boda necesito corbata. | Für die Hochzeit brauche ich eine Krawatte. | I need a tie for the wedding. |
+sustantivo | el estrés | der Stress | stress | Tengo mucho estrés. | Ich habe viel Stress. | I'm very stressed. |
+sustantivo | el horario | der Fahrplan, die Öffnungszeiten | schedule | ¿Cuál es el horario del banco? | Wie sind die Öffnungszeiten der Bank? | What are the bank's hours? |
+sustantivo | la alfombra | der Teppich | carpet | Quítate los zapatos, hay alfombra. | Zieh die Schuhe aus, da liegt Teppich. | Take off your shoes, there's carpet. |
+sustantivo | el postre | der Nachtisch | dessert | ¿Qué hay de postre? | Was gibt es zum Nachtisch? | What's for dessert? | Typisch dominikanisch: habichuelas con dulce (in der Fastenzeit).
+sustantivo | el pavo | der Truthahn | turkey | En Navidad comemos pavo o puerco. | An Weihnachten essen wir Truthahn oder Schwein. | At Christmas we eat turkey or pork. |
+sustantivo | el tatuaje | das Tattoo | tattoo | Tiene un tatuaje en el brazo. | Er hat ein Tattoo am Arm. | He has a tattoo on his arm. |

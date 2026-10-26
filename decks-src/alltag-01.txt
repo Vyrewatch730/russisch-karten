@@ -1,0 +1,94 @@
+# Alltag in der Dominikanischen Republik: Wendungen, Begrüßungen und typische Wörter (nur im Spanisch-Modus)
+# typ | es | de | en | Beispiel | Deutsch | Englisch | Tipp
+# --- Begrüßen und Verabschieden ---
+frase | ¿Qué lo que? | Was geht? | What's up? | ¿Qué lo que, mi pana? | Was geht, Kumpel? | What's up, buddy? | Typisch dominikanisch, sehr locker. Antwort: Tranquilo. / Aquí, en la lucha.
+frase | ¿Cómo estás? | Wie geht's dir? | How are you? | Hola, ¿cómo estás? – Bien, gracias. | Hallo, wie geht's? – Gut, danke. | Hi, how are you? – Fine, thanks. | Höflich: ¿Cómo está usted?
+frase | ¿Qué tal? | Wie geht's? / Wie war's? | How's it going? | ¿Qué tal el viaje? | Wie war die Reise? | How was the trip? |
+frase | ¿Todo bien? | Alles gut? | All good? | ¿Todo bien? – Todo bien, gracias a Dios. | Alles gut? – Alles gut, Gott sei Dank. | All good? – All good, thank God. | In der DR hört man sehr oft „gracias a Dios“ oder „si Dios quiere“.
+frase | Buenos días | Guten Morgen | Good morning | Buenos días, doña María. | Guten Morgen, Frau María. | Good morning, Mrs. María. | Bis etwa 12 Uhr. Kurz in der DR: ¡Buenas!
+frase | Buenas tardes | Guten Tag (nachmittags) | Good afternoon | Buenas tardes, ¿en qué le puedo ayudar? | Guten Tag, wie kann ich Ihnen helfen? | Good afternoon, how can I help you? | Ab Mittag bis zum Dunkelwerden.
+frase | Buenas noches | Guten Abend; Gute Nacht | Good evening; good night | Buenas noches, que descanses. | Gute Nacht, schlaf gut. | Good night, sleep well. |
+frase | Nos vemos | Wir sehen uns, bis dann | See you | Nos vemos mañana. | Bis morgen. | See you tomorrow. |
+frase | Que Dios te bendiga | Gott segne dich | God bless you | Adiós, mi hijo, que Dios te bendiga. | Tschüss, mein Sohn, Gott segne dich. | Bye, my son, God bless you. | Ältere Leute verabschieden sich oft so. Kinder bitten um den Segen mit „¡Bendición!“.
+frase | ¡Bendición! | (Bitte um den Segen) | Bless me! | ¡Bendición, abuela! – Dios te bendiga. | Segen, Oma! – Gott segne dich. | Bless me, grandma! – God bless you. | Kinder grüßen so Eltern, Großeltern, Paten. Antwort: Dios te bendiga.
+frase | Mucho gusto | Freut mich | Nice to meet you | Me llamo Pedro. – Mucho gusto. | Ich heiße Pedro. – Freut mich. | My name is Pedro. – Nice to meet you. | Auch: Encantado / Encantada.
+frase | Con permiso | Entschuldigung, darf ich? | Excuse me | Con permiso, voy a pasar. | Entschuldigung, ich möchte vorbei. | Excuse me, I'm coming through. | Beim Vorbeigehen oder Hereinkommen.
+frase | A la orden | Gern geschehen; Zu Diensten | You're welcome; at your service | Gracias. – A la orden. | Danke. – Gern geschehen. | Thanks. – You're welcome. | Typische Antwort auf gracias in der DR. Verkäufer rufen auch: ¡A la orden!
+frase | No hay problema | Kein Problem | No problem | ¿Me esperas? – No hay problema. | Wartest du auf mich? – Kein Problem. | Will you wait for me? – No problem. |
+frase | De nada | Gern geschehen | You're welcome | Gracias por la ayuda. – De nada. | Danke für die Hilfe. – Gern geschehen. | Thanks for the help. – You're welcome. |
+frase | Lo siento | Es tut mir leid | I'm sorry | Lo siento mucho. | Es tut mir sehr leid. | I'm very sorry. |
+# --- Typische Wendungen ---
+frase | Si Dios quiere | So Gott will | God willing | Nos vemos mañana, si Dios quiere. | Bis morgen, so Gott will. | See you tomorrow, God willing. | Sehr häufig bei Plänen für die Zukunft.
+frase | Gracias a Dios | Gott sei Dank | Thank God | Gracias a Dios llegamos bien. | Gott sei Dank sind wir gut angekommen. | Thank God we arrived safely. |
+frase | Tranquilo | Ganz ruhig; alles gut | Relax; it's fine | ¿Cómo estás? – Tranquilo. | Wie geht's? – Alles entspannt. | How are you? – Chill. | Weiblich: tranquila.
+frase | Ahorita | gleich, nachher | in a bit | Ahorita vengo. | Ich komme gleich. | I'll be right back. | Kann in der DR „sofort“ oder „irgendwann später“ heißen – man weiß es nie genau.
+frase | ¡Qué chulo! | Wie schön! | How nice! | ¡Qué chulo tu vestido! | Wie schön dein Kleid ist! | Your dress is so nice! | chulo = schön, süß (DR). In Spanien bedeutet es etwas anderes (angeberisch).
+frase | ¡Qué vaina! | So ein Mist! / Was für ein Ding! | What a mess! | ¡Qué vaina, se fue la luz! | So ein Mist, der Strom ist weg! | Damn, the power went out! | vaina = Ding, Sache – passt fast überall.
+frase | ¡Diache! | Mensch! / Mist! | Damn! | ¡Diache, se me olvidó! | Mist, das habe ich vergessen! | Damn, I forgot! | Harmloser dominikanischer Ausruf.
+frase | ¡Wepa! | Juhu! | Woo-hoo! | ¡Wepa, ganamos! | Juhu, wir haben gewonnen! | Woo-hoo, we won! | Freudenruf in der Karibik.
+frase | ¡Dímelo! | Erzähl mal! / Was gibt's? | Tell me! | ¡Dímelo, mi hermano! | Was gibt's, Bruder? | What's up, bro? | Auch Begrüßung: Dímelo = sag's mir.
+frase | Dime a ver | Erzähl mal | Tell me | Dime a ver, ¿qué pasó? | Erzähl mal, was ist passiert? | Tell me, what happened? |
+frase | Estoy en la lucha | Ich kämpfe mich durch | I'm getting by | ¿Cómo va todo? – Aquí, en la lucha. | Wie läuft's? – Ich schlage mich durch. | How's everything? – Getting by. | Typische Antwort auf ¿Cómo estás?
+frase | Está en olla | Er ist pleite | He's broke | No puedo salir, estoy en olla. | Ich kann nicht ausgehen, ich bin pleite. | I can't go out, I'm broke. | olla = Kochtopf; „en olla“ = ohne Geld (DR).
+frase | ¡Ponte las pilas! | Streng dich an! / Wach auf! | Get your act together! | ¡Ponte las pilas con los estudios! | Streng dich beim Lernen an! | Get serious about your studies! | Wörtlich: Leg die Batterien ein.
+frase | Echar un pie | tanzen gehen | to go dancing | Vamos a echar un pie esta noche. | Lass uns heute Abend tanzen gehen. | Let's go dancing tonight. | DR: echar un pie = tanzen.
+frase | Coger lucha | sich abmühen | to struggle | Cogí mucha lucha con ese trabajo. | Ich habe mich mit der Arbeit sehr abgemüht. | I struggled a lot with that job. | DR-Ausdruck.
+frase | ¿Cuánto es? | Wie viel kostet das? | How much is it? | ¿Cuánto es todo? | Wie viel macht alles zusammen? | How much is everything? |
+frase | La cuenta, por favor | Die Rechnung, bitte | The bill, please | Mesero, la cuenta, por favor. | Kellner, die Rechnung, bitte. | Waiter, the bill, please. |
+frase | ¿Dónde está el baño? | Wo ist die Toilette? | Where's the bathroom? | Perdón, ¿dónde está el baño? | Entschuldigung, wo ist die Toilette? | Excuse me, where's the bathroom? |
+frase | No entiendo | Ich verstehe nicht | I don't understand | Perdón, no entiendo. ¿Puede hablar más despacio? | Entschuldigung, ich verstehe nicht. Können Sie langsamer sprechen? | Sorry, I don't understand. Can you speak more slowly? |
+frase | ¿Me lo repite? | Können Sie das wiederholen? | Can you repeat that? | Perdón, ¿me lo repite, por favor? | Entschuldigung, können Sie das bitte wiederholen? | Sorry, can you repeat that, please? |
+frase | Claro que sí | Na klar | Of course | ¿Me ayudas? – ¡Claro que sí! | Hilfst du mir? – Na klar! | Will you help me? – Of course! |
+frase | ¡Qué bueno! | Wie schön! | How nice! | Ya llegaste, ¡qué bueno! | Du bist schon da, wie schön! | You're here already, great! |
+frase | ¡Qué pena! | Wie schade! | What a pity! | No puedes venir, ¡qué pena! | Du kannst nicht kommen, wie schade! | You can't come, what a pity! | In der DR auch: Es ist mir peinlich (Me da pena).
+frase | ¡Buen provecho! | Guten Appetit! | Enjoy your meal! | ¡Buen provecho a todos! | Guten Appetit euch allen! | Enjoy your meal, everyone! | Sagt man auch beim Vorbeigehen an Leuten, die essen.
+frase | ¡Salud! | Prost! / Gesundheit! | Cheers! / Bless you! | ¡Salud por los novios! | Auf das Brautpaar! | Cheers to the newlyweds! | Beim Anstoßen und beim Niesen.
+frase | Tengo hambre | Ich habe Hunger | I'm hungry | Tengo hambre, ¿vamos a comer? | Ich habe Hunger, gehen wir essen? | I'm hungry, shall we eat? | Mit tener: tengo sed (Durst), tengo calor, tengo frío, tengo sueño (müde).
+frase | Se fue la luz | Der Strom ist weg | The power went out | ¡Otra vez se fue la luz! | Schon wieder ist der Strom weg! | The power went out again! | Stromausfälle (apagones) sind in der DR häufig; viele Häuser haben einen inversor (Batterie).
+frase | Hace calor | Es ist heiß | It's hot | Hoy hace mucho calor. | Heute ist es sehr heiß. | It's very hot today. | Wetter mit hacer: hace sol, hace frío, hace viento. Regen: está lloviendo.
+# --- Dominikanische Wörter ---
+sustantivo | la guagua | der Bus | bus | Voy en guagua al trabajo. | Ich fahre mit dem Bus zur Arbeit. | I take the bus to work. | In Spanien: el autobús. Auch Kleinbusse heißen guagua.
+sustantivo | el colmado | der kleine Laden an der Ecke | corner store | Voy al colmado a comprar pan. | Ich gehe zum Colmado, Brot kaufen. | I'm going to the corner store to buy bread. | Laden, Treffpunkt und oft auch Bar. Liefert per Moto: el delivery.
+sustantivo | el motoconcho | das Motorradtaxi | motorbike taxi | Cogí un motoconcho hasta la playa. | Ich habe ein Motorradtaxi zum Strand genommen. | I took a motorbike taxi to the beach. | Der Fahrer heißt auch motoconchista.
+sustantivo | el concho | das Sammeltaxi | shared taxi | El concho cuesta cincuenta pesos. | Das Sammeltaxi kostet fünfzig Pesos. | The shared taxi costs fifty pesos. | Fährt eine feste Route; man steigt zu, bis es voll ist.
+sustantivo | el pana | der Kumpel | buddy | Él es mi pana. | Er ist mein Kumpel. | He's my buddy. | Auch: mi pana full = mein bester Kumpel.
+sustantivo | el tíguere | das Schlitzohr, der clevere Typ | street-smart guy | Ese muchacho es un tíguere. | Der Junge ist ein Schlitzohr. | That guy is a hustler. | Von tigre. Kann bewundernd oder abwertend gemeint sein.
+sustantivo | la vaina | das Ding, die Sache | thing, stuff | Pásame esa vaina. | Gib mir mal das Ding. | Pass me that thing. | Universalwort der DR: für Dinge, Situationen, Ärger.
+palabra | un chin | ein bisschen | a little bit | Dame un chin de arroz. | Gib mir ein bisschen Reis. | Give me a little rice. | Verkleinert: un chinchín = ein klitzekleines bisschen.
+palabra | jevi | cool, super | cool | Esa música está jevi. | Die Musik ist cool. | That music is cool. | Vom englischen „heavy“. Als Adjektiv: Está jevi = Ist cool.
+sustantivo | la jeva | die Freundin, das Mädchen | girlfriend, girl | Esa es mi jeva. | Das ist meine Freundin. | That's my girlfriend. | Umgangssprachlich. Männlich: el jevo.
+sustantivo | el chiripero | der Gelegenheitsarbeiter | odd-job worker | Mi primo es chiripero. | Mein Cousin macht Gelegenheitsjobs. | My cousin does odd jobs. | Ein Gelegenheitsjob: un chiripeo.
+sustantivo | el pariguayo | der Trottel, der Langweiler | loser, square | No seas pariguayo, ven a bailar. | Sei kein Langweiler, komm tanzen. | Don't be a square, come dance. | Angeblich vom englischen „party watcher“.
+sustantivo | el bacán | der coole Typ | cool guy | Tu papá es un bacán. | Dein Papa ist ein cooler Typ. | Your dad is a cool guy. | Als Adjektiv: bacano = cool.
+sustantivo | el mangú | das Kochbananen-Püree | mashed plantains | Desayuné mangú con salami. | Ich habe Mangú mit Salami gefrühstückt. | I had mangú with salami for breakfast. | Mit Salami, Käse und Ei heißt es los tres golpes.
+sustantivo | el plátano | die Kochbanane | plantain | Los tostones son de plátano verde. | Tostones macht man aus grüner Kochbanane. | Tostones are made from green plantain. | Süße Banane heißt in der DR el guineo.
+sustantivo | el guineo | die Banane | banana | Un guineo maduro, por favor. | Eine reife Banane, bitte. | A ripe banana, please. | Typisch dominikanisch; anderswo: el plátano / la banana.
+sustantivo | las habichuelas | die Bohnen | beans | Arroz con habichuelas rojas. | Reis mit roten Bohnen. | Rice with red beans. | Anderswo: los frijoles. Süße Variante zu Ostern: habichuelas con dulce.
+sustantivo | el sancocho | der Fleischeintopf | meat stew | Los domingos hacemos sancocho. | Sonntags machen wir Sancocho. | On Sundays we make sancocho. | Mit mehreren Fleischsorten: sancocho de siete carnes.
+sustantivo | los tostones | frittierte Kochbananen | fried plantains | Pescado frito con tostones. | Gebratener Fisch mit Tostones. | Fried fish with tostones. | Zweimal frittiert und flach gedrückt.
+sustantivo | la chinola | die Maracuja | passion fruit | Un jugo de chinola bien frío. | Ein eiskalter Maracujasaft. | An ice-cold passion fruit juice. | Anderswo: la maracuyá, el parchita.
+sustantivo | la habichuela | die Bohne | bean | Esta habichuela está bien sabrosa. | Diese Bohnen sind richtig lecker. | These beans are really tasty. |
+sustantivo | el morir soñando | (Getränk aus Orangensaft und Milch) | orange-milk drink | Quiero un morir soñando. | Ich möchte einen Morir Soñando. | I want a morir soñando. | Wörtlich: „träumend sterben“. Typisches Getränk der DR.
+sustantivo | el colmadón | der Colmado mit Musik und Bier | corner bar | Nos vemos en el colmadón. | Wir sehen uns im Colmadón. | See you at the colmadón. | Größerer Colmado, an dem man abends trinkt und tanzt.
+sustantivo | la yipeta | der SUV, der Geländewagen | SUV | Tiene una yipeta nueva. | Er hat einen neuen SUV. | He has a new SUV. | Vom englischen „jeep“.
+sustantivo | el apagón | der Stromausfall | blackout | Hubo un apagón anoche. | Letzte Nacht gab es einen Stromausfall. | There was a blackout last night. |
+sustantivo | el inversor | der Wechselrichter (Batterie fürs Haus) | inverter | Gracias al inversor tenemos luz. | Dank des Inverters haben wir Strom. | Thanks to the inverter we have power. | Batterie-Notstrom für Stromausfälle, in vielen Häusern.
+sustantivo | la funda | die Tüte | plastic bag | ¿Me da una funda, por favor? | Geben Sie mir bitte eine Tüte? | Can I have a bag, please? | DR. Anderswo: la bolsa.
+sustantivo | el zafacón | der Mülleimer | trash can | Tíralo en el zafacón. | Wirf es in den Mülleimer. | Throw it in the trash can. | DR und Puerto Rico. Anderswo: el basurero, la papelera.
+sustantivo | el abanico | der Ventilator | fan | Prende el abanico, hace calor. | Mach den Ventilator an, es ist heiß. | Turn on the fan, it's hot. | Eigentlich „Fächer“; in der DR auch der elektrische Ventilator.
+sustantivo | la nevera | der Kühlschrank | fridge | La cerveza está en la nevera. | Das Bier ist im Kühlschrank. | The beer is in the fridge. | Anderswo auch: el refrigerador.
+sustantivo | el celular | das Handy | cell phone | Se me olvidó el celular. | Ich habe mein Handy vergessen. | I forgot my phone. | In Spanien: el móvil.
+sustantivo | el carro | das Auto | car | Vamos en mi carro. | Wir fahren mit meinem Auto. | Let's go in my car. | In Spanien: el coche.
+sustantivo | el bizcocho | der Kuchen (Torte) | cake | El bizcocho dominicano es famoso. | Der dominikanische Kuchen ist berühmt. | Dominican cake is famous. | Lockerer Kuchen mit süßem Baiser-Überzug (suspiro).
+sustantivo | los cuartos | das Geld (DR) | money | No tengo cuartos. | Ich habe kein Geld. | I don't have money. | Umgangssprachlich in der DR; neutral: el dinero.
+sustantivo | el chele | der Cent; Kleingeld | cent | No tengo ni un chele. | Ich habe keinen Cent. | I don't have a cent. | DR: chele = Centavo.
+sustantivo | el tigueraje | die Schlitzohrigkeit | street smarts | Eso es puro tigueraje. | Das ist reine Gerissenheit. | That's pure street smarts. |
+sustantivo | el bonche | die Party, das Feiern | party | Anoche hubo un bonche en el barrio. | Gestern Abend war Party im Viertel. | Last night there was a party in the neighborhood. | Vom englischen „bunch“.
+sustantivo | el barrio | das Viertel | neighborhood | Me crié en este barrio. | Ich bin in diesem Viertel aufgewachsen. | I grew up in this neighborhood. |
+sustantivo | la merienda | der Nachmittagssnack | afternoon snack | La merienda es a las cuatro. | Den Snack gibt es um vier. | Snack time is at four. |
+sustantivo | el padrino | der Pate | godfather | Mi padrino me regaló un reloj. | Mein Pate hat mir eine Uhr geschenkt. | My godfather gave me a watch. | Die Patin: la madrina. Paten sind in der DR sehr wichtig.
+verbo | coger | nehmen; fangen | to take; to catch | Cogí la guagua de las siete. | Ich habe den Bus um sieben genommen. | I took the seven o'clock bus. | In der DR und Spanien normal; in Mexiko und Argentinien vulgär – dort tomar sagen.
+verbo | tomar | trinken; nehmen | to drink; to take | ¿Qué vas a tomar? | Was trinkst du? | What are you going to drink? | In Lateinamerika das normale Wort für trinken.
+verbo | jartarse | sich vollstopfen | to stuff oneself | Me jarté de arroz. | Ich habe mich mit Reis vollgestopft. | I stuffed myself with rice. | DR-Aussprache von hartarse (h → j).
+verbo | vacilar | Spaß haben; veräppeln | to have fun; to tease | Vamos a vacilar a la playa. | Lass uns am Strand Spaß haben. | Let's have fun at the beach. | Ein vacilón = ein Spaß, eine Party.
+sustantivo | la chercha | das Quatschen, der Spaß | chatting, fun | Estábamos en la chercha. | Wir haben gequatscht und Spaß gehabt. | We were joking around. | Als Nomen: la chercha = lockeres Gespräch, Spaß.

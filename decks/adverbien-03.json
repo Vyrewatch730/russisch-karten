@@ -19,7 +19,8 @@
                       "example":  "Во-вторы́х, я уста́л.",
                       "example_de":  "Zweitens bin ich müde.",
                       "example_en":  "Secondly, I\u0027m tired.",
-                      "example_es":  "Segundo, estoy cansado."
+                      "example_es":  "Segundo, estoy cansado.",
+                      "es_freq":  88232
                   },
                   {
                       "id":  "av-пора",
@@ -33,7 +34,8 @@
                       "example":  "Мне пора́.",
                       "example_de":  "Ich muss los.",
                       "example_en":  "I have to go.",
-                      "example_es":  "Ya me tengo que ir."
+                      "example_es":  "Ya me tengo que ir.",
+                      "es_freq":  189851
                   },
                   {
                       "id":  "av-навсегда",
@@ -46,7 +48,8 @@
                       "example":  "Я оста́нусь здесь навсегда́.",
                       "example_de":  "Ich bleibe für immer hier.",
                       "example_en":  "I\u0027ll stay here forever.",
-                      "example_es":  "Me quedo aquí para siempre."
+                      "example_es":  "Me quedo aquí para siempre.",
+                      "es_freq":  424363
                   },
                   {
                       "id":  "av-впереди",
@@ -59,7 +62,8 @@
                       "example":  "Впереди́ доро́га.",
                       "example_de":  "Vorne ist eine Straße.",
                       "example_en":  "There\u0027s a road ahead.",
-                      "example_es":  "Adelante hay una carretera."
+                      "example_es":  "Adelante hay una carretera.",
+                      "es_freq":  5660
                   },
                   {
                       "id":  "av-ранее",
@@ -72,7 +76,8 @@
                       "example":  "Как я ра́нее сказа́л …",
                       "example_de":  "Wie ich vorher gesagt habe …",
                       "example_en":  "As I said earlier …",
-                      "example_es":  "Como dije antes …"
+                      "example_es":  "Como dije antes …",
+                      "es_freq":  20278
                   },
                   {
                       "id":  "av-соответственно",
@@ -85,7 +90,8 @@
                       "example":  "Он опозда́л, соотве́тственно, и мы опозда́ли.",
                       "example_de":  "Er kam zu spät, entsprechend auch wir.",
                       "example_en":  "He was late, so we were late too.",
-                      "example_es":  "Él llegó tarde, y por consiguiente nosotros también."
+                      "example_es":  "Él llegó tarde, y por consiguiente nosotros también.",
+                      "es_freq":  707
                   },
                   {
                       "id":  "av-куда-то",
@@ -98,7 +104,8 @@
                       "example":  "Он куда́-то ушёл.",
                       "example_de":  "Er ist irgendwohin gegangen.",
                       "example_en":  "He went somewhere.",
-                      "example_es":  "Se fue a algún lugar."
+                      "example_es":  "Se fue a algún lugar.",
+                      "es_freq":  163790
                   },
                   {
                       "id":  "av-сверху",
@@ -111,7 +118,8 @@
                       "example":  "Све́рху всё ви́дно.",
                       "example_de":  "Von oben sieht man alles.",
                       "example_en":  "You can see everything from above.",
-                      "example_es":  "Desde arriba se ve todo."
+                      "example_es":  "Desde arriba se ve todo.",
+                      "es_freq":  102254
                   },
                   {
                       "id":  "av-заранее",
@@ -124,7 +132,8 @@
                       "example":  "Купи́ биле́т зара́нее.",
                       "example_de":  "Kauf das Ticket im Voraus.",
                       "example_en":  "Buy the ticket in advance.",
-                      "example_es":  "Compra el boleto con anticipación."
+                      "example_es":  "Compra el boleto con anticipación.",
+                      "es_freq":  865
                   },
                   {
                       "id":  "av-зря",
@@ -137,7 +146,8 @@
                       "example":  "Я зря пришёл.",
                       "example_de":  "Ich bin umsonst gekommen.",
                       "example_en":  "I came for nothing.",
-                      "example_es":  "Vine de balde."
+                      "example_es":  "Vine de balde.",
+                      "es_freq":  4406
                   },
                   {
                       "id":  "av-навстречу",
@@ -150,7 +160,8 @@
                       "example":  "Он пошёл мне навстре́чу.",
                       "example_de":  "Er kam mir entgegen.",
                       "example_en":  "He came towards me.",
-                      "example_es":  "Vino a mi encuentro."
+                      "example_es":  "Vino a mi encuentro.",
+                      "es_freq":  32557
                   },
                   {
                       "id":  "av-напротив",
@@ -163,7 +174,8 @@
                       "example":  "Апте́ка напро́тив.",
                       "example_de":  "Die Apotheke ist gegenüber.",
                       "example_en":  "The pharmacy is opposite.",
-                      "example_es":  "La farmacia está enfrente."
+                      "example_es":  "La farmacia está enfrente.",
+                      "es_freq":  9199
                   },
                   {
                       "id":  "av-наверняка",
@@ -176,7 +188,8 @@
                       "example":  "Он наверняка́ придёт.",
                       "example_de":  "Er kommt ganz sicher.",
                       "example_en":  "He\u0027ll surely come.",
-                      "example_es":  "Seguro que viene."
+                      "example_es":  "Seguro que viene.",
+                      "es_freq":  13862
                   },
                   {
                       "id":  "av-столько",
@@ -190,7 +203,8 @@
                       "example":  "У меня́ сто́лько рабо́ты!",
                       "example_de":  "Ich habe so viel Arbeit!",
                       "example_en":  "I have so much work!",
-                      "example_es":  "¡Tengo tanto trabajo!"
+                      "example_es":  "¡Tengo tanto trabajo!",
+                      "es_freq":  197519
                   },
                   {
                       "id":  "av-никуда",
@@ -204,7 +218,8 @@
                       "example":  "Я никуда́ не иду́.",
                       "example_de":  "Ich gehe nirgendwohin.",
                       "example_en":  "I\u0027m not going anywhere.",
-                      "example_es":  "No voy a ninguna parte."
+                      "example_es":  "No voy a ninguna parte.",
+                      "es_freq":  112227
                   },
                   {
                       "id":  "av-жаль",
@@ -218,7 +233,8 @@
                       "example":  "Жаль, что ты уезжа́ешь.",
                       "example_de":  "Schade, dass du wegfährst.",
                       "example_en":  "It\u0027s a pity you\u0027re leaving.",
-                      "example_es":  "Qué pena que te vayas."
+                      "example_es":  "Qué pena que te vayas.",
+                      "es_freq":  53618
                   },
                   {
                       "id":  "av-сколько",
@@ -232,7 +248,8 @@
                       "example":  "Ско́лько сто́ит?",
                       "example_de":  "Wie viel kostet das?",
                       "example_en":  "How much does it cost?",
-                      "example_es":  "¿Cuánto cuesta?"
+                      "example_es":  "¿Cuánto cuesta?",
+                      "es_freq":  123138
                   },
                   {
                       "id":  "av-везде",
@@ -245,7 +262,8 @@
                       "example":  "Я везде́ иска́л.",
                       "example_de":  "Ich habe überall gesucht.",
                       "example_en":  "I looked everywhere.",
-                      "example_es":  "Busqué en todas partes."
+                      "example_es":  "Busqué en todas partes.",
+                      "es_freq":  39255
                   },
                   {
                       "id":  "av-безусловно",
@@ -258,7 +276,8 @@
                       "example":  "Ты, безусло́вно, прав.",
                       "example_de":  "Du hast zweifellos recht.",
                       "example_en":  "You\u0027re undoubtedly right.",
-                      "example_es":  "Sin duda tienes razón."
+                      "example_es":  "Sin duda tienes razón.",
+                      "es_freq":  35145
                   },
                   {
                       "id":  "av-сзади",
@@ -271,7 +290,8 @@
                       "example":  "Он сиди́т сза́ди.",
                       "example_de":  "Er sitzt hinten.",
                       "example_en":  "He\u0027s sitting in the back.",
-                      "example_es":  "Él está sentado atrás."
+                      "example_es":  "Él está sentado atrás.",
+                      "es_freq":  4444
                   },
                   {
                       "id":  "av-внизу",
@@ -284,7 +304,8 @@
                       "example":  "Я жду внизу́.",
                       "example_de":  "Ich warte unten.",
                       "example_en":  "I\u0027m waiting downstairs.",
-                      "example_es":  "Espero abajo."
+                      "example_es":  "Espero abajo.",
+                      "es_freq":  4565
                   },
                   {
                       "id":  "av-тщательно",
@@ -297,7 +318,8 @@
                       "example":  "Мой ру́ки тща́тельно.",
                       "example_de":  "Wasch die Hände gründlich.",
                       "example_en":  "Wash your hands thoroughly.",
-                      "example_es":  "Lávate las manos bien."
+                      "example_es":  "Lávate las manos bien.",
+                      "es_freq":  3686
                   },
                   {
                       "id":  "av-стыдно",
@@ -310,7 +332,8 @@
                       "example":  "Мне сты́дно.",
                       "example_de":  "Ich schäme mich.",
                       "example_en":  "I\u0027m ashamed.",
-                      "example_es":  "Me da vergüenza."
+                      "example_es":  "Me da vergüenza.",
+                      "es_freq":  20189
                   },
                   {
                       "id":  "av-нередко",
@@ -323,7 +346,8 @@
                       "example":  "Он нере́дко к нам захо́дит.",
                       "example_de":  "Er kommt nicht selten zu uns.",
                       "example_en":  "He comes by quite often.",
-                      "example_es":  "Él viene a menudo."
+                      "example_es":  "Él viene a menudo.",
+                      "es_freq":  23817
                   },
                   {
                       "id":  "av-непременно",
@@ -336,7 +360,8 @@
                       "example":  "Я непреме́нно приду́.",
                       "example_de":  "Ich komme unbedingt.",
                       "example_en":  "I\u0027ll come without fail.",
-                      "example_es":  "Vengo sin falta."
+                      "example_es":  "Vengo sin falta.",
+                      "es_freq":  67152
                   },
                   {
                       "id":  "av-мгновенно",
@@ -349,7 +374,8 @@
                       "example":  "Он мгнове́нно усну́л.",
                       "example_de":  "Er schlief augenblicklich ein.",
                       "example_en":  "He fell asleep instantly.",
-                      "example_es":  "Se durmió al instante."
+                      "example_es":  "Se durmió al instante.",
+                      "es_freq":  8971
                   },
                   {
                       "id":  "av-когда-нибудь",
@@ -362,7 +388,8 @@
                       "example":  "Ты когда́-нибудь был в Росси́и?",
                       "example_de":  "Warst du schon mal in Russland?",
                       "example_en":  "Have you ever been to Russia?",
-                      "example_es":  "¿Alguna vez has estado en Rusia?"
+                      "example_es":  "¿Alguna vez has estado en Rusia?",
+                      "es_freq":  163790
                   },
                   {
                       "id":  "av-внутри",
@@ -375,7 +402,8 @@
                       "example":  "Внутри́ тепло́.",
                       "example_de":  "Drinnen ist es warm.",
                       "example_en":  "It\u0027s warm inside.",
-                      "example_es":  "Adentro hace calor."
+                      "example_es":  "Adentro hace calor.",
+                      "es_freq":  35406
                   },
                   {
                       "id":  "av-нигде",
@@ -389,7 +417,8 @@
                       "example":  "Я нигде́ не могу́ найти́ ключ.",
                       "example_de":  "Ich finde den Schlüssel nirgends.",
                       "example_en":  "I can\u0027t find the key anywhere.",
-                      "example_es":  "No encuentro la llave en ninguna parte."
+                      "example_es":  "No encuentro la llave en ninguna parte.",
+                      "es_freq":  112227
                   },
                   {
                       "id":  "av-дважды",
@@ -402,7 +431,8 @@
                       "example":  "Я два́жды звони́л.",
                       "example_de":  "Ich habe zweimal angerufen.",
                       "example_en":  "I called twice.",
-                      "example_es":  "Llamé dos veces."
+                      "example_es":  "Llamé dos veces.",
+                      "es_freq":  195756
                   },
                   {
                       "id":  "av-вовремя",
@@ -415,7 +445,8 @@
                       "example":  "Он пришёл во́время.",
                       "example_de":  "Er kam rechtzeitig.",
                       "example_en":  "He came on time.",
-                      "example_es":  "Llegó a tiempo."
+                      "example_es":  "Llegó a tiempo.",
+                      "es_freq":  556996
                   },
                   {
                       "id":  "av-сперва",
@@ -428,7 +459,8 @@
                       "example":  "Сперва́ пое́шь.",
                       "example_de":  "Iss zuerst etwas.",
                       "example_en":  "Eat first.",
-                      "example_es":  "Primero come."
+                      "example_es":  "Primero come.",
+                      "es_freq":  6565
                   },
                   {
                       "id":  "av-по-видимому",
@@ -441,7 +473,8 @@
                       "example":  "По-ви́димому, он уе́хал.",
                       "example_de":  "Anscheinend ist er weggefahren.",
                       "example_en":  "Apparently he left.",
-                      "example_es":  "Al parecer se fue."
+                      "example_es":  "Al parecer se fue.",
+                      "es_freq":  29249
                   },
                   {
                       "id":  "av-поначалу",
@@ -454,7 +487,8 @@
                       "example":  "Понача́лу бы́ло тру́дно.",
                       "example_de":  "Anfangs war es schwer.",
                       "example_en":  "At first it was hard.",
-                      "example_es":  "Al principio fue difícil."
+                      "example_es":  "Al principio fue difícil.",
+                      "es_freq":  39155
                   },
                   {
                       "id":  "av-мимо",
@@ -467,7 +501,8 @@
                       "example":  "Он прошёл ми́мо.",
                       "example_de":  "Er ging vorbei.",
                       "example_en":  "He walked past.",
-                      "example_es":  "Pasó de largo."
+                      "example_es":  "Pasó de largo.",
+                      "es_freq":  38898
                   },
                   {
                       "id":  "av-всерьез",
@@ -480,7 +515,8 @@
                       "example":  "Ты э́то всерьёз?",
                       "example_de":  "Meinst du das im Ernst?",
                       "example_en":  "Are you serious?",
-                      "example_es":  "¿Lo dices en serio?"
+                      "example_es":  "¿Lo dices en serio?",
+                      "es_freq":  194846
                   },
                   {
                       "id":  "av-еле",
@@ -493,7 +529,8 @@
                       "example":  "Я е́ле иду́.",
                       "example_de":  "Ich kann kaum gehen.",
                       "example_en":  "I can barely walk.",
-                      "example_es":  "Apenas puedo caminar."
+                      "example_es":  "Apenas puedo caminar.",
+                      "es_freq":  1698
                   },
                   {
                       "id":  "av-немножко",
@@ -506,7 +543,8 @@
                       "example":  "Подожди́ немно́жко.",
                       "example_de":  "Warte ein bisschen.",
                       "example_en":  "Wait a little.",
-                      "example_es":  "Espera un poquito."
+                      "example_es":  "Espera un poquito.",
+                      "es_freq":  689
                   },
                   {
                       "id":  "av-вслух",
@@ -519,7 +557,8 @@
                       "example":  "Чита́й вслух.",
                       "example_de":  "Lies laut vor.",
                       "example_en":  "Read aloud.",
-                      "example_es":  "Lee en voz alta."
+                      "example_es":  "Lee en voz alta.",
+                      "es_freq":  30046
                   },
                   {
                       "id":  "av-несомненно",
@@ -532,7 +571,8 @@
                       "example":  "Он, несомне́нно, у́мный.",
                       "example_de":  "Er ist zweifellos klug.",
                       "example_en":  "He\u0027s undoubtedly smart.",
-                      "example_es":  "Indudablemente es inteligente."
+                      "example_es":  "Indudablemente es inteligente.",
+                      "es_freq":  901
                   },
                   {
                       "id":  "av-справа",
@@ -546,7 +586,8 @@
                       "example":  "Дверь спра́ва.",
                       "example_de":  "Die Tür ist rechts.",
                       "example_en":  "The door is on the right.",
-                      "example_es":  "La puerta está a la derecha."
+                      "example_es":  "La puerta está a la derecha.",
+                      "es_freq":  37262
                   },
                   {
                       "id":  "av-слева",
@@ -560,7 +601,8 @@
                       "example":  "Банк сле́ва.",
                       "example_de":  "Die Bank ist links.",
                       "example_en":  "The bank is on the left.",
-                      "example_es":  "El banco está a la izquierda."
+                      "example_es":  "El banco está a la izquierda.",
+                      "es_freq":  34629
                   },
                   {
                       "id":  "av-тотчас",
@@ -573,7 +615,8 @@
                       "example":  "Он то́тчас отве́тил.",
                       "example_de":  "Er antwortete sofort.",
                       "example_en":  "He answered at once.",
-                      "example_es":  "Contestó en el acto."
+                      "example_es":  "Contestó en el acto.",
+                      "es_freq":  16848
                   },
                   {
                       "id":  "av-невольно",
@@ -586,7 +629,8 @@
                       "example":  "Я нево́льно улыбну́лся.",
                       "example_de":  "Ich musste unwillkürlich lächeln.",
                       "example_en":  "I smiled involuntarily.",
-                      "example_es":  "Sonreí sin querer."
+                      "example_es":  "Sonreí sin querer.",
+                      "es_freq":  22219
                   },
                   {
                       "id":  "av-вначале",
@@ -599,7 +643,8 @@
                       "example":  "Внача́ле бы́ло тру́дно.",
                       "example_de":  "Am Anfang war es schwer.",
                       "example_en":  "At first it was hard.",
-                      "example_es":  "Al principio fue difícil."
+                      "example_es":  "Al principio fue difícil.",
+                      "es_freq":  1958
                   },
                   {
                       "id":  "av-вдвоем",
@@ -612,7 +657,8 @@
                       "example":  "Мы живём вдвоём.",
                       "example_de":  "Wir wohnen zu zweit.",
                       "example_en":  "The two of us live together.",
-                      "example_es":  "Vivimos los dos juntos."
+                      "example_es":  "Vivimos los dos juntos.",
+                      "es_freq":  129353
                   },
                   {
                       "id":  "av-снизу",
@@ -625,7 +671,8 @@
                       "example":  "Сни́зу шу́мно.",
                       "example_de":  "Von unten ist es laut.",
                       "example_en":  "It\u0027s noisy from below.",
-                      "example_es":  "Desde abajo hay ruido."
+                      "example_es":  "Desde abajo hay ruido.",
+                      "es_freq":  91298
                   },
                   {
                       "id":  "av-целиком",
@@ -638,7 +685,8 @@
                       "example":  "Он съел пиро́г целико́м.",
                       "example_de":  "Er hat den Kuchen ganz aufgegessen.",
                       "example_en":  "He ate the whole pie.",
-                      "example_es":  "Se comió el pastel entero."
+                      "example_es":  "Se comió el pastel entero.",
+                      "es_freq":  827
                   },
                   {
                       "id":  "av-подряд",
@@ -651,7 +699,8 @@
                       "example":  "Три дня подря́д шёл дождь.",
                       "example_de":  "Drei Tage hintereinander hat es geregnet.",
                       "example_en":  "It rained three days in a row.",
-                      "example_es":  "Llovió tres días seguidos."
+                      "example_es":  "Llovió tres días seguidos.",
+                      "es_freq":  2068
                   },
                   {
                       "id":  "av-кругом",
@@ -664,7 +713,8 @@
                       "example":  "Круго́м лю́ди.",
                       "example_de":  "Ringsum sind Leute.",
                       "example_en":  "There are people all around.",
-                      "example_es":  "Hay gente por todas partes."
+                      "example_es":  "Hay gente por todas partes.",
+                      "es_freq":  39255
                   }
               ]
 }

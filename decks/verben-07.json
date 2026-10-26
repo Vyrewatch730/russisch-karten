@@ -34,7 +34,8 @@
                       "ipf_imp_ex":  "Сдава́й экза́мены во́время!",
                       "ipf_imp_ex_de":  "Leg die Prüfungen rechtzeitig ab!",
                       "pf_imp_ex":  "Сдай экза́мен хорошо́!",
-                      "pf_imp_ex_de":  "Besteh die Prüfung gut!"
+                      "pf_imp_ex_de":  "Besteh die Prüfung gut!",
+                      "es_freq":  4776
                   },
                   {
                       "id":  "vb-подписывать",
@@ -58,7 +59,8 @@
                       "ipf_imp_ex":  "Не подпи́сывай без чте́ния!",
                       "ipf_imp_ex_de":  "Unterschreib nicht, ohne zu lesen!",
                       "pf_imp_ex":  "Подпиши́ здесь!",
-                      "pf_imp_ex_de":  "Unterschreib hier!"
+                      "pf_imp_ex_de":  "Unterschreib hier!",
+                      "es_freq":  65331
                   },
                   {
                       "id":  "vb-спешить",
@@ -83,7 +85,8 @@
                       "ipf_imp_ex":  "Не спеши́!",
                       "ipf_imp_ex_de":  "Beeil dich nicht so!",
                       "pf_imp_ex":  "Поспеши́, по́езд ухо́дит!",
-                      "pf_imp_ex_de":  "Beeil dich, der Zug fährt ab!"
+                      "pf_imp_ex_de":  "Beeil dich, der Zug fährt ab!",
+                      "es_freq":  3848
                   },
                   {
                       "id":  "vb-содержать",
@@ -104,7 +107,8 @@
                       "example_cases":  "мно́го са́хара – Genitiv (nach мно́го)",
                       "government":  "was? – Akkusativ · wen? (unterhalten) – Akkusativ",
                       "ipf_imp_ex":  "Содержи́ ко́мнату в чистоте́!",
-                      "ipf_imp_ex_de":  "Halt das Zimmer sauber!"
+                      "ipf_imp_ex_de":  "Halt das Zimmer sauber!",
+                      "es_freq":  129362
                   },
                   {
                       "id":  "vb-предоставлять",
@@ -129,7 +133,8 @@
                       "ipf_imp_ex":  "Предоставля́й де́тям свобо́ду!",
                       "ipf_imp_ex_de":  "Lass den Kindern Freiheit!",
                       "pf_imp_ex":  "Предоста́вь мне э́то!",
-                      "pf_imp_ex_de":  "Überlass das mir!"
+                      "pf_imp_ex_de":  "Überlass das mir!",
+                      "es_freq":  36140
                   },
                   {
                       "id":  "vb-останавливать",
@@ -154,7 +159,8 @@
                       "ipf_imp_ex":  "Не остана́вливай меня́!",
                       "ipf_imp_ex_de":  "Halt mich nicht auf!",
                       "pf_imp_ex":  "Останови́ маши́ну!",
-                      "pf_imp_ex_de":  "Halt das Auto an!"
+                      "pf_imp_ex_de":  "Halt das Auto an!",
+                      "es_freq":  85473
                   },
                   {
                       "id":  "vb-держаться",
@@ -176,7 +182,8 @@
                       "example_cases":  "за пери́ла – Akkusativ (nach за)",
                       "government":  "wofür? – за + Akkusativ",
                       "ipf_imp_ex":  "Держи́сь за пери́ла!",
-                      "ipf_imp_ex_de":  "Halt dich am Geländer fest!"
+                      "ipf_imp_ex_de":  "Halt dich am Geländer fest!",
+                      "es_freq":  749
                   },
                   {
                       "id":  "vb-привлекать",
@@ -201,7 +208,8 @@
                       "ipf_imp_ex":  "Не привлека́й внима́ния!",
                       "ipf_imp_ex_de":  "Erreg keine Aufmerksamkeit!",
                       "pf_imp_ex":  "Привлеки́ друзе́й к рабо́те!",
-                      "pf_imp_ex_de":  "Hol Freunde zur Mitarbeit dazu!"
+                      "pf_imp_ex_de":  "Hol Freunde zur Mitarbeit dazu!",
+                      "es_freq":  14440
                   },
                   {
                       "id":  "vb-заканчиваться",
@@ -224,7 +232,8 @@
                       "note":  "Meist in der 3. Person. Etwas beenden: зака́нчивать.",
                       "note_es":  "terminar und acabar = enden. acabar de + Infinitiv = gerade etwas getan haben: Acabo de comer.",
                       "example_cases":  "в два – Akkusativ (Uhrzeit)",
-                      "government":  "wann? – в + Akkusativ (Uhrzeit)"
+                      "government":  "wann? – в + Akkusativ (Uhrzeit)",
+                      "es_freq":  10734
                   },
                   {
                       "id":  "vb-страдать",
@@ -248,7 +257,8 @@
                       "ipf_imp_ex":  "Не страда́й из-за него́!",
                       "ipf_imp_ex_de":  "Leide nicht wegen ihm!",
                       "pf_imp_ex":  "Не пострада́й зря!",
-                      "pf_imp_ex_de":  "Leide nicht umsonst!"
+                      "pf_imp_ex_de":  "Leide nicht umsonst!",
+                      "es_freq":  45500
                   },
                   {
                       "id":  "vb-бросаться",
@@ -273,7 +283,8 @@
                       "ipf_imp_ex":  "Не броса́йся деньга́ми!",
                       "ipf_imp_ex_de":  "Wirf nicht mit Geld um dich!",
                       "pf_imp_ex":  "Бро́сься в во́ду!",
-                      "pf_imp_ex_de":  "Spring ins Wasser!"
+                      "pf_imp_ex_de":  "Spring ins Wasser!",
+                      "es_freq":  5738
                   },
                   {
                       "id":  "vb-знакомиться",
@@ -298,7 +309,8 @@
                       "ipf_imp_ex":  "Знако́мьтесь, э́то мой брат!",
                       "ipf_imp_ex_de":  "Darf ich vorstellen, das ist mein Bruder!",
                       "pf_imp_ex":  "Познако́мься с мое́й сестро́й!",
-                      "pf_imp_ex_de":  "Lern meine Schwester kennen!"
+                      "pf_imp_ex_de":  "Lern meine Schwester kennen!",
+                      "es_freq":  193
                   },
                   {
                       "id":  "vb-оказывать",
@@ -323,7 +335,8 @@
                       "ipf_imp_ex":  "Ока́зывай по́мощь пожилы́м!",
                       "ipf_imp_ex_de":  "Hilf älteren Menschen!",
                       "pf_imp_ex":  "Окажи́ мне услу́гу!",
-                      "pf_imp_ex_de":  "Tu mir einen Gefallen!"
+                      "pf_imp_ex_de":  "Tu mir einen Gefallen!",
+                      "es_freq":  30414
                   },
                   {
                       "id":  "vb-вносить",
@@ -349,7 +362,8 @@
                       "ipf_imp_ex":  "Вноси́ де́ньги во́время!",
                       "ipf_imp_ex_de":  "Zahl das Geld pünktlich ein!",
                       "pf_imp_ex":  "Внеси́ стол в ко́мнату!",
-                      "pf_imp_ex_de":  "Trag den Tisch ins Zimmer!"
+                      "pf_imp_ex_de":  "Trag den Tisch ins Zimmer!",
+                      "es_freq":  156919
                   },
                   {
                       "id":  "vb-стремиться",
@@ -369,7 +383,8 @@
                       "example_cases":  "к успе́ху – Dativ (nach к)",
                       "government":  "wozu? – к + Dativ",
                       "ipf_imp_ex":  "Стреми́сь к мечте́!",
-                      "ipf_imp_ex_de":  "Strebe nach deinem Traum!"
+                      "ipf_imp_ex_de":  "Strebe nach deinem Traum!",
+                      "es_freq":  1290
                   },
                   {
                       "id":  "vb-обходиться",
@@ -394,7 +409,8 @@
                       "ipf_imp_ex":  "Не обходи́сь без за́втрака!",
                       "ipf_imp_ex_de":  "Lass das Frühstück nicht weg!",
                       "pf_imp_ex":  "Обойди́сь без маши́ны!",
-                      "pf_imp_ex_de":  "Komm ohne Auto aus!"
+                      "pf_imp_ex_de":  "Komm ohne Auto aus!",
+                      "es_freq":  306
                   },
                   {
                       "id":  "vb-дарить",
@@ -418,7 +434,8 @@
                       "ipf_imp_ex":  "Дари́ лю́дям ра́дость!",
                       "ipf_imp_ex_de":  "Schenk den Menschen Freude!",
                       "pf_imp_ex":  "Подари́ ма́ме цветы́!",
-                      "pf_imp_ex_de":  "Schenk Mama Blumen!"
+                      "pf_imp_ex_de":  "Schenk Mama Blumen!",
+                      "es_freq":  11018
                   },
                   {
                       "id":  "vb-исполнять",
@@ -443,7 +460,8 @@
                       "ipf_imp_ex":  "Исполня́й свои́ обеща́ния!",
                       "ipf_imp_ex_de":  "Erfülle deine Versprechen!",
                       "pf_imp_ex":  "Испо́лни мою́ про́сьбу!",
-                      "pf_imp_ex_de":  "Erfülle meine Bitte!"
+                      "pf_imp_ex_de":  "Erfülle meine Bitte!",
+                      "es_freq":  2176
                   },
                   {
                       "id":  "vb-выдерживать",
@@ -468,7 +486,8 @@
                       "ipf_imp_ex":  "Выде́рживай па́узу!",
                       "ipf_imp_ex_de":  "Halte die Pause ein!",
                       "pf_imp_ex":  "Вы́держи ещё неде́лю!",
-                      "pf_imp_ex_de":  "Halte noch eine Woche durch!"
+                      "pf_imp_ex_de":  "Halte noch eine Woche durch!",
+                      "es_freq":  1610
                   },
                   {
                       "id":  "vb-отпускать",
@@ -493,7 +512,8 @@
                       "ipf_imp_ex":  "Не отпуска́й мою́ ру́ку!",
                       "ipf_imp_ex_de":  "Lass meine Hand nicht los!",
                       "pf_imp_ex":  "Отпусти́ меня́ домо́й!",
-                      "pf_imp_ex_de":  "Lass mich nach Hause gehen!"
+                      "pf_imp_ex_de":  "Lass mich nach Hause gehen!",
+                      "es_freq":  1718
                   },
                   {
                       "id":  "vb-жалеть",
@@ -518,7 +538,8 @@
                       "ipf_imp_ex":  "Не жале́й ни о чём!",
                       "ipf_imp_ex_de":  "Bereue nichts!",
                       "pf_imp_ex":  "Пожале́й меня́!",
-                      "pf_imp_ex_de":  "Hab Mitleid mit mir!"
+                      "pf_imp_ex_de":  "Hab Mitleid mit mir!",
+                      "es_freq":  2378
                   },
                   {
                       "id":  "vb-лезть",
@@ -546,7 +567,8 @@
                       "ipf_imp_ex":  "Не лезь не в своё де́ло!",
                       "ipf_imp_ex_de":  "Misch dich nicht in fremde Angelegenheiten!",
                       "pf_imp_ex":  "Поле́зь на де́рево за мячо́м!",
-                      "pf_imp_ex_de":  "Kletter auf den Baum und hol den Ball!"
+                      "pf_imp_ex_de":  "Kletter auf den Baum und hol den Ball!",
+                      "es_freq":  4339
                   },
                   {
                       "id":  "vb-пропадать",
@@ -571,7 +593,8 @@
                       "ipf_imp_ex":  "Не пропада́й!",
                       "ipf_imp_ex_de":  "Melde dich mal wieder!",
                       "pf_imp_ex":  "Пропади́ ты про́падом!",
-                      "pf_imp_ex_de":  "Scher dich zum Teufel!"
+                      "pf_imp_ex_de":  "Scher dich zum Teufel!",
+                      "es_freq":  865
                   },
                   {
                       "id":  "vb-скрывать",
@@ -596,7 +619,8 @@
                       "ipf_imp_ex":  "Не скрыва́й пра́вду!",
                       "ipf_imp_ex_de":  "Verheimliche nicht die Wahrheit!",
                       "pf_imp_ex":  "Скрой э́то от ма́мы!",
-                      "pf_imp_ex_de":  "Verheimliche das vor Mama!"
+                      "pf_imp_ex_de":  "Verheimliche das vor Mama!",
+                      "es_freq":  29806
                   },
                   {
                       "id":  "vb-полагать",
@@ -615,7 +639,8 @@
                       "example_es":  "Yo supongo que usted tiene razón.",
                       "example_cases":  "nur Nominativ",
                       "government":  "что … (Nebensatz)",
-                      "ipf_imp":  "—"
+                      "ipf_imp":  "—",
+                      "es_freq":  18245
                   },
                   {
                       "id":  "vb-висеть",
@@ -635,7 +660,8 @@
                       "example_cases":  "на стене́ – Präpositiv (wo?)",
                       "government":  "wo? – на + Präpositiv",
                       "ipf_imp_ex":  "Виси́ на турнике́ мину́ту!",
-                      "ipf_imp_ex_de":  "Häng eine Minute an der Reckstange!"
+                      "ipf_imp_ex_de":  "Häng eine Minute an der Reckstange!",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-обсуждать",
@@ -660,7 +686,8 @@
                       "ipf_imp_ex":  "Не обсужда́й други́х!",
                       "ipf_imp_ex_de":  "Rede nicht über andere!",
                       "pf_imp_ex":  "Обсуди́ э́то с му́жем!",
-                      "pf_imp_ex_de":  "Besprich das mit deinem Mann!"
+                      "pf_imp_ex_de":  "Besprich das mit deinem Mann!",
+                      "es_freq":  35491
                   },
                   {
                       "id":  "vb-выносить",
@@ -687,7 +714,8 @@
                       "ipf_imp_ex":  "Выноси́ му́сор ка́ждый день!",
                       "ipf_imp_ex_de":  "Bring jeden Tag den Müll raus!",
                       "pf_imp_ex":  "Вы́неси му́сор!",
-                      "pf_imp_ex_de":  "Bring den Müll raus!"
+                      "pf_imp_ex_de":  "Bring den Müll raus!",
+                      "es_freq":  8353
                   },
                   {
                       "id":  "vb-заглядывать",
@@ -712,7 +740,8 @@
                       "ipf_imp_ex":  "Загля́дывай к нам поча́ще!",
                       "ipf_imp_ex_de":  "Schau öfter bei uns vorbei!",
                       "pf_imp_ex":  "Загляни́ в холоди́льник!",
-                      "pf_imp_ex_de":  "Schau in den Kühlschrank!"
+                      "pf_imp_ex_de":  "Schau in den Kühlschrank!",
+                      "es_freq":  43684
                   },
                   {
                       "id":  "vb-оборачиваться",
@@ -737,7 +766,8 @@
                       "ipf_imp_ex":  "Не обора́чивайся!",
                       "ipf_imp_ex_de":  "Dreh dich nicht um!",
                       "pf_imp_ex":  "Оберни́сь!",
-                      "pf_imp_ex_de":  "Dreh dich um!"
+                      "pf_imp_ex_de":  "Dreh dich um!",
+                      "es_freq":  20
                   },
                   {
                       "id":  "vb-готовиться",
@@ -761,7 +791,8 @@
                       "ipf_imp_ex":  "Гото́вься к экза́мену!",
                       "ipf_imp_ex_de":  "Bereite dich auf die Prüfung vor!",
                       "pf_imp_ex":  "Подгото́вься к уро́ку!",
-                      "pf_imp_ex_de":  "Bereite dich auf die Stunde vor!"
+                      "pf_imp_ex_de":  "Bereite dich auf die Stunde vor!",
+                      "es_freq":  2994
                   },
                   {
                       "id":  "vb-отходить",
@@ -788,7 +819,8 @@
                       "ipf_imp_ex":  "Не отходи́ от меня́!",
                       "ipf_imp_ex_de":  "Geh nicht von meiner Seite!",
                       "pf_imp_ex":  "Отойди́ от окна́!",
-                      "pf_imp_ex_de":  "Geh vom Fenster weg!"
+                      "pf_imp_ex_de":  "Geh vom Fenster weg!",
+                      "es_freq":  511887
                   },
                   {
                       "id":  "vb-выводить",
@@ -813,7 +845,8 @@
                       "ipf_imp_ex":  "Не выводи́ меня́ из себя́!",
                       "ipf_imp_ex_de":  "Bring mich nicht auf die Palme!",
                       "pf_imp_ex":  "Вы́веди соба́ку погуля́ть!",
-                      "pf_imp_ex_de":  "Geh mit dem Hund Gassi!"
+                      "pf_imp_ex_de":  "Geh mit dem Hund Gassi!",
+                      "es_freq":  6860
                   },
                   {
                       "id":  "vb-подчеркивать",
@@ -838,7 +871,8 @@
                       "ipf_imp_ex":  "Подчёркивай но́вые слова́!",
                       "ipf_imp_ex_de":  "Unterstreiche neue Wörter!",
                       "pf_imp_ex":  "Подчеркни́ гла́гол!",
-                      "pf_imp_ex_de":  "Unterstreiche das Verb!"
+                      "pf_imp_ex_de":  "Unterstreiche das Verb!",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-задумываться",
@@ -863,7 +897,8 @@
                       "ipf_imp_ex":  "Не заду́мывайся, отвеча́й!",
                       "ipf_imp_ex_de":  "Überleg nicht lange, antworte!",
                       "pf_imp_ex":  "Заду́майся о бу́дущем!",
-                      "pf_imp_ex_de":  "Denk über die Zukunft nach!"
+                      "pf_imp_ex_de":  "Denk über die Zukunft nach!",
+                      "es_freq":  38131
                   },
                   {
                       "id":  "vb-опускать",
@@ -889,7 +924,8 @@
                       "ipf_imp_ex":  "Не опуска́й ру́ки!",
                       "ipf_imp_ex_de":  "Gib nicht auf!",
                       "pf_imp_ex":  "Опусти́ письмо́ в я́щик!",
-                      "pf_imp_ex_de":  "Wirf den Brief in den Kasten!"
+                      "pf_imp_ex_de":  "Wirf den Brief in den Kasten!",
+                      "es_freq":  209304
                   },
                   {
                       "id":  "vb-стрелять",
@@ -914,7 +950,8 @@
                       "ipf_imp_ex":  "Не стреля́й!",
                       "ipf_imp_ex_de":  "Schieß nicht!",
                       "pf_imp_ex":  "Вы́стрели в во́здух!",
-                      "pf_imp_ex_de":  "Schieß in die Luft!"
+                      "pf_imp_ex_de":  "Schieß in die Luft!",
+                      "es_freq":  112496
                   },
                   {
                       "id":  "vb-покидать",
@@ -939,7 +976,8 @@
                       "ipf_imp_ex":  "Не покида́й меня́!",
                       "ipf_imp_ex_de":  "Verlass mich nicht!",
                       "pf_imp_ex":  "Поки́нь зда́ние!",
-                      "pf_imp_ex_de":  "Verlass das Gebäude!"
+                      "pf_imp_ex_de":  "Verlass das Gebäude!",
+                      "es_freq":  32698
                   },
                   {
                       "id":  "vb-отдыхать",
@@ -963,7 +1001,8 @@
                       "ipf_imp_ex":  "Отдыха́й бо́льше!",
                       "ipf_imp_ex_de":  "Ruh dich mehr aus!",
                       "pf_imp_ex":  "Отдохни́ немно́го!",
-                      "pf_imp_ex_de":  "Ruh dich ein bisschen aus!"
+                      "pf_imp_ex_de":  "Ruh dich ein bisschen aus!",
+                      "es_freq":  38146
                   },
                   {
                       "id":  "vb-курить",
@@ -987,7 +1026,8 @@
                       "ipf_imp_ex":  "Не кури́ здесь!",
                       "ipf_imp_ex_de":  "Rauch hier nicht!",
                       "pf_imp_ex":  "Покури́ на балко́не!",
-                      "pf_imp_ex_de":  "Rauch auf dem Balkon!"
+                      "pf_imp_ex_de":  "Rauch auf dem Balkon!",
+                      "es_freq":  31051
                   },
                   {
                       "id":  "vb-продолжаться",
@@ -1010,7 +1050,8 @@
                       "note":  "Meist in der 3. Person.",
                       "note_es":  "seguir (e → i: sigo) und continuar = weitergehen. seguir + -ando: Sigo trabajando = Ich arbeite weiter.",
                       "example_cases":  "nur Nominativ",
-                      "government":  "ohne Objekt"
+                      "government":  "ohne Objekt",
+                      "es_freq":  57744
                   },
                   {
                       "id":  "vb-надевать",
@@ -1034,7 +1075,8 @@
                       "ipf_imp_ex":  "Надева́й ша́пку, на у́лице хо́лодно!",
                       "ipf_imp_ex_de":  "Setz die Mütze auf, draußen ist es kalt!",
                       "pf_imp_ex":  "Наде́нь ку́ртку!",
-                      "pf_imp_ex_de":  "Zieh die Jacke an!"
+                      "pf_imp_ex_de":  "Zieh die Jacke an!",
+                      "es_freq":  0
                   },
                   {
                       "id":  "vb-поражать",
@@ -1059,7 +1101,8 @@
                       "ipf_imp_ex":  "Поража́й всех свои́м тала́нтом!",
                       "ipf_imp_ex_de":  "Begeistere alle mit deinem Talent!",
                       "pf_imp_ex":  "Порази́ нас!",
-                      "pf_imp_ex_de":  "Überrasch uns!"
+                      "pf_imp_ex_de":  "Überrasch uns!",
+                      "es_freq":  11150
                   },
                   {
                       "id":  "vb-запрещать",
@@ -1083,7 +1126,8 @@
                       "ipf_imp_ex":  "Не запреща́й ему́ игра́ть!",
                       "ipf_imp_ex_de":  "Verbiete ihm nicht zu spielen!",
                       "pf_imp_ex":  "Запрети́ им кури́ть до́ма!",
-                      "pf_imp_ex_de":  "Verbiete ihnen, zu Hause zu rauchen!"
+                      "pf_imp_ex_de":  "Verbiete ihnen, zu Hause zu rauchen!",
+                      "es_freq":  13464
                   },
                   {
                       "id":  "vb-проявлять",
@@ -1108,7 +1152,8 @@
                       "ipf_imp_ex":  "Проявля́й терпе́ние!",
                       "ipf_imp_ex_de":  "Hab Geduld!",
                       "pf_imp_ex":  "Прояви́ инициати́ву!",
-                      "pf_imp_ex_de":  "Ergreif die Initiative!"
+                      "pf_imp_ex_de":  "Ergreif die Initiative!",
+                      "es_freq":  56579
                   },
                   {
                       "id":  "vb-сажать",
@@ -1134,7 +1179,8 @@
                       "ipf_imp_ex":  "Сажа́й цветы́ весно́й!",
                       "ipf_imp_ex_de":  "Pflanz die Blumen im Frühling!",
                       "pf_imp_ex":  "Посади́ де́рево!",
-                      "pf_imp_ex_de":  "Pflanz einen Baum!"
+                      "pf_imp_ex_de":  "Pflanz einen Baum!",
+                      "es_freq":  6767
                   },
                   {
                       "id":  "vb-спускаться",
@@ -1158,7 +1204,8 @@
                       "ipf_imp_ex":  "Спуска́йся осторо́жно!",
                       "ipf_imp_ex_de":  "Geh vorsichtig hinunter!",
                       "pf_imp_ex":  "Спусти́сь вниз!",
-                      "pf_imp_ex_de":  "Komm herunter!"
+                      "pf_imp_ex_de":  "Komm herunter!",
+                      "es_freq":  5347
                   },
                   {
                       "id":  "vb-целовать",
@@ -1182,7 +1229,8 @@
                       "ipf_imp_ex":  "Целу́й ма́му на ночь!",
                       "ipf_imp_ex_de":  "Gib Mama einen Gutenachtkuss!",
                       "pf_imp_ex":  "Поцелу́й меня́!",
-                      "pf_imp_ex_de":  "Küss mich!"
+                      "pf_imp_ex_de":  "Küss mich!",
+                      "es_freq":  51301
                   },
                   {
                       "id":  "vb-зарабатывать",
@@ -1206,7 +1254,8 @@
                       "ipf_imp_ex":  "Зараба́тывай че́стно!",
                       "ipf_imp_ex_de":  "Verdiene ehrlich!",
                       "pf_imp_ex":  "Зарабо́тай на маши́ну!",
-                      "pf_imp_ex_de":  "Verdien dir das Geld für ein Auto!"
+                      "pf_imp_ex_de":  "Verdien dir das Geld für ein Auto!",
+                      "es_freq":  173542
                   },
                   {
                       "id":  "vb-предупреждать",
@@ -1231,7 +1280,8 @@
                       "ipf_imp_ex":  "Предупрежда́й, е́сли опа́здываешь!",
                       "ipf_imp_ex_de":  "Sag Bescheid, wenn du dich verspätest!",
                       "pf_imp_ex":  "Предупреди́ ма́му!",
-                      "pf_imp_ex_de":  "Sag Mama Bescheid!"
+                      "pf_imp_ex_de":  "Sag Mama Bescheid!",
+                      "es_freq":  1674
                   }
               ]
 }

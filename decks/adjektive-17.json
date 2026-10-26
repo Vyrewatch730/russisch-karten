@@ -19,7 +19,8 @@
                       "example_cases":  "туре́цкий ко́фе – Akkusativ",
                       "example_de":  "Ich trinke türkischen Kaffee.",
                       "example_en":  "I\u0027m drinking Turkish coffee.",
-                      "example_es":  "Tomo café turco."
+                      "example_es":  "Tomo café turco.",
+                      "es_freq":  5013
                   },
                   {
                       "id":  "aj-престижный",
@@ -32,7 +33,8 @@
                       "example_cases":  "прести́жный университе́т – Nominativ",
                       "example_de":  "Das ist eine angesehene Universität.",
                       "example_en":  "It\u0027s a prestigious university.",
-                      "example_es":  "Es una universidad prestigiosa."
+                      "example_es":  "Es una universidad prestigiosa.",
+                      "es_freq":  743
                   },
                   {
                       "id":  "aj-кавказский",
@@ -45,7 +47,8 @@
                       "example_cases":  "кавка́зскую ку́хню – Akkusativ",
                       "example_de":  "Ich mag die kaukasische Küche.",
                       "example_en":  "I love Caucasian cuisine.",
-                      "example_es":  "Me encanta la cocina caucásica."
+                      "example_es":  "Me encanta la cocina caucásica.",
+                      "es_freq":  737
                   },
                   {
                       "id":  "aj-казенный",
@@ -59,7 +62,8 @@
                       "example_cases":  "казённая кварти́ра – Nominativ",
                       "example_de":  "Das ist eine Dienstwohnung.",
                       "example_en":  "It\u0027s a government apartment.",
-                      "example_es":  "Es un apartamento del Estado."
+                      "example_es":  "Es un apartamento del Estado.",
+                      "es_freq":  332
                   },
                   {
                       "id":  "aj-цивилизованный",
@@ -72,7 +76,8 @@
                       "example_cases":  "цивилизо́ванная страна́ – Nominativ",
                       "example_de":  "Das ist ein zivilisiertes Land.",
                       "example_en":  "It\u0027s a civilized country.",
-                      "example_es":  "Es un país civilizado."
+                      "example_es":  "Es un país civilizado.",
+                      "es_freq":  3278
                   },
                   {
                       "id":  "aj-трезвый",
@@ -91,7 +96,8 @@
                       "adv":  "тре́зво",
                       "adv_de":  "nüchtern",
                       "adv_ex":  "Он тре́зво смо́трит на ве́щи.",
-                      "adv_ex_de":  "Er sieht die Dinge nüchtern."
+                      "adv_ex_de":  "Er sieht die Dinge nüchtern.",
+                      "es_freq":  5564
                   },
                   {
                       "id":  "aj-молочный",
@@ -104,7 +110,8 @@
                       "example_cases":  "моло́чные проду́кты – Akkusativ Plural",
                       "example_de":  "Ich kaufe Milchprodukte.",
                       "example_en":  "I buy dairy products.",
-                      "example_es":  "Compro productos lácteos."
+                      "example_es":  "Compro productos lácteos.",
+                      "es_freq":  1613
                   },
                   {
                       "id":  "aj-бесполезный",
@@ -124,7 +131,8 @@
                       "adv":  "бесполе́зно",
                       "adv_de":  "zwecklos",
                       "adv_ex":  "Спо́рить бесполе́зно.",
-                      "adv_ex_de":  "Streiten ist zwecklos."
+                      "adv_ex_de":  "Streiten ist zwecklos.",
+                      "es_freq":  20217
                   },
                   {
                       "id":  "aj-сомнительный",
@@ -137,7 +145,8 @@
                       "example_cases":  "сомни́тельное предложе́ние – Nominativ",
                       "example_de":  "Das ist ein zweifelhaftes Angebot.",
                       "example_en":  "It\u0027s a dubious offer.",
-                      "example_es":  "Es una oferta dudosa."
+                      "example_es":  "Es una oferta dudosa.",
+                      "es_freq":  1466
                   },
                   {
                       "id":  "aj-ручной",
@@ -151,7 +160,8 @@
                       "example_cases":  "ручна́я рабо́та – Nominativ",
                       "example_de":  "Das ist Handarbeit.",
                       "example_en":  "It\u0027s handmade.",
-                      "example_es":  "Es trabajo hecho a mano."
+                      "example_es":  "Es trabajo hecho a mano.",
+                      "es_freq":  5672
                   },
                   {
                       "id":  "aj-потребительский",
@@ -164,7 +174,8 @@
                       "example_cases":  "потреби́тельский креди́т – Akkusativ",
                       "example_de":  "Ich habe einen Verbraucherkredit aufgenommen.",
                       "example_en":  "I took out a consumer loan.",
-                      "example_es":  "Pedí un crédito de consumo."
+                      "example_es":  "Pedí un crédito de consumo.",
+                      "es_freq":  121
                   },
                   {
                       "id":  "aj-кривой",
@@ -184,7 +195,8 @@
                       "adv":  "кри́во",
                       "adv_de":  "schief",
                       "adv_ex":  "Карти́на виси́т кри́во.",
-                      "adv_ex_de":  "Das Bild hängt schief."
+                      "adv_ex_de":  "Das Bild hängt schief.",
+                      "es_freq":  2626
                   },
                   {
                       "id":  "aj-властный",
@@ -202,7 +214,8 @@
                       "adv":  "вла́стно",
                       "adv_de":  "gebieterisch",
                       "adv_ex":  "Он вла́стно сказа́л.",
-                      "adv_ex_de":  "Er sagte gebieterisch."
+                      "adv_ex_de":  "Er sagte gebieterisch.",
+                      "es_freq":  273
                   },
                   {
                       "id":  "aj-пышный",
@@ -215,7 +228,8 @@
                       "example_cases":  "у неё – Genitiv · пы́шная причёска – Nominativ",
                       "example_de":  "Sie hat eine üppige Frisur.",
                       "example_en":  "She has a big, fluffy hairstyle.",
-                      "example_es":  "Tiene un peinado voluminoso."
+                      "example_es":  "Tiene un peinado voluminoso.",
+                      "es_freq":  309
                   },
                   {
                       "id":  "aj-отвратительный",
@@ -232,7 +246,8 @@
                       "adv":  "отврати́тельно",
                       "adv_de":  "widerlich",
                       "adv_ex":  "Э́то отврати́тельно.",
-                      "adv_ex_de":  "Das ist widerlich."
+                      "adv_ex_de":  "Das ist widerlich.",
+                      "es_freq":  899
                   },
                   {
                       "id":  "aj-радикальный",
@@ -249,7 +264,8 @@
                       "adv":  "радика́льно",
                       "adv_de":  "radikal",
                       "adv_ex":  "Всё радика́льно измени́лось.",
-                      "adv_ex_de":  "Alles hat sich radikal verändert."
+                      "adv_ex_de":  "Alles hat sich radikal verändert.",
+                      "es_freq":  3575
                   },
                   {
                       "id":  "aj-пыльный",
@@ -262,7 +278,8 @@
                       "example_cases":  "пы́льная доро́га – Nominativ",
                       "example_de":  "Das ist eine staubige Straße.",
                       "example_en":  "It\u0027s a dusty road.",
-                      "example_es":  "Es un camino polvoriento."
+                      "example_es":  "Es un camino polvoriento.",
+                      "es_freq":  573
                   },
                   {
                       "id":  "aj-офицерский",
@@ -275,7 +292,8 @@
                       "example_cases":  "у него́ – Genitiv · офице́рское зва́ние – Nominativ",
                       "example_de":  "Er hat einen Offiziersrang.",
                       "example_en":  "He holds an officer\u0027s rank.",
-                      "example_es":  "Tiene rango de oficial."
+                      "example_es":  "Tiene rango de oficial.",
+                      "es_freq":  2398
                   },
                   {
                       "id":  "aj-неверный",
@@ -294,7 +312,8 @@
                       "adv":  "неве́рно",
                       "adv_de":  "falsch",
                       "adv_ex":  "Э́то неве́рно.",
-                      "adv_ex_de":  "Das ist falsch."
+                      "adv_ex_de":  "Das ist falsch.",
+                      "es_freq":  1923
                   },
                   {
                       "id":  "aj-колючий",
@@ -308,7 +327,8 @@
                       "example_cases":  "у ёжика – Genitiv · колю́чие иго́лки – Nominativ Plural",
                       "example_de":  "Der Igel hat stachelige Nadeln.",
                       "example_en":  "The hedgehog has prickly spines.",
-                      "example_es":  "El erizo tiene púas."
+                      "example_es":  "El erizo tiene púas.",
+                      "es_freq":  348
                   },
                   {
                       "id":  "aj-входной",
@@ -321,7 +341,8 @@
                       "example_cases":  "входну́ю дверь – Akkusativ",
                       "example_de":  "Schließ die Haustür.",
                       "example_en":  "Close the front door.",
-                      "example_es":  "Cierra la puerta de entrada."
+                      "example_es":  "Cierra la puerta de entrada.",
+                      "es_freq":  1340
                   },
                   {
                       "id":  "aj-аналитический",
@@ -334,7 +355,8 @@
                       "example_cases":  "у неё – Genitiv · аналити́ческий ум – Nominativ",
                       "example_de":  "Sie hat einen analytischen Verstand.",
                       "example_en":  "She has an analytical mind.",
-                      "example_es":  "Tiene una mente analítica."
+                      "example_es":  "Tiene una mente analítica.",
+                      "es_freq":  435
                   },
                   {
                       "id":  "aj-шахматный",
@@ -347,7 +369,8 @@
                       "example_cases":  "в ша́хматный клуб – Akkusativ (wohin?)",
                       "example_de":  "Er geht in einen Schachklub.",
                       "example_en":  "He goes to a chess club.",
-                      "example_es":  "Va a un club de ajedrez."
+                      "example_es":  "Va a un club de ajedrez.",
+                      "es_freq":  228
                   },
                   {
                       "id":  "aj-немыслимый",
@@ -364,7 +387,8 @@
                       "adv":  "немы́слимо",
                       "adv_de":  "undenkbar",
                       "adv_ex":  "Э́то немы́слимо.",
-                      "adv_ex_de":  "Das ist undenkbar."
+                      "adv_ex_de":  "Das ist undenkbar.",
+                      "es_freq":  727
                   },
                   {
                       "id":  "aj-энергичный",
@@ -382,7 +406,8 @@
                       "adv":  "энерги́чно",
                       "adv_de":  "energisch",
                       "adv_ex":  "Он энерги́чно взя́лся за де́ло.",
-                      "adv_ex_de":  "Er machte sich energisch an die Arbeit."
+                      "adv_ex_de":  "Er machte sich energisch an die Arbeit.",
+                      "es_freq":  769
                   },
                   {
                       "id":  "aj-пищевой",
@@ -395,7 +420,8 @@
                       "example_cases":  "пищева́я промы́шленность – Nominativ",
                       "example_de":  "Das ist die Lebensmittelindustrie.",
                       "example_en":  "It\u0027s the food industry.",
-                      "example_es":  "Es la industria alimentaria."
+                      "example_es":  "Es la industria alimentaria.",
+                      "es_freq":  1643
                   },
                   {
                       "id":  "aj-пестрый",
@@ -408,7 +434,8 @@
                       "example_cases":  "на ней – Präpositiv · пёстрое пла́тье – Nominativ",
                       "example_de":  "Sie trägt ein buntes Kleid.",
                       "example_en":  "She\u0027s wearing a colorful dress.",
-                      "example_es":  "Lleva un vestido colorido."
+                      "example_es":  "Lleva un vestido colorido.",
+                      "es_freq":  1139
                   },
                   {
                       "id":  "aj-дежурный",
@@ -422,7 +449,8 @@
                       "example_cases":  "дежу́рный врач – Nominativ",
                       "example_de":  "Wo ist der diensthabende Arzt?",
                       "example_en":  "Where\u0027s the doctor on duty?",
-                      "example_es":  "¿Dónde está el médico de guardia?"
+                      "example_es":  "¿Dónde está el médico de guardia?",
+                      "es_freq":  1370
                   },
                   {
                       "id":  "aj-пожарный",
@@ -436,7 +464,8 @@
                       "example_cases":  "пожа́рный вы́ход – Nominativ",
                       "example_de":  "Hier ist der Notausgang.",
                       "example_en":  "Here\u0027s the fire exit.",
-                      "example_es":  "Aquí está la salida de emergencia."
+                      "example_es":  "Aquí está la salida de emergencia.",
+                      "es_freq":  221
                   },
                   {
                       "id":  "aj-инженерный",
@@ -449,7 +478,8 @@
                       "example_cases":  "на инжене́рном факульте́те – Präpositiv",
                       "example_de":  "Er studiert Ingenieurwesen.",
                       "example_en":  "He studies engineering.",
-                      "example_es":  "Estudia ingeniería."
+                      "example_es":  "Estudia ingeniería.",
+                      "es_freq":  184
                   },
                   {
                       "id":  "aj-адекватный",
@@ -467,7 +497,8 @@
                       "adv":  "адеква́тно",
                       "adv_de":  "angemessen",
                       "adv_ex":  "Он адеква́тно реаги́рует.",
-                      "adv_ex_de":  "Er reagiert angemessen."
+                      "adv_ex_de":  "Er reagiert angemessen.",
+                      "es_freq":  941
                   },
                   {
                       "id":  "aj-минеральный",
@@ -480,7 +511,8 @@
                       "example_cases":  "минера́льную во́ду – Akkusativ",
                       "example_de":  "Ich trinke Mineralwasser.",
                       "example_en":  "I drink mineral water.",
-                      "example_es":  "Tomo agua mineral."
+                      "example_es":  "Tomo agua mineral.",
+                      "es_freq":  2821
                   },
                   {
                       "id":  "aj-крошечный",
@@ -493,7 +525,8 @@
                       "example_cases":  "у них – Genitiv · кро́шечный котёнок – Nominativ",
                       "example_de":  "Sie haben ein winziges Kätzchen.",
                       "example_en":  "They have a tiny kitten.",
-                      "example_es":  "Tienen un gatito diminuto."
+                      "example_es":  "Tienen un gatito diminuto.",
+                      "es_freq":  154
                   },
                   {
                       "id":  "aj-вертикальный",
@@ -511,7 +544,8 @@
                       "adv":  "вертика́льно",
                       "adv_de":  "senkrecht",
                       "adv_ex":  "Поста́вь буты́лку вертика́льно.",
-                      "adv_ex_de":  "Stell die Flasche senkrecht hin."
+                      "adv_ex_de":  "Stell die Flasche senkrecht hin.",
+                      "es_freq":  1749
                   },
                   {
                       "id":  "aj-следственный",
@@ -524,7 +558,8 @@
                       "example_cases":  "сле́дственная гру́ппа – Nominativ",
                       "example_de":  "Ein Ermittlerteam ist im Einsatz.",
                       "example_en":  "An investigation team is at work.",
-                      "example_es":  "Trabaja un equipo de investigación."
+                      "example_es":  "Trabaja un equipo de investigación.",
+                      "es_freq":  1973
                   },
                   {
                       "id":  "aj-должный",
@@ -538,7 +573,8 @@
                       "example_cases":  "до́лжного внима́ния – Genitiv",
                       "example_de":  "Das erfordert gebührende Aufmerksamkeit.",
                       "example_en":  "This requires due attention.",
-                      "example_es":  "Esto requiere la debida atención."
+                      "example_es":  "Esto requiere la debida atención.",
+                      "es_freq":  31135
                   },
                   {
                       "id":  "aj-былой",
@@ -551,7 +587,8 @@
                       "example_cases":  "ба́бушка – Nominativ · о было́х времена́х – Präpositiv Plural",
                       "example_de":  "Oma erzählt von alten Zeiten.",
                       "example_en":  "Grandma talks about bygone times.",
-                      "example_es":  "La abuela habla de tiempos pasados."
+                      "example_es":  "La abuela habla de tiempos pasados.",
+                      "es_freq":  10283
                   },
                   {
                       "id":  "aj-акционерный",
@@ -564,7 +601,8 @@
                       "example_cases":  "акционе́рное о́бщество – Nominativ",
                       "example_de":  "Das ist eine Aktiengesellschaft.",
                       "example_en":  "It\u0027s a joint-stock company.",
-                      "example_es":  "Es una sociedad anónima."
+                      "example_es":  "Es una sociedad anónima.",
+                      "es_freq":  725
                   },
                   {
                       "id":  "aj-финский",
@@ -578,7 +616,8 @@
                       "example_cases":  "в фи́нскую ба́ню – Akkusativ (wohin?)",
                       "example_de":  "Wir waren in der Sauna.",
                       "example_en":  "We went to the sauna.",
-                      "example_es":  "Fuimos al sauna."
+                      "example_es":  "Fuimos al sauna.",
+                      "es_freq":  522
                   },
                   {
                       "id":  "aj-тюремный",
@@ -591,7 +630,8 @@
                       "example_cases":  "ста́рое тюре́мное зда́ние – Nominativ",
                       "example_de":  "Das ist ein altes Gefängnisgebäude.",
                       "example_en":  "It\u0027s an old prison building.",
-                      "example_es":  "Es un viejo edificio carcelario."
+                      "example_es":  "Es un viejo edificio carcelario.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-смутный",
@@ -608,7 +648,8 @@
                       "adv":  "сму́тно",
                       "adv_de":  "vage, undeutlich",
                       "adv_ex":  "Я сму́тно по́мню.",
-                      "adv_ex_de":  "Ich erinnere mich vage."
+                      "adv_ex_de":  "Ich erinnere mich vage.",
+                      "es_freq":  7037
                   },
                   {
                       "id":  "aj-слышный",
@@ -623,7 +664,8 @@
                       "example_cases":  "едва́ слы́шный звук – Akkusativ",
                       "example_de":  "Ich höre ein kaum hörbares Geräusch.",
                       "example_en":  "I hear a barely audible sound.",
-                      "example_es":  "Oigo un sonido apenas audible."
+                      "example_es":  "Oigo un sonido apenas audible.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-повседневный",
@@ -636,7 +678,8 @@
                       "example_cases":  "повседне́вная оде́жда – Nominativ",
                       "example_de":  "Das ist Alltagskleidung.",
                       "example_en":  "These are everyday clothes.",
-                      "example_es":  "Es ropa de diario."
+                      "example_es":  "Es ropa de diario.",
+                      "es_freq":  1227
                   },
                   {
                       "id":  "aj-невинный",
@@ -653,7 +696,8 @@
                       "adv":  "неви́нно",
                       "adv_de":  "unschuldig",
                       "adv_ex":  "Она́ неви́нно улыба́ется.",
-                      "adv_ex_de":  "Sie lächelt unschuldig."
+                      "adv_ex_de":  "Sie lächelt unschuldig.",
+                      "es_freq":  32705
                   },
                   {
                       "id":  "aj-процентный",
@@ -666,7 +710,8 @@
                       "example_cases":  "кака́я проце́нтная ста́вка – Nominativ",
                       "example_de":  "Wie hoch ist der Zinssatz?",
                       "example_en":  "What\u0027s the interest rate?",
-                      "example_es":  "¿Cuál es la tasa de interés?"
+                      "example_es":  "¿Cuál es la tasa de interés?",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-клинический",
@@ -679,7 +724,8 @@
                       "example_cases":  "в клини́ческой больни́це – Präpositiv",
                       "example_de":  "Sie liegt in einer Uniklinik.",
                       "example_en":  "She\u0027s in a clinical hospital.",
-                      "example_es":  "Está en un hospital clínico."
+                      "example_es":  "Está en un hospital clínico.",
+                      "es_freq":  12287
                   },
                   {
                       "id":  "aj-импортный",
@@ -692,7 +738,8 @@
                       "example_cases":  "и́мпортный това́р – Nominativ",
                       "example_de":  "Das ist eine Importware.",
                       "example_en":  "It\u0027s an imported product.",
-                      "example_es":  "Es un producto importado."
+                      "example_es":  "Es un producto importado.",
+                      "es_freq":  1916
                   },
                   {
                       "id":  "aj-системный",
@@ -705,7 +752,8 @@
                       "example_cases":  "систе́мная оши́бка – Nominativ",
                       "example_de":  "Das ist ein Systemfehler.",
                       "example_en":  "It\u0027s a system error.",
-                      "example_es":  "Es un error del sistema."
+                      "example_es":  "Es un error del sistema.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-нехороший",
@@ -724,7 +772,8 @@
                       "adv":  "нехорошо́",
                       "adv_de":  "nicht gut, nicht schön",
                       "adv_ex":  "Так нехорошо́ де́лать.",
-                      "adv_ex_de":  "So etwas tut man nicht."
+                      "adv_ex_de":  "So etwas tut man nicht.",
+                      "es_freq":  9465
                   },
                   {
                       "id":  "aj-мутный",
@@ -738,7 +787,8 @@
                       "example_cases":  "му́тная вода́ – Nominativ",
                       "example_de":  "Hier ist das Wasser trüb.",
                       "example_en":  "The water is murky here.",
-                      "example_es":  "Aquí el agua está turbia."
+                      "example_es":  "Aquí el agua está turbia.",
+                      "es_freq":  1045
                   }
               ]
 }

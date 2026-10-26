@@ -19,7 +19,8 @@
                       "example_cases":  "федера́льный зако́н – Nominativ",
                       "example_de":  "Das ist ein Bundesgesetz.",
                       "example_en":  "This is a federal law.",
-                      "example_es":  "Es una ley federal."
+                      "example_es":  "Es una ley federal.",
+                      "es_freq":  16874
                   },
                   {
                       "id":  "aj-близкий",
@@ -41,7 +42,8 @@
                       "adv":  "бли́зко",
                       "adv_de":  "nah",
                       "adv_ex":  "Магази́н бли́зко.",
-                      "adv_ex_de":  "Der Laden ist nah."
+                      "adv_ex_de":  "Der Laden ist nah.",
+                      "es_freq":  19514
                   },
                   {
                       "id":  "aj-похожий",
@@ -60,7 +62,8 @@
                       "adv":  "похо́же",
                       "adv_de":  "anscheinend, es sieht so aus",
                       "adv_ex":  "Похо́же, бу́дет дождь.",
-                      "adv_ex_de":  "Es sieht nach Regen aus."
+                      "adv_ex_de":  "Es sieht nach Regen aus.",
+                      "es_freq":  980
                   },
                   {
                       "id":  "aj-различный",
@@ -73,7 +76,8 @@
                       "example_cases":  "в магази́не – Präpositiv · разли́чные това́ры – Nominativ Plural",
                       "example_de":  "Im Laden gibt es verschiedene Waren.",
                       "example_en":  "The store has various goods.",
-                      "example_es":  "En la tienda hay diversos productos."
+                      "example_es":  "En la tienda hay diversos productos.",
+                      "es_freq":  1702
                   },
                   {
                       "id":  "aj-необходимый",
@@ -92,7 +96,8 @@
                       "adv":  "необходи́мо",
                       "adv_de":  "notwendig",
                       "adv_ex":  "Необходи́мо отдохну́ть.",
-                      "adv_ex_de":  "Man muss sich ausruhen."
+                      "adv_ex_de":  "Man muss sich ausruhen.",
+                      "es_freq":  2492
                   },
                   {
                       "id":  "aj-единственный",
@@ -105,7 +110,8 @@
                       "example_cases":  "мой еди́нственный брат – Nominativ",
                       "example_de":  "Er ist mein einziger Bruder.",
                       "example_en":  "He\u0027s my only brother.",
-                      "example_es":  "Es mi único hermano."
+                      "example_es":  "Es mi único hermano.",
+                      "es_freq":  201167
                   },
                   {
                       "id":  "aj-легкий",
@@ -127,7 +133,8 @@
                       "adv":  "легко́",
                       "adv_de":  "leicht",
                       "adv_ex":  "Э́то легко́.",
-                      "adv_ex_de":  "Das ist leicht."
+                      "adv_ex_de":  "Das ist leicht.",
+                      "es_freq":  9954
                   },
                   {
                       "id":  "aj-человеческий",
@@ -144,7 +151,8 @@
                       "adv":  "по-челове́чески",
                       "adv_de":  "menschlich",
                       "adv_ex":  "Поговори́ со мной по-челове́чески.",
-                      "adv_ex_de":  "Sprich mit mir wie ein Mensch."
+                      "adv_ex_de":  "Sprich mit mir wie ein Mensch.",
+                      "es_freq":  79962
                   },
                   {
                       "id":  "aj-международный",
@@ -157,7 +165,8 @@
                       "example_cases":  "Шереме́тьево – Nominativ · междунаро́дный аэропо́рт – Nominativ",
                       "example_de":  "Scheremetjewo ist ein internationaler Flughafen.",
                       "example_en":  "Sheremetyevo is an international airport.",
-                      "example_es":  "Sheremétievo es un aeropuerto internacional."
+                      "example_es":  "Sheremétievo es un aeropuerto internacional.",
+                      "es_freq":  10547
                   },
                   {
                       "id":  "aj-дорогой",
@@ -179,7 +188,8 @@
                       "adv":  "до́рого",
                       "adv_de":  "teuer",
                       "adv_ex":  "В Москве́ всё до́рого.",
-                      "adv_ex_de":  "In Moskau ist alles teuer."
+                      "adv_ex_de":  "In Moskau ist alles teuer.",
+                      "es_freq":  135320
                   },
                   {
                       "id":  "aj-небольшой",
@@ -193,7 +203,8 @@
                       "example_cases":  "в небольшо́м го́роде – Präpositiv",
                       "example_de":  "Wir wohnen in einer kleinen Stadt.",
                       "example_en":  "We live in a small town.",
-                      "example_es":  "Vivimos en una ciudad pequeña."
+                      "example_es":  "Vivimos en una ciudad pequeña.",
+                      "es_freq":  10994
                   },
                   {
                       "id":  "aj-местный",
@@ -207,7 +218,8 @@
                       "example_cases":  "газе́ту – Akkusativ · в ме́стном магази́не – Präpositiv",
                       "example_de":  "Ich habe die Zeitung im Laden vor Ort gekauft.",
                       "example_en":  "I bought the paper at the local store.",
-                      "example_es":  "Compré el periódico en la tienda local."
+                      "example_es":  "Compré el periódico en la tienda local.",
+                      "es_freq":  24858
                   },
                   {
                       "id":  "aj-бывший",
@@ -221,7 +233,8 @@
                       "example_cases":  "мой бы́вший муж – Nominativ",
                       "example_de":  "Das ist mein Ex-Mann.",
                       "example_en":  "This is my ex-husband.",
-                      "example_es":  "Es mi exesposo."
+                      "example_es":  "Es mi exesposo.",
+                      "es_freq":  19776
                   },
                   {
                       "id":  "aj-американский",
@@ -238,7 +251,8 @@
                       "adv":  "по-америка́нски",
                       "adv_de":  "auf amerikanische Art",
                       "adv_ex":  "Он улыба́ется по-америка́нски.",
-                      "adv_ex_de":  "Er lächelt auf amerikanische Art."
+                      "adv_ex_de":  "Er lächelt auf amerikanische Art.",
+                      "es_freq":  12668
                   },
                   {
                       "id":  "aj-широкий",
@@ -259,7 +273,8 @@
                       "adv":  "широко́",
                       "adv_de":  "breit, weit",
                       "adv_ex":  "Он широко́ улыбну́лся.",
-                      "adv_ex_de":  "Er lächelte breit."
+                      "adv_ex_de":  "Er lächelte breit.",
+                      "es_freq":  4525
                   },
                   {
                       "id":  "aj-мировой",
@@ -273,7 +288,8 @@
                       "example_cases":  "втора́я мирова́я война́ – Nominativ · году́ – Präpositiv",
                       "example_de":  "Der Zweite Weltkrieg endete 1945.",
                       "example_en":  "World War Two ended in 1945.",
-                      "example_es":  "La Segunda Guerra Mundial terminó en 1945."
+                      "example_es":  "La Segunda Guerra Mundial terminó en 1945.",
+                      "es_freq":  16021
                   },
                   {
                       "id":  "aj-тяжелый",
@@ -294,7 +310,8 @@
                       "adv":  "тяжело́",
                       "adv_de":  "schwer",
                       "adv_ex":  "Мне тяжело́ нести́ су́мку.",
-                      "adv_ex_de":  "Es fällt mir schwer, die Tasche zu tragen."
+                      "adv_ex_de":  "Es fällt mir schwer, die Tasche zu tragen.",
+                      "es_freq":  18457
                   },
                   {
                       "id":  "aj-возможный",
@@ -313,7 +330,8 @@
                       "adv":  "возмо́жно",
                       "adv_de":  "möglicherweise, vielleicht",
                       "adv_ex":  "Возмо́жно, он придёт.",
-                      "adv_ex_de":  "Vielleicht kommt er."
+                      "adv_ex_de":  "Vielleicht kommt er.",
+                      "es_freq":  97673
                   },
                   {
                       "id":  "aj-отдельный",
@@ -330,7 +348,8 @@
                       "adv":  "отде́льно",
                       "adv_de":  "getrennt, einzeln",
                       "adv_ex":  "Мы живём отде́льно.",
-                      "adv_ex_de":  "Wir wohnen getrennt."
+                      "adv_ex_de":  "Wir wohnen getrennt.",
+                      "es_freq":  13891
                   },
                   {
                       "id":  "aj-средний",
@@ -344,7 +363,8 @@
                       "example_cases":  "сре́днего ро́ста – Genitiv",
                       "example_de":  "Er ist mittelgroß.",
                       "example_en":  "He\u0027s of average height.",
-                      "example_es":  "Es de estatura media."
+                      "example_es":  "Es de estatura media.",
+                      "es_freq":  139745
                   },
                   {
                       "id":  "aj-красивый",
@@ -364,7 +384,8 @@
                       "adv":  "краси́во",
                       "adv_de":  "schön",
                       "adv_ex":  "Она́ краси́во поёт.",
-                      "adv_ex_de":  "Sie singt schön."
+                      "adv_ex_de":  "Sie singt schön.",
+                      "es_freq":  91240
                   },
                   {
                       "id":  "aj-короткий",
@@ -386,7 +407,8 @@
                       "adv":  "ко́ротко",
                       "adv_de":  "kurz",
                       "adv_ex":  "Скажи́ ко́ротко.",
-                      "adv_ex_de":  "Sag es kurz."
+                      "adv_ex_de":  "Sag es kurz.",
+                      "es_freq":  36465
                   },
                   {
                       "id":  "aj-серьезный",
@@ -406,7 +428,8 @@
                       "adv":  "серьёзно",
                       "adv_de":  "ernst, im Ernst",
                       "adv_ex":  "Ты серьёзно?",
-                      "adv_ex_de":  "Im Ernst?"
+                      "adv_ex_de":  "Im Ernst?",
+                      "es_freq":  215787
                   },
                   {
                       "id":  "aj-интересный",
@@ -426,7 +449,8 @@
                       "adv":  "интере́сно",
                       "adv_de":  "interessant",
                       "adv_ex":  "Мне интере́сно.",
-                      "adv_ex_de":  "Ich finde das interessant."
+                      "adv_ex_de":  "Ich finde das interessant.",
+                      "es_freq":  46359
                   },
                   {
                       "id":  "aj-добрый",
@@ -443,7 +467,8 @@
                       "example_cases":  "до́брое у́тро – Nominativ",
                       "example_de":  "Guten Morgen!",
                       "example_en":  "Good morning!",
-                      "example_es":  "¡Buenos días!"
+                      "example_es":  "¡Buenos días!",
+                      "es_freq":  75883
                   },
                   {
                       "id":  "aj-национальный",
@@ -456,7 +481,8 @@
                       "example_cases":  "в национа́льном па́рке – Präpositiv",
                       "example_de":  "Wir waren in einem Nationalpark.",
                       "example_en":  "We were in a national park.",
-                      "example_es":  "Estuvimos en un parque nacional."
+                      "example_es":  "Estuvimos en un parque nacional.",
+                      "es_freq":  22774
                   },
                   {
                       "id":  "aj-длинный",
@@ -473,7 +499,8 @@
                       "example_cases":  "у неё – Genitiv · дли́нные во́лосы – Nominativ Plural",
                       "example_de":  "Sie hat lange Haare.",
                       "example_en":  "She has long hair.",
-                      "example_es":  "Ella tiene el pelo largo."
+                      "example_es":  "Ella tiene el pelo largo.",
+                      "es_freq":  90917
                   },
                   {
                       "id":  "aj-страшный",
@@ -493,7 +520,8 @@
                       "adv":  "стра́шно",
                       "adv_de":  "gruselig, (ich habe) Angst",
                       "adv_ex":  "Мне стра́шно.",
-                      "adv_ex_de":  "Ich habe Angst."
+                      "adv_ex_de":  "Ich habe Angst.",
+                      "es_freq":  45897
                   },
                   {
                       "id":  "aj-прошлый",
@@ -508,7 +536,8 @@
                       "example_cases":  "в про́шлом году́ – Präpositiv · в Москве́ – Präpositiv",
                       "example_de":  "Letztes Jahr war ich in Moskau.",
                       "example_en":  "Last year I was in Moscow.",
-                      "example_es":  "El año pasado estuve en Moscú."
+                      "example_es":  "El año pasado estuve en Moscú.",
+                      "es_freq":  205656
                   },
                   {
                       "id":  "aj-общественный",
@@ -522,7 +551,8 @@
                       "example_cases":  "на обще́ственном тра́нспорте – Präpositiv",
                       "example_de":  "Ich fahre mit öffentlichen Verkehrsmitteln.",
                       "example_en":  "I use public transport.",
-                      "example_es":  "Uso el transporte público."
+                      "example_es":  "Uso el transporte público.",
+                      "es_freq":  48860
                   },
                   {
                       "id":  "aj-детский",
@@ -541,7 +571,8 @@
                       "adv":  "по-де́тски",
                       "adv_de":  "kindlich, wie ein Kind",
                       "adv_ex":  "Он смеётся по-де́тски.",
-                      "adv_ex_de":  "Er lacht wie ein Kind."
+                      "adv_ex_de":  "Er lacht wie ein Kind.",
+                      "es_freq":  8437
                   },
                   {
                       "id":  "aj-единый",
@@ -554,7 +585,8 @@
                       "example_cases":  "у нас – Genitiv · еди́ная цель – Nominativ",
                       "example_de":  "Wir haben ein gemeinsames Ziel.",
                       "example_en":  "We have a common goal.",
-                      "example_es":  "Tenemos un objetivo común."
+                      "example_es":  "Tenemos un objetivo común.",
+                      "es_freq":  10058
                   },
                   {
                       "id":  "aj-определенный",
@@ -571,7 +603,8 @@
                       "adv":  "определённо",
                       "adv_de":  "bestimmt, eindeutig",
                       "adv_ex":  "Он определённо прав.",
-                      "adv_ex_de":  "Er hat eindeutig recht."
+                      "adv_ex_de":  "Er hat eindeutig recht.",
+                      "es_freq":  4310
                   },
                   {
                       "id":  "aj-низкий",
@@ -593,7 +626,8 @@
                       "adv":  "ни́зко",
                       "adv_de":  "niedrig, tief",
                       "adv_ex":  "Самолёт лети́т ни́зко.",
-                      "adv_ex_de":  "Das Flugzeug fliegt tief."
+                      "adv_ex_de":  "Das Flugzeug fliegt tief.",
+                      "es_freq":  159134
                   },
                   {
                       "id":  "aj-чужой",
@@ -608,7 +642,8 @@
                       "example_cases":  "чужи́е ве́щи – Akkusativ Plural",
                       "example_de":  "Nimm keine fremden Sachen!",
                       "example_en":  "Don\u0027t take other people\u0027s things!",
-                      "example_es":  "¡No tomes cosas ajenas!"
+                      "example_es":  "¡No tomes cosas ajenas!",
+                      "es_freq":  2565
                   },
                   {
                       "id":  "aj-странный",
@@ -627,7 +662,8 @@
                       "adv":  "стра́нно",
                       "adv_de":  "seltsam",
                       "adv_ex":  "Э́то стра́нно.",
-                      "adv_ex_de":  "Das ist seltsam."
+                      "adv_ex_de":  "Das ist seltsam.",
+                      "es_freq":  99351
                   },
                   {
                       "id":  "aj-чистый",
@@ -648,7 +684,8 @@
                       "adv":  "чи́сто",
                       "adv_de":  "sauber",
                       "adv_ex":  "В ко́мнате чи́сто.",
-                      "adv_ex_de":  "Im Zimmer ist es sauber."
+                      "adv_ex_de":  "Im Zimmer ist es sauber.",
+                      "es_freq":  38033
                   },
                   {
                       "id":  "aj-поздний",
@@ -669,7 +706,8 @@
                       "adv":  "по́здно",
                       "adv_de":  "spät",
                       "adv_ex":  "Уже́ по́здно.",
-                      "adv_ex_de":  "Es ist schon spät."
+                      "adv_ex_de":  "Es ist schon spät.",
+                      "es_freq":  836
                   },
                   {
                       "id":  "aj-специальный",
@@ -687,7 +725,8 @@
                       "adv":  "специа́льно",
                       "adv_de":  "extra, absichtlich",
                       "adv_ex":  "Я пришёл специа́льно к тебе́.",
-                      "adv_ex_de":  "Ich bin extra zu dir gekommen."
+                      "adv_ex_de":  "Ich bin extra zu dir gekommen.",
+                      "es_freq":  3838
                   },
                   {
                       "id":  "aj-научный",
@@ -704,7 +743,8 @@
                       "adv":  "нау́чно",
                       "adv_de":  "wissenschaftlich",
                       "adv_ex":  "Э́то нау́чно дока́зано.",
-                      "adv_ex_de":  "Das ist wissenschaftlich bewiesen."
+                      "adv_ex_de":  "Das ist wissenschaftlich bewiesen.",
+                      "es_freq":  20964
                   },
                   {
                       "id":  "aj-сложный",
@@ -724,7 +764,8 @@
                       "adv":  "сло́жно",
                       "adv_de":  "schwierig, kompliziert",
                       "adv_ex":  "Э́то сло́жно объясни́ть.",
-                      "adv_ex_de":  "Das ist schwer zu erklären."
+                      "adv_ex_de":  "Das ist schwer zu erklären.",
+                      "es_freq":  22111
                   },
                   {
                       "id":  "aj-реальный",
@@ -742,7 +783,8 @@
                       "adv":  "реа́льно",
                       "adv_de":  "real, wirklich",
                       "adv_ex":  "Э́то реа́льно сде́лать.",
-                      "adv_ex_de":  "Das kann man wirklich schaffen."
+                      "adv_ex_de":  "Das kann man wirklich schaffen.",
+                      "es_freq":  76105
                   },
                   {
                       "id":  "aj-способный",
@@ -758,7 +800,8 @@
                       "example_cases":  "спосо́бная студе́нтка – Nominativ",
                       "example_de":  "Sie ist eine sehr begabte Studentin.",
                       "example_en":  "She\u0027s a very talented student.",
-                      "example_es":  "Es una estudiante muy capaz."
+                      "example_es":  "Es una estudiante muy capaz.",
+                      "es_freq":  50776
                   },
                   {
                       "id":  "aj-малый",
@@ -773,7 +816,8 @@
                       "example_cases":  "ма́лый би́знес – Akkusativ",
                       "example_de":  "Er hat ein kleines Unternehmen gegründet.",
                       "example_en":  "He started a small business.",
-                      "example_es":  "Abrió un pequeño negocio."
+                      "example_es":  "Abrió un pequeño negocio.",
+                      "es_freq":  10994
                   },
                   {
                       "id":  "aj-старший",
@@ -788,7 +832,8 @@
                       "example_cases":  "мой ста́рший брат – Nominativ",
                       "example_de":  "Das ist mein älterer Bruder.",
                       "example_en":  "This is my older brother.",
-                      "example_es":  "Es mi hermano mayor."
+                      "example_es":  "Es mi hermano mayor.",
+                      "es_freq":  100457
                   },
                   {
                       "id":  "aj-личный",
@@ -806,7 +851,8 @@
                       "adv":  "ли́чно",
                       "adv_de":  "persönlich",
                       "adv_ex":  "Я ли́чно его́ зна́ю.",
-                      "adv_ex_de":  "Ich kenne ihn persönlich."
+                      "adv_ex_de":  "Ich kenne ihn persönlich.",
+                      "es_freq":  57496
                   },
                   {
                       "id":  "aj-свободный",
@@ -827,7 +873,8 @@
                       "adv":  "свобо́дно",
                       "adv_de":  "frei, fließend",
                       "adv_ex":  "Он свобо́дно говори́т по-ру́сски.",
-                      "adv_ex_de":  "Er spricht fließend Russisch."
+                      "adv_ex_de":  "Er spricht fließend Russisch.",
+                      "es_freq":  74936
                   },
                   {
                       "id":  "aj-обычный",
@@ -845,7 +892,8 @@
                       "adv":  "обы́чно",
                       "adv_de":  "normalerweise",
                       "adv_ex":  "Обы́чно я встаю́ в семь.",
-                      "adv_ex_de":  "Normalerweise stehe ich um sieben auf."
+                      "adv_ex_de":  "Normalerweise stehe ich um sieben auf.",
+                      "es_freq":  7408
                   },
                   {
                       "id":  "aj-прекрасный",
@@ -864,7 +912,8 @@
                       "adv":  "прекра́сно",
                       "adv_de":  "wunderbar",
                       "adv_ex":  "Я прекра́сно себя́ чу́вствую.",
-                      "adv_ex_de":  "Ich fühle mich wunderbar."
+                      "adv_ex_de":  "Ich fühle mich wunderbar.",
+                      "es_freq":  59257
                   },
                   {
                       "id":  "aj-высший",
@@ -878,7 +927,8 @@
                       "example_cases":  "у него́ – Genitiv · вы́сшее образова́ние – Nominativ",
                       "example_de":  "Er hat einen Hochschulabschluss.",
                       "example_en":  "He has a university degree.",
-                      "example_es":  "Él tiene estudios superiores."
+                      "example_es":  "Él tiene estudios superiores.",
+                      "es_freq":  20392
                   }
               ]
 }

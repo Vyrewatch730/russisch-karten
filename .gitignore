@@ -4,3 +4,4 @@ tools/noun-frequency.tsv
 tools/adj-frequency.tsv
 tools/adv-frequency.tsv
 tools/prep-frequency.tsv
+tools/es-frequency.txt

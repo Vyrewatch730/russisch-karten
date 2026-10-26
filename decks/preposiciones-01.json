@@ -16,7 +16,8 @@
                       "example_es":  "Voy a la playa.",
                       "example_de":  "Ich gehe an den Strand.",
                       "example_en":  "I\u0027m going to the beach.",
-                      "hint_es":  "a + el = al: Voy al colmado. Vor Personen als Objekt steht das persönliche a: Veo a mi madre."
+                      "hint_es":  "a + el = al: Voy al colmado. Vor Personen als Objekt steht das persönliche a: Veo a mi madre.",
+                      "es_freq":  9549646
                   },
                   {
                       "id":  "pe-de",
@@ -27,7 +28,8 @@
                       "example_es":  "Soy de Alemania.",
                       "example_de":  "Ich komme aus Deutschland.",
                       "example_en":  "I\u0027m from Germany.",
-                      "hint_es":  "de + el = del: la casa del vecino. Besitz: el carro de Juan = Juans Auto."
+                      "hint_es":  "de + el = del: la casa del vecino. Besitz: el carro de Juan = Juans Auto.",
+                      "es_freq":  14459520
                   },
                   {
                       "id":  "pe-en",
@@ -38,7 +40,8 @@
                       "example_es":  "Estoy en casa.",
                       "example_de":  "Ich bin zu Hause.",
                       "example_en":  "I\u0027m at home.",
-                      "hint_es":  "Wo? → en. Wohin? → a. Verkehrsmittel: en guagua, en carro."
+                      "hint_es":  "Wo? → en. Wohin? → a. Verkehrsmittel: en guagua, en carro.",
+                      "es_freq":  6817324
                   },
                   {
                       "id":  "pe-con",
@@ -49,7 +52,8 @@
                       "example_es":  "Café con leche, por favor.",
                       "example_de":  "Kaffee mit Milch, bitte.",
                       "example_en":  "Coffee with milk, please.",
-                      "hint_es":  "Mit mir / dir: conmigo, contigo."
+                      "hint_es":  "Mit mir / dir: conmigo, contigo.",
+                      "es_freq":  3028045
                   },
                   {
                       "id":  "pe-sin",
@@ -59,7 +63,8 @@
                       "en":  "without",
                       "example_es":  "Un jugo sin azúcar.",
                       "example_de":  "Ein Saft ohne Zucker.",
-                      "example_en":  "A juice without sugar."
+                      "example_en":  "A juice without sugar.",
+                      "es_freq":  474770
                   },
                   {
                       "id":  "pe-para",
@@ -70,7 +75,8 @@
                       "example_es":  "Este regalo es para ti.",
                       "example_de":  "Dieses Geschenk ist für dich.",
                       "example_en":  "This present is for you.",
-                      "hint_es":  "para = Ziel, Zweck, Empfänger, Frist. Gesprochen in der DR oft „pa\u0027“: Voy pa\u0027 la casa."
+                      "hint_es":  "para = Ziel, Zweck, Empfänger, Frist. Gesprochen in der DR oft „pa\u0027“: Voy pa\u0027 la casa.",
+                      "es_freq":  2832100
                   },
                   {
                       "id":  "pe-por",
@@ -81,7 +87,8 @@
                       "example_es":  "Gracias por todo.",
                       "example_de":  "Danke für alles.",
                       "example_en":  "Thanks for everything.",
-                      "hint_es":  "por = Grund, Weg, Tausch, Tageszeit: por la mañana. Siehe Regel „por oder para?“."
+                      "hint_es":  "por = Grund, Weg, Tausch, Tageszeit: por la mañana. Siehe Regel „por oder para?“.",
+                      "es_freq":  4454673
                   },
                   {
                       "id":  "pe-desde",
@@ -92,7 +99,8 @@
                       "example_es":  "Vivo aquí desde 2020.",
                       "example_de":  "Ich wohne seit 2020 hier.",
                       "example_en":  "I\u0027ve lived here since 2020.",
-                      "hint_es":  "desde … hasta = von … bis: desde las ocho hasta las cinco."
+                      "hint_es":  "desde … hasta = von … bis: desde las ocho hasta las cinco.",
+                      "es_freq":  303620
                   },
                   {
                       "id":  "pe-hasta",
@@ -103,7 +111,8 @@
                       "example_es":  "¡Hasta mañana!",
                       "example_de":  "Bis morgen!",
                       "example_en":  "See you tomorrow!",
-                      "hint_es":  "Auch „sogar“: Hasta él lo sabe."
+                      "hint_es":  "Auch „sogar“: Hasta él lo sabe.",
+                      "es_freq":  423321
                   },
                   {
                       "id":  "pe-entre",
@@ -114,7 +123,8 @@
                       "example_es":  "La farmacia está entre el banco y el colmado.",
                       "example_de":  "Die Apotheke ist zwischen der Bank und dem Laden.",
                       "example_en":  "The pharmacy is between the bank and the shop.",
-                      "hint_es":  "entre tú y yo = unter uns (nicht ti/mí!)."
+                      "hint_es":  "entre tú y yo = unter uns (nicht ti/mí!).",
+                      "es_freq":  181114
                   },
                   {
                       "id":  "pe-sobre",
@@ -125,7 +135,8 @@
                       "example_es":  "El libro está sobre la mesa.",
                       "example_de":  "Das Buch liegt auf dem Tisch.",
                       "example_en":  "The book is on the table.",
-                      "hint_es":  "Thema: un libro sobre la historia. Ungefähr: sobre las tres = gegen drei."
+                      "hint_es":  "Thema: un libro sobre la historia. Ungefähr: sobre las tres = gegen drei.",
+                      "es_freq":  478020
                   },
                   {
                       "id":  "pe-durante",
@@ -135,7 +146,8 @@
                       "en":  "during",
                       "example_es":  "Durante la película no hablo.",
                       "example_de":  "Während des Films rede ich nicht.",
-                      "example_en":  "During the movie I don\u0027t talk."
+                      "example_en":  "During the movie I don\u0027t talk.",
+                      "es_freq":  139987
                   },
                   {
                       "id":  "pe-hacia",
@@ -146,7 +158,8 @@
                       "example_es":  "Caminamos hacia el mar.",
                       "example_de":  "Wir gehen in Richtung Meer.",
                       "example_en":  "We walk towards the sea.",
-                      "hint_es":  "Zeit: hacia las cinco = gegen fünf."
+                      "hint_es":  "Zeit: hacia las cinco = gegen fünf.",
+                      "es_freq":  130000
                   },
                   {
                       "id":  "pe-contra",
@@ -157,7 +170,8 @@
                       "example_es":  "Estoy contra la violencia.",
                       "example_de":  "Ich bin gegen Gewalt.",
                       "example_en":  "I\u0027m against violence.",
-                      "hint_es":  "Auch im Sport: Licey contra Escogido."
+                      "hint_es":  "Auch im Sport: Licey contra Escogido.",
+                      "es_freq":  140485
                   },
                   {
                       "id":  "pe-según",
@@ -168,7 +182,8 @@
                       "example_es":  "Según el médico, estoy bien.",
                       "example_de":  "Laut dem Arzt geht es mir gut.",
                       "example_en":  "According to the doctor, I\u0027m fine.",
-                      "hint_es":  "Danach stehen Subjektpronomen: según tú, según yo."
+                      "hint_es":  "Danach stehen Subjektpronomen: según tú, según yo.",
+                      "es_freq":  36882
                   },
                   {
                       "id":  "pe-bajo",
@@ -179,7 +194,8 @@
                       "example_es":  "Estamos bajo la lluvia.",
                       "example_de":  "Wir stehen im Regen.",
                       "example_en":  "We\u0027re in the rain.",
-                      "hint_es":  "Räumlich im Alltag meist debajo de: debajo de la mesa."
+                      "hint_es":  "Räumlich im Alltag meist debajo de: debajo de la mesa.",
+                      "es_freq":  5562
                   },
                   {
                       "id":  "pe-ante",
@@ -190,7 +206,8 @@
                       "example_es":  "Habló ante el público.",
                       "example_de":  "Er sprach vor dem Publikum.",
                       "example_en":  "He spoke before the audience.",
-                      "hint_es":  "Für Orte im Alltag: delante de."
+                      "hint_es":  "Für Orte im Alltag: delante de.",
+                      "es_freq":  36426
                   },
                   {
                       "id":  "pe-tras",
@@ -201,7 +218,8 @@
                       "example_es":  "Día tras día.",
                       "example_de":  "Tag für Tag.",
                       "example_en":  "Day after day.",
-                      "hint_es":  "Im Alltag meist después de (zeitlich) und detrás de (räumlich)."
+                      "hint_es":  "Im Alltag meist después de (zeitlich) und detrás de (räumlich).",
+                      "es_freq":  49345
                   },
                   {
                       "id":  "pe-mediante",
@@ -212,7 +230,8 @@
                       "example_es":  "Pagamos mediante transferencia.",
                       "example_de":  "Wir bezahlen per Überweisung.",
                       "example_en":  "We pay by transfer.",
-                      "hint_es":  "Eher formell; im Alltag con oder por."
+                      "hint_es":  "Eher formell; im Alltag con oder por.",
+                      "es_freq":  3827
                   },
                   {
                       "id":  "pe-al-lado-de",
@@ -223,7 +242,8 @@
                       "example_es":  "El colmado está al lado de mi casa.",
                       "example_de":  "Der Laden ist neben meinem Haus.",
                       "example_en":  "The shop is next to my house.",
-                      "hint_es":  "de + el = del: al lado del banco."
+                      "hint_es":  "de + el = del: al lado del banco.",
+                      "es_freq":  149162
                   },
                   {
                       "id":  "pe-cerca-de",
@@ -234,7 +254,8 @@
                       "example_es":  "Vivo cerca de la playa.",
                       "example_de":  "Ich wohne in der Nähe des Strandes.",
                       "example_en":  "I live near the beach.",
-                      "hint_es":  "Ohne Objekt: Está cerca. = Es ist in der Nähe."
+                      "hint_es":  "Ohne Objekt: Está cerca. = Es ist in der Nähe.",
+                      "es_freq":  110690
                   },
                   {
                       "id":  "pe-lejos-de",
@@ -245,7 +266,8 @@
                       "example_es":  "La ciudad está lejos de aquí.",
                       "example_de":  "Die Stadt ist weit weg von hier.",
                       "example_en":  "The city is far from here.",
-                      "hint_es":  "Ohne Objekt: Está lejos."
+                      "hint_es":  "Ohne Objekt: Está lejos.",
+                      "es_freq":  79091
                   },
                   {
                       "id":  "pe-delante-de",
@@ -256,7 +278,8 @@
                       "example_es":  "El carro está delante de la casa.",
                       "example_de":  "Das Auto steht vor dem Haus.",
                       "example_en":  "The car is in front of the house.",
-                      "hint_es":  "Zeitlich „vor“: antes de."
+                      "hint_es":  "Zeitlich „vor“: antes de.",
+                      "es_freq":  38898
                   },
                   {
                       "id":  "pe-detrás-de",
@@ -266,7 +289,8 @@
                       "en":  "behind",
                       "example_es":  "El gato está detrás de la puerta.",
                       "example_de":  "Die Katze ist hinter der Tür.",
-                      "example_en":  "The cat is behind the door."
+                      "example_en":  "The cat is behind the door.",
+                      "es_freq":  62621
                   },
                   {
                       "id":  "pe-encima-de",
@@ -276,7 +300,8 @@
                       "en":  "on top of",
                       "example_es":  "Las llaves están encima de la mesa.",
                       "example_de":  "Die Schlüssel liegen auf dem Tisch.",
-                      "example_en":  "The keys are on the table."
+                      "example_en":  "The keys are on the table.",
+                      "es_freq":  56110
                   },
                   {
                       "id":  "pe-debajo-de",
@@ -286,7 +311,8 @@
                       "en":  "under",
                       "example_es":  "El perro duerme debajo de la cama.",
                       "example_de":  "Der Hund schläft unter dem Bett.",
-                      "example_en":  "The dog sleeps under the bed."
+                      "example_en":  "The dog sleeps under the bed.",
+                      "es_freq":  30209
                   },
                   {
                       "id":  "pe-dentro-de",
@@ -297,7 +323,8 @@
                       "example_es":  "El dinero está dentro de la caja.",
                       "example_de":  "Das Geld ist in der Kiste.",
                       "example_en":  "The money is inside the box.",
-                      "hint_es":  "Zeit: dentro de una hora = in einer Stunde."
+                      "hint_es":  "Zeit: dentro de una hora = in einer Stunde.",
+                      "es_freq":  133954
                   },
                   {
                       "id":  "pe-fuera-de",
@@ -307,7 +334,8 @@
                       "en":  "outside of",
                       "example_es":  "Trabajo fuera de la ciudad.",
                       "example_de":  "Ich arbeite außerhalb der Stadt.",
-                      "example_en":  "I work outside the city."
+                      "example_en":  "I work outside the city.",
+                      "es_freq":  311571
                   },
                   {
                       "id":  "pe-enfrente-de",
@@ -317,7 +345,8 @@
                       "en":  "opposite",
                       "example_es":  "La farmacia está enfrente del banco.",
                       "example_de":  "Die Apotheke ist gegenüber der Bank.",
-                      "example_en":  "The pharmacy is opposite the bank."
+                      "example_en":  "The pharmacy is opposite the bank.",
+                      "es_freq":  9199
                   },
                   {
                       "id":  "pe-alrededor-de",
@@ -328,7 +357,8 @@
                       "example_es":  "Hay árboles alrededor de la casa.",
                       "example_de":  "Um das Haus herum stehen Bäume.",
                       "example_en":  "There are trees around the house.",
-                      "hint_es":  "Ungefähr: alrededor de cien personas."
+                      "hint_es":  "Ungefähr: alrededor de cien personas.",
+                      "es_freq":  48767
                   },
                   {
                       "id":  "pe-antes-de",
@@ -339,7 +369,8 @@
                       "example_es":  "Lávate las manos antes de comer.",
                       "example_de":  "Wasch dir vor dem Essen die Hände.",
                       "example_en":  "Wash your hands before eating.",
-                      "hint_es":  "Danach Infinitiv: antes de salir = bevor ich gehe."
+                      "hint_es":  "Danach Infinitiv: antes de salir = bevor ich gehe.",
+                      "es_freq":  405555
                   },
                   {
                       "id":  "pe-después-de",
@@ -350,7 +381,8 @@
                       "example_es":  "Después del trabajo voy a la playa.",
                       "example_de":  "Nach der Arbeit gehe ich an den Strand.",
                       "example_en":  "After work I go to the beach.",
-                      "hint_es":  "Danach Infinitiv: después de comer."
+                      "hint_es":  "Danach Infinitiv: después de comer.",
+                      "es_freq":  311500
                   },
                   {
                       "id":  "pe-a-través-de",
@@ -360,7 +392,8 @@
                       "en":  "through",
                       "example_es":  "Lo supe a través de un amigo.",
                       "example_de":  "Ich habe es über einen Freund erfahren.",
-                      "example_en":  "I found out through a friend."
+                      "example_en":  "I found out through a friend.",
+                      "es_freq":  47295
                   },
                   {
                       "id":  "pe-en-vez-de",
@@ -371,7 +404,8 @@
                       "example_es":  "Tomo té en vez de café.",
                       "example_de":  "Ich trinke Tee statt Kaffee.",
                       "example_en":  "I drink tea instead of coffee.",
-                      "hint_es":  "Auch: en lugar de."
+                      "hint_es":  "Auch: en lugar de.",
+                      "es_freq":  767227
                   },
                   {
                       "id":  "pe-a-pesar-de",
@@ -381,7 +415,8 @@
                       "en":  "despite",
                       "example_es":  "A pesar de la lluvia, salimos.",
                       "example_de":  "Trotz des Regens gehen wir raus.",
-                      "example_en":  "Despite the rain, we go out."
+                      "example_en":  "Despite the rain, we go out.",
+                      "es_freq":  24982
                   },
                   {
                       "id":  "pe-gracias-a",
@@ -392,7 +427,8 @@
                       "example_es":  "Gracias a ti, aprobé el examen.",
                       "example_de":  "Dank dir habe ich die Prüfung bestanden.",
                       "example_en":  "Thanks to you, I passed the exam.",
-                      "hint_es":  "Für etwas Schlechtes: por culpa de (wegen)."
+                      "hint_es":  "Für etwas Schlechtes: por culpa de (wegen).",
+                      "es_freq":  779503
                   },
                   {
                       "id":  "pe-por-culpa-de",
@@ -403,7 +439,8 @@
                       "example_es":  "Llegué tarde por culpa del tráfico.",
                       "example_de":  "Ich kam wegen des Verkehrs zu spät.",
                       "example_en":  "I was late because of the traffic.",
-                      "hint_es":  "Neutral: a causa de, por."
+                      "hint_es":  "Neutral: a causa de, por.",
+                      "es_freq":  91506
                   },
                   {
                       "id":  "pe-junto-a",
@@ -413,7 +450,8 @@
                       "en":  "next to, together with",
                       "example_es":  "Me senté junto a la ventana.",
                       "example_de":  "Ich habe mich ans Fenster gesetzt.",
-                      "example_en":  "I sat by the window."
+                      "example_en":  "I sat by the window.",
+                      "es_freq":  37794
                   },
                   {
                       "id":  "pe-acerca-de",
@@ -424,7 +462,8 @@
                       "example_es":  "Hablamos acerca del viaje.",
                       "example_de":  "Wir sprechen über die Reise.",
                       "example_en":  "We talk about the trip.",
-                      "hint_es":  "Im Alltag häufiger: de oder sobre."
+                      "hint_es":  "Im Alltag häufiger: de oder sobre.",
+                      "es_freq":  74051
                   }
               ]
 }

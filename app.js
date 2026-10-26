@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 50;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 51;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -222,9 +222,14 @@ function today() {
   const d = new Date();
   return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
+// Neue Karten heute – je Lernsprache getrennt (newSeen = Russisch, newSeenEs = Spanisch)
 function newSeenToday() {
-  if (db.daily.date !== today()) db.daily = { date: today(), newSeen: 0 };
-  return db.daily.newSeen;
+  if (db.daily.date !== today()) db.daily = { date: today(), newSeen: 0, newSeenEs: 0 };
+  return learnLang() === 'es' ? (db.daily.newSeenEs || 0) : db.daily.newSeen;
+}
+function countNewSeen() {
+  newSeenToday();
+  if (learnLang() === 'es') db.daily.newSeenEs = (db.daily.newSeenEs || 0) + 1; else db.daily.newSeen++;
 }
 
 const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
@@ -467,7 +472,7 @@ const ES_STEM = {};
 const esClass = (cls, list) => list.split(' ').forEach(v => { ES_STEM[v] = cls; });
 esClass('ie', 'adquirir sembrar pensar empezar comenzar cerrar despertar sentar entender perder recomendar negar nevar calentar confesar defender encender atender extender tender regar temblar gobernar apretar atravesar acertar manifestar merendar fregar tropezar');
 esClass('ie-i', 'sentir preferir mentir convertir divertir sugerir advertir herir referir consentir invertir requerir hervir');
-esClass('ue', 'esforzar desenvolver volver devolver resolver envolver mover llover doler morder contar encontrar recordar costar mostrar demostrar probar aprobar comprobar sonar soñar volar acostar almorzar colgar rogar forzar soltar acordar renovar rodar apostar promover remover conmover torcer');
+esClass('ue', 'soler esforzar desenvolver volver devolver resolver envolver mover llover doler morder contar encontrar recordar costar mostrar demostrar probar aprobar comprobar sonar soñar volar acostar almorzar colgar rogar forzar soltar acordar renovar rodar apostar promover remover conmover torcer');
 esClass('ue-u', 'dormir morir');
 esClass('i', 'derretir pedir repetir servir vestir medir competir despedir impedir elegir corregir gemir rendir');
 esClass('acc', 'criar prohibir reunir enviar confiar enfriar guiar variar ampliar continuar actuar graduar situar evaluar desconfiar resfriar');
@@ -623,6 +628,162 @@ function esConjugate(raw) {
 }
 
 /* ============================================================
+   Weitere spanische Zeitformen (Dropdown „Alle Zeitformen“ und Konjugationstraining):
+   Imperfecto, Pretérito perfecto, Futuro simple, Condicional, Subjuntivo presente,
+   Gerundio, Participio, Imperativo
+   ============================================================ */
+const ES_FUT_STEM = { tener: 'tendr', poner: 'pondr', venir: 'vendr', salir: 'saldr', valer: 'valdr', poder: 'podr', saber: 'sabr', caber: 'cabr', haber: 'habr', querer: 'querr', hacer: 'har', decir: 'dir' };
+const ES_PART = { abrir: 'abierto', cubrir: 'cubierto', decir: 'dicho', escribir: 'escrito', hacer: 'hecho', morir: 'muerto', poner: 'puesto', romper: 'roto', ver: 'visto', prever: 'previsto', volver: 'vuelto', freír: 'frito', imprimir: 'impreso', satisfacer: 'satisfecho' };
+const ES_PART_SUFFIX = ['scribir', 'cubrir', 'poner', 'hacer', 'volver', 'solver', 'decir', 'abrir'];   // gilt auch mit Vorsilbe
+const ES_PART_SUFFIX_FORM = { scribir: 'scrito', cubrir: 'cubierto', poner: 'puesto', hacer: 'hecho', volver: 'vuelto', solver: 'suelto', decir: 'dicho', abrir: 'abierto' };
+const ES_IMPF_IRREG = { ser: 'era, eras, era, éramos, eran', ir: 'iba, ibas, iba, íbamos, iban', ver: 'veía, veías, veía, veíamos, veían' };
+const ES_SUBJ_IRREG = { ser: 'sea, seas, sea, seamos, sean', ir: 'vaya, vayas, vaya, vayamos, vayan', estar: 'esté, estés, esté, estemos, estén', dar: 'dé, des, dé, demos, den', saber: 'sepa, sepas, sepa, sepamos, sepan', haber: 'haya, hayas, haya, hayamos, hayan', reír: 'ría, rías, ría, riamos, rían' };
+const ES_IMP_TU = { decir: 'di', hacer: 'haz', ir: 've', poner: 'pon', salir: 'sal', ser: 'sé', tener: 'ten', venir: 'ven' };
+const ES_HABER = ['he', 'has', 'ha', 'hemos', 'han'];
+
+// Position des betonten Vokals (Akzent oder Regel: Vokal/-n/-s → vorletzte Silbe, sonst letzte)
+function esStressPos(w) {
+  const acc = w.search(/[áéíóú]/i);
+  if (acc >= 0) return acc;
+  const nuc = esNuclei(w);
+  if (!nuc.length) return -1;
+  const n = /[aeiouns]$/i.test(w) ? (nuc[nuc.length - 2] || nuc[nuc.length - 1]) : nuc[nuc.length - 1];
+  const g = w.slice(n.start, n.end);
+  return n.start + (/[aeo]/i.test(g) ? g.search(/[aeo]/i) : g.length - 1);   // im Diphthong der starke Vokal
+}
+
+// Pronomen anhängen (Imperativ): levanta + te → levántate; einsilbig ohne Akzent: ponte, dime
+function esAttach(base, clitic) {
+  if (esNuclei(base).length < 2) return base.replace(/[áéíóú]/, v => ES_DEACCENT[v]) + clitic;   // dé + se → dese
+  if (/[áéíóú]/.test(base) || esNuclei(base).length < 2) return base + clitic;
+  const p = esStressPos(base);
+  return base.slice(0, p) + (ES_ACCENT[base[p]] || base[p]) + base.slice(p + 1) + clitic;
+}
+
+function esParticiple(inf, end, stem) {
+  if (ES_PART[inf]) return ES_PART[inf];
+  const k = ES_PART_SUFFIX.find(s => inf.endsWith(s) && inf.length > s.length);
+  if (k) return inf.slice(0, inf.length - k.length) + ES_PART_SUFFIX_FORM[k];
+  if (end === 'ar') return stem + 'ado';
+  return stem + (/[aeo]$/.test(stem) ? 'ído' : 'ido');   // leído, caído, oído
+}
+
+function esFutStem(inf) {
+  if (ES_FUT_STEM[inf]) return ES_FUT_STEM[inf];
+  const k = ES_PREFIXABLE.find(s => ES_FUT_STEM[s] && inf.endsWith(s) && inf.length > s.length);
+  if (k) return inf.slice(0, inf.length - k.length) + ES_FUT_STEM[k];
+  return inf.replace(/ír$/, 'ir');   // oír → oiré
+}
+
+// "pensar", "levantarse", "tener que", "gustar" → { imperf, perf, futs, cond, subj, ger, part, imp: [tú, no tú, usted, ustedes] }
+function esMoreTenses(raw) {
+  const [spec, forced] = raw.trim().split(':');
+  const words = spec.trim().split(/\s+/);
+  let inf = words[0];
+  const rest = words.slice(1).join(' ');
+  const refl = /(ar|er|ir|ír)se$/.test(inf);
+  if (refl) inf = inf.slice(0, -2);
+  const end = inf.slice(-2).replace('í', 'i'), stem = inf.slice(0, -2);
+  if (!['ar', 'er', 'ir'].includes(end)) return null;
+  const cls = forced || ES_STEM[inf] || '';
+  const key = ES_IRREG[inf] ? inf : ES_PREFIXABLE.find(k => inf.endsWith(k) && inf.length > k.length);
+  const pre = key ? inf.slice(0, inf.length - key.length) : '';
+  const base = esConjugate(inf + (forced ? ':' + forced : ''));
+  if (!base) return null;
+  const pres = base.pres;
+  const split = s => s.split(', ');
+  const imperf = ES_IMPF_IRREG[inf] ? split(ES_IMPF_IRREG[inf])
+    : (end === 'ar' ? ['aba', 'abas', 'aba', 'ábamos', 'aban'] : ['ía', 'ías', 'ía', 'íamos', 'ían']).map(e => stem + e);
+  const fs = esFutStem(inf);
+  const futs = ['é', 'ás', 'á', 'emos', 'án'].map(e => fs + e);
+  const cond = ['ía', 'ías', 'ía', 'íamos', 'ían'].map(e => fs + e);
+  const part = esParticiple(inf, end, stem);
+  const perf = ES_HABER.map(h => `${h} ${part}`);
+  // Subjuntivo: Stamm der yo-Form (tengo → teng-a); nur Stammwechsel-Verben bilden nosotros vom Infinitiv
+  let subj;
+  if (ES_SUBJ_IRREG[inf]) subj = split(ES_SUBJ_IRREG[inf]);
+  else if (key && ES_SUBJ_IRREG[key]) subj = split(ES_SUBJ_IRREG[key]).map(f => pre + f);
+  else {
+    const E = end === 'ar' ? ['e', 'es', 'e', 'emos', 'en'] : ['a', 'as', 'a', 'amos', 'an'];
+    const dat0 = cls === 'dat' || (ES_DAT.has(inf) && !refl);
+    const yoStem = dat0 ? stem : pres[0].replace(/^(me|te|se|nos) /, '').replace(/o$/, '');
+    const changeOnly = ['ie', 'ue', 'i', 'ie-i', 'ue-u', 'acc'].includes(cls) || ['jugar', 'poder', 'querer', 'oler'].includes(inf);
+    let nosStem = changeOnly ? stem : yoStem;
+    if (end === 'ir' && (cls === 'ie-i' || cls === 'i')) nosStem = replaceLast(stem, /e/g, 'i');
+    if (end === 'ir' && cls === 'ue-u') nosStem = replaceLast(stem, /o/g, 'u');
+    const fix = s => (end === 'ar' ? s.replace(/c$/, 'qu').replace(/g$/, 'gu').replace(/z$/, 'c') : s);
+    subj = E.map((e, i) => fix(i === 3 ? nosStem : yoStem) + e);
+  }
+  // Gerundio
+  let ger;
+  if (inf === 'ir') ger = 'yendo';
+  else if (inf === 'poder') ger = 'pudiendo';
+  else if (key === 'reír') ger = pre + 'riendo';
+  else if (end === 'ar') ger = stem + 'ando';
+  else {
+    let s = stem;
+    if (end === 'ir' && (cls === 'ie-i' || cls === 'i' || ['decir', 'venir', 'seguir'].includes(key))) s = replaceLast(stem, /e/g, 'i');
+    if (end === 'ir' && cls === 'ue-u') s = replaceLast(stem, /o/g, 'u');
+    ger = s + (/[aeou]$/.test(s) && !/[gq]u$/.test(s) ? 'yendo' : 'iendo');   // leyendo, oyendo, construyendo
+  }
+  // Imperativo: tú = él-Form (außer di, haz, ve, pon, sal, sé, ten, ven), sonst Subjuntivo
+  const presPlain = esConjugate(inf + (forced ? ':' + forced : '')).pres.map(f => f.replace(/^(me|te|se|nos) /, ''));
+  let tu = ES_IMP_TU[inf] || presPlain[2];
+  if (!ES_IMP_TU[inf] && key && pre && ES_IMP_TU[key]) tu = pre + ES_IMP_TU[key].replace(/([aeo])n$/, (m, v) => ES_ACCENT[v] + 'n');   // obtén, propón
+  const tail = f => (rest ? `${f} ${rest}` : f);
+  const dat = cls === 'dat' || (ES_DAT.has(inf) && !refl);
+  if (dat) {
+    // gustar & Co.: die Person steht davor, das Verb in der 3. Person
+    const d = forms => ES_DATIVE.map(p => tail(`${p} ${forms[2]}`));
+    return { imperf: d(imperf), perf: d(perf), futs: d(futs), cond: d(cond), subj: d(subj), ger: tail(ger), part, imp: null, dat: true };
+  }
+  const pro = i => (refl ? ES_REFL[i] + ' ' : '');
+  const conj = forms => forms.map((f, i) => tail(pro(i) + f));
+  const noImp = inf === 'haber' || /^que( |$)/.test(rest);
+  const imp = noImp ? null : refl
+    ? [esAttach(tu, 'te'), `no te ${subj[1]}`, esAttach(subj[2], 'se'), esAttach(subj[4], 'se')]
+    : [tu, `no ${subj[1]}`, subj[2], subj[4]];
+  return {
+    imperf: conj(imperf), perf: conj(perf), futs: conj(futs), cond: conj(cond), subj: conj(subj),
+    ger: tail(refl ? `${esAttach(ger, 'se')}` : ger), part, imp: imp && imp.map(tail), refl,
+  };
+}
+
+const ES_TENSE_INFO = {
+  imperf: '<b>Imperfecto</b> – Vergangenheit für „früher immer“, Gewohnheiten, Beschreibungen und Hintergrund: De niño jugaba pelota. Endungen -aba (bei -ar) bzw. -ía (bei -er/-ir). Nur ser, ir und ver sind unregelmäßig.',
+  perf: '<b>Pretérito perfecto</b> – haber + Partizip: he comido = ich habe gegessen. In Spanien häufig für „heute“, in der Dominikanischen Republik sagt man meist das Pretérito (comí).',
+  futs: '<b>Futuro simple</b> – Infinitiv + -é, -ás, -á, -emos, -án: hablaré. Im Alltag nimmt man meist ir a + Infinitiv. Oft auch für Vermutungen: Serán las tres = Es wird wohl drei sein.',
+  cond: '<b>Condicional</b> – „würde“: hablaría = ich würde sprechen. Gleicher Stamm wie das Futuro, Endungen wie das Imperfecto von -er (-ía). Höflich: ¿Podría ayudarme?',
+  subj: '<b>Subjuntivo presente</b> – Möglichkeitsform nach Wunsch, Gefühl, Zweifel, Aufforderung: Quiero que vengas. Espero que estés bien. Bildung: yo-Form ohne -o + „falscher“ Vokal (-ar → -e, -er/-ir → -a): tengo → tenga.',
+  ger: '<b>Gerundio</b> – „gerade dabei“ mit estar: Estoy comiendo = Ich esse gerade. -ar → -ando, -er/-ir → -iendo (nach Vokal -yendo: leyendo).',
+  part: '<b>Participio</b> – mit haber für das Perfekt (he hablado) und als Adjektiv (la puerta está cerrada). -ar → -ado, -er/-ir → -ido. Unregelmäßig: hecho, dicho, visto, puesto, escrito, abierto, vuelto, muerto, roto.',
+  imp: '<b>Imperativo</b> – Befehl, Bitte. tú: wie die él-Form (habla, come) – außer di, haz, ve, pon, sal, sé, ten, ven. usted/ustedes und alle verneinten Formen: Subjuntivo (hable, no hables). Pronomen werden angehängt: ¡Dime! ¡Levántate!',
+};
+
+function esMoreHtml(v) {
+  const t = esMoreTenses(v);
+  if (!t) return '';
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const say = s => `<button class="say" data-lang="es" data-say="${esc(s)}">🔊</button>`;
+  const block = (k, title, forms) => `
+    <tr class="vf-h"><th colspan="2">${title}${info}</th></tr><tr class="vp-rule"><td colspan="2">${ES_TENSE_INFO[k]}</td></tr>
+    ${forms.map((f, i) => `<tr><td>${ES_PERSONS[i]}</td><td>${esc(f)}</td></tr>`).join('')}`;
+  const IMP = ['tú', 'tú (verneint)', 'usted', 'ustedes'];
+  return `<details class="vf-all es-more"><summary>Alle Zeitformen anzeigen</summary><table class="vf-table">
+    ${block('imperf', 'Imperfecto', t.imperf)}
+    ${block('perf', 'Pretérito perfecto', t.perf)}
+    ${block('futs', 'Futuro simple', t.futs)}
+    ${block('cond', 'Condicional', t.cond)}
+    ${block('subj', 'Subjuntivo presente', t.subj)}
+    <tr class="vf-h"><th colspan="2">Gerundio und Participio${info}</th></tr><tr class="vp-rule"><td colspan="2">${ES_TENSE_INFO.ger}<br>${ES_TENSE_INFO.part}</td></tr>
+    <tr><td>Gerundio</td><td>${esc(t.ger)} ${say(t.ger)}</td></tr>
+    <tr><td>Participio</td><td>${esc(t.part)}</td></tr>
+    ${t.imp ? `<tr class="vf-h"><th colspan="2">Imperativo${info}</th></tr><tr class="vp-rule"><td colspan="2">${ES_TENSE_INFO.imp}</td></tr>
+    ${t.imp.map((f, i) => `<tr><td>${IMP[i]}</td><td>${esc(f)} ${say(f)}</td></tr>`).join('')}` : ''}
+  </table></details>`;
+}
+
+/* ============================================================
    Wiederholungsalgorithmus (vereinfachtes SM-2 wie in Anki)
    grade: 1 = Nochmal, 2 = Schwer, 3 = Gut, 4 = Leicht
    ============================================================ */
@@ -730,6 +891,11 @@ const allCardsSorted = () => buildCardIndex().all;
 
 function deckCards(deckIds) {
   const { all, byDeck } = buildCardIndex();
+  // Virtuelle Spanisch-Decks (es-verben-01 …) bestehen aus Karten verschiedener echter Decks
+  if (deckIds.some(id => id.startsWith('es-'))) {
+    const vd = esVirtualDecks().byId;
+    return deckIds.flatMap(id => (vd[id] ? vd[id].ids.map(cid => db.cards[cid]).filter(Boolean) : byDeck.get(id) || []));
+  }
   if (deckIds.length === 1) return (byDeck.get(deckIds[0]) || []).slice();
   const set = new Set(deckIds);
   return all.filter(c => set.has(c.deck));
@@ -797,6 +963,7 @@ function go(newTab) {
   $$('.tabbar button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   document.body.classList.remove('studying');   // untere Leiste wieder zeigen
   quiz = null;
+  drill = null;
   stopStudyKeys();
   if (tab === 'learn') renderLearn();
   if (tab === 'cards') renderCards();
@@ -862,11 +1029,49 @@ const DECK_KINDS = [
   { v: 'adverbien', t: 'Adverbien', test: id => id.startsWith('adverbien-') },
   { v: 'praepositionen', t: 'Präpositionen', test: id => id.startsWith('praepositionen-') || id.startsWith('preposiciones-') },
 ];
+// Spanisch-Modus: Decks werden aus allen Karten neu gebildet – je Wortart, sortiert nach spanischer Häufigkeit (es_freq)
+const ES_DECK_KINDS = [
+  { v: 'all', t: 'Alle', test: () => true },
+  { v: 'verben', t: 'Verben', name: 'Verbos', test: id => id.startsWith('es-verben-'), card: c => c.type === 'verbpair' },
+  { v: 'nomen', t: 'Nomen', name: 'Sustantivos', test: id => id.startsWith('es-nomen-'), card: c => c.type === 'nounfull' },
+  { v: 'adjektive', t: 'Adjektive', name: 'Adjetivos', test: id => id.startsWith('es-adjektive-'), card: c => c.type === 'adjfull' },
+  { v: 'adverbien', t: 'Adverbien', name: 'Adverbios', test: id => id.startsWith('es-adverbien-'), card: c => c.type === 'advfull' },
+  { v: 'praepositionen', t: 'Präpositionen', name: 'Preposiciones', test: id => id.startsWith('es-praepositionen-'), card: c => c.type === 'prepfull' },
+  { v: 'grundwoerter', t: 'Grundwörter', name: 'Palabras básicas', test: id => id.startsWith('es-grundwoerter-'), card: c => c.type === 'word' },
+  { v: 'alltag', t: 'Alltag (DR)', name: 'Alltag (DR)', test: id => id.startsWith('es-alltag-'), alltag: true },
+];
+const deckKinds = () => (learnLang() === 'es' ? ES_DECK_KINDS : DECK_KINDS);
 function kindChips() {
   const cur = db.settings.deckKind || 'all';
-  return `<div class="chips kind-chips">${DECK_KINDS.map(k =>
+  return `<div class="chips kind-chips">${deckKinds().map(k =>
     `<button class="chip ${cur === k.v ? 'active' : ''}" data-kind="${k.v}">${k.t}</button>`).join('')}</div>`;
 }
+
+// Bibliotheksdecks, deren Karten im Spanisch-Modus vorkommen (russische Präpositionen und das alte Startdeck nicht)
+const esRelevantDeck = id => !id.startsWith('praepositionen-') && !id.startsWith('grundwortschatz-');
+
+// Virtuelle Spanisch-Decks (je 50 Karten), zwischengespeichert bis sich Karten ändern
+let esVd = null, esVdRev = -1;
+function esVirtualDecks() {
+  if (esVdRev === cardsRev && esVd) return esVd;
+  const cards = allCardsSorted().filter(c => c.f.es && esRelevantDeck(c.deck) && !esDuplicate(c));
+  const byId = {}, list = [];
+  for (const k of ES_DECK_KINDS.slice(1)) {
+    let kc = cards.filter(c => (k.alltag ? c.deck.startsWith('alltag-') : !c.deck.startsWith('alltag-') && k.card(c)));
+    if (!k.alltag) kc = kc.map((c, i) => ({ c, i, f: +c.x.es_freq || 0 })).sort((a, b) => b.f - a.f || a.i - b.i).map(o => o.c);
+    const n = Math.ceil(kc.length / 50);
+    for (let g = 0; g < n; g++) {
+      const num = String(g + 1).padStart(2, '0');
+      const d = { id: `es-${k.v}-${num}`, name: n > 1 ? `${k.name} ${num}` : k.name, ids: kc.slice(g * 50, g * 50 + 50).map(c => c.id) };
+      byId[d.id] = d;
+      list.push(d);
+    }
+  }
+  esVd = { byId, list };
+  esVdRev = cardsRev;
+  return esVd;
+}
+const deckName = id => (id.startsWith('es-') ? esVirtualDecks().byId[id]?.name : db.decks[id]?.name) || id;
 
 // Umschalter der Lernsprache (oben in der Übersicht)
 function learnChips() {
@@ -879,21 +1084,23 @@ function setLearnLang(code) {
   save();
 }
 
-// Decks nur für eine Lernsprache: russische Präpositionen (Fälle) bzw. spanische Präpositionen
+// Decks nur für eine Lernsprache: russische Präpositionen (Fälle) bzw. spanische Präpositionen und spanische Zusatzdecks
 function deckFitsLearn(id) {
   if (id.startsWith('praepositionen-')) return learnLang() === 'ru';
-  if (id.startsWith('preposiciones-')) return learnLang() === 'es';
+  if (id.startsWith('preposiciones-') || id.startsWith('espanol-') || id.startsWith('alltag-')) return learnLang() === 'es';
   return true;
 }
 
 function renderLearn() {
+  const es = learnLang() === 'es';
   setHeader(LEARN_LANGS[learnLang()].title);
-  const kind = DECK_KINDS.find(k => k.v === (db.settings.deckKind || 'all')) || DECK_KINDS[0];
-  const allDecks = Object.values(db.decks).filter(d => deckFitsLearn(d.id));
+  const kinds = deckKinds();
+  const kind = kinds.find(k => k.v === (db.settings.deckKind || 'all')) || kinds[0];
+  const allDecks = es ? esVirtualDecks().list : Object.values(db.decks).filter(d => deckFitsLearn(d.id));
   const decks = allDecks.filter(d => kind.test(d.id));
   const allTitle = kind.v === 'all' ? 'Alle Decks' : 'Alle ' + kind.t;
   const view = $('#view');
-  if (!allDecks.length) {
+  if (!Object.keys(db.decks).length) {
     view.innerHTML = `
       <div class="empty">
         <div style="font-size:48px">${LEARN_LANGS[learnLang()].flag}</div>
@@ -906,7 +1113,11 @@ function renderLearn() {
     return;
   }
   const allIds = decks.map(d => d.id);
+  const isVerbDeck = id => /^(es-)?verben-/.test(id);
   const statRow = (s) => `<div class="counts"><span class="c-new">${Math.min(s.fresh, Math.max(0, db.settings.newPerDay - newSeenToday()))}</span><span class="c-learn">${s.learn}</span><span class="c-due">${s.due}</span></div>`;
+  const drillBtn = id => `<button class="quiz-btn" data-drill="${esc(id)}" aria-label="Konjugation üben">🔁</button>`;
+  // Spanisch: Zusatzdecks (Grundwörter, Alltag …) noch nicht geladen?
+  const esMissing = es && !Object.keys(db.decks).some(id => id.startsWith('espanol-'));
   view.innerHTML = `
     <div class="section">
       <h2>Ich lerne</h2>
@@ -919,10 +1130,12 @@ function renderLearn() {
     <div class="section">
       <h2>Decks</h2>
       ${kindChips()}
+      ${esMissing ? `<div class="panel"><div class="row"><div class="grow">Spanische Zusatzdecks (Grundwörter, Alltag in der DR …)<div class="sub">noch nicht geladen</div></div><button class="btn small" id="load-es">Laden</button></div></div>` : ''}
       <div class="panel">
         ${decks.length > 1 ? `
           <div class="row clickable" data-study="*">
             <div class="grow"><b>${allTitle}</b></div>${statRow(deckStats(allIds))}
+            ${kind.v === 'verben' ? drillBtn('*') : ''}
             <button class="quiz-btn" data-quiz="*" aria-label="Schreiben üben">✍️</button>
           </div>` : ''}
         ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen</div>${kind.v !== 'all' ? `<button class="btn small" id="load-kind">Laden</button>` : ''}</div>` : ''}
@@ -930,36 +1143,48 @@ function renderLearn() {
           <div class="row clickable" data-study="${esc(d.id)}">
             <div class="grow ellipsis">${esc(d.name)}<div class="sub">${n} ${n === 1 ? "Karte" : "Karten"}</div></div>
             ${statRow(deckStats([d.id]))}
+            ${isVerbDeck(d.id) ? drillBtn(d.id) : ''}
             <button class="quiz-btn" data-quiz="${esc(d.id)}" aria-label="Schreiben üben">✍️</button>
           </div>`).join('')}
       </div>
     </div>
     <p class="sub" style="color:var(--muted);font-size:13px">
       <span class="c-new">Blau</span> = neu (heute noch), <span class="c-learn">Rot</span> = in Lernphase, <span class="c-due">Grün</span> = fällig<br>
-      ✍️ = Schreiben üben: ${QUIZ_SIZE} zufällige Wörter, Bedeutung eintippen (Richtung wie oben gewählt)
+      ✍️ = Schreiben üben: ${QUIZ_SIZE} zufällige Wörter, Bedeutung eintippen (Richtung wie oben gewählt)<br>
+      🔁 = Konjugation üben (bei Verben): Verbform eintippen${es ? '<br>Im Spanisch-Modus sind die Decks nach spanischer Häufigkeit sortiert.' : ''}
     </p>`;
   $$('[data-quiz]', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
     const id = b.dataset.quiz;
-    startQuiz(id === '*' ? allIds : [id], '✍️ ' + (id === '*' ? allTitle : db.decks[id].name));
+    startQuiz(id === '*' ? allIds : [id], '✍️ ' + (id === '*' ? allTitle : deckName(id)));
+  });
+  $$('[data-drill]', view).forEach(b => b.onclick = (e) => {
+    e.stopPropagation();
+    const id = b.dataset.drill;
+    startDrill(id === '*' ? allIds : [id], '🔁 ' + (id === '*' ? allTitle : deckName(id)));
   });
   $$('[data-dir]', view).forEach(b => b.onclick = () => { db.settings.qLang = b.dataset.dir; save(); renderLearn(); });
   $$('[data-kind]', view).forEach(b => b.onclick = () => { db.settings.deckKind = b.dataset.kind; save(); renderLearn(); });
   $$('[data-learn]', view).forEach(b => b.onclick = () => { setLearnLang(b.dataset.learn); renderLearn(); });
   // Noch nichts von dieser Art geladen: alle passenden Decks aus der Bibliothek holen
-  const loadBtn = $('#load-kind');
-  if (loadBtn) loadBtn.onclick = async () => {
-    loadBtn.disabled = true;
+  const loadFrom = async (btn, filter, msg) => {
+    btn.disabled = true;
     try {
       const list = await (await fetch('decks/index.json', { cache: 'no-cache' })).json();
-      for (const entry of list.filter(d => kind.test(d.id) && deckFitsLearn(d.id))) await importLibraryDeck(entry);
-      toast(kind.t + ' geladen');
+      for (const entry of list.filter(filter)) await importLibraryDeck(entry);
+      toast(msg);
     } catch (err) { toast('Laden nicht möglich (offline?)'); }
     renderLearn();
   };
+  const loadBtn = $('#load-kind');
+  if (loadBtn) loadBtn.onclick = () => (es
+    ? loadFrom(loadBtn, d => esRelevantDeck(d.id) && !db.decks[d.id], 'Spanische Decks geladen')
+    : loadFrom(loadBtn, d => kind.test(d.id) && deckFitsLearn(d.id), kind.t + ' geladen'));
+  const loadEs = $('#load-es');
+  if (loadEs) loadEs.onclick = () => loadFrom(loadEs, d => esRelevantDeck(d.id) && !db.decks[d.id], 'Spanische Decks geladen');
   $$('[data-study]', view).forEach(r => r.onclick = () => {
     const id = r.dataset.study;
-    startStudy(id === '*' ? allIds : [id], id === '*' ? allTitle : db.decks[id].name);
+    startStudy(id === '*' ? allIds : [id], id === '*' ? allTitle : deckName(id));
   });
 }
 
@@ -1638,10 +1863,14 @@ function esConjHtml(card) {
       </tbody>
     </table>
     <div class="es-why">Warum so? <button class="info" aria-label="Regeln anzeigen">ⓘ</button></div>
-    <div class="vp-rule es-rule">${esExplain(v)}</div>`;
+    <div class="vp-rule es-rule">${esExplain(v)}</div>
+    ${esMoreHtml(v)}`;
   }).filter(Boolean);
   return tables.length ? `<div class="conj-wrap">${tables.join('')}</div>` : '';
 }
+
+// Interne Felder, die nicht als Zusatzinfo erscheinen (Spanisch-Modus, Rangfolge)
+const INTERNAL_X = new Set(['es_freq', 'es_mente', 'es_verb', 'hint_es', 'note_es', 'adv_es']);
 
 function extrasHtml(card) {
   const type = CARD_TYPES[card.type] || CARD_TYPES.word;
@@ -1659,7 +1888,7 @@ function extrasHtml(card) {
   });
   // Unbekannte Zusatzfelder aus Importen trotzdem anzeigen
   for (const [k, v] of Object.entries(card.x)) {
-    if (!known.has(k) && !k.startsWith('example_') && v) items.push(`<div><b>${esc(k)}</b>${esc(v)}</div>`);
+    if (!known.has(k) && !k.startsWith('example_') && !INTERNAL_X.has(k) && v) items.push(`<div><b>${esc(k)}</b>${esc(v)}</div>`);
   }
   return items.length ? `<div class="extras">${items.join('')}</div>` : '';
 }
@@ -1779,15 +2008,40 @@ const ES_ADJ_INFO = `<div>Adjektive passen sich in <b>Geschlecht und Zahl</b> an
   <div>Auf -o: vier Formen (-o, -a, -os, -as). Auf -e oder Konsonant: nur Singular/Plural (verde → verdes, fácil → fáciles). Herkunft auf Konsonant hat eine weibliche Form: español → española.</div>
   <div><b>Vergleich:</b> más … que (mehr … als), menos … que, tan … como (so … wie). Superlativ: el/la más … Unregelmäßig: bueno → mejor, malo → peor, grande → mayor, pequeño → menor. Sehr: -ísimo (rapidísimo).</div>`;
 
+// Betonte Silbe unterstreichen (Lesehilfe, kein Akzent!) – nur bei Wörtern mit mehr als einer Silbe
+function esStressHtml(text) {
+  return text.split(/([A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)/).map((t, i) => {
+    if (i % 2 === 0 || esNuclei(t).length < 2) return esc(t);
+    const p = esStressPos(t);
+    return p < 0 ? esc(t) : esc(t.slice(0, p)) + `<u class="es-st">${esc(t[p])}</u>` + esc(t.slice(p + 1));
+  }).join('');
+}
+const ES_STRESS_INFO = `<div>Der <b>unterstrichene Vokal</b> zeigt, welche Silbe betont wird. Das ist nur eine <b>Lesehilfe</b> der App – dort steht <b>kein Akzent</b>. Einen Akzent (á, é, í, ó, ú) schreibt man nur, wenn er auch im Wort zu sehen ist.</div>
+  <div><b>Regel:</b> Endet ein Wort auf Vokal, -n oder -s, ist die vorletzte Silbe betont (c<u>a</u>sa, h<u>a</u>blan). Sonst die letzte (habl<u>a</u>r, ciud<u>a</u>d). Wörter, die davon abweichen, bekommen einen Akzent: café, árbol, teléfono.</div>`;
+
+// Adverb auf -mente: weibliche Form + -mente (rápida → rápidamente). Nur bei Adjektiven, die auch im Russischen ein Adverb haben.
+const ES_ADV_IRREG = { bueno: 'bien', malo: 'mal' };
+function esAdverb(card, a) {
+  if (card.x.adv_es) return card.x.adv_es;
+  if (!a || (!card.x.adv && !card.x.es_mente)) return '';
+  return ES_ADV_IRREG[a.m] || a.f + 'mente';
+}
+function esAdvInfo(a, adv) {
+  const irr = ES_ADV_IRREG[a.m];
+  return (irr ? `<div><b>${a.m} → ${adv}</b> ist unregelmäßig: Lo hiciste ${adv} = Du hast es ${adv === 'bien' ? 'gut' : 'schlecht'} gemacht.</div>` : `<div>Adverb = <b>weibliche Form + -mente</b>: ${esc(a.f)} → ${esc(adv)}. Ein Akzent bleibt (rápida → rápidamente, fácil → fácilmente).</div>`)
+    + `<div>Das Adverb sagt, <b>wie</b> etwas passiert, und ändert sich nie. Bei zwei Adverben bekommt nur das letzte -mente: clara y rápidamente.</div>
+    <div>Im Alltag (auch in der DR) nimmt man oft einfach das Adjektiv: Habla rápido. Maneja lento.</div>`;
+}
+
 function cardEsSide(card) {
   const x = card.x, es = card.f.es || '';
   const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
   const say = t => t ? `<button class="say" data-lang="es" data-say="${esc(t)}">🔊</button>` : '';
-  const KIND = { verbpair: ['Verbo', 'es-v'], nounfull: ['Sustantivo', 'es-n'], adjfull: ['Adjetivo', 'es-a'], advfull: ['Adverbio', 'es-d'], prepfull: ['Preposición', 'es-p'] }[card.type] || ['Palabra', 'es-w'];
-  let word = esc(es), body = '';
+  const KIND = { verbpair: ['Verbo', 'es-v'], nounfull: ['Sustantivo', 'es-n'], adjfull: ['Adjetivo', 'es-a'], advfull: ['Adverbio', 'es-d'], prepfull: ['Preposición', 'es-p'], phrase: ['Expresión', 'es-w'] }[card.type] || ['Palabra', 'es-w'];
+  let word = esStressHtml(es), body = '';
   if (card.type === 'nounfull') {
     const parts = esNounParts(es);
-    word = parts.map(p => `<span class="${p.g ? 'es-g-' + p.g : ''}">${esc(p.text)}</span>`).join(', ');
+    word = parts.map(p => `<span class="${p.g ? 'es-g-' + p.g : ''}">${esStressHtml(p.text)}</span>`).join(', ');
     const rows = parts.filter(p => p.pl || p.plOnly);
     if (rows.length) body = `<div class="es-forms">${rows.map(p => p.plOnly
       ? `<div><i>nur Plural</i> <span class="es-g-pl">${esc(p.text)}</span></div>`
@@ -1799,6 +2053,8 @@ function cardEsSide(card) {
       <tr><th>Sing.</th><td class="es-g-m">${esc(a.m)}</td><td class="es-g-f">${esc(a.f)}</td></tr>
       <tr><th>Plural</th><td class="es-g-m">${esc(a.mpl)}</td><td class="es-g-f">${esc(a.fpl)}</td></tr></table>
       <div class="nn-hint">Anpassung und Vergleich${info}</div><div class="vp-rule">${ES_ADJ_INFO}</div>`;
+    const adv = esAdverb(card, a);
+    if (adv) body += `<div class="es-forms"><div><i>Adverb</i> <b>${esc(adv)}</b> ${say(adv)}${info}</div><div class="vp-rule">${esAdvInfo(a, adv)}</div></div>`;
   } else if (card.type === 'verbpair') {
     body = esConjHtml(card);
   }
@@ -1807,6 +2063,7 @@ function cardEsSide(card) {
     <div class="nn es-card">
       <div class="nn-tags"><span class="nn-g ${KIND[1]}">${KIND[0]}</span></div>
       <div class="nn-word">${word} ${say(mainSay)}</div>
+      <div class="es-stress-hint">unterstrichen = betonte Silbe${info}</div><div class="vp-rule">${ES_STRESS_INFO}</div>
       ${body}
       ${x.hint_es ? `<div class="nn-hint">💡 Tipp${info}</div><div class="vp-rule">${esc(x.hint_es)}</div>` : ''}
       ${x.example_es ? `<div class="vp-ex">${esc(x.example_es)} ${say(x.example_es)}</div>` : ''}
@@ -1912,7 +2169,7 @@ function grade(g) {
   const cur = study.current;
   if (!cur || !study.seenBack) return;
   const before = db.progress[cur.key];
-  if (!before) { newSeenToday(); db.daily.newSeen++; }
+  if (!before) countNewSeen();
   const p = schedule(before || newProgress(), g);
   db.progress[cur.key] = p;
   save();
@@ -1941,7 +2198,7 @@ function studyKeys(e) {
   if (['1', '2', '3', '4'].includes(e.key)) grade(+e.key);
 }
 function startStudyKeys() { document.addEventListener('keydown', studyKeys); }
-function stopStudyKeys() { document.removeEventListener('keydown', studyKeys); document.removeEventListener('keydown', quizKeys); }
+function stopStudyKeys() { document.removeEventListener('keydown', studyKeys); document.removeEventListener('keydown', quizKeys); document.removeEventListener('keydown', drillKeys); }
 
 /* ============================================================
    Schreibmodus: 20 zufällige Wörter aus den gewählten Decks, Bedeutung eintippen.
@@ -2103,6 +2360,221 @@ function renderQuiz() {
 }
 
 /* ============================================================
+   Konjugation üben: Verb + Person + Zeitform → Verbform eintippen (Russisch und Spanisch).
+   Zeitformen wählt man vor dem Start. Falsche Aufgaben kommen nach ein paar anderen noch einmal.
+   ============================================================ */
+let drill = null;
+const DRILL_SIZE = 20;
+const DRILL_TENSES = {
+  es: [['pres', 'Presente'], ['past', 'Pretérito'], ['imperf', 'Imperfecto'], ['perf', 'Perfecto'], ['futs', 'Futuro'], ['cond', 'Condicional'], ['subj', 'Subjuntivo'], ['imp', 'Imperativo']],
+  ru: [['pres', 'Präsens (unvollendet)'], ['futpf', 'Zukunft (vollendet)'], ['past', 'Vergangenheit'], ['imp', 'Imperativ']],
+};
+const DRILL_DEFAULT = { es: ['pres', 'past', 'imperf'], ru: ['pres', 'futpf', 'past'] };
+const drillTenses = () => {
+  const L = learnLang();
+  const sel = (db.settings.drillTenses || {})[L];
+  return sel && sel.length ? sel : DRILL_DEFAULT[L];
+};
+
+// Alle möglichen Aufgaben zu einer Karte: { prompt (Verb), person, tense (Name), answer }
+function drillTasks(card, tenses) {
+  const tasks = [];
+  if (learnLang() === 'es') {
+    const v = card.x.es_verb || esMainVerb(card.f.es);
+    const c = v && esConjugate(v), m = v && esMoreTenses(v);
+    if (!c || !m) return tasks;
+    const pers = m.dat ? ES_DATIVE.map(p => p + ' …') : ES_PERSONS;
+    const forms = { pres: c.pres, past: c.past, imperf: m.imperf, perf: m.perf, futs: m.futs, cond: m.cond, subj: m.subj };
+    const name = Object.fromEntries(DRILL_TENSES.es);
+    for (const t of tenses) {
+      if (t === 'imp') {
+        if (m.imp) ['tú', 'tú (verneint)', 'usted', 'ustedes'].forEach((p, i) => tasks.push({ verb: v.split(':')[0], person: p, tense: name.imp, answer: m.imp[i] }));
+      } else if (forms[t]) forms[t].forEach((f, i) => tasks.push({ verb: v.split(':')[0], person: pers[i], tense: name[t], answer: f }));
+    }
+  } else {
+    const x = card.x;
+    const PERS = ['я', 'ты', 'он / она', 'мы', 'вы', 'они'];
+    const name = Object.fromEntries(DRILL_TENSES.ru);
+    const impOf = p => (x[p + '_imp'] !== undefined ? x[p + '_imp'] : ruImperative(x[p], x[p + '_1'], x[p + '_2']));
+    for (const t of tenses) {
+      if (t === 'pres' && x.ipf && x.ipf.replace(STRESS, '') !== 'быть') {
+        const f = ruAllPresent(x.ipf, x.ipf_1, x.ipf_2);
+        if (f) f.forEach((a, i) => tasks.push({ verb: x.ipf, person: PERS[i], tense: name.pres, answer: a }));
+      }
+      if (t === 'futpf' && x.pf && x.pf !== x.ipf) {
+        const f = ruAllPresent(x.pf, x.pf_1, x.pf_2);
+        if (f) f.forEach((a, i) => tasks.push({ verb: x.pf, person: PERS[i], tense: name.futpf, answer: a }));
+      }
+      if (t === 'past') for (const p of ['ipf', 'pf']) {
+        if (!x[p] || (p === 'pf' && x.pf === x.ipf)) continue;
+        const f = ruPastForms(x[p]);
+        if (f) [['он', 0], ['она', 1], ['они', 3]].forEach(([pr, i]) => tasks.push({ verb: x[p], person: pr, tense: name.past, answer: f[i] }));
+      }
+      if (t === 'imp') for (const p of ['ipf', 'pf']) {
+        if (!x[p] || (p === 'pf' && x.pf === x.ipf)) continue;
+        const imp = impOf(p);
+        if (imp && imp !== '—') {
+          tasks.push({ verb: x[p], person: 'ты', tense: name.imp, answer: imp });
+          tasks.push({ verb: x[p], person: 'вы', tense: name.imp, answer: ruImperativePlural(imp) });
+        }
+      }
+    }
+  }
+  return tasks;
+}
+
+function startDrill(deckIds, title) {
+  drill = { deckIds, title, setup: true };
+  document.body.classList.add('studying');
+  setHeader(title, () => { drill = null; go('learn'); });
+  stopStudyKeys();
+  renderDrill();
+}
+
+function beginDrill() {
+  const tenses = drillTenses();
+  const cards = learnCards(drill.deckIds).filter(c => c.type === 'verbpair');
+  for (let i = cards.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [cards[i], cards[j]] = [cards[j], cards[i]]; }
+  const queue = [];
+  for (const c of cards) {
+    if (queue.length >= DRILL_SIZE) break;
+    const tasks = drillTasks(c, tenses);
+    if (tasks.length) queue.push({ ...tasks[Math.floor(Math.random() * tasks.length)], id: c.id, tries: 0 });
+  }
+  if (!queue.length) { toast('Keine passenden Verben gefunden'); return; }
+  Object.assign(drill, { setup: false, queue, total: queue.length, firstTry: 0, cur: null, answer: null });
+  document.addEventListener('keydown', drillKeys);
+  nextDrill();
+}
+
+function nextDrill() {
+  drill.cur = drill.queue.shift() || null;
+  drill.answer = null;
+  renderDrill();
+}
+
+// Vergleich: Russisch ohne Betonungszeichen (ё = е), Spanisch genau – nur ein fehlender Akzent wird gesondert gemeldet
+const drillNorm = s => (s || '').toLowerCase().replace(STRESS, '').replace(/ё/g, 'е').replace(/[¡!¿?.,]/g, ' ').replace(/\s+/g, ' ').trim();
+function drillCheck(text) {
+  const cur = drill.cur;
+  const a = drillNorm(text), e = drillNorm(cur.answer);
+  const deacc = s => s.replace(/[áéíóú]/g, v => ES_DEACCENT[v]);
+  const ok = !!a && a === e;
+  const accent = !ok && !!a && deacc(a) === deacc(e);
+  cur.tries++;
+  if (ok && cur.tries === 1) drill.firstTry++;
+  if (!ok) drill.queue.splice(Math.min(QUIZ_GAP, drill.queue.length), 0, cur);
+  drill.answer = { text, ok, accent };
+  renderDrill();
+}
+
+function drillOverride() {
+  const cur = drill.cur;
+  const i = drill.queue.indexOf(cur);
+  if (i >= 0) drill.queue.splice(i, 1);
+  if (cur.tries === 1) drill.firstTry++;
+  drill.answer.ok = true;
+  drill.answer.override = true;
+  renderDrill();
+}
+
+function drillKeys(e) {
+  if (!drill || drill.setup || e.key !== 'Enter') return;
+  if (drill.answer) { e.preventDefault(); nextDrill(); }
+}
+
+function renderDrill() {
+  const view = $('#view');
+  const L = learnLang();
+  if (drill.setup) {
+    const sel = new Set(drillTenses());
+    $('#header-extra').innerHTML = '';
+    view.innerHTML = `
+      <div class="quiz">
+        <p>Welche Zeitformen möchtest du üben? Es kommen ${DRILL_SIZE} zufällige Verben aus den gewählten Decks.</p>
+        <div class="chips drill-chips">${DRILL_TENSES[L].map(([k, t]) => `<button class="chip ${sel.has(k) ? 'active' : ''}" data-tense="${k}">${esc(t)}</button>`).join('')}</div>
+        <div class="btn-row"><button class="btn" id="drill-go">Los geht's</button></div>
+        <p class="sub" style="color:var(--muted);font-size:13px">${L === 'es' ? 'Akzente zählen: habló ist nicht hablo. Reflexive Verben mit Pronomen eintippen (me levanto).' : 'Betonungszeichen musst du nicht eintippen.'}</p>
+      </div>`;
+    $$('[data-tense]', view).forEach(b => b.onclick = () => {
+      const all = db.settings.drillTenses || (db.settings.drillTenses = {});
+      const cur = new Set(drillTenses());
+      cur.has(b.dataset.tense) ? cur.delete(b.dataset.tense) : cur.add(b.dataset.tense);
+      all[L] = DRILL_TENSES[L].map(([k]) => k).filter(k => cur.has(k));
+      save();
+      renderDrill();
+    });
+    $('#drill-go').onclick = beginDrill;
+    return;
+  }
+  const cur = drill.cur;
+  const left = drill.queue.length + (cur ? 1 : 0);
+  $('#header-extra').innerHTML = cur ? `<span class="hbadge" title="noch übrig">${left}</span>` : '';
+  if (!cur) {
+    view.innerHTML = `
+      <div class="done">
+        <div class="big">🎉</div>
+        <h2>Geschafft!</h2>
+        <p>${drill.firstTry} von ${drill.total} Formen beim ersten Versuch richtig.</p>
+        <button class="btn" id="drill-again">Neue Runde</button><br>
+        <button class="btn secondary" id="drill-end">Zur Übersicht</button>
+      </div>`;
+    $('#drill-again').onclick = () => startDrill(drill.deckIds, drill.title);
+    $('#drill-end').onclick = () => { drill = null; go('learn'); };
+    document.removeEventListener('keydown', drillKeys);
+    return;
+  }
+  const card = db.cards[cur.id];
+  const say = t => `<button class="say" data-lang="${L}" data-say="${esc(t)}">🔊</button>`;
+  if (!drill.answer) {
+    view.innerHTML = `
+      <div class="quiz">
+        <div class="quiz-prompt">
+          <div class="lang-tag">${esc(cur.tense)}</div>
+          <div class="q-word">${esc(cur.verb)}</div>${say(cur.verb)}
+          <div class="drill-person">${esc(cur.person)}</div>
+          <div class="sub">${esc(card.f.de || '')}</div>
+        </div>
+        <label class="quiz-ask" for="drill-in">Wie lautet die Form?</label>
+        <input id="drill-in" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${L}" enterkeyhint="done">
+        <div class="btn-row">
+          <button class="btn" id="drill-check">Prüfen</button>
+          <button class="btn secondary" id="drill-skip">Weiß ich nicht</button>
+        </div>
+      </div>`;
+    const input = $('#drill-in');
+    setTimeout(() => input.focus(), 50);
+    input.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); drillCheck(input.value); } };
+    $('#drill-check').onclick = () => drillCheck(input.value);
+    $('#drill-skip').onclick = () => drillCheck('');
+  } else {
+    const r = drill.answer;
+    view.innerHTML = `
+      <div class="quiz">
+        <div class="quiz-result ${r.ok ? 'ok' : 'bad'}">
+          <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : '✓ Richtig!') : r.accent ? '✗ Fast – der Akzent fehlt oder ist falsch. Kommt gleich noch einmal.' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
+          <div>${esc(cur.verb)} · ${esc(cur.person)} · ${esc(cur.tense)}</div>
+          <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
+          <div>Richtig: <b>${esc(cur.answer)}</b> ${say(cur.answer)}</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn" id="drill-next">Weiter</button>
+          ${!r.ok ? '<button class="btn secondary" id="drill-ok">Ich lag doch richtig</button>' : ''}
+        </div>
+        <div class="quiz-card">${cardLearnSide(card)}</div>
+      </div>`;
+    $('#drill-next').onclick = nextDrill;
+    $('#drill-ok')?.addEventListener('click', drillOverride);
+  }
+  $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say, b.dataset.lang); });
+  $$('.info', view).forEach(b => b.onclick = (e) => {
+    e.stopPropagation();
+    const rule = (b.closest('tr') || b.parentElement).nextElementSibling;
+    if (rule && rule.classList.contains('vp-rule')) b.classList.toggle('open', rule.classList.toggle('open'));
+  });
+}
+
+/* ============================================================
    Ansicht: Kartenliste
    ============================================================ */
 let cardFilter = { q: '', deck: '' };
@@ -2129,14 +2601,14 @@ function renderCards() {
     if (q) cards = cards.filter(c => Object.values(c.f).some(v => v.toLowerCase().replace(STRESS, '').includes(q)));
     const total = cards.length;
     cards = cards.slice(0, 300);
-    const [l1, l2] = activeLangs().map(l => l.code);
+    const l1 = learnLang(), l2 = 'de';   // Wort in der Lernsprache vorne
     $('#list').innerHTML = total ? `
       <p style="color:var(--muted);font-size:13px;margin-bottom:8px">${total} Karten${total > 300 ? ' (erste 300 angezeigt)' : ''}</p>
       <div class="panel">
         ${cards.map(c => `
           <div class="row clickable" data-edit="${esc(c.id)}">
             <div class="grow">
-              <div class="ellipsis"><b>${esc(c.f[l1] || '—')}</b></div>
+              <div class="ellipsis"><b>${esc(c.f[l1] || c.f.ru || c.f.es || '—')}</b></div>
               <div class="sub ellipsis">${esc(c.f[l2] || '')}</div>
             </div>
             <span class="badge">${esc((CARD_TYPES[c.type] || CARD_TYPES.word).name)}</span>
@@ -2156,7 +2628,7 @@ function showCard(id) {
   if (!card) { go('cards'); return; }
   setHeader(db.decks[card.deck]?.name || 'Karte', () => go('cards'));
   const view = $('#view');
-  const learnSide = card.f[learnLang()] ? cardLearnSide(card) : cardRuSide(card);
+  const learnSide = card.f[learnLang()] ? cardLearnSide(card) : card.f.ru ? cardRuSide(card) : cardEsSide(card);
   view.innerHTML = `
     <div class="card-view">
       <div class="btn-row" style="justify-content:flex-end">
@@ -2584,7 +3056,7 @@ async function autoUpdateLibrary() {
     // Deshalb eine Familie immer komplett aktualisieren (auch neu hinzugekommene Decks laden)
     // und alte Decks ohne Gegenstück (z. B. das frühere Probedeck „verben-1“) auflösen.
     const prune = [];
-    for (const prefix of ['verben-', 'nomen-', 'adjektive-', 'adverbien-', 'praepositionen-', 'preposiciones-']) {
+    for (const prefix of ['verben-', 'nomen-', 'adjektive-', 'adverbien-', 'praepositionen-', 'preposiciones-', 'espanol-', 'alltag-']) {
       const inFamily = id => id.startsWith(prefix);
       const stale = Object.keys(db.decks).filter(id => inFamily(id) && !list.some(d => d.id === id));
       const missing = list.filter(d => inFamily(d.id) && !db.decks[d.id]);

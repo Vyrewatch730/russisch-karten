@@ -402,3 +402,7 @@ tr.vp-rule.open { display: table-row; }
 .es-adj th { font-size: 12px; font-weight: 500; color: var(--muted); text-align: left; padding: 2px 10px 2px 0; }
 .es-adj td { padding: 2px 14px 2px 0; }
 .learn-chips .chip { font-size: 15px; }
+.es-st { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.es-stress-hint { font-size: 12px; color: var(--muted); }
+.drill-person { font-size: 22px; font-weight: 700; color: var(--accent); margin-top: 6px; }
+.drill-chips .chip { font-size: 14px; }

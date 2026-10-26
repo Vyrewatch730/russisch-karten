@@ -43,7 +43,8 @@
                       "example_cases":  "Москва́ – Nominativ · большо́й го́род – Nominativ",
                       "example_de":  "Moskau ist eine große Stadt.",
                       "example_en":  "Moscow is a big city.",
-                      "example_es":  "Moscú es una ciudad grande."
+                      "example_es":  "Moscú es una ciudad grande.",
+                      "es_freq":  172243
                   },
                   {
                       "id":  "aj-последний",
@@ -58,7 +59,8 @@
                       "example_cases":  "после́дний авто́бус – Nominativ",
                       "example_de":  "Das ist der letzte Bus.",
                       "example_en":  "This is the last bus.",
-                      "example_es":  "Es la última guagua."
+                      "example_es":  "Es la última guagua.",
+                      "es_freq":  222207
                   },
                   {
                       "id":  "aj-российский",
@@ -72,7 +74,8 @@
                       "example_cases":  "у него́ – Genitiv · росси́йский па́спорт – Nominativ",
                       "example_de":  "Er hat einen russischen Pass.",
                       "example_en":  "He has a Russian passport.",
-                      "example_es":  "Él tiene pasaporte ruso."
+                      "example_es":  "Él tiene pasaporte ruso.",
+                      "es_freq":  24814
                   },
                   {
                       "id":  "aj-русский",
@@ -90,7 +93,8 @@
                       "adv":  "по-ру́сски",
                       "adv_de":  "auf Russisch",
                       "adv_ex":  "Ты говори́шь по-ру́сски?",
-                      "adv_ex_de":  "Sprichst du Russisch?"
+                      "adv_ex_de":  "Sprichst du Russisch?",
+                      "es_freq":  1241
                   },
                   {
                       "id":  "aj-общий",
@@ -104,7 +108,8 @@
                       "example_cases":  "у нас – Genitiv · о́бщие друзья́ – Nominativ Plural",
                       "example_de":  "Wir haben gemeinsame Freunde.",
                       "example_en":  "We have mutual friends.",
-                      "example_es":  "Tenemos amigos en común."
+                      "example_es":  "Tenemos amigos en común.",
+                      "es_freq":  30918
                   },
                   {
                       "id":  "aj-высокий",
@@ -126,7 +131,8 @@
                       "adv":  "высоко́",
                       "adv_de":  "hoch (oben)",
                       "adv_ex":  "Пти́ца лети́т высоко́.",
-                      "adv_ex_de":  "Der Vogel fliegt hoch."
+                      "adv_ex_de":  "Der Vogel fliegt hoch.",
+                      "es_freq":  120473
                   },
                   {
                       "id":  "aj-хороший",
@@ -148,7 +154,8 @@
                       "adv":  "хорошо́",
                       "adv_de":  "gut",
                       "adv_ex":  "Я хорошо́ сплю.",
-                      "adv_ex_de":  "Ich schlafe gut."
+                      "adv_ex_de":  "Ich schlafe gut.",
+                      "es_freq":  1517665
                   },
                   {
                       "id":  "aj-главный",
@@ -162,7 +169,8 @@
                       "example_cases":  "гла́вная у́лица – Nominativ · го́рода – Genitiv",
                       "example_de":  "Das ist die Hauptstraße der Stadt.",
                       "example_en":  "This is the city\u0027s main street.",
-                      "example_es":  "Es la calle principal de la ciudad."
+                      "example_es":  "Es la calle principal de la ciudad.",
+                      "es_freq":  32732
                   },
                   {
                       "id":  "aj-лучший",
@@ -177,7 +185,8 @@
                       "example_cases":  "ты – Nominativ · мой лу́чший друг – Nominativ",
                       "example_de":  "Du bist mein bester Freund.",
                       "example_en":  "You\u0027re my best friend.",
-                      "example_es":  "Eres mi mejor amigo."
+                      "example_es":  "Eres mi mejor amigo.",
+                      "es_freq":  547987
                   },
                   {
                       "id":  "aj-маленький",
@@ -195,7 +204,8 @@
                       "example_cases":  "у них – Genitiv · ма́ленький ребёнок – Nominativ",
                       "example_de":  "Sie haben ein kleines Kind.",
                       "example_en":  "They have a small child.",
-                      "example_es":  "Ellos tienen un niño pequeño."
+                      "example_es":  "Ellos tienen un niño pequeño.",
+                      "es_freq":  219882
                   },
                   {
                       "id":  "aj-молодой",
@@ -212,7 +222,8 @@
                       "example_cases":  "молодо́го челове́ка – Akkusativ (belebt, wie Genitiv)",
                       "example_de":  "Ich sehe einen jungen Mann.",
                       "example_en":  "I see a young man.",
-                      "example_es":  "Veo a un joven."
+                      "example_es":  "Veo a un joven.",
+                      "es_freq":  108919
                   },
                   {
                       "id":  "aj-государственный",
@@ -227,7 +238,8 @@
                       "example_cases":  "ру́сский – Nominativ · госуда́рственный язы́к – Nominativ · Росси́и – Genitiv",
                       "example_de":  "Russisch ist die Staatssprache Russlands.",
                       "example_en":  "Russian is the official language of Russia.",
-                      "example_es":  "El ruso es el idioma oficial de Rusia."
+                      "example_es":  "El ruso es el idioma oficial de Rusia.",
+                      "es_freq":  6646
                   },
                   {
                       "id":  "aj-полный",
@@ -244,7 +256,8 @@
                       "example_cases":  "по́лный день – Akkusativ (Zeitangabe)",
                       "example_de":  "Ich arbeite Vollzeit.",
                       "example_en":  "I work full-time.",
-                      "example_es":  "Trabajo a tiempo completo."
+                      "example_es":  "Trabajo a tiempo completo.",
+                      "es_freq":  65401
                   },
                   {
                       "id":  "aj-советский",
@@ -257,7 +270,8 @@
                       "example_cases":  "мой де́душка – Nominativ · в Сове́тском Сою́зе – Präpositiv",
                       "example_de":  "Mein Opa wurde in der Sowjetunion geboren.",
                       "example_en":  "My grandpa was born in the Soviet Union.",
-                      "example_es":  "Mi abuelo nació en la Unión Soviética."
+                      "example_es":  "Mi abuelo nació en la Unión Soviética.",
+                      "es_freq":  6395
                   },
                   {
                       "id":  "aj-настоящий",
@@ -275,7 +289,8 @@
                       "adv":  "по-настоя́щему",
                       "adv_de":  "richtig, wirklich",
                       "adv_ex":  "Я по-настоя́щему рад.",
-                      "adv_ex_de":  "Ich freue mich wirklich."
+                      "adv_ex_de":  "Ich freue mich wirklich.",
+                      "es_freq":  65810
                   },
                   {
                       "id":  "aj-старый",
@@ -297,7 +312,8 @@
                       "adv":  "по-ста́рому",
                       "adv_de":  "wie früher, auf alte Art",
                       "adv_ex":  "Всё идёт по-ста́рому.",
-                      "adv_ex_de":  "Alles läuft wie früher."
+                      "adv_ex_de":  "Alles läuft wie früher.",
+                      "es_freq":  177179
                   },
                   {
                       "id":  "aj-разный",
@@ -315,7 +331,8 @@
                       "adv":  "по-ра́зному",
                       "adv_de":  "unterschiedlich",
                       "adv_ex":  "Все лю́ди ду́мают по-ра́зному.",
-                      "adv_ex_de":  "Alle Menschen denken unterschiedlich."
+                      "adv_ex_de":  "Alle Menschen denken unterschiedlich.",
+                      "es_freq":  84500
                   },
                   {
                       "id":  "aj-нужный",
@@ -330,7 +347,8 @@
                       "example_cases":  "ну́жная вещь – Nominativ",
                       "example_de":  "Das ist ein sehr nützliches Ding.",
                       "example_en":  "This is a very useful thing.",
-                      "example_es":  "Es una cosa muy necesaria."
+                      "example_es":  "Es una cosa muy necesaria.",
+                      "es_freq":  49834
                   },
                   {
                       "id":  "aj-белый",
@@ -346,7 +364,8 @@
                       "example_cases":  "у меня́ – Genitiv · бе́лая ко́шка – Nominativ",
                       "example_de":  "Ich habe eine weiße Katze.",
                       "example_en":  "I have a white cat.",
-                      "example_es":  "Tengo una gata blanca."
+                      "example_es":  "Tengo una gata blanca.",
+                      "es_freq":  86177
                   },
                   {
                       "id":  "aj-собственный",
@@ -363,7 +382,8 @@
                       "adv":  "со́бственно",
                       "adv_de":  "eigentlich",
                       "adv_ex":  "А что, со́бственно, случи́лось?",
-                      "adv_ex_de":  "Was ist eigentlich passiert?"
+                      "adv_ex_de":  "Was ist eigentlich passiert?",
+                      "es_freq":  129623
                   },
                   {
                       "id":  "aj-черный",
@@ -380,7 +400,8 @@
                       "example_cases":  "чёрный ко́фе – Akkusativ",
                       "example_de":  "Ich trinke schwarzen Kaffee.",
                       "example_en":  "I drink black coffee.",
-                      "example_es":  "Tomo café negro."
+                      "example_es":  "Tomo café negro.",
+                      "es_freq":  89489
                   },
                   {
                       "id":  "aj-основной",
@@ -393,7 +414,8 @@
                       "example_cases":  "основна́я пробле́ма – Nominativ",
                       "example_de":  "Das ist das Hauptproblem.",
                       "example_en":  "This is the main problem.",
-                      "example_es":  "Es el problema principal."
+                      "example_es":  "Es el problema principal.",
+                      "es_freq":  1637
                   },
                   {
                       "id":  "aj-далекий",
@@ -415,7 +437,8 @@
                       "adv":  "далеко́",
                       "adv_de":  "weit (weg)",
                       "adv_ex":  "Мой дом далеко́.",
-                      "adv_ex_de":  "Mein Haus ist weit weg."
+                      "adv_ex_de":  "Mein Haus ist weit weg.",
+                      "es_freq":  6409
                   },
                   {
                       "id":  "aj-подобный",
@@ -429,7 +452,8 @@
                       "example_cases":  "ничего́ подо́бного – Genitiv (Verneinung)",
                       "example_de":  "So etwas habe ich noch nie gesehen.",
                       "example_en":  "I\u0027ve never seen anything like it.",
-                      "example_es":  "Nunca he visto nada parecido."
+                      "example_es":  "Nunca he visto nada parecido.",
+                      "es_freq":  19609
                   },
                   {
                       "id":  "aj-следующий",
@@ -444,7 +468,8 @@
                       "example_cases":  "на сле́дующей остано́вке – Präpositiv",
                       "example_de":  "Steigen Sie an der nächsten Haltestelle aus?",
                       "example_en":  "Are you getting off at the next stop?",
-                      "example_es":  "¿Se baja en la próxima parada?"
+                      "example_es":  "¿Se baja en la próxima parada?",
+                      "es_freq":  60284
                   },
                   {
                       "id":  "aj-равный",
@@ -459,7 +484,8 @@
                       "example_cases":  "все лю́ди – Nominativ Plural",
                       "example_de":  "Alle Menschen sind gleich.",
                       "example_en":  "All people are equal.",
-                      "example_es":  "Todas las personas son iguales."
+                      "example_es":  "Todas las personas son iguales.",
+                      "es_freq":  112960
                   },
                   {
                       "id":  "aj-живой",
@@ -480,7 +506,8 @@
                       "adv":  "жи́во",
                       "adv_de":  "lebhaft",
                       "adv_ex":  "Он жи́во расска́зывает.",
-                      "adv_ex_de":  "Er erzählt lebhaft."
+                      "adv_ex_de":  "Er erzählt lebhaft.",
+                      "es_freq":  119300
                   },
                   {
                       "id":  "aj-известный",
@@ -501,7 +528,8 @@
                       "adv":  "изве́стно",
                       "adv_de":  "bekannt (es ist bekannt)",
                       "adv_ex":  "Всем изве́стно, что он прав.",
-                      "adv_ex_de":  "Allen ist bekannt, dass er recht hat."
+                      "adv_ex_de":  "Allen ist bekannt, dass er recht hat.",
+                      "es_freq":  27644
                   },
                   {
                       "id":  "aj-военный",
@@ -520,7 +548,8 @@
                       "adv":  "по-вое́нному",
                       "adv_de":  "militärisch",
                       "adv_ex":  "Он отве́тил по-вое́нному ко́ротко.",
-                      "adv_ex_de":  "Er antwortete militärisch knapp."
+                      "adv_ex_de":  "Er antwortete militärisch knapp.",
+                      "es_freq":  25683
                   },
                   {
                       "id":  "aj-важный",
@@ -540,7 +569,8 @@
                       "adv":  "ва́жно",
                       "adv_de":  "wichtig",
                       "adv_ex":  "Э́то о́чень ва́жно.",
-                      "adv_ex_de":  "Das ist sehr wichtig."
+                      "adv_ex_de":  "Das ist sehr wichtig.",
+                      "es_freq":  135521
                   },
                   {
                       "id":  "aj-великий",
@@ -554,7 +584,8 @@
                       "example_cases":  "Пу́шкин – Nominativ · вели́кий поэ́т – Nominativ",
                       "example_de":  "Puschkin ist ein großer Dichter.",
                       "example_en":  "Pushkin is a great poet.",
-                      "example_es":  "Pushkin es un gran poeta."
+                      "example_es":  "Pushkin es un gran poeta.",
+                      "es_freq":  257648
                   },
                   {
                       "id":  "aj-простой",
@@ -576,7 +607,8 @@
                       "adv":  "про́сто",
                       "adv_de":  "einfach",
                       "adv_ex":  "Э́то про́сто.",
-                      "adv_ex_de":  "Das ist einfach."
+                      "adv_ex_de":  "Das ist einfach.",
+                      "es_freq":  17544
                   },
                   {
                       "id":  "aj-огромный",
@@ -591,7 +623,8 @@
                       "example_cases":  "у них – Genitiv · огро́мный дом – Nominativ",
                       "example_de":  "Sie haben ein riesiges Haus.",
                       "example_en":  "They have a huge house.",
-                      "example_es":  "Tienen una casa enorme."
+                      "example_es":  "Tienen una casa enorme.",
+                      "es_freq":  29438
                   },
                   {
                       "id":  "aj-политический",
@@ -608,7 +641,8 @@
                       "adv":  "полити́чески",
                       "adv_de":  "politisch",
                       "adv_ex":  "Э́то полити́чески ва́жно.",
-                      "adv_ex_de":  "Das ist politisch wichtig."
+                      "adv_ex_de":  "Das ist politisch wichtig.",
+                      "es_freq":  39393
                   },
                   {
                       "id":  "aj-московский",
@@ -622,7 +656,8 @@
                       "example_cases":  "моско́вское метро́ – Nominativ",
                       "example_de":  "Die Moskauer Metro ist sehr schön.",
                       "example_en":  "The Moscow metro is very beautiful.",
-                      "example_es":  "El metro de Moscú es muy bonito."
+                      "example_es":  "El metro de Moscú es muy bonito.",
+                      "es_freq":  0
                   },
                   {
                       "id":  "aj-готовый",
@@ -637,7 +672,8 @@
                       "example_cases":  "гото́вый обе́д – Akkusativ",
                       "example_de":  "Wir haben ein Fertiggericht gekauft.",
                       "example_en":  "We bought a ready-made lunch.",
-                      "example_es":  "Compramos comida preparada."
+                      "example_es":  "Compramos comida preparada.",
+                      "es_freq":  222349
                   },
                   {
                       "id":  "aj-красный",
@@ -653,7 +689,8 @@
                       "example_cases":  "Кра́сная пло́щадь – Nominativ · в це́нтре – Präpositiv · Москвы́ – Genitiv",
                       "example_de":  "Der Rote Platz ist im Zentrum von Moskau.",
                       "example_en":  "Red Square is in the center of Moscow.",
-                      "example_es":  "La Plaza Roja está en el centro de Moscú."
+                      "example_es":  "La Plaza Roja está en el centro de Moscú.",
+                      "es_freq":  54393
                   },
                   {
                       "id":  "aj-современный",
@@ -667,7 +704,8 @@
                       "example_cases":  "совреме́нный го́род – Nominativ",
                       "example_de":  "Das ist eine moderne Stadt.",
                       "example_en":  "This is a modern city.",
-                      "example_es":  "Es una ciudad moderna."
+                      "example_es":  "Es una ciudad moderna.",
+                      "es_freq":  12165
                   },
                   {
                       "id":  "aj-социальный",
@@ -685,7 +723,8 @@
                       "adv":  "социа́льно",
                       "adv_de":  "sozial",
                       "adv_ex":  "Он социа́льно акти́вен.",
-                      "adv_ex_de":  "Er ist sozial aktiv."
+                      "adv_ex_de":  "Er ist sozial aktiv.",
+                      "es_freq":  21165
                   },
                   {
                       "id":  "aj-ранний",
@@ -702,7 +741,8 @@
                       "example_cases":  "ра́нним у́тром – Instrumental (Zeitangabe)",
                       "example_de":  "Ich stehe frühmorgens auf.",
                       "example_en":  "I get up early in the morning.",
-                      "example_es":  "Me levanto temprano por la mañana."
+                      "example_es":  "Me levanto temprano por la mañana.",
+                      "es_freq":  34855
                   },
                   {
                       "id":  "aj-особый",
@@ -720,7 +760,8 @@
                       "adv":  "о́собо",
                       "adv_de":  "besonders",
                       "adv_ex":  "Я не о́собо люблю́ ко́фе.",
-                      "adv_ex_de":  "Ich mag Kaffee nicht besonders."
+                      "adv_ex_de":  "Ich mag Kaffee nicht besonders.",
+                      "es_freq":  76767
                   },
                   {
                       "id":  "aj-целый",
@@ -735,7 +776,8 @@
                       "example_cases":  "тебя́ – Akkusativ · це́лый час – Akkusativ (Zeitdauer)",
                       "example_de":  "Ich habe eine ganze Stunde auf dich gewartet.",
                       "example_en":  "I waited for you a whole hour.",
-                      "example_es":  "Te esperé una hora entera."
+                      "example_es":  "Te esperé una hora entera.",
+                      "es_freq":  35333
                   },
                   {
                       "id":  "aj-плохой",
@@ -756,7 +798,8 @@
                       "adv":  "пло́хо",
                       "adv_de":  "schlecht",
                       "adv_ex":  "Я пло́хо сплю.",
-                      "adv_ex_de":  "Ich schlafe schlecht."
+                      "adv_ex_de":  "Ich schlafe schlecht.",
+                      "es_freq":  189303
                   },
                   {
                       "id":  "aj-сильный",
@@ -777,7 +820,8 @@
                       "adv":  "си́льно",
                       "adv_de":  "stark, sehr",
                       "adv_ex":  "Он си́льно уста́л.",
-                      "adv_ex_de":  "Er ist sehr müde."
+                      "adv_ex_de":  "Er ist sehr müde.",
+                      "es_freq":  105584
                   },
                   {
                       "id":  "aj-скорый",
@@ -796,7 +840,8 @@
                       "adv":  "ско́ро",
                       "adv_de":  "bald",
                       "adv_ex":  "Ско́ро ле́то.",
-                      "adv_ex_de":  "Bald ist Sommer."
+                      "adv_ex_de":  "Bald ist Sommer.",
+                      "es_freq":  153762
                   },
                   {
                       "id":  "aj-крупный",
@@ -816,7 +861,8 @@
                       "adv":  "кру́пно",
                       "adv_de":  "groß, grob",
                       "adv_ex":  "Наре́жь лук кру́пно.",
-                      "adv_ex_de":  "Schneide die Zwiebel grob."
+                      "adv_ex_de":  "Schneide die Zwiebel grob.",
+                      "es_freq":  8612
                   },
                   {
                       "id":  "aj-внутренний",
@@ -835,7 +881,8 @@
                       "adv":  "вну́тренне",
                       "adv_de":  "innerlich",
                       "adv_ex":  "Он вну́тренне споко́ен.",
-                      "adv_ex_de":  "Er ist innerlich ruhig."
+                      "adv_ex_de":  "Er ist innerlich ruhig.",
+                      "es_freq":  15259
                   },
                   {
                       "id":  "aj-экономический",
@@ -852,7 +899,8 @@
                       "adv":  "экономи́чески",
                       "adv_de":  "wirtschaftlich",
                       "adv_ex":  "Э́то экономи́чески вы́годно.",
-                      "adv_ex_de":  "Das ist wirtschaftlich günstig."
+                      "adv_ex_de":  "Das ist wirtschaftlich günstig.",
+                      "es_freq":  5832
                   },
                   {
                       "id":  "aj-правый",
@@ -868,7 +916,8 @@
                       "example_cases":  "у меня́ – Genitiv · пра́вая рука́ – Nominativ",
                       "example_de":  "Mir tut die rechte Hand weh.",
                       "example_en":  "My right hand hurts.",
-                      "example_es":  "Me duele la mano derecha."
+                      "example_es":  "Me duele la mano derecha.",
+                      "es_freq":  113201
                   }
               ]
 }

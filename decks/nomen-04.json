@@ -25,7 +25,8 @@
                       "example_cases":  "газе́ту – Akkusativ",
                       "example_de":  "Papa liest die Zeitung.",
                       "example_en":  "Dad is reading the newspaper.",
-                      "example_es":  "Papá lee el periódico."
+                      "example_es":  "Papá lee el periódico.",
+                      "es_freq":  27439
                   },
                   {
                       "id":  "nm-причина",
@@ -44,7 +45,8 @@
                       "example_cases":  "кака́я причи́на – Nominativ",
                       "example_de":  "Was ist der Grund?",
                       "example_en":  "What\u0027s the reason?",
-                      "example_es":  "¿Cuál es la razón?"
+                      "example_es":  "¿Cuál es la razón?",
+                      "es_freq":  216733
                   },
                   {
                       "id":  "nm-плечо",
@@ -63,7 +65,8 @@
                       "example_cases":  "у меня́ – Genitiv · плечо́ – Nominativ",
                       "example_de":  "Mir tut die Schulter weh.",
                       "example_en":  "My shoulder hurts.",
-                      "example_es":  "Me duele el hombro."
+                      "example_es":  "Me duele el hombro.",
+                      "es_freq":  15288
                   },
                   {
                       "id":  "nm-цена",
@@ -83,7 +86,8 @@
                       "example_de":  "Was kostet das?",
                       "example_en":  "What\u0027s the price?",
                       "example_es":  "¿Cuál es el precio?",
-                      "akk":  "це́ну"
+                      "akk":  "це́ну",
+                      "es_freq":  32792
                   },
                   {
                       "id":  "nm-план",
@@ -101,7 +105,8 @@
                       "example_cases":  "у тебя́ – Genitiv · каки́е пла́ны – Nominativ Plural · на выходны́е – Akkusativ",
                       "example_de":  "Was hast du am Wochenende vor?",
                       "example_en":  "What are your plans for the weekend?",
-                      "example_es":  "¿Qué planes tienes para el fin de semana?"
+                      "example_es":  "¿Qué planes tienes para el fin de semana?",
+                      "es_freq":  96470
                   },
                   {
                       "id":  "nm-речь",
@@ -120,7 +125,8 @@
                       "example_cases":  "о чём – Präpositiv · речь – Nominativ",
                       "example_de":  "Worum geht es?",
                       "example_en":  "What is it about?",
-                      "example_es":  "¿De qué se trata?"
+                      "example_es":  "¿De qué se trata?",
+                      "es_freq":  17823
                   },
                   {
                       "id":  "nm-точка",
@@ -139,7 +145,8 @@
                       "example_cases":  "в конце́ – Präpositiv · предложе́ния – Genitiv · то́чка – Nominativ",
                       "example_de":  "Am Satzende steht ein Punkt.",
                       "example_en":  "There\u0027s a period at the end of the sentence.",
-                      "example_es":  "Al final de la oración hay un punto."
+                      "example_es":  "Al final de la oración hay un punto.",
+                      "es_freq":  126847
                   },
                   {
                       "id":  "nm-основа",
@@ -158,7 +165,8 @@
                       "example_cases":  "грамма́тика – Nominativ · осно́ва – Nominativ · языка́ – Genitiv",
                       "example_de":  "Grammatik ist die Grundlage der Sprache.",
                       "example_en":  "Grammar is the basis of language.",
-                      "example_es":  "La gramática es la base del idioma."
+                      "example_es":  "La gramática es la base del idioma.",
+                      "es_freq":  36348
                   },
                   {
                       "id":  "nm-товарищ",
@@ -178,7 +186,8 @@
                       "example_cases":  "мой ста́рый това́рищ – Nominativ",
                       "example_de":  "Er ist mein alter Kamerad.",
                       "example_en":  "He\u0027s my old companion.",
-                      "example_es":  "Él es mi viejo compañero."
+                      "example_es":  "Él es mi viejo compañero.",
+                      "es_freq":  51747
                   },
                   {
                       "id":  "nm-культура",
@@ -196,7 +205,8 @@
                       "example_cases":  "ру́сской культу́рой – Instrumental (nach интересова́ться)",
                       "example_de":  "Ich interessiere mich für die russische Kultur.",
                       "example_en":  "I\u0027m interested in Russian culture.",
-                      "example_es":  "Me interesa la cultura rusa."
+                      "example_es":  "Me interesa la cultura rusa.",
+                      "es_freq":  11068
                   },
                   {
                       "id":  "nm-мнение",
@@ -215,7 +225,8 @@
                       "example_cases":  "твоё мне́ние – Nominativ",
                       "example_de":  "Was ist deine Meinung?",
                       "example_en":  "What\u0027s your opinion?",
-                      "example_es":  "¿Cuál es tu opinión?"
+                      "example_es":  "¿Cuál es tu opinión?",
+                      "es_freq":  37516
                   },
                   {
                       "id":  "nm-документ",
@@ -234,7 +245,8 @@
                       "example_cases":  "ва́ши докуме́нты – Akkusativ Plural",
                       "example_de":  "Zeigen Sie bitte Ihre Papiere.",
                       "example_en":  "Please show your documents.",
-                      "example_es":  "Muestre sus documentos, por favor."
+                      "example_es":  "Muestre sus documentos, por favor.",
+                      "es_freq":  17745
                   },
                   {
                       "id":  "nm-ход",
@@ -254,7 +266,8 @@
                       "example_de":  "Jetzt bist du am Zug.",
                       "example_en":  "Now it\u0027s your move.",
                       "example_es":  "Ahora es tu turno.",
-                      "loc":  "на ходу́"
+                      "loc":  "на ходу́",
+                      "es_freq":  16599
                   },
                   {
                       "id":  "nm-институт",
@@ -273,7 +286,8 @@
                       "example_cases":  "сестра́ – Nominativ · в институ́те – Präpositiv",
                       "example_de":  "Meine Schwester studiert an einer Hochschule.",
                       "example_en":  "My sister studies at an institute.",
-                      "example_es":  "Mi hermana estudia en un instituto."
+                      "example_es":  "Mi hermana estudia en un instituto.",
+                      "es_freq":  16417
                   },
                   {
                       "id":  "nm-проект",
@@ -292,7 +306,8 @@
                       "example_cases":  "над но́вым прое́ктом – Instrumental",
                       "example_de":  "Wir arbeiten an einem neuen Projekt.",
                       "example_en":  "We\u0027re working on a new project.",
-                      "example_es":  "Trabajamos en un nuevo proyecto."
+                      "example_es":  "Trabajamos en un nuevo proyecto.",
+                      "es_freq":  25665
                   },
                   {
                       "id":  "nm-встреча",
@@ -311,7 +326,8 @@
                       "example_cases":  "у меня́ – Genitiv · ва́жная встре́ча – Nominativ",
                       "example_de":  "Ich habe morgen ein wichtiges Treffen.",
                       "example_en":  "I have an important meeting tomorrow.",
-                      "example_es":  "Mañana tengo una reunión importante."
+                      "example_es":  "Mañana tengo una reunión importante.",
+                      "es_freq":  50442
                   },
                   {
                       "id":  "nm-директор",
@@ -331,7 +347,8 @@
                       "example_cases":  "дире́ктор – Nominativ · шко́лы – Genitiv · до́брый челове́к – Nominativ",
                       "example_de":  "Der Schulleiter ist ein sehr netter Mensch.",
                       "example_en":  "The school principal is a very kind person.",
-                      "example_es":  "El director de la escuela es una persona muy amable."
+                      "example_es":  "El director de la escuela es una persona muy amable.",
+                      "es_freq":  39962
                   },
                   {
                       "id":  "nm-срок",
@@ -350,7 +367,8 @@
                       "example_cases":  "срок – Nominativ · сда́чи – Genitiv · пя́тница – Nominativ",
                       "example_de":  "Abgabefrist ist Freitag.",
                       "example_en":  "The deadline is Friday.",
-                      "example_es":  "El plazo de entrega es el viernes."
+                      "example_es":  "El plazo de entrega es el viernes.",
+                      "es_freq":  7370
                   },
                   {
                       "id":  "nm-палец",
@@ -369,7 +387,8 @@
                       "example_cases":  "па́лец – Akkusativ",
                       "example_de":  "Ich habe mich in den Finger geschnitten.",
                       "example_en":  "I cut my finger.",
-                      "example_es":  "Me corté el dedo."
+                      "example_es":  "Me corté el dedo.",
+                      "es_freq":  37474
                   },
                   {
                       "id":  "nm-опыт",
@@ -388,7 +407,8 @@
                       "example_cases":  "у него́ – Genitiv · большо́й о́пыт – Nominativ · рабо́ты – Genitiv",
                       "example_de":  "Er hat viel Berufserfahrung.",
                       "example_en":  "He has a lot of work experience.",
-                      "example_es":  "Él tiene mucha experiencia laboral."
+                      "example_es":  "Él tiene mucha experiencia laboral.",
+                      "es_freq":  33104
                   },
                   {
                       "id":  "nm-служба",
@@ -407,7 +427,8 @@
                       "example_cases":  "на слу́жбу – Akkusativ (wohin?)",
                       "example_de":  "Er geht zum Dienst.",
                       "example_en":  "He\u0027s going to work.",
-                      "example_es":  "Él va al servicio."
+                      "example_es":  "Él va al servicio.",
+                      "es_freq":  55864
                   },
                   {
                       "id":  "nm-судьба",
@@ -426,7 +447,8 @@
                       "example_cases":  "у него́ – Genitiv · судьба́ – Nominativ",
                       "example_de":  "So ist sein Schicksal.",
                       "example_en":  "Such is his fate.",
-                      "example_es":  "Ese es su destino."
+                      "example_es":  "Ese es su destino.",
+                      "es_freq":  3285
                   },
                   {
                       "id":  "nm-девушка",
@@ -446,7 +468,8 @@
                       "example_cases":  "у него́ – Genitiv · де́вушка – Nominativ",
                       "example_de":  "Er hat eine Freundin.",
                       "example_en":  "He has a girlfriend.",
-                      "example_es":  "Él tiene novia."
+                      "example_es":  "Él tiene novia.",
+                      "es_freq":  15036
                   },
                   {
                       "id":  "nm-очередь",
@@ -465,7 +488,8 @@
                       "example_cases":  "кто – Nominativ · после́дний – Nominativ · в о́череди – Präpositiv",
                       "example_de":  "Wer ist der Letzte in der Schlange?",
                       "example_en":  "Who\u0027s last in line?",
-                      "example_es":  "¿Quién es el último en la fila?"
+                      "example_es":  "¿Quién es el último en la fila?",
+                      "es_freq":  696
                   },
                   {
                       "id":  "nm-лес",
@@ -485,7 +509,8 @@
                       "example_de":  "Wir gehen im Wald spazieren.",
                       "example_en":  "We\u0027re walking in the forest.",
                       "example_es":  "Paseamos por el bosque.",
-                      "loc":  "в лесу́"
+                      "loc":  "в лесу́",
+                      "es_freq":  29549
                   },
                   {
                       "id":  "nm-состав",
@@ -503,7 +528,8 @@
                       "example_cases":  "в соста́ве – Präpositiv · кома́нды – Genitiv · но́вые игроки́ – Nominativ Plural",
                       "example_de":  "In der Mannschaft gibt es neue Spieler.",
                       "example_en":  "There are new players in the team.",
-                      "example_es":  "Hay nuevos jugadores en el equipo."
+                      "example_es":  "Hay nuevos jugadores en el equipo.",
+                      "es_freq":  2081
                   },
                   {
                       "id":  "nm-член",
@@ -523,7 +549,8 @@
                       "example_cases":  "член – Nominativ · на́шего клу́ба – Genitiv",
                       "example_de":  "Er ist Mitglied in unserem Klub.",
                       "example_en":  "He\u0027s a member of our club.",
-                      "example_es":  "Él es miembro de nuestro club."
+                      "example_es":  "Él es miembro de nuestro club.",
+                      "es_freq":  33684
                   },
                   {
                       "id":  "nm-количество",
@@ -542,7 +569,8 @@
                       "example_cases":  "большо́е коли́чество – Nominativ · люде́й – Genitiv Plural · на конце́рт – Akkusativ",
                       "example_de":  "Eine große Zahl von Menschen kam zum Konzert.",
                       "example_en":  "A large number of people came to the concert.",
-                      "example_es":  "Una gran cantidad de gente vino al concierto."
+                      "example_es":  "Una gran cantidad de gente vino al concierto.",
+                      "es_freq":  24420
                   },
                   {
                       "id":  "nm-событие",
@@ -560,7 +588,8 @@
                       "example_cases":  "ва́жное собы́тие – Nominativ",
                       "example_de":  "Das war ein wichtiges Ereignis.",
                       "example_en":  "It was an important event.",
-                      "example_es":  "Fue un acontecimiento importante."
+                      "example_es":  "Fue un acontecimiento importante.",
+                      "es_freq":  4168
                   },
                   {
                       "id":  "nm-объект",
@@ -579,7 +608,8 @@
                       "example_cases":  "охраня́емый объе́кт – Nominativ",
                       "example_de":  "Das ist eine streng bewachte Anlage.",
                       "example_en":  "This is a strictly guarded site.",
-                      "example_es":  "Es una instalación muy vigilada."
+                      "example_es":  "Es una instalación muy vigilada.",
+                      "es_freq":  22083
                   },
                   {
                       "id":  "nm-зал",
@@ -597,7 +627,8 @@
                       "example_cases":  "конце́рт – Nominativ · в большо́м за́ле – Präpositiv",
                       "example_de":  "Das Konzert findet im großen Saal statt.",
                       "example_en":  "The concert will be in the big hall.",
-                      "example_es":  "El concierto será en la sala grande."
+                      "example_es":  "El concierto será en la sala grande.",
+                      "es_freq":  44285
                   },
                   {
                       "id":  "nm-создание",
@@ -613,7 +644,8 @@
                       "example_cases":  "созда́ние – Nominativ · са́йта – Genitiv · вре́мя – Akkusativ",
                       "example_de":  "Eine Webseite zu erstellen braucht Zeit.",
                       "example_en":  "Creating a website takes time.",
-                      "example_es":  "Crear un sitio web lleva tiempo."
+                      "example_es":  "Crear un sitio web lleva tiempo.",
+                      "es_freq":  5767
                   },
                   {
                       "id":  "nm-значение",
@@ -631,7 +663,8 @@
                       "example_cases":  "како́е значе́ние – Nominativ · у э́того сло́ва – Genitiv",
                       "example_de":  "Was bedeutet dieses Wort?",
                       "example_en":  "What\u0027s the meaning of this word?",
-                      "example_es":  "¿Qué significado tiene esta palabra?"
+                      "example_es":  "¿Qué significado tiene esta palabra?",
+                      "es_freq":  855
                   },
                   {
                       "id":  "nm-период",
@@ -649,7 +682,8 @@
                       "example_cases":  "тру́дный пери́од – Nominativ",
                       "example_de":  "Das war eine schwierige Zeit.",
                       "example_en":  "It was a difficult period.",
-                      "example_es":  "Fue un período difícil."
+                      "example_es":  "Fue un período difícil.",
+                      "es_freq":  6910
                   },
                   {
                       "id":  "nm-шаг",
@@ -668,7 +702,8 @@
                       "example_cases":  "шаг – Akkusativ",
                       "example_de":  "Mach einen Schritt nach vorn!",
                       "example_en":  "Take a step forward!",
-                      "example_es":  "¡Da un paso adelante!"
+                      "example_es":  "¡Da un paso adelante!",
+                      "es_freq":  37722
                   },
                   {
                       "id":  "nm-брат",
@@ -688,7 +723,8 @@
                       "example_cases":  "у меня́ – Genitiv · ста́рший брат – Nominativ",
                       "example_de":  "Ich habe einen älteren Bruder.",
                       "example_en":  "I have an older brother.",
-                      "example_es":  "Tengo un hermano mayor."
+                      "example_es":  "Tengo un hermano mayor.",
+                      "es_freq":  189011
                   },
                   {
                       "id":  "nm-искусство",
@@ -707,7 +743,8 @@
                       "example_cases":  "совреме́нное иску́сство – Akkusativ",
                       "example_de":  "Sie liebt moderne Kunst.",
                       "example_en":  "She loves modern art.",
-                      "example_es":  "A ella le encanta el arte moderno."
+                      "example_es":  "A ella le encanta el arte moderno.",
+                      "es_freq":  34080
                   },
                   {
                       "id":  "nm-структура",
@@ -725,7 +762,8 @@
                       "example_cases":  "у те́кста – Genitiv · проста́я структу́ра – Nominativ",
                       "example_de":  "Der Text hat eine einfache Struktur.",
                       "example_en":  "The text has a simple structure.",
-                      "example_es":  "El texto tiene una estructura sencilla."
+                      "example_es":  "El texto tiene una estructura sencilla.",
+                      "es_freq":  7413
                   },
                   {
                       "id":  "nm-пример",
@@ -744,7 +782,8 @@
                       "example_cases":  "приме́р – Akkusativ",
                       "example_de":  "Nenne ein Beispiel!",
                       "example_en":  "Give an example!",
-                      "example_es":  "¡Da un ejemplo!"
+                      "example_es":  "¡Da un ejemplo!",
+                      "es_freq":  32562
                   },
                   {
                       "id":  "nm-номер",
@@ -763,7 +802,8 @@
                       "example_cases":  "мне – Dativ · свой но́мер – Akkusativ · телефо́на – Genitiv",
                       "example_de":  "Gib mir deine Telefonnummer.",
                       "example_en":  "Give me your phone number.",
-                      "example_es":  "Dame tu número de teléfono."
+                      "example_es":  "Dame tu número de teléfono.",
+                      "es_freq":  5451
                   },
                   {
                       "id":  "nm-исследование",
@@ -781,7 +821,8 @@
                       "example_cases":  "учёные – Nominativ Plural · иссле́дование – Akkusativ",
                       "example_de":  "Die Wissenschaftler führen eine Untersuchung durch.",
                       "example_en":  "The scientists are conducting research.",
-                      "example_es":  "Los científicos realizan una investigación."
+                      "example_es":  "Los científicos realizan una investigación.",
+                      "es_freq":  44282
                   },
                   {
                       "id":  "nm-гражданин",
@@ -801,7 +842,8 @@
                       "example_cases":  "граждани́н – Nominativ · Герма́нии – Genitiv",
                       "example_de":  "Er ist deutscher Staatsbürger.",
                       "example_en":  "He\u0027s a German citizen.",
-                      "example_es":  "Él es ciudadano alemán."
+                      "example_es":  "Él es ciudadano alemán.",
+                      "es_freq":  13976
                   },
                   {
                       "id":  "nm-игра",
@@ -820,7 +862,8 @@
                       "example_cases":  "интере́сная игра́ – Nominativ",
                       "example_de":  "Das ist ein sehr interessantes Spiel.",
                       "example_en":  "This is a very interesting game.",
-                      "example_es":  "Es un juego muy interesante."
+                      "example_es":  "Es un juego muy interesante.",
+                      "es_freq":  54186
                   },
                   {
                       "id":  "nm-начальник",
@@ -840,7 +883,8 @@
                       "example_cases":  "мой нача́льник – Nominativ · в хоро́шем настрое́нии – Präpositiv",
                       "example_de":  "Mein Chef ist heute gut gelaunt.",
                       "example_en":  "My boss is in a good mood today.",
-                      "example_es":  "Mi jefe está de buen humor hoy."
+                      "example_es":  "Mi jefe está de buen humor hoy.",
+                      "es_freq":  124263
                   },
                   {
                       "id":  "nm-рост",
@@ -855,7 +899,8 @@
                       "example_cases":  "како́й рост – Nominativ · у тебя́ – Genitiv",
                       "example_de":  "Wie groß bist du?",
                       "example_en":  "How tall are you?",
-                      "example_es":  "¿Cuánto mides?"
+                      "example_es":  "¿Cuánto mides?",
+                      "es_freq":  3765
                   },
                   {
                       "id":  "nm-тема",
@@ -874,7 +919,8 @@
                       "example_cases":  "интере́сная те́ма – Nominativ",
                       "example_de":  "Das ist ein interessantes Thema.",
                       "example_en":  "This is an interesting topic.",
-                      "example_es":  "Es un tema interesante."
+                      "example_es":  "Es un tema interesante.",
+                      "es_freq":  24279
                   },
                   {
                       "id":  "nm-принцип",
@@ -893,7 +939,8 @@
                       "example_cases":  "в при́нципе – Präpositiv",
                       "example_de":  "Im Prinzip bin ich einverstanden.",
                       "example_en":  "In principle, I agree.",
-                      "example_es":  "En principio, estoy de acuerdo."
+                      "example_es":  "En principio, estoy de acuerdo.",
+                      "es_freq":  47053
                   },
                   {
                       "id":  "nm-тип",
@@ -912,7 +959,8 @@
                       "example_cases":  "како́й тип – Nominativ · кварти́ры – Genitiv · вам – Dativ",
                       "example_de":  "Welche Art Wohnung brauchen Sie?",
                       "example_en":  "What type of apartment do you need?",
-                      "example_es":  "¿Qué tipo de apartamento necesita?"
+                      "example_es":  "¿Qué tipo de apartamento necesita?",
+                      "es_freq":  299043
                   },
                   {
                       "id":  "nm-метод",
@@ -931,7 +979,8 @@
                       "example_cases":  "хоро́ший ме́тод – Nominativ · для изуче́ния – Genitiv · слов – Genitiv Plural",
                       "example_de":  "Das ist eine gute Methode zum Vokabellernen.",
                       "example_en":  "This is a good method for learning words.",
-                      "example_es":  "Es un buen método para aprender palabras."
+                      "example_es":  "Es un buen método para aprender palabras.",
+                      "es_freq":  10288
                   },
                   {
                       "id":  "nm-фильм",
@@ -950,7 +999,8 @@
                       "example_cases":  "фильм – Akkusativ",
                       "example_de":  "Wir schauen einen Film.",
                       "example_en":  "We\u0027re watching a film.",
-                      "example_es":  "Estamos viendo una película."
+                      "example_es":  "Estamos viendo una película.",
+                      "es_freq":  84980
                   }
               ]
 }

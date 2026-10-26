@@ -1,0 +1,98 @@
+# Spanische Karten ohne russische Vorlage (nur im Spanisch-Modus)
+# typ | es | de | en | Beispiel | Deutsch | Englisch | Tipp
+# typ: palabra (Grundwort), verbo, sustantivo, adjetivo, adverbio, frase
+# --- Pronomen ---
+palabra | yo | ich | I | Yo soy de Alemania. | Ich komme aus Deutschland. | I'm from Germany. | Meist weggelassen, weil die Verbform die Person zeigt: Soy de Alemania. In der DR hört man das Pronomen aber oft.
+palabra | tú | du | you | ¿Tú quieres café? | Willst du Kaffee? | Do you want coffee? | Mit Akzent = du. Ohne Akzent (tu) = dein.
+palabra | él | er | he | Él trabaja en un hotel. | Er arbeitet in einem Hotel. | He works in a hotel. | Mit Akzent = er. Ohne Akzent (el) = der.
+palabra | ella | sie (Einzahl) | she | Ella es mi hermana. | Sie ist meine Schwester. | She's my sister. |
+palabra | usted | Sie (höflich, Einzahl) | you (formal) | ¿Cómo está usted? | Wie geht es Ihnen? | How are you? | Verbform wie bei él/ella. Abkürzung: Ud.
+palabra | nosotros, nosotras | wir | we | Nosotros vivimos en Santiago. | Wir wohnen in Santiago. | We live in Santiago. | nosotras, wenn nur Frauen gemeint sind.
+palabra | ellos, ellas | sie (Mehrzahl) | they | Ellos llegan mañana. | Sie kommen morgen an. | They arrive tomorrow. | ellas nur für Frauen; gemischte Gruppen: ellos.
+palabra | ustedes | ihr; Sie (Mehrzahl) | you (plural) | ¿Ustedes vienen a la fiesta? | Kommt ihr zur Party? | Are you coming to the party? | In Lateinamerika und der DR immer ustedes für „ihr“. Verbform wie bei ellos.
+palabra | me | mich, mir | me | Me llamo Ana. | Ich heiße Ana. | My name is Ana. | Steht vor dem Verb: Me gusta, me ayuda. Am Infinitiv angehängt: ayudarme.
+palabra | te | dich, dir | you (object) | Te quiero. | Ich liebe dich. | I love you. | Te llamo mañana = Ich rufe dich morgen an.
+palabra | lo, la | ihn, sie, es | him, her, it | ¿El libro? Lo tengo yo. | Das Buch? Das habe ich. | The book? I have it. | lo = männlich oder „es“, la = weiblich. Plural: los, las.
+palabra | le, les | ihm, ihr, Ihnen; ihnen | (to) him, her, them | Le doy el dinero. | Ich gebe ihm das Geld. | I give him the money. | Vor lo/la wird le zu se: Se lo doy.
+palabra | nos | uns | us | Nos vemos mañana. | Wir sehen uns morgen. | See you tomorrow. |
+palabra | mí, ti | mich, mir; dich, dir (nach Präposition) | me, you (after preposition) | Este regalo es para ti. | Dieses Geschenk ist für dich. | This present is for you. | Nach Präpositionen: para mí, para ti, de mí. mí mit Akzent, ti ohne.
+palabra | conmigo, contigo | mit mir, mit dir | with me, with you | ¿Vienes conmigo? | Kommst du mit mir? | Are you coming with me? |
+# --- Besitz ---
+palabra | mi, mis | mein, meine | my | Mi casa es tu casa. | Mein Haus ist dein Haus. | My house is your house. |
+palabra | tu, tus | dein, deine | your | ¿Dónde está tu carro? | Wo ist dein Auto? | Where is your car? | Ohne Akzent = dein. tú mit Akzent = du.
+palabra | su, sus | sein, ihr, Ihr | his, her, their, your | Su hermano vive en Nueva York. | Sein Bruder wohnt in New York. | His brother lives in New York. | Kann sein, ihr, Ihr oder ihr (Mehrzahl) heißen – der Zusammenhang entscheidet.
+palabra | nuestro, nuestra | unser, unsere | our | Nuestra casa es pequeña. | Unser Haus ist klein. | Our house is small. | Passt sich an: nuestro carro, nuestra casa, nuestros amigos.
+palabra | mío, mía | meiner, meine; mein (nachgestellt) | mine | Este celular es mío. | Dieses Handy gehört mir. | This phone is mine. | Steht nach dem Verb oder Nomen: un amigo mío = ein Freund von mir.
+palabra | tuyo, tuya | deiner, deine | yours | ¿Es tuyo este libro? | Ist das dein Buch? | Is this book yours? |
+palabra | suyo, suya | seiner, ihrer, Ihrer | his, hers, theirs | La culpa es suya. | Es ist seine Schuld. | It's his fault. |
+# --- Hinweis- und Mengenwörter ---
+palabra | este, esta, esto | dieser, diese, dieses | this | Esta casa es muy bonita. | Dieses Haus ist sehr schön. | This house is very nice. | esto = „das hier“ für etwas Unbestimmtes: ¿Qué es esto?
+palabra | ese, esa, eso | der, die, das (da) | that | Eso no es verdad. | Das stimmt nicht. | That's not true. | eso = „das“ für Unbestimmtes: ¡Eso es!
+palabra | aquel, aquella | jener, jene (dort drüben) | that (over there) | ¿Ves aquella casa? | Siehst du das Haus dort drüben? | Do you see that house over there? |
+palabra | algo | etwas | something | ¿Quieres algo de tomar? | Möchtest du etwas trinken? | Do you want something to drink? |
+palabra | alguien | jemand | someone | Alguien está en la puerta. | Jemand ist an der Tür. | Someone is at the door. |
+palabra | nadie | niemand | nobody | No hay nadie en casa. | Niemand ist zu Hause. | Nobody is home. | Nach dem Verb mit doppelter Verneinung: No vino nadie.
+palabra | alguno, algún | irgendein, manche | some, any | ¿Tienes algún problema? | Hast du irgendein Problem? | Do you have any problem? | Vor männlichem Nomen: algún.
+palabra | ninguno, ningún | kein, keiner | no, none | No tengo ningún problema. | Ich habe kein Problem. | I don't have any problem. | Vor männlichem Nomen: ningún. Doppelte Verneinung: no … ningún.
+palabra | cada | jeder, jede (einzeln) | each, every | Voy a la playa cada domingo. | Ich gehe jeden Sonntag an den Strand. | I go to the beach every Sunday. | Bleibt immer gleich.
+palabra | cualquier, cualquiera | irgendein, jeder beliebige | any | Llámame a cualquier hora. | Ruf mich zu jeder Uhrzeit an. | Call me at any time. | Vor dem Nomen: cualquier. Allein: cualquiera.
+palabra | todo, toda | ganz; alles | all, whole | Todo está bien. | Alles ist gut. | Everything is fine. | todo el día = den ganzen Tag, todos los días = jeden Tag.
+palabra | mismo, misma | derselbe, dieselbe; selbst | same; -self | Tenemos el mismo carro. | Wir haben dasselbe Auto. | We have the same car. | yo mismo = ich selbst. ahora mismo = sofort.
+palabra | tanto, tanta | so viel | so much | ¡Tengo tanto trabajo! | Ich habe so viel Arbeit! | I have so much work! | Vergleich: tanto como = so viel wie.
+palabra | varios, varias | mehrere | several | Tengo varias preguntas. | Ich habe mehrere Fragen. | I have several questions. |
+palabra | ambos, ambas | beide | both | Ambos son mis hermanos. | Beide sind meine Brüder. | Both are my brothers. | Im Alltag häufiger: los dos.
+palabra | los demás | die anderen | the others | Los demás llegan más tarde. | Die anderen kommen später. | The others arrive later. | lo demás = der Rest.
+palabra | tal | solch, so ein | such | ¿Qué tal? | Wie geht's? | How's it going? | ¿Qué tal? = Wie geht's? / Wie war's? tal vez = vielleicht.
+# --- Fragewörter ---
+palabra | quién, quiénes | wer | who | ¿Quién es ella? | Wer ist sie? | Who is she? | Mit Akzent in Fragen. Mehrzahl: ¿Quiénes son?
+palabra | cuál, cuáles | welcher, welche | which | ¿Cuál es tu número? | Was ist deine Nummer? | What's your number? | Vor ser oft statt qué: ¿Cuál es tu nombre?
+palabra | cuánto, cuánta | wie viel | how much | ¿Cuánto cuesta? | Wie viel kostet das? | How much is it? | Mehrzahl: ¿Cuántos años tienes? = Wie alt bist du?
+# --- Bindewörter und kleine Wörter ---
+palabra | y | und | and | Arroz y habichuelas. | Reis und Bohnen. | Rice and beans. | Vor i-/hi-Laut wird y zu e: padre e hijo.
+palabra | o | oder | or | ¿Café o té? | Kaffee oder Tee? | Coffee or tea? | Vor o-Laut wird o zu u: siete u ocho.
+palabra | pero | aber | but | Quiero ir, pero no puedo. | Ich will gehen, aber ich kann nicht. | I want to go, but I can't. |
+palabra | sino | sondern | but (rather) | No es rojo, sino azul. | Es ist nicht rot, sondern blau. | It's not red but blue. | Nur nach einer Verneinung.
+palabra | ni | noch, nicht einmal | nor, not even | No tengo ni tiempo ni dinero. | Ich habe weder Zeit noch Geld. | I have neither time nor money. | ni siquiera = nicht einmal.
+palabra | sí | ja | yes | Sí, claro. | Ja, klar. | Yes, of course. | Mit Akzent = ja. si ohne Akzent = wenn, ob.
+palabra | pues | also, nun ja | well, so | Pues, no sé. | Tja, ich weiß nicht. | Well, I don't know. | Füllwort am Satzanfang, sehr häufig.
+palabra | mientras | während | while | Escucho música mientras cocino. | Ich höre Musik, während ich koche. | I listen to music while I cook. |
+palabra | aunque | obwohl | although | Voy a la playa aunque llueva. | Ich gehe an den Strand, auch wenn es regnet. | I'm going to the beach even if it rains. |
+palabra | incluso | sogar | even | Incluso los niños bailan. | Sogar die Kinder tanzen. | Even the children dance. |
+palabra | tampoco | auch nicht | neither | Yo tampoco sé. | Ich weiß es auch nicht. | I don't know either. | Gegenstück zu también: Yo también = ich auch.
+palabra | aún | noch | still, yet | Aún no ha llegado. | Er ist noch nicht angekommen. | He hasn't arrived yet. | Bedeutet dasselbe wie todavía. aun ohne Akzent = sogar.
+palabra | pronto | bald | soon | ¡Hasta pronto! | Bis bald! | See you soon! |
+palabra | jamás | niemals | never | ¡Jamás lo voy a olvidar! | Das werde ich nie vergessen! | I'll never forget it! | Stärker als nunca.
+palabra | ahí | da, dort | there | Ponlo ahí. | Leg es da hin. | Put it there. | aquí = hier, ahí = da (in der Nähe), allá = dort drüben.
+palabra | solo, solamente | nur | only | Solo tengo diez pesos. | Ich habe nur zehn Pesos. | I only have ten pesos. | Als Adjektiv: solo, sola = allein (Estoy solo).
+palabra | ojalá | hoffentlich | hopefully | ¡Ojalá que no llueva! | Hoffentlich regnet es nicht! | Hopefully it won't rain! | Danach Subjuntivo.
+palabra | acaso | etwa, vielleicht | perhaps | ¿Acaso no lo sabes? | Weißt du es etwa nicht? | Don't you know? | In Fragen: „etwa“.
+palabra | excepto | außer | except | Trabajo todos los días excepto el domingo. | Ich arbeite jeden Tag außer sonntags. | I work every day except Sunday. | Auch: menos.
+# --- Begrüßung und Höflichkeit ---
+palabra | hola | hallo | hello | ¡Hola! ¿Cómo estás? | Hallo! Wie geht's? | Hello! How are you? | Das h ist stumm.
+palabra | adiós | tschüss, auf Wiedersehen | goodbye | ¡Adiós, nos vemos! | Tschüss, bis dann! | Bye, see you! | In der DR oft auch: ¡Nos vemos!, ¡Cuídate!
+palabra | perdón | Entschuldigung | sorry, excuse me | Perdón, ¿dónde está el baño? | Entschuldigung, wo ist die Toilette? | Excuse me, where's the bathroom? | Auch: disculpe, con permiso (zum Vorbeigehen).
+palabra | bienvenido, bienvenida | willkommen | welcome | ¡Bienvenidos a la República Dominicana! | Willkommen in der Dominikanischen Republik! | Welcome to the Dominican Republic! | Passt sich an: bienvenida (Frau), bienvenidos (Gruppe).
+palabra | felicidades | herzlichen Glückwunsch | congratulations | ¡Felicidades por tu cumpleaños! | Alles Gute zum Geburtstag! | Happy birthday! | Auch: felicitaciones.
+palabra | ay | oh, au, ach | oh, ouch | ¡Ay, qué calor! | Ach, ist das heiß! | Oh, it's so hot! | Sehr häufiger Ausruf.
+# --- Zahlen ---
+palabra | cuatro | vier | four | Tengo cuatro hermanos. | Ich habe vier Geschwister. | I have four siblings. |
+palabra | cinco | fünf | five | Son las cinco. | Es ist fünf Uhr. | It's five o'clock. |
+palabra | seis | sechs | six | La tienda abre a las seis. | Der Laden öffnet um sechs. | The shop opens at six. |
+palabra | siete | sieben | seven | La semana tiene siete días. | Die Woche hat sieben Tage. | The week has seven days. |
+palabra | ocho | acht | eight | Trabajo ocho horas. | Ich arbeite acht Stunden. | I work eight hours. |
+palabra | nueve | neun | nine | Mi hijo tiene nueve años. | Mein Sohn ist neun Jahre alt. | My son is nine years old. |
+palabra | diez | zehn | ten | Cuesta diez pesos. | Es kostet zehn Pesos. | It costs ten pesos. |
+palabra | once | elf | eleven | Nos vemos a las once. | Wir sehen uns um elf. | See you at eleven. |
+palabra | doce | zwölf | twelve | Una docena son doce huevos. | Ein Dutzend sind zwölf Eier. | A dozen is twelve eggs. |
+palabra | quince | fünfzehn | fifteen | Ella cumple quince años. | Sie wird fünfzehn. | She's turning fifteen. | Der 15. Geburtstag eines Mädchens wird groß gefeiert: los quince.
+palabra | veinte | zwanzig | twenty | Tengo veinte años. | Ich bin zwanzig. | I'm twenty. | 21–29 in einem Wort: veintiuno, veintidós …
+palabra | treinta | dreißig | thirty | El mes tiene treinta días. | Der Monat hat dreißig Tage. | The month has thirty days. | Ab 31 mit y: treinta y uno.
+palabra | cincuenta | fünfzig | fifty | Son cincuenta pesos. | Das macht fünfzig Pesos. | That's fifty pesos. |
+palabra | cien | hundert | a hundred | Cien por ciento. | Hundert Prozent. | A hundred percent. | Vor weiteren Zahlen: ciento (ciento diez).
+# --- Wochentage ---
+palabra | el lunes | (der) Montag | Monday | El lunes empiezo a trabajar. | Am Montag fange ich an zu arbeiten. | I start working on Monday. | el lunes = am Montag, los lunes = montags. Wochentage klein schreiben.
+palabra | el martes | (der) Dienstag | Tuesday | Nos vemos el martes. | Wir sehen uns am Dienstag. | See you on Tuesday. |
+palabra | el jueves | (der) Donnerstag | Thursday | El jueves hay clase. | Am Donnerstag ist Unterricht. | There's class on Thursday. |
+palabra | el viernes | (der) Freitag | Friday | ¡Por fin es viernes! | Endlich ist Freitag! | Finally it's Friday! |
+palabra | el sábado | (der) Samstag | Saturday | El sábado vamos a la playa. | Am Samstag gehen wir an den Strand. | On Saturday we're going to the beach. |
+palabra | el domingo | (der) Sonntag | Sunday | Los domingos como con mi familia. | Sonntags esse ich mit meiner Familie. | On Sundays I eat with my family. |

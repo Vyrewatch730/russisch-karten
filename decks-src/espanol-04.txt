@@ -1,0 +1,45 @@
+# Spanische Adjektive und Adverbien ohne russische Vorlage
+# typ | es | de | en | Beispiel | Deutsch | Englisch | Tipp
+# Adjektive: „hermoso, hermosa“ = männlich, weiblich. Mit * am Ende von es gibt es ein Adverb auf -mente.
+adjetivo | hermoso, hermosa* | wunderschön | beautiful | ¡Qué playa tan hermosa! | Was für ein wunderschöner Strand! | What a beautiful beach! |
+adjetivo | estúpido, estúpida* | dumm, blöd | stupid | ¡Qué pregunta tan estúpida! | Was für eine blöde Frage! | What a stupid question! | Unhöflich. Milder: tonto.
+adjetivo | guapo, guapa | hübsch, gutaussehend | good-looking | Tu novio es muy guapo. | Dein Freund sieht sehr gut aus. | Your boyfriend is very handsome. | In der DR heißt guapo auch: wütend! Estoy guapo = Ich bin sauer.
+adjetivo | lindo, linda | hübsch, süß | pretty, cute | ¡Qué lindo tu bebé! | Wie süß dein Baby ist! | Your baby is so cute! | In Lateinamerika sehr häufig.
+adjetivo | feo, fea | hässlich | ugly | Ese edificio es muy feo. | Das Gebäude ist sehr hässlich. | That building is very ugly. | Gegenteil: bonito, lindo.
+adjetivo | preocupado, preocupada | besorgt | worried | Estoy preocupado por ti. | Ich mache mir Sorgen um dich. | I'm worried about you. | Immer mit estar.
+adjetivo | equivocado, equivocada | falsch, im Irrtum | wrong, mistaken | Estás equivocado. | Du irrst dich. | You're wrong. | Mit estar.
+adjetivo | asustado, asustada | erschrocken, ängstlich | scared | El niño está asustado. | Das Kind hat Angst. | The child is scared. |
+adjetivo | enamorado, enamorada | verliebt | in love | Estoy enamorada de él. | Ich bin in ihn verliebt. | I'm in love with him. |
+adjetivo | perdido, perdida | verloren; verirrt | lost | Estamos perdidos. | Wir haben uns verirrt. | We're lost. |
+adjetivo | enojado, enojada | wütend, verärgert | angry | Mi mamá está enojada. | Meine Mama ist sauer. | My mom is angry. | In Spanien: enfadado. In der DR auch: bravo, guapo.
+adjetivo | encantado, encantada | erfreut | delighted | Encantado de conocerte. | Freut mich, dich kennenzulernen. | Nice to meet you. | Frauen sagen: Encantada.
+adjetivo | adorable | entzückend | adorable | Tu perro es adorable. | Dein Hund ist entzückend. | Your dog is adorable. |
+adjetivo | preparado, preparada | bereit, vorbereitet | ready, prepared | ¿Estás preparado? | Bist du bereit? | Are you ready? | Alltag auch: listo.
+adjetivo | emocionante | aufregend, spannend | exciting | El partido fue emocionante. | Das Spiel war spannend. | The game was exciting. |
+adjetivo | celoso, celosa | eifersüchtig | jealous | Mi novio es muy celoso. | Mein Freund ist sehr eifersüchtig. | My boyfriend is very jealous. |
+adjetivo | divertido, divertida | lustig, unterhaltsam | fun | La fiesta fue muy divertida. | Die Party war sehr lustig. | The party was a lot of fun. |
+adjetivo | aburrido, aburrida | langweilig; gelangweilt | boring; bored | La película es aburrida. | Der Film ist langweilig. | The movie is boring. | ser aburrido = langweilig sein, estar aburrido = sich langweilen.
+adjetivo | delicioso, deliciosa* | köstlich | delicious | ¡Este mangú está delicioso! | Dieses Mangú ist köstlich! | This mangú is delicious! | Mangú = Püree aus Kochbananen, typisches Frühstück der DR.
+adjetivo | disponible | verfügbar, frei | available | ¿Hay habitaciones disponibles? | Gibt es freie Zimmer? | Are there rooms available? |
+adjetivo | egoísta | egoistisch | selfish | No seas egoísta. | Sei nicht so egoistisch. | Don't be selfish. | Für Männer und Frauen gleich.
+adjetivo | rubio, rubia | blond | blond | Su hija es rubia. | Ihre Tochter ist blond. | Her daughter is blond. | In der DR auch: jabao (hellhäutig mit hellem Haar).
+adjetivo | gordo, gorda | dick | fat | El gato está muy gordo. | Die Katze ist sehr dick. | The cat is very fat. | In der DR oft liebevoll als Kosename: mi gordo, mi gorda.
+adjetivo | flaco, flaca | dünn | skinny | Estás muy flaco. | Du bist sehr dünn. | You're very skinny. | Kosename: flaco, flaca.
+adjetivo | fabuloso, fabulosa | fabelhaft | fabulous | ¡Fue un día fabuloso! | Es war ein fabelhafter Tag! | It was a fabulous day! |
+adjetivo | impresionante* | beeindruckend | impressive | La vista es impresionante. | Die Aussicht ist beeindruckend. | The view is impressive. |
+adjetivo | malvado, malvada | böse, gemein | evil | El malvado del cuento. | Der Bösewicht im Märchen. | The villain of the story. |
+adjetivo | cansado, cansada | müde | tired | Estoy muy cansado. | Ich bin sehr müde. | I'm very tired. | In der DR klingt es oft wie „cansao“.
+adjetivo | ocupado, ocupada | beschäftigt; besetzt | busy; occupied | Ahora estoy ocupado. | Ich bin gerade beschäftigt. | I'm busy right now. |
+adjetivo | sabroso, sabrosa* | lecker; toll (DR) | tasty | La comida está sabrosa. | Das Essen ist lecker. | The food is tasty. | In der DR auch: angenehm, schön (Qué sabroso está el día).
+adjetivo | chévere | toll, super | great, cool | ¡Qué chévere! | Wie toll! | How cool! | Sehr häufig in der Karibik und Venezuela.
+adjetivo | caro, cara | teuer | expensive | El hotel es muy caro. | Das Hotel ist sehr teuer. | The hotel is very expensive. |
+adjetivo | lleno, llena | voll | full | La guagua está llena. | Der Bus ist voll. | The bus is full. | Satt sein: estar lleno.
+adverbio | simplemente | einfach | simply | Simplemente no quiero. | Ich will einfach nicht. | I simply don't want to. |
+adverbio | finalmente | schließlich, endlich | finally | Finalmente llegamos. | Endlich sind wir angekommen. | We finally arrived. | Alltag: por fin.
+adverbio | obviamente | offensichtlich | obviously | Obviamente, tienes razón. | Natürlich hast du recht. | Obviously, you're right. |
+adverbio | anoche | gestern Abend, letzte Nacht | last night | Anoche fuimos a bailar. | Gestern Abend waren wir tanzen. | Last night we went dancing. |
+adverbio | últimamente | in letzter Zeit | lately | Últimamente estoy muy cansado. | In letzter Zeit bin ich sehr müde. | Lately I've been very tired. |
+adverbio | deprisa | schnell, eilig | quickly | ¡Ven deprisa! | Komm schnell! | Come quickly! | In der DR: rápido, ligero.
+adverbio | aparte | getrennt; außerdem | apart, besides | Eso es aparte. | Das ist etwas anderes. | That's a separate thing. | aparte de = abgesehen von.
+adverbio | muchísimo | sehr viel | very much | Te quiero muchísimo. | Ich hab dich sehr lieb. | I love you so much. | -ísimo = sehr: muchísimo, rapidísimo.
+adverbio | aproximadamente | ungefähr | approximately | Son aproximadamente diez kilómetros. | Es sind ungefähr zehn Kilometer. | It's about ten kilometers. | Alltag: más o menos.

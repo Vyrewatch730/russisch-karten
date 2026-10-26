@@ -1,0 +1,53 @@
+# Spanische Verben ohne russische Vorlage
+# typ | es | de | en | Beispiel | Deutsch | Englisch | Tipp
+verbo | deber | müssen, sollen; schulden | must, should; to owe | Debes descansar. | Du solltest dich ausruhen. | You should rest. | deber + Infinitiv = sollen, müssen (Pflicht). Höflicher Rat: deberías = du solltest. Te debo cien pesos = Ich schulde dir hundert Pesos.
+verbo | funcionar | funktionieren | to work (machine) | La nevera no funciona. | Der Kühlschrank funktioniert nicht. | The fridge doesn't work. | Für Geräte. Für Menschen: trabajar.
+verbo | lamentar | bedauern | to regret | Lamento la demora. | Ich bedauere die Verspätung. | I'm sorry for the delay. | Lo lamento = Es tut mir leid (formeller als lo siento).
+verbo | jurar | schwören | to swear | Te lo juro. | Ich schwöre es dir. | I swear. |
+verbo | soler | pflegen (etwas zu tun), normalerweise tun | to usually do | Suelo levantarme temprano. | Ich stehe normalerweise früh auf. | I usually get up early. | Immer mit Infinitiv. o → ue: suelo, sueles, suele.
+verbo | referirse | sich beziehen, meinen | to refer to | ¿A qué te refieres? | Was meinst du? | What do you mean? | e → ie: me refiero. Mit a: referirse a algo.
+verbo | escapar | fliehen, entkommen | to escape | El perro escapó de la casa. | Der Hund ist aus dem Haus entwischt. | The dog escaped from the house. | Auch reflexiv: escaparse.
+verbo | pelear | streiten, kämpfen | to fight, to argue | No quiero pelear contigo. | Ich will nicht mit dir streiten. | I don't want to fight with you. | In der DR: pelear = sich streiten, auch mit Worten.
+verbo | fingir | vortäuschen, so tun als ob | to pretend | Él finge que no me ve. | Er tut so, als ob er mich nicht sieht. | He pretends not to see me. | yo-Form: finjo (g → j).
+verbo | disfrutar | genießen | to enjoy | ¡Disfruta tus vacaciones! | Genieß deinen Urlaub! | Enjoy your vacation! | Auch: disfrutar de algo.
+verbo | montar | reiten, fahren; aufbauen | to ride; to set up | ¿Sabes montar bicicleta? | Kannst du Fahrrad fahren? | Can you ride a bike? | In der DR auch: montarse en la guagua = in den Bus einsteigen.
+verbo | votar | wählen (Wahl) | to vote | Mañana vamos a votar. | Morgen gehen wir wählen. | Tomorrow we're going to vote. |
+verbo | pescar | angeln, fischen | to fish | Mi abuelo pesca en el río. | Mein Opa angelt im Fluss. | My grandfather fishes in the river. | Pasado yo: pesqué.
+verbo | imaginar | sich vorstellen | to imagine | ¡Imagínate! | Stell dir vor! | Imagine! | Meist reflexiv: imaginarse.
+verbo | explotar | explodieren; ausbeuten | to explode; to exploit | La bomba explotó. | Die Bombe ist explodiert. | The bomb exploded. |
+verbo | relajarse | sich entspannen | to relax | Necesito relajarme. | Ich muss mich entspannen. | I need to relax. | ¡Relájate! = Entspann dich!
+verbo | permanecer | bleiben | to remain | Permanezca en su asiento. | Bleiben Sie auf Ihrem Platz. | Remain in your seat. | Formell; im Alltag: quedarse. yo-Form: permanezco.
+verbo | hallar | finden | to find | No hallo mis llaves. | Ich finde meine Schlüssel nicht. | I can't find my keys. | Eher schriftlich; im Alltag: encontrar.
+verbo | lidiar | sich herumschlagen mit | to deal with | Tengo que lidiar con muchos problemas. | Ich muss mich mit vielen Problemen herumschlagen. | I have to deal with many problems. | lidiar con algo.
+verbo | obtener | erhalten, bekommen | to obtain | Obtuve el trabajo. | Ich habe die Stelle bekommen. | I got the job. | Wie tener: obtengo, obtuve. Im Alltag: conseguir.
+verbo | mover | bewegen | to move | No puedo mover la mesa. | Ich kann den Tisch nicht bewegen. | I can't move the table. | o → ue: muevo. Sich bewegen: moverse. Umziehen: mudarse.
+verbo | conducir | fahren (Auto); führen | to drive | Él conduce muy rápido. | Er fährt sehr schnell. | He drives very fast. | In Spanien üblich; in der DR sagt man manejar. yo-Form: conduzco.
+verbo | doler | wehtun | to hurt | Me duele la cabeza. | Ich habe Kopfschmerzen. | I have a headache. | Wie gustar: Das, was wehtut, ist Subjekt. o → ue: me duele, me duelen los pies.
+verbo | encantar | sehr gefallen, lieben | to love (something) | ¡Me encanta la bachata! | Ich liebe Bachata! | I love bachata! | Wie gustar, nur stärker. Plural: Me encantan los mangos.
+verbo | importar | wichtig sein; importieren | to matter | No me importa. | Das ist mir egal. | I don't care. | Wie gustar. ¿Te importa si …? = Macht es dir etwas aus, wenn …?
+verbo | detenerse | anhalten, stehen bleiben | to stop | ¡Detente! | Halt an! | Stop! | Wie tener. Im Alltag: pararse.
+verbo | soltar | loslassen | to let go | ¡Suéltame! | Lass mich los! | Let me go! | o → ue: suelto.
+verbo | cuidarse | auf sich aufpassen | to take care of oneself | ¡Cuídate mucho! | Pass gut auf dich auf! | Take care! | Häufiger Abschiedsgruß. cuidar a alguien = auf jemanden aufpassen.
+verbo | apestar | stinken | to stink | Esta basura apesta. | Dieser Müll stinkt. | This trash stinks. |
+verbo | sugerir | vorschlagen | to suggest | Te sugiero el pescado. | Ich empfehle dir den Fisch. | I suggest the fish. | e → ie: sugiero. Danach oft que + Subjuntivo.
+verbo | requerir | erfordern | to require | Este trabajo requiere paciencia. | Diese Arbeit erfordert Geduld. | This job requires patience. | e → ie: requiere.
+verbo | opinar | meinen, denken | to think, to have an opinion | ¿Qué opinas? | Was meinst du? | What do you think? |
+verbo | agradar | gefallen | to please | Me agrada tu idea. | Deine Idee gefällt mir. | I like your idea. | Wie gustar, etwas formeller.
+verbo | arruinar | ruinieren, verderben | to ruin | Arruinaste la sorpresa. | Du hast die Überraschung verdorben. | You ruined the surprise. |
+verbo | cazar | jagen | to hunt | Al gato le gusta cazar ratones. | Die Katze jagt gern Mäuse. | The cat likes to hunt mice. | Pasado yo: cacé.
+verbo | identificar | erkennen, identifizieren | to identify | ¿Puede identificar al ladrón? | Können Sie den Dieb erkennen? | Can you identify the thief? |
+verbo | mentir | lügen | to lie | ¡No me mientas! | Lüg mich nicht an! | Don't lie to me! | e → ie: miento; Pasado: mintió.
+verbo | cocinar | kochen | to cook | Hoy cocino yo. | Heute koche ich. | Today I'm cooking. |
+verbo | limpiar | putzen, sauber machen | to clean | Tengo que limpiar la casa. | Ich muss das Haus putzen. | I have to clean the house. |
+verbo | lavar | waschen | to wash | Lava los platos, por favor. | Spül bitte das Geschirr. | Wash the dishes, please. | Sich waschen: lavarse (me lavo las manos).
+verbo | manejar | (Auto) fahren | to drive | ¿Sabes manejar? | Kannst du Auto fahren? | Can you drive? | In der DR und Lateinamerika das normale Wort für Auto fahren.
+verbo | alquilar | mieten, vermieten | to rent | Queremos alquilar un apartamento. | Wir wollen eine Wohnung mieten. | We want to rent an apartment. | In der DR auch: rentar.
+verbo | cobrar | kassieren, verlangen (Geld) | to charge | ¿Cuánto me cobra? | Wie viel verlangen Sie? | How much do you charge me? |
+verbo | ducharse | duschen | to shower | Me ducho por la mañana. | Ich dusche morgens. | I shower in the morning. | In der DR auch: bañarse.
+verbo | enojarse | sich ärgern, wütend werden | to get angry | No te enojes. | Ärgere dich nicht. | Don't get angry. | In Spanien: enfadarse. In der DR auch: ponerse bravo.
+verbo | aburrirse | sich langweilen | to get bored | Me aburro en casa. | Ich langweile mich zu Hause. | I get bored at home. |
+verbo | janguear | ausgehen, abhängen (DR) | to hang out | Vamos a janguear esta noche. | Wir gehen heute Abend aus. | We're going out tonight. | Vom englischen „hang out“, typisch für die DR und Puerto Rico.
+verbo | chatear | chatten | to chat (online) | Chateamos todos los días. | Wir chatten jeden Tag. | We chat every day. |
+verbo | descargar | herunterladen; abladen | to download; to unload | Descarga la aplicación. | Lade die App herunter. | Download the app. | Pasado yo: descargué.
+verbo | cargar | laden; tragen | to charge; to carry | Tengo que cargar el celular. | Ich muss das Handy aufladen. | I have to charge my phone. | Pasado yo: cargué.
+verbo | prender | einschalten, anmachen | to turn on | Prende el abanico. | Mach den Ventilator an. | Turn on the fan. | In der DR üblich; in Spanien: encender.

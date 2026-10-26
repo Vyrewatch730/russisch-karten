@@ -71,3 +71,13 @@ powershell -ExecutionPolicy Bypass -File tools\build-verbs.ps1
 ```
 
 Danach prüft `http://localhost:8080/tools/check-decks.html` Betonung, Pflichtfelder und Konjugation aller Decks. Mit `?deck=verben-03&verbose` werden für ein Deck zusätzlich alle berechneten Formen angezeigt.
+
+## Spanisch-Modus
+
+Die App kann statt Russisch auch Spanisch (Schwerpunkt Dominikanische Republik) abfragen. Im Spanisch-Modus bildet sie die Decks neu: je Wortart, sortiert nach spanischer Häufigkeit.
+
+- `decks-src/espanol-*.txt` und `decks-src/alltag-*.txt`: spanische Karten ohne russische Vorlage (Grundwörter, Verben, Nomen, Adjektive, Alltag in der DR), gebaut mit `tools\build-espanol.ps1`.
+- `decks-src/preposiciones-01.txt`: spanische Präpositionen (`tools\build-preposiciones.ps1`).
+- `decks-src/notizen-es.tsv`: Notizen zum spanischen Wort auf Verbkarten.
+- Spanische Häufigkeit: `tools/es-rank.html` (im Browser über den lokalen Server öffnen) zählt für jede Karte alle Formen im Untertitel-Korpus und schreibt `decks-src/es-rang.tsv`; `tools\apply-es-rank.ps1` trägt die Zahlen als `es_freq` in die Decks ein (läuft auch am Ende jedes Build-Skripts). Die Liste der fehlenden häufigen Wörter steht ebenfalls in `es-rank.html`.
+- Quelle der Häufigkeit: [FrequencyWords](https://github.com/hermitdave/FrequencyWords) von Hermit Dave (OpenSubtitles 2018, Spanisch, Lizenz CC BY-SA 4.0). Die Datei `tools/es-frequency.txt` (`es_50k.txt`) ist nicht im Repository.

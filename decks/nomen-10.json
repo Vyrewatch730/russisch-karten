@@ -24,7 +24,8 @@
                       "example_cases":  "у меня́ – Genitiv · приём – Nominativ · у врача́ – Genitiv",
                       "example_de":  "Ich habe um neun einen Arzttermin.",
                       "example_en":  "I have a doctor\u0027s appointment at nine.",
-                      "example_es":  "Tengo cita con el médico a las nueve."
+                      "example_es":  "Tengo cita con el médico a las nueve.",
+                      "es_freq":  7210
                   },
                   {
                       "id":  "nm-клетка",
@@ -43,7 +44,8 @@
                       "example_cases":  "пти́ца – Nominativ · в кле́тке – Präpositiv",
                       "example_de":  "Der Vogel sitzt im Käfig.",
                       "example_en":  "The bird is in the cage.",
-                      "example_es":  "El pájaro está en la jaula."
+                      "example_es":  "El pájaro está en la jaula.",
+                      "es_freq":  7532
                   },
                   {
                       "id":  "nm-болезнь",
@@ -62,7 +64,8 @@
                       "example_cases":  "опа́сная боле́знь – Nominativ",
                       "example_de":  "Das ist eine gefährliche Krankheit.",
                       "example_en":  "This is a dangerous disease.",
-                      "example_es":  "Es una enfermedad peligrosa."
+                      "example_es":  "Es una enfermedad peligrosa.",
+                      "es_freq":  27256
                   },
                   {
                       "id":  "nm-кожа",
@@ -78,7 +81,8 @@
                       "example_cases":  "э́та су́мка – Nominativ · из ко́жи – Genitiv",
                       "example_de":  "Diese Tasche ist aus Leder.",
                       "example_en":  "This bag is made of leather.",
-                      "example_es":  "Este bolso es de cuero."
+                      "example_es":  "Este bolso es de cuero.",
+                      "es_freq":  28747
                   },
                   {
                       "id":  "nm-заявление",
@@ -96,7 +100,8 @@
                       "example_cases":  "заявле́ние – Akkusativ · на о́тпуск – Akkusativ",
                       "example_de":  "Schreiben Sie einen Urlaubsantrag.",
                       "example_en":  "Write a leave application.",
-                      "example_es":  "Escriba una solicitud de vacaciones."
+                      "example_es":  "Escriba una solicitud de vacaciones.",
+                      "es_freq":  7000
                   },
                   {
                       "id":  "nm-сравнение",
@@ -115,7 +120,8 @@
                       "example_cases":  "по сравне́нию – Dativ · с Москво́й – Instrumental",
                       "example_de":  "Im Vergleich zu Moskau ist es hier warm.",
                       "example_en":  "Compared to Moscow, it\u0027s warm here.",
-                      "example_es":  "En comparación con Moscú, aquí hace calor."
+                      "example_es":  "En comparación con Moscú, aquí hace calor.",
+                      "es_freq":  3014
                   },
                   {
                       "id":  "nm-попытка",
@@ -134,7 +140,8 @@
                       "example_cases":  "моя́ пе́рвая попы́тка – Nominativ",
                       "example_de":  "Das ist mein erster Versuch.",
                       "example_en":  "This is my first attempt.",
-                      "example_es":  "Es mi primer intento."
+                      "example_es":  "Es mi primer intento.",
+                      "es_freq":  38312
                   },
                   {
                       "id":  "nm-расчет",
@@ -152,7 +159,8 @@
                       "example_cases":  "по мои́м расчётам – Dativ Plural",
                       "example_de":  "Nach meiner Berechnung schaffen wir es.",
                       "example_en":  "By my calculations, we\u0027ll make it.",
-                      "example_es":  "Según mis cálculos, llegaremos a tiempo."
+                      "example_es":  "Según mis cálculos, llegaremos a tiempo.",
+                      "es_freq":  5230
                   },
                   {
                       "id":  "nm-депутат",
@@ -171,7 +179,8 @@
                       "example_cases":  "депута́т – Nominativ · в Ду́ме – Präpositiv",
                       "example_de":  "Der Abgeordnete sprach in der Duma.",
                       "example_en":  "The deputy spoke in the Duma.",
-                      "example_es":  "El diputado habló en la Duma."
+                      "example_es":  "El diputado habló en la Duma.",
+                      "es_freq":  2540
                   },
                   {
                       "id":  "nm-комитет",
@@ -190,7 +199,8 @@
                       "example_cases":  "комите́т – Nominativ · реше́ние – Akkusativ",
                       "example_de":  "Der Ausschuss hat eine Entscheidung getroffen.",
                       "example_en":  "The committee made a decision.",
-                      "example_es":  "El comité tomó una decisión."
+                      "example_es":  "El comité tomó una decisión.",
+                      "es_freq":  11089
                   },
                   {
                       "id":  "nm-знак",
@@ -209,7 +219,8 @@
                       "example_cases":  "знак – Nominativ",
                       "example_de":  "Hier steht ein Stoppschild.",
                       "example_en":  "There\u0027s a stop sign here.",
-                      "example_es":  "Aquí hay una señal de \"Pare\"."
+                      "example_es":  "Aquí hay una señal de \"Pare\".",
+                      "es_freq":  48050
                   },
                   {
                       "id":  "nm-дядя",
@@ -229,7 +240,8 @@
                       "example_cases":  "мой дя́дя – Nominativ · в Пи́тере – Präpositiv",
                       "example_de":  "Mein Onkel wohnt in Petersburg.",
                       "example_en":  "My uncle lives in St. Petersburg.",
-                      "example_es":  "Mi tío vive en San Petersburgo."
+                      "example_es":  "Mi tío vive en San Petersburgo.",
+                      "es_freq":  140237
                   },
                   {
                       "id":  "nm-хлеб",
@@ -245,7 +257,8 @@
                       "example_cases":  "хле́ба – Genitiv (etwas davon)",
                       "example_de":  "Kauf bitte Brot.",
                       "example_en":  "Buy some bread, please.",
-                      "example_es":  "Compra pan, por favor."
+                      "example_es":  "Compra pan, por favor.",
+                      "es_freq":  22912
                   },
                   {
                       "id":  "nm-учет",
@@ -261,7 +274,8 @@
                       "example_cases":  "на учёте – Präpositiv · у врача́ – Genitiv",
                       "example_de":  "Er ist beim Arzt registriert.",
                       "example_en":  "He\u0027s registered with the doctor.",
-                      "example_es":  "Está registrado con el médico."
+                      "example_es":  "Está registrado con el médico.",
+                      "es_freq":  36462
                   },
                   {
                       "id":  "nm-чай",
@@ -277,7 +291,8 @@
                       "example_cases":  "ча́ю – Genitiv (etwas davon, Form auf -ю)",
                       "example_de":  "Möchtest du Tee?",
                       "example_en":  "Do you want some tea?",
-                      "example_es":  "¿Quieres té?"
+                      "example_es":  "¿Quieres té?",
+                      "es_freq":  32327
                   },
                   {
                       "id":  "nm-режим",
@@ -295,7 +310,8 @@
                       "example_cases":  "у ребёнка – Genitiv · стро́гий режи́м – Nominativ · дня – Genitiv",
                       "example_de":  "Das Kind hat einen festen Tagesablauf.",
                       "example_en":  "The child has a strict daily routine.",
-                      "example_es":  "El niño tiene un horario estricto."
+                      "example_es":  "El niño tiene un horario estricto.",
+                      "es_freq":  2782
                   },
                   {
                       "id":  "nm-вирус",
@@ -314,7 +330,8 @@
                       "example_cases":  "в компью́тере – Präpositiv · ви́рус – Nominativ",
                       "example_de":  "Im Computer ist ein Virus.",
                       "example_en":  "There\u0027s a virus in the computer.",
-                      "example_es":  "Hay un virus en la computadora."
+                      "example_es":  "Hay un virus en la computadora.",
+                      "es_freq":  23408
                   },
                   {
                       "id":  "nm-выражение",
@@ -333,7 +350,8 @@
                       "example_cases":  "э́то выраже́ние – Akkusativ",
                       "example_de":  "Ich verstehe diesen Ausdruck nicht.",
                       "example_en":  "I don\u0027t understand this expression.",
-                      "example_es":  "No entiendo esta expresión."
+                      "example_es":  "No entiendo esta expresión.",
+                      "es_freq":  8889
                   },
                   {
                       "id":  "nm-зима",
@@ -353,7 +371,8 @@
                       "example_de":  "Im Winter ist es in Russland sehr kalt.",
                       "example_en":  "It\u0027s very cold in Russia in winter.",
                       "example_es":  "En invierno hace mucho frío en Rusia.",
-                      "akk":  "зи́му"
+                      "akk":  "зи́му",
+                      "es_freq":  12983
                   },
                   {
                       "id":  "nm-здоровье",
@@ -369,7 +388,8 @@
                       "example_cases":  "здоро́вье – Akkusativ",
                       "example_de":  "Pass auf deine Gesundheit auf!",
                       "example_en":  "Take care of your health!",
-                      "example_es":  "¡Cuida tu salud!"
+                      "example_es":  "¡Cuida tu salud!",
+                      "es_freq":  37016
                   },
                   {
                       "id":  "nm-десяток",
@@ -388,7 +408,8 @@
                       "example_cases":  "деся́ток – Akkusativ · яи́ц – Genitiv Plural",
                       "example_de":  "Kauf zehn Eier.",
                       "example_en":  "Buy ten eggs.",
-                      "example_es":  "Compra una decena de huevos."
+                      "example_es":  "Compra una decena de huevos.",
+                      "es_freq":  1808
                   },
                   {
                       "id":  "nm-глубина",
@@ -406,7 +427,8 @@
                       "example_cases":  "кака́я глубина́ – Nominativ",
                       "example_de":  "Wie tief ist es hier?",
                       "example_en":  "How deep is it here?",
-                      "example_es":  "¿Qué profundidad hay aquí?"
+                      "example_es":  "¿Qué profundidad hay aquí?",
+                      "es_freq":  6230
                   },
                   {
                       "id":  "nm-сеть",
@@ -426,7 +448,8 @@
                       "example_de":  "Ich habe das im Netz gefunden.",
                       "example_en":  "I found it online.",
                       "example_es":  "Lo encontré en la red.",
-                      "loc":  "в сети́"
+                      "loc":  "в сети́",
+                      "es_freq":  26342
                   },
                   {
                       "id":  "nm-студент",
@@ -446,7 +469,8 @@
                       "example_cases":  "студе́нт – Nominativ · пе́рвого ку́рса – Genitiv",
                       "example_de":  "Ich bin Student im ersten Studienjahr.",
                       "example_en":  "I\u0027m a first-year student.",
-                      "example_es":  "Soy estudiante de primer año."
+                      "example_es":  "Soy estudiante de primer año.",
+                      "es_freq":  28864
                   },
                   {
                       "id":  "nm-скорость",
@@ -465,7 +489,8 @@
                       "example_cases":  "ско́рость – Akkusativ",
                       "example_de":  "Fahr nicht zu schnell!",
                       "example_en":  "Don\u0027t speed!",
-                      "example_es":  "¡No excedas la velocidad!"
+                      "example_es":  "¡No excedas la velocidad!",
+                      "es_freq":  22107
                   },
                   {
                       "id":  "nm-секунда",
@@ -484,7 +509,8 @@
                       "example_cases":  "секу́нду – Akkusativ (Zeitdauer)",
                       "example_de":  "Warte eine Sekunde!",
                       "example_en":  "Wait a second!",
-                      "example_es":  "¡Espera un segundo!"
+                      "example_es":  "¡Espera un segundo!",
+                      "es_freq":  6107
                   },
                   {
                       "id":  "nm-поиск",
@@ -503,7 +529,8 @@
                       "example_cases":  "в по́иске – Präpositiv · рабо́ты – Genitiv",
                       "example_de":  "Er ist auf Arbeitssuche.",
                       "example_en":  "He\u0027s looking for a job.",
-                      "example_es":  "Está buscando trabajo."
+                      "example_es":  "Está buscando trabajo.",
+                      "es_freq":  18597
                   },
                   {
                       "id":  "nm-суть",
@@ -519,7 +546,8 @@
                       "example_cases":  "в чём – Präpositiv · суть – Nominativ · пробле́мы – Genitiv",
                       "example_de":  "Worin liegt der Kern des Problems?",
                       "example_en":  "What\u0027s the essence of the problem?",
-                      "example_es":  "¿Cuál es el fondo del problema?"
+                      "example_es":  "¿Cuál es el fondo del problema?",
+                      "es_freq":  3887
                   },
                   {
                       "id":  "nm-налог",
@@ -538,7 +566,8 @@
                       "example_cases":  "все – Nominativ Plural · нало́ги – Akkusativ Plural",
                       "example_de":  "Alle müssen Steuern zahlen.",
                       "example_en":  "Everyone must pay taxes.",
-                      "example_es":  "Todos deben pagar impuestos."
+                      "example_es":  "Todos deben pagar impuestos.",
+                      "es_freq":  12784
                   },
                   {
                       "id":  "nm-ошибка",
@@ -557,7 +586,8 @@
                       "example_cases":  "моя́ оши́бка – Nominativ",
                       "example_de":  "Das ist mein Fehler.",
                       "example_en":  "That\u0027s my mistake.",
-                      "example_es":  "Es mi error."
+                      "example_es":  "Es mi error.",
+                      "es_freq":  68838
                   },
                   {
                       "id":  "nm-доход",
@@ -576,7 +606,8 @@
                       "example_cases":  "у него́ – Genitiv · хоро́ший дохо́д – Nominativ",
                       "example_de":  "Er hat ein gutes Einkommen.",
                       "example_en":  "He has a good income.",
-                      "example_es":  "Él tiene buenos ingresos."
+                      "example_es":  "Él tiene buenos ingresos.",
+                      "es_freq":  6300
                   },
                   {
                       "id":  "nm-режиссер",
@@ -595,7 +626,8 @@
                       "example_cases":  "кто – Nominativ · режиссёр – Nominativ · э́того фи́льма – Genitiv",
                       "example_de":  "Wer ist der Regisseur dieses Films?",
                       "example_en":  "Who\u0027s the director of this film?",
-                      "example_es":  "¿Quién es el director de esta película?"
+                      "example_es":  "¿Quién es el director de esta película?",
+                      "es_freq":  1998
                   },
                   {
                       "id":  "nm-поверхность",
@@ -614,7 +646,8 @@
                       "example_cases":  "на пове́рхности – Präpositiv · воды́ – Genitiv · ли́стья – Nominativ Plural",
                       "example_de":  "Auf der Wasseroberfläche schwimmen Blätter.",
                       "example_en":  "Leaves are floating on the water\u0027s surface.",
-                      "example_es":  "Hay hojas flotando en la superficie del agua."
+                      "example_es":  "Hay hojas flotando en la superficie del agua.",
+                      "es_freq":  10720
                   },
                   {
                       "id":  "nm-ощущение",
@@ -632,7 +665,8 @@
                       "example_cases":  "у меня́ – Genitiv · стра́нное ощуще́ние – Nominativ",
                       "example_de":  "Ich habe ein seltsames Gefühl.",
                       "example_en":  "I have a strange feeling.",
-                      "example_es":  "Tengo una sensación extraña."
+                      "example_es":  "Tengo una sensación extraña.",
+                      "es_freq":  17743
                   },
                   {
                       "id":  "nm-станция",
@@ -651,7 +685,8 @@
                       "example_cases":  "на сле́дующей ста́нции – Präpositiv",
                       "example_de":  "Steigen Sie an der nächsten Station aus.",
                       "example_en":  "Get off at the next station.",
-                      "example_es":  "Bájese en la próxima estación."
+                      "example_es":  "Bájese en la próxima estación.",
+                      "es_freq":  34183
                   },
                   {
                       "id":  "nm-клуб",
@@ -669,7 +704,8 @@
                       "example_cases":  "в спорти́вный клуб – Akkusativ (wohin?)",
                       "example_de":  "Er geht in einen Sportverein.",
                       "example_en":  "He goes to a sports club.",
-                      "example_es":  "Él va a un club deportivo."
+                      "example_es":  "Él va a un club deportivo.",
+                      "es_freq":  42886
                   },
                   {
                       "id":  "nm-карта",
@@ -688,7 +724,8 @@
                       "example_cases":  "ка́ртой – Instrumental",
                       "example_de":  "Kann man mit Karte zahlen?",
                       "example_en":  "Can I pay by card?",
-                      "example_es":  "¿Se puede pagar con tarjeta?"
+                      "example_es":  "¿Se puede pagar con tarjeta?",
+                      "es_freq":  17293
                   },
                   {
                       "id":  "nm-революция",
@@ -706,7 +743,8 @@
                       "example_cases":  "револю́ция – Nominativ · году́ – Präpositiv",
                       "example_de":  "Die Revolution war 1917.",
                       "example_en":  "The revolution was in 1917.",
-                      "example_es":  "La revolución fue en 1917."
+                      "example_es":  "La revolución fue en 1917.",
+                      "es_freq":  10084
                   },
                   {
                       "id":  "nm-стекло",
@@ -725,7 +763,8 @@
                       "example_cases":  "ма́льчик – Nominativ · стекло́ – Akkusativ",
                       "example_de":  "Der Junge hat die Scheibe zerbrochen.",
                       "example_en":  "The boy broke the glass.",
-                      "example_es":  "El niño rompió el vidrio."
+                      "example_es":  "El niño rompió el vidrio.",
+                      "es_freq":  6064
                   },
                   {
                       "id":  "nm-министерство",
@@ -743,7 +782,8 @@
                       "example_cases":  "в министе́рстве – Präpositiv",
                       "example_de":  "Er arbeitet im Ministerium.",
                       "example_en":  "He works at the ministry.",
-                      "example_es":  "Él trabaja en el ministerio."
+                      "example_es":  "Él trabaja en el ministerio.",
+                      "es_freq":  5910
                   },
                   {
                       "id":  "nm-колено",
@@ -762,7 +802,8 @@
                       "example_cases":  "у меня́ – Genitiv · коле́но – Nominativ",
                       "example_de":  "Mir tut das Knie weh.",
                       "example_en":  "My knee hurts.",
-                      "example_es":  "Me duele la rodilla."
+                      "example_es":  "Me duele la rodilla.",
+                      "es_freq":  16605
                   },
                   {
                       "id":  "nm-этаж",
@@ -781,7 +822,8 @@
                       "example_cases":  "на пя́том этаже́ – Präpositiv",
                       "example_de":  "Ich wohne im fünften Stock.",
                       "example_en":  "I live on the fifth floor.",
-                      "example_es":  "Vivo en el quinto piso."
+                      "example_es":  "Vivo en el quinto piso.",
+                      "es_freq":  675
                   },
                   {
                       "id":  "nm-высота",
@@ -800,7 +842,8 @@
                       "example_cases":  "высоты́ – Genitiv (nach боя́ться)",
                       "example_de":  "Ich habe Höhenangst.",
                       "example_en":  "I\u0027m afraid of heights.",
-                      "example_es":  "Tengo miedo a las alturas."
+                      "example_es":  "Tengo miedo a las alturas.",
+                      "es_freq":  15424
                   },
                   {
                       "id":  "nm-бабушка",
@@ -820,7 +863,8 @@
                       "example_cases":  "ба́бушка – Nominativ · пироги́ – Akkusativ Plural",
                       "example_de":  "Oma bäckt Piroggen.",
                       "example_en":  "Grandma is baking pies.",
-                      "example_es":  "La abuela hornea empanadas."
+                      "example_es":  "La abuela hornea empanadas.",
+                      "es_freq":  41978
                   },
                   {
                       "id":  "nm-трубка",
@@ -839,7 +883,8 @@
                       "example_cases":  "тру́бку – Akkusativ · телефо́н – Nominativ",
                       "example_de":  "Geh ran, das Telefon klingelt!",
                       "example_en":  "Pick up, the phone is ringing!",
-                      "example_es":  "¡Contesta, suena el teléfono!"
+                      "example_es":  "¡Contesta, suena el teléfono!",
+                      "es_freq":  1733
                   },
                   {
                       "id":  "nm-газ",
@@ -858,7 +903,8 @@
                       "example_cases":  "газ – Akkusativ",
                       "example_de":  "Mach das Gas aus!",
                       "example_en":  "Turn off the gas!",
-                      "example_es":  "¡Apaga el gas!"
+                      "example_es":  "¡Apaga el gas!",
+                      "es_freq":  18952
                   },
                   {
                       "id":  "nm-мастер",
@@ -878,7 +924,8 @@
                       "example_cases":  "ма́стер – Nominativ · своего́ де́ла – Genitiv",
                       "example_de":  "Er ist ein Meister seines Fachs.",
                       "example_en":  "He\u0027s a master of his craft.",
-                      "example_es":  "Es un maestro en lo suyo."
+                      "example_es":  "Es un maestro en lo suyo.",
+                      "es_freq":  41737
                   },
                   {
                       "id":  "nm-поведение",
@@ -893,7 +940,8 @@
                       "example_cases":  "у него́ – Genitiv · плохо́е поведе́ние – Nominativ",
                       "example_de":  "Er benimmt sich schlecht.",
                       "example_en":  "He behaves badly.",
-                      "example_es":  "Se porta mal."
+                      "example_es":  "Se porta mal.",
+                      "es_freq":  12556
                   },
                   {
                       "id":  "nm-столица",
@@ -911,7 +959,8 @@
                       "example_cases":  "Москва́ – Nominativ · столи́ца – Nominativ · Росси́и – Genitiv",
                       "example_de":  "Moskau ist die Hauptstadt Russlands.",
                       "example_en":  "Moscow is the capital of Russia.",
-                      "example_es":  "Moscú es la capital de Rusia."
+                      "example_es":  "Moscú es la capital de Rusia.",
+                      "es_freq":  446
                   },
                   {
                       "id":  "nm-передача",
@@ -929,7 +978,8 @@
                       "example_cases":  "по телеви́зору – Dativ · интере́сная переда́ча – Nominativ",
                       "example_de":  "Im Fernsehen läuft eine interessante Sendung.",
                       "example_en":  "There\u0027s an interesting show on TV.",
-                      "example_es":  "Hay un programa interesante en la tele."
+                      "example_es":  "Hay un programa interesante en la tele.",
+                      "es_freq":  2402
                   }
               ]
 }
