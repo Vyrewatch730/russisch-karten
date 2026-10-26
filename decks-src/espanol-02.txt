@@ -12,7 +12,7 @@ verbo | fingir | vortäuschen, so tun als ob | to pretend | Él finge que no me 
 verbo | disfrutar | genießen | to enjoy | ¡Disfruta tus vacaciones! | Genieß deinen Urlaub! | Enjoy your vacation! | Auch: disfrutar de algo.
 verbo | montar | reiten, fahren; aufbauen | to ride; to set up | ¿Sabes montar bicicleta? | Kannst du Fahrrad fahren? | Can you ride a bike? | In der DR auch: montarse en la guagua = in den Bus einsteigen.
 verbo | votar | wählen (Wahl) | to vote | Mañana vamos a votar. | Morgen gehen wir wählen. | Tomorrow we're going to vote. |
-verbo | pescar | angeln, fischen | to fish | Mi abuelo pesca en el río. | Mein Opa angelt im Fluss. | My grandfather fishes in the river. | Pasado yo: pesqué.
+verbo | pescar | angeln, fischen | to fish | Mi abuelo pesca en el río. | Mein Opa angelt im Fluss. | My grandfather fishes in the river. | Pretérito yo: pesqué.
 verbo | imaginar | sich vorstellen | to imagine | ¡Imagínate! | Stell dir vor! | Imagine! | Meist reflexiv: imaginarse.
 verbo | explotar | explodieren; ausbeuten | to explode; to exploit | La bomba explotó. | Die Bombe ist explodiert. | The bomb exploded. |
 verbo | relajarse | sich entspannen | to relax | Necesito relajarme. | Ich muss mich entspannen. | I need to relax. | ¡Relájate! = Entspann dich!
@@ -34,9 +34,9 @@ verbo | requerir | erfordern | to require | Este trabajo requiere paciencia. | D
 verbo | opinar | meinen, denken | to think, to have an opinion | ¿Qué opinas? | Was meinst du? | What do you think? |
 verbo | agradar | gefallen | to please | Me agrada tu idea. | Deine Idee gefällt mir. | I like your idea. | Wie gustar, etwas formeller.
 verbo | arruinar | ruinieren, verderben | to ruin | Arruinaste la sorpresa. | Du hast die Überraschung verdorben. | You ruined the surprise. |
-verbo | cazar | jagen | to hunt | Al gato le gusta cazar ratones. | Die Katze jagt gern Mäuse. | The cat likes to hunt mice. | Pasado yo: cacé.
+verbo | cazar | jagen | to hunt | Al gato le gusta cazar ratones. | Die Katze jagt gern Mäuse. | The cat likes to hunt mice. | Pretérito yo: cacé.
 verbo | identificar | erkennen, identifizieren | to identify | ¿Puede identificar al ladrón? | Können Sie den Dieb erkennen? | Can you identify the thief? |
-verbo | mentir | lügen | to lie | ¡No me mientas! | Lüg mich nicht an! | Don't lie to me! | e → ie: miento; Pasado: mintió.
+verbo | mentir | lügen | to lie | ¡No me mientas! | Lüg mich nicht an! | Don't lie to me! | e → ie: miento; Pretérito: mintió.
 verbo | cocinar | kochen | to cook | Hoy cocino yo. | Heute koche ich. | Today I'm cooking. |
 verbo | limpiar | putzen, sauber machen | to clean | Tengo que limpiar la casa. | Ich muss das Haus putzen. | I have to clean the house. |
 verbo | lavar | waschen | to wash | Lava los platos, por favor. | Spül bitte das Geschirr. | Wash the dishes, please. | Sich waschen: lavarse (me lavo las manos).
@@ -48,6 +48,6 @@ verbo | enojarse | sich ärgern, wütend werden | to get angry | No te enojes. |
 verbo | aburrirse | sich langweilen | to get bored | Me aburro en casa. | Ich langweile mich zu Hause. | I get bored at home. |
 verbo | janguear | ausgehen, abhängen (DR) | to hang out | Vamos a janguear esta noche. | Wir gehen heute Abend aus. | We're going out tonight. | Vom englischen „hang out“, typisch für die DR und Puerto Rico.
 verbo | chatear | chatten | to chat (online) | Chateamos todos los días. | Wir chatten jeden Tag. | We chat every day. |
-verbo | descargar | herunterladen; abladen | to download; to unload | Descarga la aplicación. | Lade die App herunter. | Download the app. | Pasado yo: descargué.
-verbo | cargar | laden; tragen | to charge; to carry | Tengo que cargar el celular. | Ich muss das Handy aufladen. | I have to charge my phone. | Pasado yo: cargué.
+verbo | descargar | herunterladen; abladen | to download; to unload | Descarga la aplicación. | Lade die App herunter. | Download the app. | Pretérito yo: descargué.
+verbo | cargar | laden; tragen | to charge; to carry | Tengo que cargar el celular. | Ich muss das Handy aufladen. | I have to charge my phone. | Pretérito yo: cargué.
 verbo | prender | einschalten, anmachen | to turn on | Prende el abanico. | Mach den Ventilator an. | Turn on the fan. | In der DR üblich; in Spanien: encender.

@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 51;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 52;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -71,10 +71,10 @@ const CARD_TYPES = {
       { key: 'example_es', label: 'Beispielsatz – Spanisch' },
       { key: 'es_verb', label: 'Spanisch – Verb für Konjugation' },
       { key: 'es_pres', label: 'Spanisch – Presente (yo, tú, él, nosotros, ellos; mit Komma)' },
-      { key: 'es_past', label: 'Spanisch – Pasado/Pretérito (mit Komma)' },
+      { key: 'es_past', label: 'Spanisch – Pretérito (mit Komma)' },
       { key: 'es2_verb', label: 'Spanisch – 2. Verb (optional)' },
       { key: 'es2_pres', label: 'Spanisch – 2. Verb Presente' },
-      { key: 'es2_past', label: 'Spanisch – 2. Verb Pasado' },
+      { key: 'es2_past', label: 'Spanisch – 2. Verb Pretérito' },
       { key: 'note_es', label: 'Notiz zum spanischen Wort (Spanisch-Modus)' },
     ],
   },
@@ -532,19 +532,19 @@ const ES_ENDINGS = {
   ir: ['-o, -es, -e, -imos, -en', '-í, -iste, -ió, -imos, -ieron'],
 };
 const ES_IRREG_NOTE = {
-  ser: 'ser ist ganz unregelmäßig. Pasado: dieselben Formen wie ir (fui, fuiste …) – der Zusammenhang zeigt die Bedeutung.',
-  ir: 'ir ist ganz unregelmäßig (voy, vas …). Pasado: dieselben Formen wie ser (fui, fuiste …).',
-  estar: 'estar: yo-Form estoy, Betonung auf der Endung (estás, está). Pasado mit Stamm estuv- ohne Akzent.',
-  dar: 'dar: yo-Form doy. Pasado mit Endungen wie bei -er/-ir: di, diste, dio.',
-  ver: 'ver: yo-Form veo. Pasado ohne Akzent: vi, vio.',
+  ser: 'ser ist ganz unregelmäßig. Pretérito: dieselben Formen wie ir (fui, fuiste …) – der Zusammenhang zeigt die Bedeutung.',
+  ir: 'ir ist ganz unregelmäßig (voy, vas …). Pretérito: dieselben Formen wie ser (fui, fuiste …).',
+  estar: 'estar: yo-Form estoy, Betonung auf der Endung (estás, está). Pretérito mit Stamm estuv- ohne Akzent.',
+  dar: 'dar: yo-Form doy. Pretérito mit Endungen wie bei -er/-ir: di, diste, dio.',
+  ver: 'ver: yo-Form veo. Pretérito ohne Akzent: vi, vio.',
   haber: 'haber ist Hilfsverb (he, has, ha …). hay = es gibt.',
 };
 const ES_STEM_NOTE = {
   ie: 'Stammwechsel e → ie in allen betonten Formen (yo, tú, él, ellos), nicht bei nosotros.',
   ue: 'Stammwechsel o → ue in allen betonten Formen (yo, tú, él, ellos), nicht bei nosotros.',
-  i: 'Stammwechsel e → i im Presente (außer nosotros) und im Pasado bei él und ellos.',
-  'ie-i': 'Stammwechsel e → ie im Presente (außer nosotros); im Pasado bei él und ellos e → i.',
-  'ue-u': 'Stammwechsel o → ue im Presente (außer nosotros); im Pasado bei él und ellos o → u.',
+  i: 'Stammwechsel e → i im Presente (außer nosotros) und im Pretérito bei él und ellos.',
+  'ie-i': 'Stammwechsel e → ie im Presente (außer nosotros); im Pretérito bei él und ellos e → i.',
+  'ue-u': 'Stammwechsel o → ue im Presente (außer nosotros); im Pretérito bei él und ellos o → u.',
   acc: 'i bzw. u bekommt im Presente einen Akzent (außer nosotros): envío, continúas.',
 };
 function esExplain(raw) {
@@ -562,23 +562,23 @@ function esExplain(raw) {
     const pre = inf.slice(0, inf.length - key.length);
     const yo = pre + ES_IRREG[key][0].split(', ')[0], pret = pre + ES_IRREG[key][1].split(', ')[0];
     lines.push(`<b>Unregelmäßig</b>${key !== inf ? ` (wie <b>${key}</b>, mit Vorsilbe ${inf.slice(0, inf.length - key.length)}-)` : ''}: yo-Form <b>${yo}</b>.`);
-    if (key === 'seguir') lines.push('Stammwechsel e → i wie bei pedir, dazu gu → g in der yo-Form; Pasado: siguió, siguieron.');
-    else if (key === 'ducir') lines.push('Alle Verben auf -ducir: yo-Form -duzco, Pasado mit -duj- (traduje, produjo).');
+    if (key === 'seguir') lines.push('Stammwechsel e → i wie bei pedir, dazu gu → g in der yo-Form; Pretérito: siguió, siguieron.');
+    else if (key === 'ducir') lines.push('Alle Verben auf -ducir: yo-Form -duzco, Pretérito mit -duj- (traduje, produjo).');
     else if (/go$/.test(yo)) lines.push('Typisch: In der yo-Form kommt ein -g- dazu (tengo, pongo, salgo, hago, digo …).');
-    if (!/[éí]$/.test(pret) && key !== 'ducir') lines.push(`Pasado mit eigenem Stamm und ohne Akzent: ${pret} (wie tuve, puse, hice, dije).`);
+    if (!/[éí]$/.test(pret) && key !== 'ducir') lines.push(`Pretérito mit eigenem Stamm und ohne Akzent: ${pret} (wie tuve, puse, hice, dije).`);
   } else if (ES_ENDINGS[end]) {
     lines.push(`<b>Verb auf -${end}</b>: Stamm ${inf.slice(0, -2)}- + regelmäßige Endungen.`);
-    lines.push(`Presente: ${ES_ENDINGS[end][0]} · Pasado: ${ES_ENDINGS[end][1]}`);
+    lines.push(`Presente: ${ES_ENDINGS[end][0]} · Pretérito: ${ES_ENDINGS[end][1]}`);
     if (cls && cls !== 'dat' && ES_STEM_NOTE[cls]) lines.push(ES_STEM_NOTE[cls]);
     if (/g(er|ir)$/.test(inf)) lines.push('yo-Form: g → j vor o (escojo), damit der Laut gleich bleibt.');
     else if (/guir$/.test(inf)) lines.push('yo-Form: gu → g vor o (sigo).');
     else if (/[aeiouáéó]c(er|ir)$/.test(inf)) lines.push('yo-Form: Vokal + -cer/-cir → -zco (conozco, parezco).');
     else if (/c(er|ir)$/.test(inf)) lines.push('yo-Form: Konsonant + -cer → -zo (venzo).');
-    if (end === 'ar' && /c$/.test(inf.slice(0, -2))) lines.push('Pasado yo: c → qu vor é (busqué), damit es wie k klingt.');
-    if (end === 'ar' && /g$/.test(inf.slice(0, -2))) lines.push('Pasado yo: g → gu vor é (llegué), damit es wie g klingt.');
-    if (end === 'ar' && /z$/.test(inf.slice(0, -2))) lines.push('Pasado yo: z → c vor é (empecé).');
+    if (end === 'ar' && /c$/.test(inf.slice(0, -2))) lines.push('Pretérito yo: c → qu vor é (busqué), damit es wie k klingt.');
+    if (end === 'ar' && /g$/.test(inf.slice(0, -2))) lines.push('Pretérito yo: g → gu vor é (llegué), damit es wie g klingt.');
+    if (end === 'ar' && /z$/.test(inf.slice(0, -2))) lines.push('Pretérito yo: z → c vor é (empecé).');
     if (end === 'ir' && /[^g]u$/.test(inf.slice(0, -2))) lines.push('Verben auf -uir schieben ein y ein: construyo, construyó.');
-    if (end !== 'ar' && /[aeo]$/.test(inf.slice(0, -2))) lines.push('Stamm endet auf Vokal: im Pasado y statt i (leyó, leyeron).');
+    if (end !== 'ar' && /[aeo]$/.test(inf.slice(0, -2))) lines.push('Stamm endet auf Vokal: im Pretérito y statt i (leyó, leyeron).');
   }
   if (cls === 'dat' || ES_DAT.has(inf)) lines.push('<b>Wie gustar:</b> Das Verb richtet sich nach der Sache (gusta / gustan); die Person steht davor: me, te, le, nos, les.');
   else if (refl) lines.push('<b>Reflexiv</b> (-se): Pronomen vor dem Verb: me, te, se, nos, se (me levanto).');
@@ -751,7 +751,7 @@ function esMoreTenses(raw) {
 
 const ES_TENSE_INFO = {
   imperf: '<b>Imperfecto</b> – Vergangenheit für „früher immer“, Gewohnheiten, Beschreibungen und Hintergrund: De niño jugaba pelota. Endungen -aba (bei -ar) bzw. -ía (bei -er/-ir). Nur ser, ir und ver sind unregelmäßig.',
-  perf: '<b>Pretérito perfecto</b> – haber + Partizip: he comido = ich habe gegessen. In Spanien häufig für „heute“, in der Dominikanischen Republik sagt man meist das Pretérito (comí).',
+  perf: '<b>Pretérito perfecto</b> – haber + Partizip: he comido = ich habe gegessen. In Spanien häufig für „heute“, in der Dominikanischen Republik sagt man meist das <b>Pretérito</b> (comí) – das steht oben in der Haupttabelle in der Spalte „Pretérito“.',
   futs: '<b>Futuro simple</b> – Infinitiv + -é, -ás, -á, -emos, -án: hablaré. Im Alltag nimmt man meist ir a + Infinitiv. Oft auch für Vermutungen: Serán las tres = Es wird wohl drei sein.',
   cond: '<b>Condicional</b> – „würde“: hablaría = ich würde sprechen. Gleicher Stamm wie das Futuro, Endungen wie das Imperfecto von -er (-ía). Höflich: ¿Podría ayudarme?',
   subj: '<b>Subjuntivo presente</b> – Möglichkeitsform nach Wunsch, Gefühl, Zweifel, Aufforderung: Quiero que vengas. Espero que estés bien. Bildung: yo-Form ohne -o + „falscher“ Vokal (-ar → -e, -er/-ir → -a): tengo → tenga.',
@@ -770,6 +770,7 @@ function esMoreHtml(v) {
     ${forms.map((f, i) => `<tr><td>${ES_PERSONS[i]}</td><td>${esc(f)}</td></tr>`).join('')}`;
   const IMP = ['tú', 'tú (verneint)', 'usted', 'ustedes'];
   return `<details class="vf-all es-more"><summary>Alle Zeitformen anzeigen</summary><table class="vf-table">
+    <tr><td colspan="2" class="vf-note">Presente, Pretérito und Futuro mit ir a stehen in der Tabelle oben.</td></tr>
     ${block('imperf', 'Imperfecto', t.imperf)}
     ${block('perf', 'Pretérito perfecto', t.perf)}
     ${block('futs', 'Futuro simple', t.futs)}
@@ -1857,7 +1858,7 @@ function esConjHtml(card) {
     const past = x[p + '_past'] ? split(x[p + '_past']) : c.past;
     return `<table class="conj">
       <caption>${esc(c.label)}</caption>
-      <thead><tr><th></th><th>Presente</th><th>Pasado</th><th>Futuro</th></tr></thead>
+      <thead><tr><th></th><th>Presente</th><th>Pretérito</th><th>Futuro</th></tr></thead>
       <tbody>${ES_PERSONS.map((pr, i) => `
         <tr><th>${pr}</th><td>${esc(pres[i] || '')}</td><td>${esc(past[i] || '')}</td><td>${esc(c.fut[i])}</td></tr>`).join('')}
       </tbody>

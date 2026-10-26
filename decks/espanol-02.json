@@ -170,7 +170,7 @@
                       "example_es":  "Mi abuelo pesca en el río.",
                       "example_de":  "Mein Opa angelt im Fluss.",
                       "example_en":  "My grandfather fishes in the river.",
-                      "hint_es":  "Pasado yo: pesqué.",
+                      "hint_es":  "Pretérito yo: pesqué.",
                       "es_verb":  "pescar",
                       "es_freq":  16477
                   },
@@ -452,7 +452,7 @@
                       "example_es":  "Al gato le gusta cazar ratones.",
                       "example_de":  "Die Katze jagt gern Mäuse.",
                       "example_en":  "The cat likes to hunt mice.",
-                      "hint_es":  "Pasado yo: cacé.",
+                      "hint_es":  "Pretérito yo: cacé.",
                       "es_verb":  "cazar",
                       "es_freq":  25279
                   },
@@ -477,7 +477,7 @@
                       "example_es":  "¡No me mientas!",
                       "example_de":  "Lüg mich nicht an!",
                       "example_en":  "Don\u0027t lie to me!",
-                      "hint_es":  "e → ie: miento; Pasado: mintió.",
+                      "hint_es":  "e → ie: miento; Pretérito: mintió.",
                       "es_verb":  "mentir",
                       "es_freq":  4234
                   },
@@ -628,7 +628,7 @@
                       "example_es":  "Descarga la aplicación.",
                       "example_de":  "Lade die App herunter.",
                       "example_en":  "Download the app.",
-                      "hint_es":  "Pasado yo: descargué.",
+                      "hint_es":  "Pretérito yo: descargué.",
                       "es_verb":  "descargar",
                       "es_freq":  413
                   },
@@ -641,7 +641,7 @@
                       "example_es":  "Tengo que cargar el celular.",
                       "example_de":  "Ich muss das Handy aufladen.",
                       "example_en":  "I have to charge my phone.",
-                      "hint_es":  "Pasado yo: cargué.",
+                      "hint_es":  "Pretérito yo: cargué.",
                       "es_verb":  "cargar",
                       "es_freq":  2158
                   },

@@ -376,134 +376,6 @@
         "version":  202610261811
     },
     {
-        "id":  "verben-01",
-        "name":  "Verben 01",
-        "description":  "Nr. 1–50 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-01.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-02",
-        "name":  "Verben 02",
-        "description":  "Nr. 51–100 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-02.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-03",
-        "name":  "Verben 03",
-        "description":  "Nr. 101–150 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-03.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-04",
-        "name":  "Verben 04",
-        "description":  "Nr. 151–200 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-04.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-05",
-        "name":  "Verben 05",
-        "description":  "Nr. 201–250 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-05.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-06",
-        "name":  "Verben 06",
-        "description":  "Nr. 251–300 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-06.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-07",
-        "name":  "Verben 07",
-        "description":  "Nr. 301–350 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-07.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-08",
-        "name":  "Verben 08",
-        "description":  "Nr. 351–400 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-08.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-09",
-        "name":  "Verben 09",
-        "description":  "Nr. 401–450 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-09.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-10",
-        "name":  "Verben 10",
-        "description":  "Nr. 451–500 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-10.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-11",
-        "name":  "Verben 11",
-        "description":  "Nr. 501–550 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-11.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-12",
-        "name":  "Verben 12",
-        "description":  "Nr. 551–600 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-12.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-13",
-        "name":  "Verben 13",
-        "description":  "Nr. 601–650 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-13.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-14",
-        "name":  "Verben 14",
-        "description":  "Nr. 651–700 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-14.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-15",
-        "name":  "Verben 15",
-        "description":  "Nr. 701–750 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-15.json",
-        "count":  50,
-        "version":  202610261811
-    },
-    {
-        "id":  "verben-16",
-        "name":  "Verben 16",
-        "description":  "Nr. 751–793 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
-        "file":  "verben-16.json",
-        "count":  43,
-        "version":  202610261811
-    },
-    {
         "id":  "preposiciones-01",
         "name":  "Preposiciones",
         "description":  "39 spanische Präpositionen mit Beispiel (Spanisch-Modus)",
@@ -512,12 +384,140 @@
         "version":  202610261810
     },
     {
+        "id":  "verben-01",
+        "name":  "Verben 01",
+        "description":  "Nr. 1–50 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-01.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-02",
+        "name":  "Verben 02",
+        "description":  "Nr. 51–100 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-02.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-03",
+        "name":  "Verben 03",
+        "description":  "Nr. 101–150 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-03.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-04",
+        "name":  "Verben 04",
+        "description":  "Nr. 151–200 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-04.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-05",
+        "name":  "Verben 05",
+        "description":  "Nr. 201–250 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-05.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-06",
+        "name":  "Verben 06",
+        "description":  "Nr. 251–300 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-06.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-07",
+        "name":  "Verben 07",
+        "description":  "Nr. 301–350 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-07.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-08",
+        "name":  "Verben 08",
+        "description":  "Nr. 351–400 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-08.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-09",
+        "name":  "Verben 09",
+        "description":  "Nr. 401–450 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-09.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-10",
+        "name":  "Verben 10",
+        "description":  "Nr. 451–500 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-10.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-11",
+        "name":  "Verben 11",
+        "description":  "Nr. 501–550 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-11.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-12",
+        "name":  "Verben 12",
+        "description":  "Nr. 551–600 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-12.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-13",
+        "name":  "Verben 13",
+        "description":  "Nr. 601–650 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-13.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-14",
+        "name":  "Verben 14",
+        "description":  "Nr. 651–700 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-14.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-15",
+        "name":  "Verben 15",
+        "description":  "Nr. 701–750 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-15.json",
+        "count":  50,
+        "version":  202610261823
+    },
+    {
+        "id":  "verben-16",
+        "name":  "Verben 16",
+        "description":  "Nr. 751–793 nach Häufigkeit · Aspektpaare mit Aussprache, Beispiel und spanischer Konjugation",
+        "file":  "verben-16.json",
+        "count":  43,
+        "version":  202610261823
+    },
+    {
         "id":  "alltag-01",
         "name":  "Alltag in der DR",
         "description":  "89 Karten (nur Spanisch-Modus)",
         "file":  "alltag-01.json",
         "count":  89,
-        "version":  202610261811
+        "version":  202610261823
     },
     {
         "id":  "espanol-01",
@@ -525,7 +525,7 @@
         "description":  "87 Karten (nur Spanisch-Modus)",
         "file":  "espanol-01.json",
         "count":  87,
-        "version":  202610261809
+        "version":  202610261823
     },
     {
         "id":  "espanol-02",
@@ -533,7 +533,7 @@
         "description":  "51 Karten (nur Spanisch-Modus)",
         "file":  "espanol-02.json",
         "count":  51,
-        "version":  202610261811
+        "version":  202610261823
     },
     {
         "id":  "espanol-03",
@@ -541,7 +541,7 @@
         "description":  "197 Karten (nur Spanisch-Modus)",
         "file":  "espanol-03.json",
         "count":  197,
-        "version":  202610261811
+        "version":  202610261823
     },
     {
         "id":  "espanol-04",
@@ -549,6 +549,6 @@
         "description":  "42 Karten (nur Spanisch-Modus)",
         "file":  "espanol-04.json",
         "count":  42,
-        "version":  202610261809
+        "version":  202610261823
     }
 ]
