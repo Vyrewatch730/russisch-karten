@@ -76,14 +76,15 @@ for ($g = 0; $g -lt $deckCount; $g++) {
 }
 Get-ChildItem $out -Filter 'adverbien-*.json' | Where-Object { [int]($_.BaseName -replace '\D', '') -gt $deckCount } | Remove-Item
 
-# Bibliothek: Adverb-Decks ersetzen; Reihenfolge: Sonstige, Adjektive, Adverbien, Nomen, Verben
+# Bibliothek: Adverb-Decks ersetzen; Reihenfolge: Sonstige, Adjektive, Adverbien, Präpositionen, Nomen, Verben
 $indexPath = Join-Path $out 'index.json'
 $index = [IO.File]::ReadAllText($indexPath, $utf8) | ConvertFrom-Json
-$fam = 'adjektive-*', 'adverbien-*', 'nomen-*', 'verben-*'
+$fam = 'adjektive-*', 'adverbien-*', 'praepositionen-*', 'nomen-*', 'verben-*'
 $others = @($index | Where-Object { $id = $_.id; -not ($fam | Where-Object { $id -like $_ }) })
 $adjs = @($index | Where-Object { $_.id -like 'adjektive-*' })
+$preps = @($index | Where-Object { $_.id -like 'praepositionen-*' })
 $nouns = @($index | Where-Object { $_.id -like 'nomen-*' })
 $verbs = @($index | Where-Object { $_.id -like 'verben-*' })
-$all = @($others) + $adjs + $entries + $nouns + $verbs
+$all = @($others) + $adjs + $entries + $preps + $nouns + $verbs
 [IO.File]::WriteAllText($indexPath, (ConvertTo-Json @($all) -Depth 3), $utf8)
 Write-Host "Gesamt: $($sorted.Count) Adverbien in $deckCount Decks"

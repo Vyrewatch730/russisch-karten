@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 44;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 45;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -104,6 +104,19 @@ const CARD_TYPES = {
     extras: [
       { key: 'cat', label: 'Art (Zeit, Ort, Richtung, Art und Weise, Menge, Frage, Meinung, Zustand)' },
       { key: 'hint', label: 'Hinweis' },
+      { key: 'example_de', label: 'Beispielsatz – Deutsch' },
+      { key: 'example_en', label: 'Beispielsatz – Englisch' },
+      { key: 'example_es', label: 'Beispielsatz – Spanisch' },
+    ],
+  },
+  // Präposition mit Fall und Beispielsatz (prepHtml); zwei Fälle = zwei Karten
+  prepfull: {
+    name: 'Präposition',
+    ownLayout: true,
+    extras: [
+      { key: 'case', label: 'Fall (Genitiv, Dativ, Akkusativ, Instrumental, Präpositiv)' },
+      { key: 'hint', label: 'Hinweis' },
+      { key: 'example_cases', label: 'Beispielsatz – Fälle' },
       { key: 'example_de', label: 'Beispielsatz – Deutsch' },
       { key: 'example_en', label: 'Beispielsatz – Englisch' },
       { key: 'example_es', label: 'Beispielsatz – Spanisch' },
@@ -771,6 +784,7 @@ const DECK_KINDS = [
   { v: 'nomen', t: 'Nomen', test: id => id.startsWith('nomen-') },
   { v: 'adjektive', t: 'Adjektive', test: id => id.startsWith('adjektive-') },
   { v: 'adverbien', t: 'Adverbien', test: id => id.startsWith('adverbien-') },
+  { v: 'praepositionen', t: 'Präpositionen', test: id => id.startsWith('praepositionen-') },
 ];
 function kindChips() {
   const cur = db.settings.deckKind || 'all';
@@ -1340,9 +1354,46 @@ function advHtml(card) {
     <div class="nn-word">${esc(word)}${pron(word)} ${say(word)}</div>
     <div class="nn-hint">ℹ️ ${esc(x.cat || 'Adverb')}${info}</div><div class="vp-rule">${advCatInfo(x.cat)}</div>
     ${x.hint ? `<div class="nn-hint">💡 Tipp${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
+    ${ADV_COMPARE[word.replace(STRESS, '')] ? `<div class="nn-hint">🤔 ${ADV_COMPARE[word.replace(STRESS, '')].title}${info}</div><div class="vp-rule">${ADV_COMPARE[word.replace(STRESS, '')].html()}</div>` : ''}
     ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}</div>` : ''}
   </div>`;
 }
+
+// Präpositions-Karte: Fall (farbig, Endungen hinter ⓘ), Wort mit Aussprache, Hinweis, Beispiel mit Fällen
+const PREP_ENDINGS = {
+  Genitiv: 'Endungen: männl./sächl. -а / -я, weibl. -ы / -и; Plural -ов / -ей / ohne Endung. Pronomen: меня́, тебя́, его́, её, нас, вас, их.',
+  Dativ: 'Endungen: männl./sächl. -у / -ю, weibl. -е (auf -ь: -и); Plural -ам / -ям. Pronomen: мне, тебе́, ему́, ей, нам, вам, им.',
+  Akkusativ: 'Endungen: weibl. -у / -ю; männl. und sächl. unbelebt wie Nominativ, männl. belebt wie Genitiv. Pronomen: меня́, тебя́, его́, её, нас, вас, их.',
+  Instrumental: 'Endungen: männl./sächl. -ом / -ем, weibl. -ой / -ей (auf -ь: -ью); Plural -ами / -ями. Pronomen: мной, тобо́й, им, ей, на́ми, ва́ми, и́ми.',
+  'Präpositiv': 'Endungen: meist -е; auf -ия, -ие und weibl. -ь: -и; Plural -ах / -ях. Pronomen: мне, тебе́, нём, ней, нас, вас, них.',
+};
+function prepHtml(card) {
+  const x = card.x, word = card.f.ru || '';
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const say = t => t ? `<button class="say" data-say="${esc(t)}">🔊</button>` : '';
+  const pron = t => { const p = ruPron(t); return p ? ` <span class="pron">[${esc(p)}]</span>` : ''; };
+  const exPron = x.example_pron || ruPron(x.example);
+  const caseCls = { Genitiv: 'gen', Dativ: 'dat', Akkusativ: 'akk', Instrumental: 'ins', 'Präpositiv': 'prp' }[x.case] || '';
+  return `<div class="nn aj pp">
+    <div class="nn-tags"><span class="nn-g pp-tag">Präposition</span></div>
+    <div class="nn-word">${esc(word)}${pron(word)} ${say(word.split(' / ')[0])}</div>
+    ${x.case ? `<div><span class="pp-case pp-${caseCls}">+ ${esc(x.case)}</span>${info}</div><div class="vp-rule">${caseInfoHtml(x.case)}<div>${esc(PREP_ENDINGS[x.case] || '')}</div></div>` : ''}
+    ${x.hint ? `<div class="nn-hint">💡 Tipp${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
+    ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
+  </div>`;
+}
+
+// Leicht verwechselbare Adverbien: Erklärung hinter ⓘ auf beiden Karten
+const SEICHAS_TEPER = {
+  title: 'сейча́с oder тепе́рь?',
+  html: () => `<div>Beide heißen „jetzt“, aber:</div>
+    <div><b>сейча́с</b> = jetzt, in diesem Moment. Neutral, es geht nur um den Zeitpunkt. Auch „gleich“ (sofort): Я сейча́с приду́ = Ich komme gleich.</div>
+    <div class="nn-ex">Что ты сейча́с де́лаешь? <button class="say" data-say="Что ты сейча́с де́лаешь?">🔊</button><div class="pron nn-ex-pron">[${esc(ruPron('Что ты сейча́с де́лаешь?'))}]</div><details class="nn-ex-de"><summary>Übersetzung anzeigen</summary>Was machst du gerade?</details></div>
+    <div><b>тепе́рь</b> = jetzt, nun – <b>im Gegensatz zu früher</b>. Die Situation hat sich geändert. Oft mit а: früher …, а тепе́рь …</div>
+    <div class="nn-ex">Ра́ньше я кури́л, а тепе́рь не курю́. <button class="say" data-say="Ра́ньше я кури́л, а тепе́рь не курю́.">🔊</button><div class="pron nn-ex-pron">[${esc(ruPron('Ра́ньше я кури́л, а тепе́рь не курю́.'))}]</div><details class="nn-ex-de"><summary>Übersetzung anzeigen</summary>Früher habe ich geraucht, jetzt rauche ich nicht mehr.</details></div>
+    <div><b>Test:</b> Passt „nun“ oder „inzwischen“ (früher war es anders)? → тепе́рь. Geht es nur um den Moment („gerade“, „gleich“)? → сейча́с.</div>`,
+};
+const ADV_COMPARE = { 'сейчас': SEICHAS_TEPER, 'теперь': SEICHAS_TEPER };
 
 function advCatInfo(cat) {
   const t = {
@@ -1520,6 +1571,7 @@ function cardRuSide(card) {
     ? verbPairHtml(card)
     : card.type === 'adjfull' ? adjHtml(card)
     : card.type === 'advfull' ? advHtml(card)
+    : card.type === 'prepfull' ? prepHtml(card)
     : card.type === 'nounfull' ? nounHtml(card)
     : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(card.f[RU])}`);
 }
@@ -1559,7 +1611,7 @@ function renderStudy() {
   const remaining = study.queue.length + 1;
   const prev = g => fmtInterval(schedule(p, g).due - Date.now());
   const isVp = card.type === 'verbpair';
-  const isNoun = card.type === 'nounfull' || card.type === 'adjfull' || card.type === 'advfull';
+  const isNoun = card.type === 'nounfull' || card.type === 'adjfull' || card.type === 'advfull' || card.type === 'prepfull';
   const ruSide = () => cardRuSide(card);
   const trSide = () => cardTrSide(card);
   const ruFirst = cur.q !== 'tr';
@@ -2276,7 +2328,7 @@ async function autoUpdateLibrary() {
     // Deshalb eine Familie immer komplett aktualisieren (auch neu hinzugekommene Decks laden)
     // und alte Decks ohne Gegenstück (z. B. das frühere Probedeck „verben-1“) auflösen.
     const prune = [];
-    for (const prefix of ['verben-', 'nomen-', 'adjektive-', 'adverbien-']) {
+    for (const prefix of ['verben-', 'nomen-', 'adjektive-', 'adverbien-', 'praepositionen-']) {
       const inFamily = id => id.startsWith(prefix);
       const stale = Object.keys(db.decks).filter(id => inFamily(id) && !list.some(d => d.id === id));
       const missing = list.filter(d => inFamily(d.id) && !db.decks[d.id]);

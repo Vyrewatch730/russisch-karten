@@ -133,6 +133,22 @@ document.getElementById('app').onload = async e => {
       if (!(c.example || '').toLowerCase().includes(c.ru.toLowerCase())) problem(c, 'Wort steht nicht im Beispielsatz');
     }
   }
+  // Präpositionen: Pflichtfelder, Betonung, Präposition und Fall-Wörter stehen im Beispielsatz, Fall passt
+  for (const entry of index.filter(d => d.id.startsWith('praepositionen-') && (!only || d.id === only))) {
+    const deck = await (await fetch('../decks/' + entry.file, { cache: 'no-cache' })).json();
+    out.push(`== ${deck.name} (${deck.cards.length} Karten)`);
+    for (const c of deck.cards) {
+      cards++;
+      for (const k of ['de', 'en', 'es', 'case', 'example', 'example_de', 'example_en', 'example_es', 'example_cases']) if (!c[k]) problem(c, `Feld ${k} fehlt`);
+      for (const k of ['ru', 'example', 'example_cases']) for (const p of stressProblems(c[k])) problem(c, `${k}: ${p}`);
+      const sentence = (c.example || '').toLowerCase();
+      if (!c.ru.split(' / ').some(v => new RegExp(`(^|[^а-яё́-])${v.toLowerCase()}([^а-яё́-]|$)`).test(sentence))) problem(c, 'Präposition steht nicht im Beispielsatz');
+      if (!(c.example_cases || '').includes(c.case)) problem(c, `Fall ${c.case} fehlt in den Fällen`);
+      for (const part of (c.example_cases || '').split(' · ')) {
+        for (const word of part.split(' – ')[0].match(/[а-яё́-]+/gi) || []) if (!sentence.includes(word.toLowerCase())) problem(c, `Fälle: „${word}“ steht nicht im Satz`);
+      }
+    }
+  }
   out.unshift(`${cards} Karten geprüft, ${problems} Probleme`);
   document.getElementById('out').textContent = out.join('\n');
 };
