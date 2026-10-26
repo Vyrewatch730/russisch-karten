@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 46;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 47;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1638,7 +1638,9 @@ function cardRuSide(card) {
 // Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
 function cardTrSide(card) {
   const sayRu = t => `<button class="say" data-say="${esc(t)}">🔊</button>`;
-  return trLangs().filter(l => card.f[l.code]).map(l => l.code === RU ? `
+  // Beim Spanischlernen steht Russisch ganz unten
+  const langs = trLangs().filter(l => card.f[l.code]).sort((a, b) => (a.code === RU) - (b.code === RU));
+  return langs.map(l => l.code === RU ? `
     <div class="answer">
       <div class="lang-tag">${esc(l.name)}</div>
       <div class="a-word">${esc(card.f.ru)} ${sayRu(card.f.ru)}</div>
