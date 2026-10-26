@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 49;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 50;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2142,12 +2142,36 @@ function renderCards() {
             <span class="badge">${esc((CARD_TYPES[c.type] || CARD_TYPES.word).name)}</span>
           </div>`).join('')}
       </div>` : `<div class="empty">Keine Karten gefunden.</div>`;
-    $$('[data-edit]').forEach(r => r.onclick = () => editCard(r.dataset.edit));
+    $$('[data-edit]').forEach(r => r.onclick = () => showCard(r.dataset.edit));
   };
   $('#search').oninput = (e) => { cardFilter.q = e.target.value; renderList(); };
   $('#deck-filter').onchange = (e) => { cardFilter.deck = e.target.value; renderList(); };
   $('#add').onclick = () => editCard(null);
   renderList();
+}
+
+// Karte ansehen (aus der Suche): beide Seiten untereinander, Bearbeiten nur über den Knopf
+function showCard(id) {
+  const card = db.cards[id];
+  if (!card) { go('cards'); return; }
+  setHeader(db.decks[card.deck]?.name || 'Karte', () => go('cards'));
+  const view = $('#view');
+  const learnSide = card.f[learnLang()] ? cardLearnSide(card) : cardRuSide(card);
+  view.innerHTML = `
+    <div class="card-view">
+      <div class="btn-row" style="justify-content:flex-end">
+        <button class="btn small" id="edit-shown">✏️ Bearbeiten</button>
+      </div>
+      <div class="quiz-card">${learnSide}</div>
+      <div class="quiz-card">${cardTrSide(card)}${conjugationHtml(card)}${extrasHtml(card)}</div>
+    </div>`;
+  $('#edit-shown').onclick = () => editCard(id, () => showCard(id));
+  $$('.say', view).forEach(b => b.onclick = () => speak(b.dataset.say, b.dataset.lang));
+  $$('.info', view).forEach(b => b.onclick = () => {
+    const rule = (b.closest('tr') || b.parentElement).nextElementSibling;
+    if (rule && rule.classList.contains('vp-rule')) b.classList.toggle('open', rule.classList.toggle('open'));
+  });
+  view.scrollTop = 0;
 }
 
 /* ============================================================
