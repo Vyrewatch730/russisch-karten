@@ -64,7 +64,11 @@
                       "example_cases":  "тёплую ку́ртку – Akkusativ",
                       "example_de":  "Zieh eine warme Jacke an!",
                       "example_en":  "Put on a warm jacket!",
-                      "example_es":  "¡Ponte una chaqueta abrigada!"
+                      "example_es":  "¡Ponte una chaqueta abrigada!",
+                      "adv":  "тепло́",
+                      "adv_de":  "warm",
+                      "adv_ex":  "Сего́дня тепло́.",
+                      "adv_ex_de":  "Heute ist es warm."
                   },
                   {
                       "id":  "aj-духовный",
@@ -77,7 +81,11 @@
                       "example_cases":  "для него́ – Genitiv · духо́вная жизнь – Nominativ",
                       "example_de":  "Für ihn ist das geistige Leben wichtig.",
                       "example_en":  "Spiritual life is important to him.",
-                      "example_es":  "Para él la vida espiritual es importante."
+                      "example_es":  "Para él la vida espiritual es importante.",
+                      "adv":  "духо́вно",
+                      "adv_de":  "geistig, seelisch",
+                      "adv_ex":  "Он духо́вно бога́т.",
+                      "adv_ex_de":  "Er ist seelisch reich."
                   },
                   {
                       "id":  "aj-прежний",
@@ -91,7 +99,11 @@
                       "example_cases":  "на пре́жнюю рабо́ту – Akkusativ",
                       "example_de":  "Er ist zu seiner früheren Arbeit zurückgekehrt.",
                       "example_en":  "He returned to his previous job.",
-                      "example_es":  "Volvió a su trabajo anterior."
+                      "example_es":  "Volvió a su trabajo anterior.",
+                      "adv":  "по-пре́жнему",
+                      "adv_de":  "nach wie vor, immer noch",
+                      "adv_ex":  "Он по-пре́жнему живёт здесь.",
+                      "adv_ex_de":  "Er wohnt immer noch hier."
                   },
                   {
                       "id":  "aj-французский",
@@ -105,7 +117,11 @@
                       "example_cases":  "францу́зский сыр – Akkusativ",
                       "example_de":  "Ich mag französischen Käse.",
                       "example_en":  "I love French cheese.",
-                      "example_es":  "Me encanta el queso francés."
+                      "example_es":  "Me encanta el queso francés.",
+                      "adv":  "по-францу́зски",
+                      "adv_de":  "auf Französisch",
+                      "adv_ex":  "Она́ чита́ет по-францу́зски.",
+                      "adv_ex_de":  "Sie liest Französisch."
                   },
                   {
                       "id":  "aj-профессиональный",
@@ -118,7 +134,11 @@
                       "example_cases":  "профессиона́льный фото́граф – Nominativ",
                       "example_de":  "Er ist Berufsfotograf.",
                       "example_en":  "He\u0027s a professional photographer.",
-                      "example_es":  "Es fotógrafo profesional."
+                      "example_es":  "Es fotógrafo profesional.",
+                      "adv":  "профессиона́льно",
+                      "adv_de":  "professionell",
+                      "adv_ex":  "Она́ рабо́тает профессиона́льно.",
+                      "adv_ex_de":  "Sie arbeitet professionell."
                   },
                   {
                       "id":  "aj-женский",
@@ -133,7 +153,11 @@
                       "example_cases":  "же́нский журна́л – Nominativ",
                       "example_de":  "Das ist eine Frauenzeitschrift.",
                       "example_en":  "This is a women\u0027s magazine.",
-                      "example_es":  "Es una revista femenina."
+                      "example_es":  "Es una revista femenina.",
+                      "adv":  "по-же́нски",
+                      "adv_de":  "wie eine Frau, weiblich",
+                      "adv_ex":  "Она́ по-же́нски мудра́.",
+                      "adv_ex_de":  "Sie ist auf weibliche Art klug."
                   },
                   {
                       "id":  "aj-крайний",
@@ -147,7 +171,11 @@
                       "example_cases":  "пя́тница – Nominativ · кра́йний срок – Nominativ",
                       "example_de":  "Freitag ist die letzte Frist.",
                       "example_en":  "Friday is the deadline.",
-                      "example_es":  "El viernes es el plazo límite."
+                      "example_es":  "El viernes es el plazo límite.",
+                      "adv":  "кра́йне",
+                      "adv_de":  "äußerst",
+                      "adv_ex":  "Э́то кра́йне ва́жно.",
+                      "adv_ex_de":  "Das ist äußerst wichtig."
                   },
                   {
                       "id":  "aj-дальнейший",
@@ -177,7 +205,11 @@
                       "example_cases":  "есте́ственная реа́кция – Nominativ",
                       "example_de":  "Das ist eine natürliche Reaktion.",
                       "example_en":  "It\u0027s a natural reaction.",
-                      "example_es":  "Es una reacción natural."
+                      "example_es":  "Es una reacción natural.",
+                      "adv":  "есте́ственно",
+                      "adv_de":  "natürlich",
+                      "adv_ex":  "Есте́ственно, я помогу́.",
+                      "adv_ex_de":  "Natürlich helfe ich."
                   },
                   {
                       "id":  "aj-информационный",
@@ -221,7 +253,11 @@
                       "example_cases":  "чай – Nominativ · горя́чий – Nominativ",
                       "example_de":  "Vorsicht, der Tee ist heiß!",
                       "example_en":  "Careful, the tea is hot!",
-                      "example_es":  "¡Cuidado, el té está caliente!"
+                      "example_es":  "¡Cuidado, el té está caliente!",
+                      "adv":  "горячо́",
+                      "adv_de":  "heiß",
+                      "adv_ex":  "Осторо́жно, горячо́!",
+                      "adv_ex_de":  "Vorsicht, heiß!"
                   },
                   {
                       "id":  "aj-веселый",
@@ -238,7 +274,11 @@
                       "example_cases":  "у неё – Genitiv · весёлый хара́ктер – Nominativ",
                       "example_de":  "Sie ist ein fröhlicher Mensch.",
                       "example_en":  "She has a cheerful personality.",
-                      "example_es":  "Ella tiene un carácter alegre."
+                      "example_es":  "Ella tiene un carácter alegre.",
+                      "adv":  "ве́село",
+                      "adv_de":  "lustig, fröhlich",
+                      "adv_ex":  "Бы́ло о́чень ве́село.",
+                      "adv_ex_de":  "Es war sehr lustig."
                   },
                   {
                       "id":  "aj-официальный",
@@ -251,7 +291,11 @@
                       "example_cases":  "официа́льный докуме́нт – Nominativ",
                       "example_de":  "Das ist ein offizielles Dokument.",
                       "example_en":  "This is an official document.",
-                      "example_es":  "Es un documento oficial."
+                      "example_es":  "Es un documento oficial.",
+                      "adv":  "официа́льно",
+                      "adv_de":  "offiziell",
+                      "adv_ex":  "Он официа́льно рабо́тает здесь.",
+                      "adv_ex_de":  "Er arbeitet offiziell hier."
                   },
                   {
                       "id":  "aj-серый",
@@ -282,7 +326,11 @@
                       "example_cases":  "опа́сная доро́га – Nominativ",
                       "example_de":  "Das ist eine gefährliche Straße.",
                       "example_en":  "This is a dangerous road.",
-                      "example_es":  "Es una carretera peligrosa."
+                      "example_es":  "Es una carretera peligrosa.",
+                      "adv":  "опа́сно",
+                      "adv_de":  "gefährlich",
+                      "adv_ex":  "Здесь опа́сно.",
+                      "adv_ex_de":  "Hier ist es gefährlich."
                   },
                   {
                       "id":  "aj-слабый",
@@ -298,7 +346,11 @@
                       "example_cases":  "сла́бый чай – Akkusativ",
                       "example_de":  "Ich trinke schwachen Tee.",
                       "example_en":  "I drink weak tea.",
-                      "example_es":  "Tomo té suave."
+                      "example_es":  "Tomo té suave.",
+                      "adv":  "сла́бо",
+                      "adv_de":  "schwach",
+                      "adv_ex":  "Он сла́бо игра́ет.",
+                      "adv_ex_de":  "Er spielt schwach."
                   },
                   {
                       "id":  "aj-яркий",
@@ -316,7 +368,11 @@
                       "example_cases":  "я́ркое со́лнце – Nominativ",
                       "example_de":  "Heute scheint die Sonne hell.",
                       "example_en":  "The sun is bright today.",
-                      "example_es":  "Hoy el sol brilla mucho."
+                      "example_es":  "Hoy el sol brilla mucho.",
+                      "adv":  "я́рко",
+                      "adv_de":  "hell, grell",
+                      "adv_ex":  "Со́лнце я́рко све́тит.",
+                      "adv_ex_de":  "Die Sonne scheint hell."
                   },
                   {
                       "id":  "aj-летний",
@@ -344,7 +400,11 @@
                       "example_cases":  "нам – Dativ · дополни́тельная информа́ция – Nominativ",
                       "example_de":  "Wir brauchen zusätzliche Informationen.",
                       "example_en":  "We need additional information.",
-                      "example_es":  "Necesitamos información adicional."
+                      "example_es":  "Necesitamos información adicional.",
+                      "adv":  "дополни́тельно",
+                      "adv_de":  "zusätzlich",
+                      "adv_ex":  "Я рабо́таю дополни́тельно.",
+                      "adv_ex_de":  "Ich arbeite zusätzlich."
                   },
                   {
                       "id":  "aj-правильный",
@@ -360,7 +420,11 @@
                       "example_cases":  "пра́вильный отве́т – Nominativ",
                       "example_de":  "Das ist die richtige Antwort.",
                       "example_en":  "That\u0027s the right answer.",
-                      "example_es":  "Es la respuesta correcta."
+                      "example_es":  "Es la respuesta correcta.",
+                      "adv":  "пра́вильно",
+                      "adv_de":  "richtig",
+                      "adv_ex":  "Ты пра́вильно сде́лал.",
+                      "adv_ex_de":  "Du hast es richtig gemacht."
                   },
                   {
                       "id":  "aj-лесной",
@@ -389,7 +453,11 @@
                       "example_cases":  "у́мная де́вушка – Nominativ",
                       "example_de":  "Sie ist ein sehr kluges Mädchen.",
                       "example_en":  "She\u0027s a very smart girl.",
-                      "example_es":  "Es una chica muy inteligente."
+                      "example_es":  "Es una chica muy inteligente.",
+                      "adv":  "умно́",
+                      "adv_de":  "klug",
+                      "adv_ex":  "Э́то умно́.",
+                      "adv_ex_de":  "Das ist klug."
                   },
                   {
                       "id":  "aj-северный",
@@ -419,7 +487,11 @@
                       "example_cases":  "я́сное не́бо – Nominativ",
                       "example_de":  "Heute ist der Himmel klar.",
                       "example_en":  "The sky is clear today.",
-                      "example_es":  "Hoy el cielo está despejado."
+                      "example_es":  "Hoy el cielo está despejado.",
+                      "adv":  "я́сно",
+                      "adv_de":  "klar",
+                      "adv_ex":  "Всё я́сно.",
+                      "adv_ex_de":  "Alles klar."
                   },
                   {
                       "id":  "aj-милый",
@@ -435,7 +507,11 @@
                       "example_cases":  "ми́лая де́вочка – Nominativ",
                       "example_de":  "Was für ein süßes Mädchen!",
                       "example_en":  "What a sweet girl!",
-                      "example_es":  "¡Qué niña tan linda!"
+                      "example_es":  "¡Qué niña tan linda!",
+                      "adv":  "ми́ло",
+                      "adv_de":  "nett, süß",
+                      "adv_ex":  "Как ми́ло!",
+                      "adv_ex_de":  "Wie nett!"
                   },
                   {
                       "id":  "aj-светлый",
@@ -451,7 +527,11 @@
                       "example_cases":  "у нас – Genitiv · све́тлая ко́мната – Nominativ",
                       "example_de":  "Wir haben ein helles Zimmer.",
                       "example_en":  "We have a bright room.",
-                      "example_es":  "Tenemos una habitación luminosa."
+                      "example_es":  "Tenemos una habitación luminosa.",
+                      "adv":  "светло́",
+                      "adv_de":  "hell",
+                      "adv_ex":  "В ко́мнате светло́.",
+                      "adv_ex_de":  "Im Zimmer ist es hell."
                   },
                   {
                       "id":  "aj-редкий",
@@ -469,7 +549,11 @@
                       "example_cases":  "ре́дкая пти́ца – Nominativ",
                       "example_de":  "Das ist ein seltener Vogel.",
                       "example_en":  "This is a rare bird.",
-                      "example_es":  "Es un pájaro raro."
+                      "example_es":  "Es un pájaro raro.",
+                      "adv":  "ре́дко",
+                      "adv_de":  "selten",
+                      "adv_ex":  "Я ре́дко смотрю́ телеви́зор.",
+                      "adv_ex_de":  "Ich schaue selten fern."
                   },
                   {
                       "id":  "aj-верный",
@@ -485,7 +569,11 @@
                       "example_cases":  "соба́ка – Nominativ · ве́рный друг – Nominativ",
                       "example_de":  "Der Hund ist ein treuer Freund.",
                       "example_en":  "A dog is a loyal friend.",
-                      "example_es":  "El perro es un amigo fiel."
+                      "example_es":  "El perro es un amigo fiel.",
+                      "adv":  "ве́рно",
+                      "adv_de":  "richtig, treu",
+                      "adv_ex":  "Ве́рно!",
+                      "adv_ex_de":  "Richtig!"
                   },
                   {
                       "id":  "aj-юридический",
@@ -498,7 +586,11 @@
                       "example_cases":  "на юриди́ческом факульте́те – Präpositiv",
                       "example_de":  "Er studiert Jura.",
                       "example_en":  "He studies law.",
-                      "example_es":  "Estudia Derecho."
+                      "example_es":  "Estudia Derecho.",
+                      "adv":  "юриди́чески",
+                      "adv_de":  "rechtlich",
+                      "adv_ex":  "Э́то юриди́чески пра́вильно.",
+                      "adv_ex_de":  "Das ist rechtlich korrekt."
                   },
                   {
                       "id":  "aj-административный",
@@ -528,7 +620,11 @@
                       "example_cases":  "у́зкая у́лица – Nominativ",
                       "example_de":  "Das ist eine schmale Straße.",
                       "example_en":  "This is a narrow street.",
-                      "example_es":  "Es una calle estrecha."
+                      "example_es":  "Es una calle estrecha.",
+                      "adv":  "у́зко",
+                      "adv_de":  "eng, schmal",
+                      "adv_ex":  "Здесь о́чень у́зко.",
+                      "adv_ex_de":  "Hier ist es sehr eng."
                   },
                   {
                       "id":  "aj-художественный",
@@ -542,7 +638,11 @@
                       "example_cases":  "худо́жественную литерату́ру – Akkusativ",
                       "example_de":  "Ich mag Belletristik.",
                       "example_en":  "I love fiction.",
-                      "example_es":  "Me gusta la literatura de ficción."
+                      "example_es":  "Me gusta la literatura de ficción.",
+                      "adv":  "худо́жественно",
+                      "adv_de":  "künstlerisch",
+                      "adv_ex":  "Он худо́жественно одарён.",
+                      "adv_ex_de":  "Er ist künstlerisch begabt."
                   },
                   {
                       "id":  "aj-древний",
@@ -584,7 +684,11 @@
                       "example_cases":  "замеча́тельная иде́я – Nominativ",
                       "example_de":  "Das ist eine wunderbare Idee!",
                       "example_en":  "That\u0027s a wonderful idea!",
-                      "example_es":  "¡Es una idea estupenda!"
+                      "example_es":  "¡Es una idea estupenda!",
+                      "adv":  "замеча́тельно",
+                      "adv_de":  "großartig",
+                      "adv_ex":  "Замеча́тельно!",
+                      "adv_ex_de":  "Großartig!"
                   },
                   {
                       "id":  "aj-генеральный",
@@ -642,7 +746,11 @@
                       "example_cases":  "здоро́вая еда́ – Nominativ",
                       "example_de":  "Gesundes Essen ist wichtig.",
                       "example_en":  "Healthy food is important.",
-                      "example_es":  "La comida sana es importante."
+                      "example_es":  "La comida sana es importante.",
+                      "adv":  "здо́рово",
+                      "adv_de":  "toll, super",
+                      "adv_ex":  "Здо́рово!",
+                      "adv_ex_de":  "Super!"
                   },
                   {
                       "id":  "aj-литературный",
@@ -671,7 +779,11 @@
                       "example_cases":  "акти́вный о́браз – Akkusativ · жи́зни – Genitiv",
                       "example_de":  "Er führt einen aktiven Lebensstil.",
                       "example_en":  "He leads an active lifestyle.",
-                      "example_es":  "Lleva un estilo de vida activo."
+                      "example_es":  "Lleva un estilo de vida activo.",
+                      "adv":  "акти́вно",
+                      "adv_de":  "aktiv",
+                      "adv_ex":  "Он акти́вно занима́ется спо́ртом.",
+                      "adv_ex_de":  "Er treibt aktiv Sport."
                   },
                   {
                       "id":  "aj-острый",
@@ -688,7 +800,11 @@
                       "example_cases":  "о́стрый нож – Nominativ",
                       "example_de":  "Das ist ein scharfes Messer.",
                       "example_en":  "This is a sharp knife.",
-                      "example_es":  "Es un cuchillo afilado."
+                      "example_es":  "Es un cuchillo afilado.",
+                      "adv":  "о́стро",
+                      "adv_de":  "scharf",
+                      "adv_ex":  "Э́то о́чень о́стро.",
+                      "adv_ex_de":  "Das ist sehr scharf."
                   },
                   {
                       "id":  "aj-творческий",
@@ -701,7 +817,11 @@
                       "example_cases":  "тво́рческий челове́к – Nominativ",
                       "example_de":  "Sie ist ein kreativer Mensch.",
                       "example_en":  "She\u0027s a creative person.",
-                      "example_es":  "Es una persona creativa."
+                      "example_es":  "Es una persona creativa.",
+                      "adv":  "тво́рчески",
+                      "adv_de":  "kreativ",
+                      "adv_ex":  "Он тво́рчески подхо́дит к рабо́те.",
+                      "adv_ex_de":  "Er geht kreativ an die Arbeit."
                   },
                   {
                       "id":  "aj-богатый",
@@ -718,7 +838,11 @@
                       "example_cases":  "бога́тый челове́к – Nominativ",
                       "example_de":  "Er ist ein sehr reicher Mensch.",
                       "example_en":  "He\u0027s a very rich man.",
-                      "example_es":  "Es un hombre muy rico."
+                      "example_es":  "Es un hombre muy rico.",
+                      "adv":  "бога́то",
+                      "adv_de":  "reich",
+                      "adv_ex":  "Они́ живу́т бога́то.",
+                      "adv_ex_de":  "Sie leben reich."
                   },
                   {
                       "id":  "aj-ночной",
@@ -750,7 +874,11 @@
                       "example_cases":  "у нас – Genitiv · мя́гкий дива́н – Nominativ",
                       "example_de":  "Wir haben ein weiches Sofa.",
                       "example_en":  "We have a soft sofa.",
-                      "example_es":  "Tenemos un sofá suave."
+                      "example_es":  "Tenemos un sofá suave.",
+                      "adv":  "мя́гко",
+                      "adv_de":  "weich, sanft",
+                      "adv_ex":  "Она́ мя́гко улыбну́лась.",
+                      "adv_ex_de":  "Sie lächelte sanft."
                   }
               ]
 }

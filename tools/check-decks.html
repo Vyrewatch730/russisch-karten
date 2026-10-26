@@ -68,6 +68,7 @@ document.getElementById('app').onload = async e => {
   const stressProblems = (text) => {
     const res = [];
     for (const word of (text || '').match(/[а-яёА-ЯЁ́]+/g) || []) {
+      if (/^(нибудь|либо)$/i.test(word)) continue;   // unbetonte Partikel: когда́-нибудь
       const vowels = (word.match(/[аеёиоуыэюяАЕЁИОУЫЭЮЯ]/g) || []).length;
       const marks = (word.match(/́/g) || []).length + (word.match(/[ёЁ]/g) || []).length;
       if (vowels > 1 && marks !== 1) res.push(`„${word}“ hat ${marks} Betonungen`);
@@ -112,11 +113,24 @@ document.getElementById('app').onload = async e => {
       for (const part of (c.example_cases || '').split(' · ')) {
         for (const word of part.split(' – ')[0].match(/[а-яё́-]+/gi) || []) if (!sentence.includes(word.toLowerCase())) problem(c, `Fälle: „${word}“ steht nicht im Satz`);
       }
-      for (const k of ['ru', 'example', 'short', 'comp', 'anto']) for (const p of stressProblems(c[k])) problem(c, `${k}: ${p}`);
+      for (const k of ['ru', 'example', 'short', 'comp', 'anto', 'adv', 'adv_ex']) for (const p of stressProblems(c[k])) problem(c, `${k}: ${p}`);
+      if (c.adv && !(c.adv_de && c.adv_ex && c.adv_ex_de)) problem(c, 'Adverb unvollständig');
+      if (c.adv_ex && !c.adv_ex.toLowerCase().includes(c.adv.toLowerCase())) problem(c, `Adverb ${c.adv} steht nicht im Beispiel`);
       const d = w.adjDecl(c.ru);
       const forms = ['m', 'n', 'f', 'pl'].flatMap(g => d[g].flatMap(f => f.split(' / ')));
       for (const f of forms) for (const p of stressProblems(f)) problem(c, `Form: ${p}`);
       if (verbose) out.push(`   ${c.ru}: ${d.m.join(' ')} | ${d.f.join(' ')} | ${d.pl[0]}`);
+    }
+  }
+  // Adverbien: Pflichtfelder, Betonung, Wort steht im Beispielsatz
+  for (const entry of index.filter(d => d.id.startsWith('adverbien-') && (!only || d.id === only))) {
+    const deck = await (await fetch('../decks/' + entry.file, { cache: 'no-cache' })).json();
+    out.push(`== ${deck.name} (${deck.cards.length} Karten)`);
+    for (const c of deck.cards) {
+      cards++;
+      for (const k of ['de', 'en', 'es', 'cat', 'example', 'example_de', 'example_en', 'example_es']) if (!c[k]) problem(c, `Feld ${k} fehlt`);
+      for (const k of ['ru', 'example']) for (const p of stressProblems(c[k])) problem(c, `${k}: ${p}`);
+      if (!(c.example || '').toLowerCase().includes(c.ru.toLowerCase())) problem(c, 'Wort steht nicht im Beispielsatz');
     }
   }
   out.unshift(`${cards} Karten geprüft, ${problems} Probleme`);

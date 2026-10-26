@@ -22,7 +22,11 @@
                       "example_cases":  "у меня́ – Genitiv · но́вая маши́на – Nominativ",
                       "example_de":  "Ich habe ein neues Auto.",
                       "example_en":  "I have a new car.",
-                      "example_es":  "Tengo un carro nuevo."
+                      "example_es":  "Tengo un carro nuevo.",
+                      "adv":  "по-но́вому",
+                      "adv_de":  "auf neue Art, neu",
+                      "adv_ex":  "Тепе́рь мы живём по-но́вому.",
+                      "adv_ex_de":  "Jetzt leben wir auf neue Art."
                   },
                   {
                       "id":  "aj-большой",
@@ -82,7 +86,11 @@
                       "example_cases":  "ру́сские кни́ги – Akkusativ Plural",
                       "example_de":  "Ich lese russische Bücher.",
                       "example_en":  "I read Russian books.",
-                      "example_es":  "Leo libros rusos."
+                      "example_es":  "Leo libros rusos.",
+                      "adv":  "по-ру́сски",
+                      "adv_de":  "auf Russisch",
+                      "adv_ex":  "Ты говори́шь по-ру́сски?",
+                      "adv_ex_de":  "Sprichst du Russisch?"
                   },
                   {
                       "id":  "aj-общий",
@@ -114,7 +122,11 @@
                       "example_cases":  "мой брат – Nominativ · высо́кий – Nominativ",
                       "example_de":  "Mein Bruder ist sehr groß.",
                       "example_en":  "My brother is very tall.",
-                      "example_es":  "Mi hermano es muy alto."
+                      "example_es":  "Mi hermano es muy alto.",
+                      "adv":  "высоко́",
+                      "adv_de":  "hoch (oben)",
+                      "adv_ex":  "Пти́ца лети́т высоко́.",
+                      "adv_ex_de":  "Der Vogel fliegt hoch."
                   },
                   {
                       "id":  "aj-хороший",
@@ -132,7 +144,11 @@
                       "example_cases":  "хоро́шая пого́да – Nominativ",
                       "example_de":  "Heute ist schönes Wetter.",
                       "example_en":  "The weather is nice today.",
-                      "example_es":  "Hoy hace buen tiempo."
+                      "example_es":  "Hoy hace buen tiempo.",
+                      "adv":  "хорошо́",
+                      "adv_de":  "gut",
+                      "adv_ex":  "Я хорошо́ сплю.",
+                      "adv_ex_de":  "Ich schlafe gut."
                   },
                   {
                       "id":  "aj-главный",
@@ -255,7 +271,11 @@
                       "example_cases":  "настоя́щий друг – Nominativ",
                       "example_de":  "Er ist ein echter Freund.",
                       "example_en":  "He\u0027s a true friend.",
-                      "example_es":  "Es un amigo de verdad."
+                      "example_es":  "Es un amigo de verdad.",
+                      "adv":  "по-настоя́щему",
+                      "adv_de":  "richtig, wirklich",
+                      "adv_ex":  "Я по-настоя́щему рад.",
+                      "adv_ex_de":  "Ich freue mich wirklich."
                   },
                   {
                       "id":  "aj-старый",
@@ -273,7 +293,11 @@
                       "example_cases":  "в ста́ром до́ме – Präpositiv",
                       "example_de":  "Wir wohnen in einem alten Haus.",
                       "example_en":  "We live in an old house.",
-                      "example_es":  "Vivimos en una casa vieja."
+                      "example_es":  "Vivimos en una casa vieja.",
+                      "adv":  "по-ста́рому",
+                      "adv_de":  "wie früher, auf alte Art",
+                      "adv_ex":  "Всё идёт по-ста́рому.",
+                      "adv_ex_de":  "Alles läuft wie früher."
                   },
                   {
                       "id":  "aj-разный",
@@ -287,7 +311,11 @@
                       "example_cases":  "у нас – Genitiv · ра́зные вку́сы – Nominativ Plural",
                       "example_de":  "Wir haben unterschiedliche Geschmäcker.",
                       "example_en":  "We have different tastes.",
-                      "example_es":  "Tenemos gustos diferentes."
+                      "example_es":  "Tenemos gustos diferentes.",
+                      "adv":  "по-ра́зному",
+                      "adv_de":  "unterschiedlich",
+                      "adv_ex":  "Все лю́ди ду́мают по-ра́зному.",
+                      "adv_ex_de":  "Alle Menschen denken unterschiedlich."
                   },
                   {
                       "id":  "aj-нужный",
@@ -331,7 +359,11 @@
                       "example_cases":  "у меня́ – Genitiv · со́бственная кварти́ра – Nominativ",
                       "example_de":  "Ich habe eine eigene Wohnung.",
                       "example_en":  "I have my own apartment.",
-                      "example_es":  "Tengo mi propio apartamento."
+                      "example_es":  "Tengo mi propio apartamento.",
+                      "adv":  "со́бственно",
+                      "adv_de":  "eigentlich",
+                      "adv_ex":  "А что, со́бственно, случи́лось?",
+                      "adv_ex_de":  "Was ist eigentlich passiert?"
                   },
                   {
                       "id":  "aj-черный",
@@ -379,7 +411,11 @@
                       "example_cases":  "в далёкой стране́ – Präpositiv",
                       "example_de":  "Er lebt in einem fernen Land.",
                       "example_en":  "He lives in a distant country.",
-                      "example_es":  "Él vive en un país lejano."
+                      "example_es":  "Él vive en un país lejano.",
+                      "adv":  "далеко́",
+                      "adv_de":  "weit (weg)",
+                      "adv_ex":  "Мой дом далеко́.",
+                      "adv_ex_de":  "Mein Haus ist weit weg."
                   },
                   {
                       "id":  "aj-подобный",
@@ -440,7 +476,11 @@
                       "example_cases":  "на столе́ – Präpositiv · живы́е цветы́ – Nominativ Plural",
                       "example_de":  "Auf dem Tisch stehen echte Blumen.",
                       "example_en":  "There are fresh flowers on the table.",
-                      "example_es":  "Hay flores naturales en la mesa."
+                      "example_es":  "Hay flores naturales en la mesa.",
+                      "adv":  "жи́во",
+                      "adv_de":  "lebhaft",
+                      "adv_ex":  "Он жи́во расска́зывает.",
+                      "adv_ex_de":  "Er erzählt lebhaft."
                   },
                   {
                       "id":  "aj-известный",
@@ -457,7 +497,11 @@
                       "example_cases":  "изве́стный актёр – Nominativ",
                       "example_de":  "Er ist ein bekannter Schauspieler.",
                       "example_en":  "He\u0027s a famous actor.",
-                      "example_es":  "Es un actor famoso."
+                      "example_es":  "Es un actor famoso.",
+                      "adv":  "изве́стно",
+                      "adv_de":  "bekannt (es ist bekannt)",
+                      "adv_ex":  "Всем изве́стно, что он прав.",
+                      "adv_ex_de":  "Allen ist bekannt, dass er recht hat."
                   },
                   {
                       "id":  "aj-военный",
@@ -472,7 +516,11 @@
                       "example_cases":  "мой оте́ц – Nominativ · вое́нный врач – Nominativ",
                       "example_de":  "Mein Vater ist Militärarzt.",
                       "example_en":  "My father is a military doctor.",
-                      "example_es":  "Mi padre es médico militar."
+                      "example_es":  "Mi padre es médico militar.",
+                      "adv":  "по-вое́нному",
+                      "adv_de":  "militärisch",
+                      "adv_ex":  "Он отве́тил по-вое́нному ко́ротко.",
+                      "adv_ex_de":  "Er antwortete militärisch knapp."
                   },
                   {
                       "id":  "aj-важный",
@@ -488,7 +536,11 @@
                       "example_cases":  "у меня́ – Genitiv · ва́жная встре́ча – Nominativ",
                       "example_de":  "Ich habe ein wichtiges Treffen.",
                       "example_en":  "I have an important meeting.",
-                      "example_es":  "Tengo una reunión importante."
+                      "example_es":  "Tengo una reunión importante.",
+                      "adv":  "ва́жно",
+                      "adv_de":  "wichtig",
+                      "adv_ex":  "Э́то о́чень ва́жно.",
+                      "adv_ex_de":  "Das ist sehr wichtig."
                   },
                   {
                       "id":  "aj-великий",
@@ -520,7 +572,11 @@
                       "example_cases":  "просто́й вопро́с – Nominativ",
                       "example_de":  "Das ist eine einfache Frage.",
                       "example_en":  "This is a simple question.",
-                      "example_es":  "Es una pregunta sencilla."
+                      "example_es":  "Es una pregunta sencilla.",
+                      "adv":  "про́сто",
+                      "adv_de":  "einfach",
+                      "adv_ex":  "Э́то про́сто.",
+                      "adv_ex_de":  "Das ist einfach."
                   },
                   {
                       "id":  "aj-огромный",
@@ -548,7 +604,11 @@
                       "example_cases":  "полити́ческая пробле́ма – Nominativ",
                       "example_de":  "Das ist ein politisches Problem.",
                       "example_en":  "This is a political problem.",
-                      "example_es":  "Es un problema político."
+                      "example_es":  "Es un problema político.",
+                      "adv":  "полити́чески",
+                      "adv_de":  "politisch",
+                      "adv_ex":  "Э́то полити́чески ва́жно.",
+                      "adv_ex_de":  "Das ist politisch wichtig."
                   },
                   {
                       "id":  "aj-московский",
@@ -621,7 +681,11 @@
                       "example_cases":  "в социа́льной сфе́ре – Präpositiv",
                       "example_de":  "Sie arbeitet im sozialen Bereich.",
                       "example_en":  "She works in the social sector.",
-                      "example_es":  "Ella trabaja en el sector social."
+                      "example_es":  "Ella trabaja en el sector social.",
+                      "adv":  "социа́льно",
+                      "adv_de":  "sozial",
+                      "adv_ex":  "Он социа́льно акти́вен.",
+                      "adv_ex_de":  "Er ist sozial aktiv."
                   },
                   {
                       "id":  "aj-ранний",
@@ -652,7 +716,11 @@
                       "example_cases":  "осо́бый день – Nominativ",
                       "example_de":  "Heute ist ein besonderer Tag.",
                       "example_en":  "Today is a special day.",
-                      "example_es":  "Hoy es un día especial."
+                      "example_es":  "Hoy es un día especial.",
+                      "adv":  "о́собо",
+                      "adv_de":  "besonders",
+                      "adv_ex":  "Я не о́собо люблю́ ко́фе.",
+                      "adv_ex_de":  "Ich mag Kaffee nicht besonders."
                   },
                   {
                       "id":  "aj-целый",
@@ -684,7 +752,11 @@
                       "example_cases":  "у меня́ – Genitiv · плохо́е настрое́ние – Nominativ",
                       "example_de":  "Ich habe schlechte Laune.",
                       "example_en":  "I\u0027m in a bad mood.",
-                      "example_es":  "Estoy de mal humor."
+                      "example_es":  "Estoy de mal humor.",
+                      "adv":  "пло́хо",
+                      "adv_de":  "schlecht",
+                      "adv_ex":  "Я пло́хо сплю.",
+                      "adv_ex_de":  "Ich schlafe schlecht."
                   },
                   {
                       "id":  "aj-сильный",
@@ -701,7 +773,11 @@
                       "example_cases":  "си́льный ве́тер – Nominativ",
                       "example_de":  "Heute ist starker Wind.",
                       "example_en":  "There\u0027s a strong wind today.",
-                      "example_es":  "Hoy hay viento fuerte."
+                      "example_es":  "Hoy hay viento fuerte.",
+                      "adv":  "си́льно",
+                      "adv_de":  "stark, sehr",
+                      "adv_ex":  "Он си́льно уста́л.",
+                      "adv_ex_de":  "Er ist sehr müde."
                   },
                   {
                       "id":  "aj-скорый",
@@ -716,7 +792,11 @@
                       "example_cases":  "ско́рую по́мощь – Akkusativ",
                       "example_de":  "Ruf einen Rettungswagen!",
                       "example_en":  "Call an ambulance!",
-                      "example_es":  "¡Llama una ambulancia!"
+                      "example_es":  "¡Llama una ambulancia!",
+                      "adv":  "ско́ро",
+                      "adv_de":  "bald",
+                      "adv_ex":  "Ско́ро ле́то.",
+                      "adv_ex_de":  "Bald ist Sommer."
                   },
                   {
                       "id":  "aj-крупный",
@@ -732,7 +812,11 @@
                       "example_cases":  "кру́пная компа́ния – Nominativ",
                       "example_de":  "Das ist ein großes Unternehmen.",
                       "example_en":  "This is a large company.",
-                      "example_es":  "Es una empresa grande."
+                      "example_es":  "Es una empresa grande.",
+                      "adv":  "кру́пно",
+                      "adv_de":  "groß, grob",
+                      "adv_ex":  "Наре́жь лук кру́пно.",
+                      "adv_ex_de":  "Schneide die Zwiebel grob."
                   },
                   {
                       "id":  "aj-внутренний",
@@ -747,7 +831,11 @@
                       "example_cases":  "мини́стр – Nominativ · вну́тренних дел – Genitiv Plural",
                       "example_de":  "Er ist Innenminister.",
                       "example_en":  "He\u0027s the interior minister.",
-                      "example_es":  "Es ministro del Interior."
+                      "example_es":  "Es ministro del Interior.",
+                      "adv":  "вну́тренне",
+                      "adv_de":  "innerlich",
+                      "adv_ex":  "Он вну́тренне споко́ен.",
+                      "adv_ex_de":  "Er ist innerlich ruhig."
                   },
                   {
                       "id":  "aj-экономический",
@@ -760,7 +848,11 @@
                       "example_cases":  "в стране́ – Präpositiv · экономи́ческий кри́зис – Nominativ",
                       "example_de":  "Im Land herrscht eine Wirtschaftskrise.",
                       "example_en":  "The country is in an economic crisis.",
-                      "example_es":  "El país está en crisis económica."
+                      "example_es":  "El país está en crisis económica.",
+                      "adv":  "экономи́чески",
+                      "adv_de":  "wirtschaftlich",
+                      "adv_ex":  "Э́то экономи́чески вы́годно.",
+                      "adv_ex_de":  "Das ist wirtschaftlich günstig."
                   },
                   {
                       "id":  "aj-правый",

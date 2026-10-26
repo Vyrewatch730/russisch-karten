@@ -23,7 +23,11 @@
                       "example_cases":  "тёмный шокола́д – Akkusativ",
                       "example_de":  "Ich mag dunkle Schokolade.",
                       "example_en":  "I like dark chocolate.",
-                      "example_es":  "Me gusta el chocolate negro."
+                      "example_es":  "Me gusta el chocolate negro.",
+                      "adv":  "темно́",
+                      "adv_de":  "dunkel",
+                      "adv_ex":  "На у́лице темно́.",
+                      "adv_ex_de":  "Draußen ist es dunkel."
                   },
                   {
                       "id":  "aj-гражданский",
@@ -52,7 +56,11 @@
                       "example_cases":  "вне́шний вид – Nominativ",
                       "example_de":  "Das Äußere ist sehr wichtig.",
                       "example_en":  "Appearance is very important.",
-                      "example_es":  "La apariencia es muy importante."
+                      "example_es":  "La apariencia es muy importante.",
+                      "adv":  "вне́шне",
+                      "adv_de":  "äußerlich",
+                      "adv_ex":  "Вне́шне он споко́ен.",
+                      "adv_ex_de":  "Äußerlich ist er ruhig."
                   },
                   {
                       "id":  "aj-боевой",
@@ -97,7 +105,11 @@
                       "example_cases":  "глубо́кое о́зеро – Nominativ",
                       "example_de":  "Das ist ein tiefer See.",
                       "example_en":  "This is a deep lake.",
-                      "example_es":  "Es un lago profundo."
+                      "example_es":  "Es un lago profundo.",
+                      "adv":  "глубоко́",
+                      "adv_de":  "tief",
+                      "adv_ex":  "Здесь глубоко́.",
+                      "adv_ex_de":  "Hier ist es tief."
                   },
                   {
                       "id":  "aj-долгий",
@@ -115,7 +127,11 @@
                       "example_cases":  "до́лгий день – Nominativ",
                       "example_de":  "Das war ein langer Tag.",
                       "example_en":  "It was a long day.",
-                      "example_es":  "Fue un día largo."
+                      "example_es":  "Fue un día largo.",
+                      "adv":  "до́лго",
+                      "adv_de":  "lange",
+                      "adv_ex":  "Я до́лго ждал.",
+                      "adv_ex_de":  "Ich habe lange gewartet."
                   },
                   {
                       "id":  "aj-прямой",
@@ -130,7 +146,11 @@
                       "example_cases":  "прямо́й рейс – Nominativ · в Москву́ – Akkusativ",
                       "example_de":  "Das ist ein Direktflug nach Moskau.",
                       "example_en":  "This is a direct flight to Moscow.",
-                      "example_es":  "Es un vuelo directo a Moscú."
+                      "example_es":  "Es un vuelo directo a Moscú.",
+                      "adv":  "пря́мо",
+                      "adv_de":  "geradeaus, direkt",
+                      "adv_ex":  "Иди́те пря́мо.",
+                      "adv_ex_de":  "Gehen Sie geradeaus."
                   },
                   {
                       "id":  "aj-финансовый",
@@ -159,7 +179,11 @@
                       "example_cases":  "откры́тый челове́к – Nominativ",
                       "example_de":  "Er ist ein offener Mensch.",
                       "example_en":  "He\u0027s an open person.",
-                      "example_es":  "Es una persona abierta."
+                      "example_es":  "Es una persona abierta.",
+                      "adv":  "откры́то",
+                      "adv_de":  "offen",
+                      "adv_ex":  "Он говори́т откры́то.",
+                      "adv_ex_de":  "Er spricht offen."
                   },
                   {
                       "id":  "aj-знакомый",
@@ -202,7 +226,11 @@
                       "example_cases":  "в истори́ческом це́нтре – Präpositiv",
                       "example_de":  "Wir sind in der Altstadt spazieren gegangen.",
                       "example_en":  "We walked in the historic center.",
-                      "example_es":  "Paseamos por el centro histórico."
+                      "example_es":  "Paseamos por el centro histórico.",
+                      "adv":  "истори́чески",
+                      "adv_de":  "historisch",
+                      "adv_ex":  "Так сложи́лось истори́чески.",
+                      "adv_ex_de":  "Das hat sich historisch so ergeben."
                   },
                   {
                       "id":  "aj-народный",
@@ -259,7 +287,11 @@
                       "example_cases":  "холоди́льник – Nominativ · пусто́й – Nominativ",
                       "example_de":  "Der Kühlschrank ist leer.",
                       "example_en":  "The fridge is empty.",
-                      "example_es":  "La nevera está vacía."
+                      "example_es":  "La nevera está vacía.",
+                      "adv":  "пу́сто",
+                      "adv_de":  "leer",
+                      "adv_ex":  "В кварти́ре пу́сто.",
+                      "adv_ex_de":  "In der Wohnung ist es leer."
                   },
                   {
                       "id":  "aj-очередной",
@@ -314,7 +346,11 @@
                       "example_cases":  "с неме́цким акце́нтом – Instrumental",
                       "example_de":  "Er spricht mit deutschem Akzent.",
                       "example_en":  "He speaks with a German accent.",
-                      "example_es":  "Habla con acento alemán."
+                      "example_es":  "Habla con acento alemán.",
+                      "adv":  "по-неме́цки",
+                      "adv_de":  "auf Deutsch",
+                      "adv_ex":  "Я говорю́ по-неме́цки.",
+                      "adv_ex_de":  "Ich spreche Deutsch."
                   },
                   {
                       "id":  "aj-золотой",
@@ -341,7 +377,11 @@
                       "example_cases":  "у нас – Genitiv · техни́ческие пробле́мы – Nominativ Plural",
                       "example_de":  "Wir haben technische Probleme.",
                       "example_en":  "We have technical problems.",
-                      "example_es":  "Tenemos problemas técnicos."
+                      "example_es":  "Tenemos problemas técnicos.",
+                      "adv":  "техни́чески",
+                      "adv_de":  "technisch",
+                      "adv_ex":  "Э́то техни́чески возмо́жно.",
+                      "adv_ex_de":  "Das ist technisch möglich."
                   },
                   {
                       "id":  "aj-нормальный",
@@ -356,7 +396,11 @@
                       "example_cases":  "норма́льная ситуа́ция – Nominativ",
                       "example_de":  "Das ist eine normale Situation.",
                       "example_en":  "This is a normal situation.",
-                      "example_es":  "Es una situación normal."
+                      "example_es":  "Es una situación normal.",
+                      "adv":  "норма́льно",
+                      "adv_de":  "normal, okay",
+                      "adv_ex":  "Всё норма́льно.",
+                      "adv_ex_de":  "Alles okay."
                   },
                   {
                       "id":  "aj-городской",
@@ -443,7 +487,11 @@
                       "example_cases":  "у нас – Genitiv · бы́стрый Интерне́т – Nominativ",
                       "example_de":  "Wir haben schnelles Internet.",
                       "example_en":  "We have fast internet.",
-                      "example_es":  "Tenemos internet rápido."
+                      "example_es":  "Tenemos internet rápido.",
+                      "adv":  "бы́стро",
+                      "adv_de":  "schnell",
+                      "adv_ex":  "Он бы́стро бе́гает.",
+                      "adv_ex_de":  "Er läuft schnell."
                   },
                   {
                       "id":  "aj-холодный",
@@ -460,7 +508,11 @@
                       "example_cases":  "холо́дную во́ду – Akkusativ",
                       "example_de":  "Ich trinke kaltes Wasser.",
                       "example_en":  "I drink cold water.",
-                      "example_es":  "Tomo agua fría."
+                      "example_es":  "Tomo agua fría.",
+                      "adv":  "хо́лодно",
+                      "adv_de":  "kalt",
+                      "adv_ex":  "Сего́дня хо́лодно.",
+                      "adv_ex_de":  "Heute ist es kalt."
                   },
                   {
                       "id":  "aj-конкретный",
@@ -473,7 +525,11 @@
                       "example_cases":  "мне – Dativ · конкре́тный отве́т – Akkusativ",
                       "example_de":  "Gib mir eine konkrete Antwort.",
                       "example_en":  "Give me a specific answer.",
-                      "example_es":  "Dame una respuesta concreta."
+                      "example_es":  "Dame una respuesta concreta.",
+                      "adv":  "конкре́тно",
+                      "adv_de":  "konkret",
+                      "adv_ex":  "Скажи́ конкре́тно.",
+                      "adv_ex_de":  "Sag es konkret."
                   },
                   {
                       "id":  "aj-иностранный",
@@ -504,7 +560,11 @@
                       "example_cases":  "счастли́вого пути́ – Genitiv (Wunsch)",
                       "example_de":  "Gute Reise!",
                       "example_en":  "Have a good trip!",
-                      "example_es":  "¡Buen viaje!"
+                      "example_es":  "¡Buen viaje!",
+                      "adv":  "счастли́во",
+                      "adv_de":  "glücklich; Mach\u0027s gut!",
+                      "adv_ex":  "Счастли́во!",
+                      "adv_ex_de":  "Mach\u0027s gut!"
                   },
                   {
                       "id":  "aj-левый",
@@ -550,7 +610,11 @@
                       "example_cases":  "у тебя́ – Genitiv · то́чное вре́мя – Nominativ",
                       "example_de":  "Hast du die genaue Uhrzeit?",
                       "example_en":  "Do you have the exact time?",
-                      "example_es":  "¿Tienes la hora exacta?"
+                      "example_es":  "¿Tienes la hora exacta?",
+                      "adv":  "то́чно",
+                      "adv_de":  "genau",
+                      "adv_ex":  "Ты то́чно придёшь?",
+                      "adv_ex_de":  "Kommst du ganz sicher?"
                   },
                   {
                       "id":  "aj-частый",
@@ -568,7 +632,11 @@
                       "example_cases":  "ча́стые дожди́ – Nominativ Plural",
                       "example_de":  "Hier regnet es oft.",
                       "example_en":  "It rains often here.",
-                      "example_es":  "Aquí llueve con frecuencia."
+                      "example_es":  "Aquí llueve con frecuencia.",
+                      "adv":  "ча́сто",
+                      "adv_de":  "oft",
+                      "adv_ex":  "Я ча́сто чита́ю.",
+                      "adv_ex_de":  "Ich lese oft."
                   },
                   {
                       "id":  "aj-значительный",
@@ -581,7 +649,11 @@
                       "example_cases":  "значи́тельная су́мма – Nominativ",
                       "example_de":  "Das ist eine beträchtliche Summe.",
                       "example_en":  "This is a significant sum.",
-                      "example_es":  "Es una suma considerable."
+                      "example_es":  "Es una suma considerable.",
+                      "adv":  "значи́тельно",
+                      "adv_de":  "deutlich, bedeutend",
+                      "adv_ex":  "Цены́ значи́тельно вы́росли.",
+                      "adv_ex_de":  "Die Preise sind deutlich gestiegen."
                   },
                   {
                       "id":  "aj-связанный",
@@ -612,7 +684,11 @@
                       "example_cases":  "уве́ренный – Nominativ · в себе́ – Präpositiv · челове́к – Nominativ",
                       "example_de":  "Er ist ein selbstbewusster Mensch.",
                       "example_en":  "He\u0027s a self-confident person.",
-                      "example_es":  "Es una persona segura de sí misma."
+                      "example_es":  "Es una persona segura de sí misma.",
+                      "adv":  "уве́ренно",
+                      "adv_de":  "sicher, selbstbewusst",
+                      "adv_ex":  "Он говори́т уве́ренно.",
+                      "adv_ex_de":  "Er spricht selbstbewusst."
                   },
                   {
                       "id":  "aj-центральный",
@@ -642,7 +718,11 @@
                       "example_cases":  "то́нкая кни́га – Nominativ",
                       "example_de":  "Das ist ein dünnes Buch.",
                       "example_en":  "This is a thin book.",
-                      "example_es":  "Es un libro delgado."
+                      "example_es":  "Es un libro delgado.",
+                      "adv":  "то́нко",
+                      "adv_de":  "fein, dünn",
+                      "adv_ex":  "Наре́жь хлеб то́нко.",
+                      "adv_ex_de":  "Schneide das Brot dünn."
                   },
                   {
                       "id":  "aj-будущий",
@@ -670,7 +750,11 @@
                       "example_cases":  "физи́ческий труд – Akkusativ",
                       "example_de":  "Ich mag körperliche Arbeit.",
                       "example_en":  "I like physical work.",
-                      "example_es":  "Me gusta el trabajo físico."
+                      "example_es":  "Me gusta el trabajo físico.",
+                      "adv":  "физи́чески",
+                      "adv_de":  "körperlich",
+                      "adv_ex":  "Я физи́чески уста́л.",
+                      "adv_ex_de":  "Ich bin körperlich müde."
                   },
                   {
                       "id":  "aj-частный",
@@ -703,7 +787,11 @@
                       "example_cases":  "у меня́ – Genitiv · ме́лких де́нег – Genitiv Plural (nach нет)",
                       "example_de":  "Ich habe kein Kleingeld.",
                       "example_en":  "I don\u0027t have any small change.",
-                      "example_es":  "No tengo dinero suelto."
+                      "example_es":  "No tengo dinero suelto.",
+                      "adv":  "ме́лко",
+                      "adv_de":  "fein, klein",
+                      "adv_ex":  "Наре́жь лук ме́лко.",
+                      "adv_ex_de":  "Schneide die Zwiebel fein."
                   },
                   {
                       "id":  "aj-постоянный",
@@ -717,7 +805,11 @@
                       "example_cases":  "у него́ – Genitiv · постоя́нной рабо́ты – Genitiv (nach нет)",
                       "example_de":  "Er hat keine feste Arbeit.",
                       "example_en":  "He has no permanent job.",
-                      "example_es":  "No tiene trabajo fijo."
+                      "example_es":  "No tiene trabajo fijo.",
+                      "adv":  "постоя́нно",
+                      "adv_de":  "ständig",
+                      "adv_ex":  "Он постоя́нно опа́здывает.",
+                      "adv_ex_de":  "Er kommt ständig zu spät."
                   },
                   {
                       "id":  "aj-английский",
@@ -731,7 +823,11 @@
                       "example_cases":  "англи́йский язы́к – Akkusativ",
                       "example_de":  "Sie unterrichtet Englisch.",
                       "example_en":  "She teaches English.",
-                      "example_es":  "Ella enseña inglés."
+                      "example_es":  "Ella enseña inglés.",
+                      "adv":  "по-англи́йски",
+                      "adv_de":  "auf Englisch",
+                      "adv_ex":  "Он хорошо́ говори́т по-англи́йски.",
+                      "adv_ex_de":  "Er spricht gut Englisch."
                   },
                   {
                       "id":  "aj-тихий",
@@ -749,7 +845,11 @@
                       "example_cases":  "на ти́хой у́лице – Präpositiv",
                       "example_de":  "Wir wohnen in einer ruhigen Straße.",
                       "example_en":  "We live on a quiet street.",
-                      "example_es":  "Vivimos en una calle tranquila."
+                      "example_es":  "Vivimos en una calle tranquila.",
+                      "adv":  "ти́хо",
+                      "adv_de":  "leise, still",
+                      "adv_ex":  "Говори́ ти́хо.",
+                      "adv_ex_de":  "Sprich leise."
                   }
               ]
 }

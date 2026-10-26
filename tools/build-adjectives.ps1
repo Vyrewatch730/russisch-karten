@@ -28,6 +28,15 @@ foreach ($line in [IO.File]::ReadAllLines((Join-Path $PSScriptRoot 'adj-frequenc
   if (-not $freq.ContainsKey($p[0]) -or $freq[$p[0]] -lt $v) { $freq[$p[0]] = $v }
 }
 
+# Adverb zum Adjektiv (decks-src\adjektiv-adverbien.tsv: Adjektiv | Adverb | Deutsch | Beispiel | Deutsch)
+$advs = @{}
+foreach ($line in [IO.File]::ReadAllLines((Join-Path $src 'adjektiv-adverbien.tsv'), $utf8)) {
+  if ($line.Trim() -eq '' -or $line.StartsWith('#')) { continue }
+  $p = $line.Split('|') | ForEach-Object { $_.Trim() }
+  $advs[(& $plain $p[0])] = $p
+}
+$usedAdv = @{}
+
 $cards = New-Object System.Collections.ArrayList
 $seen = @{}
 $missing = @()
@@ -49,11 +58,14 @@ foreach ($file in Get-ChildItem $src -Filter 'adjektive-*.txt' | Sort-Object Nam
       if ($v.comp.EndsWith('!')) { $c.comp = $v.comp.TrimEnd('!'); $c.comp_irr = '1' } else { $c.comp = $v.comp }
     }
     foreach ($k in 'anto', 'hint', 'example', 'example_cases', 'example_de', 'example_en', 'example_es') { if ($v[$k]) { $c[$k] = $v[$k] } }
+    if ($advs.ContainsKey($key)) { $a = $advs[$key]; $c.adv = $a[1]; $c.adv_de = $a[2]; $c.adv_ex = $a[3]; $c.adv_ex_de = $a[4]; $usedAdv[$key] = 1 }
     $score = if ($freq.ContainsKey($key)) { $freq[$key] } else { 0 }
     if ($score -eq 0) { $missing += $key }
     [void]$cards.Add([pscustomobject]@{ Card = $c; Score = $score; Order = $cards.Count })
   }
 }
+$unused = @($advs.Keys | Where-Object { -not $usedAdv[$_] })
+if ($unused) { throw "adjektiv-adverbien.tsv: kein Adjektiv für $($unused -join ', ')" }
 if ($missing) { Write-Host "Ohne Korpus-Häufigkeit (kommen ans Ende): $($missing -join ', ')" }
 
 $sorted = @($cards | Sort-Object @{ Expression = 'Score'; Descending = $true }, @{ Expression = 'Order'; Descending = $false })
@@ -78,12 +90,13 @@ for ($g = 0; $g -lt $deckCount; $g++) {
 }
 Get-ChildItem $out -Filter 'adjektive-*.json' | Where-Object { [int]($_.BaseName -replace '\D', '') -gt $deckCount } | Remove-Item
 
-# Bibliothek: Adjektiv-Decks ersetzen; Reihenfolge: Sonstige, Adjektive, Nomen, Verben
+# Bibliothek: Adjektiv-Decks ersetzen; Reihenfolge: Sonstige, Adjektive, Adverbien, Nomen, Verben
 $indexPath = Join-Path $out 'index.json'
 $index = [IO.File]::ReadAllText($indexPath, $utf8) | ConvertFrom-Json
-$others = @($index | Where-Object { $_.id -notlike 'adjektive-*' -and $_.id -notlike 'nomen-*' -and $_.id -notlike 'verben-*' })
+$others = @($index | Where-Object { $_.id -notlike 'adjektive-*' -and $_.id -notlike 'adverbien-*' -and $_.id -notlike 'nomen-*' -and $_.id -notlike 'verben-*' })
+$adverbs = @($index | Where-Object { $_.id -like 'adverbien-*' })
 $nouns = @($index | Where-Object { $_.id -like 'nomen-*' })
 $verbs = @($index | Where-Object { $_.id -like 'verben-*' })
-$all = @($others) + $entries + $nouns + $verbs
+$all = @($others) + $entries + $adverbs + $nouns + $verbs
 [IO.File]::WriteAllText($indexPath, (ConvertTo-Json @($all) -Depth 3), $utf8)
 Write-Host "Gesamt: $($sorted.Count) Adjektive in $deckCount Decks"

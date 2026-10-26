@@ -19,7 +19,11 @@
                       "example_cases":  "траги́ческая исто́рия – Nominativ",
                       "example_de":  "Das ist eine tragische Geschichte.",
                       "example_en":  "It\u0027s a tragic story.",
-                      "example_es":  "Es una historia trágica."
+                      "example_es":  "Es una historia trágica.",
+                      "adv":  "траги́чески",
+                      "adv_de":  "tragisch",
+                      "adv_ex":  "Он траги́чески поги́б.",
+                      "adv_ex_de":  "Er kam tragisch ums Leben."
                   },
                   {
                       "id":  "aj-типичный",
@@ -33,7 +37,11 @@
                       "example_cases":  "типи́чная оши́бка – Nominativ",
                       "example_de":  "Das ist ein typischer Fehler.",
                       "example_en":  "It\u0027s a typical mistake.",
-                      "example_es":  "Es un error típico."
+                      "example_es":  "Es un error típico.",
+                      "adv":  "типи́чно",
+                      "adv_de":  "typisch",
+                      "adv_ex":  "Э́то типи́чно для него́.",
+                      "adv_ex_de":  "Das ist typisch für ihn."
                   },
                   {
                       "id":  "aj-революционный",
@@ -59,7 +67,11 @@
                       "example_cases":  "оригина́льный пода́рок – Nominativ",
                       "example_de":  "Das ist ein originelles Geschenk.",
                       "example_en":  "It\u0027s an original gift.",
-                      "example_es":  "Es un regalo original."
+                      "example_es":  "Es un regalo original.",
+                      "adv":  "оригина́льно",
+                      "adv_de":  "originell",
+                      "adv_ex":  "Э́то оригина́льно.",
+                      "adv_ex_de":  "Das ist originell."
                   },
                   {
                       "id":  "aj-сексуальный",
@@ -98,7 +110,11 @@
                       "example_cases":  "таи́нственная исто́рия – Nominativ",
                       "example_de":  "Das ist eine geheimnisvolle Geschichte.",
                       "example_en":  "It\u0027s a mysterious story.",
-                      "example_es":  "Es una historia misteriosa."
+                      "example_es":  "Es una historia misteriosa.",
+                      "adv":  "таи́нственно",
+                      "adv_de":  "geheimnisvoll",
+                      "adv_ex":  "Она́ таи́нственно улыбну́лась.",
+                      "adv_ex_de":  "Sie lächelte geheimnisvoll."
                   },
                   {
                       "id":  "aj-принципиальный",
@@ -112,7 +128,11 @@
                       "example_cases":  "принципиа́льный челове́к – Nominativ",
                       "example_de":  "Er ist ein Mensch mit Prinzipien.",
                       "example_en":  "He\u0027s a man of principle.",
-                      "example_es":  "Es una persona de principios."
+                      "example_es":  "Es una persona de principios.",
+                      "adv":  "принципиа́льно",
+                      "adv_de":  "grundsätzlich",
+                      "adv_ex":  "Я принципиа́льно не курю́.",
+                      "adv_ex_de":  "Ich rauche grundsätzlich nicht."
                   },
                   {
                       "id":  "aj-чудесный",
@@ -126,7 +146,11 @@
                       "example_cases":  "у нас – Genitiv · чуде́сный о́тпуск – Nominativ",
                       "example_de":  "Wir hatten einen wunderbaren Urlaub.",
                       "example_en":  "We had a wonderful vacation.",
-                      "example_es":  "Tuvimos unas vacaciones maravillosas."
+                      "example_es":  "Tuvimos unas vacaciones maravillosas.",
+                      "adv":  "чуде́сно",
+                      "adv_de":  "wunderbar",
+                      "adv_ex":  "Чуде́сно!",
+                      "adv_ex_de":  "Wunderbar!"
                   },
                   {
                       "id":  "aj-удачный",
@@ -142,7 +166,11 @@
                       "example_cases":  "уда́чный день – Nominativ",
                       "example_de":  "Das war ein erfolgreicher Tag.",
                       "example_en":  "It was a good day.",
-                      "example_es":  "Fue un buen día."
+                      "example_es":  "Fue un buen día.",
+                      "adv":  "уда́чно",
+                      "adv_de":  "gelungen, erfolgreich",
+                      "adv_ex":  "Всё прошло́ уда́чно.",
+                      "adv_ex_de":  "Alles ist gut gelaufen."
                   },
                   {
                       "id":  "aj-противный",
@@ -156,7 +184,11 @@
                       "example_cases":  "проти́вный за́пах – Nominativ",
                       "example_de":  "Das ist ein ekelhafter Geruch.",
                       "example_en":  "That\u0027s a disgusting smell.",
-                      "example_es":  "Es un olor asqueroso."
+                      "example_es":  "Es un olor asqueroso.",
+                      "adv":  "проти́вно",
+                      "adv_de":  "eklig",
+                      "adv_ex":  "Мне проти́вно.",
+                      "adv_ex_de":  "Mir ekelt davor."
                   },
                   {
                       "id":  "aj-правительственный",
@@ -226,7 +258,11 @@
                       "example_cases":  "куре́ние – Nominativ · вре́дная привы́чка – Nominativ",
                       "example_de":  "Rauchen ist eine schädliche Angewohnheit.",
                       "example_en":  "Smoking is a harmful habit.",
-                      "example_es":  "Fumar es un hábito dañino."
+                      "example_es":  "Fumar es un hábito dañino.",
+                      "adv":  "вре́дно",
+                      "adv_de":  "schädlich",
+                      "adv_ex":  "Кури́ть вре́дно.",
+                      "adv_ex_de":  "Rauchen ist schädlich."
                   },
                   {
                       "id":  "aj-перспективный",
@@ -267,7 +303,11 @@
                       "example_cases":  "у него́ – Genitiv · дурна́я привы́чка – Nominativ",
                       "example_de":  "Er hat eine schlechte Angewohnheit.",
                       "example_en":  "He has a bad habit.",
-                      "example_es":  "Tiene un mal hábito."
+                      "example_es":  "Tiene un mal hábito.",
+                      "adv":  "ду́рно",
+                      "adv_de":  "schlecht, übel",
+                      "adv_ex":  "Мне ду́рно.",
+                      "adv_ex_de":  "Mir ist übel."
                   },
                   {
                       "id":  "aj-воинский",
@@ -293,7 +333,11 @@
                       "example_cases":  "эксперимента́льный ме́тод – Nominativ",
                       "example_de":  "Das ist eine experimentelle Methode.",
                       "example_en":  "It\u0027s an experimental method.",
-                      "example_es":  "Es un método experimental."
+                      "example_es":  "Es un método experimental.",
+                      "adv":  "эксперимента́льно",
+                      "adv_de":  "experimentell",
+                      "adv_ex":  "Э́то эксперимента́льно прове́рено.",
+                      "adv_ex_de":  "Das ist experimentell geprüft."
                   },
                   {
                       "id":  "aj-критический",
@@ -306,7 +350,11 @@
                       "example_cases":  "крити́ческий моме́нт – Nominativ",
                       "example_de":  "Das ist ein kritischer Moment.",
                       "example_en":  "It\u0027s a critical moment.",
-                      "example_es":  "Es un momento crítico."
+                      "example_es":  "Es un momento crítico.",
+                      "adv":  "крити́чески",
+                      "adv_de":  "kritisch",
+                      "adv_ex":  "Он крити́чески смо́трит на мир.",
+                      "adv_ex_de":  "Er sieht die Welt kritisch."
                   },
                   {
                       "id":  "aj-выгодный",
@@ -321,7 +369,11 @@
                       "example_cases":  "вы́годное предложе́ние – Nominativ",
                       "example_de":  "Das ist ein günstiges Angebot.",
                       "example_en":  "It\u0027s a good deal.",
-                      "example_es":  "Es una oferta ventajosa."
+                      "example_es":  "Es una oferta ventajosa.",
+                      "adv":  "вы́годно",
+                      "adv_de":  "günstig, lohnend",
+                      "adv_ex":  "Э́то вы́годно.",
+                      "adv_ex_de":  "Das lohnt sich."
                   },
                   {
                       "id":  "aj-ближний",
@@ -349,7 +401,11 @@
                       "example_cases":  "торже́ственный день – Nominativ",
                       "example_de":  "Heute ist ein feierlicher Tag.",
                       "example_en":  "Today is a festive day.",
-                      "example_es":  "Hoy es un día solemne."
+                      "example_es":  "Hoy es un día solemne.",
+                      "adv":  "торже́ственно",
+                      "adv_de":  "feierlich",
+                      "adv_ex":  "Мы торже́ственно отме́тили юбиле́й.",
+                      "adv_ex_de":  "Wir haben das Jubiläum feierlich begangen."
                   },
                   {
                       "id":  "aj-неплохой",
@@ -363,7 +419,11 @@
                       "example_cases":  "неплохо́й фильм – Nominativ",
                       "example_de":  "Das ist ein ganz guter Film.",
                       "example_en":  "It\u0027s not a bad film.",
-                      "example_es":  "No es una mala película."
+                      "example_es":  "No es una mala película.",
+                      "adv":  "непло́хо",
+                      "adv_de":  "nicht schlecht, ganz gut",
+                      "adv_ex":  "Непло́хо!",
+                      "adv_ex_de":  "Nicht schlecht!"
                   },
                   {
                       "id":  "aj-комплексный",
@@ -394,7 +454,11 @@
                       "example_cases":  "ты – Nominativ · гру́стный – Nominativ",
                       "example_de":  "Warum bist du so traurig?",
                       "example_en":  "Why are you so sad?",
-                      "example_es":  "¿Por qué estás tan triste?"
+                      "example_es":  "¿Por qué estás tan triste?",
+                      "adv":  "гру́стно",
+                      "adv_de":  "traurig",
+                      "adv_ex":  "Мне гру́стно.",
+                      "adv_ex_de":  "Ich bin traurig."
                   },
                   {
                       "id":  "aj-тогдашний",
@@ -437,7 +501,11 @@
                       "example_cases":  "у него́ – Genitiv · жа́лкий вид – Nominativ",
                       "example_de":  "Er sieht erbärmlich aus.",
                       "example_en":  "He looks pitiful.",
-                      "example_es":  "Tiene un aspecto lamentable."
+                      "example_es":  "Tiene un aspecto lamentable.",
+                      "adv":  "жа́лко",
+                      "adv_de":  "schade",
+                      "adv_ex":  "Жа́лко, что ты не пришёл.",
+                      "adv_ex_de":  "Schade, dass du nicht gekommen bist."
                   },
                   {
                       "id":  "aj-ледяной",
@@ -516,7 +584,11 @@
                       "example_cases":  "сла́вный па́рень – Nominativ",
                       "example_de":  "Er ist ein netter Kerl.",
                       "example_en":  "He\u0027s a nice guy.",
-                      "example_es":  "Es un buen tipo."
+                      "example_es":  "Es un buen tipo.",
+                      "adv":  "сла́вно",
+                      "adv_de":  "schön, prima",
+                      "adv_ex":  "Мы сла́вно погуля́ли.",
+                      "adv_ex_de":  "Wir sind schön spazieren gegangen."
                   },
                   {
                       "id":  "aj-любопытный",
@@ -531,7 +603,11 @@
                       "example_cases":  "любопы́тный ребёнок – Nominativ",
                       "example_de":  "Was für ein neugieriges Kind!",
                       "example_en":  "What a curious child!",
-                      "example_es":  "¡Qué niño tan curioso!"
+                      "example_es":  "¡Qué niño tan curioso!",
+                      "adv":  "любопы́тно",
+                      "adv_de":  "neugierig, interessant",
+                      "adv_ex":  "Мне любопы́тно.",
+                      "adv_ex_de":  "Ich bin neugierig."
                   },
                   {
                       "id":  "aj-кредитный",
@@ -609,7 +685,11 @@
                       "example_cases":  "нема́лые де́ньги – Nominativ Plural",
                       "example_de":  "Das ist eine Menge Geld.",
                       "example_en":  "That\u0027s a lot of money.",
-                      "example_es":  "Es bastante dinero."
+                      "example_es":  "Es bastante dinero.",
+                      "adv":  "нема́ло",
+                      "adv_de":  "nicht wenig, viel",
+                      "adv_ex":  "Он нема́ло сде́лал.",
+                      "adv_ex_de":  "Er hat viel getan."
                   },
                   {
                       "id":  "aj-плоский",
@@ -638,7 +718,11 @@
                       "example_cases":  "у него́ – Genitiv · негати́вный о́пыт – Nominativ",
                       "example_de":  "Er hat schlechte Erfahrungen gemacht.",
                       "example_en":  "He has had a negative experience.",
-                      "example_es":  "Tuvo una experiencia negativa."
+                      "example_es":  "Tuvo una experiencia negativa.",
+                      "adv":  "негати́вно",
+                      "adv_de":  "negativ",
+                      "adv_ex":  "Он негати́вно отно́сится к э́тому.",
+                      "adv_ex_de":  "Er sieht das negativ."
                   },
                   {
                       "id":  "aj-натуральный",
@@ -652,7 +736,11 @@
                       "example_cases":  "натура́льный сок – Nominativ",
                       "example_de":  "Das ist ein naturreiner Saft.",
                       "example_en":  "It\u0027s natural juice.",
-                      "example_es":  "Es jugo natural."
+                      "example_es":  "Es jugo natural.",
+                      "adv":  "натура́льно",
+                      "adv_de":  "natürlich, echt",
+                      "adv_ex":  "Э́то вы́глядит натура́льно.",
+                      "adv_ex_de":  "Das sieht echt aus."
                   },
                   {
                       "id":  "aj-бессмысленный",
@@ -665,7 +753,11 @@
                       "example_cases":  "бессмы́сленный разгово́р – Nominativ",
                       "example_de":  "Das ist ein sinnloses Gespräch.",
                       "example_en":  "It\u0027s a pointless conversation.",
-                      "example_es":  "Es una conversación sin sentido."
+                      "example_es":  "Es una conversación sin sentido.",
+                      "adv":  "бессмы́сленно",
+                      "adv_de":  "sinnlos",
+                      "adv_ex":  "Спо́рить бессмы́сленно.",
+                      "adv_ex_de":  "Streiten ist sinnlos."
                   },
                   {
                       "id":  "aj-сибирский",

@@ -37,7 +37,11 @@
                       "example_cases":  "мой бли́зкий друг – Nominativ",
                       "example_de":  "Er ist ein enger Freund von mir.",
                       "example_en":  "He\u0027s a close friend of mine.",
-                      "example_es":  "Es un amigo cercano."
+                      "example_es":  "Es un amigo cercano.",
+                      "adv":  "бли́зко",
+                      "adv_de":  "nah",
+                      "adv_ex":  "Магази́н бли́зко.",
+                      "adv_ex_de":  "Der Laden ist nah."
                   },
                   {
                       "id":  "aj-похожий",
@@ -52,7 +56,11 @@
                       "example_cases":  "сын – Nominativ · на отца́ – Akkusativ (belebt)",
                       "example_de":  "Der Sohn sieht dem Vater sehr ähnlich.",
                       "example_en":  "The son looks a lot like his father.",
-                      "example_es":  "El hijo se parece mucho al padre."
+                      "example_es":  "El hijo se parece mucho al padre.",
+                      "adv":  "похо́же",
+                      "adv_de":  "anscheinend, es sieht so aus",
+                      "adv_ex":  "Похо́же, бу́дет дождь.",
+                      "adv_ex_de":  "Es sieht nach Regen aus."
                   },
                   {
                       "id":  "aj-различный",
@@ -80,7 +88,11 @@
                       "example_cases":  "необходи́мое усло́вие – Nominativ",
                       "example_de":  "Das ist eine notwendige Bedingung.",
                       "example_en":  "This is a necessary condition.",
-                      "example_es":  "Es una condición necesaria."
+                      "example_es":  "Es una condición necesaria.",
+                      "adv":  "необходи́мо",
+                      "adv_de":  "notwendig",
+                      "adv_ex":  "Необходи́мо отдохну́ть.",
+                      "adv_ex_de":  "Man muss sich ausruhen."
                   },
                   {
                       "id":  "aj-единственный",
@@ -111,7 +123,11 @@
                       "example_cases":  "лёгкая зада́ча – Nominativ",
                       "example_de":  "Das ist eine leichte Aufgabe.",
                       "example_en":  "This is an easy task.",
-                      "example_es":  "Es una tarea fácil."
+                      "example_es":  "Es una tarea fácil.",
+                      "adv":  "легко́",
+                      "adv_de":  "leicht",
+                      "adv_ex":  "Э́то легко́.",
+                      "adv_ex_de":  "Das ist leicht."
                   },
                   {
                       "id":  "aj-человеческий",
@@ -124,7 +140,11 @@
                       "example_cases":  "челове́ческая оши́бка – Nominativ",
                       "example_de":  "Das ist ein menschlicher Fehler.",
                       "example_en":  "It\u0027s a human error.",
-                      "example_es":  "Es un error humano."
+                      "example_es":  "Es un error humano.",
+                      "adv":  "по-челове́чески",
+                      "adv_de":  "menschlich",
+                      "adv_ex":  "Поговори́ со мной по-челове́чески.",
+                      "adv_ex_de":  "Sprich mit mir wie ein Mensch."
                   },
                   {
                       "id":  "aj-международный",
@@ -155,7 +175,11 @@
                       "example_cases":  "в дорого́м рестора́не – Präpositiv",
                       "example_de":  "Wir waren in einem teuren Restaurant.",
                       "example_en":  "We were at an expensive restaurant.",
-                      "example_es":  "Estuvimos en un restaurante caro."
+                      "example_es":  "Estuvimos en un restaurante caro.",
+                      "adv":  "до́рого",
+                      "adv_de":  "teuer",
+                      "adv_ex":  "В Москве́ всё до́рого.",
+                      "adv_ex_de":  "In Moskau ist alles teuer."
                   },
                   {
                       "id":  "aj-небольшой",
@@ -210,7 +234,11 @@
                       "example_cases":  "америка́нский фильм – Akkusativ",
                       "example_de":  "Er schaut einen amerikanischen Film.",
                       "example_en":  "He\u0027s watching an American film.",
-                      "example_es":  "Él ve una película estadounidense."
+                      "example_es":  "Él ve una película estadounidense.",
+                      "adv":  "по-америка́нски",
+                      "adv_de":  "auf amerikanische Art",
+                      "adv_ex":  "Он улыба́ется по-америка́нски.",
+                      "adv_ex_de":  "Er lächelt auf amerikanische Art."
                   },
                   {
                       "id":  "aj-широкий",
@@ -227,7 +255,11 @@
                       "example_cases":  "широ́кая у́лица – Nominativ",
                       "example_de":  "Das ist eine breite Straße.",
                       "example_en":  "This is a wide street.",
-                      "example_es":  "Es una calle ancha."
+                      "example_es":  "Es una calle ancha.",
+                      "adv":  "широко́",
+                      "adv_de":  "breit, weit",
+                      "adv_ex":  "Он широко́ улыбну́лся.",
+                      "adv_ex_de":  "Er lächelte breit."
                   },
                   {
                       "id":  "aj-мировой",
@@ -258,7 +290,11 @@
                       "example_cases":  "э́та су́мка – Nominativ · тяжёлая – Nominativ",
                       "example_de":  "Diese Tasche ist sehr schwer.",
                       "example_en":  "This bag is very heavy.",
-                      "example_es":  "Este bolso pesa mucho."
+                      "example_es":  "Este bolso pesa mucho.",
+                      "adv":  "тяжело́",
+                      "adv_de":  "schwer",
+                      "adv_ex":  "Мне тяжело́ нести́ су́мку.",
+                      "adv_ex_de":  "Es fällt mir schwer, die Tasche zu tragen."
                   },
                   {
                       "id":  "aj-возможный",
@@ -273,7 +309,11 @@
                       "example_cases":  "еди́нственный возмо́жный вариа́нт – Nominativ",
                       "example_de":  "Das ist die einzige mögliche Variante.",
                       "example_en":  "This is the only possible option.",
-                      "example_es":  "Es la única opción posible."
+                      "example_es":  "Es la única opción posible.",
+                      "adv":  "возмо́жно",
+                      "adv_de":  "möglicherweise, vielleicht",
+                      "adv_ex":  "Возмо́жно, он придёт.",
+                      "adv_ex_de":  "Vielleicht kommt er."
                   },
                   {
                       "id":  "aj-отдельный",
@@ -286,7 +326,11 @@
                       "example_cases":  "у ка́ждого ребёнка – Genitiv · отде́льная ко́мната – Nominativ",
                       "example_de":  "Jedes Kind hat ein eigenes Zimmer.",
                       "example_en":  "Each child has a separate room.",
-                      "example_es":  "Cada niño tiene su propia habitación."
+                      "example_es":  "Cada niño tiene su propia habitación.",
+                      "adv":  "отде́льно",
+                      "adv_de":  "getrennt, einzeln",
+                      "adv_ex":  "Мы живём отде́льно.",
+                      "adv_ex_de":  "Wir wohnen getrennt."
                   },
                   {
                       "id":  "aj-средний",
@@ -316,7 +360,11 @@
                       "example_cases":  "в краси́вом го́роде – Präpositiv",
                       "example_de":  "Sie wohnt in einer schönen Stadt.",
                       "example_en":  "She lives in a beautiful city.",
-                      "example_es":  "Ella vive en una ciudad bonita."
+                      "example_es":  "Ella vive en una ciudad bonita.",
+                      "adv":  "краси́во",
+                      "adv_de":  "schön",
+                      "adv_ex":  "Она́ краси́во поёт.",
+                      "adv_ex_de":  "Sie singt schön."
                   },
                   {
                       "id":  "aj-короткий",
@@ -334,7 +382,11 @@
                       "example_cases":  "коро́ткий расска́з – Nominativ",
                       "example_de":  "Das ist eine kurze Erzählung.",
                       "example_en":  "This is a short story.",
-                      "example_es":  "Es un cuento corto."
+                      "example_es":  "Es un cuento corto.",
+                      "adv":  "ко́ротко",
+                      "adv_de":  "kurz",
+                      "adv_ex":  "Скажи́ ко́ротко.",
+                      "adv_ex_de":  "Sag es kurz."
                   },
                   {
                       "id":  "aj-серьезный",
@@ -350,7 +402,11 @@
                       "example_cases":  "нам – Dativ · серьёзный разгово́р – Nominativ",
                       "example_de":  "Wir müssen ernsthaft reden.",
                       "example_en":  "We need a serious talk.",
-                      "example_es":  "Necesitamos una conversación seria."
+                      "example_es":  "Necesitamos una conversación seria.",
+                      "adv":  "серьёзно",
+                      "adv_de":  "ernst, im Ernst",
+                      "adv_ex":  "Ты серьёзно?",
+                      "adv_ex_de":  "Im Ernst?"
                   },
                   {
                       "id":  "aj-интересный",
@@ -366,7 +422,11 @@
                       "example_cases":  "интере́сную кни́гу – Akkusativ",
                       "example_de":  "Ich lese ein interessantes Buch.",
                       "example_en":  "I\u0027m reading an interesting book.",
-                      "example_es":  "Estoy leyendo un libro interesante."
+                      "example_es":  "Estoy leyendo un libro interesante.",
+                      "adv":  "интере́сно",
+                      "adv_de":  "interessant",
+                      "adv_ex":  "Мне интере́сно.",
+                      "adv_ex_de":  "Ich finde das interessant."
                   },
                   {
                       "id":  "aj-добрый",
@@ -429,7 +489,11 @@
                       "example_cases":  "стра́шный фильм – Akkusativ",
                       "example_de":  "Wir haben einen Horrorfilm gesehen.",
                       "example_en":  "We watched a scary movie.",
-                      "example_es":  "Vimos una película de miedo."
+                      "example_es":  "Vimos una película de miedo.",
+                      "adv":  "стра́шно",
+                      "adv_de":  "gruselig, (ich habe) Angst",
+                      "adv_ex":  "Мне стра́шно.",
+                      "adv_ex_de":  "Ich habe Angst."
                   },
                   {
                       "id":  "aj-прошлый",
@@ -473,7 +537,11 @@
                       "example_cases":  "мой сын – Nominativ · в де́тский сад – Akkusativ (wohin?)",
                       "example_de":  "Mein Sohn geht in den Kindergarten.",
                       "example_en":  "My son goes to kindergarten.",
-                      "example_es":  "Mi hijo va al kínder."
+                      "example_es":  "Mi hijo va al kínder.",
+                      "adv":  "по-де́тски",
+                      "adv_de":  "kindlich, wie ein Kind",
+                      "adv_ex":  "Он смеётся по-де́тски.",
+                      "adv_ex_de":  "Er lacht wie ein Kind."
                   },
                   {
                       "id":  "aj-единый",
@@ -499,7 +567,11 @@
                       "example_cases":  "в определённое вре́мя – Akkusativ",
                       "example_de":  "Wir treffen uns zu einer bestimmten Zeit.",
                       "example_en":  "We meet at a certain time.",
-                      "example_es":  "Nos vemos a una hora determinada."
+                      "example_es":  "Nos vemos a una hora determinada.",
+                      "adv":  "определённо",
+                      "adv_de":  "bestimmt, eindeutig",
+                      "adv_ex":  "Он определённо прав.",
+                      "adv_ex_de":  "Er hat eindeutig recht."
                   },
                   {
                       "id":  "aj-низкий",
@@ -517,7 +589,11 @@
                       "example_cases":  "ни́зкие це́ны – Nominativ Plural",
                       "example_de":  "Hier sind die Preise niedrig.",
                       "example_en":  "Prices are low here.",
-                      "example_es":  "Aquí los precios son bajos."
+                      "example_es":  "Aquí los precios son bajos.",
+                      "adv":  "ни́зко",
+                      "adv_de":  "niedrig, tief",
+                      "adv_ex":  "Самолёт лети́т ни́зко.",
+                      "adv_ex_de":  "Das Flugzeug fliegt tief."
                   },
                   {
                       "id":  "aj-чужой",
@@ -547,7 +623,11 @@
                       "example_cases":  "стра́нный челове́к – Nominativ",
                       "example_de":  "Was für ein seltsamer Mensch!",
                       "example_en":  "What a strange person!",
-                      "example_es":  "¡Qué persona tan rara!"
+                      "example_es":  "¡Qué persona tan rara!",
+                      "adv":  "стра́нно",
+                      "adv_de":  "seltsam",
+                      "adv_ex":  "Э́то стра́нно.",
+                      "adv_ex_de":  "Das ist seltsam."
                   },
                   {
                       "id":  "aj-чистый",
@@ -564,7 +644,11 @@
                       "example_cases":  "чи́стый во́здух – Nominativ",
                       "example_de":  "Hier ist die Luft sauber.",
                       "example_en":  "The air is clean here.",
-                      "example_es":  "Aquí el aire es limpio."
+                      "example_es":  "Aquí el aire es limpio.",
+                      "adv":  "чи́сто",
+                      "adv_de":  "sauber",
+                      "adv_ex":  "В ко́мнате чи́сто.",
+                      "adv_ex_de":  "Im Zimmer ist es sauber."
                   },
                   {
                       "id":  "aj-поздний",
@@ -581,7 +665,11 @@
                       "example_cases":  "по́здний ве́чер – Nominativ",
                       "example_de":  "Es ist schon später Abend.",
                       "example_en":  "It\u0027s already late evening.",
-                      "example_es":  "Ya es tarde en la noche."
+                      "example_es":  "Ya es tarde en la noche.",
+                      "adv":  "по́здно",
+                      "adv_de":  "spät",
+                      "adv_ex":  "Уже́ по́здно.",
+                      "adv_ex_de":  "Es ist schon spät."
                   },
                   {
                       "id":  "aj-специальный",
@@ -595,7 +683,11 @@
                       "example_cases":  "для э́того – Genitiv · специа́льная програ́мма – Nominativ",
                       "example_de":  "Dafür gibt es ein spezielles Programm.",
                       "example_en":  "There\u0027s a special program for that.",
-                      "example_es":  "Para eso hay un programa especial."
+                      "example_es":  "Para eso hay un programa especial.",
+                      "adv":  "специа́льно",
+                      "adv_de":  "extra, absichtlich",
+                      "adv_ex":  "Я пришёл специа́льно к тебе́.",
+                      "adv_ex_de":  "Ich bin extra zu dir gekommen."
                   },
                   {
                       "id":  "aj-научный",
@@ -608,7 +700,11 @@
                       "example_cases":  "нау́чную статью́ – Akkusativ",
                       "example_de":  "Er liest einen wissenschaftlichen Artikel.",
                       "example_en":  "He\u0027s reading a scientific article.",
-                      "example_es":  "Él lee un artículo científico."
+                      "example_es":  "Él lee un artículo científico.",
+                      "adv":  "нау́чно",
+                      "adv_de":  "wissenschaftlich",
+                      "adv_ex":  "Э́то нау́чно дока́зано.",
+                      "adv_ex_de":  "Das ist wissenschaftlich bewiesen."
                   },
                   {
                       "id":  "aj-сложный",
@@ -624,7 +720,11 @@
                       "example_cases":  "сло́жный вопро́с – Nominativ",
                       "example_de":  "Das ist eine schwierige Frage.",
                       "example_en":  "This is a difficult question.",
-                      "example_es":  "Es una pregunta difícil."
+                      "example_es":  "Es una pregunta difícil.",
+                      "adv":  "сло́жно",
+                      "adv_de":  "schwierig, kompliziert",
+                      "adv_ex":  "Э́то сло́жно объясни́ть.",
+                      "adv_ex_de":  "Das ist schwer zu erklären."
                   },
                   {
                       "id":  "aj-реальный",
@@ -638,7 +738,11 @@
                       "example_cases":  "фильм – Nominativ · на реа́льной исто́рии – Präpositiv",
                       "example_de":  "Der Film beruht auf einer wahren Geschichte.",
                       "example_en":  "The film is based on a true story.",
-                      "example_es":  "La película se basa en una historia real."
+                      "example_es":  "La película se basa en una historia real.",
+                      "adv":  "реа́льно",
+                      "adv_de":  "real, wirklich",
+                      "adv_ex":  "Э́то реа́льно сде́лать.",
+                      "adv_ex_de":  "Das kann man wirklich schaffen."
                   },
                   {
                       "id":  "aj-способный",
@@ -698,7 +802,11 @@
                       "example_cases":  "моё ли́чное де́ло – Nominativ",
                       "example_de":  "Das ist meine persönliche Angelegenheit.",
                       "example_en":  "That\u0027s my personal business.",
-                      "example_es":  "Es asunto mío."
+                      "example_es":  "Es asunto mío.",
+                      "adv":  "ли́чно",
+                      "adv_de":  "persönlich",
+                      "adv_ex":  "Я ли́чно его́ зна́ю.",
+                      "adv_ex_de":  "Ich kenne ihn persönlich."
                   },
                   {
                       "id":  "aj-свободный",
@@ -715,7 +823,11 @@
                       "example_cases":  "у тебя́ – Genitiv · свобо́дное вре́мя – Nominativ",
                       "example_de":  "Hast du Freizeit?",
                       "example_en":  "Do you have free time?",
-                      "example_es":  "¿Tienes tiempo libre?"
+                      "example_es":  "¿Tienes tiempo libre?",
+                      "adv":  "свобо́дно",
+                      "adv_de":  "frei, fließend",
+                      "adv_ex":  "Он свобо́дно говори́т по-ру́сски.",
+                      "adv_ex_de":  "Er spricht fließend Russisch."
                   },
                   {
                       "id":  "aj-обычный",
@@ -729,7 +841,11 @@
                       "example_cases":  "обы́чный день – Nominativ",
                       "example_de":  "Das war ein gewöhnlicher Tag.",
                       "example_en":  "It was an ordinary day.",
-                      "example_es":  "Fue un día normal."
+                      "example_es":  "Fue un día normal.",
+                      "adv":  "обы́чно",
+                      "adv_de":  "normalerweise",
+                      "adv_ex":  "Обы́чно я встаю́ в семь.",
+                      "adv_ex_de":  "Normalerweise stehe ich um sieben auf."
                   },
                   {
                       "id":  "aj-прекрасный",
@@ -744,7 +860,11 @@
                       "example_cases":  "прекра́сная пого́да – Nominativ",
                       "example_de":  "Heute ist herrliches Wetter.",
                       "example_en":  "The weather is wonderful today.",
-                      "example_es":  "Hoy hace un tiempo maravilloso."
+                      "example_es":  "Hoy hace un tiempo maravilloso.",
+                      "adv":  "прекра́сно",
+                      "adv_de":  "wunderbar",
+                      "adv_ex":  "Я прекра́сно себя́ чу́вствую.",
+                      "adv_ex_de":  "Ich fühle mich wunderbar."
                   },
                   {
                       "id":  "aj-высший",

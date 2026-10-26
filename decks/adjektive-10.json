@@ -20,7 +20,11 @@
                       "example_cases":  "моё оконча́тельное реше́ние – Nominativ",
                       "example_de":  "Das ist meine endgültige Entscheidung.",
                       "example_en":  "That\u0027s my final decision.",
-                      "example_es":  "Es mi decisión definitiva."
+                      "example_es":  "Es mi decisión definitiva.",
+                      "adv":  "оконча́тельно",
+                      "adv_de":  "endgültig",
+                      "adv_ex":  "Я оконча́тельно реши́л.",
+                      "adv_ex_de":  "Ich habe mich endgültig entschieden."
                   },
                   {
                       "id":  "aj-коммунистический",
@@ -74,7 +78,11 @@
                       "example_cases":  "у нас – Genitiv · взаи́мная любо́вь – Nominativ",
                       "example_de":  "Unsere Liebe ist gegenseitig.",
                       "example_en":  "Our love is mutual.",
-                      "example_es":  "Nuestro amor es mutuo."
+                      "example_es":  "Nuestro amor es mutuo.",
+                      "adv":  "взаи́мно",
+                      "adv_de":  "gegenseitig; ebenfalls",
+                      "adv_ex":  "— Прия́тно познако́миться! — Взаи́мно!",
+                      "adv_ex_de":  "„Freut mich!“ – „Mich ebenfalls!“"
                   },
                   {
                       "id":  "aj-качественный",
@@ -87,7 +95,11 @@
                       "example_cases":  "ка́чественный това́р – Nominativ",
                       "example_de":  "Das ist eine hochwertige Ware.",
                       "example_en":  "It\u0027s a high-quality product.",
-                      "example_es":  "Es un producto de calidad."
+                      "example_es":  "Es un producto de calidad.",
+                      "adv":  "ка́чественно",
+                      "adv_de":  "hochwertig, gut",
+                      "adv_ex":  "Он рабо́тает ка́чественно.",
+                      "adv_ex_de":  "Er arbeitet gründlich und gut."
                   },
                   {
                       "id":  "aj-приличный",
@@ -101,7 +113,11 @@
                       "example_cases":  "у него́ – Genitiv · прили́чная зарпла́та – Nominativ",
                       "example_de":  "Er hat ein ordentliches Gehalt.",
                       "example_en":  "He has a decent salary.",
-                      "example_es":  "Tiene un sueldo decente."
+                      "example_es":  "Tiene un sueldo decente.",
+                      "adv":  "прили́чно",
+                      "adv_de":  "anständig, ordentlich",
+                      "adv_ex":  "Он прили́чно зараба́тывает.",
+                      "adv_ex_de":  "Er verdient ordentlich."
                   },
                   {
                       "id":  "aj-царский",
@@ -210,7 +226,11 @@
                       "example_cases":  "разу́мное реше́ние – Nominativ",
                       "example_de":  "Das ist eine vernünftige Entscheidung.",
                       "example_en":  "That\u0027s a sensible decision.",
-                      "example_es":  "Es una decisión sensata."
+                      "example_es":  "Es una decisión sensata.",
+                      "adv":  "разу́мно",
+                      "adv_de":  "vernünftig",
+                      "adv_ex":  "Э́то разу́мно.",
+                      "adv_ex_de":  "Das ist vernünftig."
                   },
                   {
                       "id":  "aj-газовый",
@@ -251,7 +271,11 @@
                       "example_cases":  "из окна́ – Genitiv · великоле́пный вид – Nominativ",
                       "example_de":  "Vom Fenster aus hat man eine großartige Aussicht.",
                       "example_en":  "There\u0027s a magnificent view from the window.",
-                      "example_es":  "Desde la ventana hay una vista magnífica."
+                      "example_es":  "Desde la ventana hay una vista magnífica.",
+                      "adv":  "великоле́пно",
+                      "adv_de":  "großartig",
+                      "adv_ex":  "Она́ великоле́пно поёт.",
+                      "adv_ex_de":  "Sie singt großartig."
                   },
                   {
                       "id":  "aj-седой",
@@ -321,7 +345,11 @@
                       "example_cases":  "справедли́вое реше́ние – Nominativ",
                       "example_de":  "Das ist eine gerechte Entscheidung.",
                       "example_en":  "That\u0027s a fair decision.",
-                      "example_es":  "Es una decisión justa."
+                      "example_es":  "Es una decisión justa.",
+                      "adv":  "справедли́во",
+                      "adv_de":  "gerecht",
+                      "adv_ex":  "Э́то справедли́во.",
+                      "adv_ex_de":  "Das ist gerecht."
                   },
                   {
                       "id":  "aj-повышенный",
@@ -400,7 +428,11 @@
                       "example_cases":  "мой да́вний друг – Nominativ",
                       "example_de":  "Er ist ein alter Freund von mir.",
                       "example_en":  "He\u0027s an old friend of mine.",
-                      "example_es":  "Es un viejo amigo mío."
+                      "example_es":  "Es un viejo amigo mío.",
+                      "adv":  "давно́",
+                      "adv_de":  "seit langem, vor langer Zeit",
+                      "adv_ex":  "Мы давно́ знако́мы.",
+                      "adv_ex_de":  "Wir kennen uns seit langem."
                   },
                   {
                       "id":  "aj-нефтяной",
@@ -426,7 +458,11 @@
                       "example_cases":  "филосо́фский вопро́с – Nominativ",
                       "example_de":  "Das ist eine philosophische Frage.",
                       "example_en":  "It\u0027s a philosophical question.",
-                      "example_es":  "Es una pregunta filosófica."
+                      "example_es":  "Es una pregunta filosófica.",
+                      "adv":  "филосо́фски",
+                      "adv_de":  "philosophisch",
+                      "adv_ex":  "Он филосо́фски отно́сится к жи́зни.",
+                      "adv_ex_de":  "Er nimmt das Leben philosophisch."
                   },
                   {
                       "id":  "aj-компьютерный",
@@ -494,7 +530,11 @@
                       "example_cases":  "психи́ческое здоро́вье – Nominativ",
                       "example_de":  "Psychische Gesundheit ist sehr wichtig.",
                       "example_en":  "Mental health is very important.",
-                      "example_es":  "La salud mental es muy importante."
+                      "example_es":  "La salud mental es muy importante.",
+                      "adv":  "психи́чески",
+                      "adv_de":  "psychisch",
+                      "adv_ex":  "Он психи́чески здоро́в.",
+                      "adv_ex_de":  "Er ist psychisch gesund."
                   },
                   {
                       "id":  "aj-потенциальный",
@@ -507,7 +547,11 @@
                       "example_cases":  "потенциа́льный клие́нт – Nominativ",
                       "example_de":  "Er ist ein potenzieller Kunde.",
                       "example_en":  "He\u0027s a potential customer.",
-                      "example_es":  "Es un cliente potencial."
+                      "example_es":  "Es un cliente potencial.",
+                      "adv":  "потенциа́льно",
+                      "adv_de":  "potenziell",
+                      "adv_ex":  "Э́то потенциа́льно опа́сно.",
+                      "adv_ex_de":  "Das ist potenziell gefährlich."
                   },
                   {
                       "id":  "aj-польский",
@@ -588,7 +632,11 @@
                       "example_cases":  "мра́чная пого́да – Nominativ",
                       "example_de":  "Heute ist trübes Wetter.",
                       "example_en":  "The weather is gloomy today.",
-                      "example_es":  "Hoy el tiempo está sombrío."
+                      "example_es":  "Hoy el tiempo está sombrío.",
+                      "adv":  "мра́чно",
+                      "adv_de":  "düster",
+                      "adv_ex":  "Он мра́чно молча́л.",
+                      "adv_ex_de":  "Er schwieg düster."
                   },
                   {
                       "id":  "aj-атомный",
@@ -615,7 +663,11 @@
                       "example_cases":  "отрица́тельный отве́т – Akkusativ",
                       "example_de":  "Ich habe eine negative Antwort bekommen.",
                       "example_en":  "I got a negative answer.",
-                      "example_es":  "Recibí una respuesta negativa."
+                      "example_es":  "Recibí una respuesta negativa.",
+                      "adv":  "отрица́тельно",
+                      "adv_de":  "negativ",
+                      "adv_ex":  "Он отрица́тельно покача́л голово́й.",
+                      "adv_ex_de":  "Er schüttelte verneinend den Kopf."
                   },
                   {
                       "id":  "aj-достаточный",
@@ -630,7 +682,11 @@
                       "example_cases":  "у нас – Genitiv · доста́точное коли́чество – Nominativ · еды́ – Genitiv",
                       "example_de":  "Wir haben genug Essen.",
                       "example_en":  "We have enough food.",
-                      "example_es":  "Tenemos suficiente comida."
+                      "example_es":  "Tenemos suficiente comida.",
+                      "adv":  "доста́точно",
+                      "adv_de":  "genug",
+                      "adv_ex":  "Спаси́бо, доста́точно.",
+                      "adv_ex_de":  "Danke, das reicht."
                   },
                   {
                       "id":  "aj-радостный",
@@ -646,7 +702,11 @@
                       "example_cases":  "ра́достная но́вость – Nominativ",
                       "example_de":  "Das ist eine freudige Nachricht.",
                       "example_en":  "That\u0027s happy news.",
-                      "example_es":  "Es una noticia alegre."
+                      "example_es":  "Es una noticia alegre.",
+                      "adv":  "ра́достно",
+                      "adv_de":  "freudig",
+                      "adv_ex":  "Де́ти ра́достно засмея́лись.",
+                      "adv_ex_de":  "Die Kinder lachten freudig."
                   },
                   {
                       "id":  "aj-горький",
@@ -664,7 +724,11 @@
                       "example_cases":  "э́тот ко́фе – Nominativ · го́рький – Nominativ",
                       "example_de":  "Dieser Kaffee ist sehr bitter.",
                       "example_en":  "This coffee is very bitter.",
-                      "example_es":  "Este café es muy amargo."
+                      "example_es":  "Este café es muy amargo.",
+                      "adv":  "го́рько",
+                      "adv_de":  "bitter",
+                      "adv_ex":  "Мне го́рько э́то слы́шать.",
+                      "adv_ex_de":  "Es tut mir weh, das zu hören."
                   },
                   {
                       "id":  "aj-бытовой",

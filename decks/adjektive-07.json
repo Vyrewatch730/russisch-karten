@@ -75,7 +75,11 @@
                       "example_cases":  "у него́ – Genitiv · большо́й жи́зненный о́пыт – Nominativ",
                       "example_de":  "Er hat viel Lebenserfahrung.",
                       "example_en":  "He has a lot of life experience.",
-                      "example_es":  "Tiene mucha experiencia de vida."
+                      "example_es":  "Tiene mucha experiencia de vida.",
+                      "adv":  "жи́зненно",
+                      "adv_de":  "lebens- (wichtig)",
+                      "adv_ex":  "Э́то жи́зненно ва́жно.",
+                      "adv_ex_de":  "Das ist lebenswichtig."
                   },
                   {
                       "id":  "aj-смешной",
@@ -91,7 +95,11 @@
                       "example_cases":  "смешну́ю исто́рию – Akkusativ",
                       "example_de":  "Er hat eine lustige Geschichte erzählt.",
                       "example_en":  "He told a funny story.",
-                      "example_es":  "Contó una historia graciosa."
+                      "example_es":  "Contó una historia graciosa.",
+                      "adv":  "смешно́",
+                      "adv_de":  "lustig, komisch",
+                      "adv_ex":  "Э́то о́чень смешно́.",
+                      "adv_ex_de":  "Das ist sehr lustig."
                   },
                   {
                       "id":  "aj-несчастный",
@@ -121,7 +129,11 @@
                       "example_cases":  "случа́йная встре́ча – Nominativ",
                       "example_de":  "Das war ein zufälliges Treffen.",
                       "example_en":  "It was a chance meeting.",
-                      "example_es":  "Fue un encuentro casual."
+                      "example_es":  "Fue un encuentro casual.",
+                      "adv":  "случа́йно",
+                      "adv_de":  "zufällig",
+                      "adv_ex":  "Мы встре́тились случа́йно.",
+                      "adv_ex_de":  "Wir haben uns zufällig getroffen."
                   },
                   {
                       "id":  "aj-обязанный",
@@ -192,7 +204,11 @@
                       "example_cases":  "положи́тельный отве́т – Akkusativ",
                       "example_de":  "Ich habe eine positive Antwort bekommen.",
                       "example_en":  "I got a positive answer.",
-                      "example_es":  "Recibí una respuesta positiva."
+                      "example_es":  "Recibí una respuesta positiva.",
+                      "adv":  "положи́тельно",
+                      "adv_de":  "positiv",
+                      "adv_ex":  "Он положи́тельно отве́тил.",
+                      "adv_ex_de":  "Er hat positiv geantwortet."
                   },
                   {
                       "id":  "aj-довольный",
@@ -260,7 +276,11 @@
                       "example_cases":  "у меня́ – Genitiv · делова́я встре́ча – Nominativ",
                       "example_de":  "Ich habe ein Geschäftstreffen.",
                       "example_en":  "I have a business meeting.",
-                      "example_es":  "Tengo una reunión de negocios."
+                      "example_es":  "Tengo una reunión de negocios.",
+                      "adv":  "по-делово́му",
+                      "adv_de":  "sachlich, geschäftsmäßig",
+                      "adv_ex":  "Дава́й говори́ть по-делово́му.",
+                      "adv_ex_de":  "Lass uns sachlich reden."
                   },
                   {
                       "id":  "aj-минимальный",
@@ -274,7 +294,11 @@
                       "example_cases":  "кака́я минима́льная зарпла́та – Nominativ",
                       "example_de":  "Wie hoch ist der Mindestlohn?",
                       "example_en":  "What\u0027s the minimum wage?",
-                      "example_es":  "¿Cuál es el salario mínimo?"
+                      "example_es":  "¿Cuál es el salario mínimo?",
+                      "adv":  "минима́льно",
+                      "adv_de":  "minimal",
+                      "adv_ex":  "Я сплю минима́льно.",
+                      "adv_ex_de":  "Ich schlafe minimal."
                   },
                   {
                       "id":  "aj-электронный",
@@ -302,7 +326,11 @@
                       "example_cases":  "у нас – Genitiv · одина́ковые ту́фли – Nominativ Plural",
                       "example_de":  "Wir haben die gleichen Schuhe.",
                       "example_en":  "We have the same shoes.",
-                      "example_es":  "Tenemos los mismos zapatos."
+                      "example_es":  "Tenemos los mismos zapatos.",
+                      "adv":  "одина́ково",
+                      "adv_de":  "gleich",
+                      "adv_ex":  "Они́ оде́ты одина́ково.",
+                      "adv_ex_de":  "Sie sind gleich angezogen."
                   },
                   {
                       "id":  "aj-химический",
@@ -398,7 +426,11 @@
                       "example_cases":  "у него́ – Genitiv · та́йный план – Nominativ",
                       "example_de":  "Er hat einen geheimen Plan.",
                       "example_en":  "He has a secret plan.",
-                      "example_es":  "Tiene un plan secreto."
+                      "example_es":  "Tiene un plan secreto.",
+                      "adv":  "та́йно",
+                      "adv_de":  "heimlich",
+                      "adv_ex":  "Он та́йно ушёл.",
+                      "adv_ex_de":  "Er ist heimlich gegangen."
                   },
                   {
                       "id":  "aj-отличный",
@@ -413,7 +445,11 @@
                       "example_cases":  "отли́чная иде́я – Nominativ",
                       "example_de":  "Das ist eine ausgezeichnete Idee!",
                       "example_en":  "That\u0027s an excellent idea!",
-                      "example_es":  "¡Es una idea excelente!"
+                      "example_es":  "¡Es una idea excelente!",
+                      "adv":  "отли́чно",
+                      "adv_de":  "ausgezeichnet",
+                      "adv_ex":  "Отли́чно!",
+                      "adv_ex_de":  "Ausgezeichnet!"
                   },
                   {
                       "id":  "aj-закрытый",
@@ -525,7 +561,11 @@
                       "example_cases":  "технологи́ческая компа́ния – Nominativ",
                       "example_de":  "Das ist ein Technologieunternehmen.",
                       "example_en":  "It\u0027s a tech company.",
-                      "example_es":  "Es una empresa tecnológica."
+                      "example_es":  "Es una empresa tecnológica.",
+                      "adv":  "технологи́чески",
+                      "adv_de":  "technologisch",
+                      "adv_ex":  "Э́то технологи́чески сло́жно.",
+                      "adv_ex_de":  "Das ist technologisch schwierig."
                   },
                   {
                       "id":  "aj-скромный",
@@ -540,7 +580,11 @@
                       "example_cases":  "скро́мный челове́к – Nominativ",
                       "example_de":  "Er ist ein sehr bescheidener Mensch.",
                       "example_en":  "He\u0027s a very modest person.",
-                      "example_es":  "Es una persona muy modesta."
+                      "example_es":  "Es una persona muy modesta.",
+                      "adv":  "скро́мно",
+                      "adv_de":  "bescheiden",
+                      "adv_ex":  "Они́ живу́т скро́мно.",
+                      "adv_ex_de":  "Sie leben bescheiden."
                   },
                   {
                       "id":  "aj-старинный",
@@ -570,7 +614,11 @@
                       "example_cases":  "непоня́тное сло́во – Nominativ",
                       "example_de":  "Das ist ein unverständliches Wort.",
                       "example_en":  "That\u0027s an incomprehensible word.",
-                      "example_es":  "Es una palabra incomprensible."
+                      "example_es":  "Es una palabra incomprensible.",
+                      "adv":  "непоня́тно",
+                      "adv_de":  "unverständlich",
+                      "adv_ex":  "Мне непоня́тно.",
+                      "adv_ex_de":  "Mir ist das unklar."
                   },
                   {
                       "id":  "aj-независимый",
@@ -584,7 +632,11 @@
                       "example_cases":  "незави́симая же́нщина – Nominativ",
                       "example_de":  "Sie ist eine unabhängige Frau.",
                       "example_en":  "She\u0027s an independent woman.",
-                      "example_es":  "Es una mujer independiente."
+                      "example_es":  "Es una mujer independiente.",
+                      "adv":  "незави́симо",
+                      "adv_de":  "unabhängig",
+                      "adv_ex":  "Она́ живёт незави́симо.",
+                      "adv_ex_de":  "Sie lebt unabhängig."
                   },
                   {
                       "id":  "aj-бесконечный",
@@ -597,7 +649,11 @@
                       "example_cases":  "бесконе́чная исто́рия – Nominativ",
                       "example_de":  "Das ist eine endlose Geschichte.",
                       "example_en":  "It\u0027s an endless story.",
-                      "example_es":  "Es una historia interminable."
+                      "example_es":  "Es una historia interminable.",
+                      "adv":  "бесконе́чно",
+                      "adv_de":  "unendlich",
+                      "adv_ex":  "Я бесконе́чно рад.",
+                      "adv_ex_de":  "Ich freue mich unendlich."
                   },
                   {
                       "id":  "aj-нежный",
@@ -612,7 +668,11 @@
                       "example_cases":  "у неё – Genitiv · не́жный го́лос – Nominativ",
                       "example_de":  "Sie hat eine zarte Stimme.",
                       "example_en":  "She has a gentle voice.",
-                      "example_es":  "Tiene una voz suave."
+                      "example_es":  "Tiene una voz suave.",
+                      "adv":  "не́жно",
+                      "adv_de":  "zärtlich",
+                      "adv_ex":  "Она́ не́жно обняла́ сы́на.",
+                      "adv_ex_de":  "Sie umarmte den Sohn zärtlich."
                   },
                   {
                       "id":  "aj-талантливый",
@@ -627,7 +687,11 @@
                       "example_cases":  "тала́нтливый музыка́нт – Nominativ",
                       "example_de":  "Er ist ein talentierter Musiker.",
                       "example_en":  "He\u0027s a talented musician.",
-                      "example_es":  "Es un músico talentoso."
+                      "example_es":  "Es un músico talentoso.",
+                      "adv":  "тала́нтливо",
+                      "adv_de":  "talentiert",
+                      "adv_ex":  "Он тала́нтливо игра́ет.",
+                      "adv_ex_de":  "Er spielt talentiert."
                   },
                   {
                       "id":  "aj-зимний",
@@ -656,7 +720,11 @@
                       "example_cases":  "ми́рной жи́зни – Genitiv (nach хоте́ть)",
                       "example_de":  "Wir wollen ein friedliches Leben.",
                       "example_en":  "We want a peaceful life.",
-                      "example_es":  "Queremos una vida pacífica."
+                      "example_es":  "Queremos una vida pacífica.",
+                      "adv":  "ми́рно",
+                      "adv_de":  "friedlich",
+                      "adv_ex":  "Они́ живу́т ми́рно.",
+                      "adv_ex_de":  "Sie leben friedlich."
                   },
                   {
                       "id":  "aj-ужасный",
@@ -671,7 +739,11 @@
                       "example_cases":  "ужа́сная пого́да – Nominativ",
                       "example_de":  "Was für ein schreckliches Wetter!",
                       "example_en":  "What awful weather!",
-                      "example_es":  "¡Qué tiempo tan horrible!"
+                      "example_es":  "¡Qué tiempo tan horrible!",
+                      "adv":  "ужа́сно",
+                      "adv_de":  "schrecklich",
+                      "adv_ex":  "Я ужа́сно уста́л.",
+                      "adv_ex_de":  "Ich bin schrecklich müde."
                   },
                   {
                       "id":  "aj-квадратный",

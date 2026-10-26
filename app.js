@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 43;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 44;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -86,8 +86,24 @@ const CARD_TYPES = {
       { key: 'comp', label: 'Komparativ' },
       { key: 'comp_irr', label: 'Komparativ unregelmäßig (1 = ja)' },
       { key: 'anto', label: 'Gegenteil' },
+      { key: 'adv', label: 'Adverb' },
+      { key: 'adv_de', label: 'Adverb – Deutsch' },
+      { key: 'adv_ex', label: 'Adverb – Beispielsatz' },
+      { key: 'adv_ex_de', label: 'Adverb – Beispielsatz Deutsch' },
       { key: 'hint', label: 'Hinweis' },
       { key: 'example_cases', label: 'Beispielsatz – Fälle' },
+      { key: 'example_de', label: 'Beispielsatz – Deutsch' },
+      { key: 'example_en', label: 'Beispielsatz – Englisch' },
+      { key: 'example_es', label: 'Beispielsatz – Spanisch' },
+    ],
+  },
+  // Adverb mit Art (Zeit, Ort …) und Beispielsatz (advHtml)
+  advfull: {
+    name: 'Adverb',
+    ownLayout: true,
+    extras: [
+      { key: 'cat', label: 'Art (Zeit, Ort, Richtung, Art und Weise, Menge, Frage, Meinung, Zustand)' },
+      { key: 'hint', label: 'Hinweis' },
       { key: 'example_de', label: 'Beispielsatz – Deutsch' },
       { key: 'example_en', label: 'Beispielsatz – Englisch' },
       { key: 'example_es', label: 'Beispielsatz – Spanisch' },
@@ -748,12 +764,13 @@ function dirChips() {
     `<button class="chip ${db.settings.qLang === o.v ? 'active' : ''}" data-dir="${o.v}">${esc(o.t)}</button>`).join('')}</div>`;
 }
 
-// Deck-Auswahl in der Übersicht: alle, nur Verben oder nur Nomen
+// Deck-Auswahl in der Übersicht: alle oder nur eine Wortart
 const DECK_KINDS = [
   { v: 'all', t: 'Alle', test: () => true },
   { v: 'verben', t: 'Verben', test: id => id.startsWith('verben-') },
   { v: 'nomen', t: 'Nomen', test: id => id.startsWith('nomen-') },
   { v: 'adjektive', t: 'Adjektive', test: id => id.startsWith('adjektive-') },
+  { v: 'adverbien', t: 'Adverbien', test: id => id.startsWith('adverbien-') },
 ];
 function kindChips() {
   const cur = db.settings.deckKind || 'all';
@@ -1289,9 +1306,56 @@ function adjHtml(card) {
     ${row('Kurzform', x.short, `${info}</div><div class="vp-rule">Die Kurzform steht nach dem Subjekt als Aussage: Дом нов = Das Haus ist neu. Formen: männlich, weiblich, sächlich, Plural.`)}
     ${row('Komparativ', x.comp, (x.comp_irr ? ' <span class="aj-irr">unregelmäßig</span>' : '') + `${info}</div><div class="vp-rule">${compInfoHtml(x.comp, d)}`)}
     ${row('Gegenteil', x.anto)}
+    ${x.adv ? `<div class="aj-row"><i>Adverb</i> ${esc(x.adv)} ${say(x.adv)}${info}</div><div class="vp-rule">${advInfoHtml(card)}</div>` : ''}
     ${x.hint ? `<div class="nn-hint">⚠️ Achtung${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
     ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}${x.example_cases ? `<div class="vp-case"><b>Fälle:</b> ${esc(x.example_cases)}${info}</div><div class="vp-rule vp-case-info">${caseInfoHtml(x.example_cases)}</div>` : ''}</div>` : ''}
   </div>`;
+}
+
+// Erklärung zum Adverb des Adjektivs (ⓘ): Bildung, Beispielsatz, Übersetzung zum Aufklappen
+function advInfoHtml(card) {
+  const x = card.x, adj = esc(card.f.ru), adv = esc(x.adv);
+  const plain = x.adv.replace(STRESS, '');
+  const say = t => `<button class="say" data-say="${esc(t)}">🔊</button>`;
+  const rule = /^по-.*ски$/.test(plain) ? `Adjektive auf <b>-ский</b> bilden das Adverb mit <b>по- … -ски</b>: ${adj} → ${adv}. So sagt man, in welcher Sprache oder auf wessen Art.`
+    : /^по-/.test(plain) ? `Hier bildet man das Adverb mit <b>по-</b> + Dativ-Endung <b>-ому / -ему</b>: ${adj} → ${adv} (= auf … Art).`
+    : /ски$/.test(plain) ? `Adjektive auf <b>-ский / -ческий</b> bilden das Adverb auf <b>-ски</b>: ${adj} → ${adv}.`
+    : /е$/.test(plain) ? `Weiche Adjektive (auf <b>-ний</b>, <b>-щий</b>) bilden das Adverb auf <b>-е</b>: ${adj} → ${adv}.`
+    : `Endung weg, <b>-о</b> dran: ${adj} → ${adv}. Achtung: Die Betonung kann wandern.`;
+  return `<div>${rule}</div>
+    <div>Das Adverb sagt, <b>wie</b> etwas passiert, und ändert sich <b>nie</b> (kein Geschlecht, kein Fall). Oft steht es auch allein als Aussage: Мне хо́лодно = Mir ist kalt.</div>
+    ${x.adv_ex ? `<div class="nn-ex">${esc(x.adv_ex)} ${say(x.adv_ex)}<div class="pron nn-ex-pron">[${esc(ruPron(x.adv_ex))}]</div></div>` : ''}
+    <details class="nn-ex-de"><summary>Übersetzung anzeigen</summary>${adv} = ${esc(x.adv_de || '')}${x.adv_ex_de ? `<br>${esc(x.adv_ex_de)}` : ''}</details>`;
+}
+
+// Adverb-Karte: Art (Zeit, Ort …), Wort mit Aussprache, Hinweis und Beispielsatz
+function advHtml(card) {
+  const x = card.x, word = card.f.ru || '';
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const say = t => t ? `<button class="say" data-say="${esc(t)}">🔊</button>` : '';
+  const pron = t => { const p = ruPron(t); return p ? ` <span class="pron">[${esc(p)}]</span>` : ''; };
+  const exPron = x.example_pron || ruPron(x.example);
+  return `<div class="nn aj av">
+    <div class="nn-tags"><span class="nn-g av-tag">Adverb</span>${x.cat ? `<span class="av-cat">${esc(x.cat)}</span>` : ''}</div>
+    <div class="nn-word">${esc(word)}${pron(word)} ${say(word)}</div>
+    <div class="nn-hint">ℹ️ ${esc(x.cat || 'Adverb')}${info}</div><div class="vp-rule">${advCatInfo(x.cat)}</div>
+    ${x.hint ? `<div class="nn-hint">💡 Tipp${info}</div><div class="vp-rule">${esc(x.hint)}</div>` : ''}
+    ${x.example ? `<div class="vp-ex">${esc(x.example)} ${say(x.example)}${exPron ? `<div class="pron">[${esc(exPron)}]</div>` : ''}</div>` : ''}
+  </div>`;
+}
+
+function advCatInfo(cat) {
+  const t = {
+    'Zeit': 'Zeit-Adverbien beantworten <b>когда́?</b> (wann?) oder <b>как ча́сто?</b> (wie oft?).',
+    'Ort': 'Orts-Adverbien beantworten <b>где?</b> (wo?). Für die Richtung gibt es eigene Wörter: где? здесь / там – куда́? сюда́ / туда́.',
+    'Richtung': 'Richtungs-Adverbien beantworten <b>куда́?</b> (wohin?) oder <b>отку́да?</b> (woher?). Sie stehen bei Bewegungsverben: Я иду́ домо́й.',
+    'Art und Weise': 'Diese Adverbien beantworten <b>как?</b> (wie? auf welche Art?).',
+    'Menge': 'Mengen-Adverbien beantworten <b>ско́лько?</b> (wie viel?) oder sagen, wie stark etwas ist. Nach мно́го, ма́ло, ско́лько, сто́лько steht der Genitiv.',
+    'Frage': 'Fragewörter stehen am Satzanfang. Die Wortstellung bleibt wie im Aussagesatz, nur die Stimme geht hoch.',
+    'Meinung': 'Diese Wörter kommentieren den ganzen Satz (natürlich, wahrscheinlich …). Sie stehen oft mit Komma am Satzanfang.',
+    'Zustand': 'Zustandswörter stehen ohne Subjekt. Die Person steht im <b>Dativ</b>: мне на́до, тебе́ мо́жно, ему́ пора́. Vergangenheit mit бы́ло: мне бы́ло ну́жно.',
+  }[cat] || '';
+  return `${t}${t ? '<br>' : ''}Adverbien haben keine Endungen: kein Geschlecht, kein Plural, kein Fall.`;
 }
 
 // Erklärung zum Komparativ (ⓘ) mit den Formen des jeweiligen Adjektivs
@@ -1455,6 +1519,7 @@ function cardRuSide(card) {
   return `<div class="lang-tag">${esc(langName(RU))}</div>` + (card.type === 'verbpair'
     ? verbPairHtml(card)
     : card.type === 'adjfull' ? adjHtml(card)
+    : card.type === 'advfull' ? advHtml(card)
     : card.type === 'nounfull' ? nounHtml(card)
     : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(card.f[RU])}`);
 }
@@ -1494,7 +1559,7 @@ function renderStudy() {
   const remaining = study.queue.length + 1;
   const prev = g => fmtInterval(schedule(p, g).due - Date.now());
   const isVp = card.type === 'verbpair';
-  const isNoun = card.type === 'nounfull' || card.type === 'adjfull';
+  const isNoun = card.type === 'nounfull' || card.type === 'adjfull' || card.type === 'advfull';
   const ruSide = () => cardRuSide(card);
   const trSide = () => cardTrSide(card);
   const ruFirst = cur.q !== 'tr';
@@ -2211,7 +2276,7 @@ async function autoUpdateLibrary() {
     // Deshalb eine Familie immer komplett aktualisieren (auch neu hinzugekommene Decks laden)
     // und alte Decks ohne Gegenstück (z. B. das frühere Probedeck „verben-1“) auflösen.
     const prune = [];
-    for (const prefix of ['verben-', 'nomen-', 'adjektive-']) {
+    for (const prefix of ['verben-', 'nomen-', 'adjektive-', 'adverbien-']) {
       const inFamily = id => id.startsWith(prefix);
       const stale = Object.keys(db.decks).filter(id => inFamily(id) && !list.some(d => d.id === id));
       const missing = list.filter(d => inFamily(d.id) && !db.decks[d.id]);

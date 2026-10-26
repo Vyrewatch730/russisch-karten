@@ -20,7 +20,11 @@
                       "example_cases":  "мне – Dativ · жу́ткий сон – Nominativ",
                       "example_de":  "Ich hatte einen schrecklichen Traum.",
                       "example_en":  "I had a terrible dream.",
-                      "example_es":  "Tuve un sueño horrible."
+                      "example_es":  "Tuve un sueño horrible.",
+                      "adv":  "жу́тко",
+                      "adv_de":  "unheimlich, furchtbar",
+                      "adv_ex":  "Мне жу́тко.",
+                      "adv_ex_de":  "Mir ist unheimlich."
                   },
                   {
                       "id":  "aj-тяжкий",
@@ -34,7 +38,11 @@
                       "example_cases":  "тя́жкое преступле́ние – Nominativ",
                       "example_de":  "Das ist ein schweres Verbrechen.",
                       "example_en":  "It\u0027s a grave crime.",
-                      "example_es":  "Es un delito grave."
+                      "example_es":  "Es un delito grave.",
+                      "adv":  "тя́жко",
+                      "adv_de":  "schwer",
+                      "adv_ex":  "Ему́ тя́жко.",
+                      "adv_ex_de":  "Es fällt ihm schwer."
                   },
                   {
                       "id":  "aj-смелый",
@@ -51,7 +59,11 @@
                       "example_cases":  "сме́лый челове́к – Nominativ",
                       "example_de":  "Er ist ein mutiger Mensch.",
                       "example_en":  "He\u0027s a brave person.",
-                      "example_es":  "Es una persona valiente."
+                      "example_es":  "Es una persona valiente.",
+                      "adv":  "сме́ло",
+                      "adv_de":  "mutig",
+                      "adv_ex":  "Он сме́ло шагну́л вперёд.",
+                      "adv_ex_de":  "Er trat mutig vor."
                   },
                   {
                       "id":  "aj-петербургский",
@@ -81,7 +93,11 @@
                       "example_cases":  "ме́дленный по́езд – Nominativ",
                       "example_de":  "Das ist ein langsamer Zug.",
                       "example_en":  "This is a slow train.",
-                      "example_es":  "Es un tren lento."
+                      "example_es":  "Es un tren lento.",
+                      "adv":  "ме́дленно",
+                      "adv_de":  "langsam",
+                      "adv_ex":  "Говори́те, пожа́луйста, ме́дленно.",
+                      "adv_ex_de":  "Sprechen Sie bitte langsam."
                   },
                   {
                       "id":  "aj-жаркий",
@@ -99,7 +115,11 @@
                       "example_cases":  "жа́ркий день – Nominativ",
                       "example_de":  "Heute ist ein heißer Tag.",
                       "example_en":  "It\u0027s a hot day today.",
-                      "example_es":  "Hoy es un día caluroso."
+                      "example_es":  "Hoy es un día caluroso.",
+                      "adv":  "жа́рко",
+                      "adv_de":  "heiß",
+                      "adv_ex":  "Сего́дня жа́рко.",
+                      "adv_ex_de":  "Heute ist es heiß."
                   },
                   {
                       "id":  "aj-универсальный",
@@ -138,7 +158,11 @@
                       "example_cases":  "форма́льный вопро́с – Nominativ",
                       "example_de":  "Das ist nur eine Formsache.",
                       "example_en":  "It\u0027s just a formality.",
-                      "example_es":  "Es solo una cuestión formal."
+                      "example_es":  "Es solo una cuestión formal.",
+                      "adv":  "форма́льно",
+                      "adv_de":  "formal, offiziell",
+                      "adv_ex":  "Форма́льно он прав.",
+                      "adv_ex_de":  "Formal hat er recht."
                   },
                   {
                       "id":  "aj-наивный",
@@ -152,7 +176,11 @@
                       "example_cases":  "тако́й наи́вной – Instrumental",
                       "example_de":  "Sei nicht so naiv!",
                       "example_en":  "Don\u0027t be so naive!",
-                      "example_es":  "¡No seas tan ingenua!"
+                      "example_es":  "¡No seas tan ingenua!",
+                      "adv":  "наи́вно",
+                      "adv_de":  "naiv",
+                      "adv_ex":  "Э́то наи́вно.",
+                      "adv_ex_de":  "Das ist naiv."
                   },
                   {
                       "id":  "aj-либеральный",
@@ -206,7 +234,11 @@
                       "example_cases":  "эмоциона́льный челове́к – Nominativ",
                       "example_de":  "Sie ist ein sehr emotionaler Mensch.",
                       "example_en":  "She\u0027s a very emotional person.",
-                      "example_es":  "Es una persona muy emocional."
+                      "example_es":  "Es una persona muy emocional.",
+                      "adv":  "эмоциона́льно",
+                      "adv_de":  "emotional",
+                      "adv_ex":  "Она́ эмоциона́льно расска́зывает.",
+                      "adv_ex_de":  "Sie erzählt emotional."
                   },
                   {
                       "id":  "aj-снежный",
@@ -252,7 +284,11 @@
                       "example_cases":  "и́скренний челове́к – Nominativ",
                       "example_de":  "Er ist ein aufrichtiger Mensch.",
                       "example_en":  "He\u0027s a sincere person.",
-                      "example_es":  "Es una persona sincera."
+                      "example_es":  "Es una persona sincera.",
+                      "adv":  "и́скренне",
+                      "adv_de":  "aufrichtig",
+                      "adv_ex":  "Я и́скренне рад.",
+                      "adv_ex_de":  "Ich freue mich aufrichtig."
                   },
                   {
                       "id":  "aj-германский",
@@ -305,7 +341,11 @@
                       "example_cases":  "секре́тная информа́ция – Nominativ",
                       "example_de":  "Das ist eine geheime Information.",
                       "example_en":  "This is secret information.",
-                      "example_es":  "Es información secreta."
+                      "example_es":  "Es información secreta.",
+                      "adv":  "секре́тно",
+                      "adv_de":  "geheim",
+                      "adv_ex":  "Э́то секре́тно.",
+                      "adv_ex_de":  "Das ist geheim."
                   },
                   {
                       "id":  "aj-римский",
@@ -331,7 +371,11 @@
                       "example_cases":  "первонача́льный план – Nominativ",
                       "example_de":  "Das war der ursprüngliche Plan.",
                       "example_en":  "That was the original plan.",
-                      "example_es":  "Ese era el plan original."
+                      "example_es":  "Ese era el plan original.",
+                      "adv":  "первонача́льно",
+                      "adv_de":  "ursprünglich",
+                      "adv_ex":  "Первонача́льно мы хоте́ли е́хать на мо́ре.",
+                      "adv_ex_de":  "Ursprünglich wollten wir ans Meer fahren."
                   },
                   {
                       "id":  "aj-благоприятный",
@@ -400,7 +444,11 @@
                       "example_cases":  "внима́тельный учени́к – Nominativ",
                       "example_de":  "Er ist ein sehr aufmerksamer Schüler.",
                       "example_en":  "He\u0027s a very attentive pupil.",
-                      "example_es":  "Es un alumno muy atento."
+                      "example_es":  "Es un alumno muy atento.",
+                      "adv":  "внима́тельно",
+                      "adv_de":  "aufmerksam",
+                      "adv_ex":  "Слу́шай внима́тельно.",
+                      "adv_ex_de":  "Hör aufmerksam zu."
                   },
                   {
                       "id":  "aj-рядовой",
@@ -428,7 +476,11 @@
                       "example_cases":  "фантасти́ческие фи́льмы – Akkusativ Plural",
                       "example_de":  "Ich mag Science-Fiction-Filme.",
                       "example_en":  "I like sci-fi movies.",
-                      "example_es":  "Me gustan las películas de ciencia ficción."
+                      "example_es":  "Me gustan las películas de ciencia ficción.",
+                      "adv":  "фантасти́чески",
+                      "adv_de":  "fantastisch",
+                      "adv_ex":  "Она́ фантасти́чески краси́ва.",
+                      "adv_ex_de":  "Sie ist fantastisch schön."
                   },
                   {
                       "id":  "aj-скрытый",
@@ -470,7 +522,11 @@
                       "example_cases":  "благода́рный учени́к – Nominativ",
                       "example_de":  "Er ist ein dankbarer Schüler.",
                       "example_en":  "He\u0027s a grateful pupil.",
-                      "example_es":  "Es un alumno agradecido."
+                      "example_es":  "Es un alumno agradecido.",
+                      "adv":  "благода́рно",
+                      "adv_de":  "dankbar",
+                      "adv_ex":  "Он благода́рно улыбну́лся.",
+                      "adv_ex_de":  "Er lächelte dankbar."
                   },
                   {
                       "id":  "aj-безумный",
@@ -483,7 +539,11 @@
                       "example_cases":  "безу́мная иде́я – Nominativ",
                       "example_de":  "Das ist eine verrückte Idee!",
                       "example_en":  "That\u0027s a crazy idea!",
-                      "example_es":  "¡Es una idea loca!"
+                      "example_es":  "¡Es una idea loca!",
+                      "adv":  "безу́мно",
+                      "adv_de":  "wahnsinnig",
+                      "adv_ex":  "Я безу́мно рад.",
+                      "adv_ex_de":  "Ich freue mich wahnsinnig."
                   },
                   {
                       "id":  "aj-драгоценный",
@@ -512,7 +572,11 @@
                       "example_cases":  "осторо́жный води́тель – Nominativ",
                       "example_de":  "Er ist ein vorsichtiger Fahrer.",
                       "example_en":  "He\u0027s a careful driver.",
-                      "example_es":  "Es un conductor prudente."
+                      "example_es":  "Es un conductor prudente.",
+                      "adv":  "осторо́жно",
+                      "adv_de":  "vorsichtig",
+                      "adv_ex":  "Осторо́жно!",
+                      "adv_ex_de":  "Vorsicht!"
                   },
                   {
                       "id":  "aj-обширный",
@@ -540,7 +604,11 @@
                       "example_cases":  "го́рдый челове́к – Nominativ",
                       "example_de":  "Er ist ein stolzer Mensch.",
                       "example_en":  "He\u0027s a proud person.",
-                      "example_es":  "Es una persona orgullosa."
+                      "example_es":  "Es una persona orgullosa.",
+                      "adv":  "го́рдо",
+                      "adv_de":  "stolz",
+                      "adv_ex":  "Он го́рдо подня́л го́лову.",
+                      "adv_ex_de":  "Er hob stolz den Kopf."
                   },
                   {
                       "id":  "aj-студенческий",
@@ -581,7 +649,11 @@
                       "example_cases":  "у неё – Genitiv · ла́сковый го́лос – Nominativ",
                       "example_de":  "Sie hat eine liebevolle Stimme.",
                       "example_en":  "She has a gentle voice.",
-                      "example_es":  "Tiene una voz cariñosa."
+                      "example_es":  "Tiene una voz cariñosa.",
+                      "adv":  "ла́сково",
+                      "adv_de":  "zärtlich, liebevoll",
+                      "adv_ex":  "Ма́ма ла́сково улыбну́лась.",
+                      "adv_ex_de":  "Mama lächelte liebevoll."
                   },
                   {
                       "id":  "aj-решительный",
@@ -594,7 +666,11 @@
                       "example_cases":  "реши́тельный челове́к – Nominativ",
                       "example_de":  "Er ist ein entschlossener Mensch.",
                       "example_en":  "He\u0027s a decisive person.",
-                      "example_es":  "Es una persona decidida."
+                      "example_es":  "Es una persona decidida.",
+                      "adv":  "реши́тельно",
+                      "adv_de":  "entschlossen",
+                      "adv_ex":  "Он реши́тельно встал.",
+                      "adv_ex_de":  "Er stand entschlossen auf."
                   },
                   {
                       "id":  "aj-невысокий",
@@ -636,7 +712,11 @@
                       "example_cases":  "во́льной борьбо́й – Instrumental (nach занима́ться)",
                       "example_de":  "Er macht Freistilringen.",
                       "example_en":  "He does freestyle wrestling.",
-                      "example_es":  "Practica lucha libre."
+                      "example_es":  "Practica lucha libre.",
+                      "adv":  "во́льно",
+                      "adv_de":  "frei; Rührt euch!",
+                      "adv_ex":  "Во́льно!",
+                      "adv_ex_de":  "Rührt euch!"
                   },
                   {
                       "id":  "aj-безопасный",
@@ -653,7 +733,11 @@
                       "example_cases":  "безопа́сное ме́сто – Nominativ",
                       "example_de":  "Das ist ein sicherer Ort.",
                       "example_en":  "It\u0027s a safe place.",
-                      "example_es":  "Es un lugar seguro."
+                      "example_es":  "Es un lugar seguro.",
+                      "adv":  "безопа́сно",
+                      "adv_de":  "sicher",
+                      "adv_ex":  "Здесь безопа́сно.",
+                      "adv_ex_de":  "Hier ist es sicher."
                   },
                   {
                       "id":  "aj-автоматический",
@@ -666,7 +750,11 @@
                       "example_cases":  "автомати́ческая дверь – Nominativ",
                       "example_de":  "Hier ist eine automatische Tür.",
                       "example_en":  "There\u0027s an automatic door here.",
-                      "example_es":  "Aquí hay una puerta automática."
+                      "example_es":  "Aquí hay una puerta automática.",
+                      "adv":  "автомати́чески",
+                      "adv_de":  "automatisch",
+                      "adv_ex":  "Дверь открыва́ется автомати́чески.",
+                      "adv_ex_de":  "Die Tür öffnet sich automatisch."
                   },
                   {
                       "id":  "aj-прочный",
@@ -681,7 +769,11 @@
                       "example_cases":  "про́чный материа́л – Nominativ",
                       "example_de":  "Das ist ein haltbares Material.",
                       "example_en":  "It\u0027s a durable material.",
-                      "example_es":  "Es un material resistente."
+                      "example_es":  "Es un material resistente.",
+                      "adv":  "про́чно",
+                      "adv_de":  "fest, dauerhaft",
+                      "adv_ex":  "По́лка виси́т про́чно.",
+                      "adv_ex_de":  "Das Regal hängt fest."
                   },
                   {
                       "id":  "aj-гладкий",
@@ -698,7 +790,11 @@
                       "example_cases":  "у неё – Genitiv · гла́дкая ко́жа – Nominativ",
                       "example_de":  "Sie hat glatte Haut.",
                       "example_en":  "She has smooth skin.",
-                      "example_es":  "Tiene la piel suave."
+                      "example_es":  "Tiene la piel suave.",
+                      "adv":  "гла́дко",
+                      "adv_de":  "glatt",
+                      "adv_ex":  "Всё прошло́ гла́дко.",
+                      "adv_ex_de":  "Alles lief glatt."
                   },
                   {
                       "id":  "aj-влажный",

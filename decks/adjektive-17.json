@@ -87,7 +87,11 @@
                       "example_cases":  "води́тель – Nominativ · тре́звым – Instrumental",
                       "example_de":  "Der Fahrer muss nüchtern sein.",
                       "example_en":  "The driver must be sober.",
-                      "example_es":  "El conductor debe estar sobrio."
+                      "example_es":  "El conductor debe estar sobrio.",
+                      "adv":  "тре́зво",
+                      "adv_de":  "nüchtern",
+                      "adv_ex":  "Он тре́зво смо́трит на ве́щи.",
+                      "adv_ex_de":  "Er sieht die Dinge nüchtern."
                   },
                   {
                       "id":  "aj-молочный",
@@ -116,7 +120,11 @@
                       "example_cases":  "бесполе́зная вещь – Nominativ",
                       "example_de":  "Das ist ein nutzloses Ding.",
                       "example_en":  "It\u0027s a useless thing.",
-                      "example_es":  "Es una cosa inútil."
+                      "example_es":  "Es una cosa inútil.",
+                      "adv":  "бесполе́зно",
+                      "adv_de":  "zwecklos",
+                      "adv_ex":  "Спо́рить бесполе́зно.",
+                      "adv_ex_de":  "Streiten ist zwecklos."
                   },
                   {
                       "id":  "aj-сомнительный",
@@ -172,7 +180,11 @@
                       "example_cases":  "криву́ю ли́нию – Akkusativ",
                       "example_de":  "Zeichne eine krumme Linie.",
                       "example_en":  "Draw a curved line.",
-                      "example_es":  "Dibuja una línea curva."
+                      "example_es":  "Dibuja una línea curva.",
+                      "adv":  "кри́во",
+                      "adv_de":  "schief",
+                      "adv_ex":  "Карти́на виси́т кри́во.",
+                      "adv_ex_de":  "Das Bild hängt schief."
                   },
                   {
                       "id":  "aj-властный",
@@ -186,7 +198,11 @@
                       "example_cases":  "у неё – Genitiv · вла́стный хара́ктер – Nominativ",
                       "example_de":  "Sie hat einen herrischen Charakter.",
                       "example_en":  "She has a domineering character.",
-                      "example_es":  "Tiene un carácter autoritario."
+                      "example_es":  "Tiene un carácter autoritario.",
+                      "adv":  "вла́стно",
+                      "adv_de":  "gebieterisch",
+                      "adv_ex":  "Он вла́стно сказа́л.",
+                      "adv_ex_de":  "Er sagte gebieterisch."
                   },
                   {
                       "id":  "aj-пышный",
@@ -212,7 +228,11 @@
                       "example_cases":  "отврати́тельная пого́да – Nominativ",
                       "example_de":  "Heute ist scheußliches Wetter.",
                       "example_en":  "The weather is awful today.",
-                      "example_es":  "Hoy hace un tiempo horrible."
+                      "example_es":  "Hoy hace un tiempo horrible.",
+                      "adv":  "отврати́тельно",
+                      "adv_de":  "widerlich",
+                      "adv_ex":  "Э́то отврати́тельно.",
+                      "adv_ex_de":  "Das ist widerlich."
                   },
                   {
                       "id":  "aj-радикальный",
@@ -225,7 +245,11 @@
                       "example_cases":  "радика́льное реше́ние – Nominativ",
                       "example_de":  "Das ist eine radikale Lösung.",
                       "example_en":  "It\u0027s a radical solution.",
-                      "example_es":  "Es una solución radical."
+                      "example_es":  "Es una solución radical.",
+                      "adv":  "радика́льно",
+                      "adv_de":  "radikal",
+                      "adv_ex":  "Всё радика́льно измени́лось.",
+                      "adv_ex_de":  "Alles hat sich radikal verändert."
                   },
                   {
                       "id":  "aj-пыльный",
@@ -266,7 +290,11 @@
                       "example_cases":  "неве́рный отве́т – Nominativ",
                       "example_de":  "Das ist eine falsche Antwort.",
                       "example_en":  "That\u0027s a wrong answer.",
-                      "example_es":  "Es una respuesta errónea."
+                      "example_es":  "Es una respuesta errónea.",
+                      "adv":  "неве́рно",
+                      "adv_de":  "falsch",
+                      "adv_ex":  "Э́то неве́рно.",
+                      "adv_ex_de":  "Das ist falsch."
                   },
                   {
                       "id":  "aj-колючий",
@@ -332,7 +360,11 @@
                       "example_cases":  "немы́слимая цена́ – Nominativ",
                       "example_de":  "Das ist ein unvorstellbarer Preis!",
                       "example_en":  "That\u0027s an unthinkable price!",
-                      "example_es":  "¡Es un precio impensable!"
+                      "example_es":  "¡Es un precio impensable!",
+                      "adv":  "немы́слимо",
+                      "adv_de":  "undenkbar",
+                      "adv_ex":  "Э́то немы́слимо.",
+                      "adv_ex_de":  "Das ist undenkbar."
                   },
                   {
                       "id":  "aj-энергичный",
@@ -346,7 +378,11 @@
                       "example_cases":  "энерги́чный челове́к – Nominativ",
                       "example_de":  "Er ist ein tatkräftiger Mensch.",
                       "example_en":  "He\u0027s an energetic person.",
-                      "example_es":  "Es una persona enérgica."
+                      "example_es":  "Es una persona enérgica.",
+                      "adv":  "энерги́чно",
+                      "adv_de":  "energisch",
+                      "adv_ex":  "Он энерги́чно взя́лся за де́ло.",
+                      "adv_ex_de":  "Er machte sich energisch an die Arbeit."
                   },
                   {
                       "id":  "aj-пищевой",
@@ -427,7 +463,11 @@
                       "example_cases":  "адеква́тная реа́кция – Nominativ",
                       "example_de":  "Das ist eine angemessene Reaktion.",
                       "example_en":  "It\u0027s an appropriate reaction.",
-                      "example_es":  "Es una reacción adecuada."
+                      "example_es":  "Es una reacción adecuada.",
+                      "adv":  "адеква́тно",
+                      "adv_de":  "angemessen",
+                      "adv_ex":  "Он адеква́тно реаги́рует.",
+                      "adv_ex_de":  "Er reagiert angemessen."
                   },
                   {
                       "id":  "aj-минеральный",
@@ -467,7 +507,11 @@
                       "example_cases":  "вертика́льную ли́нию – Akkusativ",
                       "example_de":  "Zeichne eine senkrechte Linie.",
                       "example_en":  "Draw a vertical line.",
-                      "example_es":  "Dibuja una línea vertical."
+                      "example_es":  "Dibuja una línea vertical.",
+                      "adv":  "вертика́льно",
+                      "adv_de":  "senkrecht",
+                      "adv_ex":  "Поста́вь буты́лку вертика́льно.",
+                      "adv_ex_de":  "Stell die Flasche senkrecht hin."
                   },
                   {
                       "id":  "aj-следственный",
@@ -560,7 +604,11 @@
                       "example_cases":  "у меня́ – Genitiv · сму́тное воспомина́ние – Nominativ",
                       "example_de":  "Ich habe eine vage Erinnerung.",
                       "example_en":  "I have a vague memory.",
-                      "example_es":  "Tengo un vago recuerdo."
+                      "example_es":  "Tengo un vago recuerdo.",
+                      "adv":  "сму́тно",
+                      "adv_de":  "vage, undeutlich",
+                      "adv_ex":  "Я сму́тно по́мню.",
+                      "adv_ex_de":  "Ich erinnere mich vage."
                   },
                   {
                       "id":  "aj-слышный",
@@ -601,7 +649,11 @@
                       "example_cases":  "у неё – Genitiv · неви́нный взгляд – Nominativ",
                       "example_de":  "Sie hat einen unschuldigen Blick.",
                       "example_en":  "She has an innocent look.",
-                      "example_es":  "Tiene una mirada inocente."
+                      "example_es":  "Tiene una mirada inocente.",
+                      "adv":  "неви́нно",
+                      "adv_de":  "unschuldig",
+                      "adv_ex":  "Она́ неви́нно улыба́ется.",
+                      "adv_ex_de":  "Sie lächelt unschuldig."
                   },
                   {
                       "id":  "aj-процентный",
@@ -668,7 +720,11 @@
                       "example_cases":  "у меня́ – Genitiv · нехоро́шее предчу́вствие – Nominativ",
                       "example_de":  "Ich habe eine ungute Vorahnung.",
                       "example_en":  "I have a bad feeling.",
-                      "example_es":  "Tengo un mal presentimiento."
+                      "example_es":  "Tengo un mal presentimiento.",
+                      "adv":  "нехорошо́",
+                      "adv_de":  "nicht gut, nicht schön",
+                      "adv_ex":  "Так нехорошо́ де́лать.",
+                      "adv_ex_de":  "So etwas tut man nicht."
                   },
                   {
                       "id":  "aj-мутный",

@@ -33,7 +33,11 @@
                       "example_cases":  "суще́ственная ра́зница – Nominativ",
                       "example_de":  "Das ist ein wesentlicher Unterschied.",
                       "example_en":  "That\u0027s a significant difference.",
-                      "example_es":  "Es una diferencia importante."
+                      "example_es":  "Es una diferencia importante.",
+                      "adv":  "суще́ственно",
+                      "adv_de":  "wesentlich",
+                      "adv_ex":  "Э́то суще́ственно ва́жно.",
+                      "adv_ex_de":  "Das ist wesentlich."
                   },
                   {
                       "id":  "aj-восточный",
@@ -89,7 +93,11 @@
                       "example_cases":  "неожи́данный пода́рок – Nominativ",
                       "example_de":  "Das war ein unerwartetes Geschenk.",
                       "example_en":  "It was an unexpected gift.",
-                      "example_es":  "Fue un regalo inesperado."
+                      "example_es":  "Fue un regalo inesperado.",
+                      "adv":  "неожи́данно",
+                      "adv_de":  "unerwartet",
+                      "adv_ex":  "Он пришёл неожи́данно.",
+                      "adv_ex_de":  "Er kam unerwartet."
                   },
                   {
                       "id":  "aj-видный",
@@ -120,7 +128,11 @@
                       "example_cases":  "че́стный челове́к – Nominativ",
                       "example_de":  "Er ist ein ehrlicher Mensch.",
                       "example_en":  "He\u0027s an honest person.",
-                      "example_es":  "Es una persona honesta."
+                      "example_es":  "Es una persona honesta.",
+                      "adv":  "че́стно",
+                      "adv_de":  "ehrlich",
+                      "adv_ex":  "Че́стно говоря́, я уста́л.",
+                      "adv_ex_de":  "Ehrlich gesagt bin ich müde."
                   },
                   {
                       "id":  "aj-резкий",
@@ -137,7 +149,11 @@
                       "example_cases":  "э́то – Akkusativ · ре́зким то́ном – Instrumental",
                       "example_de":  "Er sagte das in schroffem Ton.",
                       "example_en":  "He said it in a harsh tone.",
-                      "example_es":  "Lo dijo en tono brusco."
+                      "example_es":  "Lo dijo en tono brusco.",
+                      "adv":  "ре́зко",
+                      "adv_de":  "scharf, plötzlich",
+                      "adv_ex":  "Он ре́зко останови́лся.",
+                      "adv_ex_de":  "Er blieb plötzlich stehen."
                   },
                   {
                       "id":  "aj-младший",
@@ -183,7 +199,11 @@
                       "example_cases":  "у нас – Genitiv · стро́гий учи́тель – Nominativ",
                       "example_de":  "Wir haben einen strengen Lehrer.",
                       "example_en":  "We have a strict teacher.",
-                      "example_es":  "Tenemos un profesor estricto."
+                      "example_es":  "Tenemos un profesor estricto.",
+                      "adv":  "стро́го",
+                      "adv_de":  "streng",
+                      "adv_ex":  "Здесь стро́го запрещено́ кури́ть.",
+                      "adv_ex_de":  "Rauchen ist hier streng verboten."
                   },
                   {
                       "id":  "aj-южный",
@@ -212,7 +232,11 @@
                       "example_cases":  "мне – Dativ · практи́ческий сове́т – Nominativ",
                       "example_de":  "Ich brauche einen praktischen Rat.",
                       "example_en":  "I need practical advice.",
-                      "example_es":  "Necesito un consejo práctico."
+                      "example_es":  "Necesito un consejo práctico.",
+                      "adv":  "практи́чески",
+                      "adv_de":  "praktisch, fast",
+                      "adv_ex":  "Я практи́чески гото́в.",
+                      "adv_ex_de":  "Ich bin praktisch fertig."
                   },
                   {
                       "id":  "aj-согласный",
@@ -268,7 +292,11 @@
                       "example_cases":  "и́стинный друг – Nominativ",
                       "example_de":  "Er ist ein wahrer Freund.",
                       "example_en":  "He\u0027s a true friend.",
-                      "example_es":  "Es un amigo verdadero."
+                      "example_es":  "Es un amigo verdadero.",
+                      "adv":  "и́стинно",
+                      "adv_de":  "wahrhaft",
+                      "adv_ex":  "Он и́стинно ве́рит.",
+                      "adv_ex_de":  "Er glaubt wahrhaft."
                   },
                   {
                       "id":  "aj-злой",
@@ -298,7 +326,11 @@
                       "example_cases":  "ка́ждому ученику́ – Dativ · индивидуа́льный подхо́д – Nominativ",
                       "example_de":  "Jeder Schüler braucht eine individuelle Herangehensweise.",
                       "example_en":  "Each pupil needs an individual approach.",
-                      "example_es":  "Cada alumno necesita un enfoque individual."
+                      "example_es":  "Cada alumno necesita un enfoque individual.",
+                      "adv":  "индивидуа́льно",
+                      "adv_de":  "individuell",
+                      "adv_ex":  "Учи́тель занима́ется с ним индивидуа́льно.",
+                      "adv_ex_de":  "Der Lehrer übt einzeln mit ihm."
                   },
                   {
                       "id":  "aj-мокрый",
@@ -328,7 +360,11 @@
                       "example_cases":  "в лесу́ – Präpositiv · ди́кие живо́тные – Nominativ Plural",
                       "example_de":  "Im Wald leben wilde Tiere.",
                       "example_en":  "Wild animals live in the forest.",
-                      "example_es":  "En el bosque viven animales salvajes."
+                      "example_es":  "En el bosque viven animales salvajes.",
+                      "adv":  "ди́ко",
+                      "adv_de":  "wild, furchtbar",
+                      "adv_ex":  "Мне ди́ко хо́чется спать.",
+                      "adv_ex_de":  "Ich bin furchtbar müde."
                   },
                   {
                       "id":  "aj-коммерческий",
@@ -372,7 +408,11 @@
                       "example_cases":  "дешёвый биле́т – Akkusativ",
                       "example_de":  "Ich habe ein billiges Ticket gekauft.",
                       "example_en":  "I bought a cheap ticket.",
-                      "example_es":  "Compré un boleto barato."
+                      "example_es":  "Compré un boleto barato.",
+                      "adv":  "дёшево",
+                      "adv_de":  "billig",
+                      "adv_ex":  "Здесь дёшево.",
+                      "adv_ex_de":  "Hier ist es billig."
                   },
                   {
                       "id":  "aj-воздушный",
@@ -432,7 +472,11 @@
                       "example_cases":  "твёрдый сыр – Nominativ",
                       "example_de":  "Das ist Hartkäse.",
                       "example_en":  "This is hard cheese.",
-                      "example_es":  "Es queso duro."
+                      "example_es":  "Es queso duro.",
+                      "adv":  "твёрдо",
+                      "adv_de":  "fest, entschieden",
+                      "adv_ex":  "Он твёрдо реши́л.",
+                      "adv_ex_de":  "Er hat fest entschieden."
                   },
                   {
                       "id":  "aj-религиозный",
@@ -511,7 +555,11 @@
                       "example_cases":  "кита́йский язы́к – Nominativ · тру́дный – Nominativ",
                       "example_de":  "Chinesisch ist sehr schwer.",
                       "example_en":  "Chinese is very difficult.",
-                      "example_es":  "El chino es muy difícil."
+                      "example_es":  "El chino es muy difícil.",
+                      "adv":  "по-кита́йски",
+                      "adv_de":  "auf Chinesisch",
+                      "adv_ex":  "Я не понима́ю по-кита́йски.",
+                      "adv_ex_de":  "Ich verstehe kein Chinesisch."
                   },
                   {
                       "id":  "aj-земной",
@@ -541,7 +589,11 @@
                       "example_cases":  "в гря́зной о́буви – Präpositiv",
                       "example_de":  "Lauf nicht mit schmutzigen Schuhen herum!",
                       "example_en":  "Don\u0027t walk around in dirty shoes!",
-                      "example_es":  "¡No andes con zapatos sucios!"
+                      "example_es":  "¡No andes con zapatos sucios!",
+                      "adv":  "гря́зно",
+                      "adv_de":  "schmutzig",
+                      "adv_ex":  "На у́лице гря́зно.",
+                      "adv_ex_de":  "Draußen ist es schmutzig."
                   },
                   {
                       "id":  "aj-классический",
@@ -569,7 +621,11 @@
                       "example_cases":  "мне – Dativ · с неизве́стного но́мера – Genitiv",
                       "example_de":  "Ich wurde von einer unbekannten Nummer angerufen.",
                       "example_en":  "I got a call from an unknown number.",
-                      "example_es":  "Me llamaron de un número desconocido."
+                      "example_es":  "Me llamaron de un número desconocido.",
+                      "adv":  "неизве́стно",
+                      "adv_de":  "unbekannt",
+                      "adv_ex":  "Неизве́стно, когда́ он придёт.",
+                      "adv_ex_de":  "Man weiß nicht, wann er kommt."
                   },
                   {
                       "id":  "aj-торговый",
@@ -595,7 +651,11 @@
                       "example_cases":  "мой привы́чный маршру́т – Nominativ",
                       "example_de":  "Das ist meine gewohnte Strecke.",
                       "example_en":  "This is my usual route.",
-                      "example_es":  "Es mi ruta habitual."
+                      "example_es":  "Es mi ruta habitual.",
+                      "adv":  "привы́чно",
+                      "adv_de":  "gewohnt",
+                      "adv_ex":  "Всё бы́ло привы́чно.",
+                      "adv_ex_de":  "Alles war wie gewohnt."
                   },
                   {
                       "id":  "aj-обратный",
@@ -609,7 +669,11 @@
                       "example_cases":  "обра́тный биле́т – Akkusativ",
                       "example_de":  "Ich habe eine Rückfahrkarte gekauft.",
                       "example_en":  "I bought a return ticket.",
-                      "example_es":  "Compré un boleto de regreso."
+                      "example_es":  "Compré un boleto de regreso.",
+                      "adv":  "обра́тно",
+                      "adv_de":  "zurück",
+                      "adv_ex":  "Я иду́ обра́тно.",
+                      "adv_ex_de":  "Ich gehe zurück."
                   },
                   {
                       "id":  "aj-глупый",
@@ -626,7 +690,11 @@
                       "example_cases":  "глу́пый вопро́с – Nominativ",
                       "example_de":  "Das ist eine dumme Frage.",
                       "example_en":  "That\u0027s a silly question.",
-                      "example_es":  "Es una pregunta tonta."
+                      "example_es":  "Es una pregunta tonta.",
+                      "adv":  "глу́по",
+                      "adv_de":  "dumm",
+                      "adv_ex":  "Э́то глу́по.",
+                      "adv_ex_de":  "Das ist dumm."
                   },
                   {
                       "id":  "aj-транспортный",
@@ -653,7 +721,11 @@
                       "example_cases":  "досто́йный челове́к – Nominativ",
                       "example_de":  "Er ist ein anständiger Mensch.",
                       "example_en":  "He\u0027s a worthy person.",
-                      "example_es":  "Es una persona digna."
+                      "example_es":  "Es una persona digna.",
+                      "adv":  "досто́йно",
+                      "adv_de":  "würdig, anständig",
+                      "adv_ex":  "Он досто́йно себя́ вёл.",
+                      "adv_ex_de":  "Er hat sich anständig benommen."
                   },
                   {
                       "id":  "aj-удобный",
@@ -670,7 +742,11 @@
                       "example_cases":  "у нас – Genitiv · удо́бный дива́н – Nominativ",
                       "example_de":  "Wir haben ein bequemes Sofa.",
                       "example_en":  "We have a comfortable sofa.",
-                      "example_es":  "Tenemos un sofá cómodo."
+                      "example_es":  "Tenemos un sofá cómodo.",
+                      "adv":  "удо́бно",
+                      "adv_de":  "bequem, passend",
+                      "adv_ex":  "Тебе́ удо́бно?",
+                      "adv_ex_de":  "Ist es bequem für dich?"
                   },
                   {
                       "id":  "aj-конечный",

@@ -46,7 +46,11 @@
                       "example_cases":  "после́довательный челове́к – Nominativ",
                       "example_de":  "Er ist ein konsequenter Mensch.",
                       "example_en":  "He\u0027s a consistent person.",
-                      "example_es":  "Es una persona consecuente."
+                      "example_es":  "Es una persona consecuente.",
+                      "adv":  "после́довательно",
+                      "adv_de":  "konsequent, nacheinander",
+                      "adv_ex":  "Он де́йствует после́довательно.",
+                      "adv_ex_de":  "Er handelt konsequent."
                   },
                   {
                       "id":  "aj-отдаленный",
@@ -59,7 +63,11 @@
                       "example_cases":  "в отдалённом райо́не – Präpositiv",
                       "example_de":  "Er wohnt in einer abgelegenen Gegend.",
                       "example_en":  "He lives in a remote area.",
-                      "example_es":  "Vive en una zona apartada."
+                      "example_es":  "Vive en una zona apartada.",
+                      "adv":  "отдалённо",
+                      "adv_de":  "entfernt",
+                      "adv_ex":  "Он отдалённо похо́ж на отца́.",
+                      "adv_ex_de":  "Er sieht dem Vater entfernt ähnlich."
                   },
                   {
                       "id":  "aj-ничтожный",
@@ -73,7 +81,11 @@
                       "example_cases":  "ничто́жная су́мма – Nominativ",
                       "example_de":  "Das ist ein lächerlicher Betrag.",
                       "example_en":  "It\u0027s a tiny sum.",
-                      "example_es":  "Es una suma insignificante."
+                      "example_es":  "Es una suma insignificante.",
+                      "adv":  "ничто́жно",
+                      "adv_de":  "verschwindend",
+                      "adv_ex":  "Шанс ничто́жно мал.",
+                      "adv_ex_de":  "Die Chance ist verschwindend gering."
                   },
                   {
                       "id":  "aj-неудачный",
@@ -87,7 +99,11 @@
                       "example_cases":  "неуда́чный день – Nominativ",
                       "example_de":  "Das war ein missglückter Tag.",
                       "example_en":  "It was a bad day.",
-                      "example_es":  "Fue un mal día."
+                      "example_es":  "Fue un mal día.",
+                      "adv":  "неуда́чно",
+                      "adv_de":  "unglücklich, misslungen",
+                      "adv_ex":  "Он неуда́чно упа́л.",
+                      "adv_ex_de":  "Er ist unglücklich gestürzt."
                   },
                   {
                       "id":  "aj-нелегкий",
@@ -100,7 +116,11 @@
                       "example_cases":  "нелёгкое реше́ние – Nominativ",
                       "example_de":  "Das ist keine leichte Entscheidung.",
                       "example_en":  "It\u0027s not an easy decision.",
-                      "example_es":  "No es una decisión fácil."
+                      "example_es":  "No es una decisión fácil.",
+                      "adv":  "нелегко́",
+                      "adv_de":  "nicht leicht",
+                      "adv_ex":  "Мне нелегко́.",
+                      "adv_ex_de":  "Es fällt mir nicht leicht."
                   },
                   {
                       "id":  "aj-молоденький",
@@ -167,7 +187,11 @@
                       "example_cases":  "у него́ – Genitiv · персона́льный компью́тер – Nominativ",
                       "example_de":  "Er hat einen eigenen Computer.",
                       "example_en":  "He has a personal computer.",
-                      "example_es":  "Tiene una computadora personal."
+                      "example_es":  "Tiene una computadora personal.",
+                      "adv":  "персона́льно",
+                      "adv_de":  "persönlich",
+                      "adv_ex":  "Э́то персона́льно для вас.",
+                      "adv_ex_de":  "Das ist persönlich für Sie."
                   },
                   {
                       "id":  "aj-оборонный",
@@ -194,7 +218,11 @@
                       "example_cases":  "кварти́ру – Akkusativ · на втори́чном ры́нке – Präpositiv",
                       "example_de":  "Wir haben eine gebrauchte Wohnung gekauft.",
                       "example_en":  "We bought an apartment on the resale market.",
-                      "example_es":  "Compramos un apartamento de segunda mano."
+                      "example_es":  "Compramos un apartamento de segunda mano.",
+                      "adv":  "втори́чно",
+                      "adv_de":  "zweitrangig",
+                      "adv_ex":  "Э́то втори́чно.",
+                      "adv_ex_de":  "Das ist zweitrangig."
                   },
                   {
                       "id":  "aj-агрессивный",
@@ -207,7 +235,11 @@
                       "example_cases":  "агресси́вная соба́ка – Nominativ",
                       "example_de":  "Das ist ein aggressiver Hund.",
                       "example_en":  "It\u0027s an aggressive dog.",
-                      "example_es":  "Es un perro agresivo."
+                      "example_es":  "Es un perro agresivo.",
+                      "adv":  "агресси́вно",
+                      "adv_de":  "aggressiv",
+                      "adv_ex":  "Соба́ка ведёт себя́ агресси́вно.",
+                      "adv_ex_de":  "Der Hund verhält sich aggressiv."
                   },
                   {
                       "id":  "aj-абстрактный",
@@ -248,7 +280,11 @@
                       "example_cases":  "ска́зочный лес – Nominativ",
                       "example_de":  "Das ist ein märchenhafter Wald.",
                       "example_en":  "It\u0027s a fairy-tale forest.",
-                      "example_es":  "Es un bosque de cuento."
+                      "example_es":  "Es un bosque de cuento.",
+                      "adv":  "ска́зочно",
+                      "adv_de":  "märchenhaft",
+                      "adv_ex":  "Здесь ска́зочно краси́во.",
+                      "adv_ex_de":  "Hier ist es märchenhaft schön."
                   },
                   {
                       "id":  "aj-подозрительный",
@@ -261,7 +297,11 @@
                       "example_cases":  "подозри́тельный челове́к – Nominativ",
                       "example_de":  "Das ist ein verdächtiger Mensch.",
                       "example_en":  "That\u0027s a suspicious person.",
-                      "example_es":  "Es una persona sospechosa."
+                      "example_es":  "Es una persona sospechosa.",
+                      "adv":  "подозри́тельно",
+                      "adv_de":  "verdächtig",
+                      "adv_ex":  "Он подозри́тельно ти́хий.",
+                      "adv_ex_de":  "Er ist verdächtig still."
                   },
                   {
                       "id":  "aj-лекарственный",
@@ -287,7 +327,11 @@
                       "example_cases":  "у него́ – Genitiv · блаже́нная улы́бка – Nominativ",
                       "example_de":  "Er hat ein seliges Lächeln.",
                       "example_en":  "He has a blissful smile.",
-                      "example_es":  "Tiene una sonrisa dichosa."
+                      "example_es":  "Tiene una sonrisa dichosa.",
+                      "adv":  "блаже́нно",
+                      "adv_de":  "selig",
+                      "adv_ex":  "Он блаже́нно улыба́ется.",
+                      "adv_ex_de":  "Er lächelt selig."
                   },
                   {
                       "id":  "aj-тепловой",
@@ -342,7 +386,11 @@
                       "example_cases":  "у нас – Genitiv · ги́бкий гра́фик – Nominativ · рабо́ты – Genitiv",
                       "example_de":  "Wir haben flexible Arbeitszeiten.",
                       "example_en":  "We have flexible working hours.",
-                      "example_es":  "Tenemos horario flexible."
+                      "example_es":  "Tenemos horario flexible.",
+                      "adv":  "ги́бко",
+                      "adv_de":  "flexibel",
+                      "adv_ex":  "Мы рабо́таем ги́бко.",
+                      "adv_ex_de":  "Wir arbeiten flexibel."
                   },
                   {
                       "id":  "aj-алюминиевый",
@@ -424,7 +472,11 @@
                       "example_cases":  "благополу́чная семья́ – Nominativ",
                       "example_de":  "Das ist eine wohlhabende, glückliche Familie.",
                       "example_en":  "It\u0027s a happy, prosperous family.",
-                      "example_es":  "Es una familia próspera."
+                      "example_es":  "Es una familia próspera.",
+                      "adv":  "благополу́чно",
+                      "adv_de":  "glücklich, gut",
+                      "adv_ex":  "Мы благополу́чно дое́хали.",
+                      "adv_ex_de":  "Wir sind gut angekommen."
                   },
                   {
                       "id":  "aj-линейный",
@@ -464,7 +516,11 @@
                       "example_cases":  "моя́ ежедне́вная прогу́лка – Nominativ",
                       "example_de":  "Das ist mein täglicher Spaziergang.",
                       "example_en":  "It\u0027s my daily walk.",
-                      "example_es":  "Es mi paseo diario."
+                      "example_es":  "Es mi paseo diario.",
+                      "adv":  "ежедне́вно",
+                      "adv_de":  "täglich",
+                      "adv_ex":  "Я ежедне́вно гуля́ю.",
+                      "adv_ex_de":  "Ich gehe täglich spazieren."
                   },
                   {
                       "id":  "aj-босой",
@@ -532,7 +588,11 @@
                       "example_cases":  "убеди́тельный аргуме́нт – Nominativ",
                       "example_de":  "Das ist ein überzeugendes Argument.",
                       "example_en":  "It\u0027s a convincing argument.",
-                      "example_es":  "Es un argumento convincente."
+                      "example_es":  "Es un argumento convincente.",
+                      "adv":  "убеди́тельно",
+                      "adv_de":  "überzeugend",
+                      "adv_ex":  "Он говори́т убеди́тельно.",
+                      "adv_ex_de":  "Er spricht überzeugend."
                   },
                   {
                       "id":  "aj-родительский",
@@ -572,7 +632,11 @@
                       "example_cases":  "изли́шняя осторо́жность – Nominativ",
                       "example_de":  "Das ist übertriebene Vorsicht.",
                       "example_en":  "That\u0027s excessive caution.",
-                      "example_es":  "Es una precaución excesiva."
+                      "example_es":  "Es una precaución excesiva.",
+                      "adv":  "изли́шне",
+                      "adv_de":  "übermäßig, zu",
+                      "adv_ex":  "Он изли́шне осторо́жен.",
+                      "adv_ex_de":  "Er ist übertrieben vorsichtig."
                   },
                   {
                       "id":  "aj-заводской",
@@ -641,7 +705,11 @@
                       "example_cases":  "то́ненькая кни́жка – Nominativ",
                       "example_de":  "Das ist ein dünnes Büchlein.",
                       "example_en":  "It\u0027s a thin little book.",
-                      "example_es":  "Es un librito delgadito."
+                      "example_es":  "Es un librito delgadito.",
+                      "adv":  "то́ненько",
+                      "adv_de":  "hauchdünn, ganz fein",
+                      "adv_ex":  "Она́ то́ненько поёт.",
+                      "adv_ex_de":  "Sie singt mit ganz feiner Stimme."
                   },
                   {
                       "id":  "aj-пространственный",

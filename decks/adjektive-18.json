@@ -33,7 +33,11 @@
                       "example_cases":  "кла́ссный фильм – Nominativ",
                       "example_de":  "Das ist ein toller Film!",
                       "example_en":  "It\u0027s a great movie!",
-                      "example_es":  "¡Es una película chévere!"
+                      "example_es":  "¡Es una película chévere!",
+                      "adv":  "кла́ссно",
+                      "adv_de":  "super, klasse",
+                      "adv_ex":  "Кла́ссно!",
+                      "adv_ex_de":  "Klasse!"
                   },
                   {
                       "id":  "aj-географический",
@@ -88,7 +92,11 @@
                       "example_cases":  "прохла́дный ве́чер – Nominativ",
                       "example_de":  "Heute ist ein kühler Abend.",
                       "example_en":  "It\u0027s a cool evening today.",
-                      "example_es":  "Hoy la noche está fresca."
+                      "example_es":  "Hoy la noche está fresca.",
+                      "adv":  "прохла́дно",
+                      "adv_de":  "kühl",
+                      "adv_ex":  "Ве́чером прохла́дно.",
+                      "adv_ex_de":  "Abends ist es kühl."
                   },
                   {
                       "id":  "aj-полноценный",
@@ -101,7 +109,11 @@
                       "example_cases":  "полноце́нный обе́д – Nominativ",
                       "example_de":  "Das ist ein vollwertiges Mittagessen.",
                       "example_en":  "It\u0027s a proper lunch.",
-                      "example_es":  "Es un almuerzo completo."
+                      "example_es":  "Es un almuerzo completo.",
+                      "adv":  "полноце́нно",
+                      "adv_de":  "vollwertig, richtig",
+                      "adv_ex":  "Он полноце́нно отдыха́ет.",
+                      "adv_ex_de":  "Er erholt sich richtig."
                   },
                   {
                       "id":  "aj-лагерный",
@@ -140,7 +152,11 @@
                       "example_cases":  "кака́я преде́льная ско́рость – Nominativ",
                       "example_de":  "Was ist hier die Höchstgeschwindigkeit?",
                       "example_en":  "What\u0027s the speed limit here?",
-                      "example_es":  "¿Cuál es la velocidad máxima aquí?"
+                      "example_es":  "¿Cuál es la velocidad máxima aquí?",
+                      "adv":  "преде́льно",
+                      "adv_de":  "äußerst",
+                      "adv_ex":  "Всё преде́льно я́сно.",
+                      "adv_ex_de":  "Alles ist völlig klar."
                   },
                   {
                       "id":  "aj-людской",
@@ -182,7 +198,11 @@
                       "example_cases":  "аккура́тный учени́к – Nominativ",
                       "example_de":  "Er ist ein ordentlicher Schüler.",
                       "example_en":  "He\u0027s a neat pupil.",
-                      "example_es":  "Es un alumno ordenado."
+                      "example_es":  "Es un alumno ordenado.",
+                      "adv":  "аккура́тно",
+                      "adv_de":  "ordentlich, sorgfältig",
+                      "adv_ex":  "Пиши́ аккура́тно.",
+                      "adv_ex_de":  "Schreib ordentlich."
                   },
                   {
                       "id":  "aj-чайный",
@@ -248,7 +268,11 @@
                       "example_cases":  "поря́дочный челове́к – Nominativ",
                       "example_de":  "Er ist ein anständiger Mensch.",
                       "example_en":  "He\u0027s a decent person.",
-                      "example_es":  "Es una persona honrada."
+                      "example_es":  "Es una persona honrada.",
+                      "adv":  "поря́дочно",
+                      "adv_de":  "anständig",
+                      "adv_ex":  "Он поступи́л поря́дочно.",
+                      "adv_ex_de":  "Er hat anständig gehandelt."
                   },
                   {
                       "id":  "aj-органический",
@@ -261,7 +285,11 @@
                       "example_cases":  "органи́ческие о́вощи – Akkusativ Plural",
                       "example_de":  "Ich kaufe Bio-Gemüse.",
                       "example_en":  "I buy organic vegetables.",
-                      "example_es":  "Compro verduras orgánicas."
+                      "example_es":  "Compro verduras orgánicas.",
+                      "adv":  "органи́чески",
+                      "adv_de":  "organisch",
+                      "adv_ex":  "Э́то органи́чески свя́зано.",
+                      "adv_ex_de":  "Das hängt organisch zusammen."
                   },
                   {
                       "id":  "aj-здравый",
@@ -315,7 +343,11 @@
                       "example_cases":  "смерте́льная опа́сность – Nominativ",
                       "example_de":  "Das ist Lebensgefahr.",
                       "example_en":  "It\u0027s a mortal danger.",
-                      "example_es":  "Es un peligro mortal."
+                      "example_es":  "Es un peligro mortal.",
+                      "adv":  "смерте́льно",
+                      "adv_de":  "tödlich, tod-",
+                      "adv_ex":  "Я смерте́льно уста́л.",
+                      "adv_ex_de":  "Ich bin todmüde."
                   },
                   {
                       "id":  "aj-провинциальный",
@@ -395,7 +427,11 @@
                       "example_cases":  "ежего́дный пра́здник – Nominativ",
                       "example_de":  "Das ist ein jährliches Fest.",
                       "example_en":  "It\u0027s an annual holiday.",
-                      "example_es":  "Es una fiesta anual."
+                      "example_es":  "Es una fiesta anual.",
+                      "adv":  "ежего́дно",
+                      "adv_de":  "jährlich",
+                      "adv_ex":  "Фестива́ль прохо́дит ежего́дно.",
+                      "adv_ex_de":  "Das Festival findet jährlich statt."
                   },
                   {
                       "id":  "aj-прогрессивный",
@@ -464,7 +500,11 @@
                       "example_cases":  "са́мый вероя́тный вариа́нт – Nominativ",
                       "example_de":  "Das ist die wahrscheinlichste Variante.",
                       "example_en":  "It\u0027s the most likely option.",
-                      "example_es":  "Es la opción más probable."
+                      "example_es":  "Es la opción más probable.",
+                      "adv":  "вероя́тно",
+                      "adv_de":  "wahrscheinlich",
+                      "adv_ex":  "Вероя́тно, он прав.",
+                      "adv_ex_de":  "Wahrscheinlich hat er recht."
                   },
                   {
                       "id":  "aj-пограничный",
@@ -506,7 +546,11 @@
                       "example_cases":  "ви́димой причи́ны – Genitiv (nach нет)",
                       "example_de":  "Es gibt keinen erkennbaren Grund.",
                       "example_en":  "There\u0027s no visible reason.",
-                      "example_es":  "No hay una razón visible."
+                      "example_es":  "No hay una razón visible.",
+                      "adv":  "ви́димо",
+                      "adv_de":  "anscheinend",
+                      "adv_ex":  "Ви́димо, он забы́л.",
+                      "adv_ex_de":  "Anscheinend hat er es vergessen."
                   },
                   {
                       "id":  "aj-недоступный",
@@ -549,7 +593,11 @@
                       "example_cases":  "доброво́льная по́мощь – Nominativ",
                       "example_de":  "Das ist freiwillige Hilfe.",
                       "example_en":  "It\u0027s voluntary help.",
-                      "example_es":  "Es ayuda voluntaria."
+                      "example_es":  "Es ayuda voluntaria.",
+                      "adv":  "доброво́льно",
+                      "adv_de":  "freiwillig",
+                      "adv_ex":  "Он доброво́льно помога́ет.",
+                      "adv_ex_de":  "Er hilft freiwillig."
                   },
                   {
                       "id":  "aj-декоративный",
@@ -576,7 +624,11 @@
                       "example_cases":  "у́мственный труд – Nominativ",
                       "example_de":  "Das ist Kopfarbeit.",
                       "example_en":  "It\u0027s mental work.",
-                      "example_es":  "Es trabajo intelectual."
+                      "example_es":  "Es trabajo intelectual.",
+                      "adv":  "у́мственно",
+                      "adv_de":  "geistig",
+                      "adv_ex":  "Он у́мственно уста́л.",
+                      "adv_ex_de":  "Er ist geistig erschöpft."
                   },
                   {
                       "id":  "aj-страстный",
@@ -590,7 +642,11 @@
                       "example_cases":  "у них – Genitiv · стра́стная любо́вь – Nominativ",
                       "example_de":  "Sie lieben sich leidenschaftlich.",
                       "example_en":  "They have a passionate love.",
-                      "example_es":  "Tienen un amor apasionado."
+                      "example_es":  "Tienen un amor apasionado.",
+                      "adv":  "стра́стно",
+                      "adv_de":  "leidenschaftlich",
+                      "adv_ex":  "Он стра́стно лю́бит му́зыку.",
+                      "adv_ex_de":  "Er liebt Musik leidenschaftlich."
                   },
                   {
                       "id":  "aj-сознательный",
@@ -603,7 +659,11 @@
                       "example_cases":  "созна́тельный вы́бор – Nominativ",
                       "example_de":  "Das ist eine bewusste Entscheidung.",
                       "example_en":  "It\u0027s a conscious choice.",
-                      "example_es":  "Es una elección consciente."
+                      "example_es":  "Es una elección consciente.",
+                      "adv":  "созна́тельно",
+                      "adv_de":  "bewusst",
+                      "adv_ex":  "Он созна́тельно э́то сде́лал.",
+                      "adv_ex_de":  "Er hat das bewusst getan."
                   },
                   {
                       "id":  "aj-параллельный",
@@ -616,7 +676,11 @@
                       "example_cases":  "в паралле́льных кла́ссах – Präpositiv Plural",
                       "example_de":  "Wir gehen in Parallelklassen.",
                       "example_en":  "We\u0027re in parallel classes.",
-                      "example_es":  "Estudiamos en clases paralelas."
+                      "example_es":  "Estudiamos en clases paralelas.",
+                      "adv":  "паралле́льно",
+                      "adv_de":  "parallel, gleichzeitig",
+                      "adv_ex":  "Я паралле́льно учу́ два языка́.",
+                      "adv_ex_de":  "Ich lerne gleichzeitig zwei Sprachen."
                   },
                   {
                       "id":  "aj-зрительный",

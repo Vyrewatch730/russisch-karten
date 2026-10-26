@@ -19,7 +19,11 @@
                       "example_cases":  "у нас – Genitiv · душе́вный разгово́р – Nominativ",
                       "example_de":  "Wir hatten ein herzliches Gespräch.",
                       "example_en":  "We had a heartfelt talk.",
-                      "example_es":  "Tuvimos una conversación muy cordial."
+                      "example_es":  "Tuvimos una conversación muy cordial.",
+                      "adv":  "душе́вно",
+                      "adv_de":  "herzlich, gemütlich",
+                      "adv_ex":  "Мы душе́вно посиде́ли.",
+                      "adv_ex_de":  "Wir haben gemütlich zusammengesessen."
                   },
                   {
                       "id":  "aj-печальный",
@@ -33,7 +37,11 @@
                       "example_cases":  "печа́льная исто́рия – Nominativ",
                       "example_de":  "Das ist eine traurige Geschichte.",
                       "example_en":  "It\u0027s a sad story.",
-                      "example_es":  "Es una historia triste."
+                      "example_es":  "Es una historia triste.",
+                      "adv":  "печа́льно",
+                      "adv_de":  "traurig",
+                      "adv_ex":  "Э́то печа́льно.",
+                      "adv_ex_de":  "Das ist traurig."
                   },
                   {
                       "id":  "aj-пенсионный",
@@ -60,7 +68,11 @@
                       "example_cases":  "мне – Dativ · объекти́вное мне́ние – Nominativ",
                       "example_de":  "Ich brauche eine objektive Meinung.",
                       "example_en":  "I need an objective opinion.",
-                      "example_es":  "Necesito una opinión objetiva."
+                      "example_es":  "Necesito una opinión objetiva.",
+                      "adv":  "объекти́вно",
+                      "adv_de":  "objektiv",
+                      "adv_ex":  "Объекти́вно говоря́, он прав.",
+                      "adv_ex_de":  "Objektiv gesehen hat er recht."
                   },
                   {
                       "id":  "aj-теоретический",
@@ -74,7 +86,11 @@
                       "example_cases":  "теорети́ческий вопро́с – Nominativ",
                       "example_de":  "Das ist eine theoretische Frage.",
                       "example_en":  "That\u0027s a theoretical question.",
-                      "example_es":  "Es una pregunta teórica."
+                      "example_es":  "Es una pregunta teórica.",
+                      "adv":  "теорети́чески",
+                      "adv_de":  "theoretisch",
+                      "adv_ex":  "Теорети́чески э́то возмо́жно.",
+                      "adv_ex_de":  "Theoretisch ist das möglich."
                   },
                   {
                       "id":  "aj-моральный",
@@ -87,7 +103,11 @@
                       "example_cases":  "мне – Dativ · мора́льная подде́ржка – Nominativ",
                       "example_de":  "Ich brauche moralische Unterstützung.",
                       "example_en":  "I need moral support.",
-                      "example_es":  "Necesito apoyo moral."
+                      "example_es":  "Necesito apoyo moral.",
+                      "adv":  "мора́льно",
+                      "adv_de":  "moralisch",
+                      "adv_ex":  "Мне мора́льно тяжело́.",
+                      "adv_ex_de":  "Es belastet mich seelisch."
                   },
                   {
                       "id":  "aj-инвестиционный",
@@ -128,7 +148,11 @@
                       "example_cases":  "невероя́тная исто́рия – Nominativ",
                       "example_de":  "Das ist eine unglaubliche Geschichte!",
                       "example_en":  "That\u0027s an incredible story!",
-                      "example_es":  "¡Es una historia increíble!"
+                      "example_es":  "¡Es una historia increíble!",
+                      "adv":  "невероя́тно",
+                      "adv_de":  "unglaublich",
+                      "adv_ex":  "Э́то невероя́тно!",
+                      "adv_ex_de":  "Das ist unglaublich!"
                   },
                   {
                       "id":  "aj-законодательный",
@@ -141,7 +165,11 @@
                       "example_cases":  "Ду́ма – Nominativ · законода́тельный о́рган – Nominativ",
                       "example_de":  "Die Duma ist ein gesetzgebendes Organ.",
                       "example_en":  "The Duma is a legislative body.",
-                      "example_es":  "La Duma es un órgano legislativo."
+                      "example_es":  "La Duma es un órgano legislativo.",
+                      "adv":  "законода́тельно",
+                      "adv_de":  "gesetzlich",
+                      "adv_ex":  "Э́то законода́тельно запрещено́.",
+                      "adv_ex_de":  "Das ist gesetzlich verboten."
                   },
                   {
                       "id":  "aj-хозяйственный",
@@ -194,7 +222,11 @@
                       "example_cases":  "мой непосре́дственный нача́льник – Nominativ",
                       "example_de":  "Er ist mein direkter Vorgesetzter.",
                       "example_en":  "He\u0027s my direct boss.",
-                      "example_es":  "Es mi jefe directo."
+                      "example_es":  "Es mi jefe directo.",
+                      "adv":  "непосре́дственно",
+                      "adv_de":  "unmittelbar, direkt",
+                      "adv_ex":  "Я рабо́таю непосре́дственно с ним.",
+                      "adv_ex_de":  "Ich arbeite direkt mit ihm."
                   },
                   {
                       "id":  "aj-идеальный",
@@ -208,7 +240,11 @@
                       "example_cases":  "идеа́льное ме́сто – Nominativ · для о́тдыха – Genitiv",
                       "example_de":  "Das ist ein idealer Ort zum Erholen.",
                       "example_en":  "It\u0027s the perfect place to relax.",
-                      "example_es":  "Es el lugar ideal para descansar."
+                      "example_es":  "Es el lugar ideal para descansar.",
+                      "adv":  "идеа́льно",
+                      "adv_de":  "ideal, perfekt",
+                      "adv_ex":  "Пла́тье сиди́т идеа́льно.",
+                      "adv_ex_de":  "Das Kleid sitzt perfekt."
                   },
                   {
                       "id":  "aj-вечерний",
@@ -240,7 +276,11 @@
                       "example_cases":  "сла́дкий чай – Akkusativ",
                       "example_de":  "Ich mag süßen Tee.",
                       "example_en":  "I like sweet tea.",
-                      "example_es":  "Me gusta el té dulce."
+                      "example_es":  "Me gusta el té dulce.",
+                      "adv":  "сла́дко",
+                      "adv_de":  "süß",
+                      "adv_ex":  "Ребёнок сла́дко спит.",
+                      "adv_ex_de":  "Das Kind schläft süß."
                   },
                   {
                       "id":  "aj-водный",
@@ -346,7 +386,11 @@
                       "example_cases":  "за операти́вный отве́т – Akkusativ",
                       "example_de":  "Danke für die schnelle Antwort!",
                       "example_en":  "Thanks for the quick reply!",
-                      "example_es":  "¡Gracias por la rápida respuesta!"
+                      "example_es":  "¡Gracias por la rápida respuesta!",
+                      "adv":  "операти́вно",
+                      "adv_de":  "schnell, zügig",
+                      "adv_ex":  "Он операти́вно отве́тил.",
+                      "adv_ex_de":  "Er hat zügig geantwortet."
                   },
                   {
                       "id":  "aj-тесный",
@@ -363,7 +407,11 @@
                       "example_cases":  "у нас – Genitiv · те́сная кварти́ра – Nominativ",
                       "example_de":  "Unsere Wohnung ist eng.",
                       "example_en":  "Our apartment is cramped.",
-                      "example_es":  "Nuestro apartamento es estrecho."
+                      "example_es":  "Nuestro apartamento es estrecho.",
+                      "adv":  "те́сно",
+                      "adv_de":  "eng",
+                      "adv_ex":  "В авто́бусе те́сно.",
+                      "adv_ex_de":  "Im Bus ist es eng."
                   },
                   {
                       "id":  "aj-разнообразный",
@@ -393,7 +441,11 @@
                       "example_cases":  "мне – Dativ · чёткий отве́т – Akkusativ",
                       "example_de":  "Gib mir eine klare Antwort.",
                       "example_en":  "Give me a clear answer.",
-                      "example_es":  "Dame una respuesta clara."
+                      "example_es":  "Dame una respuesta clara.",
+                      "adv":  "чётко",
+                      "adv_de":  "deutlich, klar",
+                      "adv_ex":  "Говори́ чётко.",
+                      "adv_ex_de":  "Sprich deutlich."
                   },
                   {
                       "id":  "aj-плотный",
@@ -409,7 +461,11 @@
                       "example_cases":  "у нас – Genitiv · пло́тный гра́фик – Nominativ",
                       "example_de":  "Wir haben einen engen Zeitplan.",
                       "example_en":  "We have a tight schedule.",
-                      "example_es":  "Tenemos un horario apretado."
+                      "example_es":  "Tenemos un horario apretado.",
+                      "adv":  "пло́тно",
+                      "adv_de":  "dicht, fest",
+                      "adv_ex":  "Закро́й дверь пло́тно.",
+                      "adv_ex_de":  "Schließ die Tür fest."
                   },
                   {
                       "id":  "aj-жестокий",
@@ -425,7 +481,11 @@
                       "example_cases":  "жесто́ким челове́ком – Instrumental (nach быть)",
                       "example_de":  "Er war ein grausamer Mensch.",
                       "example_en":  "He was a cruel man.",
-                      "example_es":  "Era un hombre cruel."
+                      "example_es":  "Era un hombre cruel.",
+                      "adv":  "жесто́ко",
+                      "adv_de":  "grausam",
+                      "adv_ex":  "Э́то жесто́ко.",
+                      "adv_ex_de":  "Das ist grausam."
                   },
                   {
                       "id":  "aj-блестящий",
@@ -439,7 +499,11 @@
                       "example_cases":  "у него́ – Genitiv · блестя́щая иде́я – Nominativ",
                       "example_de":  "Er hat eine brillante Idee.",
                       "example_en":  "He has a brilliant idea.",
-                      "example_es":  "Tiene una idea brillante."
+                      "example_es":  "Tiene una idea brillante.",
+                      "adv":  "блестя́ще",
+                      "adv_de":  "glänzend",
+                      "adv_ex":  "Он блестя́ще сдал экза́мен.",
+                      "adv_ex_de":  "Er hat die Prüfung glänzend bestanden."
                   },
                   {
                       "id":  "aj-публичный",
@@ -452,7 +516,11 @@
                       "example_cases":  "публи́чный челове́к – Nominativ",
                       "example_de":  "Er ist eine Person des öffentlichen Lebens.",
                       "example_en":  "He\u0027s a public figure.",
-                      "example_es":  "Es una figura pública."
+                      "example_es":  "Es una figura pública.",
+                      "adv":  "публи́чно",
+                      "adv_de":  "öffentlich",
+                      "adv_ex":  "Он публи́чно извини́лся.",
+                      "adv_ex_de":  "Er hat sich öffentlich entschuldigt."
                   },
                   {
                       "id":  "aj-социалистический",
@@ -493,7 +561,11 @@
                       "example_cases":  "ро́вная доро́га – Nominativ",
                       "example_de":  "Hier ist die Straße eben.",
                       "example_en":  "The road is flat here.",
-                      "example_es":  "Aquí la carretera es plana."
+                      "example_es":  "Aquí la carretera es plana.",
+                      "adv":  "ро́вно",
+                      "adv_de":  "genau, gleichmäßig",
+                      "adv_ex":  "Сейча́с ро́вно пять.",
+                      "adv_ex_de":  "Es ist genau fünf."
                   },
                   {
                       "id":  "aj-модный",
@@ -508,7 +580,11 @@
                       "example_cases":  "у неё – Genitiv · мо́дная су́мка – Nominativ",
                       "example_de":  "Sie hat eine modische Tasche.",
                       "example_en":  "She has a trendy bag.",
-                      "example_es":  "Ella tiene un bolso de moda."
+                      "example_es":  "Ella tiene un bolso de moda.",
+                      "adv":  "мо́дно",
+                      "adv_de":  "modisch, in Mode",
+                      "adv_ex":  "Э́то сейча́с мо́дно.",
+                      "adv_ex_de":  "Das ist jetzt in Mode."
                   },
                   {
                       "id":  "aj-успешный",
@@ -523,7 +599,11 @@
                       "example_cases":  "успе́шный бизнесме́н – Nominativ",
                       "example_de":  "Er ist ein erfolgreicher Geschäftsmann.",
                       "example_en":  "He\u0027s a successful businessman.",
-                      "example_es":  "Es un empresario exitoso."
+                      "example_es":  "Es un empresario exitoso.",
+                      "adv":  "успе́шно",
+                      "adv_de":  "erfolgreich",
+                      "adv_ex":  "Он успе́шно сдал экза́мен.",
+                      "adv_ex_de":  "Er hat die Prüfung erfolgreich bestanden."
                   },
                   {
                       "id":  "aj-своеобразный",
@@ -536,7 +616,11 @@
                       "example_cases":  "у него́ – Genitiv · своеобра́зный ю́мор – Nominativ",
                       "example_de":  "Er hat einen eigenartigen Humor.",
                       "example_en":  "He has a peculiar sense of humor.",
-                      "example_es":  "Tiene un humor peculiar."
+                      "example_es":  "Tiene un humor peculiar.",
+                      "adv":  "своеобра́зно",
+                      "adv_de":  "eigenartig",
+                      "adv_ex":  "Он своеобра́зно ду́мает.",
+                      "adv_ex_de":  "Er denkt auf eigene Art."
                   },
                   {
                       "id":  "aj-нравственный",
@@ -549,7 +633,11 @@
                       "example_cases":  "нра́вственный вопро́с – Nominativ",
                       "example_de":  "Das ist eine moralische Frage.",
                       "example_en":  "It\u0027s a moral question.",
-                      "example_es":  "Es una cuestión moral."
+                      "example_es":  "Es una cuestión moral.",
+                      "adv":  "нра́вственно",
+                      "adv_de":  "moralisch",
+                      "adv_ex":  "Он поступи́л нра́вственно.",
+                      "adv_ex_de":  "Er hat moralisch gehandelt."
                   },
                   {
                       "id":  "aj-явный",
@@ -563,7 +651,11 @@
                       "example_cases":  "я́вная оши́бка – Nominativ",
                       "example_de":  "Das ist ein offensichtlicher Fehler.",
                       "example_en":  "It\u0027s an obvious mistake.",
-                      "example_es":  "Es un error evidente."
+                      "example_es":  "Es un error evidente.",
+                      "adv":  "я́вно",
+                      "adv_de":  "offensichtlich",
+                      "adv_ex":  "Он я́вно уста́л.",
+                      "adv_ex_de":  "Er ist offensichtlich müde."
                   },
                   {
                       "id":  "aj-священный",
@@ -591,7 +683,11 @@
                       "example_cases":  "благоро́дный посту́пок – Nominativ",
                       "example_de":  "Das ist eine edle Tat.",
                       "example_en":  "That\u0027s a noble deed.",
-                      "example_es":  "Es un acto noble."
+                      "example_es":  "Es un acto noble.",
+                      "adv":  "благоро́дно",
+                      "adv_de":  "edel",
+                      "adv_ex":  "Э́то благоро́дно.",
+                      "adv_ex_de":  "Das ist edel."
                   },
                   {
                       "id":  "aj-существующий",
@@ -619,7 +715,11 @@
                       "example_cases":  "в Сиби́ри – Präpositiv · суро́вая зима́ – Nominativ",
                       "example_de":  "In Sibirien ist der Winter rau.",
                       "example_en":  "Siberia has harsh winters.",
-                      "example_es":  "En Siberia el invierno es duro."
+                      "example_es":  "En Siberia el invierno es duro.",
+                      "adv":  "суро́во",
+                      "adv_de":  "streng, rau",
+                      "adv_ex":  "Он суро́во посмотре́л.",
+                      "adv_ex_de":  "Er schaute streng."
                   },
                   {
                       "id":  "aj-бледный",
@@ -674,7 +774,11 @@
                       "example_cases":  "э́тот стол – Nominativ · усто́йчивый – Nominativ",
                       "example_de":  "Dieser Tisch ist sehr stabil.",
                       "example_en":  "This table is very stable.",
-                      "example_es":  "Esta mesa es muy estable."
+                      "example_es":  "Esta mesa es muy estable.",
+                      "adv":  "усто́йчиво",
+                      "adv_de":  "stabil",
+                      "adv_ex":  "Стол стои́т усто́йчиво.",
+                      "adv_ex_de":  "Der Tisch steht stabil."
                   },
                   {
                       "id":  "aj-сумасшедший",
@@ -703,7 +807,11 @@
                       "example_cases":  "у нас – Genitiv · иску́сственная ёлка – Nominativ",
                       "example_de":  "Wir haben einen künstlichen Tannenbaum.",
                       "example_en":  "We have an artificial Christmas tree.",
-                      "example_es":  "Tenemos un árbol de Navidad artificial."
+                      "example_es":  "Tenemos un árbol de Navidad artificial.",
+                      "adv":  "иску́сственно",
+                      "adv_de":  "künstlich",
+                      "adv_ex":  "Он иску́сственно улыба́ется.",
+                      "adv_ex_de":  "Er lächelt künstlich."
                   }
               ]
 }

@@ -47,7 +47,11 @@
                       "example_cases":  "у нас – Genitiv · открове́нный разгово́р – Nominativ",
                       "example_de":  "Wir hatten ein offenes Gespräch.",
                       "example_en":  "We had a frank conversation.",
-                      "example_es":  "Tuvimos una conversación franca."
+                      "example_es":  "Tuvimos una conversación franca.",
+                      "adv":  "открове́нно",
+                      "adv_de":  "offen, ehrlich",
+                      "adv_ex":  "Открове́нно говоря́, мне не нра́вится.",
+                      "adv_ex_de":  "Ehrlich gesagt gefällt es mir nicht."
                   },
                   {
                       "id":  "aj-кадровый",
@@ -142,7 +146,11 @@
                       "example_cases":  "действи́тельный факт – Nominativ",
                       "example_de":  "Das ist eine wirkliche Tatsache.",
                       "example_en":  "It\u0027s a real fact.",
-                      "example_es":  "Es un hecho real."
+                      "example_es":  "Es un hecho real.",
+                      "adv":  "действи́тельно",
+                      "adv_de":  "wirklich",
+                      "adv_ex":  "Э́то действи́тельно так.",
+                      "adv_ex_de":  "Das ist wirklich so."
                   },
                   {
                       "id":  "aj-фактический",
@@ -156,7 +164,11 @@
                       "example_cases":  "факти́ческая оши́бка – Nominativ",
                       "example_de":  "Das ist ein sachlicher Fehler.",
                       "example_en":  "It\u0027s a factual error.",
-                      "example_es":  "Es un error de hecho."
+                      "example_es":  "Es un error de hecho.",
+                      "adv":  "факти́чески",
+                      "adv_de":  "tatsächlich, faktisch",
+                      "adv_ex":  "Факти́чески он здесь хозя́ин.",
+                      "adv_ex_de":  "Tatsächlich ist er hier der Chef."
                   },
                   {
                       "id":  "aj-организационный",
@@ -237,7 +249,11 @@
                       "example_cases":  "необыкнове́нная де́вушка – Nominativ",
                       "example_de":  "Sie ist ein außergewöhnliches Mädchen.",
                       "example_en":  "She\u0027s an extraordinary girl.",
-                      "example_es":  "Es una chica extraordinaria."
+                      "example_es":  "Es una chica extraordinaria.",
+                      "adv":  "необыкнове́нно",
+                      "adv_de":  "außergewöhnlich",
+                      "adv_ex":  "Она́ необыкнове́нно краси́ва.",
+                      "adv_ex_de":  "Sie ist außergewöhnlich schön."
                   },
                   {
                       "id":  "aj-уютный",
@@ -253,7 +269,11 @@
                       "example_cases":  "у нас – Genitiv · ую́тная кварти́ра – Nominativ",
                       "example_de":  "Wir haben eine gemütliche Wohnung.",
                       "example_en":  "We have a cozy apartment.",
-                      "example_es":  "Tenemos un apartamento acogedor."
+                      "example_es":  "Tenemos un apartamento acogedor.",
+                      "adv":  "ую́тно",
+                      "adv_de":  "gemütlich",
+                      "adv_ex":  "Здесь ую́тно.",
+                      "adv_ex_de":  "Hier ist es gemütlich."
                   },
                   {
                       "id":  "aj-светский",
@@ -279,7 +299,11 @@
                       "example_cases":  "рациона́льное реше́ние – Nominativ",
                       "example_de":  "Das ist eine rationale Entscheidung.",
                       "example_en":  "It\u0027s a rational decision.",
-                      "example_es":  "Es una decisión racional."
+                      "example_es":  "Es una decisión racional.",
+                      "adv":  "рациона́льно",
+                      "adv_de":  "rational, sinnvoll",
+                      "adv_ex":  "Он рациона́льно тра́тит де́ньги.",
+                      "adv_ex_de":  "Er gibt Geld sinnvoll aus."
                   },
                   {
                       "id":  "aj-дневной",
@@ -307,7 +331,11 @@
                       "example_cases":  "незначи́тельная пробле́ма – Nominativ",
                       "example_de":  "Das ist ein geringfügiges Problem.",
                       "example_en":  "It\u0027s a minor problem.",
-                      "example_es":  "Es un problema menor."
+                      "example_es":  "Es un problema menor.",
+                      "adv":  "незначи́тельно",
+                      "adv_de":  "geringfügig",
+                      "adv_ex":  "Цены́ незначи́тельно вы́росли.",
+                      "adv_ex_de":  "Die Preise sind geringfügig gestiegen."
                   },
                   {
                       "id":  "aj-изящный",
@@ -320,7 +348,11 @@
                       "example_cases":  "у неё – Genitiv · изя́щное пла́тье – Nominativ",
                       "example_de":  "Sie hat ein elegantes Kleid.",
                       "example_en":  "She has an elegant dress.",
-                      "example_es":  "Tiene un vestido elegante."
+                      "example_es":  "Tiene un vestido elegante.",
+                      "adv":  "изя́щно",
+                      "adv_de":  "elegant",
+                      "adv_ex":  "Она́ изя́щно оде́та.",
+                      "adv_ex_de":  "Sie ist elegant gekleidet."
                   },
                   {
                       "id":  "aj-тревожный",
@@ -334,7 +366,11 @@
                       "example_cases":  "у меня́ – Genitiv · трево́жное чу́вство – Nominativ",
                       "example_de":  "Ich habe ein ungutes Gefühl.",
                       "example_en":  "I have an uneasy feeling.",
-                      "example_es":  "Tengo una sensación inquietante."
+                      "example_es":  "Tengo una sensación inquietante.",
+                      "adv":  "трево́жно",
+                      "adv_de":  "beunruhigend, unruhig",
+                      "adv_ex":  "Мне трево́жно.",
+                      "adv_ex_de":  "Ich bin unruhig."
                   },
                   {
                       "id":  "aj-испанский",
@@ -348,7 +384,11 @@
                       "example_cases":  "испа́нский язы́к – Akkusativ",
                       "example_de":  "Ich lerne Spanisch.",
                       "example_en":  "I\u0027m learning Spanish.",
-                      "example_es":  "Aprendo español."
+                      "example_es":  "Aprendo español.",
+                      "adv":  "по-испа́нски",
+                      "adv_de":  "auf Spanisch",
+                      "adv_ex":  "Мы у́чимся говори́ть по-испа́нски.",
+                      "adv_ex_de":  "Wir lernen, Spanisch zu sprechen."
                   },
                   {
                       "id":  "aj-всевозможный",
@@ -428,7 +468,11 @@
                       "example_cases":  "чрезвыча́йная ситуа́ция – Nominativ",
                       "example_de":  "Das ist ein Notfall.",
                       "example_en":  "It\u0027s an emergency.",
-                      "example_es":  "Es una situación de emergencia."
+                      "example_es":  "Es una situación de emergencia.",
+                      "adv":  "чрезвыча́йно",
+                      "adv_de":  "außerordentlich",
+                      "adv_ex":  "Э́то чрезвыча́йно ва́жно.",
+                      "adv_ex_de":  "Das ist außerordentlich wichtig."
                   },
                   {
                       "id":  "aj-фундаментальный",
@@ -550,7 +594,11 @@
                       "example_cases":  "мне – Dativ · подро́бный план – Nominativ",
                       "example_de":  "Ich brauche einen ausführlichen Plan.",
                       "example_en":  "I need a detailed plan.",
-                      "example_es":  "Necesito un plan detallado."
+                      "example_es":  "Necesito un plan detallado.",
+                      "adv":  "подро́бно",
+                      "adv_de":  "ausführlich",
+                      "adv_ex":  "Расскажи́ подро́бно.",
+                      "adv_ex_de":  "Erzähl ausführlich."
                   },
                   {
                       "id":  "aj-вирусный",
@@ -590,7 +638,11 @@
                       "example_cases":  "у него́ – Genitiv · пове́рхностные зна́ния – Nominativ Plural",
                       "example_de":  "Er hat oberflächliches Wissen.",
                       "example_en":  "He has superficial knowledge.",
-                      "example_es":  "Tiene conocimientos superficiales."
+                      "example_es":  "Tiene conocimientos superficiales.",
+                      "adv":  "пове́рхностно",
+                      "adv_de":  "oberflächlich",
+                      "adv_ex":  "Он зна́ет э́то пове́рхностно.",
+                      "adv_ex_de":  "Er kennt das nur oberflächlich."
                   },
                   {
                       "id":  "aj-защитный",
@@ -631,7 +683,11 @@
                       "example_cases":  "равноду́шный челове́к – Nominativ",
                       "example_de":  "Er ist ein gleichgültiger Mensch.",
                       "example_en":  "He\u0027s an indifferent person.",
-                      "example_es":  "Es una persona indiferente."
+                      "example_es":  "Es una persona indiferente.",
+                      "adv":  "равноду́шно",
+                      "adv_de":  "gleichgültig",
+                      "adv_ex":  "Он равноду́шно посмотре́л.",
+                      "adv_ex_de":  "Er schaute gleichgültig."
                   },
                   {
                       "id":  "aj-звездный",
@@ -658,7 +714,11 @@
                       "example_cases":  "серде́чное спаси́бо – Nominativ",
                       "example_de":  "Herzlichen Dank!",
                       "example_en":  "Heartfelt thanks!",
-                      "example_es":  "¡Muchísimas gracias!"
+                      "example_es":  "¡Muchísimas gracias!",
+                      "adv":  "серде́чно",
+                      "adv_de":  "herzlich",
+                      "adv_ex":  "Серде́чно благодарю́!",
+                      "adv_ex_de":  "Herzlichen Dank!"
                   },
                   {
                       "id":  "aj-передовой",

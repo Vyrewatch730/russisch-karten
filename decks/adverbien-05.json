@@ -1,0 +1,116 @@
+{
+    "id":  "adverbien-05",
+    "name":  "Adverbien 05",
+    "languages":  [
+                      "ru",
+                      "de",
+                      "en",
+                      "es"
+                  ],
+    "cards":  [
+                  {
+                      "id":  "av-неважно",
+                      "type":  "advfull",
+                      "ru":  "нева́жно",
+                      "de":  "egal; schlecht",
+                      "en":  "it doesn\u0027t matter",
+                      "es":  "no importa",
+                      "cat":  "Zustand",
+                      "example":  "Нева́жно!",
+                      "example_de":  "Egal!",
+                      "example_en":  "Never mind!",
+                      "example_es":  "¡No importa!"
+                  },
+                  {
+                      "id":  "av-наполовину",
+                      "type":  "advfull",
+                      "ru":  "наполови́ну",
+                      "de":  "zur Hälfte",
+                      "en":  "halfway",
+                      "es":  "a medias",
+                      "cat":  "Menge",
+                      "example":  "Стака́н наполови́ну по́лон.",
+                      "example_de":  "Das Glas ist halb voll.",
+                      "example_en":  "The glass is half full.",
+                      "example_es":  "El vaso está medio lleno."
+                  },
+                  {
+                      "id":  "av-втроем",
+                      "type":  "advfull",
+                      "ru":  "втроём",
+                      "de":  "zu dritt",
+                      "en":  "the three of us",
+                      "es":  "los tres juntos",
+                      "cat":  "Menge",
+                      "example":  "Мы пое́дем втроём.",
+                      "example_de":  "Wir fahren zu dritt.",
+                      "example_en":  "The three of us will go.",
+                      "example_es":  "Vamos los tres."
+                  },
+                  {
+                      "id":  "av-понемногу",
+                      "type":  "advfull",
+                      "ru":  "понемно́гу",
+                      "de":  "nach und nach",
+                      "en":  "little by little",
+                      "es":  "poco a poco",
+                      "cat":  "Menge",
+                      "example":  "Я понемно́гу учу́ ру́сский.",
+                      "example_de":  "Ich lerne nach und nach Russisch.",
+                      "example_en":  "I\u0027m learning Russian little by little.",
+                      "example_es":  "Aprendo ruso poco a poco."
+                  },
+                  {
+                      "id":  "av-даром",
+                      "type":  "advfull",
+                      "ru":  "даро́м",
+                      "de":  "umsonst, gratis",
+                      "en":  "for free",
+                      "es":  "gratis",
+                      "cat":  "Art und Weise",
+                      "example":  "Э́то мне доста́лось даро́м.",
+                      "example_de":  "Das habe ich umsonst bekommen.",
+                      "example_en":  "I got it for free.",
+                      "example_es":  "Eso me lo dieron gratis."
+                  },
+                  {
+                      "id":  "av-наизусть",
+                      "type":  "advfull",
+                      "ru":  "наизу́сть",
+                      "de":  "auswendig",
+                      "en":  "by heart",
+                      "es":  "de memoria",
+                      "cat":  "Art und Weise",
+                      "example":  "Я зна́ю стихи́ наизу́сть.",
+                      "example_de":  "Ich kann das Gedicht auswendig.",
+                      "example_en":  "I know the poem by heart.",
+                      "example_es":  "Me sé el poema de memoria."
+                  },
+                  {
+                      "id":  "av-по-хорошему",
+                      "type":  "advfull",
+                      "ru":  "по-хоро́шему",
+                      "de":  "im Guten",
+                      "en":  "nicely, amicably",
+                      "es":  "por las buenas",
+                      "cat":  "Art und Weise",
+                      "example":  "Дава́й по-хоро́шему.",
+                      "example_de":  "Lass uns das im Guten regeln.",
+                      "example_en":  "Let\u0027s settle this nicely.",
+                      "example_es":  "Vamos a hacerlo por las buenas."
+                  },
+                  {
+                      "id":  "av-по-моему",
+                      "type":  "advfull",
+                      "ru":  "по-мо́ему",
+                      "de":  "meiner Meinung nach",
+                      "en":  "in my opinion",
+                      "es":  "en mi opinión",
+                      "cat":  "Meinung",
+                      "example":  "По-мо́ему, э́то хорошо́.",
+                      "example_de":  "Meiner Meinung nach ist das gut.",
+                      "example_en":  "In my opinion it\u0027s good.",
+                      "example_es":  "En mi opinión, está bien."
+                  }
+              ]
+}

@@ -20,7 +20,11 @@
                       "example_cases":  "сравни́тельный ана́лиз – Nominativ",
                       "example_de":  "Das ist eine vergleichende Analyse.",
                       "example_en":  "It\u0027s a comparative analysis.",
-                      "example_es":  "Es un análisis comparativo."
+                      "example_es":  "Es un análisis comparativo.",
+                      "adv":  "сравни́тельно",
+                      "adv_de":  "vergleichsweise",
+                      "adv_ex":  "Здесь сравни́тельно ти́хо.",
+                      "adv_ex_de":  "Hier ist es vergleichsweise ruhig."
                   },
                   {
                       "id":  "aj-подмосковный",
@@ -104,7 +108,11 @@
                       "example_cases":  "коли́чественные числи́тельные – Nominativ Plural",
                       "example_de":  "Das sind Grundzahlen.",
                       "example_en":  "These are cardinal numbers.",
-                      "example_es":  "Son números cardinales."
+                      "example_es":  "Son números cardinales.",
+                      "adv":  "коли́чественно",
+                      "adv_de":  "zahlenmäßig",
+                      "adv_ex":  "Коли́чественно нас бо́льше.",
+                      "adv_ex_de":  "Zahlenmäßig sind wir mehr."
                   },
                   {
                       "id":  "aj-достоверный",
@@ -117,7 +125,11 @@
                       "example_cases":  "достове́рная информа́ция – Nominativ",
                       "example_de":  "Das ist eine verlässliche Information.",
                       "example_en":  "It\u0027s reliable information.",
-                      "example_es":  "Es información fidedigna."
+                      "example_es":  "Es información fidedigna.",
+                      "adv":  "достове́рно",
+                      "adv_de":  "sicher, verlässlich",
+                      "adv_ex":  "Э́то достове́рно изве́стно.",
+                      "adv_ex_de":  "Das ist sicher bekannt."
                   },
                   {
                       "id":  "aj-грамотный",
@@ -131,7 +143,11 @@
                       "example_cases":  "гра́мотный специали́ст – Nominativ",
                       "example_de":  "Er ist ein kompetenter Fachmann.",
                       "example_en":  "He\u0027s a competent specialist.",
-                      "example_es":  "Es un especialista competente."
+                      "example_es":  "Es un especialista competente.",
+                      "adv":  "гра́мотно",
+                      "adv_de":  "fehlerfrei, kompetent",
+                      "adv_ex":  "Он пи́шет гра́мотно.",
+                      "adv_ex_de":  "Er schreibt fehlerfrei."
                   },
                   {
                       "id":  "aj-беременный",
@@ -174,7 +190,11 @@
                       "example_cases":  "у него́ – Genitiv · со́нные глаза́ – Nominativ Plural",
                       "example_de":  "Er hat verschlafene Augen.",
                       "example_en":  "He has sleepy eyes.",
-                      "example_es":  "Tiene ojos soñolientos."
+                      "example_es":  "Tiene ojos soñolientos.",
+                      "adv":  "со́нно",
+                      "adv_de":  "schläfrig",
+                      "adv_ex":  "Он со́нно зевну́л.",
+                      "adv_ex_de":  "Er gähnte schläfrig."
                   },
                   {
                       "id":  "aj-героический",
@@ -187,7 +207,11 @@
                       "example_cases":  "герои́ческий посту́пок – Nominativ",
                       "example_de":  "Das war eine Heldentat.",
                       "example_en":  "It was a heroic deed.",
-                      "example_es":  "Fue un acto heroico."
+                      "example_es":  "Fue un acto heroico.",
+                      "adv":  "герои́чески",
+                      "adv_de":  "heldenhaft",
+                      "adv_ex":  "Он герои́чески сража́лся.",
+                      "adv_ex_de":  "Er kämpfte heldenhaft."
                   },
                   {
                       "id":  "aj-чувствительный",
@@ -270,7 +294,11 @@
                       "example_cases":  "в ко́мнате – Präpositiv · ту́склый свет – Nominativ",
                       "example_de":  "Im Zimmer ist trübes Licht.",
                       "example_en":  "The light in the room is dim.",
-                      "example_es":  "En la habitación hay una luz tenue."
+                      "example_es":  "En la habitación hay una luz tenue.",
+                      "adv":  "ту́скло",
+                      "adv_de":  "trüb, matt",
+                      "adv_ex":  "Ла́мпа све́тит ту́скло.",
+                      "adv_ex_de":  "Die Lampe leuchtet trüb."
                   },
                   {
                       "id":  "aj-стремительный",
@@ -283,7 +311,11 @@
                       "example_cases":  "стреми́тельный рост – Nominativ",
                       "example_de":  "Das ist ein rasantes Wachstum.",
                       "example_en":  "It\u0027s rapid growth.",
-                      "example_es":  "Es un crecimiento vertiginoso."
+                      "example_es":  "Es un crecimiento vertiginoso.",
+                      "adv":  "стреми́тельно",
+                      "adv_de":  "rasant",
+                      "adv_ex":  "Цены́ стреми́тельно расту́т.",
+                      "adv_ex_de":  "Die Preise steigen rasant."
                   },
                   {
                       "id":  "aj-ржавый",
@@ -351,7 +383,11 @@
                       "example_cases":  "у́тром – Instrumental · бо́дрый – Nominativ",
                       "example_de":  "Morgens bin ich immer munter.",
                       "example_en":  "I\u0027m always energetic in the morning.",
-                      "example_es":  "Por la mañana siempre estoy despierto."
+                      "example_es":  "Por la mañana siempre estoy despierto.",
+                      "adv":  "бо́дро",
+                      "adv_de":  "munter",
+                      "adv_ex":  "Он бо́дро встал.",
+                      "adv_ex_de":  "Er stand munter auf."
                   },
                   {
                       "id":  "aj-невыносимый",
@@ -364,7 +400,11 @@
                       "example_cases":  "невыноси́мая жара́ – Nominativ",
                       "example_de":  "Heute ist es unerträglich heiß.",
                       "example_en":  "The heat is unbearable today.",
-                      "example_es":  "Hoy hace un calor insoportable."
+                      "example_es":  "Hoy hace un calor insoportable.",
+                      "adv":  "невыноси́мо",
+                      "adv_de":  "unerträglich",
+                      "adv_ex":  "Здесь невыноси́мо жа́рко.",
+                      "adv_ex_de":  "Hier ist es unerträglich heiß."
                   },
                   {
                       "id":  "aj-античный",
@@ -431,7 +471,11 @@
                       "example_cases":  "безнадёжная ситуа́ция – Nominativ",
                       "example_de":  "Das ist eine hoffnungslose Situation.",
                       "example_en":  "It\u0027s a hopeless situation.",
-                      "example_es":  "Es una situación desesperada."
+                      "example_es":  "Es una situación desesperada.",
+                      "adv":  "безнадёжно",
+                      "adv_de":  "hoffnungslos",
+                      "adv_ex":  "Он безнадёжно влюблён.",
+                      "adv_ex_de":  "Er ist hoffnungslos verliebt."
                   },
                   {
                       "id":  "aj-цифровой",
@@ -484,7 +528,11 @@
                       "example_cases":  "символи́ческий пода́рок – Nominativ",
                       "example_de":  "Das ist ein symbolisches Geschenk.",
                       "example_en":  "It\u0027s a symbolic gift.",
-                      "example_es":  "Es un regalo simbólico."
+                      "example_es":  "Es un regalo simbólico.",
+                      "adv":  "символи́чески",
+                      "adv_de":  "symbolisch",
+                      "adv_ex":  "Мы символи́чески посади́ли де́рево.",
+                      "adv_ex_de":  "Wir haben symbolisch einen Baum gepflanzt."
                   },
                   {
                       "id":  "aj-магический",
@@ -647,7 +695,11 @@
                       "example_cases":  "у него́ – Genitiv · угрю́мое лицо́ – Nominativ",
                       "example_de":  "Er hat ein mürrisches Gesicht.",
                       "example_en":  "He has a sullen face.",
-                      "example_es":  "Tiene una cara sombría."
+                      "example_es":  "Tiene una cara sombría.",
+                      "adv":  "угрю́мо",
+                      "adv_de":  "mürrisch",
+                      "adv_ex":  "Он угрю́мо молча́л.",
+                      "adv_ex_de":  "Er schwieg mürrisch."
                   },
                   {
                       "id":  "aj-смешанный",
@@ -675,7 +727,11 @@
                       "example_cases":  "у нас – Genitiv · дру́жная семья́ – Nominativ",
                       "example_de":  "Wir haben eine harmonische Familie.",
                       "example_en":  "We have a close-knit family.",
-                      "example_es":  "Tenemos una familia unida."
+                      "example_es":  "Tenemos una familia unida.",
+                      "adv":  "дру́жно",
+                      "adv_de":  "gemeinsam, einträchtig",
+                      "adv_ex":  "Мы дру́жно живём.",
+                      "adv_ex_de":  "Wir leben in Eintracht."
                   },
                   {
                       "id":  "aj-занятой",

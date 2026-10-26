@@ -19,7 +19,11 @@
                       "example_cases":  "функциона́льная ку́хня – Nominativ",
                       "example_de":  "Das ist eine praktische Küche.",
                       "example_en":  "It\u0027s a functional kitchen.",
-                      "example_es":  "Es una cocina funcional."
+                      "example_es":  "Es una cocina funcional.",
+                      "adv":  "функциона́льно",
+                      "adv_de":  "funktional",
+                      "adv_ex":  "Ку́хня устро́ена функциона́льно.",
+                      "adv_ex_de":  "Die Küche ist funktional eingerichtet."
                   },
                   {
                       "id":  "aj-решающий",
@@ -48,7 +52,11 @@
                       "example_cases":  "лиса́ – Nominativ · хи́трое живо́тное – Nominativ",
                       "example_de":  "Der Fuchs ist ein schlaues Tier.",
                       "example_en":  "The fox is a cunning animal.",
-                      "example_es":  "El zorro es un animal astuto."
+                      "example_es":  "El zorro es un animal astuto.",
+                      "adv":  "хитро́",
+                      "adv_de":  "listig",
+                      "adv_ex":  "Он хитро́ улыба́ется.",
+                      "adv_ex_de":  "Er lächelt listig."
                   },
                   {
                       "id":  "aj-педагогический",
@@ -89,7 +97,11 @@
                       "example_cases":  "наш усло́вный знак – Nominativ",
                       "example_de":  "Das ist unser vereinbartes Zeichen.",
                       "example_en":  "That\u0027s our agreed signal.",
-                      "example_es":  "Es nuestra señal acordada."
+                      "example_es":  "Es nuestra señal acordada.",
+                      "adv":  "усло́вно",
+                      "adv_de":  "bedingt, vereinfacht",
+                      "adv_ex":  "Усло́вно ска́жем, что э́то так.",
+                      "adv_ex_de":  "Sagen wir vereinfacht, dass es so ist."
                   },
                   {
                       "id":  "aj-смертный",
@@ -170,7 +182,11 @@
                       "example_cases":  "элемента́рный вопро́с – Nominativ",
                       "example_de":  "Das ist eine ganz einfache Frage.",
                       "example_en":  "It\u0027s an elementary question.",
-                      "example_es":  "Es una pregunta elemental."
+                      "example_es":  "Es una pregunta elemental.",
+                      "adv":  "элемента́рно",
+                      "adv_de":  "ganz einfach",
+                      "adv_ex":  "Э́то элемента́рно!",
+                      "adv_ex_de":  "Das ist ganz einfach!"
                   },
                   {
                       "id":  "aj-просторный",
@@ -185,7 +201,11 @@
                       "example_cases":  "у нас – Genitiv · просто́рная кварти́ра – Nominativ",
                       "example_de":  "Wir haben eine geräumige Wohnung.",
                       "example_en":  "We have a spacious apartment.",
-                      "example_es":  "Tenemos un apartamento espacioso."
+                      "example_es":  "Tenemos un apartamento espacioso.",
+                      "adv":  "просто́рно",
+                      "adv_de":  "geräumig",
+                      "adv_ex":  "В кварти́ре просто́рно.",
+                      "adv_ex_de":  "Die Wohnung ist geräumig."
                   },
                   {
                       "id":  "aj-жилищный",
@@ -214,7 +234,11 @@
                       "example_cases":  "тупо́й нож – Nominativ",
                       "example_de":  "Das ist ein stumpfes Messer.",
                       "example_en":  "It\u0027s a blunt knife.",
-                      "example_es":  "Es un cuchillo sin filo."
+                      "example_es":  "Es un cuchillo sin filo.",
+                      "adv":  "ту́по",
+                      "adv_de":  "stumpf, einfach so",
+                      "adv_ex":  "Он ту́по смо́трит в окно́.",
+                      "adv_ex_de":  "Er starrt stumpf aus dem Fenster."
                   },
                   {
                       "id":  "aj-привлекательный",
@@ -242,7 +266,11 @@
                       "example_cases":  "внеза́пный дождь – Nominativ",
                       "example_de":  "Plötzlich fing es an zu regnen.",
                       "example_en":  "A sudden rain started.",
-                      "example_es":  "Empezó una lluvia repentina."
+                      "example_es":  "Empezó una lluvia repentina.",
+                      "adv":  "внеза́пно",
+                      "adv_de":  "plötzlich",
+                      "adv_ex":  "Внеза́пно пошёл дождь.",
+                      "adv_ex_de":  "Plötzlich fing es an zu regnen."
                   },
                   {
                       "id":  "aj-усталый",
@@ -256,7 +284,11 @@
                       "example_cases":  "у него́ – Genitiv · уста́лый вид – Nominativ",
                       "example_de":  "Er sieht müde aus.",
                       "example_en":  "He looks tired.",
-                      "example_es":  "Se ve cansado."
+                      "example_es":  "Se ve cansado.",
+                      "adv":  "уста́ло",
+                      "adv_de":  "müde",
+                      "adv_ex":  "Он уста́ло сел.",
+                      "adv_ex_de":  "Er setzte sich müde hin."
                   },
                   {
                       "id":  "aj-покойный",
@@ -328,7 +360,11 @@
                       "example_cases":  "ску́чный фильм – Nominativ",
                       "example_de":  "Das war ein langweiliger Film.",
                       "example_en":  "It was a boring movie.",
-                      "example_es":  "Fue una película aburrida."
+                      "example_es":  "Fue una película aburrida.",
+                      "adv":  "ску́чно",
+                      "adv_de":  "langweilig",
+                      "adv_ex":  "Мне ску́чно.",
+                      "adv_ex_de":  "Mir ist langweilig."
                   },
                   {
                       "id":  "aj-актерский",
@@ -381,7 +417,11 @@
                       "example_cases":  "исключи́тельный слу́чай – Nominativ",
                       "example_de":  "Das ist ein Ausnahmefall.",
                       "example_en":  "It\u0027s an exceptional case.",
-                      "example_es":  "Es un caso excepcional."
+                      "example_es":  "Es un caso excepcional.",
+                      "adv":  "исключи́тельно",
+                      "adv_de":  "ausschließlich, außerordentlich",
+                      "adv_ex":  "Он исключи́тельно ва́жен.",
+                      "adv_ex_de":  "Er ist außerordentlich wichtig."
                   },
                   {
                       "id":  "aj-полевой",
@@ -436,7 +476,11 @@
                       "example_cases":  "слепо́й же́нщине – Dativ",
                       "example_de":  "Er hilft einer blinden Frau.",
                       "example_en":  "He\u0027s helping a blind woman.",
-                      "example_es":  "Ayuda a una mujer ciega."
+                      "example_es":  "Ayuda a una mujer ciega.",
+                      "adv":  "сле́по",
+                      "adv_de":  "blind",
+                      "adv_ex":  "Он сле́по ве́рит ей.",
+                      "adv_ex_de":  "Er glaubt ihr blind."
                   },
                   {
                       "id":  "aj-правоохранительный",
@@ -489,7 +533,11 @@
                       "example_cases":  "отча́янную попы́тку – Akkusativ",
                       "example_de":  "Er hat einen verzweifelten Versuch unternommen.",
                       "example_en":  "He made a desperate attempt.",
-                      "example_es":  "Hizo un intento desesperado."
+                      "example_es":  "Hizo un intento desesperado.",
+                      "adv":  "отча́янно",
+                      "adv_de":  "verzweifelt",
+                      "adv_ex":  "Он отча́янно иска́л ключ.",
+                      "adv_ex_de":  "Er suchte verzweifelt den Schlüssel."
                   },
                   {
                       "id":  "aj-непрерывный",
@@ -502,7 +550,11 @@
                       "example_cases":  "непреры́вный дождь – Nominativ",
                       "example_de":  "Es regnete ununterbrochen.",
                       "example_en":  "It rained continuously.",
-                      "example_es":  "Llovía sin parar."
+                      "example_es":  "Llovía sin parar.",
+                      "adv":  "непреры́вно",
+                      "adv_de":  "ununterbrochen",
+                      "adv_ex":  "Дождь идёт непреры́вно.",
+                      "adv_ex_de":  "Es regnet ununterbrochen."
                   },
                   {
                       "id":  "aj-логический",
@@ -516,7 +568,11 @@
                       "example_cases":  "логи́ческая зада́ча – Nominativ",
                       "example_de":  "Das ist eine Logikaufgabe.",
                       "example_en":  "It\u0027s a logic puzzle.",
-                      "example_es":  "Es un problema de lógica."
+                      "example_es":  "Es un problema de lógica.",
+                      "adv":  "логи́чески",
+                      "adv_de":  "logisch",
+                      "adv_ex":  "Логи́чески э́то пра́вильно.",
+                      "adv_ex_de":  "Logisch ist das richtig."
                   },
                   {
                       "id":  "aj-забавный",
@@ -529,7 +585,11 @@
                       "example_cases":  "заба́вный щено́к – Nominativ",
                       "example_de":  "Was für ein drolliger Welpe!",
                       "example_en":  "What a funny puppy!",
-                      "example_es":  "¡Qué cachorro tan gracioso!"
+                      "example_es":  "¡Qué cachorro tan gracioso!",
+                      "adv":  "заба́вно",
+                      "adv_de":  "lustig, witzig",
+                      "adv_ex":  "Заба́вно!",
+                      "adv_ex_de":  "Witzig!"
                   },
                   {
                       "id":  "aj-встречный",
@@ -555,7 +615,11 @@
                       "example_cases":  "чудо́вищная оши́бка – Nominativ",
                       "example_de":  "Das ist ein ungeheurer Fehler.",
                       "example_en":  "It\u0027s a monstrous mistake.",
-                      "example_es":  "Es un error monstruoso."
+                      "example_es":  "Es un error monstruoso.",
+                      "adv":  "чудо́вищно",
+                      "adv_de":  "ungeheuer, schrecklich",
+                      "adv_ex":  "Э́то чудо́вищно.",
+                      "adv_ex_de":  "Das ist schrecklich."
                   },
                   {
                       "id":  "aj-корпоративный",
@@ -648,7 +712,11 @@
                       "example_cases":  "непросто́й вопро́с – Nominativ",
                       "example_de":  "Das ist keine einfache Frage.",
                       "example_en":  "That\u0027s not an easy question.",
-                      "example_es":  "No es una pregunta fácil."
+                      "example_es":  "No es una pregunta fácil.",
+                      "adv":  "непро́сто",
+                      "adv_de":  "nicht einfach",
+                      "adv_ex":  "Э́то непро́сто.",
+                      "adv_ex_de":  "Das ist nicht einfach."
                   },
                   {
                       "id":  "aj-мучительный",
@@ -661,7 +729,11 @@
                       "example_cases":  "мучи́тельное ожида́ние – Nominativ",
                       "example_de":  "Das war ein quälendes Warten.",
                       "example_en":  "It was an agonizing wait.",
-                      "example_es":  "Fue una espera angustiosa."
+                      "example_es":  "Fue una espera angustiosa.",
+                      "adv":  "мучи́тельно",
+                      "adv_de":  "quälend",
+                      "adv_ex":  "Он мучи́тельно ду́мал.",
+                      "adv_ex_de":  "Er dachte quälend nach."
                   },
                   {
                       "id":  "aj-любовный",
@@ -674,7 +746,11 @@
                       "example_cases":  "любо́вный рома́н – Akkusativ",
                       "example_de":  "Ich lese einen Liebesroman.",
                       "example_en":  "I\u0027m reading a romance novel.",
-                      "example_es":  "Leo una novela romántica."
+                      "example_es":  "Leo una novela romántica.",
+                      "adv":  "любо́вно",
+                      "adv_de":  "liebevoll",
+                      "adv_ex":  "Она́ любо́вно смо́трит на сы́на.",
+                      "adv_ex_de":  "Sie schaut ihren Sohn liebevoll an."
                   },
                   {
                       "id":  "aj-драматический",

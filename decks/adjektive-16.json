@@ -64,7 +64,11 @@
                       "example_cases":  "у меня́ – Genitiv · сро́чное де́ло – Nominativ",
                       "example_de":  "Ich habe eine dringende Angelegenheit.",
                       "example_en":  "I have urgent business.",
-                      "example_es":  "Tengo un asunto urgente."
+                      "example_es":  "Tengo un asunto urgente.",
+                      "adv":  "сро́чно",
+                      "adv_de":  "dringend",
+                      "adv_ex":  "Мне сро́чно ну́жен врач.",
+                      "adv_ex_de":  "Ich brauche dringend einen Arzt."
                   },
                   {
                       "id":  "aj-новейший",
@@ -92,7 +96,11 @@
                       "example_cases":  "молчали́вый челове́к – Nominativ",
                       "example_de":  "Er ist ein schweigsamer Mensch.",
                       "example_en":  "He\u0027s a quiet person.",
-                      "example_es":  "Es una persona callada."
+                      "example_es":  "Es una persona callada.",
+                      "adv":  "молчали́во",
+                      "adv_de":  "schweigend",
+                      "adv_ex":  "Он молчали́во кивну́л.",
+                      "adv_ex_de":  "Er nickte schweigend."
                   },
                   {
                       "id":  "aj-крестьянский",
@@ -149,7 +157,11 @@
                       "example_cases":  "шу́мная у́лица – Nominativ",
                       "example_de":  "Das ist eine laute Straße.",
                       "example_en":  "It\u0027s a noisy street.",
-                      "example_es":  "Es una calle ruidosa."
+                      "example_es":  "Es una calle ruidosa.",
+                      "adv":  "шу́мно",
+                      "adv_de":  "laut",
+                      "adv_ex":  "Здесь шу́мно.",
+                      "adv_ex_de":  "Hier ist es laut."
                   },
                   {
                       "id":  "aj-уличный",
@@ -190,7 +202,11 @@
                       "example_cases":  "заинтересо́ванный слу́шатель – Nominativ",
                       "example_de":  "Er ist ein interessierter Zuhörer.",
                       "example_en":  "He\u0027s an interested listener.",
-                      "example_es":  "Es un oyente interesado."
+                      "example_es":  "Es un oyente interesado.",
+                      "adv":  "заинтересо́ванно",
+                      "adv_de":  "interessiert",
+                      "adv_ex":  "Он заинтересо́ванно слу́шал.",
+                      "adv_ex_de":  "Er hörte interessiert zu."
                   },
                   {
                       "id":  "aj-худший",
@@ -272,7 +288,11 @@
                       "example_cases":  "боле́зненная те́ма – Nominativ",
                       "example_de":  "Das ist ein heikles Thema.",
                       "example_en":  "It\u0027s a sore subject.",
-                      "example_es":  "Es un tema doloroso."
+                      "example_es":  "Es un tema doloroso.",
+                      "adv":  "боле́зненно",
+                      "adv_de":  "schmerzhaft, empfindlich",
+                      "adv_ex":  "Он боле́зненно реаги́рует.",
+                      "adv_ex_de":  "Er reagiert empfindlich."
                   },
                   {
                       "id":  "aj-академический",
@@ -301,7 +321,11 @@
                       "example_cases":  "у него́ – Genitiv · стаби́льная рабо́та – Nominativ",
                       "example_de":  "Er hat eine sichere Arbeit.",
                       "example_en":  "He has a stable job.",
-                      "example_es":  "Tiene un trabajo estable."
+                      "example_es":  "Tiene un trabajo estable.",
+                      "adv":  "стаби́льно",
+                      "adv_de":  "stabil",
+                      "adv_ex":  "Всё стаби́льно.",
+                      "adv_ex_de":  "Alles ist stabil."
                   },
                   {
                       "id":  "aj-недостаточный",
@@ -316,7 +340,11 @@
                       "example_cases":  "недоста́точная су́мма – Nominativ",
                       "example_de":  "Das ist eine unzureichende Summe.",
                       "example_en":  "That\u0027s an insufficient amount.",
-                      "example_es":  "Es una suma insuficiente."
+                      "example_es":  "Es una suma insuficiente.",
+                      "adv":  "недоста́точно",
+                      "adv_de":  "nicht genug",
+                      "adv_ex":  "Я недоста́точно сплю.",
+                      "adv_ex_de":  "Ich schlafe nicht genug."
                   },
                   {
                       "id":  "aj-дружеский",
@@ -329,7 +357,11 @@
                       "example_cases":  "дру́жеский сове́т – Nominativ",
                       "example_de":  "Das ist ein freundschaftlicher Rat.",
                       "example_en":  "It\u0027s friendly advice.",
-                      "example_es":  "Es un consejo amistoso."
+                      "example_es":  "Es un consejo amistoso.",
+                      "adv":  "по-дру́жески",
+                      "adv_de":  "freundschaftlich",
+                      "adv_ex":  "Он по-дру́жески помо́г мне.",
+                      "adv_ex_de":  "Er hat mir freundschaftlich geholfen."
                   },
                   {
                       "id":  "aj-регулярный",
@@ -343,7 +375,11 @@
                       "example_cases":  "регуля́рные трениро́вки – Akkusativ Plural",
                       "example_de":  "Er trainiert regelmäßig.",
                       "example_en":  "He does regular workouts.",
-                      "example_es":  "Hace entrenamientos regulares."
+                      "example_es":  "Hace entrenamientos regulares.",
+                      "adv":  "регуля́рно",
+                      "adv_de":  "regelmäßig",
+                      "adv_ex":  "Я регуля́рно занима́юсь спо́ртом.",
+                      "adv_ex_de":  "Ich treibe regelmäßig Sport."
                   },
                   {
                       "id":  "aj-октябрьский",
@@ -384,7 +420,11 @@
                       "example_cases":  "неизме́нная тради́ция – Nominativ",
                       "example_de":  "Das ist eine feste Tradition.",
                       "example_en":  "It\u0027s an unchanging tradition.",
-                      "example_es":  "Es una tradición invariable."
+                      "example_es":  "Es una tradición invariable.",
+                      "adv":  "неизме́нно",
+                      "adv_de":  "unverändert, stets",
+                      "adv_ex":  "Он неизме́нно ве́жлив.",
+                      "adv_ex_de":  "Er ist stets höflich."
                   },
                   {
                       "id":  "aj-разноцветный",
@@ -424,7 +464,11 @@
                       "example_cases":  "относи́тельная пра́вда – Nominativ",
                       "example_de":  "Das ist eine relative Wahrheit.",
                       "example_en":  "It\u0027s a relative truth.",
-                      "example_es":  "Es una verdad relativa."
+                      "example_es":  "Es una verdad relativa.",
+                      "adv":  "относи́тельно",
+                      "adv_de":  "relativ",
+                      "adv_ex":  "Здесь относи́тельно дёшево.",
+                      "adv_ex_de":  "Hier ist es relativ billig."
                   },
                   {
                       "id":  "aj-поразительный",
@@ -437,7 +481,11 @@
                       "example_cases":  "порази́тельный результа́т – Nominativ",
                       "example_de":  "Das ist ein erstaunliches Ergebnis.",
                       "example_en":  "It\u0027s an amazing result.",
-                      "example_es":  "Es un resultado asombroso."
+                      "example_es":  "Es un resultado asombroso.",
+                      "adv":  "порази́тельно",
+                      "adv_de":  "erstaunlich",
+                      "adv_ex":  "Порази́тельно!",
+                      "adv_ex_de":  "Erstaunlich!"
                   },
                   {
                       "id":  "aj-интенсивный",
@@ -450,7 +498,11 @@
                       "example_cases":  "на интенси́вный курс – Akkusativ · ру́сского – Genitiv",
                       "example_de":  "Ich besuche einen Intensivkurs Russisch.",
                       "example_en":  "I\u0027m taking an intensive Russian course.",
-                      "example_es":  "Hago un curso intensivo de ruso."
+                      "example_es":  "Hago un curso intensivo de ruso.",
+                      "adv":  "интенси́вно",
+                      "adv_de":  "intensiv",
+                      "adv_ex":  "Мы интенси́вно у́чимся.",
+                      "adv_ex_de":  "Wir lernen intensiv."
                   },
                   {
                       "id":  "aj-генетический",
@@ -463,7 +515,11 @@
                       "example_cases":  "генети́ческая боле́знь – Nominativ",
                       "example_de":  "Das ist eine Erbkrankheit.",
                       "example_en":  "It\u0027s a genetic disease.",
-                      "example_es":  "Es una enfermedad genética."
+                      "example_es":  "Es una enfermedad genética.",
+                      "adv":  "генети́чески",
+                      "adv_de":  "genetisch",
+                      "adv_ex":  "Э́то генети́чески обусло́влено.",
+                      "adv_ex_de":  "Das ist genetisch bedingt."
                   },
                   {
                       "id":  "aj-всероссийский",
@@ -544,7 +600,11 @@
                       "example_cases":  "убеждённый вегетариа́нец – Nominativ",
                       "example_de":  "Er ist überzeugter Vegetarier.",
                       "example_en":  "He\u0027s a committed vegetarian.",
-                      "example_es":  "Es vegetariano convencido."
+                      "example_es":  "Es vegetariano convencido.",
+                      "adv":  "убеждённо",
+                      "adv_de":  "überzeugt",
+                      "adv_ex":  "Он убеждённо говори́т.",
+                      "adv_ex_de":  "Er spricht überzeugt."
                   },
                   {
                       "id":  "aj-неясный",
@@ -559,7 +619,11 @@
                       "example_cases":  "нея́сная ситуа́ция – Nominativ",
                       "example_de":  "Das ist eine unklare Situation.",
                       "example_en":  "It\u0027s an unclear situation.",
-                      "example_es":  "Es una situación poco clara."
+                      "example_es":  "Es una situación poco clara.",
+                      "adv":  "нея́сно",
+                      "adv_de":  "unklar",
+                      "adv_ex":  "Мне нея́сно.",
+                      "adv_ex_de":  "Mir ist das unklar."
                   },
                   {
                       "id":  "aj-величайший",
@@ -616,7 +680,11 @@
                       "example_cases":  "у нас – Genitiv · бе́шеный темп – Nominativ · рабо́ты – Genitiv",
                       "example_de":  "Wir arbeiten in einem wahnsinnigen Tempo.",
                       "example_en":  "We work at a crazy pace.",
-                      "example_es":  "Trabajamos a un ritmo frenético."
+                      "example_es":  "Trabajamos a un ritmo frenético.",
+                      "adv":  "бе́шено",
+                      "adv_de":  "rasend, wie verrückt",
+                      "adv_ex":  "Се́рдце бе́шено бьётся.",
+                      "adv_ex_de":  "Das Herz schlägt wie verrückt."
                   },
                   {
                       "id":  "aj-садовый",
@@ -656,7 +724,11 @@
                       "example_cases":  "у него́ – Genitiv · неподви́жный о́браз – Nominativ · жи́зни – Genitiv",
                       "example_de":  "Er bewegt sich zu wenig.",
                       "example_en":  "He has a sedentary lifestyle.",
-                      "example_es":  "Lleva una vida sedentaria."
+                      "example_es":  "Lleva una vida sedentaria.",
+                      "adv":  "неподви́жно",
+                      "adv_de":  "regungslos",
+                      "adv_ex":  "Он неподви́жно стои́т.",
+                      "adv_ex_de":  "Er steht regungslos."
                   },
                   {
                       "id":  "aj-газетный",

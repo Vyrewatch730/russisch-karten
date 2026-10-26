@@ -2,3 +2,4 @@
 tools/verb-frequency.tsv
 tools/noun-frequency.tsv
 tools/adj-frequency.tsv
+tools/adv-frequency.tsv
