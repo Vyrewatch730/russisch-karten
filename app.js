@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 59;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 60;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2397,8 +2397,10 @@ function quizNorm(s) {
 
 // Alle akzeptierten Antworten einer Karte
 function quizVariants(card, askRu) {
-  if (askRu) return (card.f.de || '').split(/[,;/]/).map(quizNorm).filter(Boolean);
-  if (learnLang() === 'es') return [...new Set((card.f.es || '').split(/[,;/]/).map(quizNorm).filter(Boolean))];
+  // Klammern zuerst entfernen, sonst zerteilt das Komma darin die Antwort: „gehen (zu Fuß, eine Richtung)“
+  const parts = s => (s || '').replace(/\(.*?\)/g, ' ').split(/[,;/]/).map(quizNorm).filter(Boolean);
+  if (askRu) return [...new Set(parts(card.f.de))];
+  if (learnLang() === 'es') return [...new Set(parts(card.f.es))];
   const list = [card.f[RU]].concat(card.f[RU].split('/'), card.x.ipf || [], card.x.pf || []);
   return [...new Set(list.map(quizNorm).filter(Boolean))];
 }
