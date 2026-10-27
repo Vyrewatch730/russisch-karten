@@ -892,4 +892,92 @@ Die Endung <b>-ого / -его</b> spricht man mit <b>w</b>: но́вого [n�
   <li>Bei е́здить wird mit Vorsilbe <b>-езжа́ть</b> daraus: приезжа́ть / прие́хать, уезжа́ть / уе́хать.</li>
 </ul>`,
   },
+  {
+    id: 'umgangssprache',
+    icon: '💬',
+    title: 'Umgangssprache',
+    teaser: 'Wie man im Alltag wirklich redet: Grüße, Füllwörter, verkürzte Aussprache, Slang',
+    html: `
+<p>Im Alltag sprechen Russen deutlich lockerer als im Lehrbuch. Diese Wörter hörst du ständig – unter Freunden, in Serien, in Chats. Gegenüber Fremden, älteren Leuten und im Beruf bleibt man besser beim Standard (вы, здра́вствуйте).</p>
+
+<h3>Begrüßen und Verabschieden</h3>
+<table class="rtable">
+  <tr><th>locker</th><th>Bedeutung</th></tr>
+  <tr><td>${RW('Приве́т!')}</td><td>Hallo! (nur mit ты)</td></tr>
+  <tr><td>${RW('Здоро́во!')}</td><td>Na, alles klar? (unter Männern, sehr locker)</td></tr>
+  <tr><td>${RW('Как дела́?')} – ${RW('Норм.')}</td><td>Wie geht's? – Passt. (норм = норма́льно)</td></tr>
+  <tr><td>${RW('Как жизнь?')}</td><td>Wie läuft's?</td></tr>
+  <tr><td>${RW('Что но́вого?')}</td><td>Was gibt's Neues?</td></tr>
+  <tr><td>${RW('Пока́!')}</td><td>Tschüss!</td></tr>
+  <tr><td>${RW('Дава́й!')}</td><td>Mach's gut! (wörtlich „gib!“ – sehr häufig zum Abschied am Telefon)</td></tr>
+  <tr><td>${RW('Уви́димся!')}</td><td>Wir sehen uns!</td></tr>
+  <tr><td>${RW('Счастли́во!')}</td><td>Mach's gut!</td></tr>
+</table>
+
+<h3>So klingt es wirklich (verkürzte Aussprache)</h3>
+<p>Schnell gesprochen fallen ganze Silben weg. Geschrieben wird meist die volle Form – in Chats oft auch die kurze.</p>
+<table class="rtable">
+  <tr><th>Standard</th><th>gesprochen</th></tr>
+  <tr><td>${RW('здра́вствуйте')}</td><td>${RW('здра́сьте')}</td></tr>
+  <tr><td>${RW('сейча́с')}</td><td>${RW('щас')}</td></tr>
+  <tr><td>${RW('что')}</td><td>${RW('чё')} (sehr umgangssprachlich: Ты чё? = Was ist los mit dir?)</td></tr>
+  <tr><td>${RW('ты́сяча')}</td><td>${RW('ты́ща')}</td></tr>
+  <tr><td>${RW('вообще́')}</td><td>${RW('ваще́')}</td></tr>
+  <tr><td>${RW('когда́')}</td><td>${RW('када́')}</td></tr>
+  <tr><td>${RW('мо́жет быть')}</td><td>${RW('мо́жет')} (vielleicht)</td></tr>
+</table>
+
+<h3>Füllwörter</h3>
+<ul>
+  <li>${RW('ну')} – na, also: Ну, не зна́ю. = Na, ich weiß nicht.</li>
+  <li>${RW('ти́па')} – so wie, quasi (Jugendsprache): Он ти́па мой друг. = Er ist quasi mein Freund.</li>
+  <li>${RW('как бы')} – sozusagen</li>
+  <li>${RW('коро́че')} – kurz gesagt, jedenfalls: Коро́че, я пошёл. = Also, ich bin dann weg.</li>
+  <li>${RW('зна́чит')} – also</li>
+  <li>${RW('вот')} – so, da: Вот так. = So ist das.</li>
+  <li>${RW('э́то са́мое')} – dings, äh (wenn einem das Wort fehlt)</li>
+  <li>${RW('ага́')} – ja, genau · ${RW('угу́')} – mhm · ${RW('не-а')} – nö</li>
+</ul>
+
+<h3>Typische Ausrufe</h3>
+<table class="rtable">
+  <tr><td>${RW('Да ла́дно!')}</td><td>Ach komm! / Echt jetzt?</td></tr>
+  <tr><td>${RW('Ничего́ себе́!')}</td><td>Wow! Nicht schlecht!</td></tr>
+  <tr><td>${RW('Вот э́то да!')}</td><td>Na so was!</td></tr>
+  <tr><td>${RW('Ну ты даёшь!')}</td><td>Du bist ja einer! (Staunen)</td></tr>
+  <tr><td>${RW('Блин!')}</td><td>Mist! (harmloser Ersatz für ein Schimpfwort – wörtlich „Pfannkuchen“)</td></tr>
+  <tr><td>${RW('Офиге́ть!')}</td><td>Krass! Wahnsinn!</td></tr>
+  <tr><td>${RW('Кла́ссно!')} · ${RW('Кру́то!')}</td><td>Super! Cool!</td></tr>
+  <tr><td>${RW('Прико́льно!')}</td><td>Lustig! Cool!</td></tr>
+  <tr><td>${RW('Пое́хали!')}</td><td>Los geht's! (Gagarins Ausruf beim Start)</td></tr>
+  <tr><td>${RW('Без пробле́м!')}</td><td>Kein Problem!</td></tr>
+  <tr><td>${RW('Не па́рься!')}</td><td>Mach dir keinen Kopf!</td></tr>
+  <tr><td>${RW('Забе́й!')}</td><td>Vergiss es! Egal!</td></tr>
+  <tr><td>${RW('Всё путём.')}</td><td>Alles im grünen Bereich.</td></tr>
+  <tr><td>${RW('Ла́дно.')}</td><td>Okay, na gut.</td></tr>
+</table>
+
+<h3>Alltags-Slang</h3>
+<table class="rtable">
+  <tr><th>Slang</th><th>Standard</th><th>Bedeutung</th></tr>
+  <tr><td>${RW('ба́бки')}</td><td>де́ньги</td><td>Kohle, Geld</td></tr>
+  <tr><td>${RW('та́чка')}</td><td>маши́на</td><td>Karre, Auto</td></tr>
+  <tr><td>${RW('ха́та')}</td><td>кварти́ра</td><td>Bude, Wohnung</td></tr>
+  <tr><td>${RW('шмо́тки')}</td><td>оде́жда</td><td>Klamotten</td></tr>
+  <tr><td>${RW('тусо́вка')}</td><td>вечери́нка</td><td>Party, Szene</td></tr>
+  <tr><td>${RW('тусова́ться')}</td><td>проводи́ть вре́мя</td><td>abhängen, feiern</td></tr>
+  <tr><td>${RW('при́кол')}</td><td>шу́тка</td><td>Witz, Gag</td></tr>
+  <tr><td>${RW('комп')}</td><td>компью́тер</td><td>Computer</td></tr>
+  <tr><td>${RW('ве́лик')}</td><td>велосипе́д</td><td>Fahrrad</td></tr>
+  <tr><td>${RW('домо́й')} → ${RW('на ха́ту')}</td><td></td><td>nach Hause (sehr locker)</td></tr>
+</table>
+
+<h3>Namen und Kosenamen</h3>
+<p>Unter Freunden benutzt man fast nie den vollen Vornamen: Алекса́ндр → ${RW('Са́ша')}, Михаи́л → ${RW('Ми́ша')}, Екатери́на → ${RW('Ка́тя')}, Дми́трий → ${RW('Ди́ма')}. Mit -ка klingt es kumpelhaft oder etwas grob: ${RW('Са́шка')}. Zärtlich: ${RW('Са́шенька')}, ${RW('ма́мочка')}.</p>
+<p>Respektvoll spricht man Ältere mit Vorname + Vatersname an: ${RW('Ива́н Петро́вич')}, ${RW('А́нна Серге́евна')}.</p>
+
+<h3>Im Chat</h3>
+<p>спс = спаси́бо · пж, пжлст = пожа́луйста · норм = норма́льно · ок · ща = сейча́с · ))) = Lächeln (statt 🙂 – je mehr Klammern, desto fröhlicher)</p>
+<p class="tip">Faustregel: Mit ты und Freunden darf es locker sein. Bei вы, Fremden und Älteren lieber Standard – sonst wirkt es schnell respektlos.</p>`,
+  },
 ];
