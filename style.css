@@ -431,3 +431,4 @@ th.t-past, th.t-fut { font-size: 13px; }
 .vf-why .vf-ask td { background: rgba(224, 168, 0, .18); font-weight: 700; }
 .vf-why-verb { border-top: 1px solid var(--border); padding-top: 4px; }
 .drill-why-body.open { display: grid; gap: 4px; }
+.lib-ok { font-size: 13px; color: var(--good); font-weight: 600; white-space: nowrap; }

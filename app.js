@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 60;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 61;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -961,6 +961,7 @@ function setHeader(title, onBack) {
 }
 
 function go(newTab) {
+  if (pendingAppUpdate) { pendingAppUpdate = false; forceUpdate(); return; }   // neue App-Version wartet
   tab = newTab;
   $$('.tabbar button').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   document.body.classList.remove('studying');   // untere Leiste wieder zeigen
@@ -3694,7 +3695,12 @@ async function loadLibrary() {
     box.innerHTML = list.map(d => `
       <div class="row">
         <div class="grow">${esc(d.name)}<div class="sub">${esc(d.description || '')}${d.count ? ` · ${d.count} Karten` : ''}</div></div>
-        <button class="btn small" data-lib="${esc(d.id)}">${db.decks[d.id] ? 'Aktualisieren' : 'Laden'}</button>
+        ${(() => {
+          const st = db.decks[d.id];
+          if (!st) return `<button class="btn small" data-lib="${esc(d.id)}">Laden</button>`;
+          if ((st.version || 0) < (d.version || 1)) return `<button class="btn small" data-lib="${esc(d.id)}">Aktualisieren</button>`;
+          return `<span class="lib-ok">✓ aktuell</span>`;
+        })()}
       </div>`).join('') || '<div class="row"><div class="grow sub">Keine Decks verfügbar</div></div>';
     $$('[data-lib]', box).forEach(b => b.onclick = async () => {
       b.disabled = true;
@@ -3797,3 +3803,26 @@ if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
 }
 go('learn');
 autoUpdateLibrary();
+
+// Neue App-Version? (Versionsnummer steht in sw.js) Dann selbst neu laden – aber nicht mitten im Lernen.
+var pendingAppUpdate = false;   // var: wird schon beim Start in go() gelesen
+async function checkAppUpdate() {
+  try {
+    const text = await (await fetch('sw.js?c=' + Date.now(), { cache: 'no-store' })).text();
+    const v = +((text.match(/rk-v(\d+)/) || [])[1] || 0);
+    if (v > APP_VERSION) {
+      // Nur einmal pro Sitzung versuchen – falls der Browser noch die alte Datei aus dem Cache liefert, keine Endlosschleife
+      try { if (sessionStorage.getItem('rk-upd') === String(v)) return; sessionStorage.setItem('rk-upd', String(v)); } catch (e) { return; }
+      if (study || quiz || drill) pendingAppUpdate = true;   // nach der Lernrunde (beim Wechsel zur Übersicht)
+      else forceUpdate();
+    }
+  } catch (err) { /* offline: später noch einmal */ }
+}
+// Beim Zurückholen aus dem Hintergrund und alle 30 Minuten: Decks und App auf neue Versionen prüfen
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState !== 'visible') return;
+  autoUpdateLibrary();
+  checkAppUpdate();
+});
+setInterval(() => { if (document.visibilityState === 'visible') { autoUpdateLibrary(); checkAppUpdate(); } }, 30 * MIN);
+checkAppUpdate();
