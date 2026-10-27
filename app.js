@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 58;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 59;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2525,6 +2525,7 @@ function renderQuiz() {
           ${r.mastered ? `<div class="quiz-mastered">⭐ Dieses Wort sitzt jetzt (${QUIZ_STREAK}× richtig in Folge)!${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(r.expected)}</b></div>
+          <div>📖 <b>${esc(card.f[L])}</b> = ${esc(card.f.de || '')}</div>
         </div>
         <div class="btn-row">
           <button class="btn" id="quiz-next">Weiter</button>
@@ -2545,9 +2546,262 @@ function renderQuiz() {
 }
 
 /* ============================================================
+   Deutsche Übersetzung einer konjugierten Form (Ergebnis im Konjugationstraining):
+   дава́л → „er gab“, tuve → „ich hatte“. Aus der deutschen Grundbedeutung der Karte (erste Bedeutung).
+   Kennt starke und unregelmäßige Verben, trennbare und untrennbare Vorsilben, „sich“ und haben/sein im Perfekt.
+   ============================================================ */
+// Infinitiv: [er-Form Präsens (nur wenn anders als regelmäßig), Präteritum, Partizip II, 's' = Perfekt mit sein]
+const DE_STRONG = Object.fromEntries(`
+beginnen||begann|begonnen
+befehlen|befiehlt|befahl|befohlen
+beißen||biss|gebissen
+bieten||bot|geboten
+binden||band|gebunden
+bitten||bat|gebeten
+bleiben||blieb|geblieben|s
+braten|brät|briet|gebraten
+brechen|bricht|brach|gebrochen
+brennen||brannte|gebrannt
+bringen||brachte|gebracht
+denken||dachte|gedacht
+empfehlen|empfiehlt|empfahl|empfohlen
+essen|isst|aß|gegessen
+fahren|fährt|fuhr|gefahren|s
+fallen|fällt|fiel|gefallen|s
+fangen|fängt|fing|gefangen
+finden||fand|gefunden
+fliegen||flog|geflogen|s
+fliehen||floh|geflohen|s
+fließen||floss|geflossen|s
+frieren||fror|gefroren
+geben|gibt|gab|gegeben
+gehen||ging|gegangen|s
+gelingen||gelang|gelungen|s
+gelten|gilt|galt|gegolten
+genießen||genoss|genossen
+geschehen|geschieht|geschah|geschehen|s
+gewinnen||gewann|gewonnen
+gießen||goss|gegossen
+greifen||griff|gegriffen
+halten|hält|hielt|gehalten
+hängen||hing|gehangen
+heben||hob|gehoben
+heißen||hieß|geheißen
+helfen|hilft|half|geholfen
+kennen||kannte|gekannt
+klingen||klang|geklungen
+kommen||kam|gekommen|s
+kriechen||kroch|gekrochen|s
+laden|lädt|lud|geladen
+lassen|lässt|ließ|gelassen
+laufen|läuft|lief|gelaufen|s
+leiden||litt|gelitten
+leihen||lieh|geliehen
+lesen|liest|las|gelesen
+liegen||lag|gelegen
+lügen||log|gelogen
+meiden||mied|gemieden
+messen|misst|maß|gemessen
+nehmen|nimmt|nahm|genommen
+nennen||nannte|genannt
+pfeifen||pfiff|gepfiffen
+raten|rät|riet|geraten
+reißen||riss|gerissen
+reiten||ritt|geritten|s
+rennen||rannte|gerannt|s
+riechen||roch|gerochen
+rufen||rief|gerufen
+scheiden||schied|geschieden
+scheinen||schien|geschienen
+schieben||schob|geschoben
+schießen||schoss|geschossen
+schlafen|schläft|schlief|geschlafen
+schlagen|schlägt|schlug|geschlagen
+schleichen||schlich|geschlichen|s
+schließen||schloss|geschlossen
+schmelzen|schmilzt|schmolz|geschmolzen|s
+schneiden||schnitt|geschnitten
+schreiben||schrieb|geschrieben
+schreien||schrie|geschrien
+schweigen||schwieg|geschwiegen
+schwimmen||schwamm|geschwommen|s
+schwören||schwor|geschworen
+sehen|sieht|sah|gesehen
+singen||sang|gesungen
+sinken||sank|gesunken|s
+sitzen||saß|gesessen
+sprechen|spricht|sprach|gesprochen
+springen||sprang|gesprungen|s
+stechen|sticht|stach|gestochen
+stehen||stand|gestanden
+stehlen|stiehlt|stahl|gestohlen
+steigen||stieg|gestiegen|s
+sterben|stirbt|starb|gestorben|s
+stoßen|stößt|stieß|gestoßen
+streiten||stritt|gestritten
+tragen|trägt|trug|getragen
+treffen|trifft|traf|getroffen
+treiben||trieb|getrieben
+treten|tritt|trat|getreten
+trügen||trog|getrogen
+trinken||trank|getrunken
+verderben|verdirbt|verdarb|verdorben
+vergessen|vergisst|vergaß|vergessen
+verlieren||verlor|verloren
+verschwinden||verschwand|verschwunden|s
+verzeihen||verzieh|verziehen
+wachsen|wächst|wuchs|gewachsen|s
+waschen|wäscht|wusch|gewaschen
+weisen||wies|gewiesen
+werfen|wirft|warf|geworfen
+wiegen||wog|gewogen
+ziehen||zog|gezogen
+zwingen||zwang|gezwungen`.trim().split('\n').map(l => { const [inf, er, praet, part, aux] = l.split('|'); return [inf, { er, praet, part, aux }]; }));
+// Ganz unregelmäßig: Präsens ich, du, er, wir, ihr, sie | Präteritum (er) | Partizip | Imperativ du
+const DE_IRR = {
+  sein: ['bin bist ist sind seid sind', 'war', 'gewesen', 'sei', 's'],
+  haben: ['habe hast hat haben habt haben', 'hatte', 'gehabt', 'hab'],
+  werden: ['werde wirst wird werden werdet werden', 'wurde', 'geworden', 'werd', 's'],
+  wissen: ['weiß weißt weiß wissen wisst wissen', 'wusste', 'gewusst', 'wisse'],
+  tun: ['tue tust tut tun tut tun', 'tat', 'getan', 'tu'],
+  können: ['kann kannst kann können könnt können', 'konnte', 'gekonnt', ''],
+  müssen: ['muss musst muss müssen müsst müssen', 'musste', 'gemusst', ''],
+  wollen: ['will willst will wollen wollt wollen', 'wollte', 'gewollt', ''],
+  sollen: ['soll sollst soll sollen sollt sollen', 'sollte', 'gesollt', ''],
+  dürfen: ['darf darfst darf dürfen dürft dürfen', 'durfte', 'gedurft', ''],
+  mögen: ['mag magst mag mögen mögt mögen', 'mochte', 'gemocht', ''],
+};
+const DE_WEAK_BASE = new Set('machen holen hören schauen legen stellen setzen packen räumen füllen zählen kaufen passen richten probieren wachen wählen decken drehen melden nutzen bauen bereiten fassen fühlen gucken kehren klären lernen lösen merken pflanzen reichen sagen schalten spielen suchen teilen warten wecken zeigen arbeiten atmen bilden danken folgen führen hören kochen leben lehnen nähen planen putzen rechnen reden regnen reisen sammeln schicken stimmen stören tauschen üben wandern wohnen zahlen ziehen fragen antworten kleben drucken laden fassen schließen'.split(' '));
+const DE_SEP = ['zusammen', 'satt', 'zurück', 'vorbei', 'weiter', 'heraus', 'herein', 'hinaus', 'hinein', 'statt', 'fern', 'fest', 'fort', 'teil', 'her', 'hin', 'los', 'mit', 'nach', 'vor', 'weg', 'auf', 'aus', 'bei', 'ein', 'ab', 'an', 'zu', 'um'];
+const DE_INSEP = /^(be|ge|er|ver|zer|ent|emp|miss|über|unter|hinter|wider|wiederhol)/;
+const DE_SEIN_WEAK = new Set(['reisen', 'wandern', 'landen', 'passieren', 'begegnen', 'folgen', 'klettern', 'stolpern', 'rasen', 'joggen', 'segeln', 'aufwachen', 'aufstehen', 'einschlafen', 'umziehen', 'einziehen', 'zurückkehren', 'heimkehren', 'auswandern', 'verschwinden', 'entstehen', 'erscheinen', 'gelingen', 'geschehen', 'vergehen', 'ertrinken', 'verunglücken', 'zerfallen', 'entkommen', 'gelangen', 'verreisen', 'abstürzen', 'umkommen', 'zusammenbrechen']);
+const DE_REFL = { ich: 'mich', du: 'dich', er: 'sich', sie_f: 'sich', wir: 'uns', ihr: 'euch', sie: 'sich', Sie: 'sich' };
+const DE_PRON = { ich: 'ich', du: 'du', er: 'er', sie_f: 'sie', wir: 'wir', ihr: 'ihr', sie: 'sie', Sie: 'Sie' };
+const DE_IDX = { ich: 0, du: 1, er: 2, sie_f: 2, wir: 3, ihr: 4, sie: 5, Sie: 5 };
+
+// „sich Sorgen machen; …“ → { inf, base, sep, insep, refl, rest }
+function deParse(de) {
+  const s = (de || '').replace(/\(.*?\)/g, ' ').split(/[;,]/)[0].replace(/(^|\s)(jmdn|jmdm|jmds|etw|etwas)\.?(?=\s|$)/g, ' ').replace(/\s+/g, ' ').trim();
+  const words = s.split(' ');
+  // „rechnen mit“, „sich wenden an“: Präposition steht am Ende
+  const prep = words.length > 1 && /^(mit|auf|an|über|in|für|als|um|zu|von|nach|vor|aus|bei|gegen)$/.test(words[words.length - 1]) ? words.pop() : '';
+  const inf = words.pop();
+  if (!inf || /^[A-ZÄÖÜ]/.test(inf) || !/(en|ern|eln|n)$/.test(inf) || inf.length < 3) return null;
+  let refl = false;
+  const rest = words.filter(w => (w === 'sich' ? !(refl = true) : true)).concat(prep ? [prep] : []).join(' ');
+  const known = v => DE_STRONG[v] || DE_IRR[v] || DE_WEAK_BASE.has(v);
+  let base = inf, sep = '', insep = '';
+  if (!known(inf)) {
+    const p = DE_SEP.find(x => inf.startsWith(x) && known(inf.slice(x.length)));
+    if (p) { sep = p; base = inf.slice(p.length); }
+    else {
+      const m = inf.match(DE_INSEP);
+      if (m && DE_STRONG[inf.slice(m[1].length)]) { insep = m[1]; base = inf.slice(m[1].length); }
+    }
+  }
+  return { inf, base, sep, insep, refl, rest };
+}
+
+const deNeedsE = stem => /[dt]$/.test(stem) || /[^aeiouäöülrhmn][mn]$/.test(stem);
+// Präsens: [ich, du, er, wir, ihr, sie] des Grundverbs (ohne Vorsilbe)
+function dePresent(v) {
+  if (DE_IRR[v]) return DE_IRR[v][0].split(' ');
+  const wir = v;
+  const stem = /[lr]n$/.test(v) && /e[lr]n$/.test(v) ? v.slice(0, -1) : v.replace(/e?n$/, '');
+  const e = deNeedsE(stem);
+  const reg = { du: stem + (e ? 'est' : /[sßzx]$/.test(stem) ? 't' : 'st'), er: stem + (e ? 'et' : 't') };
+  const st = DE_STRONG[v];
+  let er = st && st.er ? st.er : reg.er, du = reg.du;
+  if (st && st.er) du = /(st|ßt|zt)$/.test(st.er) ? st.er : /tt$/.test(st.er) ? st.er + 'st' : st.er.replace(/t$/, '') + 'st';
+  if (st && st.er && /^(hält|rät|brät|lädt)$/.test(st.er)) du = { hält: 'hältst', rät: 'rätst', brät: 'brätst', lädt: 'lädst' }[st.er];
+  return [stem + 'e', du, er, wir, stem + (e ? 'et' : 't'), wir];
+}
+function dePraeteritum(v, insep) {
+  let p;
+  if (DE_IRR[v]) p = DE_IRR[v][1];
+  else if (DE_STRONG[v]) p = DE_STRONG[v].praet;
+  else { const stem = v.replace(/e?n$/, ''); p = stem + (deNeedsE(stem) ? 'ete' : 'te'); }
+  if (/e$/.test(p)) return [p, p + 'st', p, p + 'n', p + 't', p + 'n'];
+  const e = /[dtsß]$/.test(p);
+  return [p, p + (e ? 'est' : 'st'), p, p + 'en', p + (e ? 'et' : 't'), p + 'en'];
+}
+function dePartizip(d) {
+  const v = d.base;
+  let part = DE_IRR[v] ? DE_IRR[v][2] : DE_STRONG[v] ? DE_STRONG[v].part : null;
+  if (!part) { const stem = v.replace(/e?n$/, ''); part = (/ieren$/.test(v) || DE_INSEP.test(v) ? '' : 'ge') + stem + (deNeedsE(stem) ? 'et' : 't'); }
+  if (d.insep) part = d.insep + part.replace(/^ge/, '');
+  if (d.sep) part = d.sep + part;
+  return part;
+}
+function deAux(d) {
+  if (DE_SEIN_WEAK.has(d.inf)) return 'sein';
+  if (d.insep) return 'haben';
+  const a = DE_IRR[d.base] ? DE_IRR[d.base][4] : DE_STRONG[d.base] ? DE_STRONG[d.base].aux : DE_SEIN_WEAK.has(d.base) ? 's' : '';
+  return a ? 'sein' : 'haben';
+}
+// Imperativ du (ohne Vorsilbe): gib, nimm, lies, mach, warte
+function deImpDu(v) {
+  if (DE_IRR[v]) return DE_IRR[v][3];
+  const st = DE_STRONG[v], stem = v.replace(/e?n$/, '');
+  if (st && st.er && /tt$/.test(st.er)) return st.er;
+  if (st && st.er && /i/.test(st.er) && !/i/.test(v)) return st.er.replace(/s?t$/, m => (m === 'st' ? 's' : ''));
+  if (/ern$/.test(v)) return v.slice(0, -1) + 'e';                   // füttern → füttere
+  if (/eln$/.test(v)) return v.slice(0, -3) + 'le';           // wechseln → wechsle
+  return stem + (deNeedsE(stem) || /ig$/.test(stem) ? 'e' : '');   // warte, bestätige
+}
+
+// Übersetzung bauen. person: ich, du, er, sie_f, wir, ihr, sie, Sie · tense: pres, praet, perf, fut, cond, subj, imp, impneg
+function deForm(de, person, tense) {
+  const d = deParse(de);
+  if (!d) return '';
+  const i = DE_IDX[person], pron = DE_PRON[person];
+  const refl = d.refl ? DE_REFL[person] : '';
+  const fin = list => (d.insep ? d.insep : '') + list[i];
+  const join = (...w) => w.filter(Boolean).join(' ');
+  if (tense === 'pres') return join(pron, fin(dePresent(d.base)), refl, d.rest, d.sep);
+  if (tense === 'praet') return join(pron, fin(dePraeteritum(d.base)), refl, d.rest, d.sep);
+  if (tense === 'perf') return join(pron, dePresent(deAux(d))[i], refl, d.rest, dePartizip(d));
+  if (tense === 'fut') return join(pron, dePresent('werden')[i], refl, d.rest, d.inf);
+  if (tense === 'cond') return join(pron, ['würde', 'würdest', 'würde', 'würden', 'würdet', 'würden'][i], refl, d.rest, d.inf);
+  if (tense === 'subj') return 'dass ' + join(pron, refl, d.rest, d.sep + (d.insep || '') + dePresent(d.base)[i]);
+  if (tense === 'imp' || tense === 'impneg') {
+    const neg = tense === 'impneg' ? 'nicht' : '';
+    if (person === 'du' && !deImpDu(d.base)) return '';
+    if (person === 'du') return join((d.insep || '') + deImpDu(d.base), d.refl ? 'dich' : '', d.rest, neg, d.sep) + '!';
+    if (person === 'ihr') return join((d.insep || '') + dePresent(d.base)[4], d.refl ? 'euch' : '', d.rest, neg, d.sep) + '!';
+    const sieForm = d.base === 'sein' ? 'seien' : (d.insep || '') + d.base;
+    return join(sieForm, 'Sie', d.refl ? 'sich' : '', d.rest, neg, d.sep) + '!';
+  }
+  return '';
+}
+
+/* ============================================================
    Konjugation üben: Verb + Person + Zeitform → Verbform eintippen (Russisch und Spanisch).
    Zeitformen wählt man vor dem Start. Falsche Aufgaben kommen nach ein paar anderen noch einmal.
    ============================================================ */
+// Deutsche Übersetzung der gefragten Form (für die Ergebnisbox)
+function drillGerman(cur, card) {
+  const de = card.f.de;
+  if (!de) return '';
+  let person, tense = cur.key, extra = '';
+  if (learnLang() === 'es') {
+    if (/^(me|te|le|nos|les) …$/.test(cur.person)) return '';   // gustar & Co.: deutsch ganz anders gebaut
+    if (cur.key === 'imp') { person = ['du', 'du', 'Sie', 'ihr'][cur.i]; tense = cur.i === 1 ? 'impneg' : 'imp'; }
+    else person = ['ich', 'du', 'er', 'wir', 'sie'][cur.i];
+    tense = { pres: 'pres', past: 'praet', imperf: 'praet', perf: 'perf', futs: 'fut', cond: 'cond', subj: 'subj', imp: 'imp', impneg: 'impneg' }[tense];
+    if (cur.key === 'imperf') extra = ' (früher, immer wieder)';
+  } else {
+    if (cur.key === 'past') person = ['er', 'sie_f', '', 'sie'][cur.i];
+    else if (cur.key === 'imp') person = ['du', 'ihr'][cur.i];
+    else person = ['ich', 'du', 'er', 'wir', 'ihr', 'sie'][cur.i];
+    tense = { pres: 'pres', futipf: 'fut', futpf: 'fut', past: 'praet', imp: 'imp' }[cur.key];
+    if (cur.key === 'futpf') extra = ' (einmal, mit Ergebnis)';
+    if (cur.key === 'futipf') extra = ' (länger, wiederholt)';
+  }
+  const f = person && tense ? deForm(de, person, tense) : '';
+  return f ? f + extra : '';
+}
+
 let drill = null;
 const DRILL_SIZE = 20;
 const DRILL_TENSES = {
@@ -2996,6 +3250,7 @@ function renderDrill() {
           <div>${esc(cur.verb)} · ${esc(cur.person)} · <span class="${DRILL_TENSE_CLS[cur.key] || ''}">${esc(cur.tense)}</span></div>
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(cur.answer)}</b> ${say(cur.answer)}</div>
+          ${(g => g ? `<div>📖 <b>${esc(cur.answer)}</b> = ${esc(g)}</div>` : '')(drillGerman(cur, card))}
           ${r.accent && L === 'es' ? `<div class="drill-why">${esAccentWhy(cur, r.text)}</div>` : ''}
         </div>
         <div class="drill-why-box">
