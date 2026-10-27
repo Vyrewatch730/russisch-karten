@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 57;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 58;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2552,9 +2552,9 @@ let drill = null;
 const DRILL_SIZE = 20;
 const DRILL_TENSES = {
   es: [['pres', 'Presente'], ['past', 'Pretérito'], ['imperf', 'Imperfecto'], ['perf', 'Perfecto'], ['futs', 'Futuro'], ['cond', 'Condicional'], ['subj', 'Subjuntivo'], ['imp', 'Imperativo']],
-  ru: [['pres', 'Präsens (unvollendet)'], ['futpf', 'Zukunft (vollendet)'], ['past', 'Vergangenheit'], ['imp', 'Imperativ']],
+  ru: [['pres', 'Präsens (unvollendet)'], ['futipf', 'Zukunft unvollendet (бу́ду + Infinitiv)'], ['futpf', 'Zukunft vollendet (wie Präsens konjugiert)'], ['past', 'Vergangenheit'], ['imp', 'Imperativ']],
 };
-const DRILL_DEFAULT = { es: ['pres', 'past', 'imperf'], ru: ['pres', 'futpf', 'past'] };
+const DRILL_DEFAULT = { es: ['pres', 'past', 'imperf'], ru: ['pres', 'futipf', 'futpf', 'past'] };
 const drillTenses = () => {
   const L = learnLang();
   const sel = (db.settings.drillTenses || {})[L];
@@ -2588,9 +2588,12 @@ function drillTasks(card, tenses) {
         const f = ruAllPresent(x.ipf, x.ipf_1, x.ipf_2);
         if (f) f.forEach((a, i) => tasks.push({ ...base('ipf'), person: PERS[i], tense: name.pres, key: 'pres', i, answer: a, all: f }));
       }
+      if (t === 'futipf' && x.ipf && x.ipf.replace(STRESS, '') !== 'быть') {
+        RU_BUDU.forEach((b, i) => tasks.push({ ...base('ipf'), person: PERS[i], tense: name.futipf, key: 'futipf', i, answer: `${b} ${x.ipf}` }));
+      }
       if (t === 'futpf' && x.pf && x.pf !== x.ipf) {
         const f = ruAllPresent(x.pf, x.pf_1, x.pf_2);
-        if (f) f.forEach((a, i) => tasks.push({ ...base('pf'), person: PERS[i], tense: name.futpf, key: 'futpf', i, answer: a, all: f }));
+        if (f) f.forEach((a, i) => tasks.push({ ...base('pf'), person: PERS[i], tense: name.futpf, key: 'futpf', i, answer: a, all: f, ipfPartner: x.ipf }));
       }
       if (t === 'past') for (const p of ['ipf', 'pf']) {
         if (!x[p] || (p === 'pf' && x.pf === x.ipf)) continue;
@@ -2612,7 +2615,8 @@ function drillTasks(card, tenses) {
 }
 
 // Farbe und Schrift der Zeitform (Vergangenheit braun, Zukunft gold)
-const DRILL_TENSE_CLS = { past: 't-past', imperf: 't-past', perf: 't-past', futs: 't-fut', futpf: 't-fut' };
+const DRILL_TENSE_CLS = { past: 't-past', imperf: 't-past', perf: 't-past', futs: 't-fut', futpf: 't-fut', futipf: 't-fut' };
+const RU_BUDU = ['бу́ду', 'бу́дешь', 'бу́дет', 'бу́дем', 'бу́дете', 'бу́дут'];
 
 /* ---------- Warum heißt die Form so? (Ergebnis im Konjugationstraining) ---------- */
 const ES_NAIVE = {
@@ -2727,9 +2731,15 @@ function ruWhy(t) {
   const plain = s => (s || '').replace(STRESS, '').replace(/ё/g, 'е');
   const lines = [];
   const inf = t.inf, pinf = plain(inf);
-  if (t.key === 'pres' || t.key === 'futpf') {
+  if (t.key === 'futipf') {
+    lines.push(`<div><b class="t-fut">Zukunft</b> von <b>unvollendeten</b> Verben: <b>бу́ду, бу́дешь, бу́дет, бу́дем, бу́дете, бу́дут</b> (Zukunft von быть) + <b>Infinitiv</b> → ${esc(t.answer)}.</div>`);
+    lines.push('<div>Bedeutung: Man wird etwas tun – länger, wiederholt oder ohne Blick aufs Ergebnis: За́втра я бу́ду рабо́тать весь день. = Morgen werde ich den ganzen Tag arbeiten.</div>');
+    lines.push('<div>Der Infinitiv bleibt immer gleich, nur бу́ду passt sich an die Person an – wie „werden“ im Deutschen.</div>');
+    lines.push('<div>Vollendete Verben haben dagegen keine бу́ду-Form: Bei ihnen bedeuten die „Präsens“-Formen schon Zukunft (прочита́ю = ich werde zu Ende lesen).</div>');
+  } else if (t.key === 'pres' || t.key === 'futpf') {
     const type = ruConjType(inf, t.ya, t.ty);
-    lines.push(`<div><b>${esc(type)}</b>${t.key === 'futpf' ? ' – vollendetes Verb: diese Formen sind <span class="t-fut">Zukunft</span>.' : ''}</div>`);
+    lines.push(`<div><b>${esc(type)}</b></div>`);
+    if (t.key === 'futpf') lines.push(`<div>• <b>Warum sieht die <span class="t-fut">Zukunft</span> aus wie ein Präsens?</b> ${esc(inf)} ist <b>vollendet</b>. Vollendete Verben haben kein Präsens – ihre Formen mit Präsens-Endungen bedeuten <b>Zukunft</b> (einmal, mit Ergebnis): ${esc(t.answer)} = „werde (fertig) …“. Die Zukunft mit бу́ду + Infinitiv gibt es nur bei <b>unvollendeten</b> Verben (бу́ду ${esc(t.ipfPartner || 'читать')}).</div>`);
     if (/unregelmäßig|gemischt/.test(type)) lines.push('<div>• Unregelmäßiges Verb – die Formen muss man lernen.</div>');
     const stemNote = ruStemNote(inf, t.ya, t.ty);
     if (stemNote) lines.push(`<div>• ${stemNote}</div>`);
