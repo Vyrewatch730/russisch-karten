@@ -408,10 +408,10 @@ tr.vp-rule.open { display: table-row; }
 .drill-chips .chip { font-size: 14px; }
 
 /* Zeitformen auf einen Blick: Vergangenheit braun in Serifenschrift, Zukunft gold in breiter Großschrift, Gegenwart normal */
-:root { --t-past: #8b5a2b; --t-fut: #b8860b; }
-@media (prefers-color-scheme: dark) { :root { --t-past: #d6a26a; --t-fut: #fbbf24; } }
+:root { --t-past: #6b3410; --t-fut: #e0a800; }
+@media (prefers-color-scheme: dark) { :root { --t-past: #c47a3a; --t-fut: #ffc61a; } }
 .t-past { color: var(--t-past) !important; font-family: Georgia, 'Noto Serif', 'Times New Roman', serif; font-style: italic; font-weight: 700; letter-spacing: .01em; }
-.t-fut { color: var(--t-fut) !important; font-family: 'Trebuchet MS', 'Segoe UI', Roboto, sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.t-fut { color: var(--t-fut) !important; text-shadow: 0 0 1px rgba(120, 80, 0, .45); font-family: 'Trebuchet MS', 'Segoe UI', Roboto, sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
 th.t-past, th.t-fut { font-size: 13px; }
 .motion-prefix { font-size: 15px; margin-bottom: 2px; }
 .motion-sep { border: 0; border-top: 1px solid var(--border); margin: 8px 0; }
