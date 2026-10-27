@@ -425,3 +425,8 @@ th.t-past, th.t-fut { font-size: 13px; }
 .quiz-dots { color: var(--good); letter-spacing: 2px; font-size: 15px; }
 .quiz-review { color: var(--accent); font-weight: 700; }
 .quiz-mastered { margin-top: 6px; font-weight: 700; }
+.vf-why { margin: 6px 0; font-size: 13px; }
+.vf-why summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+.vf-why > div { margin-top: 4px; }
+.vf-why .vf-ask td { background: rgba(224, 168, 0, .18); font-weight: 700; }
+.vf-why-verb { border-top: 1px solid var(--border); padding-top: 4px; }

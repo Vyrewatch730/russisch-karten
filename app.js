@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 55;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 56;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1406,6 +1406,55 @@ function ruConjType(inf, ya, ty) {
   return '1. Konjugation (е: -ешь, -ет, -ем, -ете, -ут/-ют)';
 }
 
+// „Warum diese Endung?“ (Dropdown): -у oder -ю, -ут/-ют oder -ат/-ят, -е- oder -ё- – mit den Formen dieses Verbs.
+// i (optional) = gefragte Person (0 = я … 5 = они), wird dann hervorgehoben.
+function ruEndingWhy(inf, ya, ty, forms, i) {
+  if (!ya || !ty || !forms) return '';
+  const plain = s => (s || '').replace(STRESS, '').replace(/(ся|сь)$/, '');
+  const second = /ишь$/.test(plain(ty));
+  const irregular = !!CONJ_IRREGULAR[(inf || '').replace(STRESS, '')] || /хочу́$|бегу́$/.test(ya);
+  const yaP = plain(ya), oniP = plain(forms[5]);
+  const yaEnd = /ю$/.test(yaP) ? 'ю' : /у$/.test(yaP) ? 'у' : '';
+  const before = yaP.slice(-2, -1);
+  const vowel = /[аеёиоуыэюя]/.test(before), hiss = /[жшчщ]/.test(before);
+  const oniEnd = (oniP.match(/(ут|ют|ат|ят)$/) || [])[1] || '';
+  const stressedEnd = /ё/.test(ty) || /[еи]́шь(ся)?$/.test(ty);
+  const mark = n => (i === n ? ' class="vf-ask"' : '');
+  const why = [];
+  if (yaEnd === 'ю' && vowel) why.push(`<b>я ${esc(ya)}: -ю</b>, weil der Stamm auf einen <b>Vokal</b> endet (${esc(yaP.slice(0, -1))}-). Nach Vokal schreibt man ю (gesprochen „ju“).`);
+  else if (yaEnd === 'ю') why.push(`<b>я ${esc(ya)}: -ю</b>, weil der Stamm auf einen <b>weichen Konsonanten</b> endet (${esc(yaP.slice(0, -1))}-). Das ю zeigt die Weichheit an.`);
+  else if (yaEnd === 'у' && hiss) why.push(`<b>я ${esc(ya)}: -у</b>, weil der Stamm auf <b>${esc(before)}</b> endet. Nach ж, ш, ч, щ schreibt man <b>nie ю</b>, immer у (Rechtschreibregel).`);
+  else if (yaEnd === 'у') why.push(`<b>я ${esc(ya)}: -у</b>, weil der Stamm auf einen <b>harten Konsonanten</b> endet (${esc(yaP.slice(0, -1))}-).`);
+  if (oniEnd) {
+    const oniStem = oniP.slice(0, -2), c2 = oniStem.slice(-1);
+    const reason = /[жшчщ]/.test(c2) ? `nach <b>${esc(c2)}</b> nie я/ю, sondern а/у steht`
+      : /[аеёиоуыэюя]/.test(c2) ? `der Stamm (${esc(oniStem)}-) auf einen <b>Vokal</b> endet`
+      : /[юя]/.test(oniEnd) ? `der Stamm (${esc(oniStem)}-) auf einen <b>weichen Konsonanten</b> endet` : `der Stamm (${esc(oniStem)}-) auf einen <b>harten Konsonanten</b> endet`;
+    const differs = (yaEnd === 'ю') !== /[юя]/.test(oniEnd);
+    why.push(`<b>они́ ${esc(forms[5])}: -${oniEnd}</b>, weil ${reason}.${differs ? ` Anders als bei я: Die я-Form hat einen Konsonantenwechsel (${esc(ya)}), они́ den normalen Stamm.` : ''}`);
+  }
+  if (!second) why.push(stressedEnd
+    ? `<b>-ё-</b> (${esc(ty)}): Die Endung ist <b>betont</b>, dann wird е zu ё (-ёшь, -ёт, -ём, -ёте).`
+    : `<b>-е-</b> (${esc(ty)}): Die Endung ist unbetont, deshalb е (-ешь, -ет, -ем, -ете).`);
+  else why.push('2. Konjugation: ты, он, мы, вы immer mit <b>-и-</b> (-ишь, -ит, -им, -ите).');
+  if (irregular) why.push('⚠️ Dieses Verb ist unregelmäßig – hier gelten die Regeln nur teilweise.');
+  return `<details class="vf-why"><summary>Warum diese Endung?</summary>
+    <table class="rtable small">
+      <tr><th></th><th>1. Konjugation</th><th>2. Konjugation</th></tr>
+      <tr${mark(0)}><td>я</td><td>-у / -ю</td><td>-у / -ю</td></tr>
+      <tr${mark(1)}><td>ты</td><td>-ешь / -ёшь</td><td>-ишь</td></tr>
+      <tr${mark(2)}><td>он/она́</td><td>-ет / -ёт</td><td>-ит</td></tr>
+      <tr${mark(3)}><td>мы</td><td>-ем / -ём</td><td>-им</td></tr>
+      <tr${mark(4)}><td>вы</td><td>-ете / -ёте</td><td>-ите</td></tr>
+      <tr${mark(5)}><td>они́</td><td>-ут / -ют</td><td>-ат / -ят</td></tr>
+    </table>
+    <div><b>-у oder -ю?</b> Nach Vokal und nach weichem Konsonanten -ю, nach hartem Konsonanten -у. Nach ж, ш, ч, щ immer -у (dort schreibt man nie ю oder я).</div>
+    <div><b>они́:</b> gleiche Regel wie bei я – nach Vokal und weichem Konsonanten -ют/-ят, nach hartem Konsonanten und nach ж, ш, ч, щ -ут/-ат. Meist passt sie zur я-Form (-у ↔ -ут/-ат, -ю ↔ -ют/-ят).</div>
+    <div><b>е oder ё?</b> In der 1. Konjugation ё, wenn die Endung betont ist (идёшь), sonst е (чита́ешь).</div>
+    <div class="vf-why-verb"><b>Bei diesem Verb (${esc(second ? '2. Konjugation' : '1. Konjugation')}):</b>${why.map(w => `<div>• ${w}</div>`).join('')}</div>
+  </details>`;
+}
+
 // Ausklappbare Tabelle mit allen Formen eines Aspekts (Präsens/Futur, Vergangenheit, Imperativ)
 function allFormsHtml(x, p, imp) {
   const pres = ruAllPresent(x[p], x[p + '_1'], x[p + '_2']);
@@ -1418,6 +1467,7 @@ function allFormsHtml(x, p, imp) {
   const rows = [];
   if (pres) rows.push(`<tr><td colspan="2" class="vf-conj">${esc(ruConjType(x[p], x[p + '_1'], x[p + '_2']))}</td></tr>`);
   if (pres) rows.push(`<tr><th colspan="2" class="${tense === 'Zukunft' ? 't-fut' : ''}">${tense} ${say(pres)}</th></tr>` + PERS.map((pr, i) => `<tr><td>${pr}</td><td>${esc(pres[i])}</td></tr>`).join(''));
+  if (pres) rows.push(`<tr><td colspan="2">${ruEndingWhy(x[p], x[p + '_1'], x[p + '_2'], pres)}</td></tr>`);
   if (p === 'ipf' && pres && !isByt) rows.push(`<tr><td colspan="2" class="vf-note"><span class="t-fut">Zukunft:</span> бу́ду / бу́дешь … + ${esc(x[p])}</td></tr>`);
   if (past) rows.push(`<tr><th colspan="2" class="t-past">Vergangenheit ${say(past)}</th></tr>` + ['он', 'она́', 'оно́', 'они́'].map((pr, i) => `<tr><td>${pr}</td><td>${esc(past[i])}</td></tr>`).join(''));
   if (imp && imp !== '—') rows.push(`<tr><th colspan="2">Imperativ</th></tr><tr><td>ты</td><td>${esc(imp)}!</td></tr><tr><td>вы</td><td>${esc(ruImperativePlural(imp))}!</td></tr>`);
@@ -2660,6 +2710,7 @@ function ruWhy(t) {
     const tyEnd = /[еёи]́?шь/.test(t.ty) && (/ё/.test(t.ty) || /[еи]́шь/.test(t.ty));
     if (yaEnd && !tyEnd && stressPos(t.ty) >= 0) lines.push(`<div>• <b>Betonung wandert:</b> я-Form auf der Endung (${esc(t.ya)}), alle anderen auf dem Stamm (${esc(t.ty)}).</div>`);
     lines.push(`<div>Merke: Aus der я- und ты-Form ergeben sich alle anderen (они́: ${esc((t.all || [])[5] || '')}).</div>`);
+    lines.push(ruEndingWhy(inf, t.ya, t.ty, t.all, t.i));
   } else if (t.key === 'past') {
     const irr = RU_PAST_IRREG[pinf] || RU_PAST_IRREG[inf.replace(STRESS, '')];
     if (irr) lines.push(`<div>⚠️ <b>Unregelmäßige <span class="t-past">Vergangenheit</span>:</b> ${esc(irr.join(', '))} – der Stamm ändert sich, das muss man lernen.</div>`);
