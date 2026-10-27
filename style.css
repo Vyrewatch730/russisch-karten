@@ -421,3 +421,7 @@ th.t-past, th.t-fut { font-size: 13px; }
 .drill-why-title { font-weight: 700; }
 .drill-tense { font-size: 15px !important; }
 @media (prefers-color-scheme: dark) { .quiz-result.warn { background: #422006; color: #fde68a; } }
+.quiz-group { font-size: 13px; color: var(--muted); text-align: center; }
+.quiz-dots { color: var(--good); letter-spacing: 2px; font-size: 15px; }
+.quiz-review { color: var(--accent); font-weight: 700; }
+.quiz-mastered { margin-top: 6px; font-weight: 700; }

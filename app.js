@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 53;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 54;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1141,9 +1141,9 @@ function renderLearn() {
             <button class="quiz-btn" data-quiz="*" aria-label="Schreiben üben">✍️</button>
           </div>` : ''}
         ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen</div>${kind.v !== 'all' ? `<button class="btn small" id="load-kind">Laden</button>` : ''}</div>` : ''}
-        ${decks.map(d => ({ d, n: learnCards([d.id]).length })).map(({ d, n }) => `
+        ${decks.map(d => { const lc = learnCards([d.id]); return { d, n: lc.length, s: lc.filter(c => quizMastered()[c.id]).length }; }).map(({ d, n, s }) => `
           <div class="row clickable" data-study="${esc(d.id)}">
-            <div class="grow ellipsis">${esc(d.name)}<div class="sub">${n} ${n === 1 ? "Karte" : "Karten"}</div></div>
+            <div class="grow ellipsis">${esc(d.name)}<div class="sub">${n} ${n === 1 ? "Karte" : "Karten"}${s ? ` · ✍️ ${s} sitzen` : ''}</div></div>
             ${statRow(deckStats([d.id]))}
             ${isVerbDeck(d.id) ? drillBtn(d.id) : ''}
             <button class="quiz-btn" data-quiz="${esc(d.id)}" aria-label="Schreiben üben">✍️</button>
@@ -1152,7 +1152,7 @@ function renderLearn() {
     </div>
     <p class="sub" style="color:var(--muted);font-size:13px">
       <span class="c-new">Blau</span> = neu (heute noch), <span class="c-learn">Rot</span> = in Lernphase, <span class="c-due">Grün</span> = fällig<br>
-      ✍️ = Schreiben üben: ${QUIZ_SIZE} zufällige Wörter, Bedeutung eintippen (Richtung wie oben gewählt)<br>
+      ✍️ = Schreiben üben: immer 5 Wörter, bis jedes ${QUIZ_STREAK}× hintereinander richtig war, dann die nächsten 5 (mit Wiederholungen)<br>
       🔁 = Konjugation üben (bei Verben): Verbform eintippen${es ? '<br>Im Spanisch-Modus sind die Decks nach spanischer Häufigkeit sortiert.' : ''}
     </p>`;
   $$('[data-quiz]', view).forEach(b => b.onclick = (e) => {
@@ -2241,17 +2241,26 @@ function wireFlipCard(view) {
   if (c) c.onclick = e => { if (!e.target.closest('.say, .info, details')) c.classList.toggle('flipped'); };
 }
 
+/* Schreibmodus in 5er-Gruppen: Die ersten 5 noch nicht sicheren Wörter des Blocks rotieren, bis jedes
+   QUIZ_STREAK-mal hintereinander richtig war („sitzt“). Dann kommen die nächsten 5, dazwischen immer wieder
+   Wiederholungen der schon sicheren Wörter. Was sitzt, wird je Lernsprache gespeichert (db.quizMastery). */
 let quiz = null;
-const QUIZ_SIZE = 20;
-const QUIZ_GAP = 3;          // falsch beantwortete Karte kommt nach so vielen anderen wieder
+const QUIZ_SIZE = 20;          // Konjugationstraining: Aufgaben pro Runde
+const QUIZ_GAP = 3;            // Konjugationstraining: falsche Aufgabe kommt nach so vielen anderen wieder
+const QUIZ_BATCH = 5;          // so viele neue Wörter gleichzeitig
+const QUIZ_STREAK = 3;         // so oft hintereinander richtig = sitzt
+const QUIZ_REVIEW = 0.3;       // Anteil Wiederholungen schon sicherer Wörter
+
+const quizMastered = () => {
+  const all = db.quizMastery || (db.quizMastery = {});
+  return all[learnLang()] || (all[learnLang()] = {});
+};
 
 function startQuiz(deckIds, title) {
-  const pool = learnCards(deckIds).filter(c => c.f.de);
-  for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
-  const cards = pool.slice(0, QUIZ_SIZE);
-  if (!cards.length) { toast('Keine Karten in diesem Deck'); return; }
-  const dir = () => (db.settings.qLang === 'mix' ? (Math.random() < 0.5 ? 'ru' : 'tr') : db.settings.qLang);
-  quiz = { title, deckIds, queue: cards.map(c => ({ id: c.id, q: dir(), tries: 0 })), total: cards.length, firstTry: 0, cur: null, answer: null };
+  const pool = learnCards(deckIds).filter(c => c.f.de).map(c => c.id);
+  if (!pool.length) { toast('Keine Karten in diesem Deck'); return; }
+  quiz = { title, deckIds, pool, active: [], streak: {}, last: null, cur: null, answer: null, answered: 0, right: 0, newlyMastered: 0 };
+  fillQuizBatch();
   document.body.classList.add('studying');
   setHeader(title, () => { quiz = null; go('learn'); });
   stopStudyKeys();
@@ -2259,8 +2268,31 @@ function startQuiz(deckIds, title) {
   nextQuiz();
 }
 
+// Die nächsten noch nicht sicheren Wörter (in Block-Reihenfolge, also nach Häufigkeit) in die aktive Gruppe holen
+function fillQuizBatch() {
+  const m = quizMastered();
+  for (const id of quiz.pool) {
+    if (quiz.active.length >= QUIZ_BATCH) break;
+    if (!m[id] && !quiz.active.includes(id)) { quiz.active.push(id); quiz.streak[id] = quiz.streak[id] || 0; }
+  }
+}
+
 function nextQuiz() {
-  quiz.cur = quiz.queue.shift() || null;
+  const m = quizMastered();
+  const dir = () => (db.settings.qLang === 'mix' ? (Math.random() < 0.5 ? 'ru' : 'tr') : db.settings.qLang);
+  const reviewable = quiz.pool.filter(id => m[id] && id !== quiz.last);
+  const pick = list => list[Math.floor(Math.random() * list.length)];
+  let id = null, review = false;
+  if (!quiz.active.length) id = null;   // alle Wörter des Blocks sitzen → fertig
+  else if (reviewable.length && Math.random() < QUIZ_REVIEW) { id = pick(reviewable); review = true; }
+  else if (quiz.active.length) {
+    // Wörter mit wenigen richtigen Antworten öfter, aber nie zweimal direkt hintereinander (außer es ist nur eins übrig)
+    const cands = quiz.active.filter(x => x !== quiz.last);
+    const list = cands.length ? cands : quiz.active;
+    const min = Math.min(...list.map(x => quiz.streak[x] || 0));
+    id = pick(list.filter(x => (quiz.streak[x] || 0) <= min + 1));
+  }
+  quiz.cur = id ? { id, q: dir(), review } : null;
   quiz.answer = null;
   renderQuiz();
 }
@@ -2302,21 +2334,41 @@ function quizCheck(text) {
     const allowed = v.length >= 9 ? 2 : v.length >= 5 ? 1 : 0;
     if (levenshtein(a, v) <= allowed) { ok = true; typo = true; }
   }
-  cur.tries++;
-  if (ok && cur.tries === 1) quiz.firstTry++;
-  if (!ok) quiz.queue.splice(Math.min(QUIZ_GAP, quiz.queue.length), 0, cur);   // später noch einmal
-  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[learnLang()] };
+  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[learnLang()], before: { streak: quiz.streak[cur.id] || 0, active: [...quiz.active], mastered: !!quizMastered()[cur.id] } };
+  quizApply(ok);
   renderQuiz();
 }
 
-// „Ich lag doch richtig“: Wiederholung wieder herausnehmen
+// Ergebnis verbuchen: richtig → Serie +1 (sitzt ab QUIZ_STREAK), falsch → Serie 0; vergessene Wiederholung kommt zurück in die Gruppe
+function quizApply(ok) {
+  const id = quiz.cur.id, m = quizMastered();
+  quiz.answered++;
+  quiz.last = id;
+  if (ok) quiz.right++;
+  if (quiz.cur.review) {
+    if (!ok) { delete m[id]; quiz.active.push(id); quiz.streak[id] = 0; quiz.answer.lost = true; }
+  } else if (ok) {
+    quiz.streak[id] = (quiz.streak[id] || 0) + 1;
+    if (quiz.streak[id] >= QUIZ_STREAK) {
+      m[id] = 1;
+      quiz.active = quiz.active.filter(x => x !== id);
+      quiz.newlyMastered++;
+      quiz.answer.mastered = true;
+      if (!quiz.active.length) { fillQuizBatch(); quiz.answer.nextBatch = quiz.active.length > 0; }
+    }
+  } else quiz.streak[id] = 0;
+  save();
+}
+
+// „Ich lag doch richtig“: Stand von vor der Antwort wiederherstellen und als richtig werten
 function quizOverride() {
-  const cur = quiz.cur;
-  const i = quiz.queue.indexOf(cur);
-  if (i >= 0) quiz.queue.splice(i, 1);
-  if (cur.tries === 1) quiz.firstTry++;
-  quiz.answer.ok = true;
-  quiz.answer.override = true;
+  const b = quiz.answer.before, id = quiz.cur.id, m = quizMastered();
+  quiz.streak[id] = b.streak;
+  quiz.active = b.active;
+  if (b.mastered) m[id] = 1; else delete m[id];
+  quiz.answered--;
+  Object.assign(quiz.answer, { ok: true, override: true, lost: false });
+  quizApply(true);
   renderQuiz();
 }
 
@@ -2328,21 +2380,27 @@ function quizKeys(e) {
 function renderQuiz() {
   const view = $('#view');
   const cur = quiz.cur;
-  const left = quiz.queue.length + (cur ? 1 : 0);
-  $('#header-extra').innerHTML = cur ? `<span class="hbadge" title="noch übrig">${left}</span>` : '';
+  const m = quizMastered();
+  const sure = quiz.pool.filter(id => m[id]).length;
+  $('#header-extra').innerHTML = `<span class="hbadge" title="Wörter, die sitzen">${sure}/${quiz.pool.length}</span>`;
   if (!cur) {
     view.innerHTML = `
       <div class="done">
         <div class="big">🎉</div>
-        <h2>Geschafft!</h2>
-        <p>${quiz.firstTry} von ${quiz.total} Wörtern beim ersten Versuch richtig.</p>
-        <button class="btn" id="quiz-again">Neue Runde</button><br>
+        <h2>Alle ${quiz.pool.length} Wörter sitzen!</h2>
+        <p>${quiz.right} von ${quiz.answered} Antworten in dieser Runde richtig.</p>
+        <button class="btn" id="quiz-again">Nur wiederholen</button><br>
+        <button class="btn secondary" id="quiz-reset">Block von vorn lernen</button><br>
         <button class="btn secondary" id="quiz-end">Zur Übersicht</button>
       </div>`;
     $('#quiz-again').onclick = () => startQuiz(quiz.deckIds, quiz.title);
+    $('#quiz-reset').onclick = () => { quiz.pool.forEach(id => delete m[id]); save(); startQuiz(quiz.deckIds, quiz.title); };
     $('#quiz-end').onclick = () => { quiz = null; go('learn'); };
     return;
   }
+  // Fortschritt der aktuellen 5er-Gruppe: ein Punkt je richtiger Antwort in Folge
+  const dots = id => '●'.repeat(Math.min(quiz.streak[id] || 0, QUIZ_STREAK)) + '○'.repeat(Math.max(0, QUIZ_STREAK - (quiz.streak[id] || 0)));
+  const groupHtml = `<div class="quiz-group">${cur.review ? '<span class="quiz-review">🔁 Wiederholung</span>' : `Neue Wörter: ${quiz.active.length} in Arbeit · <span class="quiz-dots">${dots(cur.id)}</span>`}</div>`;
   const card = db.cards[cur.id];
   const askRu = cur.q === 'ru';
   const L = learnLang();
@@ -2351,6 +2409,7 @@ function renderQuiz() {
   if (!quiz.answer) {
     view.innerHTML = `
       <div class="quiz">
+        ${groupHtml}
         <div class="quiz-prompt">
           <div class="lang-tag">${askRu ? LEARN_LANGS[L].name : 'Deutsch'}</div>
           <div class="q-word">${esc(prompt)}</div>${askRu ? say(prompt) : ''}
@@ -2373,7 +2432,8 @@ function renderQuiz() {
     view.innerHTML = `
       <div class="quiz">
         <div class="quiz-result ${r.ok ? 'ok' : 'bad'}">
-          <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : r.typo ? '✓ Richtig (kleiner Tippfehler)' : '✓ Richtig!') : '✗ Leider falsch – kommt gleich noch einmal'}</b>
+          <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : r.typo ? '✓ Richtig (kleiner Tippfehler)' : '✓ Richtig!') : r.lost ? '✗ Leider falsch – das Wort kommt zurück in die Übungsgruppe' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
+          ${r.mastered ? `<div class="quiz-mastered">⭐ Dieses Wort sitzt jetzt (${QUIZ_STREAK}× richtig in Folge)!${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(r.expected)}</b></div>
         </div>
@@ -2665,17 +2725,40 @@ function startDrill(deckIds, title) {
   renderDrill();
 }
 
+// Gedächtnis des Konjugationstrainings je Verb: s = so oft hintereinander beim ersten Versuch richtig,
+// recent = zuletzt gefragte Formen (damit Person und Zeitform wechseln), t = zuletzt geübt
+const DRILL_SURE = 3;
+const drillStats = () => {
+  const all = db.drillStats || (db.drillStats = {});
+  return all[learnLang()] || (all[learnLang()] = {});
+};
+
 function beginDrill() {
   const tenses = drillTenses();
+  const st = drillStats();
+  const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
   const cards = learnCards(drill.deckIds).filter(c => c.type === 'verbpair');
-  for (let i = cards.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [cards[i], cards[j]] = [cards[j], cards[i]]; }
+  // Reihenfolge: Verben in Arbeit (noch nicht sicher), dann neue Verben aus dem Block (häufigste zuerst), dann sichere zur Wiederholung
+  const inWork = shuffle(cards.filter(c => st[c.id] && st[c.id].s < DRILL_SURE));
+  const fresh = cards.filter(c => !st[c.id]);
+  const sure = cards.filter(c => st[c.id] && st[c.id].s >= DRILL_SURE).sort((a, b) => (st[a.id].t || 0) - (st[b.id].t || 0));
+  const order = inWork.slice(0, 12).concat(fresh, inWork.slice(12), sure);
   const queue = [];
-  for (const c of cards) {
+  for (const c of order) {
     if (queue.length >= DRILL_SIZE) break;
     const tasks = drillTasks(c, tenses);
-    if (tasks.length) queue.push({ ...tasks[Math.floor(Math.random() * tasks.length)], id: c.id, tries: 0 });
+    if (!tasks.length) continue;
+    // Formen, die zuletzt dran waren, auslassen; seltener geübte Zeitformen bevorzugen
+    const recent = (st[c.id] && st[c.id].recent) || [];
+    const unseen = tasks.filter(t => !recent.includes(`${t.key}:${t.i}`));
+    const pool = unseen.length ? unseen : tasks;
+    const count = k => recent.filter(r => r.startsWith(k + ':')).length;
+    const minCount = Math.min(...pool.map(t => count(t.key)));
+    const best = pool.filter(t => count(t.key) === minCount);
+    queue.push({ ...best[Math.floor(Math.random() * best.length)], id: c.id, tries: 0 });
   }
   if (!queue.length) { toast('Keine passenden Verben gefunden'); return; }
+  shuffle(queue);
   Object.assign(drill, { setup: false, queue, total: queue.length, firstTry: 0, cur: null, answer: null });
   document.addEventListener('keydown', drillKeys);
   nextDrill();
@@ -2699,14 +2782,33 @@ function drillCheck(text) {
   if (ok && cur.tries === 1) drill.firstTry++;
   if (!ok) drill.queue.splice(Math.min(QUIZ_GAP, drill.queue.length), 0, cur);
   drill.answer = { text, ok, accent };
+  if (cur.tries === 1) drill.answer.before = drillRecord(cur, ok);
   renderDrill();
+}
+
+// Nur der erste Versuch zählt fürs Gedächtnis: richtig → Serie +1 (sicher ab DRILL_SURE), falsch → 0
+function drillRecord(cur, ok) {
+  const st = drillStats();
+  const before = st[cur.id] ? { ...st[cur.id], recent: [...(st[cur.id].recent || [])] } : null;
+  const s = st[cur.id] || (st[cur.id] = { s: 0, recent: [] });
+  s.s = ok ? s.s + 1 : 0;
+  s.t = Date.now();
+  s.recent = (s.recent || []).filter(r => r !== `${cur.key}:${cur.i}`).concat(`${cur.key}:${cur.i}`).slice(-8);
+  if (ok && s.s === DRILL_SURE) drill.answer.sure = true;
+  save();
+  return before;
 }
 
 function drillOverride() {
   const cur = drill.cur;
   const i = drill.queue.indexOf(cur);
   if (i >= 0) drill.queue.splice(i, 1);
-  if (cur.tries === 1) drill.firstTry++;
+  if (cur.tries === 1) {
+    drill.firstTry++;
+    const st = drillStats();
+    if (drill.answer.before) st[cur.id] = drill.answer.before; else delete st[cur.id];
+    drillRecord(cur, true);
+  }
   drill.answer.ok = true;
   drill.answer.override = true;
   renderDrill();
@@ -2725,7 +2827,8 @@ function renderDrill() {
     $('#header-extra').innerHTML = '';
     view.innerHTML = `
       <div class="quiz">
-        <p>Welche Zeitformen möchtest du üben? Es kommen ${DRILL_SIZE} zufällige Verben aus den gewählten Decks.</p>
+        <p>Welche Zeitformen möchtest du üben? Es kommen ${DRILL_SIZE} Aufgaben: zuerst Verben, die noch nicht sitzen, dann neue aus dem Block. Person und Zeitform wechseln jedes Mal.</p>
+        <p class="sub" style="color:var(--muted);font-size:13px">${(() => { const st = drillStats(); const vs = learnCards(drill.deckIds).filter(c => c.type === 'verbpair'); return `${vs.filter(c => st[c.id] && st[c.id].s >= DRILL_SURE).length} von ${vs.length} Verben sitzen (${DRILL_SURE}× hintereinander richtig).`; })()}</p>
         <div class="chips drill-chips">${DRILL_TENSES[L].map(([k, t]) => `<button class="chip ${sel.has(k) ? 'active' : ''}" data-tense="${k}">${esc(t)}</button>`).join('')}</div>
         <div class="btn-row"><button class="btn" id="drill-go">Los geht's</button></div>
         <p class="sub" style="color:var(--muted);font-size:13px">${L === 'es' ? 'Akzente zählen: habló ist nicht hablo. Reflexive Verben mit Pronomen eintippen (me levanto).' : 'Betonungszeichen musst du nicht eintippen.'}</p>
@@ -2787,6 +2890,7 @@ function renderDrill() {
       <div class="quiz">
         <div class="quiz-result ${r.ok ? 'ok' : r.accent ? 'warn' : 'bad'}">
           <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : '✓ Richtig!') : r.accent ? '⚠️ Akzent vergessen oder falsch – fast richtig! Kommt gleich noch einmal.' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
+          ${r.sure ? `<div class="quiz-mastered">⭐ Dieses Verb sitzt jetzt (${DRILL_SURE}× hintereinander richtig) – ab jetzt kommen mehr neue Verben dran.</div>` : ''}
           <div>${esc(cur.verb)} · ${esc(cur.person)} · <span class="${DRILL_TENSE_CLS[cur.key] || ''}">${esc(cur.tense)}</span></div>
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(cur.answer)}</b> ${say(cur.answer)}</div>
