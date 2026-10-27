@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 56;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 57;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1406,6 +1406,43 @@ function ruConjType(inf, ya, ty) {
   return '1. Konjugation (е: -ешь, -ет, -ем, -ете, -ут/-ют)';
 }
 
+// Präsensstamm, der sich nicht aus dem Infinitiv ableiten lässt (поня́ть → пойму́, брать → беру́, пить → пью)
+const RU_STEM_GROUPS = [
+  [/(йти|йтись|^идти)$/, 'Verben auf -йти sind Formen von идти́: прийти́ → приду́, пойти́ → пойду́, вы́йти → вы́йду (Stamm -д-).'],
+  [/быть$/, 'Verben mit -быть bilden die Formen wie быть: забы́ть → забу́ду, прибы́ть → прибу́ду.'],
+  [/честь$/, '-честь wird zu -чт-: уче́сть → учту́, предпоче́сть → предпочту́.'],
+  [/(сти|сть|стись)$/, 'Verben auf -сти/-сть: im Präsens/Futur steht statt с ein д oder т (вести́ → веду́, цвести́ → цвету́, класть → кладу́, упа́сть → упаду́, сесть → ся́ду). Welches, zeigt die я-Form.'],
+  [/чь(ся)?$/, 'Verben auf -чь: im Präsens kommt г oder к zurück (мочь → могу́, печь → пеку́, течь → теку́, лечь → ля́гу, дости́чь → дости́гну). я- und они-Form haben г/к, die anderen ж/ч.'],
+  [/гнать$/, 'гнать → гоню́, го́нишь: ein -о- kommt dazu, 2. Konjugation.'],
+  [/слать$/, 'слать → шлю, шлёшь (посла́ть → пошлю́).'],
+  [/жать$/, 'жать → жму, жмёшь (пожа́ть → пожму́).'],
+  [/плыть$/, 'плыть → плыву́, плывёшь: ein -в- kommt dazu.'],
+  [/брить$/, 'брить → бре́ю, бре́ешь.'],
+  [/стыть$/, 'осты́ть → осты́ну: ein -н- kommt dazu.'],
+  [/нять$/, 'Verben auf -нять bekommen ein -м- bzw. -йм-/-ним-: поня́ть → пойму́, приня́ть → приму́, снять → сниму́, заня́ть → займу́, подня́ть → подниму́.'],
+  [/^взять$/, 'взять → возьму́, возьмёшь: der Stamm wird zu возьм-.'],
+  [/чать$/, 'нача́ть → начну́, начнёшь: im Präsens/Futur ein -н-.'],
+  [/[бвлпш]ить$/, 'Kurze Verben auf -ить der 1. Konjugation (пить, бить, лить, шить): Stamm + ь + е-Endungen: пью, пьёшь.'],
+  [/ыть$/, 'Verben auf -ыть: ы wird zu о: мыть → мо́ю, откры́ть → откро́ю, закры́ть → закро́ю.'],
+  [/ереть$/, 'Verben auf -ереть verlieren das -е-: умере́ть → умру́, запере́ть → запру́.'],
+  [/(брать|звать|драть)$/, 'брать → беру́, звать → зову́: zwischen die Konsonanten kommt ein Vokal.'],
+  [/(стать|деть)$/, 'стать → ста́ну, деть → де́ну: im Präsens/Futur ein -н-.'],
+  [/жить$/, 'жить → живу́, живёшь: ein -в- kommt dazu.'],
+  [/петь$/, 'петь → пою́, поёшь.'],
+  [/ехать$/, 'е́хать → е́ду, е́дешь: der Stamm wird zu ед-.'],
+];
+function ruStemNote(inf, ya, ty) {
+  if (!inf || !ty || /—/.test(ty + ya)) return '';
+  const p = s => (s || '').replace(STRESS, '').replace(/ё/g, 'е').replace(/(ся|сь)$/, '');
+  const A = p(inf).replace(/(ть|ти|чь)$/, ''), P = p(ty).replace(/(ешь|ишь)$/, '');
+  const base = A.replace(/[аеиояуы]$/, '');
+  const normal = P === A || P === base || !!ruStemAlt(base, P) || !!ruStemAlt(base, p(ya).replace(/[уюя]$/, ''))
+    || /[оеа]ва$/.test(A) || CONJ_IRREGULAR[p(inf)] || /дать$/.test(p(inf)) || /(^|[^а-я])есть$/.test(p(inf));
+  if (normal) return '';
+  const group = RU_STEM_GROUPS.find(([re]) => re.test(p(inf)));
+  return `⚠️ <b>Der Präsens-/Futurstamm (${esc(P)}-) lässt sich nicht aus dem Infinitiv (${esc(inf)}) ableiten.</b> Infinitiv und я/ты-Form muss man zusammen lernen – deshalb stehen beide auf der Karte; aus я und ты ergeben sich alle anderen Formen.${group ? ' ' + group[1] : ''}`;
+}
+
 // „Warum diese Endung?“ (Dropdown): -у oder -ю, -ут/-ют oder -ат/-ят, -е- oder -ё- – mit den Formen dieses Verbs.
 // i (optional) = gefragte Person (0 = я … 5 = они), wird dann hervorgehoben.
 function ruEndingWhy(inf, ya, ty, forms, i) {
@@ -1437,6 +1474,8 @@ function ruEndingWhy(inf, ya, ty, forms, i) {
     ? `<b>-ё-</b> (${esc(ty)}): Die Endung ist <b>betont</b>, dann wird е zu ё (-ёшь, -ёт, -ём, -ёте).`
     : `<b>-е-</b> (${esc(ty)}): Die Endung ist unbetont, deshalb е (-ешь, -ет, -ем, -ете).`);
   else why.push('2. Konjugation: ты, он, мы, вы immer mit <b>-и-</b> (-ишь, -ит, -им, -ите).');
+  const stemNote = ruStemNote(inf, ya, ty);
+  if (stemNote) why.unshift(stemNote);
   if (irregular) why.push('⚠️ Dieses Verb ist unregelmäßig – hier gelten die Regeln nur teilweise.');
   return `<details class="vf-why"><summary>Warum diese Endung?</summary>
     <table class="rtable small">
@@ -2692,6 +2731,8 @@ function ruWhy(t) {
     const type = ruConjType(inf, t.ya, t.ty);
     lines.push(`<div><b>${esc(type)}</b>${t.key === 'futpf' ? ' – vollendetes Verb: diese Formen sind <span class="t-fut">Zukunft</span>.' : ''}</div>`);
     if (/unregelmäßig|gemischt/.test(type)) lines.push('<div>• Unregelmäßiges Verb – die Formen muss man lernen.</div>');
+    const stemNote = ruStemNote(inf, t.ya, t.ty);
+    if (stemNote) lines.push(`<div>• ${stemNote}</div>`);
     const ya = plain(t.ya).replace(/(сь|ся)$/, ''), ty = plain(t.ty).replace(/(сь|ся)$/, '');
     const yaStem = ya.replace(/[уюя]$/, ''), tyStem = ty.replace(/(ешь|ёшь|ишь)$/, '').replace(/[ео]$/, '');
     if (/ишь$/.test(ty)) {
@@ -2948,8 +2989,8 @@ function renderDrill() {
           ${r.accent && L === 'es' ? `<div class="drill-why">${esAccentWhy(cur, r.text)}</div>` : ''}
         </div>
         <div class="drill-why-box">
-          <div class="drill-why-title">Warum heißt die Form so?</div>
-          ${L === 'es' ? esWhy(cur) : ruWhy(cur)}
+          <div class="drill-why-title">Warum heißt die Form so? <button class="info" aria-label="Erklärung anzeigen">ⓘ</button></div>
+          <div class="vp-rule drill-why-body">${L === 'es' ? esWhy(cur) : ruWhy(cur)}</div>
         </div>
         <div class="btn-row">
           <button class="btn" id="drill-next">Weiter</button>
