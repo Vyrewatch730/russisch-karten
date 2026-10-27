@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 52;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 53;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -765,8 +765,9 @@ function esMoreHtml(v) {
   if (!t) return '';
   const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
   const say = s => `<button class="say" data-lang="es" data-say="${esc(s)}">🔊</button>`;
+  const TCLS = { imperf: 't-past', perf: 't-past', futs: 't-fut' };
   const block = (k, title, forms) => `
-    <tr class="vf-h"><th colspan="2">${title}${info}</th></tr><tr class="vp-rule"><td colspan="2">${ES_TENSE_INFO[k]}</td></tr>
+    <tr class="vf-h"><th colspan="2" class="${TCLS[k] || ''}">${title}${info}</th></tr><tr class="vp-rule"><td colspan="2">${ES_TENSE_INFO[k]}</td></tr>
     ${forms.map((f, i) => `<tr><td>${ES_PERSONS[i]}</td><td>${esc(f)}</td></tr>`).join('')}`;
   const IMP = ['tú', 'tú (verneint)', 'usted', 'ustedes'];
   return `<details class="vf-all es-more"><summary>Alle Zeitformen anzeigen</summary><table class="vf-table">
@@ -1218,6 +1219,26 @@ const CASE_INFO = {
   Instrumental: 'Womit? Mit wem? Als was? – Werkzeug (писа́ть ру́чкой), с = zusammen mit, nach стать / быть / рабо́тать (als …), занима́ться, интересова́ться; Ort nach за, под, над, пе́ред, ме́жду.',
   'Präpositiv': 'Wo? Worüber? – steht nur mit Präposition: в / на (wo?), о / об (über etwas sprechen, denken).',
 };
+// Bewegungsverb mit Vorsilbe: Vorsilbe + Grundverb erklären, Beispiele mit genau diesem Verb (unvollendet und vollendet)
+const MOTION_ROOTS = [
+  [/ходить$/, '-ходи́ть / -йти́', 'gehen (zu Fuß)'],
+  [/езжать$/, '-езжа́ть / -е́хать', 'fahren'],
+  [/водить$/, '-води́ть / -вести́', 'führen (jemanden zu Fuß)'],
+  [/носить$/, '-носи́ть / -нести́', 'tragen'],
+  [/возить$/, '-вози́ть / -везти́', 'bringen (mit Fahrzeug)'],
+  [/летать$/, '-лета́ть / -лете́ть', 'fliegen'],
+  [/бегать$/, '-бега́ть / -бежа́ть', 'laufen, rennen'],
+];
+function motionPrefixHtml(x) {
+  const root = MOTION_ROOTS.find(([re]) => re.test((x.ipf || '').replace(STRESS, '')));
+  const say = t => `<button class="say" data-say="${esc(t)}">🔊</button>`;
+  const ex = (ru, de, label) => ru ? `<div class="nn-ex"><i>${label}:</i> ${esc(ru)} ${say(ru)}<div class="pron nn-ex-pron">[${esc(ruPron(ru))}]</div>${de ? `<details class="nn-ex-de"><summary>Übersetzung anzeigen</summary>${esc(de)}</details>` : ''}</div>` : '';
+  return `<div class="motion-prefix"><b>${esc(x.motion_prefix)}</b> = ${esc(x.motion_meaning || '')}${root ? ` &nbsp;+&nbsp; <b>${root[1]}</b> = ${root[2]}` : ''}</div>
+    <div>Also: <b>${esc(x.ipf)}</b> / <b>${esc(x.pf || '')}</b> = ${esc(x.motion_meaning || '')}${root ? ` (${root[2]})` : ''}</div>
+    ${ex(x.motion_ex_ipf, x.motion_ex_ipf_de, 'unvollendet (wiederholt, gerade dabei)')}
+    ${ex(x.motion_ex_pf, x.motion_ex_pf_de, 'vollendet (einmal, mit Ergebnis)')}
+    <hr class="motion-sep">`;
+}
 // Erklärung der Verben der Bewegung (hinter ⓘ bei Bewegungsverben)
 const MOTION_INFO = `
   <div>Bewegungsverben gibt es paarweise, <b>beide unvollendet</b>:</div>
@@ -1396,9 +1417,9 @@ function allFormsHtml(x, p, imp) {
   const tense = p === 'pf' || isByt ? 'Zukunft' : 'Gegenwart';
   const rows = [];
   if (pres) rows.push(`<tr><td colspan="2" class="vf-conj">${esc(ruConjType(x[p], x[p + '_1'], x[p + '_2']))}</td></tr>`);
-  if (pres) rows.push(`<tr><th colspan="2">${tense} ${say(pres)}</th></tr>` + PERS.map((pr, i) => `<tr><td>${pr}</td><td>${esc(pres[i])}</td></tr>`).join(''));
-  if (p === 'ipf' && pres && !isByt) rows.push(`<tr><td colspan="2" class="vf-note">Zukunft: бу́ду / бу́дешь … + ${esc(x[p])}</td></tr>`);
-  if (past) rows.push(`<tr><th colspan="2">Vergangenheit ${say(past)}</th></tr>` + ['он', 'она́', 'оно́', 'они́'].map((pr, i) => `<tr><td>${pr}</td><td>${esc(past[i])}</td></tr>`).join(''));
+  if (pres) rows.push(`<tr><th colspan="2" class="${tense === 'Zukunft' ? 't-fut' : ''}">${tense} ${say(pres)}</th></tr>` + PERS.map((pr, i) => `<tr><td>${pr}</td><td>${esc(pres[i])}</td></tr>`).join(''));
+  if (p === 'ipf' && pres && !isByt) rows.push(`<tr><td colspan="2" class="vf-note"><span class="t-fut">Zukunft:</span> бу́ду / бу́дешь … + ${esc(x[p])}</td></tr>`);
+  if (past) rows.push(`<tr><th colspan="2" class="t-past">Vergangenheit ${say(past)}</th></tr>` + ['он', 'она́', 'оно́', 'они́'].map((pr, i) => `<tr><td>${pr}</td><td>${esc(past[i])}</td></tr>`).join(''));
   if (imp && imp !== '—') rows.push(`<tr><th colspan="2">Imperativ</th></tr><tr><td>ты</td><td>${esc(imp)}!</td></tr><tr><td>вы</td><td>${esc(ruImperativePlural(imp))}!</td></tr>`);
   return `<details class="vf-all"><summary>Alle Formen anzeigen</summary><table class="vf-table">${rows.join('')}</table></details>`;
 }
@@ -1417,7 +1438,7 @@ function conjugationHtml(card) {
     const kind = irregular ? 'unregelmäßig' : '1. Konjugation (е-Konjugation)';
     const tense = p === 'pf' ? 'Zukunft' : 'Gegenwart';
     const rows = ['я', 'ты', 'он/она́', 'мы', 'вы', 'они́'].map((pr, i) => `<span><i>${pr}</i> ${esc(forms[i])}</span>`).join('');
-    items.push(`<div class="conj-ru-item"><b>${esc(x[p])}</b> – ${kind} · ${tense}<div class="conj-ru-forms">${rows}</div></div>`);
+    items.push(`<div class="conj-ru-item"><b>${esc(x[p])}</b> – ${kind} · <span class="${p === 'pf' ? 't-fut' : ''}">${tense}</span><div class="conj-ru-forms">${rows}</div></div>`);
   }
   if (!items.length) return '';
   return `<div class="conj-ru">
@@ -1825,7 +1846,7 @@ function verbPairHtml(card) {
   };
   const motion = MOTION_LABEL[x.motion] ? `
     <div class="vp-motion">${MOTION_LABEL[x.motion]}${x.motion_pair ? ` · Gegenstück: <b>${esc(x.motion_pair)}</b>` : ''}${info}</div>
-    <div class="vp-rule">${MOTION_INFO}</div>` : '';
+    <div class="vp-rule">${x.motion_prefix ? motionPrefixHtml(x) : ''}${MOTION_INFO}</div>` : '';
   // Rektion: welche Präposition und welchen Fall das Verb verlangt; ⓘ erklärt die genannten Fälle
   const gov = x.government ? `
     <div class="vp-gov"><b>verlangt:</b> ${esc(x.government)}${info}</div>
@@ -1858,7 +1879,7 @@ function esConjHtml(card) {
     const past = x[p + '_past'] ? split(x[p + '_past']) : c.past;
     return `<table class="conj">
       <caption>${esc(c.label)}</caption>
-      <thead><tr><th></th><th>Presente</th><th>Pretérito</th><th>Futuro</th></tr></thead>
+      <thead><tr><th></th><th>Presente</th><th class="t-past">Pretérito</th><th class="t-fut">Futuro</th></tr></thead>
       <tbody>${ES_PERSONS.map((pr, i) => `
         <tr><th>${pr}</th><td>${esc(pres[i] || '')}</td><td>${esc(past[i] || '')}</td><td>${esc(c.fut[i])}</td></tr>`).join('')}
       </tbody>
@@ -2206,6 +2227,20 @@ function stopStudyKeys() { document.removeEventListener('keydown', studyKeys); d
    Richtung wie in der Übersicht gewählt (RU → DE, DE → RU oder gemischt).
    Falsche Wörter kommen nach ein paar anderen Karten noch einmal, bis alle richtig sind.
    ============================================================ */
+// Karte im Ergebnis (Schreib- und Konjugationsmodus): vorne die Lernsprache, Antippen zeigt die Übersetzung
+function flipCardHtml(card) {
+  return `<div class="card3d tall result-card" id="result-card">
+    <div class="card-inner">
+      <div class="face front">${cardLearnSide(card)}<div class="hint">Tippen zum Umdrehen – Übersetzung</div></div>
+      <div class="face back">${cardTrSide(card)}${conjugationHtml(card)}${extrasHtml(card)}<div class="hint">Tippen zum Zurückdrehen</div></div>
+    </div>
+  </div>`;
+}
+function wireFlipCard(view) {
+  const c = $('#result-card', view);
+  if (c) c.onclick = e => { if (!e.target.closest('.say, .info, details')) c.classList.toggle('flipped'); };
+}
+
 let quiz = null;
 const QUIZ_SIZE = 20;
 const QUIZ_GAP = 3;          // falsch beantwortete Karte kommt nach so vielen anderen wieder
@@ -2346,12 +2381,12 @@ function renderQuiz() {
           <button class="btn" id="quiz-next">Weiter</button>
           ${!r.ok ? '<button class="btn secondary" id="quiz-ok">Ich lag doch richtig</button>' : ''}
         </div>
-        <div class="quiz-card">${askRu ? cardTrSide(card) : cardLearnSide(card)}</div>
-        <div class="quiz-card">${askRu ? cardLearnSide(card) : cardTrSide(card)}</div>
+        ${flipCardHtml(card)}
       </div>`;
     $('#quiz-next').onclick = nextQuiz;
     $('#quiz-ok')?.addEventListener('click', quizOverride);
   }
+  wireFlipCard(view);
   $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say, b.dataset.lang); });
   $$('.info', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
@@ -2377,7 +2412,7 @@ const drillTenses = () => {
   return sel && sel.length ? sel : DRILL_DEFAULT[L];
 };
 
-// Alle möglichen Aufgaben zu einer Karte: { prompt (Verb), person, tense (Name), answer }
+// Alle möglichen Aufgaben zu einer Karte: { verb, person, tense (Name), key (Zeitform), i (Person), answer, … }
 function drillTasks(card, tenses) {
   const tasks = [];
   if (learnLang() === 'es') {
@@ -2387,41 +2422,239 @@ function drillTasks(card, tenses) {
     const pers = m.dat ? ES_DATIVE.map(p => p + ' …') : ES_PERSONS;
     const forms = { pres: c.pres, past: c.past, imperf: m.imperf, perf: m.perf, futs: m.futs, cond: m.cond, subj: m.subj };
     const name = Object.fromEntries(DRILL_TENSES.es);
+    const verb = v.split(':')[0];
     for (const t of tenses) {
       if (t === 'imp') {
-        if (m.imp) ['tú', 'tú (verneint)', 'usted', 'ustedes'].forEach((p, i) => tasks.push({ verb: v.split(':')[0], person: p, tense: name.imp, answer: m.imp[i] }));
-      } else if (forms[t]) forms[t].forEach((f, i) => tasks.push({ verb: v.split(':')[0], person: pers[i], tense: name[t], answer: f }));
+        if (m.imp) ['tú', 'tú (verneint)', 'usted', 'ustedes'].forEach((p, i) => tasks.push({ verb, spec: v, person: p, tense: name.imp, key: 'imp', i, answer: m.imp[i] }));
+      } else if (forms[t]) forms[t].forEach((f, i) => tasks.push({ verb, spec: v, person: pers[i], tense: name[t], key: t, i, answer: f }));
     }
   } else {
     const x = card.x;
     const PERS = ['я', 'ты', 'он / она', 'мы', 'вы', 'они'];
     const name = Object.fromEntries(DRILL_TENSES.ru);
     const impOf = p => (x[p + '_imp'] !== undefined ? x[p + '_imp'] : ruImperative(x[p], x[p + '_1'], x[p + '_2']));
+    const base = p => ({ verb: x[p], inf: x[p], ya: x[p + '_1'], ty: x[p + '_2'], asp: p });
     for (const t of tenses) {
       if (t === 'pres' && x.ipf && x.ipf.replace(STRESS, '') !== 'быть') {
         const f = ruAllPresent(x.ipf, x.ipf_1, x.ipf_2);
-        if (f) f.forEach((a, i) => tasks.push({ verb: x.ipf, person: PERS[i], tense: name.pres, answer: a }));
+        if (f) f.forEach((a, i) => tasks.push({ ...base('ipf'), person: PERS[i], tense: name.pres, key: 'pres', i, answer: a, all: f }));
       }
       if (t === 'futpf' && x.pf && x.pf !== x.ipf) {
         const f = ruAllPresent(x.pf, x.pf_1, x.pf_2);
-        if (f) f.forEach((a, i) => tasks.push({ verb: x.pf, person: PERS[i], tense: name.futpf, answer: a }));
+        if (f) f.forEach((a, i) => tasks.push({ ...base('pf'), person: PERS[i], tense: name.futpf, key: 'futpf', i, answer: a, all: f }));
       }
       if (t === 'past') for (const p of ['ipf', 'pf']) {
         if (!x[p] || (p === 'pf' && x.pf === x.ipf)) continue;
         const f = ruPastForms(x[p]);
-        if (f) [['он', 0], ['она', 1], ['они', 3]].forEach(([pr, i]) => tasks.push({ verb: x[p], person: pr, tense: name.past, answer: f[i] }));
+        if (f) [['он', 0], ['она', 1], ['они', 3]].forEach(([pr, i]) => tasks.push({ ...base(p), person: pr, tense: name.past, key: 'past', i, answer: f[i], all: f }));
       }
       if (t === 'imp') for (const p of ['ipf', 'pf']) {
         if (!x[p] || (p === 'pf' && x.pf === x.ipf)) continue;
         const imp = impOf(p);
         if (imp && imp !== '—') {
-          tasks.push({ verb: x[p], person: 'ты', tense: name.imp, answer: imp });
-          tasks.push({ verb: x[p], person: 'вы', tense: name.imp, answer: ruImperativePlural(imp) });
+          const own = x[p + '_imp'] !== undefined;
+          tasks.push({ ...base(p), person: 'ты', tense: name.imp, key: 'imp', i: 0, answer: imp, own });
+          tasks.push({ ...base(p), person: 'вы', tense: name.imp, key: 'imp', i: 1, answer: ruImperativePlural(imp), sg: imp, own });
         }
       }
     }
   }
   return tasks;
+}
+
+// Farbe und Schrift der Zeitform (Vergangenheit braun, Zukunft gold)
+const DRILL_TENSE_CLS = { past: 't-past', imperf: 't-past', perf: 't-past', futs: 't-fut', futpf: 't-fut' };
+
+/* ---------- Warum heißt die Form so? (Ergebnis im Konjugationstraining) ---------- */
+const ES_NAIVE = {
+  pres: { ar: ['o', 'as', 'a', 'amos', 'an'], er: ['o', 'es', 'e', 'emos', 'en'], ir: ['o', 'es', 'e', 'imos', 'en'] },
+  past: { ar: ['é', 'aste', 'ó', 'amos', 'aron'], er: ['í', 'iste', 'ió', 'imos', 'ieron'], ir: ['í', 'iste', 'ió', 'imos', 'ieron'] },
+  imperf: { ar: ['aba', 'abas', 'aba', 'ábamos', 'aban'], er: ['ía', 'ías', 'ía', 'íamos', 'ían'], ir: ['ía', 'ías', 'ía', 'íamos', 'ían'] },
+  subj: { ar: ['e', 'es', 'e', 'emos', 'en'], er: ['a', 'as', 'a', 'amos', 'an'], ir: ['a', 'as', 'a', 'amos', 'an'] },
+};
+const ES_TENSE_RULE = {
+  pres: 'Presente: Stamm + -o, -as/-es, -a/-e, -amos/-emos/-imos, -an/-en.',
+  past: 'Pretérito: -ar → -é, -aste, -ó, -amos, -aron · -er/-ir → -í, -iste, -ió, -imos, -ieron.',
+  imperf: 'Imperfecto: -ar → -aba … · -er/-ir → -ía …',
+  futs: 'Futuro: ganzer Infinitiv + -é, -ás, -á, -emos, -án.',
+  cond: 'Condicional: ganzer Infinitiv + -ía, -ías, -ía, -íamos, -ían.',
+  perf: 'Pretérito perfecto: he, has, ha, hemos, han + Partizip (-ado / -ido).',
+  subj: 'Subjuntivo: Stamm der yo-Form + „falscher“ Vokal: -ar → -e, -er/-ir → -a.',
+  imp: 'Imperativo: tú = él-Form; verneint, usted, ustedes = Subjuntivo.',
+};
+// Stammwechsel aus dem Vergleich ablesen (tenes → tienes: e → ie)
+function esStemDiff(naive, actual) {
+  if (!naive || !actual) return '';
+  for (const [from, to] of [['e', 'ie'], ['o', 'ue'], ['u', 'ue'], ['e', 'i'], ['o', 'u']]) {
+    for (let p = naive.indexOf(from); p >= 0; p = naive.indexOf(from, p + 1)) {
+      if (naive.slice(0, p) + to + naive.slice(p + from.length) === actual) return `<b>Stammwechsel ${from} → ${to}</b> im betonten Stamm (${esc(naive)} → ${esc(actual)}).`;
+    }
+  }
+  return '';
+}
+const verbOnly = s => (s || '').replace(/^(no )?(me|te|se|nos|le|les) /, '').replace(/^(no )/, '').split(' ')[0];
+
+function esWhy(t) {
+  const [spec, forced] = t.spec.trim().split(':');
+  let inf = spec.trim().split(/\s+/)[0];
+  const refl = /(ar|er|ir|ír)se$/.test(inf);
+  if (refl) inf = inf.slice(0, -2);
+  const end = inf.slice(-2).replace('í', 'i'), stem = inf.slice(0, -2);
+  const cls = forced || ES_STEM[inf] || '';
+  const key = ES_IRREG[inf] ? inf : ES_PREFIXABLE.find(k => inf.endsWith(k) && inf.length > k.length);
+  const k = t.key, i = t.i;
+  const actual = verbOnly(t.answer);
+  // Regelmäßig gebildete Form zum Vergleich
+  let naive = '';
+  if (ES_NAIVE[k] && ES_NAIVE[k][end]) naive = stem + ES_NAIVE[k][end][i];
+  if (k === 'futs') naive = inf.replace('ír', 'ir') + ['é', 'ás', 'á', 'emos', 'án'][i];
+  if (k === 'cond') naive = inf.replace('ír', 'ir') + ['ía', 'ías', 'ía', 'íamos', 'ían'][i];
+  if (k === 'perf') naive = stem + (end === 'ar' ? 'ado' : 'ido');
+  if (k === 'imp') naive = i === 0 ? stem + ES_NAIVE.pres[end][2] : stem + ES_NAIVE.subj[end][i === 1 ? 1 : i === 2 ? 2 : 4];
+  const compare = k === 'perf' ? t.answer.split(' ').pop() : k === 'imp' && i === 1 ? t.answer.split(' ').pop() : actual;
+  const lines = [`<div>${ES_TENSE_RULE[k] || ''}</div>`];
+  const plain = s => s.replace(/[áéíóú]/g, v => ES_DEACCENT[v]);
+  if (!naive || compare === naive || (refl && plain(compare) === plain(naive) && k === 'imp')) {
+    lines.push(`<div>✅ <b>Regelmäßig</b>: ${esc(stem)}- + Endung → ${esc(t.answer)}.</div>`);
+    if (refl) lines.push(`<div>Reflexiv: Das Pronomen (${k === 'imp' ? 'angehängt, Akzent hält die Betonung' : 'me, te, se, nos, se'}) gehört dazu.</div>`);
+    return lines.join('');
+  }
+  lines.push(['ser', 'ir'].includes(inf) ? `<div>⚠️ <b>Ganz unregelmäßiges Verb</b> – die Formen muss man lernen.</div>` : `<div>⚠️ <b>Weicht von der Regel ab:</b> regelmäßig wäre <s>${esc(naive)}</s>, richtig ist <b>${esc(compare)}</b>.</div>`);
+  const why = [];
+  const yoStem = k === 'subj' || (k === 'imp' && i > 0);
+  if (ES_IRREG_NOTE[inf] && ['pres', 'past', 'subj', 'imp'].includes(k)) why.push(ES_IRREG_NOTE[inf]);
+  if (k === 'imperf' && ES_IMPF_IRREG[inf]) why.push(`Nur drei Verben sind im Imperfecto unregelmäßig: ser (era), ir (iba), ver (veía).`);
+  if ((k === 'futs' || k === 'cond') && esFutStem(inf) !== inf.replace('ír', 'ir')) why.push(`Verkürzter Stamm <b>${esc(esFutStem(inf))}-</b> statt ${esc(inf)}- (wie tendr-, pondr-, saldr-, har-, dir-, podr-, sabr-, querr-).`);
+  if (k === 'perf' && compare !== naive) why.push(`Unregelmäßiges Partizip <b>${esc(esParticiple(inf, end, stem))}</b> (wie hecho, dicho, visto, puesto, escrito, abierto, vuelto, roto, muerto).${/[aeo]ído$/.test(compare) ? ' Hier: Stamm endet auf Vokal → -ído mit Akzent.' : ''}`);
+  if (k === 'imp' && i === 0 && ES_IMP_TU[key || inf]) why.push('Eine der acht kurzen tú-Formen: di, haz, ve, pon, sal, sé, ten, ven.');
+  if (yoStem && !ES_SUBJ_IRREG[inf]) {
+    const yo = esConjugate(inf + (forced ? ':' + forced : '')).pres[0].replace(/^(me|te|se|nos) /, '');
+    if (!yo.startsWith(stem) || yo !== stem + 'o') why.push(`Der Subjuntivo kommt vom Stamm der <b>yo-Form</b>: ${esc(yo)} → ${esc(yo.replace(/o$/, ''))}-.`);
+  }
+  if (yoStem && ES_SUBJ_IRREG[inf]) why.push('Unregelmäßiger Subjuntivo, auswendig lernen (sea, vaya, esté, dé, sepa, haya).');
+  if (key && ['pres', 'past'].includes(k) && !ES_IRREG_NOTE[inf]) {
+    const pre = inf.slice(0, inf.length - key.length);
+    if (k === 'pres' && i === 0) why.push(/g/.test(actual) && !/g/.test(naive)
+      ? `yo-Form mit eingeschobenem <b>-g-</b>${pre ? ` (wie ${key})` : ''}: ${esc(actual)} – genauso tengo, pongo, salgo, hago, digo, traigo.`
+      : esStemDiff(naive, compare) || `Unregelmäßige yo-Form: <b>${esc(actual)}</b> – auswendig lernen (wie sé, quepo, veo, doy, estoy, voy, soy, he).`);
+    else if (k === 'past') why.push(`Pretérito mit eigenem Stamm und ohne Akzent${pre ? ` (wie ${key})` : ''}: tuve, puse, hice, dije, vine, traje.`);
+    else why.push(esStemDiff(naive, compare) || `Unregelmäßiges Verb${pre ? ` (wie ${key})` : ''}.`);
+  }
+  const stressed = i !== 3 && ['pres', 'subj', 'imp'].includes(k);
+  if (['ie', 'ie-i'].includes(cls) && (stressed || (k === 'subj' && i === 3 && end === 'ir'))) why.push(stressed ? '<b>Stammwechsel e → ie</b>: Ist der Stamm betont, wird e zu ie (nicht bei nosotros).' : 'Bei -ir-Verben wird im Subjuntivo auch bei nosotros e → i.');
+  if (['ue', 'ue-u'].includes(cls) && (stressed || (k === 'subj' && i === 3 && end === 'ir'))) why.push(stressed ? '<b>Stammwechsel o → ue</b>: Ist der Stamm betont, wird o zu ue (nicht bei nosotros).' : 'Bei -ir-Verben wird im Subjuntivo auch bei nosotros o → u.');
+  if (cls === 'i' && (stressed || k === 'subj')) why.push('<b>Stammwechsel e → i</b> (wie pedir: pido, pides).');
+  if (['ie-i', 'i'].includes(cls) && k === 'past' && (i === 2 || i === 4)) why.push('-ir-Verb mit Stammwechsel: im Pretérito bei él und ellos <b>e → i</b> (sintió, pidieron).');
+  if (cls === 'ue-u' && k === 'past' && (i === 2 || i === 4)) why.push('-ir-Verb mit Stammwechsel: im Pretérito bei él und ellos <b>o → u</b> (durmió, murieron).');
+  if (['ie-i', 'i', 'ue-u'].includes(cls) && k === 'ger') why.push('Gerundio mit Stammwechsel (sintiendo, durmiendo).');
+  if (cls === 'acc' && stressed) why.push('i bzw. u bekommt einen <b>Akzent</b>, weil es betont ist (envío, continúas).');
+  // Rechtschreibung: Laut bleibt gleich
+  if (end === 'ar' && (k === 'past' && i === 0 || yoStem)) {
+    if (/c$/.test(stem)) why.push('<b>c → qu</b> vor e, damit es wie k klingt (busqué, busque).');
+    if (/g$/.test(stem)) why.push('<b>g → gu</b> vor e, damit es wie g klingt (llegué, llegue).');
+    if (/z$/.test(stem)) why.push('<b>z → c</b> vor e – im Spanischen schreibt man vor e und i c statt z (empecé, empiece).');
+  }
+  if (end !== 'ar' && (k === 'pres' && i === 0 || yoStem)) {
+    if (/g$/.test(stem) && !key) why.push('<b>g → j</b> vor o und a, damit es wie ch klingt (escojo, escoja).');
+    if (/gu$/.test(stem) && !key) why.push('<b>gu → g</b> vor o und a (sigo, siga).');
+    if (/[aeiou]c$/.test(stem) && !key) why.push('Vokal + -cer/-cir: <b>c → zc</b> (conozco, conozca).');
+    if (/[^aeiou]c$/.test(stem) && !key) why.push('Konsonant + -cer: <b>c → z</b> (venzo, venza).');
+  }
+  if (end === 'ir' && /[^gq]u$/.test(stem)) why.push('Verben auf -uir schieben ein <b>y</b> ein (construyo, construyó).');
+  if (end !== 'ar' && /[aeo]$/.test(stem) && k === 'past' && (i === 2 || i === 4)) why.push('Stamm endet auf Vokal: <b>i → y</b> zwischen Vokalen (leyó, leyeron).');
+  if (k === 'imp' && refl) why.push('Pronomen wird angehängt; ein Akzent hält die Betonung an der alten Stelle (levanta + te → levántate).');
+  if (!why.length) why.push(esStemDiff(naive, compare) || 'Diese Form muss man sich merken – sie folgt nicht der Grundregel.');
+  return lines.concat(why.map(w => `<div>• ${w}</div>`)).join('');
+}
+
+// Russisch: Konjugation, Konsonantenwechsel, Betonung, unregelmäßige Formen
+const RU_ALT = [['ст', 'щ'], ['ск', 'щ'], ['д', 'ж'], ['з', 'ж'], ['г', 'ж'], ['с', 'ш'], ['х', 'ш'], ['т', 'ч'], ['т', 'щ'], ['к', 'ч'], ['б', 'бл'], ['п', 'пл'], ['в', 'вл'], ['м', 'мл'], ['ф', 'фл']];
+function ruStemAlt(a, b) {
+  // a: Stamm vorher, b: Stamm nachher → passender Wechsel am Stammende
+  for (const [x, y] of RU_ALT) if (a.endsWith(x) && b.endsWith(y) && a.slice(0, -x.length) === b.slice(0, -y.length)) return [x, y];
+  return null;
+}
+function ruWhy(t) {
+  const plain = s => (s || '').replace(STRESS, '').replace(/ё/g, 'е');
+  const lines = [];
+  const inf = t.inf, pinf = plain(inf);
+  if (t.key === 'pres' || t.key === 'futpf') {
+    const type = ruConjType(inf, t.ya, t.ty);
+    lines.push(`<div><b>${esc(type)}</b>${t.key === 'futpf' ? ' – vollendetes Verb: diese Formen sind <span class="t-fut">Zukunft</span>.' : ''}</div>`);
+    if (/unregelmäßig|gemischt/.test(type)) lines.push('<div>• Unregelmäßiges Verb – die Formen muss man lernen.</div>');
+    const ya = plain(t.ya).replace(/(сь|ся)$/, ''), ty = plain(t.ty).replace(/(сь|ся)$/, '');
+    const yaStem = ya.replace(/[уюя]$/, ''), tyStem = ty.replace(/(ешь|ёшь|ишь)$/, '').replace(/[ео]$/, '');
+    if (/ишь$/.test(ty)) {
+      const alt = ruStemAlt(tyStem, yaStem);
+      if (alt) lines.push(`<div>• <b>Konsonantenwechsel nur in der я-Form:</b> ${alt[0]} → ${alt[1]} (${esc(t.ty)} → ${esc(t.ya)}).${t.i === 0 ? ' Genau das ist hier gefragt!' : ' Hier (nicht я) also der normale Stamm.'}</div>`);
+    } else {
+      const infStem = pinf.replace(/(ся|сь)$/, '').replace(/(ать|ять|еть|ить|оть|уть|ыть|ть|ти|чь)$/, '');
+      const alt = ruStemAlt(infStem, yaStem);
+      if (alt) lines.push(`<div>• <b>Konsonantenwechsel in allen Formen:</b> ${alt[0]} → ${alt[1]} (${esc(inf)} → ${esc(t.ya)}, ${esc(t.ty)}).</div>`);
+      else if (ruStemAlt(yaStem, tyStem)) { const a2 = ruStemAlt(yaStem, tyStem); lines.push(`<div>• <b>Konsonantenwechsel:</b> я- und они́-Form haben ${a2[0]}, alle anderen ${a2[1]} (${esc(t.ya)} – ${esc(t.ty)} – ${esc((t.all || [])[5] || '')}).</div>`); }
+      else if (/ова(ть|ться)$/.test(pinf)) lines.push('<div>• -ова- wird im Präsens zu -у-: рисова́ть → рису́ю, рису́ешь.</div>');
+      else if (/ава(ть|ться)$/.test(pinf)) lines.push('<div>• -ава- verliert das -ва-: дава́ть → даю́, даёшь.</div>');
+    }
+    const stressPos = s => { const m = s.match(/[аеиоуыэюяё](?=́)|ё/); return m ? m.index : -1; };
+    const yaEnd = /[уюя]́/.test(t.ya) || /[уюя]́(сь)?$/.test(t.ya);
+    const tyEnd = /[еёи]́?шь/.test(t.ty) && (/ё/.test(t.ty) || /[еи]́шь/.test(t.ty));
+    if (yaEnd && !tyEnd && stressPos(t.ty) >= 0) lines.push(`<div>• <b>Betonung wandert:</b> я-Form auf der Endung (${esc(t.ya)}), alle anderen auf dem Stamm (${esc(t.ty)}).</div>`);
+    lines.push(`<div>Merke: Aus der я- und ты-Form ergeben sich alle anderen (они́: ${esc((t.all || [])[5] || '')}).</div>`);
+  } else if (t.key === 'past') {
+    const irr = RU_PAST_IRREG[pinf] || RU_PAST_IRREG[inf.replace(STRESS, '')];
+    if (irr) lines.push(`<div>⚠️ <b>Unregelmäßige <span class="t-past">Vergangenheit</span>:</b> ${esc(irr.join(', '))} – der Stamm ändert sich, das muss man lernen.</div>`);
+    else lines.push(`<div><span class="t-past">Vergangenheit</span>: Infinitiv ohne -ть + <b>-л</b> (er), <b>-ла</b> (sie), <b>-ло</b> (es), <b>-ли</b> (Plural)${/(ся|сь)$/.test(pinf) ? ', dahinter -ся/-сь' : ''}.</div>`);
+    lines.push('<div>Die Vergangenheit richtet sich nach dem <b>Geschlecht</b>, nicht nach der Person: я был (Mann), я была́ (Frau).</div>');
+  } else if (t.key === 'imp') {
+    const all = ruAllPresent(inf, t.ya, t.ty);
+    const oni = all ? all[5] : '';
+    if (t.i === 1) lines.push(`<div>вы-Form = ты-Form + <b>-те</b> (${esc(t.sg)} → ${esc(t.answer)}).</div>`);
+    if (t.own) lines.push('<div>⚠️ <b>Unregelmäßiger Imperativ</b> – nicht nach der Grundregel gebildet, auswendig lernen.</div>');
+    else lines.push(`<div>Regel: Stamm der они́-Form${oni ? ` (${esc(oni)})` : ''}, dann: nach Vokal <b>-й</b>, bei betonter я-Endung oder zwei Konsonanten <b>-и</b>, sonst <b>-ь</b>.</div>`);
+  }
+  return lines.join('');
+}
+
+// Akzent vergessen oder zu viel? Erklären, was er hier bedeutet
+const ES_ACCENT_PAIRS = {
+  'sé': 'sé = ich weiß (saber) bzw. sei! (ser) – se = sich',
+  'dé': 'dé = (dass) er gebe (dar) – de = von',
+  'él': 'él = er – el = der',
+  'tú': 'tú = du – tu = dein',
+  'mí': 'mí = mich, mir – mi = mein',
+  'sí': 'sí = ja – si = wenn, ob',
+  'más': 'más = mehr – mas = aber (veraltet)',
+  'té': 'té = Tee – te = dich, dir',
+};
+function esAccentWhy(t, given) {
+  const exp = t.answer.toLowerCase().split(/\s+/), giv = drillNorm(given).split(/\s+/);
+  const plain = s => s.replace(/[áéíóú]/g, v => ES_DEACCENT[v]);
+  const lines = [];
+  // Welche andere Form wäre die eingetippte? (hablo statt habló)
+  const m = esMoreTenses(t.spec), c = esConjugate(t.spec);
+  const names = { pres: 'Presente', past: 'Pretérito', imperf: 'Imperfecto', futs: 'Futuro', cond: 'Condicional', subj: 'Subjuntivo' };
+  const lookup = w => {
+    for (const [k, list] of Object.entries({ pres: c && c.pres, past: c && c.past, imperf: m && m.imperf, futs: m && m.futs, cond: m && m.cond, subj: m && m.subj })) {
+      const j = (list || []).findIndex(f => verbOnly(f) === w);
+      if (j >= 0) return `${(m && m.dat ? ES_DATIVE : ES_PERSONS)[j]} · ${names[k]}`;
+    }
+    return '';
+  };
+  exp.forEach((e, n) => {
+    const g = giv[n] || '';
+    if (!g || e === g || plain(e) !== plain(g)) return;
+    if (/[áéíóú]/.test(e) && !/[áéíóú]/.test(g)) {
+      if (esNuclei(e).length < 2) lines.push(`<b>Akzent vergessen:</b> ${esc(e)}. Einsilbige Wörter bekommen einen Akzent nur, um sie von einem gleich geschriebenen Wort zu unterscheiden: ${esc(ES_ACCENT_PAIRS[e] || e + ' ≠ ' + g)}.`);
+      else {
+        const other = lookup(g);
+        lines.push(`<b>Akzent vergessen:</b> ${esc(e)}. Der Akzent zeigt die betonte Silbe – und ändert hier die Bedeutung: ${esc(g)}${other ? ` wäre <i>${esc(other)}</i>` : ' ist eine andere Form'}.`);
+      }
+    } else if (!/[áéíóú]/.test(e) && /[áéíóú]/.test(g)) {
+      lines.push(`<b>Hier kommt kein Akzent hin:</b> ${esc(e)} – die Betonung folgt der Regel (Vokal, -n, -s → vorletzte Silbe), deshalb kein Akzent.${lookup(g) ? ` ${esc(g)} wäre ${esc(lookup(g))}.` : ''}`);
+    } else lines.push(`<b>Akzent an der falschen Stelle:</b> richtig ist ${esc(e)}.`);
+  });
+  lines.push('<span class="sub">Wofür Akzente gut sind: Sie zeigen die betonte Silbe, wenn sie von der Regel abweicht (habló = er sprach, hablo = ich spreche), und unterscheiden gleich geschriebene Wörter (sé / se, él / el, tú / tu, sí / si). Fragewörter haben immer einen: qué, cómo, dónde.</span>');
+  return lines.map(l => `<div>${l}</div>`).join('');
 }
 
 function startDrill(deckIds, title) {
@@ -2531,7 +2764,7 @@ function renderDrill() {
     view.innerHTML = `
       <div class="quiz">
         <div class="quiz-prompt">
-          <div class="lang-tag">${esc(cur.tense)}</div>
+          <div class="lang-tag drill-tense ${DRILL_TENSE_CLS[cur.key] || ''}">${esc(cur.tense)}</div>
           <div class="q-word">${esc(cur.verb)}</div>${say(cur.verb)}
           <div class="drill-person">${esc(cur.person)}</div>
           <div class="sub">${esc(card.f.de || '')}</div>
@@ -2552,21 +2785,27 @@ function renderDrill() {
     const r = drill.answer;
     view.innerHTML = `
       <div class="quiz">
-        <div class="quiz-result ${r.ok ? 'ok' : 'bad'}">
-          <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : '✓ Richtig!') : r.accent ? '✗ Fast – der Akzent fehlt oder ist falsch. Kommt gleich noch einmal.' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
-          <div>${esc(cur.verb)} · ${esc(cur.person)} · ${esc(cur.tense)}</div>
+        <div class="quiz-result ${r.ok ? 'ok' : r.accent ? 'warn' : 'bad'}">
+          <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : '✓ Richtig!') : r.accent ? '⚠️ Akzent vergessen oder falsch – fast richtig! Kommt gleich noch einmal.' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
+          <div>${esc(cur.verb)} · ${esc(cur.person)} · <span class="${DRILL_TENSE_CLS[cur.key] || ''}">${esc(cur.tense)}</span></div>
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(cur.answer)}</b> ${say(cur.answer)}</div>
+          ${r.accent && L === 'es' ? `<div class="drill-why">${esAccentWhy(cur, r.text)}</div>` : ''}
+        </div>
+        <div class="drill-why-box">
+          <div class="drill-why-title">Warum heißt die Form so?</div>
+          ${L === 'es' ? esWhy(cur) : ruWhy(cur)}
         </div>
         <div class="btn-row">
           <button class="btn" id="drill-next">Weiter</button>
           ${!r.ok ? '<button class="btn secondary" id="drill-ok">Ich lag doch richtig</button>' : ''}
         </div>
-        <div class="quiz-card">${cardLearnSide(card)}</div>
+        ${flipCardHtml(card)}
       </div>`;
     $('#drill-next').onclick = nextDrill;
     $('#drill-ok')?.addEventListener('click', drillOverride);
   }
+  wireFlipCard(view);
   $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say, b.dataset.lang); });
   $$('.info', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();

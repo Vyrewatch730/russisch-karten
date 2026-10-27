@@ -406,3 +406,18 @@ tr.vp-rule.open { display: table-row; }
 .es-stress-hint { font-size: 12px; color: var(--muted); }
 .drill-person { font-size: 22px; font-weight: 700; color: var(--accent); margin-top: 6px; }
 .drill-chips .chip { font-size: 14px; }
+
+/* Zeitformen auf einen Blick: Vergangenheit braun in Serifenschrift, Zukunft gold in breiter Großschrift, Gegenwart normal */
+:root { --t-past: #8b5a2b; --t-fut: #b8860b; }
+@media (prefers-color-scheme: dark) { :root { --t-past: #d6a26a; --t-fut: #fbbf24; } }
+.t-past { color: var(--t-past) !important; font-family: Georgia, 'Noto Serif', 'Times New Roman', serif; font-style: italic; font-weight: 700; letter-spacing: .01em; }
+.t-fut { color: var(--t-fut) !important; font-family: 'Trebuchet MS', 'Segoe UI', Roboto, sans-serif; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+th.t-past, th.t-fut { font-size: 13px; }
+.motion-prefix { font-size: 15px; margin-bottom: 2px; }
+.motion-sep { border: 0; border-top: 1px solid var(--border); margin: 8px 0; }
+.quiz-result.warn { background: #fef3c7; color: #92400e; }
+.drill-why { margin-top: 8px; font-size: 14px; display: grid; gap: 4px; }
+.drill-why-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; font-size: 14px; line-height: 1.5; display: grid; gap: 4px; }
+.drill-why-title { font-weight: 700; }
+.drill-tense { font-size: 15px !important; }
+@media (prefers-color-scheme: dark) { .quiz-result.warn { background: #422006; color: #fde68a; } }

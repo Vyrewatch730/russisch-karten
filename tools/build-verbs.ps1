@@ -70,6 +70,8 @@ function Read-Tsv($name) {
 }
 $govs = Read-Tsv 'rektion.tsv'
 $motions = Read-Tsv 'bewegung.tsv'
+# Bewegungsverben mit Vorsilbe: Vorsilbe, Bedeutung und Beispiele mit genau diesem Verb
+$motionEx = Read-Tsv 'bewegung-vorsilben.tsv'
 
 # Beispielsätze zum Imperativ (decks-src\imperativ-beispiele.tsv: Infinitiv TAB Aspekt TAB Satz TAB Deutsch)
 $impEx = @{}
@@ -126,6 +128,11 @@ foreach ($file in Get-ChildItem $src -Filter 'verben-*.txt' | Sort-Object Name) 
     if ($motions.ContainsKey($key)) {
       $c.motion = $motions[$key][0]
       if ($motions[$key].Count -gt 1) { $c.motion_pair = $motions[$key][1] }
+      if ($motionEx.ContainsKey($key)) {
+        $m = $motionEx[$key]
+        $c.motion_prefix = $m[0]; $c.motion_meaning = $m[1]
+        $c.motion_ex_ipf = $m[2]; $c.motion_ex_ipf_de = $m[3]; $c.motion_ex_pf = $m[4]; $c.motion_ex_pf_de = $m[5]
+      }
     }
     foreach ($asp in 'ipf', 'pf') {
       if (-not $c[$asp]) { continue }
