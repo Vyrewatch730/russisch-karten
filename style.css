@@ -438,3 +438,4 @@ th.t-past, th.t-fut { font-size: 13px; }
 .quiz { padding-bottom: 44px; }
 .quiz-bottom { position: fixed; left: 0; right: 0; bottom: calc(6px + env(safe-area-inset-bottom)); text-align: center; pointer-events: none; }
 .quiz-bottom .link-btn { pointer-events: auto; background: var(--bg); border-radius: 999px; padding: 4px 12px; margin: 0; }
+.morph-why { background: rgba(224, 168, 0, .12); border-radius: 8px; padding: 6px 8px; }

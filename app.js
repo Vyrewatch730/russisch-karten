@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 65;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 66;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2071,7 +2071,7 @@ const RU_ROOTS = [
 ];
 
 // Wörter, die nur zufällig so aussehen (вдруг ≠ друг, сестра́ ≠ сесть, предпочита́ть ≠ чита́ть)
-const RU_MORPH_SKIP = /^(вдруг|совсем|сестр|предпочит|прием|оборач)/;
+const RU_MORPH_SKIP = /^(вдруг|совсем|сестр|предпочит|прием|оборач|пробормот)/;
 
 // Wort in Vorsilben + Wurzel zerlegen (höchstens zwei Vorsilben). Ergebnis: { prefixes: [[p, Bedeutung]], root } oder null
 function ruMorph(word) {
@@ -2100,11 +2100,15 @@ function morphHtml(card) {
   if (!m) return '';
   const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
   const parts = m.prefixes.map(([p, de]) => `<b>${esc(p)}-</b> (${esc(de)})`).concat(`<b>${esc(m.root.root)}</b> (${esc(m.root.de)})`);
+  // Bedeutungsbrücke (morph-why.js): warum ergibt Vorsilbe + Wurzel genau diese Bedeutung?
+  const plainW = w => (w || '').replace(STRESS, '').replace(/ё/g, 'е').trim();
+  const whyMap = typeof RU_MORPH_WHY !== 'undefined' ? RU_MORPH_WHY : {};
+  const why = words.map(w => whyMap[plainW(w)] || whyMap[(w || '').replace(STRESS, '').trim()]).find(Boolean);
   return `<div class="morph">
     <div class="nn-hint">🧩 Wortbausteine${info}</div>
     <div class="vp-rule">
       <div><b>${esc(word)}</b> = ${parts.join(' + ')}${m.prefixes.length ? '' : ' – hier ohne Vorsilbe'}.</div>
-      <div>Die Wurzel trägt die Grundbedeutung, die Vorsilbe gibt Richtung oder Art dazu. Kennt man die Wurzel, kann man viele neue Wörter herleiten.</div>
+      ${why ? `<div class="morph-why">💡 <b>Warum bedeutet das so?</b> ${esc(why)}</div>` : '<div>Die Wurzel trägt die Grundbedeutung, die Vorsilbe gibt Richtung oder Art dazu. Kennt man die Wurzel, kann man viele neue Wörter herleiten.</div>'}
       <div><b>Weitere Wörter mit ${esc(m.root.root)}:</b> ${esc(m.root.ex)}</div>
     </div>
   </div>`;
