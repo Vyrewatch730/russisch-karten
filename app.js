@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 66;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 67;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2109,8 +2109,90 @@ function morphHtml(card) {
     <div class="vp-rule">
       <div><b>${esc(word)}</b> = ${parts.join(' + ')}${m.prefixes.length ? '' : ' – hier ohne Vorsilbe'}.</div>
       ${why ? `<div class="morph-why">💡 <b>Warum bedeutet das so?</b> ${esc(why)}</div>` : '<div>Die Wurzel trägt die Grundbedeutung, die Vorsilbe gibt Richtung oder Art dazu. Kennt man die Wurzel, kann man viele neue Wörter herleiten.</div>'}
+      ${relatedHtml(ruMorphIndex()[ruMorphKey(m)], card)}
       <div><b>Weitere Wörter mit ${esc(m.root.root)}:</b> ${esc(m.root.ex)}</div>
     </div>
+  </div>`;
+}
+
+// Verwandte Wörter aus den eigenen Karten (gleiche Vorsilbe + Wurzel bzw. gleiche spanische Familie)
+const ruMorphKey = m => m.prefixes.map(p => p[0]).join('+') + '|' + m.root.root;
+let ruMorphIdx = null, ruMorphIdxRev = -1;
+function ruMorphIndex() {
+  if (ruMorphIdxRev === cardsRev && ruMorphIdx) return ruMorphIdx;
+  ruMorphIdx = {};
+  for (const c of allCardsSorted()) {
+    if (!c.f.ru || c.type === 'prepfull') continue;
+    const words = c.type === 'verbpair' ? [c.x.ipf, c.x.pf].filter(Boolean) : [(c.f.ru || '').split(/[,;/]/)[0].trim()];
+    for (const w of words) { const m = ruMorph(w); if (m) { (ruMorphIdx[ruMorphKey(m)] = ruMorphIdx[ruMorphKey(m)] || []).push({ id: c.id, word: c.type === 'verbpair' ? c.f.ru : w, de: c.f.de }); break; } }
+  }
+  ruMorphIdxRev = cardsRev;
+  return ruMorphIdx;
+}
+function relatedHtml(list, card) {
+  const others = (list || []).filter(r => r.id !== card.id).slice(0, 8);
+  if (!others.length) return '';
+  return `<div class="morph-rel"><b>Verwandt (aus deinen Karten):</b> ${others.map(r => `${esc(r.word)} – ${esc((r.de || '').split(/[;]/)[0])}`).join(' · ')}</div>`;
+}
+
+// Spanisch: Wortbausteine aus morph-why-es.js (eigener Eintrag) oder allgemeine Vor-/Nachsilben-Regeln
+const esMorphWord = c => (c.x.es_verb || (c.f.es || '').split(/[;,]/)[0]).replace(/\(.*?\)/g, '').replace(/^(el|la|los|las)\s+/i, '').replace(/[¿?¡!:*]/g, '').trim().toLowerCase();
+let esWordSet = null, esFamIdx = null, esMorphRev = -1;
+function esMorphIndex() {
+  if (esMorphRev === cardsRev && esFamIdx) return;
+  esWordSet = new Set(); esFamIdx = {};
+  const M = typeof ES_MORPH !== 'undefined' ? ES_MORPH : {};
+  for (const c of allCardsSorted()) {
+    if (!c.f.es) continue;
+    const w = esMorphWord(c);
+    esWordSet.add(w);
+    const e = M[w];
+    if (e) (esFamIdx[e[0]] = esFamIdx[e[0]] || []).push({ id: c.id, word: c.f.es, de: c.f.de });
+  }
+  esMorphRev = cardsRev;
+}
+function esMorphHtml(card) {
+  if (typeof ES_MORPH === 'undefined' || card.type === 'phrase') return '';
+  esMorphIndex();
+  const w = esMorphWord(card);
+  if (!w || / /.test(w)) return '';
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const e = ES_MORPH[w] || ES_MORPH[w.replace(/se$/, '')];
+  let body;
+  if (e) {
+    const [fam, parts, why] = e;
+    body = `<div><b>${esc(w)}</b> = ${esc(parts)}${fam !== 'compuesto' && ES_FAMILY_DE[fam] ? ` <span class="sub">(${esc(ES_FAMILY_DE[fam])})</span>` : ''}.</div>
+      <div class="morph-why">💡 <b>Warum bedeutet das so?</b> ${esc(why)}</div>
+      ${fam !== 'compuesto' ? relatedHtml(esFamIdx[fam], card) : ''}`;
+  } else {
+    // Allgemeine Regeln – Vorsilben nur, wenn der Rest selbst ein bekanntes Wort ist (desconocido → conocido)
+    const lines = [];
+    for (const [re, p, de] of ES_PREFIX_RULES) {
+      if (p === 'ex-') continue;   // exacto, existir … meist kein „hinaus“
+      const m = w.match(re);
+      if (m && esWordSet.has(w.slice(m[0].length))) lines.push(`<b>${esc(p)}</b> + ${esc(w.slice(m[0].length))}: ${esc(de)}`);
+    }
+    const SKIP = /^(ciudad|mitad|edad|mente|verdad)$/;
+    if (w.length > 6 && !SKIP.test(w)) for (const [re, s, de] of ES_SUFFIX_RULES) {
+      if (/ero|ito|oso/.test(s)) continue;   // zu viele Zufallstreffer (dinero, bonito …)
+      // -able / -ible nur, wenn es das Grundverb gibt (amable ← amar, confiable ← confiar)
+      if (/able/.test(s) && re.test(w) && !(/able$/.test(w) ? [w.replace(/able$/, 'ar')] : [w.replace(/ible$/, 'er'), w.replace(/ible$/, 'ir')]).some(v => esWordSet.has(v) || esWordSet.has(v.replace(/^(in|im|des)/, '')))) continue;
+      if (re.test(w)) {
+        // Grundwort suchen, aus dem das Wort gebildet ist (agradable ← agradar, administrador ← administrar)
+        const cands = [w.replace(/able$/, 'ar'), w.replace(/ible$/, 'er'), w.replace(/ible$/, 'ir'), w.replace(/dora?$/, 'r'), w.replace(/ción$/, 'r'),
+          w.replace(/amiento$/, 'ar'), w.replace(/imiento$/, 'er'), w.replace(/imiento$/, 'ir'), w.replace(/amente$/, 'o'), w.replace(/mente$/, '')]
+          .filter(v => v !== w);
+        const base = cands.find(v => esWordSet.has(v)) || cands.map(v => v.replace(/^(in|im|des)/, '')).find(v => v !== w && esWordSet.has(v));
+        lines.push(`Endung <b>${esc(s)}</b>${base ? ` – gebildet aus <b>${esc(base)}</b>` : ''}: ${esc(de)}`);
+        break;
+      }
+    }
+    if (!lines.length) return '';
+    body = lines.map(l => `<div>${l}</div>`).join('');
+  }
+  return `<div class="morph">
+    <div class="nn-hint">🧩 Wortbausteine${info}</div>
+    <div class="vp-rule">${body}</div>
   </div>`;
 }
 
@@ -2288,6 +2370,7 @@ function cardEsSide(card) {
       ${body}
       ${x.hint_es ? `<div class="nn-hint">💡 Tipp${info}</div><div class="vp-rule">${esc(x.hint_es)}</div>` : ''}
       ${x.example_es ? `<div class="vp-ex">${esc(x.example_es)} ${say(x.example_es)}</div>` : ''}
+      ${esMorphHtml(card)}
     </div>`;
 }
 
