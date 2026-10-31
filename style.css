@@ -432,3 +432,5 @@ th.t-past, th.t-fut { font-size: 13px; }
 .vf-why-verb { border-top: 1px solid var(--border); padding-top: 4px; }
 .drill-why-body.open { display: grid; gap: 4px; }
 .lib-ok { font-size: 13px; color: var(--good); font-weight: 600; white-space: nowrap; }
+.link-btn { background: none; border: 0; color: var(--muted); font-size: 13px; text-decoration: underline; cursor: pointer; margin-top: 8px; }
+.morph { margin-top: 6px; }

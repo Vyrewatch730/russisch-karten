@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 62;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 63;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -1118,7 +1118,11 @@ function renderLearn() {
   const allIds = decks.map(d => d.id);
   const isVerbDeck = id => /^(es-)?verben-/.test(id);
   const statRow = (s) => `<div class="counts"><span class="c-new">${Math.min(s.fresh, Math.max(0, db.settings.newPerDay - newSeenToday()))}</span><span class="c-learn">${s.learn}</span><span class="c-due">${s.due}</span></div>`;
-  const drillBtn = id => `<button class="quiz-btn" data-drill="${esc(id)}" aria-label="Konjugation üben">🔁</button>`;
+  const isNounDeck = id => /^(es-)?nomen-/.test(id);
+  // 🔁 Konjugation (Verben) bzw. 📐 Deklination (Nomen)
+  const drillBtn = (id, mode = 'conj') => mode === 'decl'
+    ? `<button class="quiz-btn" data-drill="${esc(id)}" data-mode="decl" aria-label="Deklination üben">📐</button>`
+    : `<button class="quiz-btn" data-drill="${esc(id)}" aria-label="Konjugation üben">🔁</button>`;
   // Spanisch: Zusatzdecks (Grundwörter, Alltag …) noch nicht geladen?
   const esMissing = es && !Object.keys(db.decks).some(id => id.startsWith('espanol-'));
   view.innerHTML = `
@@ -1138,23 +1142,23 @@ function renderLearn() {
         ${decks.length > 1 ? `
           <div class="row clickable" data-study="*">
             <div class="grow"><b>${allTitle}</b></div>${statRow(deckStats(allIds))}
-            ${kind.v === 'verben' ? drillBtn('*') : ''}
+            ${kind.v === 'verben' ? drillBtn('*') : kind.v === 'nomen' ? drillBtn('*', 'decl') : ''}
             <button class="quiz-btn" data-quiz="*" aria-label="Schreiben üben">✍️</button>
           </div>` : ''}
         ${!decks.length ? `<div class="row"><div class="grow sub">Noch keine ${kind.t} geladen</div>${kind.v !== 'all' ? `<button class="btn small" id="load-kind">Laden</button>` : ''}</div>` : ''}
-        ${decks.map(d => { const lc = learnCards([d.id]); return { d, n: lc.length, s: lc.filter(c => quizMastered()[c.id]).length }; }).map(({ d, n, s }) => `
+        ${decks.map(d => { const lc = learnCards([d.id]); return { d, n: lc.length, s: lc.filter(c => quizSits(c.id)).length }; }).map(({ d, n, s }) => `
           <div class="row clickable" data-study="${esc(d.id)}">
             <div class="grow ellipsis">${esc(d.name)}<div class="sub">${n} ${n === 1 ? "Karte" : "Karten"}${s ? ` · ✍️ ${s} sitzen` : ''}</div></div>
             ${statRow(deckStats([d.id]))}
-            ${isVerbDeck(d.id) ? drillBtn(d.id) : ''}
+            ${isVerbDeck(d.id) ? drillBtn(d.id) : isNounDeck(d.id) ? drillBtn(d.id, 'decl') : ''}
             <button class="quiz-btn" data-quiz="${esc(d.id)}" aria-label="Schreiben üben">✍️</button>
           </div>`).join('')}
       </div>
     </div>
     <p class="sub" style="color:var(--muted);font-size:13px">
       <span class="c-new">Blau</span> = neu (heute noch), <span class="c-learn">Rot</span> = in Lernphase, <span class="c-due">Grün</span> = fällig<br>
-      ✍️ = Schreiben üben: immer 5 Wörter, bis jedes ${QUIZ_STREAK}× hintereinander richtig war, dann die nächsten 5 (mit Wiederholungen)<br>
-      🔁 = Konjugation üben (bei Verben): Verbform eintippen${es ? '<br>Im Spanisch-Modus sind die Decks nach spanischer Häufigkeit sortiert.' : ''}
+      ✍️ = Schreiben üben: immer 5 Wörter, bis jedes in beide Richtungen ${QUIZ_STREAK}× hintereinander richtig war, dann die nächsten 5 (mit Wiederholungen)<br>
+      🔁 = Konjugation üben (Verben) · 📐 = Deklination üben (Nomen): Form eintippen${es ? '<br>Im Spanisch-Modus sind die Decks nach spanischer Häufigkeit sortiert.' : ''}
     </p>`;
   $$('[data-quiz]', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
@@ -1164,7 +1168,8 @@ function renderLearn() {
   $$('[data-drill]', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
     const id = b.dataset.drill;
-    startDrill(id === '*' ? allIds : [id], '🔁 ' + (id === '*' ? allTitle : deckName(id)));
+    const mode = b.dataset.mode || 'conj';
+    startDrill(id === '*' ? allIds : [id], (mode === 'decl' ? '📐 ' : '🔁 ') + (id === '*' ? allTitle : deckName(id)), mode);
   });
   $$('[data-dir]', view).forEach(b => b.onclick = () => { db.settings.qLang = b.dataset.dir; save(); renderLearn(); });
   $$('[data-kind]', view).forEach(b => b.onclick = () => { db.settings.deckKind = b.dataset.kind; save(); renderLearn(); });
@@ -2005,6 +2010,106 @@ function extrasHtml(card) {
   return items.length ? `<div class="extras">${items.join('')}</div>` : '';
 }
 
+/* ============================================================
+   Wortbausteine (🧩): Vorsilbe(n) + Wurzel erkennen und erklären, z. B. рас-с-каз-а́ть = erzählen.
+   Eine Wurzel steckt in vielen Wörtern – kennt man sie, kann man die Bedeutung neuer Wörter herleiten.
+   bare: Wurzel darf auch ohne Vorsilbe stehen (sonst nur mit Vorsilbe erkannt, um Fehltreffer zu vermeiden)
+   ============================================================ */
+const RU_PREFIXES = [
+  ['пере', 'über, um-, noch einmal'], ['пред', 'vor-'], ['разо', 'auseinander, ver-, zer-'], ['раз', 'auseinander, ver-, zer-'], ['рас', 'auseinander, ver-, zer-'],
+  ['обо', 'um … herum'], ['воз', 'hinauf, zurück'], ['вос', 'hinauf, auf-'], ['подо', 'unter, heran'], ['под', 'unter, heran'], ['над', 'über, oben'],
+  ['при', 'heran, an, hinzu'], ['про', 'durch, vorbei, zu Ende'], ['вз', 'hinauf'], ['вс', 'hinauf'], ['вы', 'hinaus, aus-'], ['до', 'bis, zu Ende'],
+  ['за', 'hinein, an-, dahinter, Beginn'], ['из', 'heraus, aus-'], ['ис', 'heraus, aus-'], ['на', 'auf, an, genug'], ['об', 'um … herum, über'],
+  ['от', 'weg, ab, zurück'], ['по', 'ein wenig, los – macht oft vollendet'], ['со', 'zusammen, mit'], ['во', 'hinein'], ['в', 'hinein'],
+  ['о', 'um, über, rundum'], ['с', 'herab, zusammen – macht oft vollendet'], ['у', 'weg, fort – macht oft vollendet'],
+];
+const RU_ROOTS = [
+  { root: 'каз', re: /^каз(?!ён|ен|н|ак)/, bare: 1, de: 'zeigen, sagen', ex: 'сказа́ть (sagen), показа́ть (zeigen), рассказа́ть (erzählen), приказа́ть (befehlen), заказа́ть (bestellen), отказа́ть (absagen), доказа́ть (beweisen), каза́ться (scheinen)' },
+  { root: 'ход / йти', re: /^(ход|хож|йти|йд)/, bare: 1, de: 'gehen', ex: 'ходи́ть, приходи́ть (kommen), выходи́ть (hinausgehen), вход (Eingang), вы́ход (Ausgang), перехо́д (Übergang), дохо́д (Einkommen), прийти́, уйти́' },
+  { root: 'вод / вед', re: /^(вод(?!н)|вед|вести(сь)?$|вёл|вел[аио]$)/, bare: 0, de: 'führen', ex: 'приводи́ть (mitbringen), выводи́ть (hinausführen), заво́д (Fabrik), перево́д (Übersetzung), вы́вод (Schlussfolgerung), руководи́ть (leiten)' },
+  { root: 'нос / нес', re: /^(нос[иья]|нес(ти|у|е|л))/, bare: 1, de: 'tragen', ex: 'носи́ть, нести́, приноси́ть (mitbringen), выноси́ть (hinaustragen), переноси́ть (verschieben, ertragen)' },
+  { root: 'воз / вез', re: /^(воз[иья]|вез(ти|у|е|л))/, bare: 0, de: 'fahren, transportieren', ex: 'привози́ть (mitbringen), перевози́ть (transportieren), отвезти́ (hinbringen)' },
+  { root: 'лет', re: /^лет[ае]т/, bare: 1, de: 'fliegen', ex: 'лета́ть, лете́ть, прилета́ть (ankommen), улете́ть (wegfliegen), полёт (Flug)' },
+  { root: 'бег / беж', re: /^бе[гж](?!д)/, bare: 1, de: 'laufen, rennen', ex: 'бе́гать, бежа́ть, убежа́ть (weglaufen), побе́г (Flucht), бе́женец (Flüchtling)' },
+  { root: 'пис', re: /^пис(?!т)/, bare: 1, de: 'schreiben', ex: 'писа́ть, записа́ть (aufschreiben), подписа́ть (unterschreiben), описа́ть (beschreiben), письмо́ (Brief), расписа́ние (Fahrplan)' },
+  { root: 'чит', re: /^чит/, bare: 1, de: 'lesen, zählen', ex: 'чита́ть, прочита́ть (durchlesen), счита́ть (zählen, meinen), почита́ть (ein wenig lesen)' },
+  { root: 'говор', re: /^говор/, bare: 1, de: 'sprechen', ex: 'говори́ть, разгово́р (Gespräch), договори́ться (sich einigen), уговори́ть (überreden), при́говор (Urteil)' },
+  { root: 'мен', re: /^мен[яи]/, bare: 0, de: 'wechseln, tauschen', ex: 'измени́ть (ändern), обменя́ть (umtauschen), замени́ть (ersetzen), переме́на (Pause, Wechsel)' },
+  { root: 'мест', re: /^мест/, bare: 1, de: 'Ort, Platz', ex: 'ме́сто (Platz), вме́сте (zusammen = „an einem Platz“), ме́стный (örtlich), помести́ть (unterbringen)' },
+  { root: 'ня / ним (nehmen)', re: /^(нять|ним|ня[вл]|йм)/, bare: 0, de: 'nehmen', ex: 'поня́ть (verstehen = „er-fassen“), приня́ть (annehmen), снять (abnehmen), подня́ть (hochheben), заня́ть (besetzen), обня́ть (umarmen), приём (Empfang)' },
+  { root: 'да (geben)', re: /^да(ть|ва|ться|ваться)$/, bare: 0, de: 'geben', ex: 'дать, переда́ть (weitergeben), отда́ть (zurückgeben), прода́ть (verkaufen), сдать (abgeben), зада́ть (eine Frage stellen), разда́ть (verteilen)' },
+  { root: 'ста (stehen, werden)', re: /^ста(ть(ся)?$|ва|вить|виться|ну|нов)/, bare: 1, de: 'stehen, sich stellen, werden', ex: 'стать (werden), оста́ться (bleiben), встать (aufstehen), доста́ть (hervorholen), уста́ть (müde werden), переста́ть (aufhören), поста́вить (hinstellen)' },
+  { root: 'лож / лаг / леж', re: /^(лож[иеа]|леж|лаг(?!ер))/, bare: 1, de: 'legen, liegen', ex: 'лежа́ть, положи́ть (hinlegen), предложи́ть (vorschlagen = „vor-legen“), отложи́ть (verschieben), сложи́ть (zusammenlegen)' },
+  { root: 'вер', re: /^вер(и|а|е|ю|я|ой|ен|н[ыоаи])/, bare: 1, de: 'glauben, wahr', ex: 'ве́рить (glauben), прове́рить (prüfen), дове́рие (Vertrauen), уве́рен (sicher), ве́рный (treu, richtig)' },
+  { root: 'мысл', re: /^мы[сш]л/, bare: 1, de: 'denken', ex: 'мысль (Gedanke), смысл (Sinn), вы́мысел (Erfindung), промы́шленность (Industrie)' },
+  { root: 'смотр', re: /^смотр/, bare: 1, de: 'schauen', ex: 'смотре́ть, посмотре́ть, осмотре́ть (untersuchen), рассмотре́ть (betrachten), просмотре́ть (durchsehen)' },
+  { root: 'вид', re: /^ви[дж]/, bare: 1, de: 'sehen', ex: 'ви́деть, уви́деть, вид (Aussicht), ви́димо (anscheinend), свида́ние (Treffen), ненави́деть (hassen)' },
+  { root: 'слыш / слух', re: /^(слыш|слух|слуш)/, bare: 1, de: 'hören', ex: 'слы́шать, слу́шать (zuhören), слух (Gehör, Gerücht), послу́шать, вы́слушать (anhören)' },
+  { root: 'зна', re: /^зна[^м]/, bare: 1, de: 'wissen, kennen', ex: 'знать, узна́ть (erfahren), призна́ть (anerkennen), зна́ние (Wissen), знако́мый (bekannt), созна́ние (Bewusstsein)' },
+  { root: 'уч', re: /^уч(и|ен|еб|ёб|а(?!ст))/, bare: 1, de: 'lernen, lehren', ex: 'учи́ть, научи́ть (beibringen), изучи́ть (erforschen), учи́тель (Lehrer), учёба (Studium)' },
+  { root: 'люб', re: /^люб/, bare: 1, de: 'lieben', ex: 'люби́ть, любо́вь (Liebe), люби́мый (Lieblings-), полюби́ть (lieb gewinnen), любопы́тный (neugierig)' },
+  { root: 'жи / жив', re: /^(жить|жив|жизн|жил)/, bare: 1, de: 'leben', ex: 'жить, жизнь (Leben), живо́й (lebendig), пережи́ть (erleben, überstehen), вы́жить (überleben)' },
+  { root: 'род', re: /^род/, bare: 1, de: 'Geburt, Herkunft', ex: 'роди́ться (geboren werden), роди́тели (Eltern), ро́дина (Heimat), наро́д (Volk), приро́да (Natur)' },
+  { root: 'рук / руч', re: /^ру[кч]/, bare: 1, de: 'Hand', ex: 'рука́ (Hand), ру́чка (Griff, Stift), поручи́ть (beauftragen), вы́ручить (aus der Patsche helfen)' },
+  { root: 'прав', re: /^прав/, bare: 1, de: 'richtig, recht, lenken', ex: 'пра́вда (Wahrheit), пра́вило (Regel), испра́вить (korrigieren), отпра́вить (abschicken), спра́виться (schaffen), управля́ть (lenken), напра́во (rechts)' },
+  { root: 'ступ', re: /^ступ/, bare: 1, de: 'Schritt, treten', ex: 'поступи́ть (eintreten, sich verhalten), вы́ступить (auftreten), наступи́ть (treten auf; anbrechen), уступи́ть (nachgeben), до́ступ (Zugang)' },
+  { root: 'кры', re: /^кр(ы[тшв]|ой)/, bare: 1, de: 'decken', ex: 'откры́ть (öffnen = „ab-decken“), закры́ть (schließen), покры́ть (bedecken), скрыть (verbergen), кры́ша (Dach)' },
+  { root: 'бр / бор / бир', re: /^(брать|бра[лв]|бер[уеё](?!г|мен)|бор(?!щ|ьб|од|он|от|уд)|бир)/, bare: 1, de: 'nehmen, sammeln', ex: 'брать, собра́ть (sammeln), вы́брать (auswählen), убра́ть (aufräumen), разобра́ться (durchblicken), вы́боры (Wahlen)' },
+  { root: 'зв / зов', re: /^(звать|зва[лв]|зов|зыв)/, bare: 1, de: 'rufen', ex: 'звать, позва́ть, назва́ть (nennen), вы́звать (herbeirufen), отзы́в (Rückmeldung), призы́в (Aufruf)' },
+  { root: 'пад / пас', re: /^(пад|пасть)/, bare: 1, de: 'fallen', ex: 'па́дать, упа́сть (hinfallen), попа́сть (geraten, treffen), напа́сть (angreifen), пропа́сть (verschwinden), совпа́сть (übereinstimmen)' },
+  { root: 'сид / сад / сес', re: /^(сид|сад[иь]|сед(?!ой|н|ин)|сесть|сяд)/, bare: 1, de: 'sitzen', ex: 'сиде́ть, сесть (sich setzen), сади́ться, сосе́д (Nachbar = „der daneben sitzt“), председа́тель (Vorsitzender)' },
+  { root: 'кон', re: /^кон[еч]/, bare: 1, de: 'Ende', ex: 'коне́ц (Ende), зако́нчить (beenden), око́нчить (abschließen), коне́чно (natürlich = „endgültig“)' },
+  { root: 'чин / ча (Anfang)', re: /^(чать|чал|чина)/, bare: 0, de: 'Anfang, Ursache', ex: 'нача́ть (beginnen), начина́ть, нача́ло (Anfang), причи́на (Grund, Ursache)' },
+  { root: 'дум', re: /^дум/, bare: 1, de: 'denken', ex: 'ду́мать, поду́мать, приду́мать (ausdenken), разду́мывать (grübeln), Ду́ма (Parlament)' },
+  { root: 'стро', re: /^стро[ийе]/, bare: 1, de: 'bauen, ordnen', ex: 'стро́ить (bauen), постро́ить, устро́ить (einrichten, veranstalten), настрое́ние (Stimmung), строй (Ordnung)' },
+  { root: 'работ', re: /^работ/, bare: 1, de: 'Arbeit', ex: 'рабо́тать, зарабо́тать (verdienen), обрабо́тать (bearbeiten), разрабо́тать (entwickeln)' },
+  { root: 'сл / сыл (schicken)', re: /^(слать|сла[лв]|сыл|шл[юе])/, bare: 0, de: 'schicken', ex: 'посла́ть (schicken), присла́ть (zuschicken), отосла́ть (abschicken), ссы́лка (Link, Verweis)' },
+  { root: 'рез', re: /^рез[аок]/, bare: 1, de: 'schneiden', ex: 'ре́зать, отре́зать (abschneiden), разре́зать (zerschneiden), ре́зкий (scharf, plötzlich)' },
+  { root: 'свет', re: /^свет/, bare: 1, de: 'Licht, Welt', ex: 'свет (Licht), све́тлый (hell), рассве́т (Morgendämmerung), освети́ть (beleuchten)' },
+  { root: 'мир', re: /^мир(?!а(ть|ю|е|л))/, bare: 1, de: 'Frieden, Welt', ex: 'мир (Frieden, Welt), ми́рный (friedlich), мирово́й (Welt-), помири́ться (sich versöhnen)' },
+  { root: 'друг / друж', re: /^(друг(?!ой|ая|ое|ие|их|ом|им)|друж)/, bare: 1, de: 'Freund', ex: 'друг (Freund), подру́га (Freundin), дру́жба (Freundschaft), дружи́ть (befreundet sein)' },
+];
+
+// Wörter, die nur zufällig so aussehen (вдруг ≠ друг, сестра́ ≠ сесть, предпочита́ть ≠ чита́ть)
+const RU_MORPH_SKIP = /^(вдруг|совсем|сестр|предпочит|прием|оборач)/;
+
+// Wort in Vorsilben + Wurzel zerlegen (höchstens zwei Vorsilben). Ergebnis: { prefixes: [[p, Bedeutung]], root } oder null
+function ruMorph(word) {
+  const w = (word || '').toLowerCase().replace(STRESS, '').replace(/ё/g, 'е').replace(/(ся|сь)$/, '').trim();
+  if (!w || / /.test(w)) return null;
+  if (RU_MORPH_SKIP.test(w)) return null;
+  const tryRoot = (rest, prefixes) => {
+    for (const r of RU_ROOTS) if (r.re.test(rest) && (r.bare || prefixes.length)) return { prefixes, root: r };
+    return null;
+  };
+  let found = tryRoot(w, []);
+  if (found) return found;
+  for (const p1 of RU_PREFIXES) {
+    if (!w.startsWith(p1[0])) continue;
+    const r1 = w.slice(p1[0].length);
+    if ((found = tryRoot(r1, [p1]))) return found;
+    for (const p2 of RU_PREFIXES) if (r1.startsWith(p2[0]) && (found = tryRoot(r1.slice(p2[0].length), [p1, p2]))) return found;
+  }
+  return null;
+}
+
+function morphHtml(card) {
+  const words = card.type === 'verbpair' ? [card.x.ipf, card.x.pf].filter(Boolean) : [(card.f.ru || '').split(/[,;/]/)[0].trim()];
+  let m = null, word = '';
+  for (const w of words) if ((m = ruMorph(w))) { word = w; break; }
+  if (!m) return '';
+  const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const parts = m.prefixes.map(([p, de]) => `<b>${esc(p)}-</b> (${esc(de)})`).concat(`<b>${esc(m.root.root)}</b> (${esc(m.root.de)})`);
+  return `<div class="morph">
+    <div class="nn-hint">🧩 Wortbausteine${info}</div>
+    <div class="vp-rule">
+      <div><b>${esc(word)}</b> = ${parts.join(' + ')}${m.prefixes.length ? '' : ' – hier ohne Vorsilbe'}.</div>
+      <div>Die Wurzel trägt die Grundbedeutung, die Vorsilbe gibt Richtung oder Art dazu. Kennt man die Wurzel, kann man viele neue Wörter herleiten.</div>
+      <div><b>Weitere Wörter mit ${esc(m.root.root)}:</b> ${esc(m.root.ex)}</div>
+    </div>
+  </div>`;
+}
+
 // Seite „Russisch“ einer Karte: Verbblock, Nomen, Adjektiv bzw. das russische Wort
 function cardRuSide(card) {
   const sayRu = text => `<button class="say" data-say="${esc(text)}">🔊</button>`;
@@ -2014,7 +2119,7 @@ function cardRuSide(card) {
     : card.type === 'advfull' ? advHtml(card)
     : card.type === 'prepfull' ? prepHtml(card)
     : card.type === 'nounfull' ? nounHtml(card)
-    : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(card.f[RU])}`);
+    : `<div class="q-word">${esc(card.f[RU])}</div>${sayRu(card.f[RU])}`) + (card.type === 'prepfull' ? '' : morphHtml(card));
 }
 
 // Seite „Übersetzungen“: alle anderen aktiven Sprachen mit Beispiel-Übersetzung (und spanischer Tabelle)
@@ -2339,17 +2444,30 @@ const QUIZ_SIZE = 20;          // Konjugationstraining: Aufgaben pro Runde
 const QUIZ_GAP = 3;            // Konjugationstraining: falsche Aufgabe kommt nach so vielen anderen wieder
 const QUIZ_BATCH = 5;          // so viele neue Wörter gleichzeitig
 const QUIZ_STREAK = 3;         // so oft hintereinander richtig = sitzt
-const QUIZ_REVIEW = 0.3;       // Anteil Wiederholungen schon sicherer Wörter
+const QUIZ_REVIEW = 0.4;       // Anteil Wiederholungen schon sicherer Wörter (die ältesten zuerst)
 
+// Gedächtnis je Wort und Abfragerichtung: { ru: Serie Lernsprache → Deutsch, tr: Serie Deutsch → Lernsprache, t: zuletzt gefragt }
+// Eine Richtung sitzt ab QUIZ_STREAK richtigen Antworten in Folge, das Wort erst, wenn beide sitzen. Ein Fehler setzt die Serie auf 0.
 const quizMastered = () => {
   const all = db.quizMastery || (db.quizMastery = {});
   return all[learnLang()] || (all[learnLang()] = {});
 };
+const quizFirstDir = () => (db.settings.qLang === 'tr' ? 'tr' : 'ru');
+function quizRec(id) {
+  const m = quizMastered();
+  if (m[id] === 1) m[id] = { [quizFirstDir()]: QUIZ_STREAK, t: 0 };   // altes Format: „sitzt“ (in der damals gewählten Richtung)
+  return m[id] || (m[id] = { ru: 0, tr: 0, t: 0 });
+}
+const quizHas = id => { const r = quizMastered()[id]; return r === 1 || (r && ((r.ru || 0) > 0 || (r.tr || 0) > 0)); };
+const quizDirSits = (id, d) => ((quizRec(id)[d] || 0) >= QUIZ_STREAK);
+const quizSits = id => quizHas(id) && quizDirSits(id, 'ru') && quizDirSits(id, 'tr');
+// Welche Richtung als Nächstes? Erst die gewählte, wenn sie sitzt, die andere
+const quizNextDir = id => (quizDirSits(id, quizFirstDir()) ? (quizFirstDir() === 'ru' ? 'tr' : 'ru') : quizFirstDir());
 
 function startQuiz(deckIds, title) {
   const pool = learnCards(deckIds).filter(c => c.f.de).map(c => c.id);
   if (!pool.length) { toast('Keine Karten in diesem Deck'); return; }
-  quiz = { title, deckIds, pool, active: [], streak: {}, last: null, cur: null, answer: null, answered: 0, right: 0, newlyMastered: 0 };
+  quiz = { title, deckIds, pool, active: [], last: null, cur: null, answer: null, answered: 0, right: 0 };
   fillQuizBatch();
   document.body.classList.add('studying');
   setHeader(title, () => { quiz = null; go('learn'); });
@@ -2358,31 +2476,36 @@ function startQuiz(deckIds, title) {
   nextQuiz();
 }
 
-// Die nächsten noch nicht sicheren Wörter (in Block-Reihenfolge, also nach Häufigkeit) in die aktive Gruppe holen
+// Die nächsten noch nicht sicheren Wörter (in Block-Reihenfolge, also nach Häufigkeit) in die aktive Gruppe holen.
+// Angefangene Wörter (schon Punkte gesammelt) kommen zuerst dran.
 function fillQuizBatch() {
-  const m = quizMastered();
-  for (const id of quiz.pool) {
+  const open = quiz.pool.filter(id => !quizSits(id) && !quiz.active.includes(id));
+  const started = open.filter(quizHas), fresh = open.filter(id => !quizHas(id));
+  for (const id of started.concat(fresh)) {
     if (quiz.active.length >= QUIZ_BATCH) break;
-    if (!m[id] && !quiz.active.includes(id)) { quiz.active.push(id); quiz.streak[id] = quiz.streak[id] || 0; }
+    quiz.active.push(id);
   }
 }
 
 function nextQuiz() {
-  const m = quizMastered();
-  const dir = () => (db.settings.qLang === 'mix' ? (Math.random() < 0.5 ? 'ru' : 'tr') : db.settings.qLang);
-  const reviewable = quiz.pool.filter(id => m[id] && id !== quiz.last);
   const pick = list => list[Math.floor(Math.random() * list.length)];
+  // Wiederholung: sichere Wörter, die am längsten nicht dran waren, bevorzugt
+  const reviewable = quiz.pool.filter(id => quizSits(id) && id !== quiz.last)
+    .sort((a, b) => (quizRec(a).t || 0) - (quizRec(b).t || 0));
   let id = null, review = false;
+  if (!quiz.active.length) fillQuizBatch();
   if (!quiz.active.length) id = null;   // alle Wörter des Blocks sitzen → fertig
-  else if (reviewable.length && Math.random() < QUIZ_REVIEW) { id = pick(reviewable); review = true; }
-  else if (quiz.active.length) {
+  else if (reviewable.length && Math.random() < QUIZ_REVIEW) { id = pick(reviewable.slice(0, 6)); review = true; }
+  else {
     // Wörter mit wenigen richtigen Antworten öfter, aber nie zweimal direkt hintereinander (außer es ist nur eins übrig)
     const cands = quiz.active.filter(x => x !== quiz.last);
     const list = cands.length ? cands : quiz.active;
-    const min = Math.min(...list.map(x => quiz.streak[x] || 0));
-    id = pick(list.filter(x => (quiz.streak[x] || 0) <= min + 1));
+    const pts = x => quizRec(x)[quizNextDir(x)] || 0;
+    const min = Math.min(...list.map(pts));
+    id = pick(list.filter(x => pts(x) <= min + 1));
   }
-  quiz.cur = id ? { id, q: dir(), review } : null;
+  const q = !id ? null : review ? (Math.random() < 0.5 ? 'ru' : 'tr') : quizNextDir(id);
+  quiz.cur = id ? { id, q, review } : null;
   quiz.answer = null;
   renderQuiz();
 }
@@ -2426,42 +2549,48 @@ function quizCheck(text) {
     const allowed = v.length >= 9 ? 2 : v.length >= 5 ? 1 : 0;
     if (levenshtein(a, v) <= allowed) { ok = true; typo = true; }
   }
-  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[learnLang()], before: { streak: quiz.streak[cur.id] || 0, active: [...quiz.active], mastered: !!quizMastered()[cur.id] } };
+  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[learnLang()], before: { rec: { ...quizRec(cur.id) }, active: [...quiz.active] } };
   quizApply(ok);
   renderQuiz();
 }
 
-// Ergebnis verbuchen: richtig → Serie +1 (sitzt ab QUIZ_STREAK), falsch → Serie 0; vergessene Wiederholung kommt zurück in die Gruppe
+// Ergebnis verbuchen: richtig → Serie der Richtung +1, falsch → Serie 0 (auch wenn das Wort schon saß)
 function quizApply(ok) {
-  const id = quiz.cur.id, m = quizMastered();
+  const id = quiz.cur.id, d = quiz.cur.q, rec = quizRec(id);
+  const satBefore = quizSits(id), dirBefore = quizDirSits(id, d);
   quiz.answered++;
   quiz.last = id;
-  if (ok) quiz.right++;
-  if (quiz.cur.review) {
-    if (!ok) { delete m[id]; quiz.active.push(id); quiz.streak[id] = 0; quiz.answer.lost = true; }
-  } else if (ok) {
-    quiz.streak[id] = (quiz.streak[id] || 0) + 1;
-    if (quiz.streak[id] >= QUIZ_STREAK) {
-      m[id] = 1;
-      quiz.active = quiz.active.filter(x => x !== id);
-      quiz.newlyMastered++;
+  rec.t = Date.now();
+  if (ok) { quiz.right++; rec[d] = (rec[d] || 0) + 1; } else rec[d] = 0;
+  if (!ok && satBefore) { quiz.answer.lost = true; if (!quiz.active.includes(id)) quiz.active.push(id); }
+  if (ok && !dirBefore && quizDirSits(id, d)) {
+    if (quizSits(id)) {
       quiz.answer.mastered = true;
+      quiz.active = quiz.active.filter(x => x !== id);
       if (!quiz.active.length) { fillQuizBatch(); quiz.answer.nextBatch = quiz.active.length > 0; }
-    }
-  } else quiz.streak[id] = 0;
+    } else quiz.answer.halfway = d;   // eine Richtung sitzt → jetzt andersherum
+  }
   save();
 }
 
 // „Ich lag doch richtig“: Stand von vor der Antwort wiederherstellen und als richtig werten
 function quizOverride() {
-  const b = quiz.answer.before, id = quiz.cur.id, m = quizMastered();
-  quiz.streak[id] = b.streak;
+  const b = quiz.answer.before, id = quiz.cur.id;
+  quizMastered()[id] = { ...b.rec };
   quiz.active = b.active;
-  if (b.mastered) m[id] = 1; else delete m[id];
   quiz.answered--;
   Object.assign(quiz.answer, { ok: true, override: true, lost: false });
   quizApply(true);
   renderQuiz();
+}
+
+// Fortschritt des gewählten Blocks löschen (Schreibmodus)
+function quizResetBlock() {
+  if (!confirm('Fortschritt im Schreibmodus für diesen Block zurücksetzen? Alle Wörter gelten dann wieder als neu.')) return;
+  const m = quizMastered();
+  quiz.pool.forEach(id => delete m[id]);
+  save();
+  startQuiz(quiz.deckIds, quiz.title);
 }
 
 function quizKeys(e) {
@@ -2473,7 +2602,7 @@ function renderQuiz() {
   const view = $('#view');
   const cur = quiz.cur;
   const m = quizMastered();
-  const sure = quiz.pool.filter(id => m[id]).length;
+  const sure = quiz.pool.filter(quizSits).length;
   $('#header-extra').innerHTML = `<span class="hbadge" title="Wörter, die sitzen">${sure}/${quiz.pool.length}</span>`;
   if (!cur) {
     view.innerHTML = `
@@ -2486,13 +2615,17 @@ function renderQuiz() {
         <button class="btn secondary" id="quiz-end">Zur Übersicht</button>
       </div>`;
     $('#quiz-again').onclick = () => startQuiz(quiz.deckIds, quiz.title);
-    $('#quiz-reset').onclick = () => { quiz.pool.forEach(id => delete m[id]); save(); startQuiz(quiz.deckIds, quiz.title); };
+    $('#quiz-reset').onclick = quizResetBlock;
     $('#quiz-end').onclick = () => { quiz = null; go('learn'); };
     return;
   }
   // Fortschritt der aktuellen 5er-Gruppe: ein Punkt je richtiger Antwort in Folge
-  const dots = id => '●'.repeat(Math.min(quiz.streak[id] || 0, QUIZ_STREAK)) + '○'.repeat(Math.max(0, QUIZ_STREAK - (quiz.streak[id] || 0)));
-  const groupHtml = `<div class="quiz-group">${cur.review ? '<span class="quiz-review">🔁 Wiederholung</span>' : `Neue Wörter: ${quiz.active.length} in Arbeit · <span class="quiz-dots">${dots(cur.id)}</span>`}</div>`;
+  // Punkte der aktuellen Richtung: ein Punkt je richtiger Antwort in Folge
+  const pts = cur.review ? 0 : quizRec(cur.id)[cur.q] || 0;
+  const dots = '●'.repeat(Math.min(pts, QUIZ_STREAK)) + '○'.repeat(Math.max(0, QUIZ_STREAK - pts));
+  const dirName = d => (d === 'ru' ? `${LEARN_LANGS[learnLang()].name} → Deutsch` : `Deutsch → ${LEARN_LANGS[learnLang()].name}`);
+  const groupHtml = `<div class="quiz-group">${cur.review ? '<span class="quiz-review">🔁 Wiederholung</span>' : `${quiz.active.length} Wörter in Arbeit · ${dirName(cur.q)} · <span class="quiz-dots">${dots}</span>`}</div>`;
+  const resetLink = `<button class="link-btn" id="quiz-reset-block">↺ Fortschritt dieses Blocks zurücksetzen</button>`;
   const card = db.cards[cur.id];
   const askRu = cur.q === 'ru';
   const L = learnLang();
@@ -2512,12 +2645,14 @@ function renderQuiz() {
           <button class="btn" id="quiz-check">Prüfen</button>
           <button class="btn secondary" id="quiz-skip">Weiß ich nicht</button>
         </div>
+        ${resetLink}
       </div>`;
     const input = $('#quiz-in');
     setTimeout(() => input.focus(), 50);
     input.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); quizCheck(input.value); } };
     $('#quiz-check').onclick = () => quizCheck(input.value);
     $('#quiz-skip').onclick = () => quizCheck('');
+    $('#quiz-reset-block').onclick = quizResetBlock;
   } else {
     const r = quiz.answer;
     // Nach der Antwort: Ergebnis und die ganze Karte – zuerst die Antwortseite, dann die Frageseite
@@ -2525,7 +2660,8 @@ function renderQuiz() {
       <div class="quiz">
         <div class="quiz-result ${r.ok ? 'ok' : 'bad'}">
           <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : r.typo ? '✓ Richtig (kleiner Tippfehler)' : '✓ Richtig!') : r.lost ? '✗ Leider falsch – das Wort kommt zurück in die Übungsgruppe' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
-          ${r.mastered ? `<div class="quiz-mastered">⭐ Dieses Wort sitzt jetzt (${QUIZ_STREAK}× richtig in Folge)!${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
+          ${r.halfway ? `<div class="quiz-mastered">⭐ ${r.halfway === 'ru' ? `${LEARN_LANGS[learnLang()].name} → Deutsch` : `Deutsch → ${LEARN_LANGS[learnLang()].name}`} sitzt! Ab jetzt wird dieses Wort andersherum gefragt.</div>` : ''}
+          ${r.mastered ? `<div class="quiz-mastered">⭐ Dieses Wort sitzt jetzt in beide Richtungen!${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(r.expected)}</b></div>
           <div>📖 <b>${esc(card.f[L])}</b> = ${esc(card.f.de || '')}</div>
@@ -2786,6 +2922,7 @@ function deForm(de, person, tense) {
 function drillGerman(cur, card) {
   const de = card.f.de;
   if (!de) return '';
+  if (drill && drill.mode === 'decl') return de;   // Nomen: Grundbedeutung
   let person, tense = cur.key, extra = '';
   if (learnLang() === 'es') {
     if (/^(me|te|le|nos|les) …$/.test(cur.person)) return '';   // gustar & Co.: deutsch ganz anders gebaut
@@ -2805,22 +2942,142 @@ function drillGerman(cur, card) {
   return f ? f + extra : '';
 }
 
+/* ============================================================
+   Deklination üben (Nomen): Russisch Fall + Zahl, Spanisch Plural mit Artikel und Artikel (el/la).
+   Läuft im selben Trainer wie die Konjugation (drill.mode = 'decl').
+   ============================================================ */
+const DECL_CASES = ['nom', 'gen', 'dat', 'akk', 'ins', 'prp'];
+const DECL_CASE_NAME = { nom: 'Nominativ', gen: 'Genitiv', dat: 'Dativ', akk: 'Akkusativ', ins: 'Instrumental', prp: 'Präpositiv' };
+
+function declTasks(card, sel) {
+  const tasks = [];
+  if (learnLang() === 'es') {
+    const p = esNounParts(card.f.es || '')[0];
+    if (!p || p.plOnly || !p.g) return tasks;
+    const m = p.text.match(/^(el|la)\s+([^(]+?)\s*(\(.*\))?$/i);
+    if (!m) return tasks;
+    if (sel.includes('pl') && p.pl) tasks.push({ verb: p.text, person: 'Plural mit Artikel', tense: 'Plural', key: 'pl', i: 0, answer: p.pl, noun: m[2], art: m[1].toLowerCase() });
+    if (sel.includes('art')) tasks.push({ verb: m[2], person: 'Welcher Artikel? el oder la', tense: 'Artikel', key: 'art', i: 0, answer: m[1].toLowerCase(), noun: m[2], art: m[1].toLowerCase() });
+    return tasks;
+  }
+  const x = card.x, nom = card.f.ru || '';
+  if (x.indecl) return tasks;
+  const { sg, pl } = nounDecl(x, nom);
+  const nums = ['sg', 'pl'].filter(n => sel.includes(n));
+  for (const num of nums.length ? nums : ['sg', 'pl']) {
+    const forms = num === 'sg' ? sg : pl;
+    if (forms.length !== 6 || forms.some(f => !f)) continue;
+    DECL_CASES.forEach((c, i) => {
+      if (!sel.includes(c)) return;
+      const frame = NOUN_FRAMES[i][0]('___').replace('ко ___', 'к ___').replace('со ___', 'с ___').replace('об ___', 'о ___');
+      tasks.push({ verb: x.gender === 'pl' ? pl[0] : nom, person: `${NOUN_CASES[i][1]} · z. B. „${frame}“`, tense: `${DECL_CASE_NAME[c]} · ${num === 'sg' ? 'Singular' : 'Plural'}`, key: c, num, i, answer: forms[i], all: forms, sg, pl });
+    });
+  }
+  return tasks;
+}
+
+// Allgemeine Endungen je Fall (für die Erklärung)
+const RU_DECL_RULE = {
+  sg: {
+    nom: 'Nominativ = Grundform aus dem Wörterbuch.',
+    gen: 'Genitiv Singular: männlich/sächlich <b>-а / -я</b>, weiblich <b>-ы / -и</b>.',
+    dat: 'Dativ Singular: männlich/sächlich <b>-у / -ю</b>, weiblich <b>-е</b> (auf -ь und -ия: <b>-и</b>).',
+    akk: 'Akkusativ Singular: weiblich auf -а/-я → <b>-у / -ю</b>; männlich unbelebt und sächlich = Nominativ, männlich belebt = Genitiv; weiblich auf -ь bleibt.',
+    ins: 'Instrumental Singular: männlich/sächlich <b>-ом / -ем</b>, weiblich <b>-ой / -ей</b>, weiblich auf -ь <b>-ью</b>.',
+    prp: 'Präpositiv Singular: meist <b>-е</b>; auf -ия, -ие und weiblich auf -ь: <b>-и</b>.',
+  },
+  pl: {
+    nom: 'Nominativ Plural: männlich/weiblich <b>-ы / -и</b>, sächlich <b>-а / -я</b>.',
+    gen: 'Genitiv Plural: männlich <b>-ов / -ев</b> (auf -ь, ж, ш, ч, щ: <b>-ей</b>); weiblich und sächlich meist <b>ohne Endung</b> (книг, слов), auf -ь: <b>-ей</b>.',
+    dat: 'Dativ Plural: immer <b>-ам / -ям</b>.',
+    akk: 'Akkusativ Plural: unbelebt = Nominativ, belebt (Menschen, Tiere) = Genitiv.',
+    ins: 'Instrumental Plural: immer <b>-ами / -ями</b>.',
+    prp: 'Präpositiv Plural: immer <b>-ах / -ях</b>.',
+  },
+};
+
+function ruDeclWhy(t) {
+  const card = db.cards[t.id], x = card.x, nom = card.f.ru || '';
+  const p = s => (s || '').replace(STRESS, '').replace(/ё/g, 'е');
+  const lines = [`<div><b>Muster:</b> ${esc(nounPattern(x, nom))}.</div>`, `<div>${RU_DECL_RULE[t.num][t.key]}</div>`];
+  const why = [];
+  const ans = p(t.answer), nomP = p(nom);
+  const genSg = p(t.sg[1] || ''), stemNom = nomP.replace(/[аяоеьйи]$/, ''), stemGen = genSg.replace(/[аяыи]$/, '');
+  // Akkusativ belebt / unbelebt
+  if (t.key === 'akk' && x.anim && (t.num === 'pl' || x.gender === 'm')) why.push(`<b>Belebt</b> (Mensch oder Tier): Der Akkusativ sieht aus wie der Genitiv → ${esc(t.answer)}.`);
+  else if (t.key === 'akk' && (t.num === 'pl' || x.gender !== 'f' || !/[ая]$/.test(nomP))) why.push(`<b>Unbelebt</b>: Der Akkusativ ist gleich dem Nominativ → ${esc(t.answer)}.`);
+  // Flüchtiger Vokal (день → дня, оте́ц → отца́)
+  if (t.key !== 'nom' && x.gender !== 'pl' && genSg && stemGen.length < stemNom.length && stemNom.startsWith(stemGen.slice(0, -1)))
+    why.push(`<b>Flüchtiger Vokal:</b> Das -о-/-е- im Nominativ (${esc(nom)}) fällt in den anderen Fällen weg (${esc(t.sg[1])}).`);
+  // Eingeschobener Vokal im Genitiv Plural ohne Endung (оши́бка → оши́бок, окно́ → о́кон)
+  if (t.num === 'pl' && t.key === 'gen' && !/(ов|ев|ей|ий)$/.test(ans) && ans.length > stemNom.length && /[ое][^аеиоуыэюя]$/.test(ans))
+    why.push(`<b>Eingeschobener Vokal:</b> Ohne Endung wären zwei Konsonanten am Ende schwer auszusprechen, deshalb kommt ein -о-/-е- dazu (${esc(t.answer)}).`);
+  if (t.num === 'pl' && t.key === 'gen' && !/(ов|ев|ей|ий)$/.test(ans)) why.push('Genitiv Plural <b>ohne Endung</b>: typisch für weibliche Wörter auf -а/-я und sächliche auf -о.');
+  // Rechtschreibregeln
+  if (/и$/.test(ans) && /[гкхжшчщ]и$/.test(ans) && (t.key === 'gen' && t.num === 'sg' || t.key === 'nom' && t.num === 'pl'))
+    why.push('<b>Rechtschreibregel:</b> Nach г, к, х, ж, ш, ч, щ schreibt man nie ы, sondern и.');
+  if (/[жшчщц]е[мй]$/.test(ans) && t.key === 'ins') why.push('<b>Rechtschreibregel:</b> Nach ж, ш, ч, щ, ц wird unbetontes о zu е (-ем / -ей statt -ом / -ой).');
+  if (/[жшчщ]ей$/.test(ans) && t.key === 'gen' && t.num === 'pl') why.push('Nach ж, ш, ч, щ endet der Genitiv Plural männlicher Wörter auf <b>-ей</b>.');
+  // Unregelmäßiger Plural (друг → друзья́, челове́к → лю́ди)
+  if (t.num === 'pl' && x.gender !== 'pl' && t.pl[0] && !p(t.pl[0]).startsWith(stemNom.slice(0, Math.max(2, stemNom.length - 1))))
+    why.push(`<b>Unregelmäßiger Plural:</b> ${esc(nom)} → ${esc(t.pl[0])}. Den Plural muss man mitlernen.`);
+  else if (t.num === 'pl' && /ья$/.test(p(t.pl[0]))) why.push(`<b>Plural auf -ья</b> (wie брат → бра́тья, стул → сту́лья): weiter mit -ьев / -ьям …`);
+  else if (t.num === 'pl' && /а$/.test(p(t.pl[0])) && x.gender === 'm') why.push(`Einige männliche Wörter haben den Plural auf betontes <b>-а́</b> (дом → дома́, го́род → города́).`);
+  if (/мя$/.test(nomP) && t.num === 'sg' && t.key !== 'nom' && t.key !== 'akk') why.push('Wörter auf -мя haben in den anderen Fällen <b>-ен-</b>: и́мя → и́мени, вре́мя → вре́мени.');
+  // Betonung wandert
+  const stressIdx = w => { const m = (w || '').search(/[аеиоуыэюя]́|ё/); return m; };
+  if (stressIdx(t.answer) >= 0 && stressIdx(nom) >= 0 && p(t.answer).startsWith(stemNom) && stressIdx(t.answer) !== stressIdx(nom))
+    why.push(`<b>Betonung wandert:</b> ${esc(nom)} → ${esc(t.answer)}.`);
+  return lines.concat(why.map(w => `<div>• ${w}</div>`)).join('');
+}
+
+function esDeclWhy(t) {
+  const n = t.noun, art = t.art;
+  if (t.key === 'art') {
+    const fem = art === 'la';
+    let why;
+    if (ES_EL_FEM.has(n.split(' ')[0])) why = 'Das Wort ist <b>weiblich</b>, beginnt aber mit betontem a- → im Singular <b>el</b> (el agua), im Plural las.';
+    else if (/(ción|sión|dad|tad|tud|umbre)$/.test(n)) why = 'Endung -ción, -sión, -dad, -tad, -tud, -umbre → immer <b>weiblich</b>.';
+    else if (/ma$/.test(n) && !fem) why = 'Wörter auf <b>-ma</b> aus dem Griechischen sind <b>männlich</b> (el problema, el tema, el sistema).';
+    else if (/o$/.test(n) && fem) why = '<b>Ausnahme:</b> endet auf -o, ist aber weiblich (la mano, la foto, la moto, la radio).';
+    else if (/a$/.test(n) && !fem) why = '<b>Ausnahme:</b> endet auf -a, ist aber männlich (el día, el mapa, el sofá).';
+    else if (/o$/.test(n)) why = 'Endung <b>-o</b> → meist männlich.';
+    else if (/a$/.test(n)) why = 'Endung <b>-a</b> → meist weiblich.';
+    else why = 'Bei dieser Endung verrät das Wort sein Geschlecht nicht – den Artikel muss man mitlernen.';
+    return `<div>${why}</div><div>el = männlich, la = weiblich · Plural: los, las.</div>`;
+  }
+  const sg = n.split(' ')[0], pl = t.answer.replace(/^(los|las)\s+/, '').split(' ')[0];
+  const lines = [`<div>Artikel im Plural: el → <b>los</b>, la → <b>las</b>${ES_EL_FEM.has(sg) ? ' (auch bei el agua: <b>las</b> aguas, weil das Wort weiblich ist)' : ''}.</div>`];
+  if (pl === sg) lines.push('<div>• Endet auf <b>unbetontes -s</b> → der Plural bleibt gleich (el lunes → los lunes).</div>');
+  else if (/ces$/.test(pl) && /z$/.test(sg)) lines.push('<div>• Endet auf <b>-z</b> → Plural <b>-ces</b>: Vor e schreibt man c statt z (vez → veces).</div>');
+  else if (/es$/.test(pl) && !/[aeiouáéó]$/.test(sg)) {
+    lines.push('<div>• Endet auf <b>Konsonant</b> → Plural <b>-es</b>.</div>');
+    if (/[áéíóú]/.test(sg) && !/[áéíóú]/.test(pl)) lines.push(`<div>• Der <b>Akzent fällt weg</b>, weil die betonte Silbe jetzt ohnehin nach der Regel betont wird (${esc(sg)} → ${esc(pl)}).</div>`);
+    if (!/[áéíóú]/.test(sg) && /[áéíóú]/.test(pl)) lines.push(`<div>• Ein <b>Akzent kommt dazu</b>, damit die Betonung an derselben Stelle bleibt (${esc(sg)} → ${esc(pl)}).</div>`);
+  } else lines.push('<div>• Endet auf <b>Vokal</b> → Plural einfach <b>-s</b>.</div>');
+  return lines.join('');
+}
+
 let drill = null;
 const DRILL_SIZE = 20;
 const DRILL_TENSES = {
   es: [['pres', 'Presente'], ['past', 'Pretérito'], ['imperf', 'Imperfecto'], ['perf', 'Perfecto'], ['futs', 'Futuro'], ['cond', 'Condicional'], ['subj', 'Subjuntivo'], ['imp', 'Imperativo']],
   ru: [['pres', 'Präsens (unvollendet)'], ['futipf', 'Zukunft unvollendet (бу́ду + Infinitiv)'], ['futpf', 'Zukunft vollendet (wie Präsens konjugiert)'], ['past', 'Vergangenheit'], ['imp', 'Imperativ']],
+  'decl-ru': [['nom', 'Nominativ'], ['gen', 'Genitiv'], ['dat', 'Dativ'], ['akk', 'Akkusativ'], ['ins', 'Instrumental'], ['prp', 'Präpositiv'], ['sg', 'Singular'], ['pl', 'Plural']],
+  'decl-es': [['pl', 'Plural mit Artikel'], ['art', 'Artikel (el / la)']],
 };
-const DRILL_DEFAULT = { es: ['pres', 'past', 'imperf'], ru: ['pres', 'futipf', 'futpf', 'past'] };
+const DRILL_DEFAULT = { es: ['pres', 'past', 'imperf'], ru: ['pres', 'futipf', 'futpf', 'past'], 'decl-ru': ['gen', 'dat', 'akk', 'ins', 'prp', 'sg', 'pl'], 'decl-es': ['pl', 'art'] };
+// Schlüssel für Einstellungen und Gedächtnis: Konjugation „ru“/„es“, Deklination „decl-ru“/„decl-es“
+const drillKey = () => (drill && drill.mode === 'decl' ? 'decl-' : '') + learnLang();
 const drillTenses = () => {
-  const L = learnLang();
-  const sel = (db.settings.drillTenses || {})[L];
-  return sel && sel.length ? sel : DRILL_DEFAULT[L];
+  const sel = (db.settings.drillTenses || {})[drillKey()];
+  return sel && sel.length ? sel : DRILL_DEFAULT[drillKey()];
 };
 
 // Alle möglichen Aufgaben zu einer Karte: { verb, person, tense (Name), key (Zeitform), i (Person), answer, … }
 function drillTasks(card, tenses) {
   const tasks = [];
+  if (drill && drill.mode === 'decl') return declTasks(card, tenses);
   if (learnLang() === 'es') {
     const v = card.x.es_verb || esMainVerb(card.f.es);
     const c = v && esConjugate(v), m = v && esMoreTenses(v);
@@ -3076,8 +3333,8 @@ function esAccentWhy(t, given) {
   return lines.map(l => `<div>${l}</div>`).join('');
 }
 
-function startDrill(deckIds, title) {
-  drill = { deckIds, title, setup: true };
+function startDrill(deckIds, title, mode = 'conj') {
+  drill = { deckIds, title, setup: true, mode };
   document.body.classList.add('studying');
   setHeader(title, () => { drill = null; go('learn'); });
   stopStudyKeys();
@@ -3089,14 +3346,15 @@ function startDrill(deckIds, title) {
 const DRILL_SURE = 3;
 const drillStats = () => {
   const all = db.drillStats || (db.drillStats = {});
-  return all[learnLang()] || (all[learnLang()] = {});
+  return all[drillKey()] || (all[drillKey()] = {});
 };
+const drillType = () => (drill && drill.mode === 'decl' ? 'nounfull' : 'verbpair');
 
 function beginDrill() {
   const tenses = drillTenses();
   const st = drillStats();
   const shuffle = a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
-  const cards = learnCards(drill.deckIds).filter(c => c.type === 'verbpair');
+  const cards = learnCards(drill.deckIds).filter(c => c.type === drillType());
   // Reihenfolge: Verben in Arbeit (noch nicht sicher), dann neue Verben aus dem Block (häufigste zuerst), dann sichere zur Wiederholung
   const inWork = shuffle(cards.filter(c => st[c.id] && st[c.id].s < DRILL_SURE));
   const fresh = cards.filter(c => !st[c.id]);
@@ -3183,24 +3441,39 @@ function renderDrill() {
   const L = learnLang();
   if (drill.setup) {
     const sel = new Set(drillTenses());
+    const decl = drill.mode === 'decl', key = drillKey();
+    const words = learnCards(drill.deckIds).filter(c => c.type === drillType());
+    const st = drillStats();
+    const sureN = words.filter(c => st[c.id] && st[c.id].s >= DRILL_SURE).length;
+    const intro = decl
+      ? (L === 'es' ? 'Was möchtest du üben? Plural mit Artikel (el año → los años) oder den Artikel (año → el).' : 'Welche Fälle und welche Zahl (Singular/Plural) möchtest du üben?')
+      : 'Welche Zeitformen möchtest du üben?';
     $('#header-extra').innerHTML = '';
     view.innerHTML = `
       <div class="quiz">
-        <p>Welche Zeitformen möchtest du üben? Es kommen ${DRILL_SIZE} Aufgaben: zuerst Verben, die noch nicht sitzen, dann neue aus dem Block. Person und Zeitform wechseln jedes Mal.</p>
-        <p class="sub" style="color:var(--muted);font-size:13px">${(() => { const st = drillStats(); const vs = learnCards(drill.deckIds).filter(c => c.type === 'verbpair'); return `${vs.filter(c => st[c.id] && st[c.id].s >= DRILL_SURE).length} von ${vs.length} Verben sitzen (${DRILL_SURE}× hintereinander richtig).`; })()}</p>
-        <div class="chips drill-chips">${DRILL_TENSES[L].map(([k, t]) => `<button class="chip ${sel.has(k) ? 'active' : ''}" data-tense="${k}">${esc(t)}</button>`).join('')}</div>
+        <p>${intro} Es kommen ${DRILL_SIZE} Aufgaben: zuerst Wörter, die noch nicht sitzen, dann neue aus dem Block. ${decl ? 'Fall und Zahl' : 'Person und Zeitform'} wechseln jedes Mal.</p>
+        <p class="sub" style="color:var(--muted);font-size:13px">${sureN} von ${words.length} ${decl ? 'Nomen' : 'Verben'} sitzen (${DRILL_SURE}× hintereinander richtig).</p>
+        <div class="chips drill-chips">${DRILL_TENSES[key].map(([k, t]) => `<button class="chip ${sel.has(k) ? 'active' : ''}" data-tense="${k}">${esc(t)}</button>`).join('')}</div>
         <div class="btn-row"><button class="btn" id="drill-go">Los geht's</button></div>
-        <p class="sub" style="color:var(--muted);font-size:13px">${L === 'es' ? 'Akzente zählen: habló ist nicht hablo. Reflexive Verben mit Pronomen eintippen (me levanto).' : 'Betonungszeichen musst du nicht eintippen.'}</p>
+        <p class="sub" style="color:var(--muted);font-size:13px">${L === 'es' ? (decl ? 'Akzente zählen: canciones, exámenes.' : 'Akzente zählen: habló ist nicht hablo. Reflexive Verben mit Pronomen eintippen (me levanto).') : 'Betonungszeichen musst du nicht eintippen.'}</p>
+        <button class="link-btn" id="drill-reset">↺ Fortschritt dieses Blocks zurücksetzen</button>
       </div>`;
     $$('[data-tense]', view).forEach(b => b.onclick = () => {
       const all = db.settings.drillTenses || (db.settings.drillTenses = {});
       const cur = new Set(drillTenses());
       cur.has(b.dataset.tense) ? cur.delete(b.dataset.tense) : cur.add(b.dataset.tense);
-      all[L] = DRILL_TENSES[L].map(([k]) => k).filter(k => cur.has(k));
+      all[key] = DRILL_TENSES[key].map(([k]) => k).filter(k => cur.has(k));
       save();
       renderDrill();
     });
     $('#drill-go').onclick = beginDrill;
+    $('#drill-reset').onclick = () => {
+      if (!confirm(`Fortschritt im ${decl ? 'Deklinations' : 'Konjugations'}training für diesen Block zurücksetzen?`)) return;
+      words.forEach(c => delete st[c.id]);
+      save();
+      renderDrill();
+      toast('Fortschritt zurückgesetzt');
+    };
     return;
   }
   const cur = drill.cur;
@@ -3215,7 +3488,7 @@ function renderDrill() {
         <button class="btn" id="drill-again">Neue Runde</button><br>
         <button class="btn secondary" id="drill-end">Zur Übersicht</button>
       </div>`;
-    $('#drill-again').onclick = () => startDrill(drill.deckIds, drill.title);
+    $('#drill-again').onclick = () => startDrill(drill.deckIds, drill.title, drill.mode);
     $('#drill-end').onclick = () => { drill = null; go('learn'); };
     document.removeEventListener('keydown', drillKeys);
     return;
@@ -3249,16 +3522,16 @@ function renderDrill() {
       <div class="quiz">
         <div class="quiz-result ${r.ok ? 'ok' : r.accent ? 'warn' : 'bad'}">
           <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : '✓ Richtig!') : r.accent ? '⚠️ Akzent vergessen oder falsch – fast richtig! Kommt gleich noch einmal.' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
-          ${r.sure ? `<div class="quiz-mastered">⭐ Dieses Verb sitzt jetzt (${DRILL_SURE}× hintereinander richtig) – ab jetzt kommen mehr neue Verben dran.</div>` : ''}
+          ${r.sure ? `<div class="quiz-mastered">⭐ Dieses Wort sitzt jetzt (${DRILL_SURE}× hintereinander richtig) – ab jetzt kommen mehr neue Wörter dran.</div>` : ''}
           <div>${esc(cur.verb)} · ${esc(cur.person)} · <span class="${DRILL_TENSE_CLS[cur.key] || ''}">${esc(cur.tense)}</span></div>
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(cur.answer)}</b> ${say(cur.answer)}</div>
           ${(g => g ? `<div>📖 <b>${esc(cur.answer)}</b> = ${esc(g)}</div>` : '')(drillGerman(cur, card))}
-          ${r.accent && L === 'es' ? `<div class="drill-why">${esAccentWhy(cur, r.text)}</div>` : ''}
+          ${r.accent && L === 'es' ? `<div class="drill-why">${drill.mode === 'decl' ? `<div><b>Akzent beachten:</b> richtig ist ${esc(cur.answer)}. Der Akzent zeigt die betonte Silbe – im Plural kann er wegfallen oder dazukommen (siehe ⓘ unten).</div>` : esAccentWhy(cur, r.text)}</div>` : ''}
         </div>
         <div class="drill-why-box">
           <div class="drill-why-title">Warum heißt die Form so? <button class="info" aria-label="Erklärung anzeigen">ⓘ</button></div>
-          <div class="vp-rule drill-why-body">${L === 'es' ? esWhy(cur) : ruWhy(cur)}</div>
+          <div class="vp-rule drill-why-body">${drill.mode === 'decl' ? (L === 'es' ? esDeclWhy(cur) : ruDeclWhy(cur)) : L === 'es' ? esWhy(cur) : ruWhy(cur)}</div>
         </div>
         <div class="btn-row">
           <button class="btn" id="drill-next">Weiter</button>
