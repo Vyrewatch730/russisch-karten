@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 63;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 64;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2452,22 +2452,28 @@ const quizMastered = () => {
   const all = db.quizMastery || (db.quizMastery = {});
   return all[learnLang()] || (all[learnLang()] = {});
 };
-const quizFirstDir = () => (db.settings.qLang === 'tr' ? 'tr' : 'ru');
+// Immer zuerst Lernsprache → Deutsch. Erst nach QUIZ_REVERSE richtigen Antworten insgesamt kommt auch Deutsch → Lernsprache.
+const QUIZ_REVERSE = 20;
+const quizFirstDir = () => 'ru';
 function quizRec(id) {
   const m = quizMastered();
-  if (m[id] === 1) m[id] = { [quizFirstDir()]: QUIZ_STREAK, t: 0 };   // altes Format: „sitzt“ (in der damals gewählten Richtung)
-  return m[id] || (m[id] = { ru: 0, tr: 0, t: 0 });
+  if (m[id] === 1) m[id] = { ru: QUIZ_STREAK, ruN: QUIZ_STREAK, tr: 0, t: 0 };   // altes Format: „sitzt“
+  const r = m[id] || (m[id] = { ru: 0, tr: 0, t: 0 });
+  if (r.ruN === undefined) r.ruN = r.ru || 0;
+  return r;
 }
-const quizHas = id => { const r = quizMastered()[id]; return r === 1 || (r && ((r.ru || 0) > 0 || (r.tr || 0) > 0)); };
+const quizHas = id => { const r = quizMastered()[id]; return r === 1 || (r && ((r.ru || 0) > 0 || (r.tr || 0) > 0 || (r.ruN || 0) > 0)); };
 const quizDirSits = (id, d) => ((quizRec(id)[d] || 0) >= QUIZ_STREAK);
-const quizSits = id => quizHas(id) && quizDirSits(id, 'ru') && quizDirSits(id, 'tr');
-// Welche Richtung als Nächstes? Erst die gewählte, wenn sie sitzt, die andere
-const quizNextDir = id => (quizDirSits(id, quizFirstDir()) ? (quizFirstDir() === 'ru' ? 'tr' : 'ru') : quizFirstDir());
+const quizReverseOpen = id => (quizRec(id).ruN || 0) >= QUIZ_REVERSE;
+// Sitzt: Richtung 1 sitzt und (Rückrichtung noch nicht dran oder sitzt auch)
+const quizSits = id => quizHas(id) && quizDirSits(id, 'ru') && (!quizReverseOpen(id) || quizDirSits(id, 'tr'));
+const quizBothSit = id => quizHas(id) && quizDirSits(id, 'ru') && quizDirSits(id, 'tr');
+const quizNextDir = id => (!quizDirSits(id, 'ru') ? 'ru' : quizReverseOpen(id) && !quizDirSits(id, 'tr') ? 'tr' : 'ru');
 
-function startQuiz(deckIds, title) {
+function startQuiz(deckIds, title, reviewOnly = false) {
   const pool = learnCards(deckIds).filter(c => c.f.de).map(c => c.id);
   if (!pool.length) { toast('Keine Karten in diesem Deck'); return; }
-  quiz = { title, deckIds, pool, active: [], last: null, cur: null, answer: null, answered: 0, right: 0 };
+  quiz = { title, deckIds, pool, active: [], last: null, cur: null, answer: null, answered: 0, right: 0, reviewOnly };
   fillQuizBatch();
   document.body.classList.add('studying');
   setHeader(title, () => { quiz = null; go('learn'); });
@@ -2494,7 +2500,8 @@ function nextQuiz() {
     .sort((a, b) => (quizRec(a).t || 0) - (quizRec(b).t || 0));
   let id = null, review = false;
   if (!quiz.active.length) fillQuizBatch();
-  if (!quiz.active.length) id = null;   // alle Wörter des Blocks sitzen → fertig
+  if (!quiz.active.length && quiz.reviewOnly && reviewable.length) { id = pick(reviewable.slice(0, 6)); review = true; }   // „Nur wiederholen“
+  else if (!quiz.active.length) id = null;   // alle Wörter des Blocks sitzen → fertig
   else if (reviewable.length && Math.random() < QUIZ_REVIEW) { id = pick(reviewable.slice(0, 6)); review = true; }
   else {
     // Wörter mit wenigen richtigen Antworten öfter, aber nie zweimal direkt hintereinander (außer es ist nur eins übrig)
@@ -2504,7 +2511,8 @@ function nextQuiz() {
     const min = Math.min(...list.map(pts));
     id = pick(list.filter(x => pts(x) <= min + 1));
   }
-  const q = !id ? null : review ? (Math.random() < 0.5 ? 'ru' : 'tr') : quizNextDir(id);
+  // Wiederholung: Rückrichtung nur bei Wörtern, die schon in beide Richtungen sitzen
+  const q = !id ? null : review ? (quizBothSit(id) && Math.random() < 0.5 ? 'tr' : 'ru') : quizNextDir(id);
   quiz.cur = id ? { id, q, review } : null;
   quiz.answer = null;
   renderQuiz();
@@ -2561,14 +2569,17 @@ function quizApply(ok) {
   quiz.answered++;
   quiz.last = id;
   rec.t = Date.now();
-  if (ok) { quiz.right++; rec[d] = (rec[d] || 0) + 1; } else rec[d] = 0;
+  const openBefore = quizReverseOpen(id);
+  if (ok) { quiz.right++; rec[d] = (rec[d] || 0) + 1; if (d === 'ru') rec.ruN = (rec.ruN || 0) + 1; } else rec[d] = 0;
+  // 20× richtig (Lernsprache → Deutsch): ab jetzt auch andersherum
+  if (ok && !openBefore && quizReverseOpen(id)) { quiz.answer.reverse = true; if (!quiz.active.includes(id)) quiz.active.push(id); }
   if (!ok && satBefore) { quiz.answer.lost = true; if (!quiz.active.includes(id)) quiz.active.push(id); }
-  if (ok && !dirBefore && quizDirSits(id, d)) {
+  if (ok && !dirBefore && quizDirSits(id, d) && !quiz.answer.reverse) {
     if (quizSits(id)) {
       quiz.answer.mastered = true;
       quiz.active = quiz.active.filter(x => x !== id);
       if (!quiz.active.length) { fillQuizBatch(); quiz.answer.nextBatch = quiz.active.length > 0; }
-    } else quiz.answer.halfway = d;   // eine Richtung sitzt → jetzt andersherum
+    }
   }
   save();
 }
@@ -2614,7 +2625,7 @@ function renderQuiz() {
         <button class="btn secondary" id="quiz-reset">Block von vorn lernen</button><br>
         <button class="btn secondary" id="quiz-end">Zur Übersicht</button>
       </div>`;
-    $('#quiz-again').onclick = () => startQuiz(quiz.deckIds, quiz.title);
+    $('#quiz-again').onclick = () => startQuiz(quiz.deckIds, quiz.title, true);
     $('#quiz-reset').onclick = quizResetBlock;
     $('#quiz-end').onclick = () => { quiz = null; go('learn'); };
     return;
@@ -2624,7 +2635,8 @@ function renderQuiz() {
   const pts = cur.review ? 0 : quizRec(cur.id)[cur.q] || 0;
   const dots = '●'.repeat(Math.min(pts, QUIZ_STREAK)) + '○'.repeat(Math.max(0, QUIZ_STREAK - pts));
   const dirName = d => (d === 'ru' ? `${LEARN_LANGS[learnLang()].name} → Deutsch` : `Deutsch → ${LEARN_LANGS[learnLang()].name}`);
-  const groupHtml = `<div class="quiz-group">${cur.review ? '<span class="quiz-review">🔁 Wiederholung</span>' : `${quiz.active.length} Wörter in Arbeit · ${dirName(cur.q)} · <span class="quiz-dots">${dots}</span>`}</div>`;
+  const toReverse = cur.q === 'ru' && !quizReverseOpen(cur.id) ? ` · ${quizRec(cur.id).ruN}/${QUIZ_REVERSE} bis andersherum` : '';
+  const groupHtml = `<div class="quiz-group">${cur.review ? `<span class="quiz-review">🔁 Wiederholung</span> · ${dirName(cur.q)}${toReverse}` : `${quiz.active.length} Wörter in Arbeit · ${dirName(cur.q)} · <span class="quiz-dots">${dots}</span>${toReverse}`}</div>`;
   const resetLink = `<button class="link-btn" id="quiz-reset-block">↺ Fortschritt dieses Blocks zurücksetzen</button>`;
   const card = db.cards[cur.id];
   const askRu = cur.q === 'ru';
@@ -2660,8 +2672,8 @@ function renderQuiz() {
       <div class="quiz">
         <div class="quiz-result ${r.ok ? 'ok' : 'bad'}">
           <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : r.typo ? '✓ Richtig (kleiner Tippfehler)' : '✓ Richtig!') : r.lost ? '✗ Leider falsch – das Wort kommt zurück in die Übungsgruppe' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
-          ${r.halfway ? `<div class="quiz-mastered">⭐ ${r.halfway === 'ru' ? `${LEARN_LANGS[learnLang()].name} → Deutsch` : `Deutsch → ${LEARN_LANGS[learnLang()].name}`} sitzt! Ab jetzt wird dieses Wort andersherum gefragt.</div>` : ''}
-          ${r.mastered ? `<div class="quiz-mastered">⭐ Dieses Wort sitzt jetzt in beide Richtungen!${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
+          ${r.reverse ? `<div class="quiz-mastered">⭐ ${QUIZ_REVERSE}× richtig übersetzt! Ab jetzt wird dieses Wort auch Deutsch → ${LEARN_LANGS[learnLang()].name} gefragt.</div>` : ''}
+          ${r.mastered ? `<div class="quiz-mastered">⭐ ${quizBothSit(cur.id) ? 'Dieses Wort sitzt jetzt in beide Richtungen!' : `Dieses Wort sitzt (${QUIZ_STREAK}× richtig in Folge). Nach insgesamt ${QUIZ_REVERSE} richtigen Antworten wird es auch andersherum gefragt (jetzt ${quizRec(cur.id).ruN}/${QUIZ_REVERSE}).`}${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(r.expected)}</b></div>
           <div>📖 <b>${esc(card.f[L])}</b> = ${esc(card.f.de || '')}</div>
