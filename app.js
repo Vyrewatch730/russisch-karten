@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 64;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 65;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2657,14 +2657,13 @@ function renderQuiz() {
           <button class="btn" id="quiz-check">Prüfen</button>
           <button class="btn secondary" id="quiz-skip">Weiß ich nicht</button>
         </div>
-        ${resetLink}
+        <div class="quiz-bottom">${resetLink}</div>
       </div>`;
     const input = $('#quiz-in');
     setTimeout(() => input.focus(), 50);
     input.onkeydown = e => { if (e.key === 'Enter') { e.preventDefault(); e.stopPropagation(); quizCheck(input.value); } };
     $('#quiz-check').onclick = () => quizCheck(input.value);
     $('#quiz-skip').onclick = () => quizCheck('');
-    $('#quiz-reset-block').onclick = quizResetBlock;
   } else {
     const r = quiz.answer;
     // Nach der Antwort: Ergebnis und die ganze Karte – zuerst die Antwortseite, dann die Frageseite
@@ -2683,11 +2682,13 @@ function renderQuiz() {
           ${!r.ok ? '<button class="btn secondary" id="quiz-ok">Ich lag doch richtig</button>' : ''}
         </div>
         ${flipCardHtml(card)}
+        <div class="quiz-bottom">${resetLink}</div>
       </div>`;
     $('#quiz-next').onclick = nextQuiz;
     $('#quiz-ok')?.addEventListener('click', quizOverride);
   }
   wireFlipCard(view);
+  $('#quiz-reset-block', view)?.addEventListener('click', quizResetBlock);
   $$('.say', view).forEach(b => b.onclick = (e) => { e.stopPropagation(); speak(b.dataset.say, b.dataset.lang); });
   $$('.info', view).forEach(b => b.onclick = (e) => {
     e.stopPropagation();
