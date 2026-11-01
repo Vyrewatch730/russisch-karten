@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 67;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 68;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2097,8 +2097,9 @@ function morphHtml(card) {
   const words = card.type === 'verbpair' ? [card.x.ipf, card.x.pf].filter(Boolean) : [(card.f.ru || '').split(/[,;/]/)[0].trim()];
   let m = null, word = '';
   for (const w of words) if ((m = ruMorph(w))) { word = w; break; }
-  if (!m) return '';
   const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
+  const refl = card.type === 'verbpair' ? ruReflHtml(card) : '';
+  if (!m) return refl ? `<div class="morph"><div class="nn-hint">🧩 Wortbausteine${info}</div><div class="vp-rule">${refl}</div></div>` : '';
   const parts = m.prefixes.map(([p, de]) => `<b>${esc(p)}-</b> (${esc(de)})`).concat(`<b>${esc(m.root.root)}</b> (${esc(m.root.de)})`);
   // Bedeutungsbrücke (morph-why.js): warum ergibt Vorsilbe + Wurzel genau diese Bedeutung?
   const plainW = w => (w || '').replace(STRESS, '').replace(/ё/g, 'е').trim();
@@ -2109,10 +2110,44 @@ function morphHtml(card) {
     <div class="vp-rule">
       <div><b>${esc(word)}</b> = ${parts.join(' + ')}${m.prefixes.length ? '' : ' – hier ohne Vorsilbe'}.</div>
       ${why ? `<div class="morph-why">💡 <b>Warum bedeutet das so?</b> ${esc(why)}</div>` : '<div>Die Wurzel trägt die Grundbedeutung, die Vorsilbe gibt Richtung oder Art dazu. Kennt man die Wurzel, kann man viele neue Wörter herleiten.</div>'}
+      ${refl}
       ${relatedHtml(ruMorphIndex()[ruMorphKey(m)], card)}
       <div><b>Weitere Wörter mit ${esc(m.root.root)}:</b> ${esc(m.root.ex)}</div>
     </div>
   </div>`;
+}
+
+// -ся / -сь = Kurzform von себя́ („sich“): Verb mit und ohne -ся verknüpfen (находи́ть → находи́ться)
+const RU_SJA_INFO = 'Je nach Verb bedeutet -ся: <b>sich selbst</b> (мы́ть → мы́ться = sich waschen) · <b>einander</b> (ви́деть → ви́деться = sich sehen, treffen) · <b>von selbst</b> (начина́ть → начина́ться = von selbst anfangen) · <b>passiv</b> (Дом стро́ится = Das Haus wird gebaut). Manche Verben gibt es nur mit -ся (боя́ться = Angst haben, смея́ться = lachen).';
+let ruVerbIdx = null, ruVerbIdxRev = -1;
+function ruVerbIndex() {
+  if (ruVerbIdxRev === cardsRev && ruVerbIdx) return ruVerbIdx;
+  ruVerbIdx = {};
+  const p = w => (w || '').replace(STRESS, '').replace(/ё/g, 'е');
+  for (const c of allCardsSorted()) if (c.type === 'verbpair' && c.f.ru) for (const w of [c.x.ipf, c.x.pf]) if (w && !ruVerbIdx[p(w)]) ruVerbIdx[p(w)] = c;
+  ruVerbIdxRev = cardsRev;
+  return ruVerbIdx;
+}
+function ruReflHtml(card) {
+  const p = w => (w || '').replace(STRESS, '').replace(/ё/g, 'е');
+  const idx = ruVerbIndex();
+  const de = c => esc((c.f.de || '').split(/[;]/)[0]);
+  const words = [card.x.ipf, card.x.pf].filter(Boolean);
+  const sja = words.find(w => /(ся|сь)$/.test(p(w)));
+  if (sja) {
+    // Grundverb ohne -ся suchen (in beiden Aspekten)
+    let baseCard = null, base = '';
+    for (const w of words) { const b = p(w).replace(/(ся|сь)$/, ''); if (idx[b] && idx[b].id !== card.id) { baseCard = idx[b]; base = [baseCard.x.ipf, baseCard.x.pf].find(x => p(x) === b) || b; break; } }
+    return `<div class="morph-refl">🔁 <b>-ся</b> (nach Vokal <b>-сь</b>) ist eine Kurzform von <b>себя́</b> = „sich“. Die Handlung richtet sich auf einen selbst zurück.</div>
+      ${baseCard ? `<div class="morph-why">💡 <b>${esc(base)}</b> (${de(baseCard)}) + <b>-ся</b> → <b>${esc(sja)}</b> (${de(card)}): wörtlich „sich ${de(baseCard).split(',')[0].replace(/^sich /, '')}“.</div>` : ''}
+      <div class="sub">${RU_SJA_INFO}</div>`;
+  }
+  // Gegenstück mit -ся in den eigenen Karten?
+  for (const w of words) {
+    const c = idx[p(w) + (/[аеиоуыэюя]$/.test(p(w)) ? 'сь' : 'ся')] || idx[p(w) + 'ся'];
+    if (c && c.id !== card.id) return `<div class="morph-refl">🔁 <b>Mit -ся</b> (Kurzform von себя́ = sich): <b>${esc(c.f.ru)}</b> – ${de(c)}. Die Handlung richtet sich dann auf einen selbst zurück.</div>`;
+  }
+  return '';
 }
 
 // Verwandte Wörter aus den eigenen Karten (gleiche Vorsilbe + Wurzel bzw. gleiche spanische Familie)
@@ -2137,15 +2172,16 @@ function relatedHtml(list, card) {
 
 // Spanisch: Wortbausteine aus morph-why-es.js (eigener Eintrag) oder allgemeine Vor-/Nachsilben-Regeln
 const esMorphWord = c => (c.x.es_verb || (c.f.es || '').split(/[;,]/)[0]).replace(/\(.*?\)/g, '').replace(/^(el|la|los|las)\s+/i, '').replace(/[¿?¡!:*]/g, '').trim().toLowerCase();
-let esWordSet = null, esFamIdx = null, esMorphRev = -1;
+let esWordSet = null, esFamIdx = null, esWordCard = {}, esMorphRev = -1;
 function esMorphIndex() {
   if (esMorphRev === cardsRev && esFamIdx) return;
-  esWordSet = new Set(); esFamIdx = {};
+  esWordSet = new Set(); esFamIdx = {}; esWordCard = {};
   const M = typeof ES_MORPH !== 'undefined' ? ES_MORPH : {};
   for (const c of allCardsSorted()) {
     if (!c.f.es) continue;
     const w = esMorphWord(c);
     esWordSet.add(w);
+    if (!esWordCard[w]) esWordCard[w] = c;
     const e = M[w];
     if (e) (esFamIdx[e[0]] = esFamIdx[e[0]] || []).push({ id: c.id, word: c.f.es, de: c.f.de });
   }
@@ -2187,12 +2223,24 @@ function esMorphHtml(card) {
         break;
       }
     }
-    if (!lines.length) return '';
     body = lines.map(l => `<div>${l}</div>`).join('');
   }
+  // -se = sich (wie -ся): encontrar (finden) + se → encontrarse (sich treffen, sich befinden)
+  const de = c => esc((c.f.de || '').split(/[;]/)[0]);
+  let refl = '';
+  if (/[aeií]rse$/.test(w)) {
+    const base = w.replace(/se$/, ''), bc = esWordCard[base];
+    refl = `<div class="morph-refl">🔁 <b>-se</b> = „sich“ (wie russisch -ся). Die Handlung richtet sich auf einen selbst zurück.</div>`
+      + (bc && bc.id !== card.id ? `<div class="morph-why">💡 <b>${esc(base)}</b> (${de(bc)}) + <b>se</b> → <b>${esc(w)}</b> (${de(card)}): wörtlich „sich ${de(bc).split(',')[0].replace(/^sich /, '')}“.</div>` : '')
+      + '<div class="sub">-se kann heißen: sich selbst (lavarse = sich waschen), einander (verse = sich sehen), von selbst (romperse = kaputtgehen). Es steht am Infinitiv hinten, im Satz vor dem Verb: me lavo, te lavas, se lava.</div>';
+  } else if (/[aeií]r$/.test(w) && esWordCard[w + 'se'] && esWordCard[w + 'se'].id !== card.id) {
+    const c = esWordCard[w + 'se'];
+    refl = `<div class="morph-refl">🔁 <b>Mit -se</b> („sich“): <b>${esc(w + 'se')}</b> – ${de(c)}.</div>`;
+  }
+  if (!body && !refl) return '';
   return `<div class="morph">
     <div class="nn-hint">🧩 Wortbausteine${info}</div>
-    <div class="vp-rule">${body}</div>
+    <div class="vp-rule">${body || ''}${refl}</div>
   </div>`;
 }
 
@@ -2539,8 +2587,9 @@ const quizMastered = () => {
   const all = db.quizMastery || (db.quizMastery = {});
   return all[learnLang()] || (all[learnLang()] = {});
 };
-// Immer zuerst Lernsprache → Deutsch. Erst nach QUIZ_REVERSE richtigen Antworten insgesamt kommt auch Deutsch → Lernsprache.
-const QUIZ_REVERSE = 20;
+// Immer zuerst Lernsprache → Deutsch. Erst nach quizReverseN() (Standard 15) richtigen Antworten insgesamt kommt auch Deutsch → Lernsprache.
+const QUIZ_REVERSE_DEFAULT = 15;
+const quizReverseN = () => Math.max(1, Math.min(200, +db.settings.quizReverse || QUIZ_REVERSE_DEFAULT));   // in den Einstellungen änderbar
 const quizFirstDir = () => 'ru';
 function quizRec(id) {
   const m = quizMastered();
@@ -2551,7 +2600,7 @@ function quizRec(id) {
 }
 const quizHas = id => { const r = quizMastered()[id]; return r === 1 || (r && ((r.ru || 0) > 0 || (r.tr || 0) > 0 || (r.ruN || 0) > 0)); };
 const quizDirSits = (id, d) => ((quizRec(id)[d] || 0) >= QUIZ_STREAK);
-const quizReverseOpen = id => (quizRec(id).ruN || 0) >= QUIZ_REVERSE;
+const quizReverseOpen = id => (quizRec(id).ruN || 0) >= quizReverseN();
 // Sitzt: Richtung 1 sitzt und (Rückrichtung noch nicht dran oder sitzt auch)
 const quizSits = id => quizHas(id) && quizDirSits(id, 'ru') && (!quizReverseOpen(id) || quizDirSits(id, 'tr'));
 const quizBothSit = id => quizHas(id) && quizDirSits(id, 'ru') && quizDirSits(id, 'tr');
@@ -2722,7 +2771,7 @@ function renderQuiz() {
   const pts = cur.review ? 0 : quizRec(cur.id)[cur.q] || 0;
   const dots = '●'.repeat(Math.min(pts, QUIZ_STREAK)) + '○'.repeat(Math.max(0, QUIZ_STREAK - pts));
   const dirName = d => (d === 'ru' ? `${LEARN_LANGS[learnLang()].name} → Deutsch` : `Deutsch → ${LEARN_LANGS[learnLang()].name}`);
-  const toReverse = cur.q === 'ru' && !quizReverseOpen(cur.id) ? ` · ${quizRec(cur.id).ruN}/${QUIZ_REVERSE} bis andersherum` : '';
+  const toReverse = cur.q === 'ru' && !quizReverseOpen(cur.id) ? ` · ${quizRec(cur.id).ruN}/${quizReverseN()} bis andersherum` : '';
   const groupHtml = `<div class="quiz-group">${cur.review ? `<span class="quiz-review">🔁 Wiederholung</span> · ${dirName(cur.q)}${toReverse}` : `${quiz.active.length} Wörter in Arbeit · ${dirName(cur.q)} · <span class="quiz-dots">${dots}</span>${toReverse}`}</div>`;
   const resetLink = `<button class="link-btn" id="quiz-reset-block">↺ Fortschritt dieses Blocks zurücksetzen</button>`;
   const card = db.cards[cur.id];
@@ -2758,8 +2807,8 @@ function renderQuiz() {
       <div class="quiz">
         <div class="quiz-result ${r.ok ? 'ok' : 'bad'}">
           <b>${r.ok ? (r.override ? '✓ Als richtig gewertet' : r.typo ? '✓ Richtig (kleiner Tippfehler)' : '✓ Richtig!') : r.lost ? '✗ Leider falsch – das Wort kommt zurück in die Übungsgruppe' : '✗ Leider falsch – kommt gleich noch einmal'}</b>
-          ${r.reverse ? `<div class="quiz-mastered">⭐ ${QUIZ_REVERSE}× richtig übersetzt! Ab jetzt wird dieses Wort auch Deutsch → ${LEARN_LANGS[learnLang()].name} gefragt.</div>` : ''}
-          ${r.mastered ? `<div class="quiz-mastered">⭐ ${quizBothSit(cur.id) ? 'Dieses Wort sitzt jetzt in beide Richtungen!' : `Dieses Wort sitzt (${QUIZ_STREAK}× richtig in Folge). Nach insgesamt ${QUIZ_REVERSE} richtigen Antworten wird es auch andersherum gefragt (jetzt ${quizRec(cur.id).ruN}/${QUIZ_REVERSE}).`}${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
+          ${r.reverse ? `<div class="quiz-mastered">⭐ ${quizReverseN()}× richtig übersetzt! Ab jetzt wird dieses Wort auch Deutsch → ${LEARN_LANGS[learnLang()].name} gefragt.</div>` : ''}
+          ${r.mastered ? `<div class="quiz-mastered">⭐ ${quizBothSit(cur.id) ? 'Dieses Wort sitzt jetzt in beide Richtungen!' : `Dieses Wort sitzt (${QUIZ_STREAK}× richtig in Folge). Nach insgesamt ${quizReverseN()} richtigen Antworten wird es auch andersherum gefragt (jetzt ${quizRec(cur.id).ruN}/${quizReverseN()}).`}${r.nextBatch ? ' Alle 5 sitzen – jetzt kommen die nächsten 5 Wörter.' : ''}</div>` : ''}
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(r.expected)}</b></div>
           <div>📖 <b>${esc(card.f[L])}</b> = ${esc(card.f.de || '')}</div>
@@ -3940,6 +3989,10 @@ function renderSettings() {
           <div class="grow">Neue Karten pro Tag<div class="sub">heute schon: ${newSeenToday()}</div></div>
           <input type="number" id="new-per-day" min="0" max="500" value="${db.settings.newPerDay}" style="width:90px">
         </div>
+        <div class="row">
+          <div class="grow">Schreibmodus: Rückrichtung<div class="sub">Nach so vielen richtigen Antworten wird ein Wort auch Deutsch → Lernsprache gefragt (Standard ${QUIZ_REVERSE_DEFAULT})</div></div>
+          <input type="number" id="quiz-reverse" min="1" max="200" value="${quizReverseN()}" style="width:90px">
+        </div>
       </div>
     </div>
 
@@ -4023,6 +4076,7 @@ function renderSettings() {
     save(); toast(langName(code) + ' hinzugefügt'); renderSettings();
   };
   $('#new-per-day').onchange = (e) => { db.settings.newPerDay = Math.max(0, +e.target.value || 0); save(); };
+  $('#quiz-reverse').onchange = (e) => { db.settings.quizReverse = Math.max(1, Math.min(200, +e.target.value || QUIZ_REVERSE_DEFAULT)); e.target.value = db.settings.quizReverse; save(); toast('Rückrichtung nach ' + db.settings.quizReverse + ' richtigen Antworten'); };
   $$('[data-rename]', view).forEach(b => b.onclick = () => {
     const d = db.decks[b.dataset.rename];
     const name = prompt('Neuer Name:', d.name);
