@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 70;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 71;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2801,28 +2801,34 @@ function quizKeys(e) {
 }
 
 // Optionen des Schreibmodus – im Startbildschirm und in den Einstellungen gleich
-function quizOptionsHtml() {
-  const s = db.settings, L = LEARN_LANGS[learnLang()].name;
+// types: Kartentypen des aktuellen Blocks (Set) → nur die passenden Experten-Schalter.
+// Ohne types (Einstellungen) alle, nach Wortart getrennt.
+function quizOptionsHtml(types) {
+  const s = db.settings, L = LEARN_LANGS[learnLang()].name, ru = learnLang() === 'ru';
+  const verbs = !types || types.has('verbpair'), nouns = !types || types.has('nounfull');
   const row = (id, on, title, sub) => `<label class="row"><div class="grow">${title}<div class="sub">${sub}</div></div><input type="checkbox" id="${id}" ${on ? 'checked' : ''}></label>`;
+  const head = (title, sub) => `<div class="row qo-head"><div class="grow"><b>${title}</b>${sub ? `<div class="sub">${sub}</div>` : ''}</div></div>`;
   return `
     ${row('qo-reverse-on', quizReverseOn(), `Auch andersherum fragen (Deutsch → ${L})`, 'Wenn ein Wort oft genug richtig war, wird es auch in die Rückrichtung gefragt.')}
     <div class="row ${quizReverseOn() ? '' : 'disabled'}">
       <div class="grow">… nach so vielen richtigen Antworten<div class="sub">Standard ${QUIZ_REVERSE_DEFAULT}</div></div>
       <input type="number" id="qo-reverse-n" min="1" max="200" value="${quizReverseN()}" style="width:80px" ${quizReverseOn() ? '' : 'disabled'}>
     </div>
-    <div class="row qo-head"><div class="grow"><b>🎓 Expertenmodus</b><div class="sub">Für Fortgeschrittene – am Anfang am besten aus lassen.</div></div></div>
-    ${row('qo-conj', s.quizExpertConj, 'Verben: konjugierte Form statt Infinitiv', 'z. B. дава́л ↔ „er gab“, tuve ↔ „ich hatte“')}
-    ${learnLang() === 'ru' ? row('qo-asp', s.quizExpertAspect, 'Verben: Aspekte getrennt abfragen', '„machen (vollendet)“ → сде́лать') : ''}
-    ${row('qo-noun', s.quizExpertNoun, learnLang() === 'ru' ? 'Nomen: in den richtigen Fall setzen' : 'Nomen: Plural mit Artikel', learnLang() === 'ru' ? '„Buch – Genitiv Plural (без ___)“ → книг' : '„Jahr – Plural mit Artikel“ → los años')}`;
+    ${verbs || nouns ? head('🎓 Expertenmodus', 'Für Fortgeschrittene – am Anfang am besten aus lassen.') : ''}
+    ${verbs ? `${types ? '' : head('Verben')}
+    ${row('qo-conj', s.quizExpertConj, 'Konjugierte Form statt Infinitiv', 'z. B. дава́л ↔ „er gab“, tuve ↔ „ich hatte“')}
+    ${ru ? row('qo-asp', s.quizExpertAspect, 'Aspekte getrennt abfragen', '„machen (vollendet)“ → сде́лать') : ''}` : ''}
+    ${nouns ? `${types ? '' : head('Nomen')}
+    ${row('qo-noun', s.quizExpertNoun, ru ? 'In den richtigen Fall setzen' : 'Plural mit Artikel', ru ? '„Buch – Genitiv Plural (без ___)“ → книг' : '„Jahr – Plural mit Artikel“ → los años')}` : ''}`;
 }
 function wireQuizOptions(root, onChange) {
   const s = db.settings;
   const set = (key, val) => { s[key] = val; save(); if (onChange) onChange(); };
   $('#qo-reverse-on', root).onchange = e => set('quizReverseOn', e.target.checked);
   $('#qo-reverse-n', root).onchange = e => { const n = Math.max(1, Math.min(200, +e.target.value || QUIZ_REVERSE_DEFAULT)); e.target.value = n; set('quizReverse', n); };
-  $('#qo-conj', root).onchange = e => set('quizExpertConj', e.target.checked);
+  if ($('#qo-conj', root)) $('#qo-conj', root).onchange = e => set('quizExpertConj', e.target.checked);
   if ($('#qo-asp', root)) $('#qo-asp', root).onchange = e => set('quizExpertAspect', e.target.checked);
-  $('#qo-noun', root).onchange = e => set('quizExpertNoun', e.target.checked);
+  if ($('#qo-noun', root)) $('#qo-noun', root).onchange = e => set('quizExpertNoun', e.target.checked);
 }
 function renderQuizSetup(view) {
   $('#header-extra').innerHTML = '';
@@ -2831,7 +2837,7 @@ function renderQuizSetup(view) {
     <div class="quiz">
       <p>Was möchtest du üben? Es kommen immer 5 Wörter, bis jedes ${QUIZ_STREAK}× hintereinander richtig war – dann die nächsten 5, mit Wiederholungen.</p>
       <p class="sub" style="color:var(--muted);font-size:13px">${sure} von ${quiz.pool.length} Wörtern sitzen schon.</p>
-      <div class="panel">${quizOptionsHtml()}</div>
+      <div class="panel">${quizOptionsHtml(new Set(quiz.pool.map(id => db.cards[id] && db.cards[id].type)))}</div>
       <div class="btn-row"><button class="btn" id="quiz-go">Los geht's</button></div>
       <div class="quiz-bottom"><button class="link-btn" id="quiz-reset-block">↺ Fortschritt dieses Blocks zurücksetzen</button></div>
     </div>`;
