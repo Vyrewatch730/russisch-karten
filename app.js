@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 68;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 69;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2650,6 +2650,7 @@ function nextQuiz() {
   // Wiederholung: Rückrichtung nur bei Wörtern, die schon in beide Richtungen sitzen
   const q = !id ? null : review ? (quizBothSit(id) && Math.random() < 0.5 ? 'tr' : 'ru') : quizNextDir(id);
   quiz.cur = id ? { id, q, review } : null;
+  if (quiz.cur) quiz.cur.expert = quizExpertTask(db.cards[id], q);
   quiz.answer = null;
   renderQuiz();
 }
@@ -2682,18 +2683,53 @@ function levenshtein(a, b) {
   return d[a.length][b.length];
 }
 
+/* Expertenmodus im Schreibmodus (Einstellungen, standardmäßig aus):
+   quizExpertConj  – bei Verben eine konjugierte Form statt des Infinitivs (дава́л ↔ „er gab“)
+   quizExpertAspect – Deutsch → Russisch: vollendete und unvollendete Form getrennt abfragen („machen (vollendet)“ → сде́лать) */
+function quizExpertTask(card, q) {
+  if (!card || card.type !== 'verbpair') return null;
+  const s = db.settings;
+  if (s.quizExpertConj) {
+    const keys = learnLang() === 'es' ? ['pres', 'past', 'imperf'] : ['pres', 'futpf', 'past'];
+    const tasks = drillTasks(card, keys).filter(t => !/…/.test(t.person));   // gustar & Co. auslassen
+    if (tasks.length) {
+      const t = tasks[Math.floor(Math.random() * tasks.length)];
+      const de = drillGerman(t, card).replace(/ \(.*\)$/, '');
+      if (de) return { kind: 'conj', ru: t.answer, de, hint: `${t.answer} = Form von ${t.verb} · ${t.person} · ${t.tense}` };
+    }
+  }
+  if (s.quizExpertAspect && learnLang() === 'ru' && q === 'tr' && card.x.ipf && card.x.pf && card.x.ipf !== card.x.pf) {
+    const asp = Math.random() < 0.5 ? 'ipf' : 'pf';
+    return {
+      kind: 'asp', asp, ru: card.x[asp],
+      de: `${(card.f.de || '').split(/[;]/)[0].replace(/\(.*?\)/g, '').trim()} (${asp === 'ipf' ? 'unvollendet' : 'vollendet'})`,
+      hint: asp === 'ipf' ? `unvollendet: ${card.x.ipf} – Vorgang, wiederholt, Dauer · vollendet wäre ${card.x.pf}` : `vollendet: ${card.x.pf} – einmal, mit Ergebnis · unvollendet wäre ${card.x.ipf}`,
+    };
+  }
+  return null;
+}
+function quizExpertVariants(ex, askRu) {
+  if (askRu) {
+    const de = quizNorm(ex.de);
+    return [...new Set([de, de.replace(/^(ich|du|er|sie|es|wir|ihr|dass)\s+/, '')])];   // Pronomen darf fehlen
+  }
+  return [quizNorm(ex.ru)];
+}
+
 function quizCheck(text) {
   const cur = quiz.cur, card = db.cards[cur.id];
   const askRu = cur.q === 'ru';
   const a = quizNorm(text);
   let ok = false, typo = false;
-  for (const v of quizVariants(card, askRu)) {
+  for (const v of (cur.expert ? quizExpertVariants(cur.expert, askRu) : quizVariants(card, askRu))) {
     if (!a) break;
     if (v === a) { ok = true; typo = false; break; }
     const allowed = v.length >= 9 ? 2 : v.length >= 5 ? 1 : 0;
     if (levenshtein(a, v) <= allowed) { ok = true; typo = true; }
   }
-  quiz.answer = { text, ok, typo, expected: askRu ? card.f.de : card.f[learnLang()], before: { rec: { ...quizRec(cur.id) }, active: [...quiz.active] } };
+  const ex = cur.expert;
+  if (ex && ex.kind === 'conj' && learnLang() === 'es' && !askRu && ok && drillNorm(text) !== drillNorm(ex.ru)) { ok = false; typo = false; }   // Spanisch: Akzent zählt (habló ≠ hablo)
+  quiz.answer = { text, ok, typo, expected: ex ? (askRu ? ex.de : ex.ru) : askRu ? card.f.de : card.f[learnLang()], before: { rec: { ...quizRec(cur.id) }, active: [...quiz.active] } };
   quizApply(ok);
   renderQuiz();
 }
@@ -2777,17 +2813,18 @@ function renderQuiz() {
   const card = db.cards[cur.id];
   const askRu = cur.q === 'ru';
   const L = learnLang();
-  const prompt = askRu ? card.f[L] : card.f.de;
+  const ex = cur.expert;
+  const prompt = ex ? (askRu ? ex.ru : ex.de) : askRu ? card.f[L] : card.f.de;
   const say = t => `<button class="say" data-lang="${L}" data-say="${esc(t)}">🔊</button>`;
   if (!quiz.answer) {
     view.innerHTML = `
       <div class="quiz">
         ${groupHtml}
         <div class="quiz-prompt">
-          <div class="lang-tag">${askRu ? LEARN_LANGS[L].name : 'Deutsch'}</div>
+          <div class="lang-tag">${askRu ? LEARN_LANGS[L].name : 'Deutsch'}${ex ? ` · 🎓 Experte: ${ex.kind === 'conj' ? 'konjugierte Form' : 'Aspekt'}` : ''}</div>
           <div class="q-word">${esc(prompt)}</div>${askRu ? say(prompt) : ''}
         </div>
-        <label class="quiz-ask" for="quiz-in">${askRu ? 'Was heißt das auf Deutsch?' : `Wie heißt das auf ${LEARN_LANGS[L].name}?`}</label>
+        <label class="quiz-ask" for="quiz-in">${ex && ex.kind === 'conj' ? (askRu ? 'Was heißt diese Form auf Deutsch? (mit Person, z. B. „er gab“)' : `Wie heißt diese Form auf ${LEARN_LANGS[L].name}?`) : askRu ? 'Was heißt das auf Deutsch?' : `Wie heißt das auf ${LEARN_LANGS[L].name}?`}</label>
         <input id="quiz-in" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" lang="${askRu ? 'de' : L}" enterkeyhint="done">
         <div class="btn-row">
           <button class="btn" id="quiz-check">Prüfen</button>
@@ -2812,6 +2849,7 @@ function renderQuiz() {
           <div>Deine Antwort: ${r.text ? esc(r.text) : '—'}</div>
           <div>Richtig: <b>${esc(r.expected)}</b></div>
           <div>📖 <b>${esc(card.f[L])}</b> = ${esc(card.f.de || '')}</div>
+          ${cur.expert ? `<div>🎓 ${esc(cur.expert.hint)}</div>` : ''}
         </div>
         <div class="btn-row">
           <button class="btn" id="quiz-next">Weiter</button>
@@ -3069,7 +3107,9 @@ function deForm(de, person, tense) {
    ============================================================ */
 // Deutsche Übersetzung der gefragten Form (für die Ergebnisbox)
 function drillGerman(cur, card) {
-  const de = card.f.de;
+  let de = card.f.de;
+  // „sprechen; sagen“ bei говори́ть / сказа́ть: zweite Bedeutung gehört zum vollendeten Verb
+  if (de && cur.asp === 'pf' && card.x.ipf && card.x.pf && card.x.ipf !== card.x.pf && /;/.test(de.replace(/\(.*?\)/g, ''))) de = de.replace(/\(.*?\)/g, '').split(';')[1].trim();
   if (!de) return '';
   if (drill && drill.mode === 'decl') return de;   // Nomen: Grundbedeutung
   let person, tense = cur.key, extra = '';
@@ -3997,6 +4037,20 @@ function renderSettings() {
     </div>
 
     <div class="section">
+      <h2>🎓 Expertenmodus (Schreibmodus)</h2>
+      <div class="panel">
+        <label class="row">
+          <div class="grow">Konjugierte Formen statt Infinitiv<div class="sub">Bei Verben wird eine bestimmte Form gefragt, z. B. дава́л ↔ „er gab“, tuve ↔ „ich hatte“.</div></div>
+          <input type="checkbox" id="quiz-expert-conj" ${db.settings.quizExpertConj ? 'checked' : ''}>
+        </label>
+        <label class="row">
+          <div class="grow">Aspekte getrennt abfragen (Russisch)<div class="sub">Deutsch → Russisch: Es steht dabei, ob die vollendete oder unvollendete Form gesucht ist, z. B. „machen (vollendet)“ → сде́лать.</div></div>
+          <input type="checkbox" id="quiz-expert-asp" ${db.settings.quizExpertAspect ? 'checked' : ''}>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
       <h2>Decks</h2>
       <div class="panel">
         ${decks.length ? decks.map(d => `
@@ -4077,6 +4131,8 @@ function renderSettings() {
   };
   $('#new-per-day').onchange = (e) => { db.settings.newPerDay = Math.max(0, +e.target.value || 0); save(); };
   $('#quiz-reverse').onchange = (e) => { db.settings.quizReverse = Math.max(1, Math.min(200, +e.target.value || QUIZ_REVERSE_DEFAULT)); e.target.value = db.settings.quizReverse; save(); toast('Rückrichtung nach ' + db.settings.quizReverse + ' richtigen Antworten'); };
+  $('#quiz-expert-conj').onchange = (e) => { db.settings.quizExpertConj = e.target.checked; save(); toast(e.target.checked ? 'Expertenmodus: konjugierte Formen an' : 'Konjugierte Formen aus'); };
+  $('#quiz-expert-asp').onchange = (e) => { db.settings.quizExpertAspect = e.target.checked; save(); toast(e.target.checked ? 'Expertenmodus: Aspekte getrennt an' : 'Aspekte getrennt aus'); };
   $$('[data-rename]', view).forEach(b => b.onclick = () => {
     const d = db.decks[b.dataset.rename];
     const name = prompt('Neuer Name:', d.name);
