@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 69;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 70;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2600,7 +2600,8 @@ function quizRec(id) {
 }
 const quizHas = id => { const r = quizMastered()[id]; return r === 1 || (r && ((r.ru || 0) > 0 || (r.tr || 0) > 0 || (r.ruN || 0) > 0)); };
 const quizDirSits = (id, d) => ((quizRec(id)[d] || 0) >= QUIZ_STREAK);
-const quizReverseOpen = id => (quizRec(id).ruN || 0) >= quizReverseN();
+const quizReverseOn = () => db.settings.quizReverseOn !== false;   // Rückrichtung ganz abschaltbar
+const quizReverseOpen = id => quizReverseOn() && (quizRec(id).ruN || 0) >= quizReverseN();
 // Sitzt: Richtung 1 sitzt und (Rückrichtung noch nicht dran oder sitzt auch)
 const quizSits = id => quizHas(id) && quizDirSits(id, 'ru') && (!quizReverseOpen(id) || quizDirSits(id, 'tr'));
 const quizBothSit = id => quizHas(id) && quizDirSits(id, 'ru') && quizDirSits(id, 'tr');
@@ -2609,12 +2610,17 @@ const quizNextDir = id => (!quizDirSits(id, 'ru') ? 'ru' : quizReverseOpen(id) &
 function startQuiz(deckIds, title, reviewOnly = false) {
   const pool = learnCards(deckIds).filter(c => c.f.de).map(c => c.id);
   if (!pool.length) { toast('Keine Karten in diesem Deck'); return; }
-  quiz = { title, deckIds, pool, active: [], last: null, cur: null, answer: null, answered: 0, right: 0, reviewOnly };
-  fillQuizBatch();
+  quiz = { title, deckIds, pool, active: [], last: null, cur: null, answer: null, answered: 0, right: 0, reviewOnly, setup: !reviewOnly };
   document.body.classList.add('studying');
   setHeader(title, () => { quiz = null; go('learn'); });
   stopStudyKeys();
   document.addEventListener('keydown', quizKeys);
+  if (quiz.setup) { renderQuiz(); return; }   // erst fragen, was man üben möchte
+  beginQuiz();
+}
+function beginQuiz() {
+  quiz.setup = false;
+  fillQuizBatch();
   nextQuiz();
 }
 
@@ -2687,8 +2693,20 @@ function levenshtein(a, b) {
    quizExpertConj  – bei Verben eine konjugierte Form statt des Infinitivs (дава́л ↔ „er gab“)
    quizExpertAspect – Deutsch → Russisch: vollendete und unvollendete Form getrennt abfragen („machen (vollendet)“ → сде́лать) */
 function quizExpertTask(card, q) {
-  if (!card || card.type !== 'verbpair') return null;
   const s = db.settings;
+  // Nomen: in einen bestimmten Fall setzen (Russisch) bzw. Plural mit Artikel (Spanisch)
+  if (card && card.type === 'nounfull' && s.quizExpertNoun) {
+    const es = learnLang() === 'es';
+    const tasks = declTasks(card, es ? ['pl'] : ['gen', 'dat', 'akk', 'ins', 'prp', 'sg', 'pl']);
+    if (tasks.length) {
+      const t = tasks[Math.floor(Math.random() * tasks.length)];
+      const deNoun = (card.f.de || '').replace(/(.*?)/g, '').split(/[;,]/)[0].trim();
+      return es
+        ? { kind: 'noun', ru: t.answer, de: `${deNoun} – Plural mit Artikel`, hint: `${t.answer} = Plural von ${t.verb}` }
+        : { kind: 'noun', ru: t.answer, de: `${deNoun} – ${t.tense} (${t.person})`, hint: `${t.answer} = ${t.verb} im ${t.tense}` };
+    }
+  }
+  if (!card || card.type !== 'verbpair') return null;
   if (s.quizExpertConj) {
     const keys = learnLang() === 'es' ? ['pres', 'past', 'imperf'] : ['pres', 'futpf', 'past'];
     const tasks = drillTasks(card, keys).filter(t => !/…/.test(t.person));   // gustar & Co. auslassen
@@ -2708,7 +2726,8 @@ function quizExpertTask(card, q) {
   }
   return null;
 }
-function quizExpertVariants(ex, askRu) {
+function quizExpertVariants(ex, askRu, card) {
+  if (askRu && ex.kind === 'noun') return quizVariants(card, true);   // Fallform erkannt → deutsche Bedeutung
   if (askRu) {
     const de = quizNorm(ex.de);
     return [...new Set([de, de.replace(/^(ich|du|er|sie|es|wir|ihr|dass)\s+/, '')])];   // Pronomen darf fehlen
@@ -2721,7 +2740,7 @@ function quizCheck(text) {
   const askRu = cur.q === 'ru';
   const a = quizNorm(text);
   let ok = false, typo = false;
-  for (const v of (cur.expert ? quizExpertVariants(cur.expert, askRu) : quizVariants(card, askRu))) {
+  for (const v of (cur.expert ? quizExpertVariants(cur.expert, askRu, card) : quizVariants(card, askRu))) {
     if (!a) break;
     if (v === a) { ok = true; typo = false; break; }
     const allowed = v.length >= 9 ? 2 : v.length >= 5 ? 1 : 0;
@@ -2729,7 +2748,7 @@ function quizCheck(text) {
   }
   const ex = cur.expert;
   if (ex && ex.kind === 'conj' && learnLang() === 'es' && !askRu && ok && drillNorm(text) !== drillNorm(ex.ru)) { ok = false; typo = false; }   // Spanisch: Akzent zählt (habló ≠ hablo)
-  quiz.answer = { text, ok, typo, expected: ex ? (askRu ? ex.de : ex.ru) : askRu ? card.f.de : card.f[learnLang()], before: { rec: { ...quizRec(cur.id) }, active: [...quiz.active] } };
+  quiz.answer = { text, ok, typo, expected: ex ? (askRu ? (ex.kind === 'noun' ? card.f.de : ex.de) : ex.ru) : askRu ? card.f.de : card.f[learnLang()], before: { rec: { ...quizRec(cur.id) }, active: [...quiz.active] } };
   quizApply(ok);
   renderQuiz();
 }
@@ -2781,8 +2800,49 @@ function quizKeys(e) {
   if (quiz.answer) { e.preventDefault(); nextQuiz(); }
 }
 
+// Optionen des Schreibmodus – im Startbildschirm und in den Einstellungen gleich
+function quizOptionsHtml() {
+  const s = db.settings, L = LEARN_LANGS[learnLang()].name;
+  const row = (id, on, title, sub) => `<label class="row"><div class="grow">${title}<div class="sub">${sub}</div></div><input type="checkbox" id="${id}" ${on ? 'checked' : ''}></label>`;
+  return `
+    ${row('qo-reverse-on', quizReverseOn(), `Auch andersherum fragen (Deutsch → ${L})`, 'Wenn ein Wort oft genug richtig war, wird es auch in die Rückrichtung gefragt.')}
+    <div class="row ${quizReverseOn() ? '' : 'disabled'}">
+      <div class="grow">… nach so vielen richtigen Antworten<div class="sub">Standard ${QUIZ_REVERSE_DEFAULT}</div></div>
+      <input type="number" id="qo-reverse-n" min="1" max="200" value="${quizReverseN()}" style="width:80px" ${quizReverseOn() ? '' : 'disabled'}>
+    </div>
+    <div class="row qo-head"><div class="grow"><b>🎓 Expertenmodus</b><div class="sub">Für Fortgeschrittene – am Anfang am besten aus lassen.</div></div></div>
+    ${row('qo-conj', s.quizExpertConj, 'Verben: konjugierte Form statt Infinitiv', 'z. B. дава́л ↔ „er gab“, tuve ↔ „ich hatte“')}
+    ${learnLang() === 'ru' ? row('qo-asp', s.quizExpertAspect, 'Verben: Aspekte getrennt abfragen', '„machen (vollendet)“ → сде́лать') : ''}
+    ${row('qo-noun', s.quizExpertNoun, learnLang() === 'ru' ? 'Nomen: in den richtigen Fall setzen' : 'Nomen: Plural mit Artikel', learnLang() === 'ru' ? '„Buch – Genitiv Plural (без ___)“ → книг' : '„Jahr – Plural mit Artikel“ → los años')}`;
+}
+function wireQuizOptions(root, onChange) {
+  const s = db.settings;
+  const set = (key, val) => { s[key] = val; save(); if (onChange) onChange(); };
+  $('#qo-reverse-on', root).onchange = e => set('quizReverseOn', e.target.checked);
+  $('#qo-reverse-n', root).onchange = e => { const n = Math.max(1, Math.min(200, +e.target.value || QUIZ_REVERSE_DEFAULT)); e.target.value = n; set('quizReverse', n); };
+  $('#qo-conj', root).onchange = e => set('quizExpertConj', e.target.checked);
+  if ($('#qo-asp', root)) $('#qo-asp', root).onchange = e => set('quizExpertAspect', e.target.checked);
+  $('#qo-noun', root).onchange = e => set('quizExpertNoun', e.target.checked);
+}
+function renderQuizSetup(view) {
+  $('#header-extra').innerHTML = '';
+  const sure = quiz.pool.filter(quizSits).length;
+  view.innerHTML = `
+    <div class="quiz">
+      <p>Was möchtest du üben? Es kommen immer 5 Wörter, bis jedes ${QUIZ_STREAK}× hintereinander richtig war – dann die nächsten 5, mit Wiederholungen.</p>
+      <p class="sub" style="color:var(--muted);font-size:13px">${sure} von ${quiz.pool.length} Wörtern sitzen schon.</p>
+      <div class="panel">${quizOptionsHtml()}</div>
+      <div class="btn-row"><button class="btn" id="quiz-go">Los geht's</button></div>
+      <div class="quiz-bottom"><button class="link-btn" id="quiz-reset-block">↺ Fortschritt dieses Blocks zurücksetzen</button></div>
+    </div>`;
+  wireQuizOptions(view, () => renderQuizSetup(view));
+  $('#quiz-go').onclick = beginQuiz;
+  $('#quiz-reset-block').onclick = quizResetBlock;
+}
+
 function renderQuiz() {
   const view = $('#view');
+  if (quiz.setup) { renderQuizSetup(view); return; }
   const cur = quiz.cur;
   const m = quizMastered();
   const sure = quiz.pool.filter(quizSits).length;
@@ -2821,7 +2881,7 @@ function renderQuiz() {
       <div class="quiz">
         ${groupHtml}
         <div class="quiz-prompt">
-          <div class="lang-tag">${askRu ? LEARN_LANGS[L].name : 'Deutsch'}${ex ? ` · 🎓 Experte: ${ex.kind === 'conj' ? 'konjugierte Form' : 'Aspekt'}` : ''}</div>
+          <div class="lang-tag">${askRu ? LEARN_LANGS[L].name : 'Deutsch'}${ex ? ` · 🎓 Experte: ${ex.kind === 'conj' ? 'konjugierte Form' : ex.kind === 'noun' ? (L === 'es' ? 'Plural' : 'Fall') : 'Aspekt'}` : ''}</div>
           <div class="q-word">${esc(prompt)}</div>${askRu ? say(prompt) : ''}
         </div>
         <label class="quiz-ask" for="quiz-in">${ex && ex.kind === 'conj' ? (askRu ? 'Was heißt diese Form auf Deutsch? (mit Person, z. B. „er gab“)' : `Wie heißt diese Form auf ${LEARN_LANGS[L].name}?`) : askRu ? 'Was heißt das auf Deutsch?' : `Wie heißt das auf ${LEARN_LANGS[L].name}?`}</label>
@@ -4029,25 +4089,12 @@ function renderSettings() {
           <div class="grow">Neue Karten pro Tag<div class="sub">heute schon: ${newSeenToday()}</div></div>
           <input type="number" id="new-per-day" min="0" max="500" value="${db.settings.newPerDay}" style="width:90px">
         </div>
-        <div class="row">
-          <div class="grow">Schreibmodus: Rückrichtung<div class="sub">Nach so vielen richtigen Antworten wird ein Wort auch Deutsch → Lernsprache gefragt (Standard ${QUIZ_REVERSE_DEFAULT})</div></div>
-          <input type="number" id="quiz-reverse" min="1" max="200" value="${quizReverseN()}" style="width:90px">
-        </div>
       </div>
     </div>
 
     <div class="section">
-      <h2>🎓 Expertenmodus (Schreibmodus)</h2>
-      <div class="panel">
-        <label class="row">
-          <div class="grow">Konjugierte Formen statt Infinitiv<div class="sub">Bei Verben wird eine bestimmte Form gefragt, z. B. дава́л ↔ „er gab“, tuve ↔ „ich hatte“.</div></div>
-          <input type="checkbox" id="quiz-expert-conj" ${db.settings.quizExpertConj ? 'checked' : ''}>
-        </label>
-        <label class="row">
-          <div class="grow">Aspekte getrennt abfragen (Russisch)<div class="sub">Deutsch → Russisch: Es steht dabei, ob die vollendete oder unvollendete Form gesucht ist, z. B. „machen (vollendet)“ → сде́лать.</div></div>
-          <input type="checkbox" id="quiz-expert-asp" ${db.settings.quizExpertAspect ? 'checked' : ''}>
-        </label>
-      </div>
+      <h2>✍️ Schreibmodus</h2>
+      <div class="panel" id="quiz-options">${quizOptionsHtml()}</div>
     </div>
 
     <div class="section">
@@ -4130,9 +4177,8 @@ function renderSettings() {
     save(); toast(langName(code) + ' hinzugefügt'); renderSettings();
   };
   $('#new-per-day').onchange = (e) => { db.settings.newPerDay = Math.max(0, +e.target.value || 0); save(); };
-  $('#quiz-reverse').onchange = (e) => { db.settings.quizReverse = Math.max(1, Math.min(200, +e.target.value || QUIZ_REVERSE_DEFAULT)); e.target.value = db.settings.quizReverse; save(); toast('Rückrichtung nach ' + db.settings.quizReverse + ' richtigen Antworten'); };
-  $('#quiz-expert-conj').onchange = (e) => { db.settings.quizExpertConj = e.target.checked; save(); toast(e.target.checked ? 'Expertenmodus: konjugierte Formen an' : 'Konjugierte Formen aus'); };
-  $('#quiz-expert-asp').onchange = (e) => { db.settings.quizExpertAspect = e.target.checked; save(); toast(e.target.checked ? 'Expertenmodus: Aspekte getrennt an' : 'Aspekte getrennt aus'); };
+  const refreshQuizOptions = () => { $('#quiz-options').innerHTML = quizOptionsHtml(); wireQuizOptions($('#quiz-options'), refreshQuizOptions); };
+  wireQuizOptions($('#quiz-options'), refreshQuizOptions);
   $$('[data-rename]', view).forEach(b => b.onclick = () => {
     const d = db.decks[b.dataset.rename];
     const name = prompt('Neuer Name:', d.name);

@@ -441,3 +441,4 @@ th.t-past, th.t-fut { font-size: 13px; }
 .morph-why { background: rgba(224, 168, 0, .12); border-radius: 8px; padding: 6px 8px; }
 .morph-rel { font-size: 13px; }
 .morph-refl { margin-top: 4px; }
+.row.disabled { opacity: .5; } .qo-head { background: var(--bg); }
