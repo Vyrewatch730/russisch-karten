@@ -3,7 +3,7 @@
 /* ============================================================
    Konstanten
    ============================================================ */
-const APP_VERSION = 71;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
+const APP_VERSION = 72;                    // gleich wie CACHE in sw.js und ?v= in index.html halten
 const STORE_KEY = 'rk-data-v1';
 const MIN = 60 * 1000;
 const DAY = 24 * 60 * MIN;
@@ -2093,28 +2093,198 @@ function ruMorph(word) {
   return null;
 }
 
+// --- Automatische Ableitung: Nachsilbe bzw. не-/без- + Grundwort aus den eigenen Karten (го́род → городско́й) ---
+const ruPlain = w => (w || '').toLowerCase().replace(STRESS, '').replace(/ё/g, 'е').trim();
+const ruCardWords = c => c.type === 'verbpair' ? [c.x.ipf, c.x.pf].filter(Boolean) : [(c.f.ru || '').split(/[,;/]/)[0].replace(/[!?.…]/g, '').trim()];
+// [Endung, Grundwort-Art, Erklärung] – längere zuerst
+const RU_SUFFIXES = [
+  ['ическии', 'n', '-ическ- = „-isch“'], ['тельныи', 'v', '-тельн- = „-lich, -bar“ (Eigenschaft aus einem Verb)'], ['ливыи', 'n', '-лив- = „neigt zu …, voller …“'],
+  ['ющии', 'v', '-ющ- = Partizip „-end“ (gerade tuend)'], ['ящии', 'v', '-ящ- = Partizip „-end“ (gerade tuend)'], ['ущии', 'v', '-ущ- = Partizip „-end“ (gerade tuend)'], ['ащии', 'v', '-ащ- = Partizip „-end“ (gerade tuend)'],
+  ['енныи', 'v', '-енн- = Partizip „ge-…-t“ (was getan wurde)'], ['анныи', 'n', '-ан(н)- = „aus …, zu … gehörig“'], ['янныи', 'n', '-ян(н)- = „aus … (Stoff)“'],
+  ['скии', 'n', '-ск- = „zu … gehörig, -isch“'], ['скои', 'n', '-ск- = „zu … gehörig, -isch“'], ['цкии', 'n', '-цк- = „zu … gehörig, -isch“'],
+  ['овыи', 'n', '-ов- = „aus …, zu … gehörig“'], ['овои', 'n', '-ов- = „aus …, zu … gehörig“'], ['евыи', 'n', '-ев- = „aus …, zu … gehörig“'], ['евои', 'n', '-ев- = „aus …, zu … gehörig“'],
+  ['ныи', 'n', '-н- = macht aus einem Hauptwort ein Adjektiv („-ig, -lich“)'], ['нои', 'n', '-н- = macht aus einem Hauptwort ein Adjektiv („-ig, -lich“)'], ['нии', 'n', '-н- = macht aus einem Hauptwort ein Adjektiv („-ig, -lich“)'],
+  ['ость', 'a', '-ость = „-heit, -keit“ (Eigenschaft als Ding)'], ['есть', 'a', '-есть = „-heit, -keit“'],
+  ['ение', 'v', '-ение = „-ung“ (der Vorgang)'], ['ание', 'v', '-ание = „-ung“ (der Vorgang)'], ['яние', 'v', '-яние = „-ung“ (der Vorgang/Zustand)'], ['ние', 'v', '-ние = „-ung“ (der Vorgang)'], ['тие', 'v', '-тие = „-ung“ (der Vorgang)'],
+  ['тель', 'v', '-тель = „-er“ (wer es tut)'], ['ница', 'v', '-ница = Person/Ort (weiblich)'], ['ник', 'n', '-ник = „-er“ (Person/Ding, das mit … zu tun hat)'], ['щик', 'n', '-щик = „-er“ (wer damit arbeitet)'], ['чик', 'n', '-чик = „-er“ / Verkleinerung'],
+  ['ство', 'a', '-ство = „-schaft, -tum“'], ['ота', 'a', '-ота = „-heit“ (Eigenschaft)'], ['ина', 'a', '-ина = „-e, -heit“ (Ausmaß)'],
+  ['ка', 'n', '-к(а) = Verkleinerung oder „Ding/Person zu …“'], ['ок', 'n', '-ок = Verkleinerung oder „ein Stück …“'], ['ек', 'n', '-ек = Verkleinerung'],
+  ['о', 'a', '-о = Adverb: „auf … Art“'], ['е', 'a', '-е = Adverb: „auf … Art“'],
+];
+// Endungen internationaler Adjektive: [Endung (й → и), Anzeige, deutsche Entsprechung]
+const RU_INTL = [
+  ['ическии', '-и́ческий', '-isch'], ['ичныи', '-и́чный', '-isch'], ['иальныи', '-иа́льный', '-iell, -ial'], ['альныи', '-а́льный', '-al, -ell'],
+  ['ивныи', '-и́вный', '-iv'], ['арныи', '-а́рный', '-är'], ['ярныи', '-я́рный', '-är'], ['ционныи', '-цио́нный', '-tions- (von -ция = -tion)'],
+  ['изованныи', '-изо́ванный', '-isiert'], ['ированныи', '-и́рованный', '-iert'], ['озныи', '-о́зный', '-ös'],
+];
+const RU_NEG = [['не', 'nicht, un-'], ['без', 'ohne, -los'], ['бес', 'ohne, -los']];
+// Konsonantenwechsel vor Nachsilben rückgängig machen: возду́х → возду́шный
+const RU_DERIV_ALT = { ч: ['к', 'т', 'ц'], ж: ['г', 'д', 'з'], ш: ['х', 'с'], щ: ['ст', 'ск', 'т'] };
+
+let ruStemIdx = null, ruStemRev = -1;
+function ruStemIndex() {
+  if (ruStemRev === cardsRev && ruStemIdx) return ruStemIdx;
+  ruStemIdx = { stem: {}, word: {} };
+  const add = (k, c, kind) => { if (k.length >= 3 && !ruStemIdx.stem[k + '/' + kind]) ruStemIdx.stem[k + '/' + kind] = c; };
+  for (const c of allCardsSorted()) {
+    if (!c.f.ru || c.type === 'phrase' || c.type === 'prepfull') continue;
+    for (const raw of ruCardWords(c)) {
+      const w = ruPlain(raw).replace(/(ся|сь)$/, '').replace(/й/g, 'и');
+      if (!w || / /.test(w)) continue;
+      if (!ruStemIdx.word[w]) ruStemIdx.word[w] = c;
+      if (c.type === 'verbpair' || c.type === 'verb') {
+        const s = w.replace(/(ть|ти|чь)$/, '');
+        add(s, c, 'v'); add(s.replace(/[аеиоуяы]$/, ''), c, 'v'); add(w.replace(/[оеу]вать$/, ''), c, 'v');
+      } else if (/(ыи|ии|ои)$/.test(w)) {
+        const s = w.slice(0, -2); add(s, c, 'a'); add(s, c, 'n'); add(s.replace(/(н|ск|ов|ев|к)$/, ''), c, 'a');
+      } else {
+        add(w, c, 'n'); add(w.replace(/(ие|ия|ье|ья)$/, ''), c, 'n'); add(w.replace(/[аяоеьиу]$/, ''), c, 'n');
+      }
+    }
+  }
+  ruStemRev = cardsRev;
+  return ruStemIdx;
+}
+function ruDerive(card) {
+  const idx = ruStemIndex();
+  for (const raw of ruCardWords(card)) {
+    const w0 = ruPlain(raw).replace(/(ся|сь)$/, '').replace(/й/g, 'и');
+    if (!w0 || / /.test(w0) || w0.length < 5) continue;
+    const self = c => c.id === card.id;
+    const byStem = (stem, kinds) => {
+      for (const s of [stem].concat((RU_DERIV_ALT[stem.slice(-1)] || []).map(a => stem.slice(0, -1) + a)))
+        for (const k of kinds) { const c = idx.stem[s + '/' + k]; if (c && !self(c)) return c; }
+      return null;
+    };
+    const suffix = w => {
+      for (const [suf, kind, de] of RU_SUFFIXES) {
+        if (!w.endsWith(suf) || w.length - suf.length < 3) continue;
+        const kinds = kind === 'v' ? ['v', 'n'] : kind === 'a' ? ['a'] : ['n', 'a'];
+        const base = byStem(w.slice(0, -suf.length), kinds);
+        if (base && ruPlain(ruCardWords(base)[0]).replace(/й/g, 'и') !== w) return { base, suf: de };
+      }
+      return null;
+    };
+    // не-/без- + Grundwort (неприя́тный = не + прия́тный)
+    for (const [p, de] of RU_NEG) {
+      if (!w0.startsWith(p) || w0.length - p.length < 4) continue;
+      const rest = w0.slice(p.length), exact = idx.word[rest];
+      if (exact && !self(exact)) return { word: raw, pre: [p, de], base: exact };
+      const s = suffix(rest);
+      if (s) return { word: raw, pre: [p, de], base: s.base, suf: s.suf };
+    }
+    const s = suffix(w0);
+    if (s) return { word: raw, base: s.base, suf: s.suf };
+  }
+  return null;
+}
+
+// Wörterbuch (morph-ru.js): 'с-:herab + *кач:schwingen + -ать | Bedeutungsbrücke'  bzw. '@Resultat' für Lehnwörter
+function ruDictParse(src) {
+  const [partsSrc, why] = src.split(' | ');
+  if (partsSrc.startsWith('@')) return { loan: partsSrc.slice(1).trim(), why: why || '' };
+  const parts = partsSrc.split(' + ').map(p => {
+    const i = p.indexOf(':'), seg = (i < 0 ? p : p.slice(0, i)).trim(), de = i < 0 ? '' : p.slice(i + 1).trim();
+    const root = seg.startsWith('*');
+    const s = seg.replace(/^\*/, '');
+    return { seg: s, de, kind: root ? 'root' : s.endsWith('-') ? 'pre' : s.startsWith('-') ? 'suf' : 'root' };
+  });
+  return { parts, why: why || '' };
+}
+// Gleiche Wurzel = gleiche Form UND gleiche Grundbedeutung (дел „tun“ ≠ дел „teilen“)
+const ruRootKey = (seg, de) => ruPlain(seg).split(/[ /(]/)[0] + '|' + (de || '').toLowerCase().split(/[ ,;(]/)[0];
+
+// Analyse einer Karte: Wörterbuch → bekannte Wurzel (ruMorph) → Ableitung aus eigenen Karten
+let ruAnaCache = {}, ruAnaRev = -1;
+function ruAnalyze(card) {
+  if (ruAnaRev !== cardsRev) { ruAnaCache = {}; ruAnaRev = cardsRev; }
+  if (card.id in ruAnaCache) return ruAnaCache[card.id];
+  let res = null;
+  ruAnaCache[card.id] = null;   // Schutz vor Kreisläufen (A von B, B von A)
+  if (card.f.ru && card.type !== 'prepfull' && card.type !== 'phrase') {
+    const words = ruCardWords(card);
+    const dict = typeof RU_MORPH_DICT !== 'undefined' ? RU_MORPH_DICT : {};
+    for (const w of words) {
+      const src = dict[ruPlain(w)] || dict[(w || '').replace(STRESS, '').trim()];
+      if (src) {
+        const d = ruDictParse(src);
+        const root = d.parts && d.parts.find(p => p.kind === 'root');
+        res = { src: 'dict', word: w, ...d, key: root ? ruRootKey(root.seg, root.de) : 'id:' + card.id };
+        break;
+      }
+    }
+    if (!res) for (const w of words) {
+      const m = ruMorph(w);
+      if (!m) continue;
+      const whyMap = typeof RU_MORPH_WHY !== 'undefined' ? RU_MORPH_WHY : {};
+      const why = words.map(x => whyMap[ruPlain(x)] || whyMap[(x || '').replace(STRESS, '').trim()]).find(Boolean) || '';
+      res = { src: 'root', word: w, parts: m.prefixes.map(([p, de]) => ({ seg: p + '-', de, kind: 'pre' })).concat({ seg: m.root.root, de: m.root.de, kind: 'root' }),
+        why, ex: m.root.ex, key: ruRootKey(m.root.root, m.root.de) };
+      break;
+    }
+    if (!res) {
+      const d = ruDerive(card);
+      if (d) {
+        const b = ruAnalyze(d.base);
+        res = { src: 'derived', word: d.word, pre: d.pre, base: d.base, suf: d.suf, baseAna: b, key: b && b.key ? b.key : 'id:' + d.base.id };
+      }
+    }
+    if (!res) for (const w of words) {
+      // Internationale Adjektive: Stamm wie im Deutschen + russische Endung (класси́ческий = klassisch)
+      const p = ruPlain(w).replace(/й$/, 'и');
+      const hit = RU_INTL.find(([e]) => p.endsWith(e) && p.length - e.length >= 3);
+      if (hit) { res = { src: 'intl', word: w, suf: hit[1], sufDe: hit[2], key: 'id:' + card.id }; break; }
+    }
+  }
+  ruAnaCache[card.id] = res;
+  return res;
+}
+const ruCardKey = card => { const a = ruAnalyze(card); return a && a.key ? a.key : 'id:' + card.id; };
+const ruPreKey = card => { const a = ruAnalyze(card); return a && a.parts ? a.parts.filter(p => p.kind === 'pre').map(p => p.seg).join('') : ''; };
+
+let ruMorphIdx = null, ruMorphIdxRev = -1;
+function ruMorphIndex() {
+  if (ruMorphIdxRev === cardsRev && ruMorphIdx) return ruMorphIdx;
+  ruMorphIdx = {};
+  for (const c of allCardsSorted()) {
+    if (!c.f.ru || c.type === 'prepfull' || c.type === 'phrase') continue;
+    (ruMorphIdx[ruCardKey(c)] = ruMorphIdx[ruCardKey(c)] || []).push({ id: c.id, word: c.f.ru, de: c.f.de, pre: ruPreKey(c) });
+  }
+  ruMorphIdxRev = cardsRev;
+  return ruMorphIdx;
+}
+
+const ruDeShort = c => (c.f.de || '').split(/[;]/)[0].replace(/\(.*?\)/g, '').split(',')[0].trim().replace(/^(der|die|das) /, '');
+const ruPartsHtml = parts => parts.map(p => p.kind === 'root' ? `<b>${esc(p.seg)}</b>${p.de ? ` (${esc(p.de)})` : ''}` : `<b>${esc(p.seg)}</b>${p.de ? ` (${esc(p.de)})` : ''}`).join(' + ');
 function morphHtml(card) {
-  const words = card.type === 'verbpair' ? [card.x.ipf, card.x.pf].filter(Boolean) : [(card.f.ru || '').split(/[,;/]/)[0].trim()];
-  let m = null, word = '';
-  for (const w of words) if ((m = ruMorph(w))) { word = w; break; }
   const info = ' <button class="info" aria-label="Erklärung anzeigen">ⓘ</button>';
   const refl = card.type === 'verbpair' ? ruReflHtml(card) : '';
-  if (!m) return refl ? `<div class="morph"><div class="nn-hint">🧩 Wortbausteine${info}</div><div class="vp-rule">${refl}</div></div>` : '';
-  const parts = m.prefixes.map(([p, de]) => `<b>${esc(p)}-</b> (${esc(de)})`).concat(`<b>${esc(m.root.root)}</b> (${esc(m.root.de)})`);
-  // Bedeutungsbrücke (morph-why.js): warum ergibt Vorsilbe + Wurzel genau diese Bedeutung?
-  const plainW = w => (w || '').replace(STRESS, '').replace(/ё/g, 'е').trim();
-  const whyMap = typeof RU_MORPH_WHY !== 'undefined' ? RU_MORPH_WHY : {};
-  const why = words.map(w => whyMap[plainW(w)] || whyMap[(w || '').replace(STRESS, '').trim()]).find(Boolean);
-  return `<div class="morph">
-    <div class="nn-hint">🧩 Wortbausteine${info}</div>
-    <div class="vp-rule">
-      <div><b>${esc(word)}</b> = ${parts.join(' + ')}${m.prefixes.length ? '' : ' – hier ohne Vorsilbe'}.</div>
-      ${why ? `<div class="morph-why">💡 <b>Warum bedeutet das so?</b> ${esc(why)}</div>` : '<div>Die Wurzel trägt die Grundbedeutung, die Vorsilbe gibt Richtung oder Art dazu. Kennt man die Wurzel, kann man viele neue Wörter herleiten.</div>'}
-      ${refl}
-      ${relatedHtml(ruMorphIndex()[ruMorphKey(m)], card)}
-      <div><b>Weitere Wörter mit ${esc(m.root.root)}:</b> ${esc(m.root.ex)}</div>
-    </div>
-  </div>`;
+  const a = ruAnalyze(card);
+  // gleiche Vorsilbe zuerst (находи́ть → находи́ться, найти́), dann der Rest der Wortfamilie
+  const pre = ruPreKey(card), fam = (ruMorphIndex()[ruCardKey(card)] || []).slice().sort((x, y) => (y.pre === pre) - (x.pre === pre));
+  const rel = relatedHtml(fam, card);
+  if (!a && !refl && !rel) return '';
+  const box = body => `<div class="morph"><div class="nn-hint">🧩 Wortbausteine${info}</div><div class="vp-rule">${body}</div></div>`;
+  if (!a) return box(`${rel ? `<div><b>${esc(card.f.ru)}</b> ist hier das Grundwort – diese Wörter aus deinen Karten sind davon abgeleitet:</div>${rel}` : ''}${refl}`);
+  let body = '';
+  if (a.loan) body = `<div>🌍 <b>${esc(a.word)}</b> ist ein Lehnwort – wie deutsch <b>${esc(a.loan)}</b>.</div>${a.why ? `<div class="morph-why">💡 ${esc(a.why)}</div>` : ''}`;
+  else if (a.src === 'intl') body = `<div>🌍 <b>${esc(a.word)}</b> ist ein internationales Wort: Der Stamm klingt wie im Deutschen, die Endung <b>${esc(a.suf)}</b> entspricht deutsch <b>${esc(a.sufDe)}</b>.</div>
+      <div class="morph-why">💡 Viele Fremdwörter funktionieren so – Stamm erkennen, Endung tauschen: класси́ческий = klassisch, акти́вный = aktiv, популя́рный = populär. Hier: <b>${esc(ruDeShort(card))}</b>.</div>`;
+  else if (a.src === 'derived') {
+    const b = a.baseAna, parts = [];
+    if (a.pre) parts.push(`<b>${esc(a.pre[0])}-</b> (${esc(a.pre[1])})`);
+    parts.push(`<b>${esc(a.base.f.ru)}</b> (${esc(ruDeShort(a.base))})`);
+    if (a.suf) parts.push(`<b>${esc(a.suf.split(' = ')[0])}</b> (${esc(a.suf.split(' = ').slice(1).join(' = '))})`);
+    body = `<div><b>${esc(a.word)}</b> = ${parts.join(' + ')}.</div>
+      <div class="morph-why">💡 Abgeleitet von <b>${esc(a.base.f.ru)}</b> „${esc(ruDeShort(a.base))}“ – wer das Grundwort kennt, kann die Bedeutung herleiten: <b>${esc(ruDeShort(card))}</b>.</div>
+      ${b && b.parts && !b.loan ? `<div class="sub">Das Grundwort selbst: <b>${esc(b.word)}</b> = ${ruPartsHtml(b.parts)}${b.why ? ` – ${esc(b.why)}` : ''}</div>` : ''}`;
+  } else {
+    body = `<div><b>${esc(a.word)}</b> = ${ruPartsHtml(a.parts)}${a.parts.some(p => p.kind === 'pre') ? '' : ' – hier ohne Vorsilbe'}.</div>
+      ${a.why ? `<div class="morph-why">💡 <b>Warum bedeutet das so?</b> ${esc(a.why)}</div>` : '<div>Die Wurzel trägt die Grundbedeutung, die Vorsilbe gibt Richtung oder Art dazu. Kennt man die Wurzel, kann man viele neue Wörter herleiten.</div>'}`;
+  }
+  const root = a.parts && a.parts.find(p => p.kind === 'root');
+  const ex = a.ex || (root && (RU_ROOTS.find(r => ruRootKey(r.root, r.de) === ruRootKey(root.seg, root.de)) || {}).ex);
+  return box(`${body}${refl}${rel}${ex ? `<div><b>Weitere Wörter mit ${esc(root.seg)}:</b> ${esc(ex)}</div>` : ''}`);
 }
 
 // -ся / -сь = Kurzform von себя́ („sich“): Verb mit und ohne -ся verknüpfen (находи́ть → находи́ться)
@@ -2150,22 +2320,9 @@ function ruReflHtml(card) {
   return '';
 }
 
-// Verwandte Wörter aus den eigenen Karten (gleiche Vorsilbe + Wurzel bzw. gleiche spanische Familie)
-const ruMorphKey = m => m.prefixes.map(p => p[0]).join('+') + '|' + m.root.root;
-let ruMorphIdx = null, ruMorphIdxRev = -1;
-function ruMorphIndex() {
-  if (ruMorphIdxRev === cardsRev && ruMorphIdx) return ruMorphIdx;
-  ruMorphIdx = {};
-  for (const c of allCardsSorted()) {
-    if (!c.f.ru || c.type === 'prepfull') continue;
-    const words = c.type === 'verbpair' ? [c.x.ipf, c.x.pf].filter(Boolean) : [(c.f.ru || '').split(/[,;/]/)[0].trim()];
-    for (const w of words) { const m = ruMorph(w); if (m) { (ruMorphIdx[ruMorphKey(m)] = ruMorphIdx[ruMorphKey(m)] || []).push({ id: c.id, word: c.type === 'verbpair' ? c.f.ru : w, de: c.f.de }); break; } }
-  }
-  ruMorphIdxRev = cardsRev;
-  return ruMorphIdx;
-}
 function relatedHtml(list, card) {
-  const others = (list || []).filter(r => r.id !== card.id).slice(0, 8);
+  const seen = new Set([card.f.ru, card.f.es].filter(Boolean));
+  const others = (list || []).filter(r => r.id !== card.id && !seen.has(r.word) && seen.add(r.word)).slice(0, 8);
   if (!others.length) return '';
   return `<div class="morph-rel"><b>Verwandt (aus deinen Karten):</b> ${others.map(r => `${esc(r.word)} – ${esc((r.de || '').split(/[;]/)[0])}`).join(' · ')}</div>`;
 }

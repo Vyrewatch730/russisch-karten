@@ -1,6 +1,6 @@
 // Service Worker: macht die App offline nutzbar.
 // Strategie: zuerst Netzwerk ohne HTTP-Cache (damit Updates sofort ankommen), bei Offline aus dem Cache.
-const CACHE = 'rk-v71';
+const CACHE = 'rk-v72';
 const SHELL = [
   './',
   'index.html',
@@ -8,6 +8,7 @@ const SHELL = [
   'rules.js',
   'rules-es.js',
   'morph-why.js',
+  'morph-ru.js',
   'morph-why-es.js',
   'app.js',
   'manifest.webmanifest',
